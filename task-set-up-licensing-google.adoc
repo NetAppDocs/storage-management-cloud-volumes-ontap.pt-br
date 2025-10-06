@@ -1,0 +1,168 @@
+---
+sidebar: sidebar 
+permalink: task-set-up-licensing-google.html 
+keywords: freemium, professional, essentials, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, paygo, pay as you go, keystone flex, keystone, digital wallet 
+summary: Depois de decidir qual opção de licenciamento você deseja usar para o Cloud Volumes ONTAP, algumas etapas serão necessárias antes que você possa escolher essa opção de licenciamento ao implantar um novo sistema. 
+---
+= Configurar o licenciamento do Cloud Volumes ONTAP no Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois de decidir qual opção de licenciamento você deseja usar com o Cloud Volumes ONTAP, algumas etapas são necessárias antes que você possa escolher essa opção de licenciamento ao criar um novo sistema.
+
+
+
+== Freemium
+
+Selecione a oferta Freemium para usar o Cloud Volumes ONTAP gratuitamente com até 500 GiB de capacidade provisionada. link:concept-licensing.html#packages["Saiba mais sobre a oferta Freemium"] .
+
+.Passos
+. No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
+. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas no Console NetApp .
++
+.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no Google Cloud Marketplace.
++
+Você não será cobrado pela assinatura do marketplace, a menos que exceda 500 GiB de capacidade provisionada, momento em que o sistema será automaticamente convertido para olink:concept-licensing.html#packages["Pacote Essentials"] .
+
+.. Após retornar ao Console, selecione *Freemium* quando chegar à página de métodos de cobrança.
++
+image:screenshot-freemium.png["Uma captura de tela da opção Freemium ao criar um sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-gcp.html["Veja instruções passo a passo para iniciar o Cloud Volumes ONTAP no Google Cloud"] .
+
+
+
+== Licença baseada em capacidade
+
+O licenciamento baseado em capacidade permite que você pague pelo Cloud Volumes ONTAP por TiB de capacidade. O licenciamento baseado em capacidade está disponível na forma de um _pacote_: o pacote Essentials ou Professional.
+
+Os pacotes Essentials e Professional estão disponíveis com os seguintes modelos de consumo:
+
+* Uma licença (traga sua própria licença (BYOL)) adquirida da NetApp
+* Uma assinatura por hora, paga conforme o uso (PAYGO), do Google Cloud Marketplace
+* Um contrato anual
+
+
+link:concept-licensing.html#capacity-based-licensing["Saiba mais sobre licenciamento baseado em capacidade"] .
+
+As seções a seguir descrevem como começar a usar cada um desses modelos de consumo.
+
+
+
+=== Traga sua própria bebida
+
+Pague antecipadamente comprando uma licença (BYOL) da NetApp para implantar sistemas Cloud Volumes ONTAP em qualquer provedor de nuvem.
+
+
+NOTE: A NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^] .
+
+.Passos
+. https://bluexp.netapp.com/contact-cds["Entre em contato com a equipe de vendas da NetApp para obter uma licença"^]
+. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html#add-an-nss-account["Adicione sua conta do site de suporte da NetApp ao console da NetApp"^]
++
+O Console consulta automaticamente o serviço de licenciamento da NetApp para obter detalhes sobre as licenças associadas à sua conta do Site de Suporte da NetApp .  Se não houver erros, o Console adiciona as licenças.
+
++
+Sua licença deve estar disponível no Console antes que você possa usá-la com o Cloud Volumes ONTAP.  Se necessário, você podelink:task-manage-capacity-licenses.html#add-purchased-licenses-to-your-account["adicione manualmente a licença ao Console"] .
+
+. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
++
+.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no Google Cloud Marketplace.
++
+A licença que você comprou da NetApp é sempre cobrada primeiro, mas você será cobrado pela taxa horária no mercado se exceder sua capacidade licenciada ou se o prazo de sua licença expirar.
+
+.. Após retornar ao Console, selecione um pacote baseado em capacidade quando chegar à página de métodos de cobrança.
++
+image:screenshot-professional.png["Uma captura de tela da opção Profissional ao criar um sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-gcp.html["Veja instruções passo a passo para iniciar o Cloud Volumes ONTAP no Google Cloud"] .
+
+
+
+=== Assinatura PAYGO
+
+Pague por hora assinando a oferta do marketplace do seu provedor de nuvem.
+
+Ao criar um sistema Cloud Volumes ONTAP , o Console solicita que você assine o contrato disponível no Google Cloud Marketplace.  Essa assinatura é então associada ao sistema de cobrança.  Você pode usar a mesma assinatura para sistemas adicionais.
+
+.Passos
+. No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
+. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
++
+.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no Google Cloud Marketplace.
+.. Após retornar ao Console, selecione um pacote baseado em capacidade quando chegar à página de métodos de cobrança.
++
+image:screenshot-professional.png["Uma captura de tela da opção Profissional ao criar um sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-gcp.html["Veja instruções passo a passo para iniciar o Cloud Volumes ONTAP no Google Cloud"] .
+
+
+TIP: Você pode gerenciar as assinaturas do Google Cloud Marketplace associadas às suas contas na página Configurações > Credenciais. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Aprenda a gerenciar suas credenciais e assinaturas do Google Cloud"^]
+
+
+
+=== Contrato anual
+
+Pague pelo Cloud Volumes ONTAP anualmente comprando um contrato anual.
+
+.Passos
+. Entre em contato com seu representante de vendas da NetApp para adquirir um contrato anual.
++
+O contrato está disponível como uma oferta _privada_ no Google Cloud Marketplace.
+
++
+Depois que a NetApp compartilhar a oferta privada com você, você poderá selecionar o plano anual ao assinar o Google Cloud Marketplace durante a criação do sistema.
+
+. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
++
+.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar o plano anual no Google Cloud Marketplace.
+.. No Google Cloud, selecione o plano anual que foi compartilhado com sua conta e clique em *Assinar*.
+.. Após retornar ao Console, selecione um pacote baseado em capacidade quando chegar à página de métodos de cobrança.
++
+image:screenshot-professional.png["Uma captura de tela da opção Profissional ao criar um sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-gcp.html["Veja instruções passo a passo para iniciar o Cloud Volumes ONTAP no Google Cloud"] .
+
+
+
+== Assinatura Keystone
+
+Uma assinatura Keystone é um serviço baseado em assinatura com pagamento conforme o crescimento. link:concept-licensing.html#keystone-subscription["Saiba mais sobre as assinaturas do NetApp Keystone"] .
+
+.Passos
+. Se você ainda não tem uma assinatura, https://www.netapp.com/forms/keystone-sales-contact/["entre em contato com a NetApp"^]
+. mailto:ng-keystone-success@netapp.com[Entre em contato com a NetApp] para autorizar sua conta de usuário do Console com uma ou mais assinaturas do Keystone .
+. Depois que a NetApp autorizar sua conta,link:task-manage-keystone.html#link-a-subscription["vincule suas assinaturas para uso com o Cloud Volumes ONTAP"] .
+. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
++
+.. Selecione o método de cobrança da Assinatura Keystone quando solicitado a escolher um método de cobrança.
++
+image:screenshot-keystone.png["Uma captura de tela da opção de assinatura do Keystone ao criar um sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-gcp.html["Veja instruções passo a passo para iniciar o Cloud Volumes ONTAP no Google Cloud"] .

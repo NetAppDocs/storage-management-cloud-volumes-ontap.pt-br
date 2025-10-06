@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: task-managing-svms-azure.html 
+keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported 
+summary: Uma VM de armazenamento é uma máquina virtual executada no ONTAP que fornece serviços de armazenamento e dados aos seus clientes.  Você pode conhecer isso como SVM ou vserver.  O Cloud Volumes ONTAP é configurado com uma VM de armazenamento por padrão, mas algumas configurações oferecem suporte a VMs de armazenamento adicionais. 
+---
+= Gerenciar VMs de armazenamento de serviço de dados para Cloud Volumes ONTAP no Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Uma VM de armazenamento é uma máquina virtual executada no ONTAP que fornece serviços de armazenamento e dados aos seus clientes.  Você pode conhecer isso como _SVM_ ou _vserver_.  O Cloud Volumes ONTAP é configurado com uma VM de armazenamento por padrão, mas você pode criar VMs de armazenamento adicionais ao executar o Cloud Volumes ONTAP no Azure.
+
+Para criar e gerenciar VMs adicionais de armazenamento de dados no Azure, você deve usar as APIs.  Isso ocorre porque as APIs automatizam o processo de criação de VMs de armazenamento e configuração das interfaces de rede necessárias.  Ao criar as VMs de armazenamento, o NetApp Console configura os serviços LIF necessários, bem como um LIF iSCSI necessário para comunicações SMB/CIFS de saída da VM de armazenamento.
+
+Para obter informações sobre como executar chamadas de API Cloud Volumes ONTAP , consulte https://docs.netapp.com/us-en/bluexp-automation/cm/your_api_call.html#step-1-select-the-identifie["Sua primeira chamada de API"^] .
+
+
+
+== Número suportado de VMs de armazenamento
+
+A partir do Cloud Volumes ONTAP 9.9.0, com base na sua licença, várias VMs de armazenamento são suportadas com configurações específicas.  Consulte o https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html["Notas de versão do Cloud Volumes ONTAP"^] para verificar o número de VMs de armazenamento suportadas para sua versão do Cloud Volumes ONTAP.
+
+Todas as versões do Cloud Volumes ONTAP anteriores à 9.9.0 oferecem suporte a uma VM de armazenamento de serviço de dados e uma VM de armazenamento de destino usada para recuperação de desastres.  Você pode ativar a VM de armazenamento de destino para acesso a dados se houver uma interrupção na VM de armazenamento de origem.
+
+
+
+== Criar uma VM de armazenamento
+
+Com base na sua configuração e no tipo de licença, você pode criar várias VMs de armazenamento em um único sistema de nó ou em uma configuração de alta disponibilidade (HA) usando as APIs do NetApp Console.
+
+.Sobre esta tarefa
+Ao criar VMs de armazenamento usando as APIs, juntamente com a configuração das interfaces de rede necessárias, o Console também modifica as `default-data-files` políticas nas VMs de armazenamento de dados removendo os seguintes serviços do LIF de dados do NAS e adicionando-os ao LIF de dados do iSCSI usado para conexões de gerenciamento de saída:
+
+* `data-fpolicy-client`
+* `management-ad-client`
+* `management-dns-client`
+* `management-ldap-client`
+* `management-nis-client`
+
+
+.Antes de começar
+O agente do Console requer permissões específicas para criar VMs de armazenamento para o Cloud Volumes ONTAP.  As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["as políticas fornecidas pela NetApp"^] .
+
+
+
+=== Sistema de nó único
+
+Use a seguinte chamada de API para criar uma VM de armazenamento em um sistema de nó único.
+
+`POST /azure/vsa/working-environments/{workingEnvironmentId}/svm`
+
+Inclua os seguintes parâmetros no corpo da solicitação:
+
+[source, json]
+----
+{ "svmName": "myNewSvm1"
+   "svmPassword": "optional, the API takes the cluster password if not provided"
+   "mgmtLif": "optional, to create an additional management LIF, if you want to use the storage VM for management purposes"}
+----
+
+
+=== Par HA
+
+Use a seguinte chamada de API para criar uma VM de armazenamento em um par de HA:
+
+`POST /azure/ha/working-environments/{workingEnvironmentId}/svm`
+
+Inclua os seguintes parâmetros no corpo da solicitação:
+
+[source, json]
+----
+{ "svmName": "NewSvmName"
+   "svmPassword": "optional value, the API takes the cluster password if not provided"
+   "mgmtLif": "optional value, to create an additional management LIF, if you want to use the storage VM for management purposes"}
+----
+
+
+== Gerenciar VMs de armazenamento em sistemas de nó único e pares de HA
+
+Usando as APIs, você pode renomear e excluir VMs de armazenamento em configurações de nó único e HA.
+
+.Antes de começar
+O agente do Console requer permissões específicas para gerenciar VMs de armazenamento para o Cloud Volumes ONTAP.  As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["as políticas fornecidas pela NetApp"^] .
+
+
+
+=== Renomear uma VM de armazenamento
+
+Para renomear uma VM de armazenamento, você deve fornecer os nomes da VM de armazenamento existente e da nova VM de armazenamento como parâmetros.
+
+.Passos
+* Use a seguinte chamada de API para renomear uma VM de armazenamento em um sistema de nó único:
++
+`PUT /azure/vsa/working-environments/{workingEnvironmentId}/svm`
+
++
+Inclua os seguintes parâmetros no corpo da solicitação:
+
++
+[source, json]
+----
+{
+  "svmNewName": "NewSvmName",
+  "svmName": "OldSvmName"
+}
+----
+* Use a seguinte chamada de API para renomear uma VM de armazenamento em um par de HA:
++
+`PUT /azure/ha/working-environments/{workingEnvironmentId}/svm`
+
++
+Inclua os seguintes parâmetros no corpo da solicitação:
+
++
+[source, json]
+----
+{
+  "svmNewName": "NewSvmName",
+  "svmName": "OldSvmName"
+}
+----
+
+
+
+
+=== Excluir uma VM de armazenamento
+
+Em uma configuração de nó único ou HA, você pode remover uma VM de armazenamento se ela não tiver nenhum volume ativo.
+
+.Passos
+* Use a seguinte chamada de API para excluir uma VM de armazenamento em um sistema de nó único:
++
+`DELETE /azure/vsa/working-environments/{workingEnvironmentId}/svm/{svmName}`
+
+* Use a seguinte chamada de API para excluir uma VM de armazenamento em um par de HA:
++
+`DELETE /azure/ha/working-environments/{workingEnvironmentId}/svm/{svmName}`
+
+
+
+.Informações relacionadas
+* https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html["Prepare-se para usar a API"^]
+* https://docs.netapp.com/us-en/bluexp-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Fluxos de trabalho do Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-connector-identifier["Obtenha os identificadores necessários"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/use_rest_apis.html["Use as APIs REST para o NetApp Console"^]
+

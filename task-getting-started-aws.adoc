@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: task-getting-started-aws.html 
+keywords: amazon web services, aws, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, vpc, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, cloud central, get started, network, vpn, multi-cloud, tier, storage tier, data tier, vpc endpoint, endpoint, S3, subscribe, subscribing, marketplace, granting, permissions, policy, iam policy, ec2 console, ami, mediator, connectivity, internet, outbound, endpoint, connection, networks, replicating, ec2 service, policies, attach, iam user, access key, secret key, keys, sign up, cloud manager, cloud volumes ontap, cloud ontap, create, console 
+summary: Comece a usar o Cloud Volumes ONTAP para AWS em poucas etapas. 
+---
+= Início rápido para Cloud Volumes ONTAP na AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Comece a usar o Cloud Volumes ONTAP na AWS em poucas etapas.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]Criar um agente de console
+[role="quick-margin-para"]
+Se você não tem um https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Agente de console"^] no entanto, você precisa criar um. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Aprenda a criar um agente de console na AWS"^] .
+
+[role="quick-margin-para"]
+Observe que se você quiser implantar o Cloud Volumes ONTAP em uma sub-rede onde não há acesso à Internet disponível, será necessário instalar manualmente o agente do Console e acessar a interface do usuário do NetApp Console que está em execução nesse agente do Console. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Aprenda a instalar manualmente o agente do Console em um local sem acesso à Internet"^] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Planeje sua configuração
+[role="quick-margin-para"]
+O Console oferece pacotes pré-configurados que correspondem aos seus requisitos de carga de trabalho, ou você pode criar sua própria configuração.  Se você escolher sua própria configuração, deverá entender as opções disponíveis. link:task-planning-your-config.html["Saber mais"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Configure sua rede
+[role="quick-margin-list"]
+. Certifique-se de que sua VPC e sub-redes oferecerão suporte à conectividade entre o agente do Console e o Cloud Volumes ONTAP.
+. Habilite o acesso de saída à Internet da VPC de destino para o NetApp AutoSupport.
++
+Esta etapa não é necessária se você estiver implantando o Cloud Volumes ONTAP em um local onde não há acesso à Internet disponível.
+
+. Configure um endpoint VPC para o serviço S3.
++
+Um endpoint VPC é necessário se você quiser hierarquizar dados frios do Cloud Volumes ONTAP para armazenamento de objetos de baixo custo.
+
+
+
+[role="quick-margin-para"]
+link:reference-networking-aws.html["Saiba mais sobre os requisitos de rede"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]Configurar o AWS KMS
+[role="quick-margin-para"]
+Se você quiser usar a criptografia da Amazon com o Cloud Volumes ONTAP, precisará garantir que exista uma Chave Mestra do Cliente (CMK) ativa.  Você também precisa modificar a política de chave para cada CMK adicionando a função do IAM que fornece permissões ao agente do Console como um _usuário de chave_. link:task-setting-up-kms.html["Saber mais"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Inicie o Cloud Volumes ONTAP usando o Console
+[role="quick-margin-para"]
+Clique em *Adicionar Sistema*, selecione o tipo de sistema que você gostaria de implantar e conclua as etapas do assistente. link:task-deploying-otc-aws.html["Leia as instruções passo a passo"] .
+
+.Links relacionados
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-bluexp.html["Crie um agente de console para AWS"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-marketplace.html["Crie um agente de console no AWS Marketplace"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Instalar e configurar um agente do Console no local"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["Permissões da AWS para o agente do Console"^]
+

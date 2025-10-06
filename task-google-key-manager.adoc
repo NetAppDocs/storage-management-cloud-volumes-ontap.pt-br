@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-google-key-manager.html 
+keywords: google cloud, encryption, NVE, NetApp volume encryption, KMIP, GCP, GCP KMS, key manager service, encryption 
+summary: Utilize o serviço de gerenciamento de chaves do Google para seu serviço de gerenciamento de chaves de terceiros. 
+---
+= Gerencie chaves de criptografia Cloud Volumes ONTAP com o Google Cloud KMS
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode usarlink:https://cloud.google.com/kms/docs["Serviço de gerenciamento de chaves da plataforma Google Cloud (Cloud KMS)"^] para proteger suas chaves de criptografia Cloud Volumes ONTAP em um aplicativo implantado no Google Cloud Platform.
+
+O gerenciamento de chaves com o Cloud KMS pode ser habilitado com o ONTAP CLI ou o ONTAP REST API.
+
+Ao usar o Cloud KMS, esteja ciente de que, por padrão, o LIF de um SVM de dados é usado para se comunicar com o ponto de extremidade de gerenciamento de chaves da nuvem.  Uma rede de gerenciamento de nós é usada para se comunicar com os serviços de autenticação do provedor de nuvem (oauth2.googleapis.com).  Se a rede do cluster não estiver configurada corretamente, o cluster não utilizará corretamente o serviço de gerenciamento de chaves.
+
+.Antes de começar
+* Seu sistema deve estar executando o Cloud Volumes ONTAP 9.10.1 ou posterior
+* Você deve usar um SVM de dados.  O Cloud KMS pode ser configurado somente em um SVM de dados.
+* Você deve ser um administrador de cluster ou SVM
+* A licença de Criptografia de Volume (VE) deve ser instalada no SVM
+* A partir do Cloud Volumes ONTAP 9.12.1 GA, a licença de gerenciamento de chaves de criptografia multilocatário (MTEKM) também deve ser instalada
+* É necessária uma assinatura ativa do Google Cloud Platform
+
+
+
+
+== Configuração
+
+.Google Cloud
+. No seu ambiente do Google Cloud,link:https://cloud.google.com/kms/docs/creating-keys["crie um chaveiro e uma chave GCP simétricos"^] .
+. Atribua uma função personalizada à chave do Cloud KMS e à conta de serviço do Cloud Volumes ONTAP .
++
+.. Crie a função personalizada:
++
+[listing]
+----
+gcloud iam roles create kmsCustomRole
+    --project=<project_id>
+    --title=<kms_custom_role_name>
+    --description=<custom_role_description>
+    --permissions=cloudkms.cryptoKeyVersions.get,cloudkms.cryptoKeyVersions.list,cloudkms.cryptoKeyVersions.useToDecrypt,cloudkms.cryptoKeyVersions.useToEncrypt,cloudkms.cryptoKeys.get,cloudkms.keyRings.get,cloudkms.locations.get,cloudkms.locations.list,resourcemanager.projects.get
+    --stage=GA
+----
+.. Atribua a função personalizada que você criou:
+`gcloud kms keys add-iam-policy-binding _key_name_ --keyring _key_ring_name_ --location _key_location_ --member serviceAccount:_service_account_Name_ --role projects/_customer_project_id_/roles/kmsCustomRole`
++
+
+NOTE: Se você estiver no Cloud Volumes ONTAP 9.13.0 ou posterior, não precisará criar uma função personalizada.  Você pode atribuir o predefinido[`cloudkms.cryptoKeyEncrypterDecrypter` ^] papel.
+
+
+
+. Baixe a chave JSON da conta de serviço:
+`gcloud iam service-accounts keys create key-file --iam-account=_sa-name_@_project-id_.iam.gserviceaccount.com`
+
+
+.Cloud Volumes ONTAP
+. Conecte-se ao LIF de gerenciamento de cluster com seu cliente SSH preferido.
+. Mude para o nível de privilégio avançado:
+`set -privilege advanced`
+. Crie um DNS para o SVM de dados.
+`dns create -domains c._<project>_.internal -name-servers _server_address_ -vserver _SVM_name_`
+. Criar entrada CMEK:
+`security key-manager external gcp enable -vserver _SVM_name_ -project-id _project_ -key-ring-name _key_ring_name_ -key-ring-location _key_ring_location_ -key-name _key_name_`
+. Quando solicitado, insira a chave JSON da conta de serviço da sua conta do GCP.
+. Confirme se o processo habilitado foi bem-sucedido:
+`security key-manager external gcp check -vserver _svm_name_`
+. OPCIONAL: Crie um volume para testar a criptografia `vol create _volume_name_ -aggregate _aggregate_ -vserver _vserver_name_ -size 10G`
+
+
+
+
+== Solução de problemas
+
+Se precisar solucionar problemas, você pode seguir os logs brutos da API REST nas duas etapas finais acima:
+
+. `set d`
+. `systemshell -node _node_ -command tail -f /mroot/etc/log/mlog/kmip2_client.log`
+

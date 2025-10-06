@@ -1,0 +1,208 @@
+---
+sidebar: sidebar 
+permalink: task-azure-key-vault.html 
+keywords: azure, encryption, NVE, NetApp volume encryption, KMIP, azure key vault 
+summary: Utilize o Azure Key Vault para seu serviço de gerenciamento de chaves de terceiros. 
+---
+= Gerencie chaves de criptografia Cloud Volumes ONTAP com o Azure Key Vault
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode usar o Azure Key Vault (AKV) para proteger suas chaves de criptografia ONTAP em um aplicativo implantado pelo Azure. Consulte olink:https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts["Documentação da Microsoft"^] .
+
+O AKV pode ser usado para proteger chaves do NetApp Volume Encryption (NVE) somente para SVMs de dados. Para mais informações, consulte o link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["Documentação do ONTAP"^] .
+
+O gerenciamento de chaves com o AKV pode ser habilitado com a CLI ou a API REST do ONTAP .
+
+Ao usar o AKV, esteja ciente de que, por padrão, um SVM LIF de dados é usado para se comunicar com o ponto de extremidade de gerenciamento de chaves na nuvem.  Uma rede de gerenciamento de nós é usada para se comunicar com os serviços de autenticação do provedor de nuvem (login.microsoftonline.com).  Se a rede do cluster não estiver configurada corretamente, o cluster não utilizará corretamente o serviço de gerenciamento de chaves.
+
+.Antes de começar
+* O Cloud Volumes ONTAP deve estar executando a versão 9.10.1 ou posterior
+* Licença de Criptografia de Volume (VE) instalada (a licença de Criptografia de Volume da NetApp é instalada automaticamente em cada sistema Cloud Volumes ONTAP registrado no Suporte da NetApp )
+* Você deve ter uma licença de gerenciamento de chaves de criptografia multilocatário (MT_EK_MGMT)
+* Você deve ser um administrador de cluster ou SVM
+* Uma assinatura do Active Azure
+
+
+.Limitações
+* O AKV só pode ser configurado em um SVM de dados
+* NAE não pode ser usado com AKV.  O NAE requer um servidor KMIP com suporte externo.
+* Os nós Cloud Volumes ONTAP pesquisam o AKV a cada 15 minutos para confirmar a acessibilidade e a disponibilidade das chaves.  Este período de pesquisa não é configurável e, após quatro falhas consecutivas na tentativa de pesquisa (totalizando 1 hora), os volumes são colocados offline.
+
+
+
+
+== Processo de configuração
+
+As etapas descritas capturam como registrar sua configuração do Cloud Volumes ONTAP com o Azure e como criar um Azure Key Vault e chaves.  Se você já concluiu essas etapas, certifique-se de ter as configurações corretas, principalmente em<<create-akv>> , e então prossiga para<<ontap>> .
+
+* <<azure-app>>
+* <<secret>>
+* <<create-akv>>
+* <<key>>
+* <<AAD>>
+* <<ontap>>
+
+
+[[azure-app]]
+.Registro de aplicativo do Azure
+. Primeiro, você deve registrar seu aplicativo na assinatura do Azure que deseja que o Cloud Volumes ONTAP use para acessar o Azure Key Vault.  No portal do Azure, selecione **Registros de aplicativos**.
+. Selecione **Novo registro**.
+. Forneça um nome para seu aplicativo e selecione um tipo de aplicativo compatível.  O locatário único padrão é suficiente para o uso do Azure Key Vault.  Selecione **Registrar**.
+. Na janela Visão geral do Azure, selecione o aplicativo que você registrou.  Copie o **ID do aplicativo (cliente)** e o **ID do diretório (locatário)** para um local seguro.  Eles serão necessários mais tarde no processo de registro.
+
+
+[[secret]]
+.Criar segredo do cliente do Azure
+. No portal do Azure para registro do aplicativo Azure Key Vault, selecione o painel **Certificados e segredos**.
+. Selecione **Novo segredo do cliente**.  Insira um nome significativo para o seu segredo do cliente.  A NetApp recomenda um período de expiração de 24 meses; no entanto, suas políticas específicas de governança de nuvem podem exigir uma configuração diferente.
+. Clique em **Adicionar** para criar o segredo do cliente.  Copie a sequência secreta listada na coluna **Valor** e armazene-a em um local seguro para uso posterior em<<ontap>> .  O valor secreto não será exibido novamente depois que você sair da página.
+
+
+[[create-akv]]
+.Criar um Azure Key Vault
+. Se você tiver um Azure Key Vault existente, poderá conectá-lo à sua configuração do Cloud Volumes ONTAP ; no entanto, você deve adaptar as políticas de acesso às configurações neste processo.
+. No portal do Azure, navegue até a seção **Key Vaults**.
+. Clique em **+Criar** e insira as informações necessárias, incluindo grupo de recursos, região e nível de preço.  Além disso, insira o número de dias para manter os cofres excluídos e selecione **Ativar proteção de limpeza** no cofre de chaves.
+. Selecione **Avançar** para escolher uma política de acesso.
+. Selecione as seguintes opções:
++
+.. Em **Configuração de acesso**, selecione a **Política de acesso ao cofre**.
+.. Em **Acesso a recursos**, selecione **Azure Disk Encryption para criptografia de volume**.
+
+
+. Selecione **+Criar** para adicionar uma política de acesso.
+. Em **Configurar a partir de um modelo**, clique no menu suspenso e selecione o modelo **Gerenciamento de chaves, segredos e certificados**.
+. Escolha cada um dos menus suspensos de permissões (chave, segredo, certificado) e depois **Selecionar tudo** no topo da lista do menu para selecionar todas as permissões disponíveis.  Você deve ter:
++
+** **Permissões de chave**: 20 selecionadas
+** **Permissões secretas**: 8 selecionadas
+** **Permissões de certificado**: 16 selecionadas
++
+image:screenshot-azure-key-secret-cert-all-list.png["captura de tela de Criar uma política de acesso mostrando todas as seleções de permissões necessárias para criar uma política de acesso"]
+
+
+
+. Clique em **Avançar** para selecionar o aplicativo registrado **Principal** do Azure que você criou em<<azure-app>> . Selecione **Avançar**.
++
+
+NOTE: Somente um principal pode ser atribuído por política.
+
++
+image:screenshot-azure-key-secret-cert-principal.png["captura de tela da guia principal Criar uma política de acesso"]
+
+. Clique em **Avançar** duas vezes até chegar em **Revisar e criar**.  Em seguida, clique em **Criar**.
+. Selecione **Avançar** para avançar para as opções de **Rede**.
+. Escolha o método de acesso à rede apropriado ou selecione **Todas as redes** e **Revisar + Criar** para criar o cofre de chaves.  (O método de acesso à rede pode ser prescrito por uma política de governança ou pela sua equipe corporativa de segurança na nuvem.)
+. Registre o URI do Key Vault: No key vault que você criou, navegue até o menu Visão geral e copie o **URI do Vault** da coluna da direita.  Você precisará disso para uma etapa posterior.
+
+
+[[key]]
+.Criar chave de criptografia
+. No menu do Key Vault que você criou para o Cloud Volumes ONTAP, navegue até a opção **Chaves**.
+. Selecione **Gerar/importar** para criar uma nova chave.
+. Deixe a opção padrão definida como **Gerar**.
+. Forneça as seguintes informações:
++
+** Nome da chave de criptografia
+** Tipo de chave: RSA
+** Tamanho da chave RSA: 2048
+** Ativado: Sim
+
+
+. Selecione **Criar** para criar a chave de criptografia.
+. Retorne ao menu **Chaves** e selecione a chave que você acabou de criar.
+. Selecione o ID da chave em **Versão atual** para visualizar as propriedades da chave.
+. Localize o campo **Identificador de chave**.  Copie o URI até, mas não incluindo, a string hexadecimal.
+
+
+[[AAD]]
+.Criar um ponto de extremidade do Azure Active Directory (somente HA)
+. Este processo só é necessário se você estiver configurando o Azure Key Vault para um sistema HA Cloud Volumes ONTAP .
+. No portal do Azure, navegue até **Redes Virtuais**.
+. Selecione a Rede Virtual onde você implantou o sistema Cloud Volumes ONTAP e selecione o menu **Sub-redes** no lado esquerdo da página.
+. Selecione o nome da sub-rede para sua implantação do Cloud Volumes ONTAP na lista.
+. Navegue até o título **Pontos de extremidade de serviço**.  No menu suspenso, selecione o seguinte:
++
+** **Microsoft.AzureActiveDirectory**
+** **Microsoft.KeyVault**
+** **Microsoft.Storage** (opcional)
++
+image:screenshot-azure-service-endpoints-services.png["Captura de tela dos pontos de extremidade de serviço mostrando três serviços selecionados"]
+
+
+
+. Selecione **Salvar** para capturar suas configurações.
+
+
+[[ontap]]
+.Configuração do Cloud Volumes ONTAP
+. Conecte-se ao LIF de gerenciamento de cluster com seu cliente SSH preferido.
+. Entre no modo de privilégio avançado no ONTAP:
+`set advanced -con off`
+. Identifique o SVM de dados desejado e verifique sua configuração de DNS:
+`vserver services name-service dns show`
++
+.. Se existir uma entrada DNS para o SVM de dados desejado e ela contiver uma entrada para o DNS do Azure, nenhuma ação será necessária.  Caso contrário, adicione uma entrada de servidor DNS para o SVM de dados que aponte para o DNS do Azure, DNS privado ou servidor local.  Isso deve corresponder à entrada do SVM do administrador do cluster:
+`vserver services name-service dns create -vserver _SVM_name_ -domains _domain_ -name-servers _IP_address_`
+.. Verifique se o serviço DNS foi criado para o SVM de dados:
+`vserver services name-service dns show`
+
+
+. Habilite o Azure Key Vault usando a ID do cliente e a ID do locatário salvas após o registro do aplicativo:
+`security key-manager external azure enable -vserver _SVM_name_ -client-id _Azure_client_ID_ -tenant-id _Azure_tenant_ID_ -name _key_vault_URI_ -key-id _full_key_URI_`
++
+
+NOTE: O `_full_key_URI` o valor deve utilizar o `<https:// <key vault host name>/keys/<key label>` formatar.
+
+. Após a ativação bem-sucedida do Azure Key Vault, insira o `client secret value` quando solicitado.
+. Verifique o status do gerenciador de chaves:
+`security key-manager external azure check` A saída será semelhante a:
++
+[source]
+----
+::*> security key-manager external azure check
+
+Vserver: data_svm_name
+Node: akvlab01-01
+
+Category: service_reachability
+    Status: OK
+
+Category: ekmip_server
+    Status: OK
+
+Category: kms_wrapped_key_status
+    Status: UNKNOWN
+    Details: No volumes created yet for the vserver. Wrapped KEK status will be available after creating encrypted volumes.
+
+3 entries were displayed.
+----
++
+Se o `service_reachability` status não é `OK` , o SVM não consegue acessar o serviço Azure Key Vault com toda a conectividade e permissões necessárias.  Certifique-se de que suas políticas de rede e roteamento do Azure não bloqueiem sua vNet privada de alcançar o ponto de extremidade público do Azure Key Vault.  Se isso acontecer, considere usar um ponto de extremidade privado do Azure para acessar o Key Vault de dentro da vNet.  Também pode ser necessário adicionar uma entrada de hosts estáticos no seu SVM para resolver o endereço IP privado do seu ponto de extremidade.
+
++
+O `kms_wrapped_key_status` irá relatar `UNKNOWN` na configuração inicial.  Seu status mudará para `OK` depois que o primeiro volume for criptografado.
+
+. OPCIONAL: Crie um volume de teste para verificar a funcionalidade do NVE.
++
+`vol create -vserver _SVM_name_ -volume _volume_name_ -aggregate _aggr_ -size _size_ -state online -policy default`
+
++
+Se configurado corretamente, o Cloud Volumes ONTAP criará automaticamente o volume e habilitará a criptografia do volume.
+
+. Confirme se o volume foi criado e criptografado corretamente.  Se for, o `-is-encrypted` parâmetro será exibido como `true` .
+`vol show -vserver _SVM_name_ -fields is-encrypted`
+. Opcional: se você quiser atualizar as credenciais no certificado de autenticação do Azure Key Vault, use o seguinte comando:
+`security key-manager external azure update-credentials -vserver v1 -authentication-method certificate`
+
+
+.Links relacionados
+* link:task-set-up-azure-encryption.html["Configurar o Cloud Volumes ONTAP para usar uma chave gerenciada pelo cliente no Azure"]
+* https://learn.microsoft.com/en-us/azure/key-vault/general/overview["Documentação do Microsoft Azure: Sobre o Azure Key Vault"^]
+* https://docs.netapp.com/us-en/ontap-cli/index.html["Guia de referência de comando ONTAP"^]
+

@@ -1,0 +1,32 @@
+= Autenticação de usuário habilitada para acessar o System Manager a partir do BlueXP
+:allow-uri-read: 
+
+
+
+
+=== Autenticação de usuário habilitada para acessar o System Manager a partir do BlueXP
+
+Como administrador do BlueXP , agora você pode ativar a autenticação para usuários do ONTAP que acessam o ONTAP System Manager pelo BlueXP.  Você pode habilitar esta opção editando as configurações do BlueXP Connector.  Esta opção está disponível para os modos padrão e privado.
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html["Administrar o Cloud Volumes ONTAP usando o System Manager"^] .
+
+
+
+=== BlueXP Advanced View renomeado para System Manager
+
+A opção para gerenciamento avançado do Cloud Volumes ONTAP do BlueXP por meio do ONTAP System Manager foi renomeada de *Advanced View* para *System Manager*.
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html["Administrar o Cloud Volumes ONTAP usando o System Manager"^] .
+
+
+
+=== Apresentando uma maneira mais simples de gerenciar licenças com a BlueXP digital wallet
+
+Agora, você pode experimentar o gerenciamento simplificado de licenças do Cloud Volumes ONTAP usando pontos de navegação aprimorados na BlueXP digital wallet:
+
+* Acesse facilmente as informações da sua licença do Cloud Volumes ONTAP nas guias *Administração > Licenças e assinaturas > Visão geral/Licenças diretas*.
+* Clique em *Exibir* no painel Cloud Volume ONTAP na guia *Visão geral* para obter uma compreensão abrangente de suas licenças baseadas em capacidade.  Esta visualização avançada oferece informações detalhadas sobre suas licenças e assinaturas.
+* Se preferir a interface anterior, você pode clicar no botão *Alternar para a visualização legada* para visualizar os detalhes da licença por tipo e modificar os métodos de cobrança para suas licenças.
+
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html["Gerenciar licenças baseadas em capacidade"^] .

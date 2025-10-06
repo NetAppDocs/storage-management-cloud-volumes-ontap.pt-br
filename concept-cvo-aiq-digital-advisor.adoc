@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: concept-cvo-aiq-digital-advisor.html 
+keywords: concepts, digital advisor, cloud volumes ontap, cloud manager, BlueXP, NetApp Console 
+summary: O Digital Advisor é integrado ao NetApp Console para que você possa otimizar as operações, a segurança e o desempenho dos seus clusters ONTAP em um único painel. 
+---
+= Otimize seus sistemas Cloud Volumes ONTAP usando o Digital Advisor
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+https://www.netapp.com/services/support/active-iq/["Digital Advisor Active IQ"](também conhecido como Digital Advisor) é integrado ao NetApp Console para que você possa otimizar as operações, a segurança e o desempenho dos seus sistemas Cloud Volumes ONTAP em um único painel.
+
+
+
+== Características
+
+Você pode visualizar o status geral do seu sistema de armazenamento, informações de alto nível sobre o bem-estar do sistema, inventário, planejamento e insights valiosos em nível de lista de observação usando o Digital Advisor.
+
+* Analise e otimize a saúde dos seus sistemas de armazenamento
+* Obtenha insights sobre todos os riscos aos seus sistemas de armazenamento e as ações para mitigar os riscos
+* Analise o desempenho dos seus dispositivos de armazenamento visualizando o formato gráfico dos dados de desempenho
+* Obtenha detalhes sobre sistemas que excederam 90% da capacidade ou estão próximos de 90% da capacidade
+
+
+
+
+== Sistemas ONTAP suportados
+
+O Digital Advisor fornece informações para todos os sistemas ONTAP locais e sistemas Cloud Volumes ONTAP na sua conta NSS.
+
+
+
+== Custo
+
+Não há custo para usar este serviço através do Console.
+
+
+
+== Como o Digital Advisor funciona com o NetApp Console
+
+A interface do usuário do Digital Advisor está completamente integrada ao Console.
+
+No painel esquerdo, clique em *Saúde > Digital Advisor*.
+
+* Se você já registrou uma conta NSS existente no Console, a interface do Digital Advisor aparecerá exatamente como você a veria em uma implementação autônoma em https://activeiq.netapp.com/[] .
++
+image:screenshot_aiq_digital_advisor.png["Uma captura de tela da interface do usuário do Digital Advisor no Console."]
+
+* Se você não registrou uma conta NSS no Console, registre uma conta NSS agora e então a interface do Digital Advisor será exibida.  Consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Gerenciar credenciais NSS associadas a uma organização ou conta"] para obter as instruções.
+
+
+
+NOTE: A partir de 3 de dezembro de 2021, a NetApp mudou para uma nova metodologia de registro de credenciais para contas NSS. Para obter mais informações, consulte  https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/FAQs_for_NetApp_adoption_of_MS_Azure_AD_B2C_for_login["esta FAQ"] .  Se sua conta NSS usar o conjunto antigo de credenciais, você precisará atualizar a conta para as novas credenciais.
+
+
+
+== O que vem a seguir
+
+Consulte o https://docs.netapp.com/us-en/active-iq/index.html["Documentação do Digital Advisor"] para mais detalhes.

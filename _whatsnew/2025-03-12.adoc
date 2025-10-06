@@ -1,0 +1,15 @@
+= Novas regiões com suporte para implantações de várias zonas de disponibilidade no Azure
+:allow-uri-read: 
+
+
+
+
+=== Novas regiões com suporte para implantações de várias zonas de disponibilidade no Azure
+
+As seguintes regiões agora oferecem suporte a implantações de várias zonas de disponibilidade de HA no Azure para o Cloud Volumes ONTAP 9.12.1 GA e posteriores:
+
+* EUA Central
+* Governo dos EUA - Virgínia (Região do Governo dos EUA - Virgínia)
+
+
+Para obter uma lista de todas as regiões, consulte o https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiões globais no Azure"^] .

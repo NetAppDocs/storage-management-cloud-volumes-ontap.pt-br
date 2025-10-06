@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task-azure-high-availability-mode.html 
+keywords: high availability mode, EnableHighAvailabilityMode, action required, nfsv4 
+summary: O modo de alta disponibilidade do Microsoft Azure deve ser habilitado para reduzir tempos de failover não planejados e habilitar o suporte NFSv4 para o Cloud Volumes ONTAP. 
+---
+= Habilitar o modo de alta disponibilidade para o Cloud Volumes ONTAP no Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O modo de alta disponibilidade (HA) do Microsoft Azure deve ser habilitado para reduzir tempos de failover não planejados e habilitar o suporte NFSv4 para o Cloud Volumes ONTAP.  Neste modo, seus nós do Cloud Volumes ONTAP HA podem atingir um objetivo de tempo de recuperação (RTO) baixo (60 segundos) durante failovers não planejados em clientes CIFS e NFSv4.
+
+A partir do Cloud Volumes ONTAP 9.10.1, reduzimos o tempo de failover não planejado para pares de HA do Cloud Volumes ONTAP em execução no Microsoft Azure e adicionamos suporte para NFSv4.  Para disponibilizar esses aprimoramentos no Cloud Volumes ONTAP, você precisa habilitar o recurso de alta disponibilidade na sua assinatura do Azure.
+
+O NetApp Console solicita esses detalhes quando o recurso precisa ser habilitado em uma assinatura do Azure.
+
+Observe o seguinte:
+
+* Não há problemas com a alta disponibilidade do seu par Cloud Volumes ONTAP HA.  Este recurso do Azure funciona em conjunto com o ONTAP para reduzir o tempo de interrupção do aplicativo observado pelo cliente para protocolos NFS que resultam de eventos de failover não planejados.
+* A ativação desse recurso não causa interrupções nos pares de HA do Cloud Volumes ONTAP .
+* Habilitar esse recurso na sua assinatura do Azure não causa problemas para outras VMs.
+* O Cloud Volumes ONTAP usa um balanceador de carga interno do Azure durante failovers de LIFs de gerenciamento de cluster e SVM em clientes CIFS e NFS.
+* Quando o modo HA está habilitado, o Console verifica o sistema a cada 12 horas para atualizar as regras internas do Balanceador de Carga do Azure.
+
+
+Um usuário do Azure que tenha privilégios de "Proprietário" pode habilitar o recurso na CLI do Azure.
+
+.Passos
+. https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart["Acesse o Azure Cloud Shell pelo Portal do Azure"^]
+. Registre o recurso de modo de alta disponibilidade:
++
+[source, azurecli]
+----
+az account set -s AZURE_SUBSCRIPTION_NAME_OR_ID
+az feature register --name EnableHighAvailabilityMode --namespace Microsoft.Network
+az provider register -n Microsoft.Network
+----
+. Opcionalmente, verifique se o recurso agora está registrado:
++
+[source, azurecli]
+----
+az feature show --name EnableHighAvailabilityMode --namespace Microsoft.Network
+----
++
+A CLI do Azure deve retornar um resultado semelhante ao seguinte:
+
++
+[listing]
+----
+{
+  "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Features/providers/Microsoft.Network/features/EnableHighAvailabilityMode",
+  "name": "Microsoft.Network/EnableHighAvailabilityMode",
+  "properties": {
+    "state": "Registered"
+  },
+  "type": "Microsoft.Features/providers/features"
+}
+----
+

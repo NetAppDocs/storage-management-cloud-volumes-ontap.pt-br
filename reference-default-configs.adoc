@@ -1,0 +1,294 @@
+---
+sidebar: sidebar 
+permalink: reference-default-configs.html 
+keywords: svm, LIF, LIFs, configuration backups, attributes, autosize, security style, space guarantee, unix permissions, NTFS, UNIX, boot, root, disks, aggr0, aggr1, svm, svms, storage virtual machine, LIF failover, failover, attributes, volume attributes, boot disk, root disk, licenses, feature licenses, default licenses, ontap licenses, ontap features 
+summary: Entender como o Cloud Volumes ONTAP é configurado por padrão pode ajudar você a configurar e administrar seus sistemas, especialmente se você estiver familiarizado com o ONTAP , porque a configuração padrão do Cloud Volumes ONTAP é diferente do ONTAP. 
+---
+= Configurações padrão suportadas para Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Entender como o Cloud Volumes ONTAP é configurado por padrão pode ajudar você a configurar e administrar seus sistemas, especialmente se você estiver familiarizado com o ONTAP , porque a configuração padrão do Cloud Volumes ONTAP é diferente do ONTAP.
+
+
+
+== Configuração padrão
+
+* O NetApp Console cria uma VM de armazenamento de serviço de dados ao implantar o Cloud Volumes ONTAP.  Algumas configurações oferecem suporte a VMs de armazenamento adicionais. link:task-managing-svms.html["Saiba mais sobre o gerenciamento de VMs de armazenamento"] .
++
+A partir da versão 3.9.5, o relatório de espaço lógico é habilitado na VM de armazenamento inicial.  Quando o espaço é relatado logicamente, o ONTAP relata o espaço do volume de forma que todo o espaço físico economizado pelos recursos de eficiência de armazenamento também seja relatado como usado.  Para obter informações sobre recursos de eficiência de armazenamento em linha, consulte o artigo da base de conhecimento https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/What_Inline_Storage_Efficiency_features_are_supported_with_CVO#["KB: Quais recursos de eficiência de armazenamento em linha são suportados pelo CVO?"^]
+
+* O Console instala automaticamente as seguintes licenças de recursos ONTAP no Cloud Volumes ONTAP:
++
+** CIFS
+** FlexCache
+** FlexClone
+** iSCSI
+** Gerenciamento de chaves de criptografia multilocatário (MTEKM), começando com o Cloud Volumes ONTAP 9.12.1 GA
+** NetApp Volume Encryption (somente para sistemas BYOL (traga sua própria licença) ou sistemas PAYGO (pague conforme o uso) registrados)
+** NFS ifdef::aws[] endif::aws[] ifdef::azure[] endif::azure[]
+** SnapMirror
+** SnapRestore
+** SnapVault
+
+
+* Várias interfaces de rede são criadas por padrão:
++
+** Um LIF de gerenciamento de cluster
+** Um LIF interaglomerado
+
+
+
+
+ifdef::azure[]
+
+* Um LIF de gerenciamento de SVM em sistemas HA no Azure
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* Um LIF de gerenciamento de SVM em sistemas HA no Google Cloud
+
+
+endif::gcp[]
+
+ifdef::aws[]
+
+* Um LIF de gerenciamento de SVM em sistemas de nó único na AWS
+
+
+endif::aws[]
+
+* Um LIF de gerenciamento de nós
+
+
+ifdef::gcp[]
+
++ No Google Cloud, esse LIF é combinado com o LIF intercluster.
+
+endif::gcp[]
+
+* Um LIF de dados iSCSI
+* Um LIF de dados CIFS e NFS
++
+
+NOTE: O failover do LIF é desabilitado por padrão para o Cloud Volumes ONTAP devido aos requisitos do provedor de nuvem.  Migrar um LIF para uma porta diferente quebra o mapeamento externo entre endereços IP e interfaces de rede na instância, tornando o LIF inacessível.
+
++
+** O Cloud Volumes ONTAP envia backups de configuração para o agente do Console usando HTTP.
++
+Os backups podem ser acessados em \http://ipaddress/occm/offboxconfig/, onde _ipaddress_ é o endereço IP do host do agente do Console.
+
++
+Você pode usar os backups para reconfigurar seu sistema Cloud Volumes ONTAP .  Para obter mais informações sobre backups de configuração, consulte o https://docs.netapp.com/us-en/ontap/system-admin/config-backup-file-concept.html["Documentação do ONTAP"^] .
+
+** O Console define alguns atributos de volume de forma diferente de outras ferramentas de gerenciamento (ONTAP System Manager ou ONTAP CLI, por exemplo).
++
+A tabela a seguir lista os atributos de volume definidos de forma diferente dos padrões:
+
++
+[cols="15,85"]
+|===
+| Atributo | Valor que o Console configura 
+
+
+| Modo de dimensionamento automático | crescer 
+
+
+| Tamanho automático máximo  a| 
+1.000 por cento
+
+
+NOTE: O administrador da organização ou da conta pode modificar esse valor na página Configurações.
+
+
+
+| Estilo de segurança | NTFS para volumes CIFS UNIX para volumes NFS 
+
+
+| Estilo de garantia de espaço | nenhum 
+
+
+| Permissões UNIX (somente NFS) | 777 
+|===
++
+Para obter informações sobre esses atributos, consultelink:https://docs.netapp.com/us-en/ontap-cli-9121/volume-create.html["Página de manual do ONTAP _volume create_"] .
+
+
+
+
+
+
+
+== Discos internos para dados do sistema
+
+Além do armazenamento para dados do usuário, o Console também adquire armazenamento em nuvem para dados do sistema.
+
+ifdef::aws[]
+
+
+
+=== AWS
+
+* Três discos por nó para dados de inicialização, raiz e núcleo:
++
+** Disco io1 de 47 GiB para dados de inicialização
+** Disco gp3 de 140 GiB para dados raiz
+** Disco gp2 de 540 GiB para dados principais
+
+
+* Para pares HA:
++
+** Dois volumes EBS st1 para a instância do mediador, um de aproximadamente 8 GiB como disco raiz e um de 4 GiB como disco de dados
+** Um disco gp3 de 140 GiB em cada nó para conter uma cópia dos dados raiz do outro nó
++
+
+NOTE: Em algumas zonas, o tipo de disco EBS disponível só pode ser gp2.
+
+
+
+* Um instantâneo do EBS para cada disco de inicialização e disco raiz
++
+
+NOTE: Os instantâneos são criados automaticamente na reinicialização.
+
+* Quando você habilita a criptografia de dados na AWS usando o Key Management Service (KMS), os discos de inicialização e raiz do Cloud Volumes ONTAP também são criptografados.  Isso inclui o disco de inicialização para a instância do mediador em um par HA.  Os discos são criptografados usando a CMK que você seleciona ao adicionar um sistema Cloud Volumes ONTAP .
+
+
+
+TIP: Na AWS, a NVRAM está no disco de inicialização.
+
+endif::aws[]
+
+ifdef::azure[]
+
+
+
+=== Azure (nó único)
+
+* Três discos SSD Premium:
++
+** Um disco de 10 GiB para dados de inicialização
+** Um disco de 140 GiB para dados raiz
+** Um disco de 512 GiB para NVRAM
++
+Se a máquina virtual que você escolheu para o Cloud Volumes ONTAP for compatível com Ultra SSDs, o sistema usará um Ultra SSD de 32 GiB para NVRAM, em vez de um SSD Premium.
+
+
+
+* Um disco HDD padrão de 1024 GiB para economizar núcleos
+* Um instantâneo do Azure para cada disco de inicialização e disco raiz
+* Por padrão, cada disco no Azure é criptografado em repouso.
++
+Se a máquina virtual que você escolheu para o Cloud Volumes ONTAP oferecer suporte ao Premium SSD v2 Managed Disk como discos de dados, o sistema usará um Premium SSD v2 Managed Disk de 32 GiB para NVRAM e outro como disco raiz.
+
+
+
+
+
+=== Azure (par HA)
+
+.Pares HA com blob de página
+* Dois discos SSD Premium de 10 GiB para o volume de inicialização (um por nó)
+* Dois blobs de página de armazenamento premium de 140 GiB para o volume raiz (um por nó)
+* Dois discos HDD padrão de 1024 GiB para salvar núcleos (um por nó)
+* Dois discos SSD Premium de 512 GiB para NVRAM (um por nó)
+* Um instantâneo do Azure para cada disco de inicialização e disco raiz
++
+
+NOTE: Os instantâneos são criados automaticamente na reinicialização.
+
+* Por padrão, cada disco no Azure é criptografado em repouso.
+
+
+.Pares de HA com discos gerenciados compartilhados em várias zonas de disponibilidade
+* Dois discos SSD Premium de 10 GiB para o volume de inicialização (um por nó)
+* Dois discos SSD Premium de 512 GiB para o volume raiz (um por nó)
+* Dois discos HDD padrão de 1024 GiB para salvar núcleos (um por nó)
+* Dois discos SSD Premium de 512 GiB para NVRAM (um por nó)
+* Um instantâneo do Azure para cada disco de inicialização e disco raiz
++
+
+NOTE: Os instantâneos são criados automaticamente na reinicialização.
+
+* Por padrão, cada disco no Azure é criptografado em repouso.
+
+
+.Pares de HA com discos gerenciados compartilhados em zonas de disponibilidade únicas
+* Dois discos SSD Premium de 10 GiB para o volume de inicialização (um por nó)
+* Dois discos SSD Premium compartilhados gerenciados de 512 GiB para o volume raiz (um por nó)
+* Dois discos HDD padrão de 1024 GiB para salvar núcleos (um por nó)
+* Dois discos SSD Premium gerenciados de 512 GiB para NVRAM (um por nó)
+
+
+Se sua máquina virtual oferecer suporte a discos gerenciados Premium SSD v2 como discos de dados, ela usará discos gerenciados Premium SSD v2 de 32 GiB para NVRAM e discos gerenciados compartilhados Premium SSD v2 de 512 GiB para o volume raiz.
+
+Você pode implantar pares de HA em uma única zona de disponibilidade e usar discos gerenciados Premium SSD v2 quando as seguintes condições forem atendidas:
+
+* A versão do Cloud Volumes ONTAP é 9.15.1 ou posterior.
+* A região e a zona selecionadas oferecem suporte a discos gerenciados Premium SSD v2.  Para obter informações sobre as regiões suportadas, consulte https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Site do Microsoft Azure: Produtos disponíveis por região"^] .
+* A assinatura é registrada para a Microsoftlink:task-saz-feature.html["Recurso Microsoft.Compute/VMOrchestratorZonalMultiFD"] .
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+
+
+=== Google Cloud (nó único)
+
+* Um disco persistente SSD de 10 GiB para dados de inicialização
+* Um disco persistente SSD de 64 GiB para dados raiz
+* Um disco persistente SSD de 500 GiB para NVRAM
+* Um disco persistente padrão de 315 GiB para salvar núcleos
+* Snapshots para dados de inicialização e root
++
+
+NOTE: Os instantâneos são criados automaticamente na reinicialização.
+
+* Os discos de inicialização e raiz são criptografados por padrão.
+
+
+
+
+=== Google Cloud (par HA)
+
+* Dois discos persistentes SSD de 10 GiB para dados de inicialização
+* Quatro discos persistentes SSD de 64 GiB para dados raiz
+* Dois discos persistentes SSD de 500 GiB para NVRAM
+* Dois discos persistentes padrão de 315 GiB para salvar núcleos
+* Um disco persistente padrão de 10 GiB para dados do mediador
+* Um disco persistente padrão de 10 GiB para dados de inicialização do mediador
+* Snapshots para dados de inicialização e root
++
+
+NOTE: Os instantâneos são criados automaticamente na reinicialização.
+
+* Os discos de inicialização e raiz são criptografados por padrão.
+
+
+endif::gcp[]
+
+
+
+=== Onde os discos residem
+
+Layout de armazenamento:
+
+* Os dados de inicialização residem em um disco conectado à instância ou máquina virtual.
++
+Este disco, que contém a imagem de inicialização, não está disponível para o Cloud Volumes ONTAP.
+
+* Os dados raiz, que contêm a configuração do sistema e os logs, residem em aggr0.
+* O volume raiz da máquina virtual de armazenamento (SVM) reside em aggr1.
+* Os volumes de dados também residem em aggr1.
+

@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: concept-storage-management.html 
+keywords: provisioning, capacity management, storage provisioning, manual, automatic, advanced allocation, aggregates, thin provisioning, free space, mode, BlueXP, NetApp Consolecloud manager 
+summary: O Console fornece gerenciamento simplificado e avançado do armazenamento Cloud Volumes ONTAP . 
+---
+= Gerenciamento de armazenamento Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O NetApp Console fornece gerenciamento simplificado e avançado do armazenamento Cloud Volumes ONTAP .
+
+
+CAUTION: Você deve criar e excluir todos os discos e agregados diretamente do Console. Você não deve executar essas ações a partir de outra ferramenta de gerenciamento. Isso pode afetar a estabilidade do sistema, dificultar a capacidade de adicionar discos no futuro e potencialmente gerar taxas redundantes de provedores de nuvem.
+
+
+
+== Provisionamento de armazenamento
+
+O Console facilita o provisionamento de armazenamento para o Cloud Volumes ONTAP comprando discos e gerenciando agregados para você.  Você só precisa criar volumes.  Você pode usar uma opção de alocação avançada para provisionar agregados por conta própria, se desejar.
+
+
+
+=== Provisionamento simplificado
+
+Agregados fornecem armazenamento em nuvem para volumes.  O Console cria agregados para você quando você inicia uma instância e quando provisiona volumes adicionais.
+
+Quando você cria um volume, o Console faz uma das três coisas:
+
+* Ele coloca o volume em um agregado existente que tem espaço livre suficiente.
+* Ele coloca o volume em um agregado existente comprando mais discos para esse agregado.
+
+
+ifdef::aws[]
+
++ No caso de um agregado na AWS que suporta Volumes Elásticos, ele também aumenta o tamanho dos discos em um grupo RAID. link:concept-aws-elastic-volumes.html["Saiba mais sobre o suporte para Elastic Volumes"] .
+
+endif::aws[]
+
+* Ele compra discos para um novo agregado e coloca o volume nesse agregado.
+
+
+O Console determina onde colocar um novo volume observando vários fatores: o tamanho máximo de um agregado, se o provisionamento fino está habilitado e os limites de espaço livre para agregados.
+
+ifdef::aws[]
+
+
+
+==== Seleção de tamanho de disco para agregados na AWS
+
+Quando o Console cria novos agregados para o Cloud Volumes ONTAP na AWS, ele aumenta gradualmente os tamanhos dos discos conforme o número de agregados aumenta para maximizar a capacidade do sistema antes de atingir os limites do disco de dados da AWS.
+
+Por exemplo, o Console pode escolher os seguintes tamanhos de disco:
+
+[cols="3*"]
+|===
+| Número agregado | Tamanho do disco | Capacidade máxima agregada 
+
+
+| 1 | 500 GiB | 3 TiB 
+
+
+| 4 | 1 TiB | 6 TiB 
+
+
+| 6 | 2 TiB | 12 TiB 
+|===
+
+NOTE: Esse comportamento não se aplica a agregados que oferecem suporte ao recurso Amazon EBS Elastic Volumes.  Agregados que têm Volumes Elásticos habilitados são compostos de um ou dois grupos RAID.  Cada grupo RAID tem quatro discos idênticos com a mesma capacidade. link:concept-aws-elastic-volumes.html["Saiba mais sobre o suporte para Elastic Volumes"] .
+
+Você pode escolher o tamanho do disco usando a opção de alocação avançada.
+
+endif::aws[]
+
+
+
+=== Alocação avançada
+
+Você também pode gerenciar agregados. link:task-create-aggregates.html["Na página *Alocação avançada*"] , você pode criar novos agregados que incluem um número específico de discos, adicionar discos a um agregado existente e criar volumes em agregados específicos.
+
+
+
+== Gestão de capacidade
+
+O administrador da organização ou da conta pode configurar o Console para notificá-lo sobre decisões de capacidade de armazenamento ou se deseja gerenciar automaticamente os requisitos de capacidade para você.
+
+Esse comportamento é determinado pelo _Modo de Gerenciamento de Capacidade_ em um agente de Console.  O Modo de Gerenciamento de Capacidade afeta todos os sistemas Cloud Volumes ONTAP gerenciados por esse agente do Console.  Se você tiver outro agente do Console, ele poderá ser configurado de forma diferente.
+
+
+
+=== Gerenciamento automático de capacidade
+
+O Modo de Gerenciamento de Capacidade é definido como automático por padrão.  Neste modo, o Console verifica a proporção de espaço livre a cada 15 minutos para determinar se ela fica abaixo do limite especificado.  Se for necessária mais capacidade, ele inicia a compra de novos discos, exclui coleções de discos não utilizadas (agregados), move volumes entre agregados conforme necessário e tenta evitar falhas de disco.
+
+Os exemplos a seguir ilustram como esse modo funciona:
+
+* Se um agregado atingir o limite de capacidade e tiver espaço para mais discos, o Console comprará automaticamente novos discos para esse agregado para que os volumes possam continuar a crescer.
++
+ifdef::aws[]
+
+
+
+No caso de um agregado na AWS que suporta Volumes Elásticos, ele também aumenta o tamanho dos discos em um grupo RAID. link:concept-aws-elastic-volumes.html["Saiba mais sobre o suporte para Elastic Volumes"] .
+
+endif::aws[]
+
++ * Se um agregado atingir o limite de capacidade e não puder suportar nenhum disco adicional, o Console moverá automaticamente um volume desse agregado para um agregado com capacidade disponível ou para um novo agregado.
+
++ Se o Console criar um novo agregado para o volume, ele escolherá um tamanho de disco que acomode o tamanho desse volume.
+
++ Observe que agora há espaço livre disponível no agregado original.  Volumes existentes ou novos volumes podem usar esse espaço.  O espaço não pode ser devolvido ao provedor de nuvem neste cenário.
+
+* Se um agregado não contiver volumes por mais de 12 horas, o Console o excluirá.
+
+
+
+
+==== Gerenciamento de LUNs com gerenciamento automático de capacidade
+
+O gerenciamento automático de capacidade do Console não se aplica a LUNs.  Ao criar um LUN, ele desabilita o recurso de crescimento automático.
+
+
+
+=== Gerenciamento de capacidade manual
+
+Se a organização ou o administrador da conta definir o Modo de Gerenciamento de Capacidade como manual, o Console informará você para tomar as ações apropriadas para decisões de capacidade.  Os mesmos exemplos descritos no modo automático se aplicam ao modo manual, mas cabe a você aceitar as ações.
+
+
+
+=== Saber mais
+
+link:task-manage-capacity-settings.html["Aprenda a modificar o modo de gerenciamento de capacidade"] .

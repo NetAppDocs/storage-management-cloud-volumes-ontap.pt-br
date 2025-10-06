@@ -1,0 +1,11 @@
+= Criação de VM de armazenamento automatizada por meio de APIs no Google Cloud
+:allow-uri-read: 
+
+
+
+
+=== Criação de VM de armazenamento automatizada por meio de APIs no Google Cloud
+
+Agora você pode usar as APIs do BlueXP para automatizar a criação de VMs de armazenamento no Google Cloud.  Você estava usando esse recurso em configurações de alta disponibilidade (HA) do Cloud Volumes ONTAP e agora também pode usá-lo em implantações de nó único.  Ao usar as APIs do BlueXP , você pode facilmente criar, renomear e excluir VMs de armazenamento de serviço de dados adicionais no seu ambiente do Google Cloud, sem a necessidade de configurar manualmente as interfaces de rede, LIFs e LIFs de gerenciamento necessários.  Essa automação simplifica o processo de gerenciamento de VMs de armazenamento.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html["Gerenciar VMs de armazenamento de dados para o Cloud Volumes ONTAP no Google Cloud"^]

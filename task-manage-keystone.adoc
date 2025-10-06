@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: task-manage-keystone.html 
+keywords: license, licensing, install, keystone, request capacity, link subscription, add keystone subscription, keystone subscription, digital wallet, keystone flex 
+summary: Gerencie suas assinaturas do Keystone habilitando-as para uso com o Cloud Volumes ONTAP e solicitando alterações na capacidade comprometida para os níveis de serviço da sua assinatura.  Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para clusters ONTAP locais ou para sistemas Cloud Volumes ONTAP . 
+---
+= Gerenciar assinaturas do Keystone para o Cloud Volumes ONTAP por meio do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead lead"]
+Gerencie suas assinaturas Keystone a partir da BlueXP digital wallet habilitando assinaturas para uso com o Cloud Volumes ONTAP e solicitando alterações na capacidade comprometida para os níveis de serviço da sua assinatura.  Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para clusters ONTAP locais ou para sistemas Cloud Volumes ONTAP .
+
+O NetApp Keystone é um serviço flexível baseado em assinatura, com pagamento conforme o crescimento, que oferece uma experiência de nuvem híbrida para clientes que preferem OpEx a CapEx ou leasing.
+
+https://www.netapp.com/services/keystone/["Saiba mais sobre a Keystone"^]
+
+
+
+== Autorize sua conta
+
+Antes de poder usar e gerenciar assinaturas do Keystone no BlueXP, você precisa entrar em contato com a NetApp para autorizar sua conta de usuário do BlueXP com suas assinaturas do Keystone .
+
+.Passos
+. No menu de navegação do BlueXP , selecione *Governança > Carteira digital*.
+. Selecione * Assinaturas Keystone *.
+. Se você vir a página *Bem-vindo ao NetApp Keystone*, envie um e-mail para o endereço listado na página.
++
+Um representante da NetApp processará sua solicitação autorizando sua conta de usuário a acessar as assinaturas.
+
+. Volte para a aba * Assinaturas Keystone * para visualizar suas assinaturas.
++
+image:screenshot-keystone-overview.png["Uma captura de tela que mostra uma lista de assinaturas do Keystone ."]
+
+
+
+
+
+== Vincular uma assinatura
+
+Depois que a NetApp autorizar sua conta, você poderá vincular assinaturas do Keystone para uso com o Cloud Volumes ONTAP. Esta ação permite que os usuários selecionem a assinatura como método de cobrança para novos sistemas Cloud Volumes ONTAP .
+
+.Passos
+. No menu de navegação do BlueXP , selecione *Governança > Carteira digital*.
+. Selecione * Assinaturas Keystone *.
+. Para a assinatura que você deseja vincular, clique emimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Link*.
++
+image:screenshot-keystone-link.png["Uma captura de tela que mostra a opção de link para uma assinatura."]
+
+
+
+.Resultado
+A assinatura agora está vinculada à sua organização ou conta BlueXP e disponível para seleção ao criar um ambiente de trabalho do Cloud Volumes ONTAP .
+
+
+
+== Solicitar capacidade mais ou menos comprometida
+
+Se quiser alterar a capacidade comprometida para os níveis de serviço da sua assinatura, você pode enviar uma solicitação à NetApp diretamente do BlueXP.  Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para clusters locais ou para sistemas Cloud Volumes ONTAP .
+
+.Passos
+. No menu de navegação do BlueXP , selecione *Governança > Carteira digital*.
+. Selecione * Assinaturas Keystone *.
+. Para a assinatura que você deseja ajustar a capacidade, clique emimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Exibir detalhes e editar*.
+. Insira a capacidade comprometida solicitada para uma ou mais assinaturas.
++
+image:screenshot-keystone-request.png["Uma captura de tela que mostra a capacidade de solicitar uma alteração na capacidade comprometida de uma assinatura."]
+
+. Role para baixo, insira quaisquer detalhes adicionais para a solicitação e clique em *Enviar*.
+
+
+.Resultado
+Sua solicitação cria um tíquete no sistema da NetApp para processamento.
+
+
+
+== Monitorar o uso
+
+O painel do BlueXP digital advisor permite monitorar o uso da assinatura do Keystone e gerar relatórios.
+
+https://docs.netapp.com/us-en/keystone-staas/integrations/aiq-keystone-details.html["Saiba mais sobre o monitoramento do uso da assinatura"^]
+
+
+
+== Desvincular uma assinatura
+
+Se você não quiser mais usar uma assinatura Keystone com o BlueXP, você pode desvincular a assinatura. Observe que você só pode desvincular uma assinatura que não esteja vinculada a uma assinatura existente do Cloud Volumes ONTAP .
+
+.Passos
+. No menu de navegação do BlueXP , selecione *Governança > Carteira digital*.
+. Selecione * Keystone*.
+. Para a assinatura que você deseja desvincular, clique emimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Desvincular*.
+
+
+.Resultado
+A assinatura é desvinculada da sua organização ou conta BlueXP e não está mais disponível para seleção ao criar um ambiente de trabalho do Cloud Volumes ONTAP .

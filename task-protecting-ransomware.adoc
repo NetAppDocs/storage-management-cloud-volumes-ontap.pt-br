@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: task-protecting-ransomware.html 
+keywords: snapshot policy, ransomware, protection, fpolicy, block, extension, attacks, arp, autonomous, monitor, alert, attacks, Cloud Volumes ONTAP 
+summary: Ataques de ransomware podem custar tempo, recursos e reputação a uma empresa. O Console permite que você implemente a solução NetApp para ransomware, que fornece ferramentas eficazes para visibilidade, detecção e correção. 
+---
+= Habilite soluções de proteção contra ransomware da NetApp para Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ataques de ransomware podem custar tempo, recursos e reputação a uma empresa.  O NetApp Console permite que você implemente duas soluções NetApp para ransomware: proteção contra extensões de arquivo comuns de ransomware e proteção autônoma contra ransomware (ARP).  Essas soluções fornecem ferramentas eficazes para visibilidade, detecção e correção.
+
+
+
+== Proteção contra extensões de arquivo comuns de ransomware
+
+Disponível no Console, a configuração Proteção contra Ransomware permite que você utilize a funcionalidade ONTAP FPolicy para se proteger contra tipos comuns de extensão de arquivo de ransomware.
+
+.Passos
+. Na página *Sistemas*, clique duas vezes no nome do sistema Cloud Volumes ONTAP que você configurou para usar proteção contra ransomware.
+. Na guia Visão geral, clique no painel Recursos e depois clique no ícone de lápis ao lado de *Proteção contra ransomware*.
++
+image::screenshot_features_support_registration_2.png[Uma captura de tela que mostra a configuração de Proteção contra Ransomware no painel Recursos disponível no canto superior direito da página Visão geral ao visualizar um sistema.]
+
+. Implemente a solução NetApp para ransomware:
++
+.. Clique em *Ativar política de instantâneo*, se você tiver volumes que não tenham uma política de instantâneo habilitada.
++
+A tecnologia NetApp Snapshot oferece a melhor solução do setor para remediação de ransomware.  A chave para uma recuperação bem-sucedida é restaurar a partir de backups não infectados.  As cópias de instantâneos são somente leitura, o que evita a corrupção por ransomware.  Eles também podem fornecer a granularidade para criar imagens de uma única cópia de arquivo ou uma solução completa de recuperação de desastres.
+
+.. Clique em *Ativar FPolicy* para habilitar a solução FPolicy da ONTAP, que pode bloquear operações de arquivo com base na extensão do arquivo.
++
+Esta solução preventiva melhora a proteção contra ataques de ransomware ao bloquear tipos comuns de arquivos de ransomware.
+
++
+O escopo padrão do FPolicy bloqueia arquivos que têm as seguintes extensões:
+
++
+micro, criptografado, bloqueado, cripto, cripta, crinf, r5a, XRNT, XTBL, R16M01D05, pzdc, bom, LOL!, OMG!, RDM, RRK, encryptedRS, crjoker, EnCiPhErEd, LeChiffre
+
++
+
+TIP: Este escopo é criado quando você ativa o FPolicy no Cloud Volumes ONTAP.  A lista é baseada em tipos comuns de arquivos de ransomware.  Você pode personalizar as extensões de arquivo bloqueadas usando os comandos _vserver fpolicy policy scope_ da CLI do Cloud Volumes ONTAP .
+
++
+image:screenshot_ransomware_protection.gif["Uma captura de tela que mostra a página de proteção contra ransomware disponível em um sistema.  A tela mostra o número de volumes sem uma Política de Snapshot e a capacidade de bloquear extensões de arquivo de ransomware."]
+
+
+
+
+
+
+
+== Proteção Autônoma contra Ransomware
+
+O Cloud Volumes ONTAP oferece suporte ao recurso Autonomous Ransomware Protection (ARP), que realiza análises em cargas de trabalho para detectar e alertar proativamente sobre atividades anormais que podem indicar um ataque de ransomware.
+
+Separado das proteções de extensão de arquivo fornecidas pelo https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html#protection-from-common-ransomware-file-extensions["configuração de proteção contra ransomware"] , o recurso ARP usa análise de carga de trabalho para alertar o usuário sobre ataques potenciais com base na “atividade anormal” detectada.  Tanto a configuração de proteção contra ransomware quanto o recurso ARP podem ser usados em conjunto para uma proteção abrangente contra ransomware.
+
+O recurso ARP está disponível para uso com assinaturas de licença própria (BYOL) e de mercado para suas licenças, sem custo adicional.
+
+Os volumes habilitados para ARP têm um estado designado de "Modo de aprendizagem" ou "Ativo".
+
+A configuração do ARP para volumes é realizada por meio do ONTAP System Manager e do ONTAP CLI.
+
+Para obter mais informações sobre como habilitar o ARP com o ONTAP System Manager e o ONTAP CLI, consulte o https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Documentação do ONTAP : Habilitar proteção autônoma contra ransomware"^] .
+
+image::screenshot_arp.png[A captura de tela mostra a licença complementar para Autonomous Ransomware Protection.]

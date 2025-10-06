@@ -1,0 +1,26 @@
+= 
+:allow-uri-read: 
+
+
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Tamanho | O tamanho máximo que você pode inserir depende muito se você habilita o provisionamento fino, que permite criar um volume maior que o armazenamento físico disponível atualmente. 
+
+
+| Controle de acesso (somente para NFS) | Uma política de exportação define os clientes na sub-rede que podem acessar o volume. Por padrão, o Console insere um valor que fornece acesso a todas as instâncias na sub-rede. 
+
+
+| Permissões e usuários/grupos (somente para CIFS) | Esses campos permitem que você controle o nível de acesso a um compartilhamento para usuários e grupos (também chamados de listas de controle de acesso ou ACLs). Você pode especificar usuários ou grupos locais ou de domínio do Windows, ou usuários ou grupos do UNIX. Se você especificar um nome de usuário de domínio do Windows, deverá incluir o domínio do usuário usando o formato domínio\nome de usuário. 
+
+
+| Política de Snapshot | Uma política de cópia de instantâneo especifica a frequência e o número de cópias de instantâneo do NetApp criadas automaticamente. Uma cópia do NetApp Snapshot é uma imagem do sistema de arquivos de um momento específico que não tem impacto no desempenho e requer armazenamento mínimo. Você pode escolher a política padrão ou nenhuma.  Você pode escolher nenhum para dados transitórios: por exemplo, tempdb para Microsoft SQL Server. 
+
+
+| Opções avançadas (somente para NFS) | Selecione uma versão do NFS para o volume: NFSv3 ou NFSv4. 
+
+
+| Grupo iniciador e IQN (somente para iSCSI) | Os destinos de armazenamento iSCSI são chamados de LUNs (unidades lógicas) e são apresentados aos hosts como dispositivos de bloco padrão.  Os grupos de iniciadores são tabelas de nomes de nós de host iSCSI e controlam quais iniciadores têm acesso a quais LUNs. Os destinos iSCSI se conectam à rede por meio de adaptadores de rede Ethernet padrão (NICs), placas de mecanismo de descarregamento TCP (TOE) com iniciadores de software, adaptadores de rede convergentes (CNAs) ou adaptadores de bust de host dedicados (HBAs) e são identificados por nomes qualificados iSCSI (IQNs).  Quando você cria um volume iSCSI, o Console cria automaticamente um LUN para você.  Simplificamos criando apenas um LUN por volume, portanto não há gerenciamento envolvido.  Depois de criar o volume,link:task-connect-lun.html["use o IQN para conectar-se ao LUN de seus hosts"] . 
+|===

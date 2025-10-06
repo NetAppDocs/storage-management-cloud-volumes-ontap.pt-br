@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: concept-azure-mktplace-direct.html 
+keywords: azure marketplace direct, cvo in azure marketplace 
+summary:  
+---
+= Saiba mais sobre as opções de implantação do Cloud Volumes ONTAP no Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A NetApp oferece duas opções para implantar o Cloud Volumes ONTAP no Azure.  O Cloud Volumes ONTAP tradicionalmente depende do NetApp Console para implantação e orquestração.  A partir do Cloud Volumes ONTAP 9.16.1, você pode aproveitar a implantação direta do Azure Marketplace, um processo simplificado que fornece acesso a um conjunto limitado, mas ainda poderoso, de recursos e opções do Cloud Volumes ONTAP .
+
+Ao implantar o Cloud Volumes ONTAP diretamente do marketplace do Azure, você não precisa configurar o agente do Console nem atender a outros critérios de segurança e integração necessários para implantar o Cloud Volumes ONTAP por meio do Console.  No marketplace do Azure, você pode implantar rapidamente o Cloud Volumes ONTAP em apenas alguns cliques e explorar seus principais recursos e funcionalidades em seu ambiente.
+
+Ao concluir a implantação no marketplace do Azure, você pode descobrir esses sistemas no Console.  Após a descoberta, você pode gerenciá-los como sistemas Cloud Volumes ONTAP e aproveitar todos os recursos do Console. Consulte link:task-deploy-cvo-azure-mktplc.html["Descubra os sistemas implantados no Console"] .
+
+Aqui está a comparação de recursos entre as duas opções.  Observe que os recursos de uma instância autônoma implantada por meio do marketplace do Azure mudam quando ela é descoberta no Console.
+
+[cols="3*"]
+|===
+|  | Mercado do Azure | Console NetApp 
+
+
+| *Integração* | Mais curto e fácil, com preparação mínima necessária para implantação direta | Processo de integração mais longo, incluindo a instalação do agente do Console 
+
+
+| *Tipos de máquinas virtuais (VM) suportados*  a| 
+Tipos de instância Eds_v5 e Ls_v3
+| Gama completa de tipos de VM.https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurações com suporte no Azure"^] 
+
+
+| *Licença* | Licença gratuita | Qualquer licença baseada em capacidade.link:concept-licensing.html["Licenciamento do Cloud Volumes ONTAP"] 
+
+
+| * Suporte NetApp * | Não incluído | Disponível, com base no tipo de licença 
+
+
+| *Capacidade* | Até 500 GiB | Expansível por configuração 
+
+
+| *Modelo de implantação* | Implantação do modo de alta disponibilidade (HA) em zona de disponibilidade única (AZ) | Todas as configurações suportadas, incluindo modos de nó único e HA, implantações de AZ únicas e múltiplas 
+
+
+| *Tipo de disco suportado* | Discos gerenciados SSD v2 premium | Suporte mais amplo.link:concept-storage.html#azure-storage["Configuração padrão para Cloud Volumes ONTAP"] 
+
+
+| *Velocidade de gravação (modo de gravação rápida)* | Não suportado | Suportado, com base na sua configuração. link:concept-write-speed.html["Saiba mais sobre velocidades de gravação no Cloud Volumes ONTAP"] . 
+
+
+| *Capacidade de orquestração* | Não disponível | Disponível por meio do NetApp Console, com base no tipo de licença 
+
+
+| *Número de VMs de armazenamento suportadas* | Um por implantação | Várias VMs de armazenamento, com base na sua configuração.link:task-managing-svms-azure.html#supported-number-of-storage-vms["Número suportado de VMs de armazenamento"] 
+
+
+| *Alterando o tipo de instância* | Não suportado | Suportado 
+
+
+| * Hierarquização do FabricPool * | Não suportado | Suportado 
+|===
+.Links relacionados
+* Implantação direta do Azure Marketplace:link:task-deploy-cvo-azure-mktplc.html["Implantar o Cloud Volumes ONTAP no marketplace do Azure"]
+* Implantação por meio do Console:link:task-getting-started-azure.html["Início rápido para Cloud Volumes ONTAP no Azure"]
+* https://docs.netapp.com/us-en/bluexp-family/index.html["Documentação do NetApp Console"^]
+

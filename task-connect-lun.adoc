@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: task-connect-lun.html 
+keywords: lun, connect lun, iscsi lun, target iqn, iqn 
+summary: Quando você cria um volume iSCSI, o NetApp Console cria automaticamente um LUN para você.  Simplificamos criando apenas um LUN por volume, portanto não há gerenciamento envolvido.  Depois de criar o volume, use o IQN para se conectar ao LUN a partir dos seus hosts. 
+---
+= Conecte-se a um LUN no Cloud Volumes ONTAP do seu sistema host
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando você cria um volume iSCSI, o NetApp Console cria automaticamente um LUN para você.  Simplificamos criando apenas um LUN por volume, portanto não há gerenciamento envolvido.  Depois de criar o volume, use o IQN para se conectar ao LUN a partir dos seus hosts.
+
+Observe o seguinte:
+
+* O gerenciamento automático de capacidade do Console não se aplica a LUNs.  Ao criar um LUN, ele desabilita o recurso de crescimento automático.
+* Você pode criar LUNs adicionais no ONTAP System Manager ou no ONTAP CLI.
+
+
+.Passos
+. No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
+. Na página *Sistemas*, clique duas vezes no sistema Cloud Volumes ONTAP no qual você deseja gerenciar volumes.
+. No sistema, selecione a aba *Volumes*.
+. Vá até o bloco de volume desejado e selecione *Gerenciar volume* para acessar o painel Gerenciar volumes à direita.
+. Clique em *Target iQN*.
+. Clique em *Copiar* para copiar o nome do iQN.
+. Configure uma conexão iSCSI do host para o LUN.
++
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-iscsi-rhel-cg/GUID-15E8C226-BED5-46D0-BAED-379EA4311340.html["Configuração expressa do ONTAP 9 iSCSI para Red Hat Enterprise Linux: Iniciando as sessões iSCSI com o destino"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-iscsi-cpg/GUID-857453EC-90E9-4AB6-B543-83827CF374BF.html["Configuração expressa do ONTAP 9 iSCSI para Windows: iniciando sessões iSCSI com o destino"^]
+** https://docs.netapp.com/us-en/ontap-sanhost/["Configuração do host ONTAP SAN"^]
+
+
+

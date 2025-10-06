@@ -1,0 +1,11 @@
+= Lista de VMs com suporte atualizada para o Azure para alinhamento com as práticas recomendadas
+:allow-uri-read: 
+
+
+
+
+=== Lista de VMs com suporte atualizada para o Azure para alinhamento com as práticas recomendadas
+
+As famílias de máquinas DS_v2 e Es_v3 não estão mais disponíveis para seleção no BlueXP ao implantar novas instâncias do Cloud Volumes ONTAP no Azure. Essas famílias serão mantidas e apoiadas apenas em sistemas mais antigos e existentes. Novas implantações do Cloud Volumes ONTAP têm suporte no Azure somente a partir da versão 9.12.1. Recomendamos que você mude para o Es_v4 ou qualquer outra série compatível com o Cloud Volumes ONTAP 9.12.1 e posteriores. As máquinas das séries DS_v2 e Es_v3, no entanto, estarão disponíveis para novas implantações feitas por meio da API.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurações com suporte no Azure"^]

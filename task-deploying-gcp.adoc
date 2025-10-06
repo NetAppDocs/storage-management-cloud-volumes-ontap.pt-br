@@ -1,0 +1,514 @@
+---
+sidebar: sidebar 
+permalink: task-deploying-gcp.html 
+keywords: Cloud Volumes ONTAP, deploying, launching, creating, deploy, launch, create,  license key, serial number, location, license, preconfigured packages, programmatic deployments, disk size, write speed, access control, volume protection, usage profile, register, CIFS share, quota, qtree, HA, high-availability, google cloud ha, ha in google cloud, ha pair, cloud backup, cloud tiering 
+summary: Você pode iniciar o Cloud Volumes ONTAP em uma configuração de sistema único ou como um par de HA no Google Cloud Platform. 
+---
+= Inicie o Cloud Volumes ONTAP no Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode iniciar o Cloud Volumes ONTAP em uma configuração de nó único ou como um par de HA no Google Cloud.
+
+
+
+== Antes de começar
+
+Você precisa do seguinte antes de começar.
+
+[[licensing]]
+* Um agente do Console que está ativo e em execução.
++
+** Você deveria ter um https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Agente de console associado ao seu sistema"^] .
+** https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Você deve estar preparado para deixar o agente do Console em execução o tempo todo"^] .
+** A conta de serviço associada ao agente do Console https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["deve ter as permissões necessárias"^]
+
+
+* Uma compreensão da configuração que você deseja usar.
++
+Você deve ter se preparado escolhendo uma configuração e obtendo informações de rede do Google Cloud com seu administrador. Para mais detalhes, consultelink:task-planning-your-config-gcp.html["Planejando sua configuração do Cloud Volumes ONTAP"] .
+
+* Uma compreensão do que é necessário para configurar o licenciamento do Cloud Volumes ONTAP.
++
+link:task-set-up-licensing-google.html["Aprenda como configurar o licenciamento"] .
+
+* As APIs do Google Cloud devem ser https://cloud.google.com/apis/docs/getting-started#enabling_apis["habilitado em seu projeto"^] :
++
+** API do Gerenciador de Implantação em Nuvem V2
+** API de registro em nuvem
+** API do Gerenciador de Recursos de Nuvem
+** API do mecanismo de computação
+** API de gerenciamento de identidade e acesso (IAM)
+
+
+
+
+
+
+== Inicie um sistema de nó único no Google Cloud
+
+Crie um sistema no NetApp Console para iniciar o Cloud Volumes ONTAP no Google Cloud.
+
+.Passos
+. No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
+. [[subscribe]]Na página *Sistemas*, clique em *Adicionar Sistema* e siga as instruções.
+. *Escolha um local*: Selecione *Google Cloud* e * Cloud Volumes ONTAP*.
+. Se você for solicitado, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["criar um agente de console"^] .
+. *Detalhes e credenciais*: selecione um projeto, especifique um nome de cluster, opcionalmente selecione uma conta de serviço, opcionalmente adicione rótulos e, em seguida, especifique as credenciais.
++
+A tabela a seguir descreve os campos para os quais você pode precisar de orientação:
+
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Nome do sistema | O Console usa o nome do sistema para nomear o sistema Cloud Volumes ONTAP e a instância da VM do Google Cloud.  Ele também usa o nome como prefixo para o grupo de segurança predefinido, se você selecionar essa opção. 
+
+
+| Nome da conta de serviço | Se você planeja usarlink:concept-data-tiering.html["hierarquização de dados"] ou https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Backup e recuperação da NetApp"^] com o Cloud Volumes ONTAP, você precisa habilitar *Conta de serviço* e selecionar uma conta de serviço que tenha a função de administrador de armazenamento predefinida. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^] . 
+
+
+| Adicionar rótulos | Os rótulos são metadados para seus recursos do Google Cloud.  O Console adiciona os rótulos ao sistema Cloud Volumes ONTAP e aos recursos do Google Cloud associados ao sistema.  Você pode adicionar até quatro rótulos na interface do usuário ao criar um sistema e depois adicionar mais depois que ele for criado.  Observe que a API não limita você a quatro rótulos ao criar um sistema.  Para obter informações sobre rótulos, consulte o https://cloud.google.com/compute/docs/labeling-resources["Documentação do Google Cloud: Rotulagem de recursos"^] . 
+
+
+| Nome de usuário e senha | Estas são as credenciais para a conta de administrador do cluster Cloud Volumes ONTAP .  Você pode usar essas credenciais para se conectar ao Cloud Volumes ONTAP por meio do ONTAP System Manager ou do ONTAP CLI.  Mantenha o nome de usuário padrão _admin_ ou altere-o para um nome de usuário personalizado. 
+
+
+| Editar Projeto  a| 
+Selecione o projeto onde você deseja que o Cloud Volumes ONTAP resida.  O projeto padrão é o projeto onde o Console está localizado.
+
+Se você não vir nenhum projeto adicional na lista suspensa, significa que você ainda não associou a conta de serviço a outros projetos. Acesse o console do Google Cloud, abra o serviço IAM e selecione o projeto.  Adicione a conta de serviço com a função que você usa para o Console nesse projeto. Você precisará repetir esta etapa para cada projeto.
+
+
+NOTE: Esta é a conta de serviço que você configurou para o Console,link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["conforme descrito nesta página"^] .
+
+Clique em *Adicionar assinatura* para associar as credenciais selecionadas a uma assinatura.
+
+Para criar um sistema Cloud Volumes ONTAP com pagamento conforme o uso, você precisa selecionar um projeto do Google Cloud associado a uma assinatura do Cloud Volumes ONTAP no marketplace do Google Cloud. Consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Associando uma assinatura do marketplace às credenciais do Google Cloud"^] .
+
+|===
+. *Serviços*: Selecione os serviços que você deseja usar neste sistema.  Para selecionar Backup e Recuperação ou usar o NetApp Cloud Tiering, você deve ter especificado a Conta de Serviço na etapa 3.
++
+
+TIP: Se você quiser utilizar WORM e camadas de dados, desabilite o Backup e Recuperação e implante um sistema Cloud Volumes ONTAP com versão 9.8 ou superior.
+
+. *Localização e conectividade*: selecione um local, escolha uma política de firewall e confirme a conectividade de rede com o armazenamento do Google Cloud para hierarquização de dados.
++
+A tabela a seguir descreve os campos para os quais você pode precisar de orientação:
+
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Verificação de conectividade | Para hierarquizar dados frios em um bucket do Google Cloud Storage, a sub-rede na qual o Cloud Volumes ONTAP reside deve ser configurada para o Private Google Access.  Para obter instruções, consulte https://cloud.google.com/vpc/docs/configure-private-google-access["Documentação do Google Cloud: Configurando o acesso privado do Google"^] . 
+
+
+| Política de firewall gerada  a| 
+Se você deixar o Console gerar a política de firewall para você, precisará escolher como permitirá o tráfego:
+
+** Se você escolher *Somente VPC selecionada*, o filtro de origem para tráfego de entrada será o intervalo de sub-rede da VPC selecionada e o intervalo de sub-rede da VPC onde o agente do Console reside.  Esta é a opção recomendada.
+** Se você escolher *Todas as VPCs*, o filtro de origem para o tráfego de entrada será o intervalo de IP 0.0.0.0/0.
+
+
+
+
+| Usar política de firewall existente | Se você usar uma política de firewall existente, certifique-se de que ela inclua as regras necessárias:link:reference-networking-gcp.html#firewall-rules["Saiba mais sobre as regras de firewall para o Cloud Volumes ONTAP"] 
+|===
+. *Métodos de cobrança e conta NSS*: especifique qual opção de cobrança você gostaria de usar com este sistema e, em seguida, especifique uma conta do site de suporte da NetApp :
++
+** link:concept-licensing.html["Saiba mais sobre as opções de licenciamento do Cloud Volumes ONTAP"^]
+** link:task-set-up-licensing-google.html["Aprenda como configurar o licenciamento"^]
+
+
+. *Pacotes pré-configurados*: selecione um dos pacotes para implantar rapidamente um sistema Cloud Volumes ONTAP ou clique em *Criar minha própria configuração*.
++
+Se você escolher um dos pacotes, precisará apenas especificar um volume e depois revisar e aprovar a configuração.
+
+. *Licenciamento*: Altere a versão do Cloud Volumes ONTAP conforme necessário e selecione um tipo de máquina.
++
+
+NOTE: Se uma versão mais recente de Release Candidate, Disponibilidade Geral ou patch estiver disponível para uma versão selecionada, o Console atualizará o sistema para essa versão ao criá-la.  Por exemplo, a atualização ocorre se você selecionar Cloud Volumes ONTAP 9.13.1 e 9.13.1 P4 estiver disponível.  A atualização não ocorre de uma versão para outra — por exemplo, da 9.13 para a 9.14.
+
+. *Recursos de armazenamento subjacentes*: escolha as configurações para o agregado inicial: um tipo de disco e o tamanho de cada disco.
++
+O tipo de disco é para o volume inicial.  Você pode escolher um tipo de disco diferente para volumes subsequentes.
+
++
+O tamanho do disco é para todos os discos no agregado inicial e para quaisquer agregados adicionais que o Console cria quando você usa a opção de provisionamento simples.  Você pode criar agregados que usam um tamanho de disco diferente usando a opção de alocação avançada.
+
++
+Para obter ajuda na escolha do tipo e tamanho do disco, consultelink:task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensione seu sistema no Google Cloud"^] .
+
+. *Flash Cache, Velocidade de Gravação e WORM*:
++
+.. Habilite *Flash Cache*, se desejar.
++
+
+NOTE: A partir do Cloud Volumes ONTAP 9.13.1, o _Flash Cache_ é compatível com os tipos de instância n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64.  Não é possível desabilitar o Flash Cache após a implantação.
+
+.. Escolha a velocidade de gravação *Normal* ou *Alta*, se desejar.
++
+link:concept-write-speed.html["Saiba mais sobre velocidade de gravação"] .
+
++
+
+NOTE: Alta velocidade de gravação e uma unidade máxima de transmissão (MTU) maior de 8.896 bytes estão disponíveis por meio da opção de velocidade de gravação *Alta*.  Além disso, a MTU mais alta de 8.896 exige a seleção de VPC-1, VPC-2 e VPC-3 para a implantação.  Para obter mais informações sobre VPC-1, VPC-2 e VPC-3, consulte https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#requirements-for-the-connector["Regras para VPC-1, VPC-2 e VPC-3"^] .
+
+.. Ative o armazenamento WORM (escreva uma vez e leia muitas vezes), se desejar.
++
+O WORM não pode ser habilitado se a hierarquização de dados estiver habilitada para as versões 9.7 e anteriores do Cloud Volumes ONTAP .  A reversão ou o downgrade para o Cloud Volumes ONTAP 9.8 é bloqueado após a ativação do WORM e da hierarquização.
+
++
+link:concept-worm.html["Saiba mais sobre o armazenamento WORM"^] .
+
+.. Se você ativar o armazenamento WORM, selecione o período de retenção.
+
+
+. *Classificação de dados em camadas no Google Cloud Platform*: escolha se deseja habilitar a classificação de dados em camadas no agregado inicial, escolha uma classe de armazenamento para os dados em camadas e, em seguida, selecione uma conta de serviço que tenha a função de administrador de armazenamento predefinida (necessária para o Cloud Volumes ONTAP 9.7 ou posterior) ou selecione uma conta do Google Cloud (necessária para o Cloud Volumes ONTAP 9.6).
++
+Observe o seguinte:
+
++
+** O Console define a conta de serviço na instância do Cloud Volumes ONTAP . Esta conta de serviço fornece permissões para hierarquização de dados para um bucket do Google Cloud Storage.  Certifique-se de adicionar a conta de serviço do agente do Console como um usuário da conta de serviço em camadas; caso contrário, você não poderá selecioná-la no Console.
+** Para obter ajuda na adição de uma conta do Google Cloud, consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Configurando e adicionando contas do Google Cloud para camadas de dados com 9.6"^] .
+** Você pode escolher uma política específica de níveis de volume ao criar ou editar um volume.
+** Se você desabilitar a hierarquização de dados, poderá habilitá-la em agregações subsequentes, mas precisará desligar o sistema e adicionar uma conta de serviço no console do Google Cloud.
++
+link:concept-data-tiering.html["Saiba mais sobre camadas de dados"^] .
+
+
+
+. *Criar volume*: insira detalhes para o novo volume ou clique em *Ignorar*.
++
+link:concept-client-protocols.html["Saiba mais sobre os protocolos e versões de clientes suportados"^] .
+
++
+Alguns campos nesta página são autoexplicativos.  A tabela a seguir descreve os campos para os quais você pode precisar de orientação:
+
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Tamanho | O tamanho máximo que você pode inserir depende muito se você habilita o provisionamento fino, que permite criar um volume maior que o armazenamento físico disponível atualmente. 
+
+
+| Controle de acesso (somente para NFS) | Uma política de exportação define os clientes na sub-rede que podem acessar o volume. Por padrão, o Console insere um valor que fornece acesso a todas as instâncias na sub-rede. 
+
+
+| Permissões e usuários/grupos (somente para CIFS) | Esses campos permitem que você controle o nível de acesso a um compartilhamento para usuários e grupos (também chamados de listas de controle de acesso ou ACLs). Você pode especificar usuários ou grupos locais ou de domínio do Windows, ou usuários ou grupos do UNIX. Se você especificar um nome de usuário de domínio do Windows, deverá incluir o domínio do usuário usando o formato domínio\nome de usuário. 
+
+
+| Política de Snapshot | Uma política de cópia de instantâneo especifica a frequência e o número de cópias de instantâneo do NetApp criadas automaticamente. Uma cópia do NetApp Snapshot é uma imagem do sistema de arquivos de um momento específico que não tem impacto no desempenho e requer armazenamento mínimo. Você pode escolher a política padrão ou nenhuma.  Você pode escolher nenhum para dados transitórios: por exemplo, tempdb para Microsoft SQL Server. 
+
+
+| Opções avançadas (somente para NFS) | Selecione uma versão do NFS para o volume: NFSv3 ou NFSv4. 
+
+
+| Grupo iniciador e IQN (somente para iSCSI) | Os destinos de armazenamento iSCSI são chamados de LUNs (unidades lógicas) e são apresentados aos hosts como dispositivos de bloco padrão.  Os grupos de iniciadores são tabelas de nomes de nós de host iSCSI e controlam quais iniciadores têm acesso a quais LUNs. Os destinos iSCSI se conectam à rede por meio de adaptadores de rede Ethernet padrão (NICs), placas de mecanismo de descarregamento TCP (TOE) com iniciadores de software, adaptadores de rede convergentes (CNAs) ou adaptadores de bust de host dedicados (HBAs) e são identificados por nomes qualificados iSCSI (IQNs).  Quando você cria um volume iSCSI, o Console cria automaticamente um LUN para você.  Simplificamos criando apenas um LUN por volume, portanto não há gerenciamento envolvido.  Depois de criar o volume,link:task-connect-lun.html["use o IQN para conectar-se ao LUN de seus hosts"] . 
+|===
++
+A imagem a seguir mostra a primeira página do assistente de criação de volume:
+
++
+image:screenshot_cot_vol.gif["Captura de tela: mostra a página Volume preenchida para uma instância do Cloud Volumes ONTAP ."]
+
+. *Configuração CIFS*: Se você escolher o protocolo CIFS, configure um servidor CIFS.
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Endereço IP primário e secundário do DNS | Os endereços IP dos servidores DNS que fornecem resolução de nomes para o servidor CIFS.  Os servidores DNS listados devem conter os registros de localização de serviço (SRV) necessários para localizar os servidores LDAP do Active Directory e os controladores de domínio para o domínio ao qual o servidor CIFS se juntará.  Se você estiver configurando o Google Managed Active Directory, o AD poderá ser acessado por padrão com o endereço IP 169.254.169.254. 
+
+
+| Domínio do Active Directory para ingressar | O FQDN do domínio do Active Directory (AD) ao qual você deseja que o servidor CIFS ingresse. 
+
+
+| Credenciais autorizadas para ingressar no domínio | O nome e a senha de uma conta do Windows com privilégios suficientes para adicionar computadores à Unidade Organizacional (UO) especificada dentro do domínio do AD. 
+
+
+| Nome NetBIOS do servidor CIFS | Um nome de servidor CIFS exclusivo no domínio do AD. 
+
+
+| Unidade Organizacional | A unidade organizacional dentro do domínio do AD a ser associada ao servidor CIFS.  O padrão é CN=Computadores.  Para configurar o Google Managed Microsoft AD como o servidor AD para o Cloud Volumes ONTAP, insira *OU=Computers,OU=Cloud* neste campo.https://cloud.google.com/managed-microsoft-ad/docs/manage-active-directory-objects#organizational_units["Documentação do Google Cloud: Unidades organizacionais no Google Managed Microsoft AD"^] 
+
+
+| Domínio DNS | O domínio DNS para a máquina virtual de armazenamento (SVM) do Cloud Volumes ONTAP .  Na maioria dos casos, o domínio é o mesmo que o domínio do AD. 
+
+
+| Servidor NTP | Selecione *Usar domínio do Active Directory* para configurar um servidor NTP usando o DNS do Active Directory.  Se você precisar configurar um servidor NTP usando um endereço diferente, use a API.  Para obter informações, consulte o https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentação de automação do NetApp Console"^] para mais detalhes.  Observe que você só pode configurar um servidor NTP ao criar um servidor CIFS.  Não é configurável depois de criar o servidor CIFS. 
+|===
+. *Perfil de uso, tipo de disco e política de camadas*: escolha se deseja habilitar recursos de eficiência de armazenamento e alterar a política de camadas de volume, se necessário.
++
+Para mais informações, consultelink:task-planning-your-config-gcp.html#choose-a-volume-usage-profile["Escolha um perfil de uso de volume"^] ,link:concept-data-tiering.html["Visão geral da hierarquização de dados"^] , e https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/What_Inline_Storage_Efficiency_features_are_supported_with_CVO#["KB: Quais recursos de eficiência de armazenamento em linha são suportados pelo CVO?"^]
+
+. *Revisar e aprovar*: revise e confirme suas seleções.
++
+.. Revise os detalhes sobre a configuração.
+.. Clique em *Mais informações* para revisar detalhes sobre o suporte e os recursos do Google Cloud que o Console comprará.
+.. Selecione as caixas de seleção *Eu entendo...*.
+.. Clique em *Ir*.
+
+
+
+
+.Resultado
+O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o progresso na página *Auditoria*.
+
+Se você tiver algum problema ao implantar o sistema Cloud Volumes ONTAP , revise a mensagem de falha.  Você também pode selecionar o sistema e clicar em *Recriar ambiente*.
+
+Para obter ajuda adicional, acesse https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Suporte NetApp Cloud Volumes ONTAP"^] .
+
+.Depois que você terminar
+* Se você provisionou um compartilhamento CIFS, conceda aos usuários ou grupos permissões para os arquivos e pastas e verifique se esses usuários podem acessar o compartilhamento e criar um arquivo.
+* Se você quiser aplicar cotas aos volumes, use o ONTAP System Manager ou o ONTAP CLI.
++
+As cotas permitem que você restrinja ou rastreie o espaço em disco e o número de arquivos usados por um usuário, grupo ou qtree.
+
+
+
+
+
+== Inicie um par de HA no Google Cloud
+
+Crie um sistema no Console para iniciar o Cloud Volumes ONTAP no Google Cloud.
+
+.Passos
+. No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
+. Na página *Sistemas*, clique em *Armazenamento > Sistema* e siga as instruções.
+. *Escolha um local*: Selecione *Google Cloud* e * Cloud Volumes ONTAP HA*.
+. *Detalhes e credenciais*: selecione um projeto, especifique um nome de cluster, opcionalmente selecione uma conta de serviço, opcionalmente adicione rótulos e, em seguida, especifique as credenciais.
++
+A tabela a seguir descreve os campos para os quais você pode precisar de orientação:
+
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Nome do sistema | O Console usa o nome do sistema para nomear o sistema Cloud Volumes ONTAP e a instância da VM do Google Cloud.  Ele também usa o nome como prefixo para o grupo de segurança predefinido, se você selecionar essa opção. 
+
+
+| Nome da conta de serviço | Se você planeja usar olink:concept-data-tiering.html["Camadas de nuvem da NetApp"] ou https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Backup e Recuperação"^] serviços, você precisa habilitar a opção *Conta de serviço* e então selecionar a Conta de serviço que tem a função de administrador de armazenamento predefinida. 
+
+
+| Adicionar rótulos | Os rótulos são metadados para seus recursos do Google Cloud.  O Console adiciona os rótulos ao sistema Cloud Volumes ONTAP e aos recursos do Google Cloud associados ao sistema.  Você pode adicionar até quatro rótulos na interface do usuário ao criar um sistema e depois adicionar mais depois que ele for criado.  Observe que a API não limita você a quatro rótulos ao criar um sistema.  Para obter informações sobre rótulos, consulte https://cloud.google.com/compute/docs/labeling-resources["Documentação do Google Cloud: Rotulagem de recursos"^] . 
+
+
+| Nome de usuário e senha | Estas são as credenciais para a conta de administrador do cluster Cloud Volumes ONTAP .  Você pode usar essas credenciais para se conectar ao Cloud Volumes ONTAP por meio do ONTAP System Manager ou do ONTAP CLI.  Mantenha o nome de usuário padrão _admin_ ou altere-o para um nome de usuário personalizado. 
+
+
+| Editar Projeto  a| 
+Selecione o projeto onde você deseja que o Cloud Volumes ONTAP resida.  O projeto padrão é o projeto do Console.
+
+Se você não vir nenhum projeto adicional na lista suspensa, significa que você ainda não associou a conta de serviço a outros projetos. Acesse o console do Google Cloud, abra o serviço IAM e selecione o projeto.  Adicione a conta de serviço com a função que você usa para o Console nesse projeto. Você precisará repetir esta etapa para cada projeto.
+
+
+NOTE: Esta é a conta de serviço que você configurou para o Console,link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["conforme descrito nesta página"^] .
+
+Clique em *Adicionar assinatura* para associar as credenciais selecionadas a uma assinatura.
+
+Para criar um sistema Cloud Volumes ONTAP com pagamento conforme o uso, você precisa selecionar um projeto do Google Cloud associado a uma assinatura do Cloud Volumes ONTAP no Google Cloud Marketplace. Consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Associando uma assinatura do marketplace às credenciais do Google Cloud"^] .
+
+|===
+. *Serviços*: Selecione os serviços que você deseja usar neste sistema.  Para selecionar Backup e Recuperação ou usar o NetApp Cloud Tiering, você deve ter especificado a Conta de Serviço na etapa 3.
++
+
+TIP: Se você quiser utilizar WORM e camadas de dados, desabilite o Backup e Recuperação e implante um sistema Cloud Volumes ONTAP com versão 9.8 ou superior.
+
+. *Modelos de implantação de HA*: escolha várias zonas (recomendado) ou uma única zona para a configuração de HA.  Em seguida, selecione uma região e zonas.
++
+link:concept-ha-google-cloud.html["Saiba mais sobre modelos de implantação de HA"^] .
+
+. *Conectividade*: Selecione quatro VPCs diferentes para a configuração de HA, uma sub-rede em cada VPC e, em seguida, escolha uma política de firewall.
++
+link:reference-networking-gcp.html["Saiba mais sobre os requisitos de rede"^] .
+
++
+A tabela a seguir descreve os campos para os quais você pode precisar de orientação:
+
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Política gerada  a| 
+Se você deixar o Console gerar a política de firewall para você, precisará escolher como permitirá o tráfego:
+
+** Se você escolher *Somente VPC selecionada*, o filtro de origem para tráfego de entrada será o intervalo de sub-rede da VPC selecionada e o intervalo de sub-rede da VPC onde o agente do Console reside.  Esta é a opção recomendada.
+** Se você escolher *Todas as VPCs*, o filtro de origem para o tráfego de entrada será o intervalo de IP 0.0.0.0/0.
+
+
+
+
+| Use existente | Se você usar uma política de firewall existente, certifique-se de que ela inclua as regras necessárias. link:reference-networking-gcp.html#firewall-rules["Saiba mais sobre as regras de firewall para o Cloud Volumes ONTAP"^] . 
+|===
+. *Métodos de cobrança e conta NSS*: especifique qual opção de cobrança você gostaria de usar com este sistema e, em seguida, especifique uma conta do site de suporte da NetApp .
++
+** link:concept-licensing.html["Saiba mais sobre as opções de licenciamento do Cloud Volumes ONTAP"^] .
+** link:task-set-up-licensing-google.html["Aprenda como configurar o licenciamento"^] .
+
+
+. *Pacotes pré-configurados*: selecione um dos pacotes para implantar rapidamente um sistema Cloud Volumes ONTAP ou clique em *Criar minha própria configuração*.
++
+Se você escolher um dos pacotes, precisará apenas especificar um volume e depois revisar e aprovar a configuração.
+
+. *Licenciamento*: Altere a versão do Cloud Volumes ONTAP conforme necessário e selecione um tipo de máquina.
++
+
+NOTE: Se uma versão mais recente de Release Candidate, Disponibilidade Geral ou patch estiver disponível para a versão selecionada, o Console atualizará o sistema para essa versão ao criá-la.  Por exemplo, a atualização ocorre se você selecionar Cloud Volumes ONTAP 9.13.1 e 9.13.1 P4 estiver disponível.  A atualização não ocorre de uma versão para outra, por exemplo, da 9.13 para a 9.14.
+
+. *Recursos de armazenamento subjacentes*: escolha as configurações para o agregado inicial: um tipo de disco e o tamanho de cada disco.
++
+O tipo de disco é para o volume inicial.  Você pode escolher um tipo de disco diferente para volumes subsequentes.
+
++
+O tamanho do disco é para todos os discos no agregado inicial e para quaisquer agregados adicionais que o Console cria quando você usa a opção de provisionamento simples.  Você pode criar agregados que usam um tamanho de disco diferente usando a opção de alocação avançada.
+
++
+Para obter ajuda na escolha do tipo e tamanho do disco, consultelink:task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensione seu sistema no Google Cloud"^] .
+
+. *Flash Cache, Velocidade de Gravação e WORM*:
++
+.. Habilite *Flash Cache*, se desejar.
++
+
+NOTE: A partir do Cloud Volumes ONTAP 9.13.1, o _Flash Cache_ é compatível com os tipos de instância n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64.  Não é possível desabilitar o Flash Cache após a implantação.
+
+.. Escolha a velocidade de gravação *Normal* ou *Alta*, se desejar.
++
+link:concept-write-speed.html["Saiba mais sobre velocidade de gravação"^] .
+
++
+
+NOTE: Alta velocidade de gravação e uma unidade máxima de transmissão (MTU) maior de 8.896 bytes estão disponíveis por meio da opção de velocidade de gravação *Alta* com os tipos de instância n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64.  Além disso, a MTU mais alta de 8.896 exige a seleção de VPC-1, VPC-2 e VPC-3 para a implantação.  Alta velocidade de gravação e uma MTU de 8.896 dependem do recurso e não podem ser desabilitadas individualmente em uma instância configurada.  Para obter mais informações sobre VPC-1, VPC-2 e VPC-3, consulte https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#requirements-for-the-connector["Regras para VPC-1, VPC-2 e VPC-3"^] .
+
+.. Ative o armazenamento WORM (escreva uma vez e leia muitas vezes), se desejar.
++
+O WORM não pode ser habilitado se a hierarquização de dados estiver habilitada para as versões 9.7 e anteriores do Cloud Volumes ONTAP .  A reversão ou o downgrade para o Cloud Volumes ONTAP 9.8 é bloqueado após a ativação do WORM e da hierarquização.
+
++
+link:concept-worm.html["Saiba mais sobre o armazenamento WORM"^] .
+
+.. Se você ativar o armazenamento WORM, selecione o período de retenção.
+
+
+. *Classificação de dados no Google Cloud*: escolha se deseja habilitar a classificação de dados no agregado inicial, escolha uma classe de armazenamento para os dados em camadas e, em seguida, selecione uma conta de serviço que tenha a função predefinida de Administrador de armazenamento.
++
+Observe o seguinte:
+
++
+** O Console define a conta de serviço na instância do Cloud Volumes ONTAP . Esta conta de serviço fornece permissões para hierarquização de dados para um bucket do Google Cloud Storage.  Certifique-se de adicionar a conta de serviço do agente do Console como um usuário da conta de serviço em camadas; caso contrário, você não poderá selecioná-la no Console.
+** Você pode escolher uma política específica de níveis de volume ao criar ou editar um volume.
+** Se você desabilitar a hierarquização de dados, poderá habilitá-la em agregações subsequentes, mas precisará desligar o sistema e adicionar uma conta de serviço no console do Google Cloud.
++
+link:concept-data-tiering.html["Saiba mais sobre camadas de dados"^] .
+
+
+
+. *Criar volume*: insira detalhes para o novo volume ou clique em *Ignorar*.
++
+link:concept-client-protocols.html["Saiba mais sobre os protocolos e versões de clientes suportados"^] .
+
++
+Alguns campos nesta página são autoexplicativos.  A tabela a seguir descreve os campos para os quais você pode precisar de orientação:
+
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Tamanho | O tamanho máximo que você pode inserir depende muito se você habilita o provisionamento fino, que permite criar um volume maior que o armazenamento físico disponível atualmente. 
+
+
+| Controle de acesso (somente para NFS) | Uma política de exportação define os clientes na sub-rede que podem acessar o volume. Por padrão, o Console insere um valor que fornece acesso a todas as instâncias na sub-rede. 
+
+
+| Permissões e usuários/grupos (somente para CIFS) | Esses campos permitem que você controle o nível de acesso a um compartilhamento para usuários e grupos (também chamados de listas de controle de acesso ou ACLs). Você pode especificar usuários ou grupos locais ou de domínio do Windows, ou usuários ou grupos do UNIX. Se você especificar um nome de usuário de domínio do Windows, deverá incluir o domínio do usuário usando o formato domínio\nome de usuário. 
+
+
+| Política de Snapshot | Uma política de cópia de instantâneo especifica a frequência e o número de cópias de instantâneo do NetApp criadas automaticamente. Uma cópia do NetApp Snapshot é uma imagem do sistema de arquivos de um momento específico que não tem impacto no desempenho e requer armazenamento mínimo. Você pode escolher a política padrão ou nenhuma.  Você pode escolher nenhum para dados transitórios: por exemplo, tempdb para Microsoft SQL Server. 
+
+
+| Opções avançadas (somente para NFS) | Selecione uma versão do NFS para o volume: NFSv3 ou NFSv4. 
+
+
+| Grupo iniciador e IQN (somente para iSCSI) | Os destinos de armazenamento iSCSI são chamados de LUNs (unidades lógicas) e são apresentados aos hosts como dispositivos de bloco padrão.  Os grupos de iniciadores são tabelas de nomes de nós de host iSCSI e controlam quais iniciadores têm acesso a quais LUNs. Os destinos iSCSI se conectam à rede por meio de adaptadores de rede Ethernet padrão (NICs), placas de mecanismo de descarregamento TCP (TOE) com iniciadores de software, adaptadores de rede convergentes (CNAs) ou adaptadores de bust de host dedicados (HBAs) e são identificados por nomes qualificados iSCSI (IQNs).  Quando você cria um volume iSCSI, o Console cria automaticamente um LUN para você.  Simplificamos criando apenas um LUN por volume, portanto não há gerenciamento envolvido.  Depois de criar o volume,link:task-connect-lun.html["use o IQN para conectar-se ao LUN de seus hosts"] . 
+|===
++
+A imagem a seguir mostra a primeira página do assistente de criação de volume:
+
++
+image:screenshot_cot_vol.gif["Captura de tela: mostra a página Volume preenchida para uma instância do Cloud Volumes ONTAP ."]
+
+. *Configuração CIFS*: Se você escolher o protocolo CIFS, configure um servidor CIFS.
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Endereço IP primário e secundário do DNS | Os endereços IP dos servidores DNS que fornecem resolução de nomes para o servidor CIFS.  Os servidores DNS listados devem conter os registros de localização de serviço (SRV) necessários para localizar os servidores LDAP do Active Directory e os controladores de domínio para o domínio ao qual o servidor CIFS se juntará.  Se você estiver configurando o Google Managed Active Directory, o AD poderá ser acessado por padrão com o endereço IP 169.254.169.254. 
+
+
+| Domínio do Active Directory para ingressar | O FQDN do domínio do Active Directory (AD) ao qual você deseja que o servidor CIFS ingresse. 
+
+
+| Credenciais autorizadas para ingressar no domínio | O nome e a senha de uma conta do Windows com privilégios suficientes para adicionar computadores à Unidade Organizacional (UO) especificada dentro do domínio do AD. 
+
+
+| Nome NetBIOS do servidor CIFS | Um nome de servidor CIFS exclusivo no domínio do AD. 
+
+
+| Unidade Organizacional | A unidade organizacional dentro do domínio do AD a ser associada ao servidor CIFS.  O padrão é CN=Computadores.  Para configurar o Google Managed Microsoft AD como o servidor AD para o Cloud Volumes ONTAP, insira *OU=Computers,OU=Cloud* neste campo.https://cloud.google.com/managed-microsoft-ad/docs/manage-active-directory-objects#organizational_units["Documentação do Google Cloud: Unidades organizacionais no Google Managed Microsoft AD"^] 
+
+
+| Domínio DNS | O domínio DNS para a máquina virtual de armazenamento (SVM) do Cloud Volumes ONTAP .  Na maioria dos casos, o domínio é o mesmo que o domínio do AD. 
+
+
+| Servidor NTP | Selecione *Usar domínio do Active Directory* para configurar um servidor NTP usando o DNS do Active Directory.  Se você precisar configurar um servidor NTP usando um endereço diferente, use a API. Consulte o https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentação de automação do NetApp Console"^] para mais detalhes.  Observe que você só pode configurar um servidor NTP ao criar um servidor CIFS.  Não é configurável depois de criar o servidor CIFS. 
+|===
+. *Perfil de uso, tipo de disco e política de camadas*: escolha se deseja habilitar recursos de eficiência de armazenamento e alterar a política de camadas de volume, se necessário.
++
+Para mais informações, consultelink:task-planning-your-config-gcp.html#choose-a-volume-usage-profile["Escolha um perfil de uso de volume"^] ,link:concept-data-tiering.html["Visão geral da hierarquização de dados"^] , e https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/What_Inline_Storage_Efficiency_features_are_supported_with_CVO#["KB: Quais recursos de eficiência de armazenamento em linha são suportados pelo CVO?"^]
+
+. *Revisar e aprovar*: revise e confirme suas seleções.
++
+.. Revise os detalhes sobre a configuração.
+.. Clique em *Mais informações* para revisar detalhes sobre o suporte e os recursos do Google Cloud que o Console comprará.
+.. Selecione as caixas de seleção *Eu entendo...*.
+.. Clique em *Ir*.
+
+
+
+
+.Resultado
+O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o progresso na página *Auditoria*.
+
+Se você tiver algum problema ao implantar o sistema Cloud Volumes ONTAP , revise a mensagem de falha.  Você também pode selecionar o sistema e clicar em *Recriar ambiente*.
+
+Para obter ajuda adicional, acesse https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Suporte NetApp Cloud Volumes ONTAP"^] .
+
+.Depois que você terminar
+* Se você provisionou um compartilhamento CIFS, conceda aos usuários ou grupos permissões para os arquivos e pastas e verifique se esses usuários podem acessar o compartilhamento e criar um arquivo.
+* Se você quiser aplicar cotas aos volumes, use o ONTAP System Manager ou o ONTAP CLI.
++
+As cotas permitem que você restrinja ou rastreie o espaço em disco e o número de arquivos usados por um usuário, grupo ou qtree.
+
+

@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: task-setting-up-transit-gateway.html 
+keywords: transit gateway, aws, amazon web services, transit gateway, floating ip, client access, nas, outside, vpc, virtual private cloud, route table 
+summary: Configure um gateway de trânsito da AWS para permitir o acesso do cliente NAS a endereços IP flutuantes de fora da VPC onde o Cloud Volumes ONTAP reside.  Isso é benéfico porque os IPs flutuantes migram automaticamente entre os nós quando ocorrem falhas. 
+---
+= Configurar um gateway de trânsito da AWS para pares de alta disponibilidade do Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Configure um gateway de trânsito da AWS para permitir o acesso a um par de HAlink:reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["endereços IP flutuantes"] de fora da VPC onde o par HA reside.
+
+Quando uma configuração do Cloud Volumes ONTAP HA é distribuída em várias zonas de disponibilidade da AWS, endereços IP flutuantes são necessários para acesso a dados do NAS de dentro da VPC.  Esses endereços IP flutuantes podem migrar entre nós quando ocorrem falhas, mas não são nativamente acessíveis de fora da VPC.  Endereços IP privados separados fornecem acesso a dados de fora da VPC, mas não fornecem failover automático.
+
+Endereços IP flutuantes também são necessários para a interface de gerenciamento de cluster e o LIF de gerenciamento SVM opcional.
+
+Se você configurar um gateway de trânsito da AWS, habilitará o acesso aos endereços IP flutuantes de fora da VPC onde o par HA reside.  Isso significa que clientes NAS e ferramentas de gerenciamento NetApp fora do VPC podem acessar os IPs flutuantes.
+
+Aqui está um exemplo que mostra duas VPCs conectadas por um gateway de trânsito.  Um sistema HA reside em uma VPC, enquanto um cliente reside na outra.  Você pode então montar um volume NAS no cliente usando o endereço IP flutuante.
+
+image:diagram_transit_gateway.png["Um diagrama que mostra uma configuração de HA em uma VPC, com IPs flutuantes roteados para ENIs, um cliente em outra VPC, com IPs flutuantes roteados para o gateway de trânsito, e um gateway de trânsito, com IPs flutuantes roteados para a tabela de rotas VPC1."]
+
+As etapas a seguir ilustram como configurar uma configuração semelhante.
+
+.Passos
+. https://docs.aws.amazon.com/vpc/latest/tgw/tgw-getting-started.html["Crie um gateway de trânsito e anexe as VPCs ao gateway"^] .
+. Associe as VPCs à tabela de rotas do gateway de trânsito.
++
+.. No serviço *VPC*, clique em *Tabelas de rotas do gateway de trânsito*.
+.. Selecione a tabela de rotas.
+.. Clique em *Associações* e depois selecione *Criar associação*.
+.. Escolha os anexos (VPCs) a serem associados e clique em *Criar associação*.
+
+
+. Crie rotas na tabela de rotas do gateway de trânsito especificando os endereços IP flutuantes do par HA.
++
+Você pode encontrar os endereços IP flutuantes na página de informações do sistema no NetApp Console. Aqui está um exemplo:
+
++
+image:screenshot_floating_ips.gif["Uma captura de tela que mostra os endereços IP flutuantes para a interface de gerenciamento do cluster, duas interfaces de dados NFS e CIFS e a interface de gerenciamento SVM."]
+
++
+A imagem de exemplo a seguir mostra a tabela de rotas para o gateway de trânsito.  Inclui rotas para os blocos CIDR das duas VPCs e quatro endereços IP flutuantes usados ​​pelo Cloud Volumes ONTAP.
+
++
+image:screenshot_transit_gateway1.png["Uma captura de tela do console da AWS que mostra a tabela de rotas para o gateway de trânsito.  Inclui rotas para os blocos CIDR das duas VPCs e quatro endereços IP flutuantes usados ​​pelo Cloud Volumes ONTAP."]
+
+. Modifique a tabela de rotas de VPCs que precisam acessar os endereços IP flutuantes.
++
+.. Adicione entradas de rota aos endereços IP flutuantes.
+.. Adicione uma entrada de rota ao bloco CIDR da VPC onde o par HA reside.
++
+A imagem de exemplo a seguir mostra a tabela de rotas para a VPC 2, que inclui rotas para a VPC 1 e os endereços IP flutuantes.
+
++
+image:screenshot_transit_gateway2.png["Uma captura de tela do console da AWS que mostra a tabela de rotas para a VPC 2, que inclui rotas para a VPC 1 e os endereços IP flutuantes."]
+
+
+
+. Modifique a tabela de rotas para a VPC do par HA adicionando uma rota à VPC que precisa de acesso aos endereços IP flutuantes.
++
+Esta etapa é importante porque conclui o roteamento entre as VPCs.
+
++
+A imagem de exemplo a seguir mostra a tabela de rotas para a VPC 1.  Inclui uma rota para os endereços IP flutuantes e para a VPC 2, que é onde reside um cliente.  O Console adicionou automaticamente os IPs flutuantes à tabela de rotas quando implantou o par HA.
+
++
+image:screenshot_transit_gateway3.png["Uma captura de tela do console da AWS que mostra a tabela de rotas para a VPC 1.  Inclui uma rota para os endereços IP flutuantes e para a VPC 2, que é onde reside um cliente."]
+
+. Atualize as configurações dos grupos de segurança para Todo o tráfego para a VPC.
++
+.. Em Nuvem Privada Virtual, clique em *Sub-redes*.
+.. Clique na aba *Tabela de rotas*, selecione o ambiente desejado para um dos endereços IP flutuantes para um par HA.
+.. Clique em *Grupos de segurança*.
+.. Selecione *Editar regras de entrada*.
+.. Clique em *Adicionar regra*.
+.. Em Tipo, selecione *Todo o tráfego* e, em seguida, selecione o endereço IP da VPC.
+.. Clique em *Salvar regras* para aplicar as alterações.
+
+
+. Monte volumes em clientes usando o endereço IP flutuante.
++
+Você pode encontrar o endereço IP correto no Console por meio da opção *Comando de montagem* no painel Gerenciar volumes no Console.
+
++
+image::screenshot_mount_option.png[400]
+
+. Se você estiver montando um volume NFS, configure a política de exportação para corresponder à sub-rede da VPC do cliente.
++
+link:task-manage-volumes.html["Aprenda a editar um volume"] .
+
+
+
+*Links relacionados*
+
+* link:concept-ha.html["Pares de alta disponibilidade na AWS"]
+* link:reference-networking-aws.html["Requisitos de rede para Cloud Volumes ONTAP na AWS"]
+

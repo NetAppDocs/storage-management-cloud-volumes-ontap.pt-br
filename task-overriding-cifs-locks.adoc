@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: task-overriding-cifs-locks.html 
+keywords: CIFS locks, azure maintenance, maintenance events, cifs sessions, storage failover, storage giveback, giveback 
+summary: O administrador da organização ou da conta pode habilitar uma configuração no NetApp Console que evita problemas com o retorno do armazenamento Cloud Volumes ONTAP durante eventos de manutenção do Azure.  Quando você habilita essa configuração, o Cloud Volumes ONTAP veta bloqueios CIFS e redefine sessões CIFS ativas. 
+---
+= Substituir bloqueios CIFS para pares de alta disponibilidade do Cloud Volumes ONTAP no Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O administrador da organização ou da conta pode habilitar uma configuração no NetApp Console que evita problemas com o retorno do armazenamento Cloud Volumes ONTAP durante eventos de manutenção do Azure.  Quando você habilita essa configuração, o Cloud Volumes ONTAP veta bloqueios CIFS e redefine sessões CIFS ativas.
+
+.Sobre esta tarefa
+O Microsoft Azure agenda eventos de manutenção periódicos em suas máquinas virtuais.  Quando ocorre um evento de manutenção em um par de HA do Cloud Volumes ONTAP , o par de HA inicia a aquisição do armazenamento.  Se houver sessões CIFS ativas durante este evento de manutenção, os bloqueios nos arquivos CIFS podem impedir o retorno do armazenamento.
+
+Se você habilitar essa configuração, o Cloud Volumes ONTAP vetará os bloqueios e redefinirá as sessões CIFS ativas.  Como resultado, o par HA pode concluir a devolução do armazenamento durante esses eventos de manutenção.
+
+
+CAUTION: Esse processo pode ser prejudicial aos clientes do CIFS.  Dados não confirmados de clientes CIFS podem ser perdidos.
+
+.Antes de começar
+Você precisa criar um agente do Console antes de poder alterar as configurações do Console. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#how-to-create-a-connector["Aprenda como"^] .
+
+.Passos
+. No painel de navegação esquerdo, acesse *Administração > Agentes*.
+. Clique noimage:icon-action.png[""] ícone para o agente do Console que gerencia seu sistema Cloud Volumes ONTAP .
+. Selecione * Configurações do Cloud Volumes ONTAP *.
++
+image::screenshot-settings-cloud-volumes-ontap.png[Uma captura de tela da opção Configurações do Cloud Volumes ONTAP no ícone Configurações.]
+
+. Em *Azure*, clique em *Bloqueios CIFS do Azure para sistemas HA do Azure*.
+. Clique na caixa de seleção para habilitar o recurso e depois clique em *Salvar*.
+

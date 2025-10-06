@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: task-connecting-to-otc.html 
+keywords: connecting, cli, command, command line, connect, shell, interface 
+summary: O Cloud Volumes ONTAP CLI permite que você execute todos os comandos administrativos e é uma boa escolha para tarefas avançadas ou se você se sentir mais confortável usando o CLI.  Você pode se conectar à CLI usando SSH. 
+---
+= Administrar o Cloud Volumes ONTAP a partir da CLI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O Cloud Volumes ONTAP CLI permite que você execute todos os comandos administrativos e é uma boa escolha para tarefas avançadas ou se você se sentir mais confortável usando o CLI.  Você pode se conectar à CLI usando Secure Shell (SSH).
+
+.Antes de começar
+O host do qual você usa SSH para se conectar ao Cloud Volumes ONTAP deve ter uma conexão de rede com o Cloud Volumes ONTAP.  Por exemplo, você pode precisar fazer SSH de um host de salto que esteja na rede do seu provedor de nuvem.
+
+ifdef::aws[]
+
+
+NOTE: Quando implantadas em várias AZs, as configurações de HA do Cloud Volumes ONTAP usam um endereço IP flutuante para a interface de gerenciamento do cluster, o que significa que o roteamento externo não está disponível.  Você deve se conectar de um host que faça parte do mesmo domínio de roteamento.
+
+endif::aws[]
+
+.Passos
+. No NetApp Console, identifique o endereço IP da interface de gerenciamento do cluster:
++
+.. No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
+.. Na página *Sistemas*, selecione o sistema Cloud Volumes ONTAP .
+.. Copie o endereço IP de gerenciamento do cluster que aparece no painel direito.
+
+
+. Use SSH para se conectar ao endereço IP da interface de gerenciamento do cluster usando a conta de administrador.
++
+*Exemplo*
+
++
+A imagem a seguir mostra um exemplo usando PuTTY:
+
++
+image:screenshot_cli2.gif["Captura de tela: mostra o destino admin@192.168.11.5 na porta 22."]
+
+. No prompt de login, digite a senha da conta de administrador.
++
+*Exemplo*
+
++
+....
+Password: ********
+COT2::>
+....
+

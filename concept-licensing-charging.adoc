@@ -1,0 +1,204 @@
+---
+sidebar: sidebar 
+permalink: concept-licensing-charging.html 
+keywords: capacity-based license charging, consumption for licenses, pricing for licenses, CVO licensing, CVO charging 
+summary: Familiarize-se com o modelo de cobrança, consumo, preços e configurações de licenças baseadas em capacidade. 
+---
+= Saiba mais sobre licenças baseadas em capacidade para o Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você deve estar familiarizado com o uso de capacidade e cobrança para licenças baseadas em capacidade
+
+
+
+== Modelos de consumo
+
+Pacotes de licenciamento baseados em capacidade estão disponíveis com os seguintes modelos de consumo:
+
+* *BYOL*: Traga sua própria carteira de motorista (BYOL).  Uma licença adquirida da NetApp que pode ser usada para implantar o Cloud Volumes ONTAP em qualquer provedor de nuvem.
++
+
+NOTE: A NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^] .
+
+
+
+ifdef::azure[]
+
+endif::azure[]
+
+* *PAYGO*: Uma assinatura de pagamento conforme o uso (PAYGO) é uma assinatura por hora do mercado do seu provedor de nuvem.
+* *Anual*: Um contrato anual do marketplace do seu provedor de nuvem.
+
+
+Observe o seguinte:
+
+* Se você adquirir uma licença da NetApp (BYOL), também precisará assinar a oferta PAYGO no marketplace do seu provedor de nuvem. A NetApp possui licenciamento BYOL restrito. Quando suas licenças BYOL expirarem, você deverá substituí-las por assinaturas do marketplace de nuvem.
++
+Sua licença é sempre cobrada primeiro, mas você será cobrado pela taxa horária do mercado nestes casos:
+
++
+** Se você exceder sua capacidade licenciada
+** Se o prazo da sua licença expirar
+
+
+* Se você tiver um contrato anual de um marketplace, _todos_ os sistemas Cloud Volumes ONTAP que você implantar serão cobrados desse contrato.  Você não pode misturar e combinar um contrato de mercado anual com BYOL.
+* Somente sistemas de nó único com BYOL são suportados nas regiões da China. As implantações na região da China estão isentas das restrições de licenciamento BYOL.
+
+
+
+
+== Alterando pacotes
+
+Após a implantação, você pode alterar o pacote para um sistema Cloud Volumes ONTAP que usa licenciamento baseado em capacidade. Por exemplo, se você implantou um sistema Cloud Volumes ONTAP com o pacote Essentials, poderá alterá-lo para o pacote Professional caso suas necessidades comerciais mudem.
+
+link:task-manage-capacity-licenses.html["Aprenda como alterar os métodos de cobrança"] .
+
+Para obter informações sobre a conversão de licenças baseadas em nó em licenças baseadas em capacidade, consulte
+
+
+
+== Preços e configurações suportadas
+
+Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["Site do console NetApp"^] .
+
+Pacotes de licenciamento baseados em capacidade estão disponíveis com o Cloud Volumes ONTAP 9.7 e posteriores.
+
+
+
+=== VMs de armazenamento
+
+* Não há custos extras de licenciamento para VMs de armazenamento de dados adicionais (SVMs), mas há uma cobrança de capacidade mínima de 4 TiB por SVM de serviço de dados.
+* Os SVMs de recuperação de desastres são cobrados de acordo com a capacidade provisionada.
+
+
+
+
+=== Pares HA
+
+Para pares de HA, você só é cobrado pela capacidade provisionada em um nó.  Você não é cobrado pelos dados espelhados de forma síncrona no nó parceiro.
+
+
+
+=== Volumes FlexClone e FlexCache
+
+* Você não será cobrado pela capacidade usada pelos volumes FlexClone .
+* Os volumes FlexCache de origem e destino são considerados dados primários e cobrados de acordo com o espaço provisionado.
+
+
+
+
+== Limite de capacidade
+
+No modelo de licenciamento baseado em capacidade, cada sistema Cloud Volumes ONTAP oferece suporte à hierarquização para armazenamento de objetos, e a capacidade total em camadas pode ser ampliada até o limite de bucket do provedor de nuvem. Embora a licença não imponha restrições de capacidade, siga as https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Melhores práticas do FabricPool"^] para garantir desempenho ideal, confiabilidade e eficiência de custos ao configurar e gerenciar camadas.
+
+Para obter informações sobre os limites de capacidade de cada provedor de nuvem, consulte sua documentação:
+
+* https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["Documentação do AWS"^]
+* https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["Documentação do Azure para discos gerenciados"^]e https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Documentação do Azure para armazenamento de blobs"^]
+* https://cloud.google.com/storage/docs/buckets["Documentação do Google Cloud"^]
+
+
+
+
+== Número máximo de sistemas
+
+Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por conta do NetApp Console.  Um _sistema_ é um par de Cloud Volumes ONTAP HA, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar.  A VM de armazenamento padrão não conta para o limite.  Este limite se aplica a todos os modelos de licenciamento.
+
+Por exemplo, digamos que você tenha três sistemas:
+
+* Um sistema Cloud Volumes ONTAP de nó único com uma VM de armazenamento (esta é a VM de armazenamento padrão criada quando você implanta o Cloud Volumes ONTAP)
++
+Este sistema conta como um sistema.
+
+* Um sistema Cloud Volumes ONTAP de nó único com duas VMs de armazenamento (a VM de armazenamento padrão, mais uma VM de armazenamento adicional que você criou)
++
+Este sistema conta como dois sistemas: um para o sistema de nó único e um para a VM de armazenamento adicional.
+
+* Um par de Cloud Volumes ONTAP HA com três VMs de armazenamento (a VM de armazenamento padrão, mais duas VMs de armazenamento adicionais que você criou)
++
+Este sistema conta como três sistemas: um para o par HA e dois para as VMs de armazenamento adicionais.
+
+
+
+São seis sistemas no total.  Você teria então espaço para mais 14 sistemas em sua conta.
+
+Se você tiver uma implantação grande que exija mais de 24 sistemas, entre em contato com seu representante de conta ou equipe de vendas.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/concept-netapp-accounts.html["Saiba mais sobre contas do Console"^] .
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Saiba mais sobre os limites de armazenamento para AWS, Azure e Google Cloud"^] .
+
+
+
+== Notas sobre o carregamento
+
+Os detalhes a seguir podem ajudar você a entender como a cobrança funciona com o licenciamento baseado em capacidade.
+
+
+
+=== Carga mínima
+
+Há uma cobrança mínima de 4 TiB para cada VM de armazenamento de dados que tenha pelo menos um volume primário (leitura e gravação).  Se a soma dos volumes primários for menor que 4 TiB, o Console aplicará a cobrança mínima de 4 TiB àquela VM de armazenamento.
+
+Se você ainda não provisionou nenhum volume, a cobrança mínima não se aplica.
+
+Para o pacote Essentials, a cobrança de capacidade mínima de 4 TiB não se aplica a VMs de armazenamento que contêm apenas volumes secundários (proteção de dados). Por exemplo, se você tiver uma VM de armazenamento com 1 TiB de dados secundários, você será cobrado apenas por esse 1 TiB de dados. Com o tipo de pacote Profissional, a capacidade mínima de carregamento de 4 TiB se aplica independentemente do tipo de volume.
+
+
+
+=== Excedentes
+
+Se você exceder sua capacidade BYOL, será cobrado pelo excedente com base nas taxas horárias da sua assinatura do marketplace. O excedente é cobrado com base nas taxas do marketplace, com preferência pelo uso da capacidade disponível de outras licenças primeiro. Se sua licença BYOL expirar, você precisará migrar para um modelo de licenciamento baseado em capacidade por meio de marketplaces na nuvem.
+
+
+
+=== Pacote Essentials
+
+Com o pacote Essentials, você é cobrado pelo tipo de implantação (HA ou nó único) e pelo tipo de volume (primário ou secundário).  Os preços, do maior para o menor, estão na seguinte ordem: _Essentials Primary HA_, _Essentials Primary Single Node_, _Essentials Secondary HA_ e _Essentials Secondary Single Node_.  Como alternativa, quando você compra um contrato de mercado ou aceita uma oferta privada, as taxas de capacidade são as mesmas para qualquer implantação ou tipo de volume.
+
+O licenciamento é baseado inteiramente no tipo de volume criado nos sistemas Cloud Volumes ONTAP :
+
+* Essentials Single Node: volumes de leitura/gravação criados em um sistema Cloud Volumes ONTAP usando apenas um nó ONTAP .
+* Essentials HA: volumes de leitura/gravação usando dois nós ONTAP que podem fazer failover entre si para acesso de dados sem interrupções.
+* Nó único secundário essencial: volumes do tipo Proteção de Dados (DP) (normalmente volumes de destino SnapMirror ou SnapVault que são somente leitura) criados em um sistema Cloud Volumes ONTAP usando apenas um nó ONTAP .
++
+
+NOTE: Se um volume somente leitura/DP se tornar um volume primário, o Console o considerará como dados primários e os custos de cobrança serão calculados com base no tempo em que o volume esteve no modo de leitura/gravação.  Quando o volume é novamente tornado somente leitura/DP, ele o considera como dados secundários novamente e cobra de acordo usando a melhor licença correspondente no Console.
+
+* HA secundário essencial: volumes do tipo Proteção de Dados (DP) (normalmente volumes de destino SnapMirror ou SnapVault que são somente leitura) criados em um sistema Cloud Volumes ONTAP usando dois nós ONTAP que podem fazer failover um para o outro para acesso de dados sem interrupções.
+
+
+.Traga sua própria bebida
+Se você adquiriu uma licença Essentials da NetApp (BYOL) e excedeu a capacidade licenciada para essa implantação e tipo de volume, o Console cobrará excedentes em uma licença Essentials de preço mais alto (se você tiver uma e houver capacidade disponível).  Isso acontece porque primeiro usamos a capacidade disponível que você já comprou como capacidade pré-paga antes de cobrar no mercado.  Se não houver capacidade disponível com sua licença BYOL, a capacidade excedida será cobrada de acordo com as taxas horárias sob demanda do mercado (PAYGO) e adicionará custos à sua fatura mensal.
+
+Aqui está um exemplo. Digamos que você tenha as seguintes licenças para o pacote Essentials:
+
+* Uma licença _Essentials Secondary HA_ de 500 TiB com 500 TiB de capacidade comprometida
+* Uma licença _Essentials Single Node_ de 500 TiB que tem apenas 100 TiB de capacidade comprometida
+
+
+Outros 50 TiB são provisionados em um par HA com volumes secundários.  Em vez de cobrar esses 50 TiB para o PAYGO, o Console cobra os 50 TiB excedentes da licença _Essentials Single Node_.  Essa licença tem um preço mais alto que o _Essentials Secondary HA_, mas ela usa uma licença que você já comprou e não adicionará custos à sua fatura mensal.
+
+Em *Administração > Licenças e assinaturas*, você pode ver 50 TiB cobrados pela licença _Essentials Single Node_.
+
+Aqui está outro exemplo.  Digamos que você tenha as seguintes licenças para o pacote Essentials:
+
+* Uma licença _Essentials Secondary HA_ de 500 TiB com 500 TiB de capacidade comprometida
+* Uma licença _Essentials Single Node_ de 500 TiB que tem apenas 100 TiB de capacidade comprometida
+
+
+Outros 100 TiB são provisionados em um par HA com volumes primários.  A licença que você comprou não tem capacidade comprometida de _Essentials Primary HA_.  A licença _Essentials Primary HA_ tem um preço mais alto do que as licenças _Essentials Primary Single Node_ e _Essentials Secondary HA_.
+
+Neste exemplo, o Console cobra excedentes na taxa de mercado para os 100 TiB adicionais.  As cobranças excedentes aparecerão na sua fatura mensal.
+
+.Contratos de mercado ou ofertas privadas
+Se você comprou uma licença Essentials como parte de um contrato de mercado ou uma oferta privada, a lógica BYOL não se aplica e você deve ter o tipo de licença exato para o uso.  O tipo de licença inclui o tipo de volume (primário ou secundário) e o tipo de implantação (HA ou nó único).
+
+Por exemplo, digamos que você implante uma instância do Cloud Volumes ONTAP com a licença Essentials.  Em seguida, você provisiona volumes de leitura e gravação (nó único primário) e volumes somente leitura (nó único secundário).  Seu contrato de marketplace ou oferta privada deve incluir capacidade para _Essentials Single Node_ e _Essentials Secondary Single Node_ para cobrir a capacidade provisionada.  Qualquer capacidade provisionada que não faça parte do seu contrato de mercado ou oferta privada será cobrada de acordo com as taxas horárias sob demanda (PAYGO) e adicionará custos à sua fatura mensal.

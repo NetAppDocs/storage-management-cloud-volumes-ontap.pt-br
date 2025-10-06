@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task-manage-capacity-settings.html 
+keywords: aggregates, delete aggregates, add disks, view aggregates 
+summary: Gerencie agregados você mesmo adicionando discos, visualizando informações sobre os agregados e excluindo-os. 
+---
+= Gerenciar a capacidade agregada do Cloud Volumes ONTAP em um agente do Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cada agente do Console tem configurações que determinam como ele gerencia a capacidade agregada do Cloud Volumes ONTAP.
+
+Essas configurações afetam todos os sistemas Cloud Volumes ONTAP gerenciados por um agente do Console.  Se você tiver outro agente do Console, ele poderá ser configurado de forma diferente.
+
+.Permissões necessárias
+Você precisa de privilégios de administrador de conta ou organização do NetApp Console para modificar as configurações do Cloud Volumes ONTAP .
+
+.Passos
+. No painel de navegação esquerdo, acesse *Administração > Agentes*.
+. Clique noimage:icon-action.png[""] ícone para o agente do Console que gerencia seu sistema Cloud Volumes ONTAP .
+. Selecione * Configurações do Cloud Volumes ONTAP *.
++
+image::screenshot-settings-cloud-volumes-ontap.png[Uma captura de tela da opção Configurações do Cloud Volumes ONTAP no ícone Configurações.]
+
+. Em *Capacidade*, modifique qualquer uma das seguintes configurações:
++
+image:screenshot-cvo-settings-page.png["Uma visão geral das configurações de capacidade do Cloud Volumes ONTAP."]
+
++
+Modo de gerenciamento de capacidade:: Escolha se o Console deve notificá-lo sobre decisões de capacidade de armazenamento ou se ele deve gerenciar automaticamente os requisitos de capacidade para você.
++
+--
+link:concept-storage-management.html#capacity-management["Aprenda como funciona o Modo de Gerenciamento de Capacidade"] .
+
+--
+Limiar de Capacidade Agregada - Razão de Espaço Livre:: Essa proporção é um parâmetro essencial nas decisões de gerenciamento de capacidade, e entender seu impacto é essencial, independentemente de você estar no modo automático ou manual de gerenciamento de capacidade.  É recomendável definir esse limite considerando suas necessidades específicas de armazenamento e o crescimento previsto para manter um equilíbrio entre utilização de recursos e custo.
++
+--
+No modo manual, se a taxa de espaço livre em um agregado cair abaixo do limite especificado, uma notificação será disparada, alertando você de que deve tomar medidas para resolver a baixa taxa de espaço livre.  É importante monitorar essas notificações e gerenciar manualmente a capacidade agregada para evitar interrupções de serviço e garantir o desempenho ideal.
+
+A relação de espaço livre é calculada da seguinte forma: (capacidade agregada - capacidade total utilizada no agregado) / capacidade agregada
+
+Consultelink:concept-storage-management.html#automatic-capacity-management["Gerenciamento automático de capacidade"] para saber agora a capacidade é gerenciada automaticamente no Cloud Volumes ONTAP.
+
+--
+Limites de capacidade agregada - Proporção de espaço livre para hierarquização de dados:: Define quanto espaço livre é necessário na camada de desempenho (discos) ao hierarquizar dados em uma camada de capacidade (armazenamento de objetos).
++
+--
+A proporção é importante para cenários de recuperação de desastres.  À medida que os dados são lidos da camada de capacidade, o Cloud Volumes ONTAP move os dados para a camada de desempenho para fornecer melhor desempenho.  Se não houver espaço suficiente, o Cloud Volumes ONTAP não poderá mover os dados.
+
+--
+
+
+. Clique em *Salvar*.
+

@@ -1,0 +1,15 @@
+= Novas regiões com suporte no Azure
+:allow-uri-read: 
+
+
+
+
+=== Novas regiões com suporte no Azure
+
+Agora você pode implantar o Cloud Volumes ONTAP 9.12.1 GA e posterior em zonas de disponibilidade únicas e múltiplas no Azure nas seguintes regiões. Isso inclui suporte para implantações de nó único e de alta disponibilidade (HA).
+
+* Espanha Central
+* México Central
+
+
+Para obter uma lista de todas as regiões, consulte o https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiões globais no Azure"^] .

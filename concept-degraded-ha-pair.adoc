@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: concept-degraded-ha-pair.html 
+keywords: storage takeover, storage giveback, degraded, degraded status, degraded state, ha pair, ha takeover, takeover, giveback 
+summary: Quando um nó em um par HA não está disponível, o outro nó fornece dados para seu parceiro para fornecer serviço de dados contínuo.  Isso é chamado de aquisição de armazenamento.  Várias ações ficarão indisponíveis até que a devolução no armazenamento seja concluída. 
+---
+= Operações indisponíveis quando um nó no par Cloud Volumes ONTAP HA está offline
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando um nó em um par HA não está disponível, o outro nó fornece dados para seu parceiro para fornecer serviço de dados contínuo.  Isso é chamado de _aquisição de armazenamento_.  Várias ações ficarão indisponíveis até que a devolução no armazenamento seja concluída.
+
+
+TIP: Quando um nó em um par de HA não está disponível, o estado do sistema no NetApp Console é _Degradado_.
+
+As seguintes ações não estão disponíveis na aquisição de armazenamento:
+
+* Registro de suporte
+* Alterações de licença
+* Alterações no tipo de instância ou VM
+* Alterações na velocidade de gravação
+* Configuração CIFS
+* Alterando o local dos backups de configuração
+* Definindo a senha do cluster
+* Gerenciamento de discos e agregados (alocação avançada)
+
+
+Essas ações estarão disponíveis novamente após a conclusão da devolução do armazenamento e o estado do sistema voltar ao normal.

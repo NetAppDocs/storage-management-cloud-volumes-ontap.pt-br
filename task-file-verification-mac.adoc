@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: task-file-verification-mac.html 
+keywords: Azure, image, VHD, file signature verification, encryption, sha256, ONTAP, Cloud Volumes, CLI, macOS 
+summary: Verificar uma assinatura de arquivo VHD exportado por meio da ferramenta de resumo de imagem do Cloud Volumes ONTAP no macOS 
+---
+= Verificar assinatura de imagem do Azure Marketplace para Cloud Volumes ONTAP no macOS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A verificação da assinatura de um arquivo VHD exportado no Linux inclui a validação da cadeia de confiança, a edição do arquivo e a verificação da assinatura.
+
+.Passos
+. Baixe o arquivo de imagem do Azure em https://mysupport.netapp.com/site/["Site de suporte da NetApp"^] e extraia o arquivo digest (.sig), o arquivo de certificado de chave pública (.pem) e o arquivo de certificado de cadeia (.pem).
++
+Consulte https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-azure-download-digest-file.html["Baixe o arquivo de resumo da imagem do Azure"^] para maiores informações.
+
+. Verifique a cadeia de confiança.
++
+[source, cli]
+----
+% openssl verify -CAfile Certificate-Chain-9.15.0P1_azure.pem Certificate-9.15.0P1_azure.pem
+Certificate-9.15.0P1_azure.pem: OK
+----
+. Remova 1 MB (1.048.576 bytes) no início e 512 bytes no final do arquivo VHD.  Ao usar `tail` , o `-c +K` opção gera bytes a partir do K-ésimo byte do arquivo.  Portanto, ele passa 1048577 para `tail -c` .  Observe que no macOS, o comando tail pode levar cerca de dez minutos para ser concluído.
++
+[source, cli]
+----
+% tail -c +1048577 ./9150.01000024.05090105.vhd > ./sign.tmp.tail
+% head -c -512 ./sign.tmp.tail > sign.tmp
+% rm ./sign.tmp.tail
+----
+. Use o OpenSSL para extrair a chave pública do certificado e verificar o arquivo removido (sign.tmp) com o arquivo de assinatura e a chave pública.  O prompt de comando exibe mensagens indicando sucesso ou falha com base na verificação.
++
+[source, cli]
+----
+% openssl x509 -pubkey -noout -in ./Certificate-9.15.0P1_azure.pem > ./Code-Sign-Cert-Public-key.pub
+
+% openssl dgst -verify Code-Sign-Cert-Public-key.pub -keyform PEM -sha256 -signature digest.sig -binary ./sign.tmp
+Verified OK
+
+% openssl dgst -verify Code-Sign-Cert-Public-key.pub -keyform PEM -sha256 -signature digest.sig -binary ./another_file_from_nowhere.tmp
+Verification Failure
+----
+. Limpe o espaço de trabalho.
++
+[source, cli]
+----
+% rm ./9150.01000024.05090105.vhd ./sign.tmp
+% rm *.sig *.pub *.pem
+----
+

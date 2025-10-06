@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: task-modify-write-speed.html 
+keywords: write speed, high write speed, normal write speed, change write speed 
+summary: Pode ser necessário alterar a configuração dos sistemas Cloud Volumes ONTAP conforme suas necessidades de armazenamento mudam.  Por exemplo, você pode alternar entre configurações de pagamento conforme o uso, alterar a instância ou o tipo de VM e muito mais. 
+---
+= Modificar a velocidade de gravação do sistema
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode escolher uma velocidade de gravação normal ou alta para o Cloud Volumes ONTAP no NetApp Console.  A velocidade de gravação padrão é normal.  Você pode mudar para alta velocidade de gravação se um desempenho de gravação rápido for necessário para sua carga de trabalho.
+
+Alta velocidade de gravação é suportada com todos os tipos de sistemas de nó único e algumas configurações de pares HA.  Veja as configurações suportadas no https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Notas de versão do Cloud Volumes ONTAP"^]
+
+Antes de alterar a velocidade de gravação, você develink:concept-write-speed.html["entender as diferenças entre as configurações normais e altas"] .
+
+.Sobre esta tarefa
+* Certifique-se de que operações como criação de volume ou agregado não estejam em andamento.
+* Esteja ciente de que essa alteração reinicia o sistema Cloud Volumes ONTAP .  Este é um processo disruptivo que requer tempo de inatividade de todo o sistema.
+
+
+.Passos
+. Na página *Sistemas*, clique duas vezes no nome do sistema que você configurou para a velocidade de gravação.
+. Na guia Visão geral, clique no painel Recursos e depois clique no ícone de lápis ao lado de *Velocidade de gravação*.
+. Selecione *Normal* ou *Alto*.
++
+Se você escolher Alto, precisará ler a declaração "Eu entendo..." e confirmar marcando a caixa.
+
++
+
+NOTE: A opção de velocidade de gravação *Alta* é compatível com pares de alta disponibilidade do Cloud Volumes ONTAP no Google Cloud a partir da versão 9.13.0.
+
+. Clique em *Salvar*, revise a mensagem de confirmação e clique em *Aprovar*.
+

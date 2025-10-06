@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: task-change-route-tables.html 
+keywords: route tables, update route tables, modify route tables, change route table 
+summary: Você pode modificar as tabelas de rotas da AWS que incluem rotas para os endereços IP flutuantes para um par de HA implantado em várias Zonas de Disponibilidade da AWS.  Você pode fazer isso se novos clientes NFS ou CIFS precisarem acessar um par HA na AWS. 
+---
+= Modificar tabelas de rotas para pares de Cloud Volumes ONTAP HA em várias AZs da AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode modificar as tabelas de rotas da AWS que incluem rotas para os endereços IP flutuantes para um par de HA implantado em várias Zonas de Disponibilidade (AZs) da AWS.  Você pode fazer isso se novos clientes NFS ou CIFS precisarem acessar um par HA na AWS.
+
+.Passos
+. Na página *Sistemas*, selecione o sistema.
+. Na guia Visão geral, clique no painel Recursos e, em seguida, clique no ícone de lápis ao lado de *Tabelas de rotas*.
+. Modifique a lista de tabelas de rotas selecionadas e clique em *Salvar*.
+
+
+.Resultado
+O NetApp Console envia uma solicitação da AWS para modificar as tabelas de rotas.

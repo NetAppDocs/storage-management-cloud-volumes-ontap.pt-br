@@ -1,0 +1,190 @@
+---
+sidebar: sidebar 
+permalink: task-manage-capacity-licenses.html 
+keywords: license, licensing, capacity license, capacity based license, add license, install license, digital wallet 
+summary: Gerencie suas licenças baseadas em capacidade no NetApp Console para garantir que sua conta NetApp tenha capacidade suficiente para seus sistemas Cloud Volumes ONTAP . 
+---
+= Gerenciar licenciamento baseado em capacidade para Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gerencie suas licenças baseadas em capacidade no NetApp Console para garantir que sua conta NetApp tenha capacidade suficiente para seus sistemas Cloud Volumes ONTAP .
+
+_Licenças baseadas em capacidade_ permitem que você pague pelo Cloud Volumes ONTAP por TiB de capacidade.
+
+Você pode gerenciar licenças do Cloud Volumes ONTAP baseadas em capacidade no NetApp Console.
+
+
+NOTE: Embora o uso real e a medição dos produtos e serviços gerenciados no Console sejam sempre calculados em GiB e TiB, os termos GB/GiB e TB/TiB são usados de forma intercambiável.  Isso se reflete nas listagens do Cloud Marketplace, nas cotações de preços, nas descrições das listagens e em outras documentações de suporte.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Saiba mais sobre as licenças do Cloud Volumes ONTAP"] .
+
+
+
+== Como as licenças são adicionadas ao NetApp Console
+
+Após adquirir uma licença do seu representante de vendas da NetApp , a NetApp lhe enviará um e-mail com o número de série e detalhes adicionais do licenciamento.
+
+Enquanto isso, o Console consulta automaticamente o serviço de licenciamento da NetApp para obter detalhes sobre as licenças associadas à sua conta do Site de Suporte da NetApp .  Se não houver erros, ele adiciona as licenças.
+
+Se o Console não puder adicionar a licença, você precisará adicioná-la manualmente.  Por exemplo, se o agente do Console estiver instalado em um local sem acesso à Internet, você precisará adicionar as licenças. https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html#add-a-license["Aprenda como adicionar licenças adquiridas à sua conta"^] .
+
+
+
+== Visualize a capacidade consumida em sua conta
+
+O Console mostra a capacidade total consumida na sua conta e a capacidade consumida pelo pacote de licenciamento. Isso pode ajudar você a entender como está sendo cobrado e se precisa comprar capacidade adicional.
+
+.Passos
+. No painel de navegação esquerdo, selecione *Administração > Licenças e assinaturas*.
+. Na guia *Visão geral*, o bloco Cloud Volumes ONTAP exibe a capacidade atual provisionada para sua conta.
++
+image:screenshot_cvo_licensing_card.png["width=300 uma captura de tela exibindo o resumo da capacidade das suas licenças e assinaturas do Cloud Volumes ONTAP ."]
+
++
+** _Licença direta_ é a capacidade total provisionada de todos os sistemas Cloud Volumes ONTAP na sua conta NetApp .  A cobrança é baseada no tamanho provisionado de cada volume, independentemente do espaço local, usado, armazenado ou efetivo dentro do volume.
+** _Contrato anual_ é a capacidade total licenciada (traga sua própria licença (BYOL) ou contrato de marketplace) que você comprou da NetApp.
+** _PAYGO_ é a capacidade total provisionada usando assinaturas do marketplace em nuvem.  O carregamento via PAYGO é usado somente se a capacidade consumida for maior que a capacidade licenciada ou se não houver licença BYOL disponível no Console.
+
+
+. Selecione *Exibir* para ver a capacidade consumida para cada um dos seus pacotes de licenciamento.
+. Selecione a aba *Licenças* para ver detalhes de cada licença de pacote que você comprou.
++
+Para entender melhor as capacidades exibidas no pacote Essentials, você deve estar familiarizado com o funcionamento do carregamento. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#notes-about-charging["Saiba mais sobre a cobrança do pacote Essentials"] .
+
+. Selecione a aba *Assinaturas* para ver a capacidade consumida pelo modelo de consumo de licença.  Esta aba inclui licenças PAYGO e de contrato anual.
++
+Você verá apenas as assinaturas associadas à organização que você está visualizando no momento.
+
+. Ao visualizar as informações sobre suas assinaturas, você pode interagir com os detalhes na tabela. Expanda uma linha para ver mais detalhes.
++
+** Selecioneimage:icon-column-selector.png["o ícone de mais no final do cabeçalho da tabela"] para escolher quais colunas aparecem na tabela. Observe que as colunas Prazo e Renovação automática não aparecem por padrão. A coluna Renovação Automática exibe informações de renovação somente para contratos do Azure.
+
+
+
+
+
+
+== Visualizando detalhes do pacote
+
+Você pode visualizar detalhes sobre a capacidade usada por pacote alternando para o modo legado na página Cloud Volumes ONTAP .
+
+. No painel de navegação esquerdo, selecione *Administração > Licenças e assinaturas*.
+. Na guia *Visão geral*, o bloco Cloud Volumes ONTAP exibe a capacidade atual provisionada para sua conta.
+. Selecione *Exibir* para ver a capacidade provisionada para cada um dos seus pacotes de licenciamento.
+. Selecione *Alternar para visualização avançada*.
++
+image:screenshot_licensing.png["Uma captura de tela do botão Alternar para visualização avançada"]
+
+. Veja os detalhes do pacote que você deseja ver.
++
+image:screenshot_licesning_standard_view.png["Uma captura de tela do botão de alternar para a visualização padrão"]
+
+
+
+
+
+== Alterar métodos de cobrança
+
+O licenciamento baseado em capacidade está disponível na forma de um _pacote_. Ao criar um sistema Cloud Volumes ONTAP , você pode escolher entre vários pacotes de licenciamento com base nas necessidades do seu negócio.  Se suas necessidades mudarem depois de criar o sistema, você poderá alterar o pacote a qualquer momento.  Por exemplo, você pode mudar do pacote Essentials para o pacote Professional.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Saiba mais sobre pacotes de licenciamento baseados em capacidade"^] .
+
+.Sobre esta tarefa
+* Alterar o método de cobrança não afeta se você será cobrado por meio de uma licença adquirida da NetApp (BYOL) ou da assinatura pré-paga (PAYGO) do seu provedor de nuvem.
++
+O Console sempre tenta cobrar primeiro uma licença.  Se uma licença não estiver disponível, será cobrada uma assinatura do marketplace.  Você não precisa converter uma assinatura BYOL em uma assinatura de mercado ou vice-versa.
+
+* Se você tiver uma oferta ou contrato privado do mercado do seu provedor de nuvem, mudar para um método de cobrança que não esteja incluído no seu contrato resultará em cobrança de BYOL (se você comprou uma licença da NetApp) ou PAYGO.
+
+
+.Passos
+. No painel de navegação esquerdo, selecione *Administração > Licenças e assinaturas*.
+. Selecione a aba *Visão geral*.
+. No bloco Cloud Volumes ONTAP , selecione *Exibir*.
+. Selecione *Alternar para visualização avançada*.
++
+image:screenshot_licensing.png["Uma captura de tela do botão Alternar para a visualização Legacy"]
+
+. Role para baixo até a tabela *Licença baseada em capacidade* e selecione *Alterar método de cobrança*.
++
+image:screenshot-digital-wallet-charging-method-button.png["Uma captura de tela da página Cloud Volumes ONTAP no Console, onde o botão Alterar método de cobrança está logo acima da tabela."]
+
+. No pop-up *Alterar método de cobrança*, selecione um sistema Cloud Volumes ONTAP , escolha o novo método de cobrança e confirme que você entendeu que a alteração do tipo de pacote afetará as taxas de serviço.
+. Selecione *Alterar método de cobrança*.
+
+
+
+
+== Baixar relatórios de uso
+
+Você pode baixar quatro relatórios de uso do Console.  Esses relatórios de uso fornecem detalhes de capacidade de suas assinaturas e informam como você está sendo cobrado pelos recursos em suas assinaturas do Cloud Volumes ONTAP .  Os relatórios para download capturam dados em um determinado momento e podem ser facilmente compartilhados com outras pessoas.
+
+image:screenshot-download-usage-report.png["A captura de tela mostra a página de licenças baseadas na capacidade do Cloud Volumes ONTAP e destaca o botão de relatório de uso."]
+
+Os seguintes relatórios estão disponíveis para download.  Os valores de capacidade mostrados estão em TiB.
+
+* *Uso de alto nível*: Este relatório inclui as seguintes informações:
++
+** Capacidade total consumida
+** Capacidade pré-comprometida total
+** Capacidade total de BYOL
+** Capacidade total de contratos do Marketplace
+** Capacidade total do PAYGO
+
+
+* * Uso do pacote Cloud Volumes ONTAP *: Este relatório inclui as seguintes informações para cada pacote:
++
+** Capacidade total consumida
+** Capacidade pré-comprometida total
+** Capacidade total de BYOL
+** Capacidade total de contratos do Marketplace
+** Capacidade total do PAYGO
+
+
+* *Uso de VMs de armazenamento*: Este relatório mostra como a capacidade cobrada é dividida entre os sistemas Cloud Volumes ONTAP e as máquinas virtuais de armazenamento (SVMs).  Essas informações estão disponíveis somente no relatório.  Ele contém as seguintes informações:
++
+** ID e nome do sistema (aparece como UUID)
+** Nuvem
+** ID da conta NetApp
+** Configuração do sistema
+** Nome da SVM
+** Capacidade provisionada
+** Resumo da capacidade carregada
+** Termo de cobrança do Marketplace
+** Pacote ou recurso Cloud Volumes ONTAP
+** Nome da assinatura do SaaS Marketplace de cobrança
+** ID de assinatura do SaaS Marketplace de cobrança
+** Tipo de carga de trabalho
+
+
+* *Uso de volumes*: Este relatório mostra como a capacidade cobrada é dividida por volumes em um sistema Cloud Volumes ONTAP .  Essas informações não estão disponíveis em nenhuma tela do Console.  Inclui as seguintes informações:
++
+** ID e nome do sistema (aparece como UUID)
+** Nome da SVN
+** ID do volume
+** Tipo de volume
+** Capacidade de volume provisionado
++
+
+NOTE: Os volumes FlexClone não estão incluídos neste relatório porque esses tipos de volumes não geram cobranças.
+
+
+
+
+
+.Passos
+. No painel de navegação esquerdo, selecione *Administração > Licenças e assinaturas*.
+. Na guia *Visão geral*, selecione *Exibir* no bloco Cloud Volumes ONTAP .
+. Selecione *Relatório de uso*.
++
+O relatório de uso é baixado.
+
+. Abra o arquivo baixado para acessar os relatórios.
+

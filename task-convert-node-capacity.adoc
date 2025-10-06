@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: task-convert-node-capacity.html 
+keywords: license conversion, convert node-based to capacity based, by-node to by-capacity, license conversion for node based, BlueXP, Console 
+summary: 'Após o fim da disponibilidade (EOA) das suas licenças baseadas em nós, você deve fazer a transição para o licenciamento baseado em capacidade usando a ferramenta de conversão de licenças.' 
+---
+= Converter uma licença baseada em nó do Cloud Volumes ONTAP em uma licença baseada em capacidade
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Após o fim da disponibilidade (EOA) das suas licenças baseadas em nó, você deve fazer a transição para o licenciamento baseado em capacidade usando a ferramenta de conversão de licenças no NetApp Console.
+
+Para compromissos anuais ou de longo prazo, a NetApp recomenda que você entre em contato com seu representante da NetApp antes da data de EOA (11 de novembro de 2024) ou da data de expiração da licença para garantir que os pré-requisitos para a transição estejam em vigor.  Se você não tiver um contrato de longo prazo para um nó Cloud Volumes ONTAP e executar seu sistema em uma assinatura sob demanda de pagamento conforme o uso (PAYGO), é importante planejar sua conversão antes do fim do suporte (EOS) em 31 de dezembro de 2024.  Em ambos os casos, você deve garantir que seu sistema atenda aos requisitos antes de usar a ferramenta de conversão de licença no NetApp Console para uma transição tranquila.
+
+Para obter informações sobre o EOA e o EOS, consultelink:concept-licensing.html#end-of-availability-of-node-based-licenses["Fim da disponibilidade de licenças baseadas em nós"] .
+
+.Sobre esta tarefa
+* Ao usar a ferramenta de conversão de licença, a transição do modelo de licenciamento baseado em nó para o modelo de licenciamento baseado em capacidade é realizada no local e on-line, o que elimina a necessidade de qualquer migração de dados ou provisionamento de recursos de nuvem adicionais.
+* É uma operação sem interrupções e não ocorre interrupção de serviço nem tempo de inatividade do aplicativo.
+* Os dados da conta e do aplicativo no seu sistema Cloud Volumes ONTAP permanecem intactos.
+* Os recursos de nuvem subjacentes permanecem inalterados após a conversão.
+* A ferramenta de conversão de licenças oferece suporte a todos os tipos de implantação, como nó único, alta disponibilidade (HA) em zona de disponibilidade única (AZ), HA em várias AZs, traga sua própria licença (BYOL) e PAYGO.
+* A ferramenta oferece suporte a todas as licenças baseadas em nó como origem e todas as licenças baseadas em capacidade como destino. Por exemplo, se você tiver uma licença baseada em nó PAYGO Standard, poderá convertê-la em qualquer licença baseada em capacidade adquirida no marketplace. A NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^] .
+* A conversão é suportada por todos os provedores de nuvem: AWS, Azure e Google Cloud.
+* Após a conversão, o número de série da licença baseada em nó será substituído por um formato baseado em capacidade.  Isso é feito como parte da conversão e é refletido na sua conta do NetApp Support Site (NSS).
+* Ao fazer a transição para o modelo baseado em capacidade, seus dados continuam sendo retidos no mesmo local do licenciamento baseado em nós.  Essa abordagem garante que não haja interrupção no posicionamento dos dados e mantém os princípios de soberania dos dados durante toda a transição.
+
+
+.Antes de começar
+* Você deve ter uma conta NSS com acesso de cliente ou acesso de administrador.
+* Sua conta NSS deve ser registrada com as credenciais de usuário que você usou para acessar o Console.
+* O sistema Cloud Volumes ONTAP deve ser vinculado à conta NSS com acesso de cliente ou acesso de administrador.
+* Você deve ter uma licença válida baseada em capacidade, seja uma licença BYOL ou uma assinatura de mercado.
+* Uma licença baseada em capacidade deve estar disponível em sua conta.  Esta licença pode ser uma assinatura de mercado ou um pacote BYOL/oferta privada disponível em *Licenças e assinaturas* no Console.
+* Entenda os seguintes critérios antes de selecionar um pacote de destino:
++
+** Se a conta tiver uma licença BYOL baseada em capacidade, o pacote de destino selecionado deverá estar alinhado com as licenças BYOL baseadas em capacidade da conta:
++
+*** Quando `Professional` for selecionado como o pacote de destino, a conta deve ter uma licença BYOL com um pacote Profissional:
+*** Quando `Essentials` for selecionado como o pacote de destino, a conta deverá ter uma licença BYOL com o pacote Essentials.
+
+
+** Se o pacote de destino não estiver alinhado com a disponibilidade da licença BYOL da conta, isso implica que a licença baseada em capacidade pode não incluir o pacote selecionado.  Nesse caso, você será cobrado por meio da sua assinatura do marketplace.
+** Se não houver uma licença BYOL baseada em capacidade, mas apenas uma assinatura de mercado, você deve garantir que o pacote selecionado esteja incluído na sua assinatura de mercado baseada em capacidade.
+** Se não houver capacidade suficiente na sua licença baseada em capacidade existente e se você tiver uma assinatura de mercado para cobrar pelo uso de capacidade adicional, você será cobrado pela capacidade adicional por meio da sua assinatura de mercado.
+** Se não houver capacidade suficiente na sua licença baseada em capacidade existente e você não tiver uma assinatura de mercado para cobrar pelo uso de capacidade adicional, a conversão não poderá ocorrer.  Você deve adicionar uma assinatura de mercado para cobrar a capacidade adicional ou estender a capacidade disponível para sua licença atual.
+** Se o pacote de destino não estiver alinhado com a disponibilidade da licença BYOL da conta e também se não houver capacidade suficiente na sua licença baseada em capacidade existente, você será cobrado pela sua assinatura do marketplace.
+
+
+
+
+
+NOTE: Se algum desses requisitos não for atendido, a conversão da licença não ocorrerá.  Em casos específicos, a licença pode ser convertida, mas não pode ser utilizada.  Clique no ícone de informações para identificar os problemas e tomar ações corretivas.
+
+.Passos
+. Na página *Sistemas*, clique duas vezes no nome do sistema para o qual você deseja modificar o tipo de licença.
+. Na guia Visão geral, clique no painel Recursos.
+. Marque o ícone de lápis ao lado de *Método de carregamento*.  Se o método de cobrança do seu sistema for `Node Based` , você pode convertê-lo para carregamento por capacidade.
++
+
+TIP: O ícone será desabilitado se o seu sistema Cloud Volumes ONTAP já estiver carregado pela capacidade ou se algum dos requisitos não for atendido.
+
+. Na tela *Converter licenças baseadas em nó para baseadas em capacidade*, verifique o nome do sistema e os detalhes da licença de origem.
+. Selecione o pacote de destino para converter a licença existente:
++
+** Essenciais.  O valor padrão é `Essentials` .
+** Profissional
+
+
+. Se você tiver uma licença BYOL, poderá marcar a caixa de seleção para excluir a licença baseada em nó do Console após a conclusão da conversão.  Se a conversão ainda estiver em andamento, selecionar esta caixa de seleção não removerá a licença do Console.  Esta opção não está disponível para assinaturas do marketplace.
+. Marque a caixa de seleção para confirmar que você entende as implicações da alteração e clique em *Continuar*.
+
+
+.Depois que você terminar
+Veja o novo número de série da licença e verifique as alterações no menu *Licenças e assinaturas* do Console.
+
+
+
+== Preços em diferentes hiperescalares
+
+Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["Site do console NetApp"^] .
+
+Para obter informações sobre ofertas privadas em hiperescalares específicos, escreva para:
+
+* AWS - awspo@netapp.com
+* Azure - azurepo@netapp.com
+* Google Cloud - gcppo@netapp.com
+

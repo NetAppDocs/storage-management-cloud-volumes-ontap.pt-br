@@ -1,0 +1,191 @@
+---
+sidebar: sidebar 
+permalink: concept-aws-elastic-volumes.html 
+keywords: elastic volumes, ev, ebs elastic volumes, ebs, amazon ebs, disk growth 
+summary: O suporte ao recurso Amazon EBS Elastic Volumes com um agregado Cloud Volumes ONTAP oferece melhor desempenho e capacidade adicional, ao mesmo tempo em que permite que você aumente automaticamente a capacidade do disco subjacente conforme necessário. 
+---
+= Saiba mais sobre o suporte para AWS Elastic Volumes com Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O suporte ao recurso Amazon EBS Elastic Volumes com um agregado Cloud Volumes ONTAP oferece melhor desempenho e capacidade adicional, ao mesmo tempo em que permite que o NetApp Console aumente automaticamente a capacidade do disco subjacente conforme necessário.
+
+
+
+== Benefícios
+
+* Crescimento dinâmico do disco
++
+O Console pode aumentar dinamicamente o tamanho dos discos enquanto o Cloud Volumes ONTAP estiver em execução e enquanto os discos ainda estiverem conectados.
+
+* Melhor desempenho
++
+Agregados habilitados com Elastic Volumes podem ter até oito discos que são utilizados igualmente em dois grupos RAID.  Esta configuração proporciona mais rendimento e desempenho consistente.
+
+* Agregados maiores
++
+O suporte para oito discos fornece uma capacidade agregada máxima de 128 TiB.  Esses limites são maiores que o limite de seis discos e o limite de 96 TiB para agregados que não estão habilitados com o recurso Elastic Volumes.
+
++
+Observe que os limites de capacidade total do sistema permanecem os mesmos.
+
+
+
+https://aws.amazon.com/ebs/features/["Documentação da AWS: Saiba mais sobre Elastic Volumes da AWS"^]
+
+
+
+== Configurações suportadas
+
+O recurso Amazon EBS Elastic Volumes é compatível com versões específicas do Cloud Volumes ONTAP e tipos específicos de disco do EBS.
+
+
+
+=== Versão Cloud Volumes ONTAP
+
+O recurso Elastic Volumes é compatível com _novos_ sistemas Cloud Volumes ONTAP criados a partir da versão 9.11.0 ou posterior.  O recurso _não_ é compatível com os sistemas Cloud Volumes ONTAP existentes que foram implantados antes da versão 9.11.0.
+
+Por exemplo, o recurso Elastic Volumes não será suportado se você criou um sistema Cloud Volumes ONTAP 9.9.0 e depois atualizou esse sistema para a versão 9.11.0.  Deve ser um novo sistema implantado usando a versão 9.11.0 ou posterior.
+
+
+
+=== Tipos de disco EBS
+
+O recurso Elastic Volumes é habilitado automaticamente no nível agregado ao usar SSDs de uso geral (gp3) ou SSDs de IOPS provisionados (io1).  O recurso Elastic Volumes não é compatível com agregados que usam qualquer outro tipo de disco.
+
+
+
+== Permissões necessárias da AWS
+
+A partir da versão 3.9.19, o agente do Console requer as seguintes permissões para habilitar e gerenciar o recurso Elastic Volumes em um agregado Cloud Volumes ONTAP :
+
+* ec2:DescribeVolumesModifications
+* ec2:ModificarVolume
+
+
+Essas permissões estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["as políticas fornecidas pela NetApp"^]
+
+
+
+== Como funciona o suporte para Elastic Volumes
+
+Um agregado que tem o recurso Elastic Volumes habilitado é composto por um ou dois grupos RAID.  Cada grupo RAID tem quatro discos idênticos com a mesma capacidade.  Aqui está um exemplo de um agregado de 10 TiB que tem quatro discos de 2,5 TiB cada:
+
+image:diagram-aws-elastic-volumes-one-raid-group.png["Uma imagem conceitual que mostra um agregado e um grupo RAID composto por quatro discos de tamanho igual."]
+
+Quando o Console cria um agregado, ele começa com um grupo RAID.  Se for necessária capacidade adicional, o agregado será aumentado aumentando a capacidade de todos os discos no grupo RAID na mesma quantidade.  O aumento de capacidade é de no mínimo 256 GiB ou 10% do tamanho do agregado.
+
+Por exemplo, se você tiver um agregado de 1 TiB, cada disco terá 250 GiB.  10% da capacidade do agregado é de 100 GiB.  Isso é menor que 256 GiB, então o tamanho do agregado é aumentado pelo mínimo de 256 GiB (ou 64 GiB para cada disco).
+
+O Console aumenta o tamanho dos discos enquanto o sistema Cloud Volumes ONTAP está em execução e enquanto os discos ainda estão conectados.  A mudança não é disruptiva.
+
+Se um agregado atingir 64 TiB (ou 16 TiB em cada disco), o Console criará um segundo grupo RAID para capacidade adicional.  Este segundo grupo RAID funciona exatamente como o primeiro: ele tem quatro discos com exatamente a mesma capacidade e pode crescer até 64 TiB.  Isso significa que um agregado pode ter uma capacidade máxima de 128 TiB.
+
+Aqui está um exemplo de um agregado com dois grupos RAID.  O limite de capacidade foi atingido no primeiro grupo RAID, enquanto os discos no segundo grupo RAID têm bastante espaço livre.
+
+image:diagram-aws-elastic-volumes-two-raid-groups.png["Uma imagem conceitual que mostra um agregado e dois grupos RAID, ambos compostos por quatro discos de tamanho igual."]
+
+
+
+=== O que acontece quando você cria um volume
+
+Se você criar um volume que usa discos gp3 ou io1, o Console criará o volume em um agregado da seguinte maneira:
+
+* Se houver um agregado gp3 ou io1 existente com Elastic Volumes habilitados, o Console criará o volume nesse agregado.
+* Se houver vários agregados gp3 ou io1 com Volumes Elásticos habilitados, o Console criará o volume no agregado que requer a menor quantidade de recursos.
+* Se o sistema tiver apenas agregados gp3 ou io1 que não estejam habilitados para Elastic Volumes, o volume será criado nesse agregado.
++
+[NOTE]
+====
+Embora esse cenário seja improvável, ele é possível em dois casos:
+
+** Você desabilitou explicitamente o recurso Elastic Volumes ao criar um agregado da API.
+** Você criou um novo sistema Cloud Volumes ONTAP a partir da interface do usuário. Nesse caso, o recurso Elastic Volumes é desabilitado no agregado inicial.  Análise<<Limitações>> abaixo para saber mais.
+
+
+====
+* Se nenhum agregado existente tiver capacidade suficiente, o Console criará o agregado com os Volumes Elásticos habilitados e, em seguida, criará o volume nesse novo agregado.
++
+O tamanho do agregado é baseado no tamanho do volume solicitado mais uma capacidade adicional de 10%.
+
+
+
+
+
+=== Modo de gerenciamento de capacidade
+
+O Modo de Gerenciamento de Capacidade para um agente de Console funciona com Volumes Elásticos de forma semelhante a como funciona com outros tipos de agregados:
+
+* Quando o modo Automático está ativado (esta é a configuração padrão), o Console aumenta automaticamente o tamanho dos agregados se capacidade adicional for necessária.
+* Se você alterar o modo de gerenciamento de capacidade para Manual, o Console solicitará sua aprovação para comprar capacidade adicional.
+
+
+link:concept-storage-management.html#capacity-management["Saiba mais sobre o Modo de Gerenciamento de Capacidade"] .
+
+
+
+== Limitações
+
+Aumentar o tamanho de um agregado pode levar até 6 horas.  Durante esse período, o Console não pode solicitar nenhuma capacidade adicional para esse agregado.
+
+
+
+== Como trabalhar com volumes elásticos
+
+Você pode executar estas tarefas com o Elastic Volumes:
+
+* Crie um novo sistema que tenha volumes elásticos habilitados no agregado inicial ao usar discos gp3 ou io1
++
+link:task-deploying-otc-aws.html["Aprenda a criar um sistema Cloud Volumes ONTAP"]
+
+* Crie um novo volume em um agregado que tenha Volumes Elásticos habilitados
++
+Se você criar um volume que usa discos gp3 ou io1, o Console criará automaticamente o volume em um agregado que tenha Volumes Elásticos habilitados. Para mais detalhes, consulte<<O que acontece quando você cria um volume>> .
+
++
+link:task-create-volumes.html["Aprenda a criar volumes"] .
+
+* Crie um novo agregado que tenha os Volumes Elásticos habilitados
++
+O Elastic Volumes é habilitado automaticamente em novos agregados que usam discos gp3 ou io1, desde que o sistema Cloud Volumes ONTAP tenha sido criado a partir da versão 9.11.0 ou posterior.
+
++
+Quando você cria o agregado, o Console solicita o tamanho da capacidade do agregado.  Isso é diferente de outras configurações em que você escolhe o tamanho do disco e o número de discos.
+
++
+A captura de tela a seguir mostra um exemplo de um novo agregado composto de discos gp3.
+
++
+image:screenshot-aggregate-size-ev.png["Uma captura de tela da tela Discos agregados para um disco gp3 onde você insere o tamanho do agregado em TiB."]
+
++
+link:task-create-aggregates.html["Aprenda a criar agregados"] .
+
+* Identificar agregados que tenham volumes elásticos habilitados
++
+Ao acessar a página Alocação Avançada, você pode identificar se o recurso Volumes Elásticos está habilitado em um agregado.  No exemplo a seguir, aggr1 tem Volumes Elásticos habilitados.
+
++
+image:screenshot_elastic_volume_enabled.png["Captura de tela que mostra dois agregados onde um tem um campo com o texto Volumes Elásticos Habilitados."]
+
+* Adicionar capacidade a um agregado
++
+Embora o Console adicione capacidade automaticamente aos agregados conforme necessário, você pode aumentar a capacidade manualmente.
+
++
+link:task-manage-aggregates.html["Aprenda como aumentar a capacidade agregada"] .
+
+* Replique dados para um agregado que tenha Elastic Volumes habilitado
++
+Se o sistema Cloud Volumes ONTAP de destino for compatível com Elastic Volumes, um volume de destino será colocado em um agregado que tenha Elastic Volumes habilitado (contanto que você escolha um disco gp3 ou io1).
+
++
+https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Aprenda a configurar a replicação de dados"^]
+
+

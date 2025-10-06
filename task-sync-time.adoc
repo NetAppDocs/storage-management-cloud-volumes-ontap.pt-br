@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: task-sync-time.html 
+keywords: set up, setting up, ntp, time, synch 
+summary: Especificar um servidor NTP sincroniza o horário entre os sistemas na sua rede, o que pode ajudar a evitar problemas devido a diferenças de horário. 
+---
+= Sincronizar a hora do sistema Cloud Volumes ONTAP usando o servidor NTP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Especificar um servidor NTP sincroniza o horário entre os sistemas na sua rede, o que pode ajudar a evitar problemas devido a diferenças de horário.
+
+Especifique um servidor NTP usando o https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html["API do console NetApp"^] ou da interface do usuário quando vocêlink:task-create-volumes.html#create-a-volume["criar um servidor CIFS"] .

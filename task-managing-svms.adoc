@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: task-managing-svms.html 
+keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported 
+summary: Uma VM de armazenamento é uma máquina virtual executada no ONTAP que fornece serviços de armazenamento e dados aos seus clientes.  Você pode conhecer isso como SVM ou vserver.  O Cloud Volumes ONTAP é configurado com uma VM de armazenamento por padrão, mas algumas configurações oferecem suporte a VMs de armazenamento adicionais. 
+---
+= Gerenciar VMs de armazenamento para Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Uma VM de armazenamento é uma máquina virtual executada no ONTAP que fornece serviços de armazenamento e dados aos seus clientes.  Você pode conhecer isso como _SVM_ ou _vserver_.  O Cloud Volumes ONTAP é configurado com uma VM de armazenamento por padrão, mas algumas configurações oferecem suporte a VMs de armazenamento adicionais.
+
+
+
+== Número suportado de VMs de armazenamento
+
+Várias VMs de armazenamento são suportadas com determinadas configurações.  Vá para o https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de versão do Cloud Volumes ONTAP"^] para verificar o número de VMs de armazenamento suportadas para sua versão do Cloud Volumes ONTAP.
+
+
+
+== Trabalhar com várias VMs de armazenamento
+
+O NetApp Console oferece suporte a quaisquer VMs de armazenamento adicionais que você criar no ONTAP System Manager ou na CLI do ONTAP .
+
+Por exemplo, a imagem a seguir mostra como você pode escolher uma VM de armazenamento ao criar um volume.
+
+image:screenshot_create_volume_svm.gif["Uma captura de tela que mostra a capacidade de selecionar a VM de armazenamento na qual você deseja criar um volume."]
+
+E a imagem a seguir mostra como você pode escolher uma VM de armazenamento ao replicar um volume para outro sistema.
+
+image:screenshot_replicate_volume_svm.gif["Uma captura de tela que mostra a capacidade de selecionar a VM de armazenamento na qual você deseja replicar um volume."]
+
+
+
+== Modifique o nome da VM de armazenamento padrão
+
+O Console nomeia automaticamente a única VM de armazenamento que ele cria para o Cloud Volumes ONTAP.  No ONTAP System Manager, na CLI ou na API do ONTAP , você pode modificar o nome da VM de armazenamento se tiver padrões de nomenclatura rígidos.  Por exemplo, você pode querer que o nome corresponda à forma como você nomeia as VMs de armazenamento para seus clusters ONTAP .

@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: task-moving-resource-groups-azure.html 
+keywords: move resource groups, azure, remove system, resource groups, azure console, Azure subscriptions 
+summary: O Cloud Volumes ONTAP oferece suporte a movimentações de grupos de recursos do Azure, mas o fluxo de trabalho ocorre somente no console do Azure. 
+---
+= Mover um grupo de recursos do Azure para o Cloud Volumes ONTAP no console do Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O Cloud Volumes ONTAP oferece suporte a movimentações de grupos de recursos do Azure, mas o fluxo de trabalho ocorre somente no console do Azure.
+
+Você pode mover um sistema Cloud Volumes ONTAP de um grupo de recursos para um grupo de recursos diferente no Azure dentro da mesma assinatura do Azure.  Não há suporte para mover grupos de recursos entre diferentes assinaturas do Azure.
+
+.Passos
+. Remova o sistema Cloud Volumes ONTAP . Consulte link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-removing.html["Removendo sistemas Cloud Volumes ONTAP"] .
+. Execute a movimentação do grupo de recursos no console do Azure.
++
+Para concluir a mudança, consultelink:https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription["Mover recursos para um novo grupo de recursos ou assinatura na documentação do Microsoft Azure"^] .
+
+. Na página *Sistemas*, descubra o sistema.
+. Procure o novo grupo de recursos nas informações do sistema.
+
+
+.Resultado
+O sistema e seus recursos (VMs, discos, contas de armazenamento, interfaces de rede, snapshots) estão no novo grupo de recursos.

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-saz-feature.html 
+keywords: Microsoft Azure feature, HA in SAZ, single availability zone, Azure feature, Virtual Machine Scale Sets in Flexible mode, VMOrchestratorZonalMultiFD, VM Orchestrator, Zonal, MultiFD, Microsoft.Compute/VMOrchestratorZonalMultiFD feature 
+summary: Habilite este recurso do Microsoft Azure para implantar HA no SAZ. 
+---
+= Habilitar VMOrchestratorZonalMultiFD para Cloud Volumes ONTAP no Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para implantar instâncias de VM em zonas de disponibilidade única (AZ) de armazenamento localmente redundante (LRS), você deve ativar o Microsoft `Microsoft.Compute/VMOrchestratorZonalMultiFD` recurso para suas assinaturas.  Em um modo de alta disponibilidade (HA), esse recurso facilita a implantação de nós em domínios de falhas separados na mesma zona de disponibilidade.
+
+A menos que você ative esse recurso, a implantação zonal não ocorrerá, e a implantação não zonal anterior do LRS entrará em vigor.
+
+Para obter informações sobre a implantação de VM em uma única zona de disponibilidade, consultelink:concept-ha-azure.html["Pares de alta disponibilidade no Azure"] .
+
+Execute estas etapas como um usuário com privilégios de "Proprietário":
+
+.Passos
+. Acesse o Azure Cloud Shell pelo portal do Azure.  Para obter informações, consulte o https://learn.microsoft.com/en-us/azure/cloud-shell/get-started/["Documentação do Microsoft Azure: Introdução ao Azure Cloud Shell"^] .
+. Registre-se para o `Microsoft.Compute/VMOrchestratorZonalMultiFD` recurso executando este comando:
++
+[]
+====
+az account set -s _<Nome_ou_ID_da_assinatura_do_Azure>_ az feature register --name VMOrchestratorZonalMultiFD --namespace Microsoft.Compute
+
+====
+. Verifique o status do registro e a amostra de saída:
++
+[]
+====
+az feature show -n VMOrchestratorZonalMultiFD --namespace Microsoft.Compute { "id": "/subscriptions/_<ID>_/providers/Microsoft.Features/providers/Microsoft.Compute/features/VMOrchestratorZonalMultiFD", "name": "Microsoft.Compute/VMOrchestratorZonalMultiFD", "properties": { "state": "Registered" }, "type": "Microsoft.Features/providers/features" }
+
+====
+

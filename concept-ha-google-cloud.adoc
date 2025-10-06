@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: concept-ha-google-cloud.html 
+keywords: high-availability, HA, mediator, concepts, understanding, overview, takeover, giveback, rpo, rto, nondisruptive, ha pairs, node, nodes, synchronous, resync, recovery point objective, recovery time objective, failover, mount, remount, failure, data access, access, ip address, performance, gcp, gcp ha, google cloud ha, ha in google cloud 
+summary: Uma configuração de alta disponibilidade do Cloud Volumes ONTAP fornece operações ininterruptas e tolerância a falhas.  No Google Cloud, os dados são espelhados de forma síncrona entre os dois nós. 
+---
+= Saiba mais sobre pares de alta disponibilidade do Cloud Volumes ONTAP no Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Uma configuração de alta disponibilidade (HA) do Cloud Volumes ONTAP fornece operações ininterruptas e tolerância a falhas.  No Google Cloud, os dados são espelhados de forma síncrona entre os dois nós.
+
+
+
+== Componentes HA
+
+As configurações de alta disponibilidade do Cloud Volumes ONTAP no Google Cloud incluem os seguintes componentes:
+
+* Dois nós Cloud Volumes ONTAP cujos dados são espelhados de forma síncrona entre si.
+* Uma instância mediadora que fornece um canal de comunicação entre os nós para auxiliar nos processos de aquisição e devolução de armazenamento.
+* Uma zona ou três zonas (recomendado).
++
+Se você escolher três zonas, os dois nós e o mediador estarão em zonas separadas do Google Cloud.
+
+* Quatro Nuvens Privadas Virtuais (VPCs).
++
+A configuração usa quatro VPCs porque o GCP exige que cada interface de rede resida em uma rede VPC separada.
+
+* Quatro balanceadores de carga internos do Google Cloud (TCP/UDP) que gerenciam o tráfego de entrada para o par Cloud Volumes ONTAP HA.
+
+
+link:reference-networking-gcp.html["Saiba mais sobre os requisitos de rede"], incluindo mais detalhes sobre balanceadores de carga, VPCs, endereços IP internos, sub-redes e muito mais.
+
+A imagem conceitual a seguir mostra um par de Cloud Volumes ONTAP HA e seus componentes:
+
+image:diagram_gcp_ha.png["Uma imagem conceitual de um par de Cloud Volumes ONTAP HA e seus componentes."]
+
+
+
+=== Mediador
+
+Aqui estão alguns detalhes importantes sobre a instância do mediador no Google Cloud:
+
+Tipo de instância:: e2-micro (uma instância f1-micro foi usada anteriormente)
+Discos:: Dois discos persistentes padrão de 10 GiB cada
+Sistema operacional:: Debian 11
++
+--
+
+NOTE: Para o Cloud Volumes ONTAP 9.10.0 e anteriores, o Debian 10 foi instalado no mediador.
+
+--
+Atualizações:: Quando você atualiza o Cloud Volumes ONTAP, o NetApp Console também atualiza a instância do mediador conforme necessário.
+Acesso à instância:: Para o Debian, o usuário padrão da nuvem é `admin` .  O Google Cloud cria e adiciona certificados para o `admin` usuário quando o acesso SSH é solicitado por meio do console do Google Cloud ou da linha de comando do gcloud.  Você pode especificar `sudo` para obter privilégios de root.
+Agentes terceirizados:: Agentes de terceiros ou extensões de VM não são suportados na instância do mediador.
+
+
+
+
+== Aquisição e devolução de armazenamento
+
+Se um nó cair, o outro nó pode fornecer dados para seu parceiro para fornecer serviço de dados contínuo.  Os clientes podem acessar os mesmos dados do nó do parceiro porque os dados foram espelhados de forma síncrona para o parceiro.
+
+Após a reinicialização do nó, o parceiro deve ressincronizar os dados antes de poder retornar o armazenamento.  O tempo que leva para ressincronizar os dados depende de quantos dados foram alterados enquanto o nó estava inativo.
+
+A aquisição, a ressincronização e a devolução do armazenamento são todas automáticas por padrão. Nenhuma ação do usuário é necessária.
+
+
+
+== RPO e RTO
+
+Uma configuração de HA mantém alta disponibilidade dos seus dados da seguinte maneira:
+
+* O objetivo do ponto de recuperação (RPO) é 0 segundos.
++
+Seus dados são transacionalmente consistentes, sem perda de dados.
+
+* O objetivo do tempo de recuperação (RTO) é de 120 segundos.
++
+Em caso de interrupção, os dados devem estar disponíveis em 120 segundos ou menos.
+
+
+
+
+
+== Modelos de implantação de HA
+
+Você pode garantir a alta disponibilidade dos seus dados implantando uma configuração de HA em várias zonas ou em uma única zona.
+
+Várias zonas (recomendado):: A implantação de uma configuração de HA em três zonas garante disponibilidade contínua de dados caso ocorra uma falha em uma zona.  Observe que o desempenho de gravação é um pouco menor quando comparado ao uso de uma única zona, mas é mínimo.
+Zona única:: Quando implantada em uma única zona, uma configuração do Cloud Volumes ONTAP HA usa uma política de posicionamento espalhado.  Esta política garante que uma configuração de HA seja protegida de um único ponto de falha dentro da zona, sem precisar usar zonas separadas para obter isolamento de falhas.
++
+--
+Este modelo de implantação reduz seus custos porque não há cobranças de saída de dados entre zonas.
+
+--
+
+
+
+
+== Como funciona o armazenamento em um par HA
+
+Ao contrário de um cluster ONTAP , o armazenamento em um par Cloud Volumes ONTAP HA no GCP não é compartilhado entre nós.  Em vez disso, os dados são espelhados de forma síncrona entre os nós para que estejam disponíveis em caso de falha.
+
+
+
+=== Alocação de armazenamento
+
+Quando você cria um novo volume e discos adicionais são necessários, o Console aloca o mesmo número de discos para ambos os nós, cria um agregado espelhado e, em seguida, cria o novo volume.  Por exemplo, se dois discos forem necessários para o volume, o Console alocará dois discos por nó, para um total de quatro discos.
+
+
+
+=== Configurações de armazenamento
+
+Você pode usar um par de HA como uma configuração ativa-ativa, na qual ambos os nós fornecem dados aos clientes, ou como uma configuração ativa-passiva, na qual o nó passivo responde às solicitações de dados somente se tiver assumido o armazenamento do nó ativo.
+
+
+
+=== Expectativas de desempenho para uma configuração de HA
+
+Uma configuração do Cloud Volumes ONTAP HA replica dados de forma síncrona entre nós, o que consome largura de banda da rede.  Como resultado, você pode esperar o seguinte desempenho em comparação com uma configuração de nó único do Cloud Volumes ONTAP :
+
+* Para configurações de HA que fornecem dados de apenas um nó, o desempenho de leitura é comparável ao desempenho de leitura de uma configuração de nó único, enquanto o desempenho de gravação é menor.
+* Para configurações de HA que atendem dados de ambos os nós, o desempenho de leitura é maior que o desempenho de leitura de uma configuração de nó único, e o desempenho de gravação é o mesmo ou maior.
+
+
+Para obter mais detalhes sobre o desempenho do Cloud Volumes ONTAP , consultelink:concept-performance.html["Desempenho"] .
+
+
+
+=== Acesso do cliente ao armazenamento
+
+Os clientes devem acessar os volumes NFS e CIFS usando o endereço IP de dados do nó no qual o volume reside.  Se clientes NAS acessarem um volume usando o endereço IP do nó parceiro, o tráfego passará entre ambos os nós, o que reduz o desempenho.
+
+
+TIP: Se você mover um volume entre nós em um par de HA, deverá remontar o volume usando o endereço IP do outro nó.  Caso contrário, você poderá ter um desempenho reduzido.  Se os clientes oferecerem suporte a referências NFSv4 ou redirecionamento de pasta para CIFS, você poderá habilitar esses recursos nos sistemas Cloud Volumes ONTAP para evitar a remontagem do volume.  Para mais detalhes, consulte a documentação do ONTAP .
+
+Você pode localizar o endereço IP correto no Console selecionando o volume e clicando em *Comando de montagem*.
+
+image::screenshot_mount_option.png[400]
+
+
+
+=== Links relacionados
+
+* link:reference-networking-gcp.html["Saiba mais sobre os requisitos de rede"]
+* link:task-getting-started-gcp.html["Aprenda como começar no GCP"]
+

@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: task-deleting-system.html 
+keywords: terminate, delete, system, remove, terminate system, terminate instance, delete cloud volumes ontap, delete instance, delete system, delete backups, cloud backup, cloud data sense 
+summary: Você deve sempre excluir os sistemas Cloud Volumes ONTAP , em vez de excluir do console do seu provedor de nuvem.  Por exemplo, se você encerrar uma instância licenciada do Cloud Volumes ONTAP do seu provedor de nuvem, não poderá usar a chave de licença para outra instância.  Você deve excluir o sistema para liberar a licença. 
+---
+= Excluir um sistema Cloud Volumes ONTAP do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você deve sempre excluir os sistemas Cloud Volumes ONTAP do NetApp Console, em vez do aplicativo do seu provedor de nuvem.  Por exemplo, se você encerrar uma instância licenciada do Cloud Volumes ONTAP do seu provedor de nuvem, não poderá usar a chave de licença para outra instância.  Você deve excluir o sistema Cloud Volumes ONTAP do Console para liberar a licença.
+
+Quando você exclui um sistema, o Console encerra as instâncias do Cloud Volumes ONTAP e exclui discos e snapshots.
+
+
+NOTE: Outros recursos, como backups gerenciados pelo NetApp Backup and Recovery e instâncias do NetApp Data Classification, não são excluídos quando você exclui um sistema. Você precisará excluí-los manualmente. Caso contrário, você continuará a incorrer em cobranças por esses recursos.
+
+Quando o Console implanta o Cloud Volumes ONTAP no seu provedor de nuvem, ele habilita a proteção de encerramento nas instâncias.  Esta opção ajuda a evitar encerramento acidental.
+
+.Passos
+. Se você habilitou o Backup e a Recuperação no sistema, determine se os dados de backup ainda são necessários e então https://docs.netapp.com/us-en/bluexp-backup-recovery/task-manage-backups-ontap.html#deleting-backups["exclua os backups, se necessário"^] .
++
+O Backup and Recovery é independente do Cloud Volumes ONTAP por design.  O Backup e Recuperação não exclui backups automaticamente quando você exclui um sistema Cloud Volumes ONTAP e não há suporte atual na interface do usuário para excluir os backups após o sistema ter sido excluído.
+
+. Se você habilitou a Classificação de Dados neste sistema e nenhum outro sistema usa este serviço, você precisa excluir a instância do serviço.
++
+https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#the-cloud-data-sense-instance["Saiba mais sobre a instância de Classificação de Dados"^] .
+
+. Exclua o sistema Cloud Volumes ONTAP .
++
+.. Na página *Sistemas*, clique duas vezes no nome do sistema Cloud Volumes ONTAP que você deseja excluir.
+.. No canto superior direito do Console, clique emimage:icon-action.png[""] ícone e selecione *Excluir*.
+.. Digite o nome do sistema que você deseja excluir e clique em *Excluir*.  Pode levar até cinco minutos para excluir um sistema.
+
+
+
+
+
+NOTE: O Backup e a Recuperação são gratuitos apenas para licenças do Cloud Volumes ONTAP Professional. Este benefício gratuito não se aplica a ambientes excluídos.  Se cópias de backup do ambiente Cloud Volumes ONTAP forem mantidas em uma instância de Backup e Recuperação, você será cobrado pelas cópias de backup até que elas sejam excluídas.

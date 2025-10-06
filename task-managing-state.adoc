@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: task-managing-state.html 
+keywords: schedule, schedules, scheduling, shutdowns, shut down, restart, stop, stopping, turn off, weekday, weekend 
+summary: Você pode parar e iniciar o Cloud Volumes ONTAP no NetApp Console para gerenciar seus custos de computação em nuvem. 
+---
+= Iniciar e parar um sistema Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode parar e iniciar o Cloud Volumes ONTAP no NetApp Console para gerenciar seus custos de computação em nuvem.
+
+
+
+== Agendamento de desligamentos automáticos do Cloud Volumes ONTAP
+
+Talvez você queira desligar o Cloud Volumes ONTAP durante intervalos de tempo específicos para reduzir seus custos de computação.  Em vez de fazer isso manualmente, você pode configurar o Console para desligar e reiniciar automaticamente os sistemas em horários específicos.
+
+.Sobre esta tarefa
+* Quando você agenda um desligamento automático do seu sistema Cloud Volumes ONTAP , o Console adia o desligamento se uma transferência de dados ativa estiver em andamento.
++
+Ele desliga o sistema após a conclusão da transferência.
+
+* Esta tarefa agenda desligamentos automáticos de ambos os nós em um par HA.
+* Snapshots de discos de inicialização e raiz não são criados ao desativar o Cloud Volumes ONTAP por meio de desligamentos agendados.
++
+Os instantâneos são criados automaticamente somente ao executar um desligamento manual, conforme descrito na próxima seção.
+
+
+
+.Passos
+. Na página *Sistemas*, clique duas vezes no sistema Cloud Volumes ONTAP .
+. Na guia Visão geral, clique no painel Recursos e depois clique no ícone de lápis ao lado de *Tempo de inatividade programado*.
++
+image::screenshot_schedule_downtime.png[400]
+
+. Especifique o cronograma de desligamento:
++
+.. Escolha se deseja desligar o sistema todos os dias, todos os dias da semana, todos os fins de semana ou qualquer combinação das três opções.
+.. Especifique quando você deseja desligar o sistema e por quanto tempo ele deve ficar desligado.
++
+*Exemplo*
+
++
+A imagem a seguir mostra uma programação que instrui o Console a desligar o sistema todos os sábados às 20:00 (20:00) por 12 horas.  O Console reinicia o sistema todas as segundas-feiras às 12h00
+
++
+image:screenshot_schedule_downtime_window.png["Captura de tela: mostra a tela Agendar tempo de inatividade."]
+
+
+
+. Clique em *Salvar*.
+
+
+.Resultado
+A programação foi salva.  O item de linha Tempo de inatividade agendado correspondente no painel Recursos exibe "Ativado".
+
+
+
+== Parando Cloud Volumes ONTAP
+
+Interromper o Cloud Volumes ONTAP evita que você acumule custos de computação e cria instantâneos dos discos raiz e de inicialização, o que pode ser útil para solução de problemas.
+
+
+NOTE: Para reduzir custos, o Console exclui periodicamente snapshots mais antigos de discos raiz e de inicialização.  Somente os dois instantâneos mais recentes são retidos para os discos raiz e de inicialização.
+
+.Sobre esta tarefa
+Quando você interrompe um par HA, o Console desliga ambos os nós.
+
+.Passos
+. No sistema, clique no ícone *Desligar*.
++
+image:screenshot_turn_off_redesign.png["Captura de tela: mostra o ícone para desativar um sistema Cloud Volumes ONTAP ."]
+
+. Mantenha a opção de criar snapshots ativada porque os snapshots podem habilitar a recuperação do sistema.
+. Clique em *Desligar*.
++
+Pode levar alguns minutos para parar o sistema.  Você pode reiniciar os sistemas mais tarde na página *Sistemas*.
+
++
+
+NOTE: Os instantâneos são criados automaticamente na reinicialização.
+
+

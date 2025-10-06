@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task-setting-up-kms.html 
+keywords: encryption, kms, key management service, cmk, customer master key, master key, key, permissions 
+summary: Se você quiser usar a criptografia da Amazon com o Cloud Volumes ONTAP, precisará configurar o AWS Key Management Service. 
+---
+= Configurar o Cloud Volumes ONTAP para usar uma chave gerenciada pelo cliente na AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você quiser usar a criptografia da Amazon com o Cloud Volumes ONTAP, precisará configurar o AWS Key Management Service (KMS).
+
+.Passos
+. Certifique-se de que exista uma Chave Mestra do Cliente (CMK) ativa.
++
+A CMK pode ser uma CMK gerenciada pela AWS ou uma CMK gerenciada pelo cliente.  Ele pode estar na mesma conta da AWS que o NetApp Console e o Cloud Volumes ONTAP ou em uma conta da AWS diferente.
+
++
+https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys["Documentação da AWS: Chaves Mestras do Cliente (CMKs)"^]
+
+. Modifique a política de chave para cada CMK adicionando a função do IAM que fornece permissões ao Console como um _usuário de chave_.
++
+Adicionar a função de Gerenciamento de Identidade e Acesso (IAM) como um usuário-chave concede ao Console permissões para usar a CMK com o Cloud Volumes ONTAP.
+
++
+https://docs.aws.amazon.com/kms/latest/developerguide/editing-keys.html["Documentação da AWS: Editando Chaves"^]
+
+. Se a CMK estiver em uma conta diferente da AWS, conclua as seguintes etapas:
++
+.. Acesse o console do KMS a partir da conta onde o CMK reside.
+.. Selecione a chave.
+.. No painel *Configuração geral*, copie o ARN da chave.
++
+Você precisará fornecer o ARN ao Console ao criar o sistema Cloud Volumes ONTAP .
+
+.. No painel *Outras contas da AWS*, adicione a conta da AWS que fornece permissões ao Console.
++
+Normalmente, esta é a conta onde o Console é implantado.  Se o Console não estiver instalado na AWS, use a conta para a qual você forneceu as chaves de acesso da AWS ao Console.
+
++
+image:screenshot_cmk_add_accounts.gif["Esta captura de tela mostra o botão \"Adicionar outras contas da AWS\" no console do AWS KMS."]
+
++
+image:screenshot_cmk_add_accounts_dialog.gif["Esta captura de tela mostra a caixa de diálogo \"Outras contas da AWS\" no console do AWS KMS."]
+
+.. Agora mude para a conta da AWS que fornece permissões ao Console e abra o console do IAM.
+.. Crie uma política do IAM que inclua as permissões listadas abaixo.
+.. Anexe a política à função do IAM ou ao usuário do IAM que fornece permissões ao Console.
++
+A política a seguir fornece as permissões que o Console precisa para usar a CMK da conta externa da AWS.  Não se esqueça de modificar a região e o ID da conta nas seções "Recurso".
+
++
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowUseOfTheKey",
+            "Effect": "Allow",
+            "Action": [
+                "kms:Encrypt",
+                "kms:Decrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*",
+                "kms:DescribeKey"
+            ],
+            "Resource": [
+                "arn:aws:kms:us-east-1:externalaccountid:key/externalkeyid"
+            ]
+        },
+        {
+            "Sid": "AllowAttachmentOfPersistentResources",
+            "Effect": "Allow",
+            "Action": [
+                "kms:CreateGrant",
+                "kms:ListGrants",
+                "kms:RevokeGrant"
+            ],
+            "Resource": [
+                "arn:aws:kms:us-east-1:externalaccountid:key/externalaccountid"
+            ],
+            "Condition": {
+                "Bool": {
+                    "kms:GrantIsForAWSResource": true
+                }
+            }
+        }
+    ]
+}
+----
++
+Para obter detalhes adicionais sobre este processo, consulte o https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html["Documentação da AWS: Permitindo que usuários em outras contas usem uma chave KMS"^] .
+
+
+
+. Se você estiver usando uma CMK gerenciada pelo cliente, modifique a política de chave para a CMK adicionando a função IAM do Cloud Volumes ONTAP como um _usuário de chave_.
++
+Esta etapa é necessária se você habilitou a hierarquização de dados no Cloud Volumes ONTAP e deseja criptografar os dados armazenados no bucket do S3.
+
+
+
+Você precisará executar esta etapa _depois_ de implantar o Cloud Volumes ONTAP porque a função do IAM é criada quando você cria um sistema Cloud Volumes ONTAP .  (É claro que você tem a opção de usar uma função IAM existente do Cloud Volumes ONTAP , então é possível executar esta etapa antes.)
+
+https://docs.aws.amazon.com/kms/latest/developerguide/editing-keys.html["Documentação da AWS: Editando Chaves"^]

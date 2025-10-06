@@ -1,0 +1,150 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-cvo-azure-mktplc.html 
+keywords: deploy cvo marketplace, marketplace direct cvo deployment, azure marketplace 
+summary:  
+---
+= Implantar o Cloud Volumes ONTAP no marketplace do Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode usar a implantação direta do Azure Marketplace para implantar o Cloud Volumes ONTAP de forma rápida e fácil.  No marketplace do Azure, você pode implantar rapidamente o Cloud Volumes ONTAP em apenas alguns cliques e explorar seus principais recursos e funcionalidades em seu ambiente.
+
+Para mais informações sobre esta oferta, consultelink:concept-azure-mktplace-direct.html["Saiba mais sobre as ofertas do Cloud Volumes ONTAP no NetApp Console e no marketplace"] .
+
+.Sobre esta tarefa
+O sistema Cloud Volumes ONTAP implantado usando a implantação direta do Azure Marketplace tem essas propriedades.  Observe que os recursos de uma instância autônoma implantada por meio do marketplace do Azure mudam quando ela é descoberta no NetApp Console.
+
+* A versão mais recente do Cloud Volumes ONTAP (9.16.1 ou posterior).
+* Uma licença gratuita para o Cloud Volumes ONTAP limitada a 500 GiB de capacidade provisionada.  Esta licença não inclui suporte NetApp e não tem data de expiração.
+* Dois nós configurados em modo de alta disponibilidade (HA) em uma única zona de disponibilidade (AZ), provisionados com números de série padrão.  As máquinas virtuais de armazenamento (VMs de armazenamento) são implantadas em umlink:concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["modo de orquestração flexível"] .
+* Um agregado para a instância criada por padrão.
+* Um disco gerenciado SSD v2 Premium com capacidade provisionada de 500 GiB, além de um disco raiz e um disco de dados.
+* Uma VM de armazenamento de dados implantada, com serviços de dados NFS, CIFS, iSCSI e NVMe/TCP.  Não é possível adicionar nenhuma VM de armazenamento de dados adicional.
+* Licenças instaladas para NFS, CIFS (SMB), iSCSI, Autonomous Ransomware Protection (ARP), SnapLock e SnapMirror.
+* https://docs.netapp.com/us-en/ontap/volumes/enable-temperature-sensitive-efficiency-concept.html["Eficiência de armazenamento sensível à temperatura (TSSE) ONTAP"^], criptografia de volume e gerenciamento de chaves externas habilitados por padrão.
+* Os seguintes recursos não são suportados:
++
+** Hierarquização do FabricPool
+** Alterando o tipo de VM de armazenamento
+** Modo de gravação rápida
+
+
+
+
+.Antes de começar
+* Certifique-se de ter uma assinatura válida do Azure Marketplace.
+* Certifique-se de atender aos requisitos de rede para umlink:concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["Implantação de HA em uma única AZ"] no Azure. Consulte link:reference-networking-azure.html["Configurar a rede do Azure para o Cloud Volumes ONTAP"] .
+* Você precisa ter uma destas funções do Azure atribuídas para implantar o Cloud Volumes ONTAP:
++
+** O `contributor` função com as permissões padrão. Para mais informações, consulte o https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles["Documentação do Microsoft Azure: funções integradas do Azure"^] .
+** Uma função RBAC personalizada com as seguintes permissões. Para mais informações, consulte o https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles["Documentação do Azure: Funções personalizadas do Azure"^] .
++
+[]
+====
+"permissões": [ { "ações": [ "Microsoft.AAD/register/action", "Microsoft.Resources/subscriptions/resourceGroups/write", "Microsoft.Network/loadBalancers/write", "Microsoft.ClassicCompute/virtualMachines/write", "Microsoft.Compute/capacityReservationGroups/deploy/action", "Microsoft.ClassicCompute/virtualMachines/networkInterfaces/associatedNetworkSecurityGroups/write", "Microsoft.Network/networkInterfaces/write", "Microsoft.Compute/virtualMachines/write", "Microsoft.Compute/virtualMachines/extensions/write", "Microsoft.Resources/deployments/validate/action", "Microsoft.Resources/subscriptions/resourceGroups/read", "Microsoft.Network/virtualNetworks/write", "Microsoft.Network/virtualNetworks/read", "Microsoft.Network/networkSecurityGroups/write", "Microsoft.Network/networkSecurityGroups/read", "Microsoft.Compute/disks/write", "Microsoft.Compute/virtualMachineScaleSets/write", "Microsoft.Resources/deployments/write", "Microsoft.Network/virtualNetworks/subnets/read", "Microsoft.Network/virtualNetworks/subnets/write" ], "notActions": [], "dataActions": [], "notDataActions": [] } ]
+
+====
++
+
+NOTE: Se você registrou o provedor de recursos "Microsoft.storage" em sua assinatura, não precisará do `Microsoft.AAD/register/action` permissão. Para mais informações, consulte o https://learn.microsoft.com/en-us/azure/role-based-access-control/permissions/storage["Documentação do Azure: Permissões do Azure para Armazenamento"^] .
+
+
+
+
+
+.Passos
+. No site do marketplace do Azure, pesquise por produtos NetApp .
+. Selecione * NetApp Cloud Volumes ONTAP direct*.
+. Clique em *Criar* para iniciar o assistente de implantação.
+. Selecione um plano.  A lista *Plano* normalmente exibe as versões mais recentes do Cloud Volumes ONTAP.
+. Na aba *Básico*, forneça estes detalhes:
++
+** *Assinatura*: Selecione uma assinatura.  A implantação será vinculada ao número de assinatura.
+** *Grupo de recursos*: use um grupo de recursos existente ou crie um novo.  Os grupos de recursos ajudam a alocar todos os recursos, como discos e VMs de armazenamento, dentro de um único grupo para um sistema Cloud Volumes ONTAP .
+** *Região*: selecione uma região que ofereça suporte à implantação de HA do Azure em uma única AZ.  Você vê apenas as regiões disponíveis na lista.
+** *Tamanho*: Selecione um tamanho de VM de armazenamento para o Disco gerenciado Premium SSD v2 compatível.
+** *Zona*: Selecione uma zona para a região selecionada.
+** *Senha do administrador*: Defina uma senha.  Use esta senha de administrador para efetuar login no sistema após a implantação.
+** *Confirmar senha*: Digite novamente a mesma senha para confirmação.
++
+*** Na aba *Rede*, adicione uma rede virtual e uma sub-rede ou selecione-as nas listas.
++
+
+NOTE: Para cumprir com as restrições do Microsoft Azure, você deve criar uma nova sub-rede ao configurar uma nova rede virtual.  Da mesma forma, se você escolher uma rede existente, deverá selecionar uma sub-rede existente.
+
+*** Para selecionar um grupo de segurança de rede predefinido, selecione *Sim*.  Selecione *Não* para atribuir um grupo de segurança de rede predefinido do Azure com as regras de tráfego necessárias. Para mais informações, consulte link:reference-networking-azure.html#security-group-rules["Regras de grupo de segurança para o Azure"] .
+*** Na guia *Avançado*, confirme se os dois recursos do Azure necessários para esta implantação foram definidos. Consultelink:task-saz-feature.html["Habilitar um recurso do Azure para implantações de AZ únicas do Cloud Volumes ONTAP"] elink:task-azure-high-availability-mode.html["Habilitar o modo de alta disponibilidade para o Cloud Volumes ONTAP no Azure"] .
+*** Você pode definir pares de nomes e valores para os recursos ou grupos de recursos na guia *Tags*.
+*** Na aba *Revisar + criar*, revise os detalhes e inicie a implantação.
+
+
+
+
+
+
+.Depois que você terminar
+Selecione o ícone de notificação para visualizar o progresso da sua implantação.  Após a implantação do Cloud Volumes ONTAP , você pode visualizar a VM de armazenamento listada para operações.
+
+Uma vez acessível, use o ONTAP System Manager ou o ONTAP CLI para efetuar login na VM de armazenamento com as credenciais de administrador que você definiu.  Depois disso, você pode criar volumes, LUNs ou compartilhamentos e começar a utilizar os recursos de armazenamento do Cloud Volumes ONTAP.
+
+
+
+== Solucionar problemas de implantação
+
+Os sistemas Cloud Volumes ONTAP implantados diretamente pelo marketplace do Azure não incluem suporte da NetApp.  Caso surjam problemas durante a implantação, você pode solucioná-los e resolvê-los de forma independente.
+
+.Passos
+. No site do marketplace do Azure, acesse *Diagnóstico de inicialização > Log serial*.
+. Baixe e investigue os logs seriais.
+. Consulte a documentação do produto e os artigos da base de conhecimento (KB) para solução de problemas.
++
+** https://learn.microsoft.com/en-us/partner-center/["Documentação do marketplace do Azure"]
+** https://www.netapp.com/support-and-training/documentation/["Documentação da NetApp"]
+** https://kb.netapp.com/["Artigos da base de conhecimento da NetApp"]
+
+
+
+
+
+
+== Descubra os sistemas implantados no Console
+
+Você pode descobrir os sistemas Cloud Volumes ONTAP que você implantou usando a implantação direta do Azure Marketplace e gerenciá-los na página *Sistemas* no Console.  O agente do Console descobre os sistemas, os adiciona e aplica as licenças necessárias, além de desbloqueia todos os recursos do Console para esses sistemas.  A configuração HA original em uma única AZ com discos gerenciados PSSD v2 é mantida, e o sistema é registrado na mesma assinatura do Azure e no mesmo grupo de recursos da implantação original.
+
+.Sobre esta tarefa
+Ao descobrir os sistemas Cloud Volumes ONTAP implantados usando a implantação direta do Azure Marketplace, o agente do Console executa estas tarefas:
+
+* Substitui as licenças gratuitas dos sistemas descobertos como licenças regulares baseadas em capacidadelink:concept-licensing.html#packages["Licenças Freemium"] .
+* Mantém os recursos existentes dos sistemas implantados e adiciona recursos adicionais do Console, como proteção de dados, gerenciamento de dados e recursos de segurança.
+* Substitui as licenças instaladas nos nós por novas licenças ONTAP para NFS, CIFS (SMB), iSCSI, ARP, SnapLock e SnapMirror.
+* Converte os números de série dos nós genéricos em números de série exclusivos.
+* Atribui novas tags de sistema aos recursos, conforme necessário.
+* Converte os endereços IP dinâmicos da instância em endereços IP estáticos.
+* Habilita as funcionalidades delink:task-tiering.html["Hierarquização do FabricPool"] ,link:task-verify-autosupport.html["AutoSupport"] , elink:concept-worm.html["escrever uma vez e ler muitas vezes"] (WORM) armazenamento nos sistemas implantados.  Você pode ativar esses recursos no Console quando precisar deles.
+* Registra as instâncias nas contas NSS usadas para descobri-las.
+* Habilita recursos de gerenciamento de capacidade emlink:concept-storage-management.html#capacity-management["modos automático e manual"] para os sistemas descobertos.
+
+
+.Antes de começar
+Certifique-se de que a implantação esteja concluída no marketplace do Azure.  O agente do Console pode descobrir os sistemas somente quando a implantação estiver concluída e eles estiverem disponíveis para descoberta.
+
+.Passos
+No Console, você segue o procedimento padrão para descobrir sistemas existentes. Consulte link:task-adding-systems.html["Adicionar um sistema Cloud Volumes ONTAP existente ao Console"] .
+
+.Depois que você terminar
+Após a conclusão da descoberta, você poderá visualizar os sistemas listados na página *Sistemas* no Console.  Você pode executar várias tarefas de gerenciamento, comolink:task-manage-aggregates.html["expandindo o agregado"] ,link:task-create-volumes.html["adicionando volumes"] ,link:task-managing-svms-azure.html["provisionamento de VMs de armazenamento adicionais"] , elink:task-change-azure-vm.html["alterando os tipos de instância"] .
+
+.Links relacionados
+Consulte a documentação do ONTAP para obter mais informações sobre como criar armazenamento:
+
+* https://docs.netapp.com/us-en/ontap/volumes/create-volume-task.html["Criar volumes para NFS"^]
+* https://docs.netapp.com/us-en/ontap-cli/lun-create.html["Criar LUNs para iSCSI"^]
+* https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-share-create.html["Criar compartilhamentos para CIFS"^]
+

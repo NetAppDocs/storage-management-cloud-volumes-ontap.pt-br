@@ -1,0 +1,11 @@
+= Implantações em modo privado habilitadas para o Cloud Volumes ONTAP 9.14.1
+:allow-uri-read: 
+
+
+
+
+=== Implantações em modo privado habilitadas para o Cloud Volumes ONTAP 9.14.1
+
+Agora você pode implantar o Cloud Volumes ONTAP 9.14.1 no modo privado na AWS, Azure e Google Cloud.  O modo privado é habilitado para implantações de nó único e de alta disponibilidade (HA) do Cloud Volumes ONTAP 9.14.1.
+
+Para obter mais informações sobre implantações em modo privado, consultehttps://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#restricted-mode["Saiba mais sobre os modos de implantação do BlueXP"^] .

@@ -1,0 +1,172 @@
+---
+sidebar: sidebar 
+permalink: task-verify-autosupport.html 
+keywords: autosupport, set up autosupport, test autosupport, asup, test asup 
+summary: O AutoSupport monitora proativamente a integridade do seu sistema e envia mensagens ao suporte técnico da NetApp .  Por padrão, o AutoSupport é habilitado em cada nó para enviar mensagens ao suporte técnico usando o protocolo de transporte HTTPS.  É melhor verificar se o AutoSupport pode enviar essas mensagens. 
+---
+= Verifique a configuração do AutoSupport para o Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O AutoSupport monitora proativamente a integridade do seu sistema e envia mensagens ao suporte técnico da NetApp .  Por padrão, o AutoSupport é habilitado em cada nó para enviar mensagens ao suporte técnico usando o protocolo de transporte HTTPS.  É melhor verificar se o AutoSupport pode enviar essas mensagens.
+
+A única etapa de configuração necessária é garantir que o Cloud Volumes ONTAP tenha conectividade de saída com a Internet.  Para obter detalhes, consulte os requisitos de rede do seu provedor de nuvem.
+
+
+
+== Requisitos do AutoSupport
+
+Os nós do Cloud Volumes ONTAP exigem acesso de saída à Internet para o NetApp AutoSupport, que monitora proativamente a integridade do seu sistema e envia mensagens ao suporte técnico da NetApp .
+
+As políticas de roteamento e firewall devem permitir tráfego HTTPS para os seguintes endpoints para que o Cloud Volumes ONTAP possa enviar mensagens de AutoSupport :
+
+* \ https://mysupport.netapp.com/aods/asupmessage
+* \ https://mysupport.netapp.com/asupprod/post/1.0/postAsup
+
+
+Se uma conexão de saída com a Internet não estiver disponível para enviar mensagens do AutoSupport , o NetApp Console configurará automaticamente seus sistemas Cloud Volumes ONTAP para usar o agente do Console como um servidor proxy.  O único requisito é garantir que o grupo de segurança do agente do Console permita conexões _de entrada_ pela porta 3128. Você precisará abrir esta porta depois de implantar o agente do Console.
+
+Se você definiu regras de saída rígidas para o Cloud Volumes ONTAP, também precisará garantir que o grupo de segurança do Cloud Volumes ONTAP permita conexões _de_ saída_ pela porta 3128.
+
+
+TIP: Se você estiver usando um par HA, o mediador HA não exigirá acesso de saída à Internet.
+
+Depois de verificar se o acesso de saída à Internet está disponível, você pode testar o AutoSupport para garantir que ele pode enviar mensagens.  Para obter instruções, consulte o https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Documentação do ONTAP : Configurar o AutoSupport"^] .
+
+
+
+== Solucionar problemas de configuração do AutoSupport
+
+Se uma conexão de saída não estiver disponível e o Console não puder configurar seu sistema Cloud Volumes ONTAP para usar o agente do Console como um servidor proxy, você receberá uma notificação do Console intitulada "<nome do sistema> não consegue enviar mensagens do AutoSupport ".
+
+Provavelmente você está recebendo esta mensagem devido a problemas de rede.
+
+Siga estas etapas para resolver esse problema.
+
+.Passos
+. Conecte-se por SSH ao sistema Cloud Volumes ONTAP para que você possa administrar o sistema a partir da CLI do ONTAP .
++
+link:task-connecting-to-otc.html["Aprenda como usar SSH para Cloud Volumes ONTAP"] .
+
+. Exibir o status detalhado do subsistema AutoSupport :
++
+`autosupport check show-details`
+
++
+A resposta deve ser semelhante à seguinte:
+
++
+[listing]
+----
+    Category: smtp
+          Component: mail-server
+             Status: failed
+             Detail: SMTP connectivity check failed for destination:
+                     mailhost. Error: Could not resolve host - 'mailhost'
+            Corrective Action: Check the hostname of the SMTP server
+
+    Category: http-https
+        Component: http-put-destination
+            Status: ok
+            Detail: Successfully connected to:
+                    <https://support.netapp.com/put/AsupPut/>.
+
+          Component: http-post-destination
+             Status: ok
+             Detail: Successfully connected to:
+                     https://support.netapp.com/asupprod/post/1.0/postAsup.
+
+    Category: on-demand
+          Component: ondemand-server
+             Status: ok
+             Detail: Successfully connected to:
+                     https://support.netapp.com/aods/asupmessage.
+
+    Category: configuration
+            Component: configuration
+                Status: ok
+                Detail: No configuration issues found.
+    5 entries were displayed.
+----
++
+Se o status da categoria http-https for "ok", significa que o AutoSupport está configurado corretamente e as mensagens podem ser enviadas.
+
+. Se o status não estiver ok, verifique a URL do proxy para cada nó do Cloud Volumes ONTAP :
++
+`autosupport show -fields proxy-url`
+
+. Se o parâmetro de URL do proxy estiver vazio, configure o Cloud Volumes ONTAP para usar o agente do Console como um proxy:
++
+`autosupport modify -proxy-url \http://<console agent private ip>:3128`
+
+. Verifique novamente o status do AutoSupport :
++
+`autosupport check show-details`
+
+. Se o status ainda for falha, valide se há conectividade entre o Cloud Volumes ONTAP e o agente do Console pela porta 3128.
+. Se o ID de status ainda falhar após verificar se há conectividade, faça SSH para o agente do Console.
++
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["Saiba mais sobre como conectar-se à VM Linux para o agente do console"^]
+
+. Vá para `/opt/application/netapp/cloudmanager/docker_occm/data/`
+. Abra o arquivo de configuração do proxy `squid.conf`
++
+A estrutura básica do arquivo é a seguinte:
+
++
+[listing]
+----
+        http_port 3128
+        acl localnet src 172.31.0.0/16
+        acl azure_aws_metadata dst 169.254.169.254
+
+        http_access allow localnet
+        http_access deny azure_aws_metadata
+        http_access allow localhost
+        http_access deny all
+----
++
+O valor localnet src é o CIDR do sistema Cloud Volumes ONTAP .
+
+. Se o bloco CIDR do sistema Cloud Volumes ONTAP não estiver no intervalo especificado no arquivo, atualize o valor ou adicione uma nova entrada da seguinte maneira:
++
+`acl cvonet src <cidr>`
+
++
+Se você adicionar esta nova entrada, não se esqueça de adicionar também uma entrada de permissão:
+
++
+`http_access allow cvonet`
+
++
+Aqui está um exemplo:
+
++
+[listing]
+----
+        http_port 3128
+        acl localnet src 172.31.0.0/16
+        acl cvonet src 172.33.0.0/16
+        acl azure_aws_metadata dst 169.254.169.254
+
+        http_access allow localnet
+        http_access allow cvonet
+        http_access deny azure_aws_metadata
+        http_access allow localhost
+        http_access deny all
+----
+. Após editar o arquivo de configuração, reinicie o contêiner proxy como sudo:
++
+`docker restart squid`
+
+. Volte para a CLI do Cloud Volumes ONTAP e verifique se o Cloud Volumes ONTAP pode enviar mensagens de AutoSupport :
++
+`autosupport check show-details`
+
+

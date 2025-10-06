@@ -1,0 +1,220 @@
+---
+sidebar: sidebar 
+permalink: concept-data-tiering.html 
+keywords: storage tiering, tier, tiering, data tiering, s3, s3 tiering, capacity, performance, s3 endpoint, fabric pool, fabricpool, s3 bucket, requirement, vpc endpoint, policy, policies, tiering policies, auto, snapshot only, backup, none, cooling period, volume tiering policies, blob, standard, infrequent access, hot, cool, tiering level, storage tier, storage class 
+summary: Reduza seus custos de armazenamento habilitando a hierarquização automatizada de dados frios para armazenamento de objetos de baixo custo. 
+---
+= Saiba mais sobre camadas de dados com o Cloud Volumes ONTAP na AWS, Azure ou Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Reduza seus custos de armazenamento habilitando a hierarquização automatizada de dados inativos para armazenamento de objetos de baixo custo.  Os dados ativos permanecem em SSDs ou HDDs de alto desempenho, enquanto os dados inativos são alocados em camadas para armazenamento de objetos de baixo custo.  Isso permite que você recupere espaço no seu armazenamento primário e reduza o armazenamento secundário.
+
+image:diagram_data_tiering.png["Esta é uma imagem conceitual que mostra dados ativos indo para o armazenamento EBS e dados inativos indo para o armazenamento S3."]
+
+A hierarquização de dados é alimentada pela tecnologia FabricPool .  O Cloud Volumes ONTAP fornece camadas de dados para todos os clusters do Cloud Volumes ONTAP sem uma licença adicional.  Quando você habilita a hierarquização de dados, os dados hierarquizados para armazenamento de objetos incorrem em cobranças.  Consulte a documentação do seu provedor de nuvem para obter detalhes sobre os custos de armazenamento de objetos.
+
+ifdef::aws[]
+
+
+
+== Camadas de dados na AWS
+
+Quando você habilita a hierarquização de dados na AWS, o Cloud Volumes ONTAP usa o EBS como uma camada de desempenho para dados ativos e o AWS S3 como uma camada de capacidade para dados inativos.
+
+Nível de desempenho:: O nível de desempenho pode ser SSDs de uso geral (gp3 ou gp2) ou SSDs de IOPS provisionados (io1).
++
+--
+Não é recomendado hierarquizar dados para armazenamento de objetos ao usar HDDs com taxa de transferência otimizada (st1).
+
+--
+Nível de capacidade:: Um sistema Cloud Volumes ONTAP organiza dados inativos em um único bucket S3.
++
+--
+O NetApp Console cria um único bucket S3 para cada sistema e o nomeia fabric-pool-_cluster unique identifier_.  Um bucket S3 diferente não é criado para cada volume.
+
+Quando o Console cria o bucket S3, ele usa as seguintes configurações padrão:
+
+* Classe de armazenamento: Padrão
+* Criptografia padrão: Desativada
+* Bloquear acesso público: bloquear todo o acesso público
+* Propriedade do objeto: ACLs habilitadas
+* Controle de versão de bucket: Desativado
+* Bloqueio de objeto: Desativado
+
+
+--
+Classes de armazenamento:: A classe de armazenamento padrão para dados em camadas na AWS é _Standard_.  Padrão é ideal para dados acessados com frequência armazenados em várias Zonas de Disponibilidade.
++
+--
+Se você não planeja acessar os dados inativos, pode reduzir seus custos de armazenamento alterando a classe de armazenamento para uma das seguintes: _Intelligent Tiering_, _One-Zone Infrequent Access_, _Standard-Infrequent Access_ ou _S3 Glacier Instant Retrieval_.  Quando você altera a classe de armazenamento, os dados inativos começam na classe de armazenamento Padrão e passam para a classe de armazenamento selecionada, se os dados não forem acessados após 30 dias.
+
+Os custos de acesso serão maiores se você acessar os dados, então considere isso antes de alterar a classe de armazenamento. https://aws.amazon.com/s3/storage-classes["Documentação do Amazon S3: Saiba mais sobre as classes de armazenamento do Amazon S3"^] .
+
+Você pode selecionar uma classe de armazenamento ao criar o sistema e pode alterá-la a qualquer momento depois.  Para obter instruções sobre como alterar a classe de armazenamento, consultelink:task-tiering.html["Dados inativos em camadas para armazenamento de objetos de baixo custo"] .
+
+A classe de armazenamento para camadas de dados abrange todo o sistema, não é por volume.
+
+--
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+
+
+== Camadas de dados no Azure
+
+Quando você habilita a hierarquização de dados no Azure, o Cloud Volumes ONTAP usa discos gerenciados do Azure como uma camada de desempenho para dados ativos e o armazenamento de Blobs do Azure como uma camada de capacidade para dados inativos.
+
+Nível de desempenho:: O nível de desempenho pode ser SSDs ou HDDs.
+Nível de capacidade:: Um sistema Cloud Volumes ONTAP organiza dados inativos em um único contêiner Blob.
++
+--
+O Console cria uma nova conta de armazenamento com um contêiner para cada sistema Cloud Volumes ONTAP .  O nome da conta de armazenamento é aleatório.  Um contêiner diferente não é criado para cada volume.
+
+O Console cria a conta de armazenamento com as seguintes configurações:
+
+* Nível de acesso: Quente
+* Desempenho: Padrão
+* Redundância: De acordo com a implantação do Cloud Volume ONTAP
++
+** Zona de disponibilidade única: Armazenamento localmente redundante (LRS)
+** Zona de disponibilidade múltipla: Armazenamento redundante de zona (ZRS)
+
+
+* Conta: StorageV2 (uso geral v2)
+* Exigir transferência segura para operações da API REST: Habilitado
+* Acesso à chave da conta de armazenamento: habilitado
+* Versão mínima do TLS: Versão 1.2
+* Criptografia de infraestrutura: Desativada
+
+
+--
+Níveis de acesso ao armazenamento:: O nível de acesso de armazenamento padrão para dados em camadas no Azure é o nível _ativo_.  A camada ativa é ideal para dados acessados com frequência na camada de capacidade.
++
+--
+Se você não planeja acessar os dados inativos na camada de capacidade, pode escolher a camada de armazenamento _cool_, onde os dados inativos são retidos por no mínimo 30 dias.  Você também pode optar pelo nível _frio_, onde os dados inativos são armazenados por no mínimo 90 dias.  Com base em seus requisitos de armazenamento e considerações de custo, você pode selecionar o nível que melhor atende às suas necessidades.  Quando você altera o nível de armazenamento para _frio_ ou _frio_, os dados do nível de capacidade inativo são movidos diretamente para o nível de armazenamento frio ou frio.  Os níveis frio e frio oferecem custos de armazenamento mais baixos em comparação ao nível quente, mas vêm com custos de acesso mais altos, então leve isso em consideração antes de alterar o nível de armazenamento. Consulte https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Documentação do Microsoft Azure: Saiba mais sobre os níveis de acesso ao armazenamento de Blobs do Azure"^] .
+
+Você pode selecionar um nível de armazenamento ao adicionar um sistema Cloud Volumes ONTAP e pode alterá-lo a qualquer momento depois.  Para obter detalhes sobre como alterar o nível de armazenamento, consultelink:task-tiering.html["Dados inativos em camadas para armazenamento de objetos de baixo custo"] .
+
+O nível de acesso ao armazenamento para hierarquização de dados abrange todo o sistema, não é por volume.
+
+--
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+
+
+== Camadas de dados no Google Cloud
+
+Quando você habilita a hierarquização de dados no Google Cloud, o Cloud Volumes ONTAP usa discos persistentes como uma camada de desempenho para dados ativos e um bucket do Google Cloud Storage como uma camada de capacidade para dados inativos.
+
+Nível de desempenho:: O nível de desempenho pode ser discos persistentes SSD, discos persistentes balanceados ou discos persistentes padrão.
+Nível de capacidade:: Um sistema Cloud Volumes ONTAP organiza dados inativos em um único bucket do Google Cloud Storage.
++
+--
+O Console cria um bucket para cada sistema e o nomeia fabric-pool-_cluster unique identifier_.  Um bucket diferente não é criado para cada volume.
+
+Quando o Console cria o bucket, ele usa as seguintes configurações padrão:
+
+* Tipo de localização: Região
+* Classe de armazenamento: Padrão
+* Acesso público: sujeito a ACLs de objetos
+* Controle de acesso: refinado
+* Proteção: Nenhuma
+* Criptografia de dados: chave gerenciada pelo Google
+
+
+--
+Classes de armazenamento:: A classe de armazenamento padrão para dados em camadas é a classe _Standard Storage_.  Se os dados forem acessados com pouca frequência, você pode reduzir seus custos de armazenamento mudando para _Armazenamento Nearline_ ou _Armazenamento Coldline_.  Quando você altera a classe de armazenamento, os dados inativos subsequentes são movidos diretamente para a classe que você selecionou.
++
+--
+
+NOTE: Todos os dados inativos existentes manterão a classe de armazenamento padrão quando você alterar a classe de armazenamento.  Para alterar a classe de armazenamento de dados inativos existentes, você deve executar a designação manualmente.
+
+Os custos de acesso serão maiores se você acessar os dados, então leve isso em consideração antes de alterar a classe de armazenamento.  Para saber mais, consulte o https://cloud.google.com/storage/docs/storage-classes["Documentação do Google Cloud: Classes de armazenamento"^] .
+
+Você pode selecionar um nível de armazenamento ao criar o sistema e pode alterá-lo a qualquer momento depois.  Para obter detalhes sobre como alterar a classe de armazenamento, consultelink:task-tiering.html["Dados inativos em camadas para armazenamento de objetos de baixo custo"] .
+
+A classe de armazenamento para camadas de dados abrange todo o sistema, não é por volume.
+
+--
+
+
+endif::gcp[]
+
+
+
+== Camadas de dados e limites de capacidade
+
+Se você habilitar a hierarquização de dados, o limite de capacidade do sistema permanecerá o mesmo.  O limite é distribuído entre o nível de desempenho e o nível de capacidade.
+
+
+
+== Políticas de níveis de volume
+
+Para habilitar o armazenamento em camadas de dados, você deve selecionar uma política de armazenamento em camadas de volume ao criar, modificar ou replicar um volume.  Você pode selecionar uma política diferente para cada volume.
+
+Algumas políticas de hierarquização têm um período mínimo de resfriamento associado, que define o tempo que os dados do usuário em um volume devem permanecer inativos para que os dados sejam considerados "frios" e movidos para a camada de capacidade.  O período de resfriamento começa quando os dados são gravados no agregado.
+
+
+TIP: Você pode alterar o período mínimo de resfriamento e o limite agregado padrão de 50% (mais sobre isso abaixo). http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-AD522711-01F9-4413-A254-929EAE871EBF.html["Aprenda como alterar o período de resfriamento"^] e http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-8FC4BFD5-F258-4AA6-9FCB-663D42D92CAA.html["aprenda como alterar o limite"^] .
+
+O Console permite que você escolha entre as seguintes políticas de camadas de volume ao criar ou modificar um volume:
+
+Somente instantâneo:: Depois que um agregado atinge 50% da capacidade, o Cloud Volumes ONTAP nivela os dados frios do usuário de cópias do Snapshot que não estão associadas ao sistema de arquivos ativo para o nível de capacidade.  O período de resfriamento é de aproximadamente 2 dias.
++
+--
+Se lidos, os blocos de dados frios na camada de capacidade se tornam quentes e são movidos para a camada de desempenho.
+
+--
+Todos:: Todos os dados (não incluindo metadados) são imediatamente marcados como frios e classificados no armazenamento de objetos o mais rápido possível. Não há necessidade de esperar 48 horas para que novos blocos em um volume esfriem. Observe que os blocos localizados no volume anterior à política Todos serem definidos levam 48 horas para esfriar.
++
+--
+Se lidos, os blocos de dados frios na camada de nuvem permanecem frios e não são gravados de volta na camada de desempenho. Esta política está disponível a partir do ONTAP 9.6.
+
+--
+Auto:: Depois que um agregado atinge 50% da capacidade, o Cloud Volumes ONTAP divide os blocos de dados frios em um volume em uma camada de capacidade.  Os dados frios incluem não apenas cópias de instantâneos, mas também dados frios do usuário do sistema de arquivos ativo.  O período de resfriamento é de aproximadamente 31 dias.
++
+--
+Esta política é compatível a partir do Cloud Volumes ONTAP 9.4.
+
+Se lidos aleatoriamente, os blocos de dados frios na camada de capacidade se tornam quentes e passam para a camada de desempenho.  Se lidos por leituras sequenciais, como aquelas associadas a índices e verificações antivírus, os blocos de dados frios permanecem frios e não passam para a camada de desempenho.
+
+--
+Nenhum:: Mantém os dados de um volume na camada de desempenho, impedindo que sejam movidos para a camada de capacidade.
+
+
+Ao replicar um volume, você pode escolher se deseja hierarquizar os dados no armazenamento de objetos.  Se fizer isso, o Console aplicará a política de *Backup* ao volume de proteção de dados.  A partir do Cloud Volumes ONTAP 9.6, a política de camadas *All* substitui a política de backup.
+
+
+
+=== Desativar o Cloud Volumes ONTAP afeta o período de resfriamento
+
+Blocos de dados são resfriados por varreduras de resfriamento.  Durante esse processo, os blocos que não foram utilizados têm sua temperatura movida (resfriada) para o próximo valor mais baixo.  O tempo de resfriamento padrão depende da política de níveis de volume:
+
+* Automático: 31 dias
+* Somente instantâneo: 2 dias
+
+
+O Cloud Volumes ONTAP deve estar em execução para que a verificação de resfriamento funcione.  Se o Cloud Volumes ONTAP estiver desativado, o resfriamento também será interrompido.  Como resultado, você pode experimentar tempos de resfriamento mais longos.
+
+
+TIP: Quando o Cloud Volumes ONTAP é desativado, a temperatura de cada bloco é preservada até que você reinicie o sistema.  Por exemplo, se a temperatura de um bloco for 5 quando você desligar o sistema, a temperatura ainda será 5 quando você ligar o sistema novamente.
+
+
+
+== Configurando a hierarquização de dados
+
+Para obter instruções e uma lista de configurações suportadas, consultelink:task-tiering.html["Dados inativos em camadas para armazenamento de objetos de baixo custo"] .

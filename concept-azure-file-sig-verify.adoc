@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: concept-azure-file-sig-verify.html 
+keywords: Azure, image, VHD, file signature verification, encryption, sha256, ONTAP, Cloud Volumes, CLI, 
+summary: Entenda como verificar uma assinatura de arquivo VHD exportado por meio da ferramenta de resumo de imagem do Cloud Volumes ONTAP . 
+---
+= Verificação de assinatura de imagem do Azure Marketplace para Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O processo de verificação de imagem do Azure gera um arquivo de resumo a partir do arquivo VHD, retirando 1 MB no início e 512 bytes no final e, em seguida, aplicando uma função de hash.  Para corresponder ao procedimento de assinatura, _sha256_ é usado para hash.
+
+
+
+== Resumo do fluxo de trabalho de verificação de assinatura de arquivo
+
+A seguir, uma visão geral do processo de fluxo de trabalho de verificação de assinatura de arquivo.
+
+image::graphic_azure_check_signature.png[assinatura gráfica de verificação do Azure]
+
+* Baixando a imagem do Azure do https://mysupport.netapp.com/site/["Site de suporte da NetApp"^] e extrair o arquivo digest (.sig), o arquivo de certificado de chave pública (.pem) e o arquivo de certificado de cadeia (.pem). Consulte link:task-azure-download-digest-file.html["Baixe o arquivo de resumo da imagem do Azure"] para maiores informações.
+* Verificação da cadeia de confiança.
+* Extraindo a chave pública (.pub) do certificado de chave pública (.pem).
+* Descriptografando o arquivo de resumo usando a chave pública extraída.
+* Comparando o resultado com um resumo recém-gerado de um arquivo temporário criado a partir do arquivo de imagem após remover 1 MB no início e 512 bytes no final.  Esta etapa é realizada usando a ferramenta de linha de comando OpenSSL.  A ferramenta OpenSSL CLI exibe mensagens apropriadas sobre sucesso ou falha na correspondência dos arquivos.
++
+[source, cli]
+----
+openssl dgst -verify <public_key> -keyform <form> <hash_function>
+-signature <digest_file> -binary <temporary_file>
+----
+
