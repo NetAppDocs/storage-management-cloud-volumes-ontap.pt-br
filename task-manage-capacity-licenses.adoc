@@ -39,10 +39,10 @@ Se o Console não puder adicionar a licença, você precisará adicioná-la manu
 
 == Visualize a capacidade consumida em sua conta
 
-O Console mostra a capacidade total consumida na sua conta e a capacidade consumida pelo pacote de licenciamento. Isso pode ajudar você a entender como está sendo cobrado e se precisa comprar capacidade adicional.
+O Console mostra a capacidade total consumida na sua conta e a capacidade consumida pelo pacote de licenciamento.  Isso pode ajudar você a entender como está sendo cobrado e se precisa comprar capacidade adicional.
 
 .Passos
-. No painel de navegação esquerdo, selecione *Administração > Licenças e assinaturas*.
+. No painel de navegação esquerdo, selecione *Administração > Licenses and subscriptions*.
 . Na guia *Visão geral*, o bloco Cloud Volumes ONTAP exibe a capacidade atual provisionada para sua conta.
 +
 image:screenshot_cvo_licensing_card.png["width=300 uma captura de tela exibindo o resumo da capacidade das suas licenças e assinaturas do Cloud Volumes ONTAP ."]
@@ -62,9 +62,9 @@ Para entender melhor as capacidades exibidas no pacote Essentials, você deve es
 +
 Você verá apenas as assinaturas associadas à organização que você está visualizando no momento.
 
-. Ao visualizar as informações sobre suas assinaturas, você pode interagir com os detalhes na tabela. Expanda uma linha para ver mais detalhes.
+. Ao visualizar as informações sobre suas assinaturas, você pode interagir com os detalhes na tabela.  Expanda uma linha para ver mais detalhes.
 +
-** Selecioneimage:icon-column-selector.png["o ícone de mais no final do cabeçalho da tabela"] para escolher quais colunas aparecem na tabela. Observe que as colunas Prazo e Renovação automática não aparecem por padrão. A coluna Renovação Automática exibe informações de renovação somente para contratos do Azure.
+** Selecioneimage:icon-column-selector.png["o ícone de mais no final do cabeçalho da tabela"] para escolher quais colunas aparecem na tabela.  Observe que as colunas Prazo e Renovação automática não aparecem por padrão.  A coluna Renovação Automática exibe informações de renovação somente para contratos do Azure.
 
 
 
@@ -75,7 +75,7 @@ Você verá apenas as assinaturas associadas à organização que você está vi
 
 Você pode visualizar detalhes sobre a capacidade usada por pacote alternando para o modo legado na página Cloud Volumes ONTAP .
 
-. No painel de navegação esquerdo, selecione *Administração > Licenças e assinaturas*.
+. No painel de navegação esquerdo, selecione *Administração > Licenses and subscriptions*.
 . Na guia *Visão geral*, o bloco Cloud Volumes ONTAP exibe a capacidade atual provisionada para sua conta.
 . Selecione *Exibir* para ver a capacidade provisionada para cada um dos seus pacotes de licenciamento.
 . Selecione *Alternar para visualização avançada*.
@@ -105,7 +105,7 @@ O Console sempre tenta cobrar primeiro uma licença.  Se uma licença não estiv
 
 
 .Passos
-. No painel de navegação esquerdo, selecione *Administração > Licenças e assinaturas*.
+. No painel de navegação esquerdo, selecione *Administração > Licenses and subscriptions*.
 . Selecione a aba *Visão geral*.
 . No bloco Cloud Volumes ONTAP , selecione *Exibir*.
 . Selecione *Alternar para visualização avançada*.
@@ -180,7 +180,7 @@ NOTE: Os volumes FlexClone não estão incluídos neste relatório porque esses 
 
 
 .Passos
-. No painel de navegação esquerdo, selecione *Administração > Licenças e assinaturas*.
+. No painel de navegação esquerdo, selecione *Administração > Licenses and subscriptions*.
 . Na guia *Visão geral*, selecione *Exibir* no bloco Cloud Volumes ONTAP .
 . Selecione *Relatório de uso*.
 +

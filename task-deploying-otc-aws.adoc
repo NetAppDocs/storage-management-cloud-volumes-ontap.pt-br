@@ -4,7 +4,7 @@ permalink: task-deploying-otc-aws.html
 keywords: Cloud Volumes ONTAP, deploying, launching, creating, deploy, launch, create, aws, serial number, license key, byol, test instance, aws tags, tags, location, vpc, encryption, security group, aws-managed encryption, disk size, disk type, write speed, licensing, IAM role, preconfigured package, access control, volume protection, usage profile, register, CIFS share, quota, qtree, HA, high-availability, subscription, cloud data sense, cloud backup 
 summary: Você pode iniciar instâncias do Cloud Volumes ONTAP em uma configuração de sistema único ou como um par de HA na AWS. 
 ---
-= Inicie o Cloud Volumes ONTAP no AWS
+= Inicie o Cloud Volumes ONTAP na AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -85,7 +85,7 @@ TIP: Se vários usuários do IAM trabalharem na mesma conta da AWS, cada usuári
 
 . *Serviços*: mantenha os serviços habilitados ou desabilite os serviços individuais que você não deseja usar com o Cloud Volumes ONTAP.
 +
-** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a NetApp Data Classification"^]
 ** https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre o NetApp Backup and Recovery"^]
 +
 
@@ -329,7 +329,7 @@ TIP: Se vários usuários do IAM trabalharem na mesma conta da AWS, cada usuári
 
 . *Serviços*: Mantenha os serviços ativados ou desative os serviços individuais que você não deseja usar com este sistema Cloud Volumes ONTAP .
 +
-** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a NetApp Data Classification"^]
 ** https://docs.netapp.com/us-en/bluexp-backup-recovery/task-backup-to-s3.html["Saiba mais sobre backup e recuperação"^]
 +
 

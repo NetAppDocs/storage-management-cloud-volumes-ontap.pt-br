@@ -35,7 +35,7 @@ link:task-planning-your-config-gcp.html["Saiba mais sobre o planejamento de sua 
 . Certifique-se de que sua VPC e sub-redes oferecerão suporte à conectividade entre o agente do Console e o Cloud Volumes ONTAP.
 . Se você planeja habilitar a hierarquização de dados, https://cloud.google.com/vpc/docs/configure-private-google-access["configurar a sub-rede Cloud Volumes ONTAP para acesso privado do Google"^] .
 . Se você estiver implantando um par de HA, certifique-se de ter quatro VPCs, cada uma com sua própria sub-rede.
-. Se você estiver usando uma VPC compartilhada, forneça a função _Usuário da rede de computação_ à conta de serviço do agente do Console.
+. Se você estiver usando uma VPC compartilhada, forneça a função _Usuário da rede de computação_ à conta de serviço do agente do console.
 . Habilite o acesso de saída à Internet da VPC de destino para o NetApp AutoSupport.
 +
 Esta etapa não é necessária se você estiver implantando o Cloud Volumes ONTAP em um local onde não há acesso à Internet disponível.
@@ -47,7 +47,7 @@ link:reference-networking-gcp.html["Saiba mais sobre os requisitos de rede"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]Configurar uma conta de serviço
 [role="quick-margin-para"]
-O Cloud Volumes ONTAP requer uma conta de serviço do Google Cloud para duas finalidades.  A primeira é quando você habilitalink:concept-data-tiering.html["hierarquização de dados"] para hierarquizar dados frios para armazenamento de objetos de baixo custo no Google Cloud.  A segunda é quando você habilita o https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Backup e recuperação da NetApp"^] para fazer backup de volumes em armazenamento de objetos de baixo custo.
+O Cloud Volumes ONTAP requer uma conta de serviço do Google Cloud para duas finalidades.  A primeira é quando você habilitalink:concept-data-tiering.html["hierarquização de dados"] para hierarquizar dados frios para armazenamento de objetos de baixo custo no Google Cloud.  A segunda é quando você habilita o https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] para fazer backup de volumes em armazenamento de objetos de baixo custo.
 
 [role="quick-margin-para"]
 Você pode configurar uma conta de serviço e usá-la para ambas as finalidades.  A conta de serviço deve ter a função *Administrador de armazenamento*.

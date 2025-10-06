@@ -54,7 +54,7 @@ A hierarquização de dados deve ser habilitada em um agregado para habilitá-la
 O NetApp Console solicita que você escolha uma política de camadas ao criar, modificar ou replicar um volume.
 
 [role="quick-margin-list"]
-* link:task-tiering.html#tier-data-from-read-write-volumes["Dados de nível de volumes de leitura e gravação"]
+* link:task-tiering.html#tier-data-from-read-write-volumes["Dados em camadas de volumes de leitura e gravação"]
 * link:task-tiering.html#tier-data-from-data-protection-volumes["Dados em camadas de volumes de proteção de dados"]
 
 
@@ -239,7 +239,7 @@ Agora você pode habilitar a hierarquização de dados em volumes novos e existe
 
 
 
-== Dados de nível de volumes de leitura e gravação
+== Dados em camadas de volumes de leitura e gravação
 
 O Cloud Volumes ONTAP pode hierarquizar dados inativos em volumes de leitura e gravação para armazenamento de objetos econômico, liberando a camada de desempenho para dados importantes.
 
@@ -364,4 +364,4 @@ Você pode excluir o bucket S3 somente se:
 * Todos os objetos são excluídos do bucket e o bucket S3 fica vazio.
 
 
-Quando você desativa um sistema Cloud Volumes ONTAP , o bucket S3 criado para o ambiente não é excluído automaticamente.  Em vez disso, ele permanece em um estado órfão para evitar qualquer perda acidental de dados.  Você pode excluir os objetos no bucket, remover o próprio bucket do S3 ou mantê-lo para uso posterior. Consulte https://docs.netapp.com/us-en/ontap-cli/vserver-object-store-server-bucket-delete.html#description["ONTAP CLI: exclusão de bucket do servidor de armazenamento de objetos do vserver"^] .
+Quando você desativa um sistema Cloud Volumes ONTAP , o bucket S3 que foi criado para o ambiente não é excluído automaticamente.  Em vez disso, ele permanece em um estado órfão para evitar qualquer perda acidental de dados.  Você pode excluir os objetos no bucket, remover o próprio bucket do S3 ou mantê-lo para uso posterior. Consulte https://docs.netapp.com/us-en/ontap-cli/vserver-object-store-server-bucket-delete.html#description["ONTAP CLI: exclusão de bucket do servidor de armazenamento de objetos do vserver"^] .

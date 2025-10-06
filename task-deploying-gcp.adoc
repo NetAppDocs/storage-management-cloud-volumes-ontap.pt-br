@@ -73,7 +73,7 @@ A tabela a seguir descreve os campos para os quais você pode precisar de orient
 | Nome do sistema | O Console usa o nome do sistema para nomear o sistema Cloud Volumes ONTAP e a instância da VM do Google Cloud.  Ele também usa o nome como prefixo para o grupo de segurança predefinido, se você selecionar essa opção. 
 
 
-| Nome da conta de serviço | Se você planeja usarlink:concept-data-tiering.html["hierarquização de dados"] ou https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Backup e recuperação da NetApp"^] com o Cloud Volumes ONTAP, você precisa habilitar *Conta de serviço* e selecionar uma conta de serviço que tenha a função de administrador de armazenamento predefinida. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^] . 
+| Nome da conta de serviço | Se você planeja usarlink:concept-data-tiering.html["hierarquização de dados"] ou https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] com o Cloud Volumes ONTAP, você precisa habilitar *Conta de serviço* e selecionar uma conta de serviço que tenha a função de administrador de armazenamento predefinida. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^] . 
 
 
 | Adicionar rótulos | Os rótulos são metadados para seus recursos do Google Cloud.  O Console adiciona os rótulos ao sistema Cloud Volumes ONTAP e aos recursos do Google Cloud associados ao sistema.  Você pode adicionar até quatro rótulos na interface do usuário ao criar um sistema e depois adicionar mais depois que ele for criado.  Observe que a API não limita você a quatro rótulos ao criar um sistema.  Para obter informações sobre rótulos, consulte o https://cloud.google.com/compute/docs/labeling-resources["Documentação do Google Cloud: Rotulagem de recursos"^] . 
@@ -303,7 +303,7 @@ A tabela a seguir descreve os campos para os quais você pode precisar de orient
 | Nome do sistema | O Console usa o nome do sistema para nomear o sistema Cloud Volumes ONTAP e a instância da VM do Google Cloud.  Ele também usa o nome como prefixo para o grupo de segurança predefinido, se você selecionar essa opção. 
 
 
-| Nome da conta de serviço | Se você planeja usar olink:concept-data-tiering.html["Camadas de nuvem da NetApp"] ou https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Backup e Recuperação"^] serviços, você precisa habilitar a opção *Conta de serviço* e então selecionar a Conta de serviço que tem a função de administrador de armazenamento predefinida. 
+| Nome da conta de serviço | Se você planeja usar olink:concept-data-tiering.html["NetApp Cloud Tiering"] ou https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Backup e Recuperação"^] serviços, você precisa habilitar a opção *Conta de serviço* e então selecionar a Conta de serviço que tem a função de administrador de armazenamento predefinida. 
 
 
 | Adicionar rótulos | Os rótulos são metadados para seus recursos do Google Cloud.  O Console adiciona os rótulos ao sistema Cloud Volumes ONTAP e aos recursos do Google Cloud associados ao sistema.  Você pode adicionar até quatro rótulos na interface do usuário ao criar um sistema e depois adicionar mais depois que ele for criado.  Observe que a API não limita você a quatro rótulos ao criar um sistema.  Para obter informações sobre rótulos, consulte https://cloud.google.com/compute/docs/labeling-resources["Documentação do Google Cloud: Rotulagem de recursos"^] . 

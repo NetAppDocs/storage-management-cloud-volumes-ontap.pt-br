@@ -24,7 +24,7 @@ Aqui está a comparação de recursos entre as duas opções.  Observe que os re
 
 [cols="3*"]
 |===
-|  | Mercado do Azure | Console NetApp 
+|  | Mercado do Azure | NetApp Console 
 
 
 | *Integração* | Mais curto e fácil, com preparação mínima necessária para implantação direta | Processo de integração mais longo, incluindo a instalação do agente do Console 

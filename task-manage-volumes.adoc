@@ -146,7 +146,7 @@ Certifique-se de levar em consideração os limites de capacidade do seu sistema
 
 == Modificar o servidor CIFS
 
-Se você alterar seus servidores DNS ou o domínio do Active Directory, precisará modificar o servidor CIFS no Cloud Volumes ONTAP para que ele possa continuar a fornecer armazenamento aos clientes.
+Se você alterar seus servidores DNS ou domínio do Active Directory, precisará modificar o servidor CIFS no Cloud Volumes ONTAP para que ele possa continuar a fornecer armazenamento aos clientes.
 
 .Passos
 . Na guia *Visão geral* do sistema Cloud Volumes ONTAP , clique na guia *Recurso* no painel do lado direito.
@@ -338,7 +338,7 @@ Mover dois ou mais volumes é necessário para evitar problemas de capacidade; n
 .Passos
 . Verifique se um agregado existente tem capacidade disponível para os volumes que você precisa mover:
 +
-.. No sistema Cloud Volumes ONTAP , clique na *guia Agregados*.
+.. No sistema Cloud Volumes ONTAP , clique na guia *Agregados*.
 .. No bloco agregado necessário, clique emimage:icon-action.png[""] ícone e então *Exibir detalhes agregados* para visualizar a capacidade disponível (tamanho provisionado menos capacidade agregada usada).
 +
 image::screenshot_aggr_capacity.png[capacidade de agregação de captura de tela]

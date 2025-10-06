@@ -26,7 +26,7 @@ Os aprimoramentos descritos nesta página são específicos para gerenciar o Clo
 
 === BlueXP agora é NetApp Console
 
-O NetApp Console, criado com base na base aprimorada e reestruturada do BlueXP , fornece gerenciamento centralizado do armazenamento NetApp e do NetApp Data Services em ambientes locais e na nuvem em nível empresarial, fornecendo insights em tempo real, fluxos de trabalho mais rápidos e administração simplificada, de forma altamente segura e compatível.
+O NetApp Console, criado com base na base aprimorada e reestruturada do BlueXP , fornece gerenciamento centralizado do armazenamento NetApp e do NetApp Data Services em ambientes locais e na nuvem em nível empresarial, fornecendo insights em tempo real, fluxos de trabalho mais rápidos e administração simplificada, que é altamente segura e compatível.
 
 Para obter detalhes sobre o que mudou, consulte o https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notas de versão do NetApp Console"^] .
 
@@ -273,7 +273,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-ad
 
 Agora, você pode experimentar o gerenciamento simplificado de licenças do Cloud Volumes ONTAP usando pontos de navegação aprimorados na BlueXP digital wallet:
 
-* Acesse facilmente as informações da sua licença do Cloud Volumes ONTAP nas guias *Administração > Licenças e assinaturas > Visão geral/Licenças diretas*.
+* Acesse facilmente as informações da sua licença do Cloud Volumes ONTAP nas guias *Administração > Licenses and subscriptions > Visão geral/Licenças diretas*.
 * Clique em *Exibir* no painel Cloud Volume ONTAP na guia *Visão geral* para obter uma compreensão abrangente de suas licenças baseadas em capacidade.  Esta visualização avançada oferece informações detalhadas sobre suas licenças e assinaturas.
 * Se preferir a interface anterior, você pode clicar no botão *Alternar para a visualização legada* para visualizar os detalhes da licença por tipo e modificar os métodos de cobrança para suas licenças.
 
@@ -729,7 +729,7 @@ A seguinte alteração foi introduzida com a versão 3.9.33 do Connector.
 
 === Suporte para VMs da série Lsv3 no Azure
 
-Os tipos de instância L48s_v3 e L64s_v3 agora são suportados com o Cloud Volumes ONTAP no Azure para implantações de nó único e par de alta disponibilidade com discos gerenciados compartilhados em zonas de disponibilidade únicas e múltiplas, a partir da versão 9.13.1. Esses tipos de instância oferecem suporte ao Flash Cache.
+Os tipos de instância L48s_v3 e L64s_v3 agora são suportados com o Cloud Volumes ONTAP no Azure para implantações de nó único e par de alta disponibilidade com discos gerenciados compartilhados em zonas de disponibilidade únicas e múltiplas, a partir da versão 9.13.1.  Esses tipos de instância oferecem suporte ao Flash Cache.
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Exibir configurações compatíveis com o Cloud Volumes ONTAP no Azure"^] https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html["Exibir limites de armazenamento para Cloud Volumes ONTAP no Azure"^]
 
@@ -743,7 +743,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.32 do Connector.
 
 === Flash Cache e suporte a alta velocidade de gravação no Google Cloud
 
-O Flash Cache e a alta velocidade de gravação podem ser ativados separadamente no Google Cloud para o Cloud Volumes ONTAP 9.13.1 e posteriores. Alta velocidade de gravação está disponível em todos os tipos de instância suportados. O Flash Cache é compatível com os seguintes tipos de instância:
+O Flash Cache e a alta velocidade de gravação podem ser ativados separadamente no Google Cloud para o Cloud Volumes ONTAP 9.13.1 e posteriores.  Alta velocidade de gravação está disponível em todos os tipos de instância suportados.  O Flash Cache é compatível com os seguintes tipos de instância:
 
 * n2-padrão-16
 * n2-padrão-32
@@ -759,7 +759,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html
 
 === Melhorias nos relatórios de uso
 
-Várias melhorias nas informações exibidas nos relatórios de uso agora estão disponíveis. A seguir estão as melhorias nos relatórios de uso:
+Várias melhorias nas informações exibidas nos relatórios de uso agora estão disponíveis.  A seguir estão as melhorias nos relatórios de uso:
 
 * A unidade TiB agora está incluída no nome das colunas.
 * Um novo campo "nó(s)" para números de série agora está incluído.
@@ -851,7 +851,7 @@ A região do Catar agora tem suporte no Google Cloud para Cloud Volumes ONTAP e 
 
 === Região Central da Suécia agora com suporte no Azure
 
-A região Central da Suécia agora tem suporte no Azure para Cloud Volumes ONTAP e no Connector for Cloud Volumes ONTAP 9.12.1 GA e posteriores.
+A região da Suécia Central agora tem suporte no Azure para Cloud Volumes ONTAP e no Connector for Cloud Volumes ONTAP 9.12.1 GA e posteriores.
 
 
 
@@ -863,7 +863,7 @@ A região Austrália Leste no Azure agora oferece suporte a implantações de HA
 
 === Detalhamento do uso de carregamento
 
-Agora você pode descobrir o que está sendo cobrado quando assina licenças baseadas em capacidade. Os seguintes tipos de relatórios de uso estão disponíveis para download na carteira digital no BlueXP. Os relatórios de uso fornecem detalhes de capacidade de suas assinaturas e informam como você está sendo cobrado pelos recursos em suas assinaturas do Cloud Volumes ONTAP . Os relatórios para download podem ser facilmente compartilhados com outras pessoas.
+Agora você pode descobrir o que está sendo cobrado quando assina licenças baseadas em capacidade.  Os seguintes tipos de relatórios de uso estão disponíveis para download na carteira digital no BlueXP.  Os relatórios de uso fornecem detalhes de capacidade de suas assinaturas e informam como você está sendo cobrado pelos recursos em suas assinaturas do Cloud Volumes ONTAP .  Os relatórios para download podem ser facilmente compartilhados com outras pessoas.
 
 * Uso do pacote Cloud Volumes ONTAP
 * Uso de alto nível
@@ -1094,7 +1094,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.24 do Connector.
 
 === WORM + Cloud Backup agora disponível durante a criação do Cloud Volumes ONTAP
 
-A capacidade de ativar os recursos WORM (gravar uma vez, ler várias vezes) e Cloud Backup agora está disponível durante o processo de criação do Cloud Volumes ONTAP .
+A capacidade de ativar os recursos de gravação única, leitura múltipla (WORM) e backup em nuvem agora está disponível durante o processo de criação do Cloud Volumes ONTAP .
 
 
 
@@ -1215,7 +1215,7 @@ O único requisito é garantir que o grupo de segurança do conector permita con
 
 === Alterar método de cobrança
 
-Agora você pode alterar o método de cobrança para um sistema Cloud Volumes ONTAP que usa licenciamento baseado em capacidade. Por exemplo, se você implantou um sistema Cloud Volumes ONTAP com o pacote Essentials, poderá alterá-lo para o pacote Professional caso suas necessidades comerciais mudem. Este recurso está disponível na Carteira Digital.
+Agora você pode alterar o método de cobrança para um sistema Cloud Volumes ONTAP que usa licenciamento baseado em capacidade.  Por exemplo, se você implantou um sistema Cloud Volumes ONTAP com o pacote Essentials, poderá alterá-lo para o pacote Professional caso suas necessidades comerciais mudem.  Este recurso está disponível na Carteira Digital.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html["Aprenda como alterar os métodos de cobrança"] .
 
@@ -1253,9 +1253,9 @@ As seguintes alterações foram introduzidas com a versão 3.9.20 do Connector.
 
 === Carteira Digital
 
-A Carteira Digital agora mostra a capacidade total consumida na sua conta e a capacidade consumida por pacote de licenciamento. Isso pode ajudar você a entender como está sendo cobrado e se precisa comprar capacidade adicional.
+A Carteira Digital agora mostra a capacidade total consumida na sua conta e a capacidade consumida por pacote de licenciamento.  Isso pode ajudar você a entender como está sendo cobrado e se precisa comprar capacidade adicional.
 
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-digital-wallet-summary.png["Uma captura de tela que mostra a página da Carteira Digital para licenças baseadas em capacidade. A página fornece uma visão geral da capacidade consumida em sua conta e, em seguida, divide a capacidade consumida por pacote de licenciamento."]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-digital-wallet-summary.png["Uma captura de tela que mostra a página da Carteira Digital para licenças baseadas em capacidade.  A página fornece uma visão geral da capacidade consumida em sua conta e, em seguida, divide a capacidade consumida por pacote de licenciamento."]
 
 
 
@@ -1269,7 +1269,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-vol
 
 === Licença ONTAP S3 na AWS
 
-Uma licença ONTAP S3 agora está incluída em sistemas Cloud Volumes ONTAP novos e existentes executando a versão 9.11.0 ou posterior na AWS.
+Uma licença ONTAP S3 agora está incluída em sistemas Cloud Volumes ONTAP novos e existentes que executam a versão 9.11.0 ou posterior na AWS.
 
 https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["Documentação do ONTAP : Aprenda a configurar e gerenciar serviços de armazenamento de objetos do S3"^]
 
@@ -1415,7 +1415,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html#chang
 
 === Novas permissões da AWS necessárias para o Conector
 
-As seguintes permissões agora são necessárias para criar um grupo de posicionamento de distribuição da AWS ao implantar um par de HA em uma única Zona de Disponibilidade (AZ):
+As seguintes permissões agora são necessárias para criar um grupo de posicionamento de spread da AWS ao implantar um par de HA em uma única Zona de Disponibilidade (AZ):
 
 [source, json]
 ----
@@ -1432,7 +1432,7 @@ Certifique-se de fornecer essas permissões para cada conjunto de credenciais da
 
 O Cloud Volumes ONTAP agora é compatível com as seguintes regiões do Google Cloud a partir da versão 9.10.1:
 
-* Delhi (asia-sul2)
+* Déli (asia-sul2)
 * Melbourne (austrália-sudeste2)
 * Milão (europe-west8) - apenas um nó
 * Santiago (southamerica-west1) - apenas um nó
@@ -1475,7 +1475,7 @@ image:https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/ma
 
 === O link do Gerenciador de Sistema foi removido
 
-Removemos o link do System Manager que estava disponível anteriormente em um ambiente de trabalho do Cloud Volumes ONTAP .
+Removemos o link do System Manager que estava anteriormente disponível em um ambiente de trabalho do Cloud Volumes ONTAP .
 
 Você ainda pode se conectar ao System Manager inserindo o endereço IP de gerenciamento do cluster em um navegador da Web que tenha uma conexão com o sistema Cloud Volumes ONTAP . https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-connecting-to-otc.html["Saiba mais sobre como se conectar ao System Manager"] .
 
@@ -1514,7 +1514,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-create-volumes.htm
 Esses métodos de cobrança por capacidade permitem que você pague por hora ou compre um contrato anual diretamente do seu provedor de nuvem.  Você ainda tem a opção de comprar uma licença por capacidade diretamente da NetApp.
 
 +
-Se você já tiver uma assinatura em um marketplace de nuvem, você também será automaticamente inscrito nessas novas ofertas.  Você pode escolher a cobrança por capacidade ao implantar um novo ambiente de trabalho do Cloud Volumes ONTAP .
+Se você já tiver uma assinatura em um marketplace de nuvem, você também estará automaticamente inscrito nessas novas ofertas.  Você pode escolher a cobrança por capacidade ao implantar um novo ambiente de trabalho do Cloud Volumes ONTAP .
 
 +
 Se você for um novo cliente, o BlueXP solicitará que você assine quando criar um novo ambiente de trabalho.
@@ -1633,7 +1633,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9101-relnotes["Saiba mais sobr
 
 Agora você pode usar as assinaturas Keystone para pagar por pares de Cloud Volumes ONTAP HA.
 
-Uma assinatura Keystone é um serviço baseado em assinatura com pagamento conforme o crescimento que oferece uma experiência de nuvem híbrida perfeita para aqueles que preferem modelos de consumo de OpEx ao CapEx inicial ou leasing.
+Uma assinatura Keystone é um serviço baseado em assinatura de pagamento conforme o crescimento que oferece uma experiência de nuvem híbrida perfeita para aqueles que preferem modelos de consumo de OpEx ao CapEx inicial ou leasing.
 
 Uma assinatura Keystone é compatível com todas as novas versões do Cloud Volumes ONTAP que você pode implantar do BlueXP.
 
@@ -1705,7 +1705,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.8 do Connector.
 
 Novos métodos de cobrança estão disponíveis para o Cloud Volumes ONTAP.
 
-* *BYOL baseado em capacidade*: Uma licença baseada em capacidade permite que você pague pelo Cloud Volumes ONTAP por TiB de capacidade.  A licença está associada à sua conta NetApp e permite que você crie vários sistemas Cloud Volumes ONTAP , desde que haja capacidade suficiente disponível por meio da sua licença.  O licenciamento baseado em capacidade está disponível na forma de um pacote, _Essentials_ ou _Professional_.
+* *BYOL baseado em capacidade*: uma licença baseada em capacidade permite que você pague pelo Cloud Volumes ONTAP por TiB de capacidade.  A licença está associada à sua conta NetApp e permite que você crie vários sistemas Cloud Volumes ONTAP , desde que haja capacidade suficiente disponível por meio da sua licença.  O licenciamento baseado em capacidade está disponível na forma de um pacote, _Essentials_ ou _Professional_.
 * *Oferta Freemium*: O Freemium permite que você use todos os recursos do Cloud Volumes ONTAP gratuitamente da NetApp (as taxas do provedor de nuvem ainda se aplicam).  Você está limitado a 500 GiB de capacidade provisionada por sistema e não há contrato de suporte.  Você pode ter até 10 sistemas Freemium.
 +
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Saiba mais sobre essas opções de licenciamento"] .
@@ -1781,7 +1781,7 @@ O tipo de máquina custom-4-16384 não é mais compatível com os novos sistemas
 
 Se você tiver um sistema existente em execução neste tipo de máquina, poderá continuar usando-o, mas recomendamos mudar para o tipo de máquina n2-standard-4.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Ver configurações suportadas para o Cloud Volumes ONTAP no GCP"^] .
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Exibir configurações compatíveis com o Cloud Volumes ONTAP no GCP"^] .
 
 
 
@@ -1865,7 +1865,7 @@ Quando o espaço é relatado logicamente, o ONTAP relata o espaço do volume de 
 
 === Suporte para discos gp3 na AWS
 
-O Cloud Volumes ONTAP agora oferece suporte a discos _General Purpose SSD (gp3)_, a partir da versão 9.7. Os discos gp3 são os SSDs de menor custo que equilibram custo e desempenho para uma ampla variedade de cargas de trabalho.
+O Cloud Volumes ONTAP agora oferece suporte a discos _General Purpose SSD (gp3)_, a partir da versão 9.7. Os discos gp3 são os SSDs de menor custo que equilibram custo e desempenho para uma ampla gama de cargas de trabalho.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config.html["Dimensione seu sistema na AWS"] .
 

@@ -65,7 +65,7 @@ A programação foi salva.  O item de linha Tempo de inatividade agendado corres
 
 == Parando Cloud Volumes ONTAP
 
-Interromper o Cloud Volumes ONTAP evita que você acumule custos de computação e cria instantâneos dos discos raiz e de inicialização, o que pode ser útil para solução de problemas.
+Parar o Cloud Volumes ONTAP evita que você acumule custos de computação e cria instantâneos dos discos raiz e de inicialização, o que pode ser útil para solução de problemas.
 
 
 NOTE: Para reduzir custos, o Console exclui periodicamente snapshots mais antigos de discos raiz e de inicialização.  Somente os dois instantâneos mais recentes são retidos para os discos raiz e de inicialização.

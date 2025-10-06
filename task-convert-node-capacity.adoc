@@ -37,7 +37,7 @@ Para obter informações sobre o EOA e o EOS, consultelink:concept-licensing.htm
 * Sua conta NSS deve ser registrada com as credenciais de usuário que você usou para acessar o Console.
 * O sistema Cloud Volumes ONTAP deve ser vinculado à conta NSS com acesso de cliente ou acesso de administrador.
 * Você deve ter uma licença válida baseada em capacidade, seja uma licença BYOL ou uma assinatura de mercado.
-* Uma licença baseada em capacidade deve estar disponível em sua conta.  Esta licença pode ser uma assinatura de mercado ou um pacote BYOL/oferta privada disponível em *Licenças e assinaturas* no Console.
+* Uma licença baseada em capacidade deve estar disponível em sua conta.  Esta licença pode ser uma assinatura de mercado ou um pacote BYOL/oferta privada disponível em * Licenses and subscriptions* no Console.
 * Entenda os seguintes critérios antes de selecionar um pacote de destino:
 +
 ** Se a conta tiver uma licença BYOL baseada em capacidade, o pacote de destino selecionado deverá estar alinhado com as licenças BYOL baseadas em capacidade da conta:
@@ -78,13 +78,13 @@ TIP: O ícone será desabilitado se o seu sistema Cloud Volumes ONTAP já estive
 
 
 .Depois que você terminar
-Veja o novo número de série da licença e verifique as alterações no menu *Licenças e assinaturas* do Console.
+Visualize o novo número de série da licença e verifique as alterações no menu * Licenses and subscriptions* do Console.
 
 
 
 == Preços em diferentes hiperescalares
 
-Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["Site do console NetApp"^] .
+Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["Site do NetApp Console"^] .
 
 Para obter informações sobre ofertas privadas em hiperescalares específicos, escreva para:
 

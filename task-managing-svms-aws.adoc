@@ -50,7 +50,7 @@ Observe que um LIF de gerenciamento opcional para uma VM de armazenamento requer
 . Faça login na AWS e abra o serviço EC2.
 . Selecione a instância do Cloud Volumes ONTAP e clique em *Rede*.
 +
-Se você estiver criando uma VM de armazenamento em um par de HA, selecione o nó 1.
+Se você estiver criando uma VM de armazenamento em um par HA, selecione o nó 1.
 
 . Role para baixo até *Interfaces de rede* e clique em *ID da interface* para a porta e0a.
 +

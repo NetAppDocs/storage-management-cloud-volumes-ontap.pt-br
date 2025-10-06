@@ -43,7 +43,7 @@ image:screenshot-keystone-overview.png["Uma captura de tela que mostra uma lista
 
 == Vincular uma assinatura
 
-Depois que a NetApp autorizar sua conta, você poderá vincular assinaturas do Keystone para uso com o Cloud Volumes ONTAP. Esta ação permite que os usuários selecionem a assinatura como método de cobrança para novos sistemas Cloud Volumes ONTAP .
+Depois que a NetApp autorizar sua conta, você poderá vincular assinaturas do Keystone para uso com o Cloud Volumes ONTAP.  Esta ação permite que os usuários selecionem a assinatura como método de cobrança para novos sistemas Cloud Volumes ONTAP .
 
 .Passos
 . No menu de navegação do BlueXP , selecione *Governança > Carteira digital*.
@@ -89,7 +89,7 @@ https://docs.netapp.com/us-en/keystone-staas/integrations/aiq-keystone-details.h
 
 == Desvincular uma assinatura
 
-Se você não quiser mais usar uma assinatura Keystone com o BlueXP, você pode desvincular a assinatura. Observe que você só pode desvincular uma assinatura que não esteja vinculada a uma assinatura existente do Cloud Volumes ONTAP .
+Se você não quiser mais usar uma assinatura Keystone com o BlueXP, você pode desvincular a assinatura.  Observe que você só pode desvincular uma assinatura que não esteja vinculada a uma assinatura existente do Cloud Volumes ONTAP .
 
 .Passos
 . No menu de navegação do BlueXP , selecione *Governança > Carteira digital*.

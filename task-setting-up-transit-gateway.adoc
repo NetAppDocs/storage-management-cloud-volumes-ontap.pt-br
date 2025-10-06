@@ -16,7 +16,7 @@ summary: Configure um gateway de trânsito da AWS para permitir o acesso do clie
 [role="lead"]
 Configure um gateway de trânsito da AWS para permitir o acesso a um par de HAlink:reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["endereços IP flutuantes"] de fora da VPC onde o par HA reside.
 
-Quando uma configuração do Cloud Volumes ONTAP HA é distribuída em várias zonas de disponibilidade da AWS, endereços IP flutuantes são necessários para acesso a dados do NAS de dentro da VPC.  Esses endereços IP flutuantes podem migrar entre nós quando ocorrem falhas, mas não são nativamente acessíveis de fora da VPC.  Endereços IP privados separados fornecem acesso a dados de fora da VPC, mas não fornecem failover automático.
+Quando uma configuração do Cloud Volumes ONTAP HA é distribuída entre várias zonas de disponibilidade da AWS, endereços IP flutuantes são necessários para acesso a dados do NAS de dentro da VPC.  Esses endereços IP flutuantes podem migrar entre nós quando ocorrem falhas, mas não são nativamente acessíveis de fora da VPC.  Endereços IP privados separados fornecem acesso a dados de fora da VPC, mas não fornecem failover automático.
 
 Endereços IP flutuantes também são necessários para a interface de gerenciamento de cluster e o LIF de gerenciamento SVM opcional.
 

@@ -18,12 +18,12 @@ Um volume FlexCache é um volume de armazenamento que armazena em cache dados de
 
 Você pode usar volumes FlexCache para acelerar o acesso aos dados ou para descarregar o tráfego de volumes muito acessados.  Os volumes FlexCache ajudam a melhorar o desempenho, especialmente quando os clientes precisam acessar os mesmos dados repetidamente, porque os dados podem ser fornecidos diretamente sem precisar acessar o volume de origem.  Os volumes FlexCache funcionam bem para cargas de trabalho do sistema que exigem muita leitura.
 
-O NetApp Console fornece gerenciamento de volumes FlexCache com olink:https://docs.netapp.com/us-en/bluexp-volume-caching/index.html["Cache de volume da NetApp"^] .
+O NetApp Console fornece gerenciamento de volumes FlexCache com olink:https://docs.netapp.com/us-en/bluexp-volume-caching/index.html["NetApp Volume Caching"^] .
 
 Você também pode usar o ONTAP CLI ou o ONTAP System Manager para criar e gerenciar volumes FlexCache :
 
 * http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-fc-mgmt/home.html["Guia de energia para volumes FlexCache para acesso mais rápido aos dados"^]
-* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-07F4C213-076D-4FE8-A8E3-410F49498D49.html["Criando volumes FlexCache no Gerenciador do Sistema"^]
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-07F4C213-076D-4FE8-A8E3-410F49498D49.html["Criando volumes FlexCache no System Manager"^]
 
 
 video::PBNPVRUeT1o[youtube,width=848,height=480]
@@ -39,7 +39,7 @@ Ao configurar o FlexCache em um sistema Cloud Volumes ONTAP onde o volume de ori
 
 ifdef::aws[]
 
-Para a AWS, isso normalmente significa usar o AWS Key Management Service (KMS).  Para obter informações, consultelink:task-aws-key-management.html["Gerencie chaves com o AWS Key Management Service"] .
+Para a AWS, isso normalmente significa usar o AWS Key Management Service (KMS).  Para obter informações, consultelink:task-aws-key-management.html["Gerenciar chaves com o AWS Key Management Service"] .
 
 endif::aws[]
 
@@ -65,5 +65,5 @@ endif::gcp[]
 Crie um volume FlexCache no seu sistema Cloud Volumes ONTAP com um volume de origem criptografado.  Para etapas detalhadas e considerações adicionais, consulte as seguintes seções:
 
 * http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-fc-mgmt/home.html["Guia de energia para volumes FlexCache para acesso mais rápido aos dados"^]
-* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-07F4C213-076D-4FE8-A8E3-410F49498D49.html["Criando volumes FlexCache no Gerenciador do Sistema"^]
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-07F4C213-076D-4FE8-A8E3-410F49498D49.html["Criando volumes FlexCache no System Manager"^]
 

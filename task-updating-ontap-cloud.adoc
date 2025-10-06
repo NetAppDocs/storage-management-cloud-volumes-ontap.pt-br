@@ -211,7 +211,7 @@ Se você não conseguir alterar o tipo de instância, siga as etapas em<<Habilit
 
 ==== Habilitar rede aprimorada
 
-Para atualizar para o Cloud Volumes ONTAP versões 9.8 e posteriores, você deve habilitar a _rede aprimorada_ no cluster que executa o tipo de instância c4, m4 ou r4.  Para habilitar o ENA, consulte o artigo da Base de Conhecimentolink:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/How_to_enable_Enhanced_networking_like_SR-IOV_or_ENA_on_AWS_CVO_instances["Como habilitar redes aprimoradas como SR-IOV ou ENA em instâncias do AWS Cloud Volumes ONTAP"^] .
+Para atualizar para as versões 9.8 e posteriores do Cloud Volumes ONTAP , você deve habilitar a _rede aprimorada_ no cluster que executa o tipo de instância c4, m4 ou r4.  Para habilitar o ENA, consulte o artigo da Base de Conhecimentolink:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/How_to_enable_Enhanced_networking_like_SR-IOV_or_ENA_on_AWS_CVO_instances["Como habilitar redes aprimoradas como SR-IOV ou ENA em instâncias do AWS Cloud Volumes ONTAP"^] .
 
 
 
@@ -286,7 +286,7 @@ image:screenshots_aggregate_details_state.png["Captura de tela: mostra o campo E
 
 . Se o agregado estiver offline, use o ONTAP System Manager para colocá-lo online:
 +
-.. Clique em *Armazenamento > Agregados e discos > Agregados*.
+.. Clique em *Armazenamento > Agregados e Discos > Agregados*.
 .. Selecione o agregado e clique em *Mais ações > Status > Online*.
 
 
@@ -360,7 +360,7 @@ Se você suspendeu as transferências do SnapMirror , use o Gerenciador do Siste
 
 === Atualização de uma imagem disponível em um URL
 
-Você pode colocar a imagem do software Cloud Volumes ONTAP no agente do Console ou em um servidor HTTP e, em seguida, iniciar a atualização do software no Console.  Você pode usar esta opção se o Console não puder acessar o bucket S3 para atualizar o software.
+Você pode colocar a imagem do software Cloud Volumes ONTAP no agente do Console ou em um servidor HTTP e, em seguida, iniciar a atualização do software no Console.  Você pode usar esta opção se o Console não conseguir acessar o bucket S3 para atualizar o software.
 
 .Antes de começar
 * Operações como criação de volume ou agregado não devem estar em andamento no sistema Cloud Volumes ONTAP .

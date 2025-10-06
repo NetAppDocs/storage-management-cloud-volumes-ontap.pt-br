@@ -31,7 +31,7 @@ No macOS, execute `sha256sum AZURE-<version>_PKG.TAR.GZ` .
 . Verifique se o `md5sum` e `sha256sum` os valores correspondem aos da imagem do Azure baixada.
 . No Linux e macOS, extraia o arquivo _tar.gz_ usando o `tar -xzf` comando.
 +
-O arquivo _tar.gz_ extraído contém o arquivo digest (_.sig_), o arquivo de certificado de chave pública (_.pem_) e o arquivo de certificado de cadeia (_.pem_).
+O arquivo _tar.gz_ extraído contém o arquivo de resumo (_.sig_), o arquivo de certificado de chave pública (_.pem_) e o arquivo de certificado de cadeia (_.pem_).
 
 +
 *Exemplo de saída após extrair o arquivo tar.gz:*

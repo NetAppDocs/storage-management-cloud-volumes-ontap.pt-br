@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-worm-snaplock.html 
 keywords: WORM, SnapLock, Snapshot copies, 
-summary: 'Você pode criar cópias instantâneas invioláveis ​​de arquivos WORM (gravação única, leitura múltipla) em um sistema Cloud Volumes ONTAP e manter os instantâneos em formato inalterado por um período de retenção específico.' 
+summary: 'Você pode criar cópias instantâneas invioláveis ​​de arquivos WORM (gravação única e leitura múltipla) em um sistema Cloud Volumes ONTAP e manter os instantâneos em formato inalterado por um período de retenção específico.' 
 ---
 = Crie cópias instantâneas invioláveis ​​de arquivos WORM no Cloud Volumes ONTAP
 :hardbreaks:

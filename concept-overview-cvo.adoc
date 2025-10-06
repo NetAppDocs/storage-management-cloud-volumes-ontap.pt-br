@@ -53,7 +53,7 @@ O Cloud Volumes ONTAP oferece suporte à criptografia de dados e proteção cont
 
 * Controles de conformidade de privacidade
 +
-A integração com a Classificação de Dados da NetApp ajuda você a entender o contexto dos dados e identificar dados confidenciais.
+A integração com a NetApp Data Classification ajuda você a entender o contexto dos dados e identificar dados confidenciais.
 
 +
 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre Classificação de Dados"^]

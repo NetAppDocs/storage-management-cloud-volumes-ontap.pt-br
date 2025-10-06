@@ -110,7 +110,7 @@ Pague por capacidade para qualquer tipo de configuração do Cloud Volumes ONTAP
 +
 Nó único ou HA com capacidade de cobrança para volumes primários e secundários na mesma taxa
 
-* Inclui backups de volume ilimitados usando o NetApp Backup and Recovery, mas apenas para sistemas Cloud Volumes ONTAP que usam o pacote Professional.
+* Inclui backups de volume ilimitados usando o NetApp Backup and Recovery, mas somente para sistemas Cloud Volumes ONTAP que usam o pacote Professional.
 +
 
 NOTE: É necessária uma assinatura pré-paga (PAYGO) para Backup e Recuperação, porém não haverá cobranças pelo uso deste serviço.  Para obter mais informações sobre como configurar o licenciamento para Backup e Recuperação, consulte https://docs.netapp.com/us-en/bluexp-backup-recovery/task-licensing-cloud-backup.html["Configurar licenciamento para backup e recuperação"^] .

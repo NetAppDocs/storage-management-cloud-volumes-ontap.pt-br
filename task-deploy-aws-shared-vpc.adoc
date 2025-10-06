@@ -4,7 +4,7 @@ permalink: task-deploy-aws-shared-vpc.html
 keywords: shared vpc, aws shared vpc, vpc sharing, shared subnet, deploy shared vpc, assume role 
 summary: A partir da versão 9.11.1, os pares de HA do Cloud Volumes ONTAP são suportados na AWS com compartilhamento de VPC.  O compartilhamento de VPC permite que sua organização compartilhe sub-redes com outras contas da AWS.  Para usar esta configuração, você deve configurar seu ambiente AWS e então implantar o par HA usando a API. 
 ---
-= Implantar pares de Cloud Volumes ONTAP HA em uma sub-rede compartilhada da AWS
+= Implantar pares de alta disponibilidade do Cloud Volumes ONTAP em uma sub-rede compartilhada da AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

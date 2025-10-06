@@ -139,7 +139,7 @@ TIP: O agente do Console também requer um disco do sistema. https://docs.netapp
 
 == Preparar para implantar o Cloud Volumes ONTAP em um AWS Outpost
 
-Se você tiver um AWS Outpost, poderá implantar o Cloud Volumes ONTAP nesse Outpost selecionando a VPC do Outpost durante o processo de implantação. A experiência é a mesma de qualquer outra VPC que reside na AWS. Observe que você precisará primeiro implantar um agente de console no seu AWS Outpost.
+Se você tiver um AWS Outpost, poderá implantar o Cloud Volumes ONTAP nesse Outpost selecionando a VPC do Outpost durante o processo de implantação. A experiência é a mesma de qualquer outra VPC que reside na AWS.  Observe que você precisará primeiro implantar um agente de console no seu AWS Outpost.
 
 Há algumas limitações a serem apontadas:
 

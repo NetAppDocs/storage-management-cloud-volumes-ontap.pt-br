@@ -112,7 +112,7 @@ Para implantações de par HA, repita as etapas para o nó parceiro.
 
 
 
-== Etapa 2: criar um novo IPspace, domínio de transmissão e LIF intercluster para a nova NIC
+== Etapa 2: Crie um novo IPspace, domínio de transmissão e LIF intercluster para o novo NIC
 
 Um IPspace separado para LIFs interclusters fornece separação lógica entre a funcionalidade de rede para replicação entre clusters.
 
@@ -194,7 +194,7 @@ Use o ONTAP CLI para as etapas a seguir.
 dest::> cluster peer create -peer-addrs <10.161.189.6> -ipspace <new_ipspace>
 ----
 . Digite e confirme a senha.
-. Crie um peering de cluster na origem usando o endereço IP do LIF do cluster de destino como `peer-addrs` .  Para pares HA, liste o endereço IP LIF do intercluster de destino para ambos os nós como `-peer-addrs` .
+. Crie um peering de cluster na origem usando o endereço IP do LIF do cluster de destino como `peer-addrs` .  Para pares HA, liste o endereço IP do LIF intercluster de destino para ambos os nós como `-peer-addrs` .
 +
 [source, cli]
 ----

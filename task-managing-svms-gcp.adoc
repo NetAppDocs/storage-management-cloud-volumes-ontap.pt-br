@@ -45,7 +45,7 @@ Ao criar VMs de armazenamento usando as APIs, juntamente com a configuração da
 
 
 .Antes de começar
-O agente do Console requer permissões específicas para criar VMs de armazenamento para pares de HA do Cloud Volumes ONTAP .  As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["as políticas fornecidas pela NetApp"^] .
+O agente do Console requer permissões específicas para criar VMs de armazenamento para pares de alta disponibilidade do Cloud Volumes ONTAP .  As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["as políticas fornecidas pela NetApp"^] .
 
 
 

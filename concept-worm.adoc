@@ -62,10 +62,10 @@ Depois de ativar o armazenamento WORM em um sistema Cloud Volumes ONTAP , você 
 
 == Habilitando WORM em um sistema Cloud Volumes ONTAP
 
-Você pode habilitar o armazenamento WORM ao criar um sistema Cloud Volumes ONTAP no Console.  Você também pode habilitar o WORM em um sistema se o WORM não estiver habilitado nele durante a criação.  Após habilitá-lo, você não poderá desabilitar o WORM.
+Você pode habilitar o armazenamento WORM ao criar um sistema Cloud Volumes ONTAP no Console.  Você também pode habilitar o WORM em um sistema se o WORM não estiver habilitado nele durante a criação.  Depois de habilitá-lo, você não poderá desabilitar o WORM.
 
 .Sobre esta tarefa
-* O WORM é compatível com o ONTAP 9.10.1 e posteriores.
+* O WORM é suportado no ONTAP 9.10.1 e posteriores.
 * WORM com backup é suportado no ONTAP 9.11.1 e posteriores.
 
 
@@ -83,7 +83,7 @@ Para mais informações, consulte o https://docs.netapp.com/us-en/ontap/snaplock
 
 
 .Depois que você terminar
-Você pode verificar o status do *WORM* no painel Recursos.  Após o WORM ser habilitado, a licença SnapLock é instalada automaticamente no cluster.  Você pode visualizar a licença do SnapLock no ONTAP System Manager.
+Você pode verificar o status do *WORM* no painel Recursos.  Depois que o WORM é habilitado, a licença SnapLock é instalada automaticamente no cluster.  Você pode visualizar a licença do SnapLock no ONTAP System Manager.
 
 
 

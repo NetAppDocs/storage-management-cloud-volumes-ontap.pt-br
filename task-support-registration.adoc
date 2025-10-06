@@ -28,7 +28,7 @@ Existem duas formas de registro para ativar o direito ao suporte:
 
 * Registrando o número de série da sua conta BlueXP (seu número de série 960xxxxxxxxx de 20 dígitos localizado na página Recursos de suporte no BlueXP).
 +
-Isso serve como seu único ID de assinatura de suporte para qualquer serviço dentro do BlueXP. Cada assinatura de suporte em nível de conta BlueXP deve ser registrada.
+Isso serve como seu único ID de assinatura de suporte para qualquer serviço dentro do BlueXP.  Cada assinatura de suporte em nível de conta BlueXP deve ser registrada.
 
 * Registrando os números de série do Cloud Volumes ONTAP associados a uma assinatura no marketplace do seu provedor de nuvem (são números de série 909201xxxxxxxxx de 20 dígitos).
 +
@@ -62,7 +62,7 @@ A página *Recursos* deve mostrar que sua organização BlueXP está registrada 
 image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-support-registration.png["Uma captura de tela que mostra um número de série da conta, uma caixa de seleção verde e o texto Registrado para suporte."]
 
 +
-Observe que outros usuários do BlueXP não verão o mesmo status de registro de suporte se não tiverem associado uma conta do site de suporte da NetApp ao login do BlueXP . No entanto, isso não significa que sua organização BlueXP não esteja registrada para suporte. Desde que um usuário na organização tenha seguido essas etapas, sua organização foi registrada.
+Observe que outros usuários do BlueXP não verão o mesmo status de registro de suporte se não tiverem associado uma conta do site de suporte da NetApp ao login do BlueXP .  No entanto, isso não significa que sua organização BlueXP não esteja registrada para suporte.  Desde que um usuário na organização tenha seguido essas etapas, sua organização foi registrada.
 
 
 
@@ -140,7 +140,7 @@ A associação das credenciais do NetApp Support Site à sua organização BlueX
 
 Associar credenciais do NSS à sua organização BlueXP é diferente da conta do NSS associada a um login de usuário do BlueXP .
 
-Essas credenciais NSS estão associadas ao seu ID de organização BlueXP específico. Usuários que pertencem à organização BlueXP podem acessar essas credenciais em *Suporte > Gerenciamento NSS*.
+Essas credenciais NSS estão associadas ao seu ID de organização BlueXP específico.  Usuários que pertencem à organização BlueXP podem acessar essas credenciais em *Suporte > Gerenciamento NSS*.
 
 * Se você tiver uma conta de nível de cliente, poderá adicionar uma ou mais contas NSS.
 * Se você tiver uma conta de parceiro ou revendedor, poderá adicionar uma ou mais contas NSS, mas elas não poderão ser adicionadas junto com contas de nível de cliente.

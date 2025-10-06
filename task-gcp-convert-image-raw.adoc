@@ -39,7 +39,7 @@ Para verificar a imagem, ela deve ser convertida para o formato disk.raw e depoi
 
 A maneira preferida de exportar uma imagem para o Cloud Storage é usar o https://cloud.google.com/sdk/gcloud/reference/compute/images/export["comando gcloud compute images export"^] .  Este comando pega a imagem fornecida e a converte em um arquivo disk.raw, que é tarado e compactado em gzip.  O arquivo gerado é salvo na URL de destino e pode ser baixado para verificação.
 
-O usuário/conta deve ter privilégios para acessar e gravar no bucket desejado, exportar a imagem e compilações na nuvem (usadas pelo Google para exportar a imagem) para executar esta operação.
+O usuário/conta deve ter privilégios para acessar e gravar no bucket desejado, exportar a imagem e criar na nuvem (usado pelo Google para exportar a imagem) para executar esta operação.
 
 *Exportar imagem do Google Cloud usando gcloud*
 

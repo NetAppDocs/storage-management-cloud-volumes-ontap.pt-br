@@ -81,7 +81,7 @@ A tabela a seguir descreve os campos para os quais você pode precisar de orient
 |===
 . *Serviços*: habilite ou desabilite os serviços individuais que você deseja ou não usar com o Cloud Volumes ONTAP.
 +
-** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a NetApp Data Classification"^]
 ** https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre o NetApp Backup and Recovery"^]
 +
 
@@ -301,7 +301,7 @@ A tabela a seguir descreve os campos para os quais você pode precisar de orient
 |===
 . *Serviços*: habilite ou desabilite os serviços individuais com base na sua vontade de usá-los com o Cloud Volumes ONTAP.
 +
-** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a NetApp Data Classification"^]
 ** https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre o NetApp Backup and Recovery"^]
 +
 

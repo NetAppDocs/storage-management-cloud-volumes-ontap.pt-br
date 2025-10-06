@@ -92,7 +92,7 @@ O Console cria a conta de armazenamento com as seguintes configurações:
 
 * Conta: StorageV2 (uso geral v2)
 * Exigir transferência segura para operações da API REST: Habilitado
-* Acesso à chave da conta de armazenamento: habilitado
+* Acesso à chave da conta de armazenamento: Habilitado
 * Versão mínima do TLS: Versão 1.2
 * Criptografia de infraestrutura: Desativada
 
@@ -179,10 +179,10 @@ Somente instantâneo:: Depois que um agregado atinge 50% da capacidade, o Cloud 
 Se lidos, os blocos de dados frios na camada de capacidade se tornam quentes e são movidos para a camada de desempenho.
 
 --
-Todos:: Todos os dados (não incluindo metadados) são imediatamente marcados como frios e classificados no armazenamento de objetos o mais rápido possível. Não há necessidade de esperar 48 horas para que novos blocos em um volume esfriem. Observe que os blocos localizados no volume anterior à política Todos serem definidos levam 48 horas para esfriar.
+Todos:: Todos os dados (não incluindo metadados) são imediatamente marcados como frios e classificados no armazenamento de objetos o mais rápido possível.  Não há necessidade de esperar 48 horas para que novos blocos em um volume esfriem.  Observe que os blocos localizados no volume anterior à política Todos serem definidos levam 48 horas para esfriar.
 +
 --
-Se lidos, os blocos de dados frios na camada de nuvem permanecem frios e não são gravados de volta na camada de desempenho. Esta política está disponível a partir do ONTAP 9.6.
+Se lidos, os blocos de dados frios na camada de nuvem permanecem frios e não são gravados de volta na camada de desempenho.  Esta política está disponível a partir do ONTAP 9.6.
 
 --
 Auto:: Depois que um agregado atinge 50% da capacidade, o Cloud Volumes ONTAP divide os blocos de dados frios em um volume em uma camada de capacidade.  Os dados frios incluem não apenas cópias de instantâneos, mas também dados frios do usuário do sistema de arquivos ativo.  O período de resfriamento é de aproximadamente 31 dias.

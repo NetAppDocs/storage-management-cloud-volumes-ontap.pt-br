@@ -59,7 +59,7 @@ A autenticação do usuário falha e os seguintes serviços permanecem indispon�
 | \ https://mysupport.netapp.com/aods/asupmessage \ https://mysupport.netapp.com/asupprod/post/1.0/postAsup | AutoSupport | Usado para enviar dados de telemetria do AutoSupport para o suporte da NetApp . | Modos padrão e restrito. | As informações do AutoSupport continuam não entregues. 
 
 
-| O ponto final comercial exato para o serviço AWS (com sufixo `amazonaws.com` ) depende da região da AWS que você está usando. Consulte o https://docs.aws.amazon.com/general/latest/gr/rande.html["Documentação da AWS para detalhes"^] .  a| 
+| O ponto final comercial exato para o serviço AWS (com sufixo `amazonaws.com` ) depende da região da AWS que você está usando.  Consulte o https://docs.aws.amazon.com/general/latest/gr/rande.html["Documentação da AWS para detalhes"^] .  a| 
 * CloudFormation
 * Nuvem de Computação Elástica (EC2)
 * Gerenciamento de Identidade e Acesso (IAM)

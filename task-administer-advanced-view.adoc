@@ -46,7 +46,7 @@ Você pode executar várias funções de gerenciamento de armazenamento usando o
 
 Alguns recursos que aparecem na interface do System Manager não são suportados pelo Cloud Volumes ONTAP:
 
-* NetApp Cloud Tiering: O Cloud Volumes ONTAP não oferece suporte ao Cloud Tiering.  Você deve configurar o armazenamento de dados em camadas para objetos diretamente na Exibição Padrão ao criar volumes.
+* NetApp Cloud Tiering: o Cloud Volumes ONTAP não oferece suporte ao Cloud Tiering.  Você deve configurar o armazenamento de dados em camadas para objetos diretamente na Exibição Padrão ao criar volumes.
 * Níveis: O gerenciamento de agregados (incluindo níveis locais e níveis de nuvem) não é compatível com o Gerenciador de Sistemas. Você deve gerenciar agregados diretamente da Exibição Padrão.
 * Atualizações de firmware: O Cloud Volumes ONTAP não oferece suporte a atualizações automáticas de firmware na página *Cluster > Configurações* do Gerenciador do Sistema.
 * Controle de acesso baseado em função: o controle de acesso baseado em função do Gerenciador do Sistema não é suportado.

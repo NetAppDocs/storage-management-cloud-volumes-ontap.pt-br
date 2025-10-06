@@ -111,7 +111,7 @@ image:screenshot-azure-key-secret-cert-principal.png["captura de tela da guia pr
 ** Nome da chave de criptografia
 ** Tipo de chave: RSA
 ** Tamanho da chave RSA: 2048
-** Ativado: Sim
+** Habilitado: Sim
 
 
 . Selecione **Criar** para criar a chave de criptografia.

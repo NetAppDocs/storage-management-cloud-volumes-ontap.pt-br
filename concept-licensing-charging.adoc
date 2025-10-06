@@ -56,7 +56,7 @@ Sua licença é sempre cobrada primeiro, mas você será cobrado pela taxa horá
 
 == Alterando pacotes
 
-Após a implantação, você pode alterar o pacote para um sistema Cloud Volumes ONTAP que usa licenciamento baseado em capacidade. Por exemplo, se você implantou um sistema Cloud Volumes ONTAP com o pacote Essentials, poderá alterá-lo para o pacote Professional caso suas necessidades comerciais mudem.
+Após a implantação, você pode alterar o pacote para um sistema Cloud Volumes ONTAP que usa licenciamento baseado em capacidade.  Por exemplo, se você implantou um sistema Cloud Volumes ONTAP com o pacote Essentials, poderá alterá-lo para o pacote Professional caso suas necessidades comerciais mudem.
 
 link:task-manage-capacity-licenses.html["Aprenda como alterar os métodos de cobrança"] .
 
@@ -66,7 +66,7 @@ Para obter informações sobre a conversão de licenças baseadas em nó em lice
 
 == Preços e configurações suportadas
 
-Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["Site do console NetApp"^] .
+Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["Site do NetApp Console"^] .
 
 Pacotes de licenciamento baseados em capacidade estão disponíveis com o Cloud Volumes ONTAP 9.7 e posteriores.
 
@@ -109,7 +109,7 @@ Para obter informações sobre os limites de capacidade de cada provedor de nuve
 
 == Número máximo de sistemas
 
-Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por conta do NetApp Console.  Um _sistema_ é um par de Cloud Volumes ONTAP HA, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar.  A VM de armazenamento padrão não conta para o limite.  Este limite se aplica a todos os modelos de licenciamento.
+Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por conta do NetApp Console .  Um _sistema_ é um par de Cloud Volumes ONTAP HA, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar.  A VM de armazenamento padrão não conta para o limite.  Este limite se aplica a todos os modelos de licenciamento.
 
 Por exemplo, digamos que você tenha três sistemas:
 
@@ -161,7 +161,7 @@ Se você exceder sua capacidade BYOL, será cobrado pelo excedente com base nas 
 
 === Pacote Essentials
 
-Com o pacote Essentials, você é cobrado pelo tipo de implantação (HA ou nó único) e pelo tipo de volume (primário ou secundário).  Os preços, do maior para o menor, estão na seguinte ordem: _Essentials Primary HA_, _Essentials Primary Single Node_, _Essentials Secondary HA_ e _Essentials Secondary Single Node_.  Como alternativa, quando você compra um contrato de mercado ou aceita uma oferta privada, as taxas de capacidade são as mesmas para qualquer implantação ou tipo de volume.
+Com o pacote Essentials, você é cobrado pelo tipo de implantação (HA ou nó único) e pelo tipo de volume (primário ou secundário).  Os preços, do maior para o menor, estão na seguinte ordem: _Essentials Primary HA_, _Essentials Primary Single Node_, _Essentials Secondary HA_ e _Essentials Secondary Single Node_.  Como alternativa, quando você compra um contrato de mercado ou aceita uma oferta privada, as taxas de capacidade são as mesmas para qualquer tipo de implantação ou volume.
 
 O licenciamento é baseado inteiramente no tipo de volume criado nos sistemas Cloud Volumes ONTAP :
 
@@ -184,9 +184,9 @@ Aqui está um exemplo. Digamos que você tenha as seguintes licenças para o pac
 * Uma licença _Essentials Single Node_ de 500 TiB que tem apenas 100 TiB de capacidade comprometida
 
 
-Outros 50 TiB são provisionados em um par HA com volumes secundários.  Em vez de cobrar esses 50 TiB para o PAYGO, o Console cobra os 50 TiB excedentes da licença _Essentials Single Node_.  Essa licença tem um preço mais alto que o _Essentials Secondary HA_, mas ela usa uma licença que você já comprou e não adicionará custos à sua fatura mensal.
+Outros 50 TiB são provisionados em um par HA com volumes secundários.  Em vez de cobrar esses 50 TiB para o PAYGO, o Console cobra o excedente de 50 TiB da licença _Essentials Single Node_.  Essa licença tem um preço mais alto que o _Essentials Secondary HA_, mas ela usa uma licença que você já comprou e não adicionará custos à sua fatura mensal.
 
-Em *Administração > Licenças e assinaturas*, você pode ver 50 TiB cobrados pela licença _Essentials Single Node_.
+Em *Administração > Licenses and subscriptions*, você pode ver 50 TiB cobrados pela licença _Essentials Single Node_.
 
 Aqui está outro exemplo.  Digamos que você tenha as seguintes licenças para o pacote Essentials:
 

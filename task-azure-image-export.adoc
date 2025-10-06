@@ -17,7 +17,7 @@ summary: Você pode exportar imagens ONTAP do Azure Marketplace para verificar a
 Depois que a imagem VHD é publicada na nuvem do Azure, ela não é mais gerenciada pelo NetApp.  Em vez disso, a imagem publicada é colocada no marketplace do Azure.  Quando a imagem é preparada e publicada no marketplace do Azure, o Azure modifica 1 MB no início e 512 bytes no final do VHD.  Para verificar a assinatura do arquivo VHD, você precisa exportar a imagem VHD modificada pelo Azure do marketplace do Azure.
 
 .Antes de começar
-Verifique se a CLI do Azure está instalada no seu sistema ou se o Azure Cloud Shell está disponível no portal do Azure.  Para obter mais informações sobre como instalar o Azure CLI, consulte o https://learn.microsoft.com/en-us/cli/azure/install-azure-cli["Documentação da Microsoft: Como instalar o Azure CLI"^] .
+Certifique-se de que a CLI do Azure esteja instalada no seu sistema ou que o Azure Cloud Shell esteja disponível no portal do Azure.  Para obter mais informações sobre como instalar o Azure CLI, consulte o https://learn.microsoft.com/en-us/cli/azure/install-azure-cli["Documentação da Microsoft: Como instalar o Azure CLI"^] .
 
 .Passos
 . Mapeie a versão do Cloud Volumes ONTAP no seu sistema para a versão da imagem do Azure Marketplace usando o conteúdo do arquivo _version_readme_.  A versão Cloud Volumes ONTAP é representada por `buildname` e a versão da imagem do marketplace do Azure é representada por `version` nos mapeamentos de versão.
@@ -54,7 +54,7 @@ East US 2                 eastus2              (US) East US 2
 South Central US          southcentralus       (US) South Central US
 ...
 ----
-. Revise os nomes de SKU para as versões correspondentes do Cloud Volumes ONTAP e os tipos de implantação de VM na tabela abaixo.  O nome do SKU é usado como valor para o `skuName` variável ao definir a URN da imagem do marketplace.
+. Revise os nomes de SKU para as versões correspondentes do Cloud Volumes ONTAP e os tipos de implantação de VM na tabela abaixo.  O nome do SKU é usado como valor para o `skuName` variável ao definir o URN da imagem do marketplace.
 +
 Por exemplo, todas as implantações de nó único com Cloud Volumes ONTAP 9.15.0 devem usar `ontap_cloud_byol` como o nome do SKU.
 
@@ -69,7 +69,7 @@ Por exemplo, todas as implantações de nó único com Cloud Volumes ONTAP 9.15.
 | 9.17.1 e posterior | O mercado do Azure | ontap_cloud_direct_gen2 
 
 
-| 9.17.1 e posterior | O console NetApp | ontap_cloud_gen2 
+| 9.17.1 e posterior | O NetApp Console | ontap_cloud_gen2 
 
 
 | 9.16.1 | O mercado do Azure | ontap_cloud_direct 

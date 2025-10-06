@@ -583,7 +583,7 @@ docker restart <docker-id>
 Se você comprou uma licença da NetApp, precisará adicioná-la ao Console para poder selecionar a licença ao criar um novo sistema Cloud Volumes ONTAP .  Essas licenças permanecem não atribuídas até que você as associe a um novo sistema Cloud Volumes ONTAP .
 
 .Passos
-. No menu de navegação à esquerda, selecione *Licenças e assinaturas*.
+. No menu de navegação à esquerda, selecione * Licenses and subscriptions*.
 . No painel * Cloud Volumes ONTAP*, selecione *Exibir*.
 . Na guia * Cloud Volumes ONTAP*, selecione *Licenças > Licenças baseadas em nós*.
 . Clique em *Não atribuído*.
@@ -600,7 +600,7 @@ Se você comprou uma licença da NetApp, precisará adicioná-la ao Console para
 
 
 .Resultado
-O Console adiciona a licença como não atribuída até que você a associe a um novo sistema Cloud Volumes ONTAP .  Você pode ver a licença no menu de navegação à esquerda em *Licenças e assinaturas > Cloud Volumes ONTAP > Exibir > Licenças*.
+O Console adiciona a licença como não atribuída até que você a associe a um novo sistema Cloud Volumes ONTAP .  Você pode ver a licença no menu de navegação à esquerda em * Licenses and subscriptions > Cloud Volumes ONTAP > Exibir > Licenças*.
 
 
 
