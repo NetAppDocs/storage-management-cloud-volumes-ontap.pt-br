@@ -138,6 +138,9 @@ Certifique-se de que a implantação esteja concluída no marketplace do Azure. 
 .Passos
 No Console, você segue o procedimento padrão para descobrir sistemas existentes. Consulte link:task-adding-systems.html["Adicionar um sistema Cloud Volumes ONTAP existente ao Console"] .
 
+
+CAUTION: Durante a descoberta, você poderá ver mensagens de falha, mas pode ignorá-las até que o processo de descoberta seja concluído. Não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal do marketplace do Azure durante a descoberta, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a um comportamento inesperado do sistema.
+
 .Depois que você terminar
 Após a conclusão da descoberta, você poderá visualizar os sistemas listados na página *Sistemas* no Console.  Você pode executar várias tarefas de gerenciamento, comolink:task-manage-aggregates.html["expandindo o agregado"] ,link:task-create-volumes.html["adicionando volumes"] ,link:task-managing-svms-azure.html["provisionamento de VMs de armazenamento adicionais"] , elink:task-change-azure-vm.html["alterando os tipos de instância"] .
 

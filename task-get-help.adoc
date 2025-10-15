@@ -11,20 +11,20 @@ summary: 'A NetApp oferece suporte de diversas maneiras. Há diversas opções g
 
 
 [role="lead"]
-A NetApp oferece suporte para o BlueXP e seus serviços de nuvem de diversas maneiras. Oferecemos amplas opções gratuitas de autossuporte 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro no suporte inclui suporte técnico remoto por meio de tickets online.
+A NetApp fornece suporte para o NetApp Console e seus serviços de nuvem de diversas maneiras. Há diversas opções gratuitas de autoatendimento disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro no suporte inclui suporte técnico remoto por meio de tickets online.
 
 
 
 == Obtenha suporte para um serviço de arquivo de provedor de nuvem
 
-Para obter suporte técnico relacionado a um serviço de arquivo do provedor de nuvem, sua infraestrutura ou qualquer solução que use o serviço, consulte "Obter ajuda" na documentação do BlueXP para esse produto.
+Para obter suporte técnico relacionado a um serviço de arquivo do provedor de nuvem, sua infraestrutura ou qualquer solução que use o serviço, consulte a documentação desse produto.
 
-* link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html#getting-help["Amazon FSx para ONTAP"^]
-* link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/concept-azure-netapp-files.html#getting-help["Azure NetApp Files"^]
-* link:https://docs.netapp.com/us-en/bluexp-google-cloud-netapp-volumes/concept-gcnv.html#getting-help["Google Cloud NetApp Volumes"^]
+* link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html#getting-help["Amazon FSx para ONTAP"^]
+* link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/concept-azure-netapp-files.html#getting-help["Azure NetApp Files"^]
+* link:https://docs.netapp.com/us-en/storage-management-google-cloud-netapp-volumes/concept-gcnv.html#getting-help["Google Cloud NetApp Volumes"^]
 
 
-Para receber suporte técnico específico para o BlueXP e suas soluções e serviços de armazenamento, use as opções de suporte descritas abaixo.
+Para receber suporte técnico específico para a NetApp e suas soluções de armazenamento e serviços de dados, use as opções de suporte descritas abaixo.
 
 
 
@@ -34,15 +34,15 @@ Estas opções estão disponíveis gratuitamente, 24 horas por dia, 7 dias por s
 
 * Documentação
 +
-A documentação do BlueXP que você está visualizando no momento.
+A documentação do NetApp Console que você está visualizando no momento.
 
 * https://kb.netapp.com/Cloud/BlueXP["Base de conhecimento"^]
 +
-Pesquise na base de conhecimento do BlueXP para encontrar artigos úteis para solucionar problemas.
+Pesquise na base de conhecimento da NetApp para encontrar artigos úteis para solucionar problemas.
 
 * http://community.netapp.com/["Comunidades"^]
 +
-Junte-se à comunidade BlueXP para acompanhar discussões em andamento ou criar novas.
+Participe da comunidade do NetApp Console para acompanhar discussões em andamento ou criar novas.
 
 
 
@@ -53,21 +53,21 @@ Junte-se à comunidade BlueXP para acompanhar discussões em andamento ou criar 
 Além das opções de autossuporte acima, você pode trabalhar com um especialista em suporte da NetApp para resolver quaisquer problemas após ativar o suporte.
 
 .Antes de começar
-* Para usar o recurso *Criar um caso*, você deve primeiro associar suas credenciais do site de suporte da NetApp ao seu login do BlueXP . https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-user-credentials.html["Aprenda a gerenciar credenciais associadas ao seu login BlueXP"^] .
+* Para usar o recurso *Criar um caso*, você deve primeiro associar suas credenciais do site de suporte da NetApp ao seu login do console. https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-user-credentials.html["Aprenda a gerenciar credenciais associadas ao seu login do Console"^] .
 * Se você estiver abrindo um caso para um sistema ONTAP que tenha um número de série, sua conta NSS deverá estar associada ao número de série desse sistema.
 
 
 .Passos
-. No BlueXP, selecione *Ajuda > Suporte*.
+. No NetApp Console, selecione *Ajuda > Suporte*.
 . Na página *Recursos*, escolha uma das opções disponíveis em Suporte Técnico:
 +
 .. Selecione *Ligue para nós* se quiser falar com alguém por telefone. Você será direcionado para uma página no netapp.com que lista os números de telefone para os quais você pode ligar.
 .. Selecione *Criar um caso* para abrir um tíquete com um especialista de suporte da NetApp :
 +
-*** *Serviço*: Selecione o serviço ao qual o problema está associado. Por exemplo, BlueXP quando específico para um problema de suporte técnico com fluxos de trabalho ou funcionalidade dentro do serviço.
-*** *Ambiente de trabalho*: Se aplicável ao armazenamento, selecione * Cloud Volumes ONTAP* ou *On-Prem* e, em seguida, o ambiente de trabalho associado.
+*** *Serviço*: Selecione o serviço ao qual o problema está associado. Por exemplo, * NetApp Console* quando específico para um problema de suporte técnico com fluxos de trabalho ou funcionalidade dentro do Console.
+*** *Sistema*: Se aplicável ao armazenamento, selecione * Cloud Volumes ONTAP* ou *On-Prem* e, em seguida, o ambiente de trabalho associado.
 +
-A lista de ambientes de trabalho está dentro do escopo da organização BlueXP (ou conta), projeto (ou espaço de trabalho) e Conector que você selecionou no banner superior do serviço.
+A lista de sistemas está dentro do escopo da organização do Console e do agente do Console que você selecionou no banner superior.
 
 *** *Prioridade do caso*: escolha a prioridade do caso, que pode ser Baixa, Média, Alta ou Crítica.
 +
@@ -84,7 +84,7 @@ Os anexos são limitados a 25 MB por arquivo. As seguintes extensões de arquivo
 
 
 +
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-create-case.png["Uma captura de tela do formulário Criar um caso que permite criar um caso com o Suporte da NetApp ."]
+image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/screenshot-create-case.png["Uma captura de tela do formulário Criar um caso que permite criar um caso com o Suporte da NetApp ."]
 
 
 
@@ -97,19 +97,16 @@ Para obter um histórico dos seus casos de suporte, você pode selecionar *Confi
 
 "Você não está autorizado a criar um caso contra o serviço selecionado"
 
-Esse erro pode significar que a conta NSS e a empresa registrada à qual ela está associada não são a mesma empresa registrada para o número de série da conta BlueXP (por exemplo, 960xxxx) ou o número de série do ambiente de trabalho. Você pode buscar assistência usando uma das seguintes opções:
+Esse erro pode significar que a conta NSS e a empresa registrada à qual ela está associada não são a mesma empresa registrada para o número de série da conta do NetApp Console (por exemplo, 960xxxx) ou o número de série do ambiente de trabalho. Você pode buscar assistência usando uma das seguintes opções:
 
-* Use o chat do produto
 * Envie um caso não técnico em https://mysupport.netapp.com/site/help[]
 
 
 
 
-== Gerencie seus casos de suporte (visualização)
+== Gerencie seus casos de suporte
 
-Você pode visualizar e gerenciar casos de suporte ativos e resolvidos diretamente do BlueXP. Você pode gerenciar os casos associados à sua conta NSS e à sua empresa.
-
-O gerenciamento de casos está disponível como uma prévia. Planejamos refinar essa experiência e adicionar melhorias em versões futuras. Envie-nos seu feedback usando o chat do produto.
+Você pode visualizar e gerenciar casos de suporte ativos e resolvidos diretamente do Console. Você pode gerenciar os casos associados à sua conta NSS e à sua empresa.
 
 Observe o seguinte:
 
@@ -130,29 +127,20 @@ Veja as etapas abaixo para mais detalhes.
 
 
 .Passos
-. No BlueXP, selecione *Ajuda > Suporte*.
-. Selecione *Gerenciamento de casos* e, se solicitado, adicione sua conta NSS ao BlueXP.
+. No NetApp Console, selecione *Ajuda > Suporte*.
+. Selecione *Gerenciamento de casos* e, se solicitado, adicione sua conta NSS ao Console.
 +
-A página *Gerenciamento de casos* mostra casos abertos relacionados à conta NSS associada à sua conta de usuário BlueXP . Esta é a mesma conta NSS que aparece no topo da página *Gerenciamento NSS*.
+A página *Gerenciamento de casos* mostra casos abertos relacionados à conta NSS associada à sua conta de usuário do Console. Esta é a mesma conta NSS que aparece no topo da página *Gerenciamento NSS*.
 
 . Modifique opcionalmente as informações exibidas na tabela:
 +
 ** Em *Casos da organização*, selecione *Exibir* para visualizar todos os casos associados à sua empresa.
 ** Modifique o intervalo de datas escolhendo um intervalo de datas exato ou escolhendo um período de tempo diferente.
-+
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-case-management-date-range.png["Uma captura de tela da opção acima da tabela na página Gerenciamento de casos que permite que você escolha um intervalo de datas exato ou os últimos 7 dias, 30 dias ou 3 meses."]
-
 ** Filtrar o conteúdo das colunas.
-+
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-case-management-filter.png["Uma captura de tela da opção de filtro na coluna Status que permite filtrar casos que correspondem a um status específico, como Ativo ou Fechado."]
-
-** Altere as colunas que aparecem na tabela selecionandoimage:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-table-columns.png["O ícone de mais que aparece na tabela"] e então escolher as colunas que você gostaria de exibir.
-+
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-case-management-columns.png["Uma captura de tela que mostra as colunas que você pode mostrar na tabela."]
+** Altere as colunas que aparecem na tabela selecionandoimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-table-columns.png["O ícone de mais que aparece na tabela"] e então escolher as colunas que você gostaria de exibir.
 
 
-
-. Gerencie um caso existente selecionandoimage:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-table-action.png["Um ícone com três pontos que aparece na última coluna da tabela"] e selecionando uma das opções disponíveis:
+. Gerencie um caso existente selecionandoimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-table-action.png["Um ícone com três pontos que aparece na última coluna da tabela"] e selecionando uma das opções disponíveis:
 +
 ** *Ver caso*: Veja detalhes completos sobre um caso específico.
 ** *Atualizar notas do caso*: Forneça detalhes adicionais sobre seu problema ou selecione *Carregar arquivos* para anexar até no máximo cinco arquivos.
@@ -161,8 +149,5 @@ Os anexos são limitados a 25 MB por arquivo. As seguintes extensões de arquivo
 
 ** *Fechar caso*: Forneça detalhes sobre o motivo pelo qual você está fechando o caso e selecione *Fechar caso*.
 
-
-+
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-case-management-actions.png["Uma captura de tela que mostra as ações que você pode realizar após selecionar o menu na última coluna da tabela."]
 
 

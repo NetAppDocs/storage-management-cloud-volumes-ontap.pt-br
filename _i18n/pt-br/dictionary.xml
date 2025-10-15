@@ -3203,39 +3203,24 @@
   <block id="035c0882c124b8a714a0ccb5b2edc977" category="admonition">Para obter mais informações sobre como exportar uma imagem por meio do Google Cloud, consulte o<block ref="c7e947f0888e30efd1d729c87ccc8502" category="inline-link-rx"></block> .</block>
   <block id="5ae9e7fffccf52fce94c993af9db9dfa" category="summary">A NetApp oferece suporte de diversas maneiras. Há diversas opções gratuitas de autoatendimento disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro no suporte inclui suporte técnico remoto por meio de tickets online.</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Obter ajuda</block>
-  <block id="bbbc9b55f08bfe80f146b5207bdb7728" category="paragraph">A NetApp oferece suporte para o BlueXP e seus serviços de nuvem de diversas maneiras. Oferecemos amplas opções gratuitas de autossuporte 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro no suporte inclui suporte técnico remoto por meio de tickets online.</block>
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">Obtenha suporte para um serviço de arquivo de provedor de nuvem</block>
-  <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">Para obter suporte técnico relacionado a um serviço de arquivo do provedor de nuvem, sua infraestrutura ou qualquer solução que use o serviço, consulte "Obter ajuda" na documentação do BlueXP para esse produto.</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSx para ONTAP</block>
-  <block id="9d06990508d25d367d9158c6558eb9c8" category="list-text"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
-  <block id="2e0c742f4616eb27b5b7646aa790edfe" category="list-text"><block ref="2e0c742f4616eb27b5b7646aa790edfe" category="inline-link-macro-rx"></block></block>
   <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
-  <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
-  <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">Para receber suporte técnico específico para o BlueXP e suas soluções e serviços de armazenamento, use as opções de suporte descritas abaixo.</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Use opções de autoapoio</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Estas opções estão disponíveis gratuitamente, 24 horas por dia, 7 dias por semana:</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentação</block>
-  <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">A documentação do BlueXP que você está visualizando no momento.</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Base de conhecimento</block>
   <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
-  <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">Pesquise na base de conhecimento do BlueXP para encontrar artigos úteis para solucionar problemas.</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Comunidades</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">Junte-se à comunidade BlueXP para acompanhar discussões em andamento ou criar novas.</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Crie um caso com o suporte da NetApp</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Além das opções de autossuporte acima, você pode trabalhar com um especialista em suporte da NetApp para resolver quaisquer problemas após ativar o suporte.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="list-title">Antes de começar</block>
-  <block id="920fe1428c19533eda6222fe7e58efbe" category="inline-link">Aprenda a gerenciar credenciais associadas ao seu login BlueXP</block>
-  <block id="e1d2e1a634647fd631081bc4f6f8e523" category="list-text">Para usar o recurso *Criar um caso*, você deve primeiro associar suas credenciais do site de suporte da NetApp ao seu login do BlueXP .<block ref="2a0d8b66ca9e99d023b48cf25f40fb12" category="inline-link-rx"></block> .</block>
   <block id="e49aa971c20ec071f1b5bbc3c7266769" category="list-text">Se você estiver abrindo um caso para um sistema ONTAP que tenha um número de série, sua conta NSS deverá estar associada ao número de série desse sistema.</block>
-  <block id="7fe6981833e8fe7fd89e0a99a55573da" category="list-text">No BlueXP, selecione *Ajuda &gt; Suporte*.</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Na página *Recursos*, escolha uma das opções disponíveis em Suporte Técnico:</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Selecione *Ligue para nós* se quiser falar com alguém por telefone. Você será direcionado para uma página no netapp.com que lista os números de telefone para os quais você pode ligar.</block>
   <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">Selecione *Criar um caso* para abrir um tíquete com um especialista de suporte da NetApp :</block>
-  <block id="d63bf50426f4c712554faec55b30c548" category="list-text">*Serviço*: Selecione o serviço ao qual o problema está associado. Por exemplo, BlueXP quando específico para um problema de suporte técnico com fluxos de trabalho ou funcionalidade dentro do serviço.</block>
-  <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">*Ambiente de trabalho*: Se aplicável ao armazenamento, selecione * Cloud Volumes ONTAP* ou *On-Prem* e, em seguida, o ambiente de trabalho associado.</block>
-  <block id="98d90e398fc56688ddc647e5f49075ec" category="paragraph">A lista de ambientes de trabalho está dentro do escopo da organização BlueXP (ou conta), projeto (ou espaço de trabalho) e Conector que você selecionou no banner superior do serviço.</block>
   <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*Prioridade do caso*: escolha a prioridade do caso, que pode ser Baixa, Média, Alta ou Crítica.</block>
   <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">Para saber mais detalhes sobre essas prioridades, passe o mouse sobre o ícone de informações ao lado do nome do campo.</block>
   <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*Descrição do problema*: Forneça uma descrição detalhada do seu problema, incluindo quaisquer mensagens de erro aplicáveis ou etapas de solução de problemas que você executou.</block>
@@ -3243,17 +3228,11 @@
   <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*Anexo (Opcional)*: Carregue até cinco anexos, um de cada vez.</block>
   <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">Os anexos são limitados a 25 MB por arquivo. As seguintes extensões de arquivo são suportadas: txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx e csv.</block>
   <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">Uma captura de tela do formulário Criar um caso que permite criar um caso com o Suporte da NetApp .</block>
-  <block id="509259be6d5e15d8959f705cbe0cbcc1" category="paragraph"><block ref="509259be6d5e15d8959f705cbe0cbcc1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">Um pop-up aparecerá com o número do seu caso de suporte. Um especialista em suporte da NetApp analisará seu caso e entrará em contato com você em breve.</block>
   <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">Para obter um histórico dos seus casos de suporte, você pode selecionar *Configurações &gt; Linha do tempo* e procurar por ações chamadas "criar caso de suporte". Um botão na extrema direita permite expandir a ação para ver detalhes.</block>
   <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">É possível que você encontre a seguinte mensagem de erro ao tentar criar um caso:</block>
   <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"Você não está autorizado a criar um caso contra o serviço selecionado"</block>
-  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">Esse erro pode significar que a conta NSS e a empresa registrada à qual ela está associada não são a mesma empresa registrada para o número de série da conta BlueXP (por exemplo, 960xxxx) ou o número de série do ambiente de trabalho. Você pode buscar assistência usando uma das seguintes opções:</block>
-  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">Use o chat do produto</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Envie um caso não técnico em<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
-  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">Gerencie seus casos de suporte (visualização)</block>
-  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">Você pode visualizar e gerenciar casos de suporte ativos e resolvidos diretamente do BlueXP. Você pode gerenciar os casos associados à sua conta NSS e à sua empresa.</block>
-  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">O gerenciamento de casos está disponível como uma prévia. Planejamos refinar essa experiência e adicionar melhorias em versões futuras. Envie-nos seu feedback usando o chat do produto.</block>
   <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">O painel de gerenciamento de casos na parte superior da página oferece duas visualizações:</block>
   <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">A visualização à esquerda mostra o total de casos abertos nos últimos 3 meses pela conta NSS do usuário que você forneceu.</block>
   <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">A visualização à direita mostra o total de casos abertos nos últimos 3 meses no nível da sua empresa com base na sua conta de usuário NSS.</block>
@@ -3261,27 +3240,15 @@
   <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">Você pode adicionar ou remover colunas de interesse e filtrar o conteúdo de colunas como Prioridade e Status. Outras colunas fornecem apenas recursos de classificação.</block>
   <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">Veja as etapas abaixo para mais detalhes.</block>
   <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">Em cada caso, oferecemos a possibilidade de atualizar notas do caso ou fechar um caso que ainda não esteja no status Fechado ou Pendente Fechado.</block>
-  <block id="0a4050ac39772e9281a9aba225254bf8" category="list-text">Selecione *Gerenciamento de casos* e, se solicitado, adicione sua conta NSS ao BlueXP.</block>
-  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">A página *Gerenciamento de casos* mostra casos abertos relacionados à conta NSS associada à sua conta de usuário BlueXP . Esta é a mesma conta NSS que aparece no topo da página *Gerenciamento NSS*.</block>
   <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">Modifique opcionalmente as informações exibidas na tabela:</block>
   <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">Em *Casos da organização*, selecione *Exibir* para visualizar todos os casos associados à sua empresa.</block>
   <block id="059e856250b59be3069246887b74a23c" category="list-text">Modifique o intervalo de datas escolhendo um intervalo de datas exato ou escolhendo um período de tempo diferente.</block>
-  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">Uma captura de tela da opção acima da tabela na página Gerenciamento de casos que permite que você escolha um intervalo de datas exato ou os últimos 7 dias, 30 dias ou 3 meses.</block>
-  <block id="0972db30d942fdb65d1732e6e84bde99" category="paragraph"><block ref="0972db30d942fdb65d1732e6e84bde99" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">Filtrar o conteúdo das colunas.</block>
-  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">Uma captura de tela da opção de filtro na coluna Status que permite filtrar casos que correspondem a um status específico, como Ativo ou Fechado.</block>
-  <block id="cb6a777dd3c6e43b0dc441d38519d219" category="paragraph"><block ref="cb6a777dd3c6e43b0dc441d38519d219" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">O ícone de mais que aparece na tabela</block>
-  <block id="cdf14d2156528231a5dbd12ad5c95d3f" category="list-text">Altere as colunas que aparecem na tabela selecionando<block ref="b574dd55d604ddb721d869a0fc302007" category="inline-image-macro-rx" type="image"></block> e então escolher as colunas que você gostaria de exibir.</block>
-  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">Uma captura de tela que mostra as colunas que você pode mostrar na tabela.</block>
-  <block id="e65065c4fd326b9f3a1eeb9453c30d73" category="paragraph"><block ref="e65065c4fd326b9f3a1eeb9453c30d73" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">Um ícone com três pontos que aparece na última coluna da tabela</block>
-  <block id="348552521b849746260fe8d296d34c15" category="list-text">Gerencie um caso existente selecionando<block ref="566c029d89e7d5421080767a37bf443e" category="inline-image-macro-rx" type="image"></block> e selecionando uma das opções disponíveis:</block>
   <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*Ver caso*: Veja detalhes completos sobre um caso específico.</block>
   <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*Atualizar notas do caso*: Forneça detalhes adicionais sobre seu problema ou selecione *Carregar arquivos* para anexar até no máximo cinco arquivos.</block>
   <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Fechar caso*: Forneça detalhes sobre o motivo pelo qual você está fechando o caso e selecione *Fechar caso*.</block>
-  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Uma captura de tela que mostra as ações que você pode realizar após selecionar o menu na última coluna da tabela.</block>
-  <block id="2ea260929e27ffcb623c8aa35689bd18" category="paragraph"><block ref="2ea260929e27ffcb623c8aa35689bd18" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1bb7d523f879b7ed72e5a67092958718" category="summary">Semelhante a uma região padrão da AWS, você pode implantar o Cloud Volumes ONTAP em ambientes AWS Secret Cloud e Top Secret Cloud, que fornecem recursos de nível empresarial para seu armazenamento em nuvem.  As regiões AWS Secret Cloud e Top Secret Cloud são regiões fechadas específicas para a Comunidade de Inteligência dos EUA; as instruções nesta página se aplicam somente aos usuários das regiões AWS Secret Cloud e Top Secret Cloud.</block>
   <block id="240de91fb65f5d6acac3d891ccd57289" category="doc">Implantar o Cloud Volumes ONTAP no AWS Secret Cloud ou no AWS Top Secret Cloud</block>
   <block id="ff2c9914d275ee17c3f22e89e7ca1ef7" category="inline-link-macro">Nuvem secreta da AWS</block>
@@ -3653,43 +3620,27 @@
   <block id="3e230a58ba269a917d314abcc623818e" category="paragraph">A proporção é importante para cenários de recuperação de desastres.  À medida que os dados são lidos da camada de capacidade, o Cloud Volumes ONTAP move os dados para a camada de desempenho para fornecer melhor desempenho.  Se não houver espaço suficiente, o Cloud Volumes ONTAP não poderá mover os dados.</block>
   <block id="b79fc07275bca01b493a455a8be6b1c5" category="summary">Gerencie suas assinaturas do Keystone habilitando-as para uso com o Cloud Volumes ONTAP e solicitando alterações na capacidade comprometida para os níveis de serviço da sua assinatura.  Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para clusters ONTAP locais ou para sistemas Cloud Volumes ONTAP .</block>
   <block id="03d5be8119fbdaabcbb9f81a27e41b6a" category="doc">Gerenciar assinaturas do Keystone para o Cloud Volumes ONTAP por meio do NetApp Console</block>
-  <block id="c27b8e6a4f797d237583ca6d38a92cd6" category="paragraph">Gerencie suas assinaturas Keystone a partir da BlueXP digital wallet habilitando assinaturas para uso com o Cloud Volumes ONTAP e solicitando alterações na capacidade comprometida para os níveis de serviço da sua assinatura.  Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para clusters ONTAP locais ou para sistemas Cloud Volumes ONTAP .</block>
   <block id="a3b1d6e06d4fd8ccc20c61ce51e45853" category="paragraph">O NetApp Keystone é um serviço flexível baseado em assinatura, com pagamento conforme o crescimento, que oferece uma experiência de nuvem híbrida para clientes que preferem OpEx a CapEx ou leasing.</block>
   <block id="8635fd9dae0faf14591abf5c00ba4c36" category="inline-link">Saiba mais sobre a Keystone</block>
   <block id="d9e1f569a60d13d4540b611846d761f5" category="paragraph"><block ref="d9e1f569a60d13d4540b611846d761f5" category="inline-link-rx"></block></block>
   <block id="4edb70089cdbc18de22fa9ead5189bc8" category="section-title">Autorize sua conta</block>
-  <block id="79554ac40a8f3a03c9aaedab34165bd3" category="paragraph">Antes de poder usar e gerenciar assinaturas do Keystone no BlueXP, você precisa entrar em contato com a NetApp para autorizar sua conta de usuário do BlueXP com suas assinaturas do Keystone .</block>
-  <block id="43bfd35e9b57eaace0eafa6750af5ff7" category="list-text">No menu de navegação do BlueXP , selecione *Governança &gt; Carteira digital*.</block>
   <block id="1ce97cc664bad2b8b354b3220e6331e7" category="list-text">Selecione * Assinaturas Keystone *.</block>
   <block id="daf4ae396784c74ec2cbf002eaaa25f4" category="list-text">Se você vir a página *Bem-vindo ao NetApp Keystone*, envie um e-mail para o endereço listado na página.</block>
-  <block id="16692c26ca4528e651bbb36d93c465c7" category="paragraph">Um representante da NetApp processará sua solicitação autorizando sua conta de usuário a acessar as assinaturas.</block>
   <block id="23698106a2d9dc1f2df20e97a71a625c" category="list-text">Volte para a aba * Assinaturas Keystone * para visualizar suas assinaturas.</block>
-  <block id="3d6aabe991edb10f282fd60995e725ca" category="inline-image-macro">Uma captura de tela que mostra uma lista de assinaturas do Keystone .</block>
-  <block id="6fd94fda3665b39867817d4700d184e8" category="paragraph"><block ref="6fd94fda3665b39867817d4700d184e8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="06f358c39bc3b4633cefd78beb67e671" category="section-title">Vincular uma assinatura</block>
   <block id="8afaab6946e4a914b70539d7502e26ac" category="paragraph">Depois que a NetApp autorizar sua conta, você poderá vincular assinaturas do Keystone para uso com o Cloud Volumes ONTAP.  Esta ação permite que os usuários selecionem a assinatura como método de cobrança para novos sistemas Cloud Volumes ONTAP .</block>
   <block id="b0afff19aa3343a6f86619d833dbd316" category="inline-image-macro">Um ícone que tem três pontos lado a lado</block>
   <block id="fc6ada65ff8f08c80e7d6167f68c89c2" category="list-text">Para a assinatura que você deseja vincular, clique em<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Link*.</block>
-  <block id="a71102951bc0488f4ec3cb5e52602100" category="inline-image-macro">Uma captura de tela que mostra a opção de link para uma assinatura.</block>
-  <block id="53dd6d03631eca7d8e89d0d7d8cdeb77" category="paragraph"><block ref="53dd6d03631eca7d8e89d0d7d8cdeb77" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7c27c9e51d561399ee84fb8d2259328c" category="paragraph">A assinatura agora está vinculada à sua organização ou conta BlueXP e disponível para seleção ao criar um ambiente de trabalho do Cloud Volumes ONTAP .</block>
   <block id="1b02ed65c5ea56c85fffa6b88378d762" category="section-title">Solicitar capacidade mais ou menos comprometida</block>
-  <block id="6659aa983422f26fe41e5bcc67fa8466" category="paragraph">Se quiser alterar a capacidade comprometida para os níveis de serviço da sua assinatura, você pode enviar uma solicitação à NetApp diretamente do BlueXP.  Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para clusters locais ou para sistemas Cloud Volumes ONTAP .</block>
-  <block id="a2748c51966db7db689a8801f6ae4150" category="list-text">Para a assinatura que você deseja ajustar a capacidade, clique em<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Exibir detalhes e editar*.</block>
   <block id="56ecf988dec174f4d23028e78eeed82c" category="list-text">Insira a capacidade comprometida solicitada para uma ou mais assinaturas.</block>
-  <block id="b21f9c14aa5cab57ac732dac504b7b63" category="inline-image-macro">Uma captura de tela que mostra a capacidade de solicitar uma alteração na capacidade comprometida de uma assinatura.</block>
-  <block id="6a39e9f54ea83c3684d0fc38cb4ce576" category="paragraph"><block ref="6a39e9f54ea83c3684d0fc38cb4ce576" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dbae9df22f08344d5508b91cb73c6d15" category="list-text">Role para baixo, insira quaisquer detalhes adicionais para a solicitação e clique em *Enviar*.</block>
   <block id="8f140d9c4d508c36e3d4c57102f117eb" category="paragraph">Sua solicitação cria um tíquete no sistema da NetApp para processamento.</block>
   <block id="ec6e0d1bd46f010ced65478c609b1636" category="section-title">Monitorar o uso</block>
-  <block id="4bb37917188b518967d0e67a2b819327" category="paragraph">O painel do BlueXP digital advisor permite monitorar o uso da assinatura do Keystone e gerar relatórios.</block>
   <block id="20ea4c62f4c9e4254314fe7fbbef0319" category="inline-link">Saiba mais sobre o monitoramento do uso da assinatura</block>
   <block id="d7105dd212dc96a8b292b6b48f84916f" category="paragraph"><block ref="d7105dd212dc96a8b292b6b48f84916f" category="inline-link-rx"></block></block>
   <block id="0c0401d1e9169d6dd38462b1e0d04126" category="section-title">Desvincular uma assinatura</block>
-  <block id="436fa170392050162dd4653f969cf048" category="paragraph">Se você não quiser mais usar uma assinatura Keystone com o BlueXP, você pode desvincular a assinatura.  Observe que você só pode desvincular uma assinatura que não esteja vinculada a uma assinatura existente do Cloud Volumes ONTAP .</block>
   <block id="492847bcbc9ec0bd3075b612aa43e4a7" category="list-text">Selecione * Keystone*.</block>
   <block id="a666a430e484ea214384aefaa30da852" category="list-text">Para a assinatura que você deseja desvincular, clique em<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Desvincular*.</block>
-  <block id="287c693dd0bc6ec48aa0fc3f4b950a9e" category="paragraph">A assinatura é desvinculada da sua organização ou conta BlueXP e não está mais disponível para seleção ao criar um ambiente de trabalho do Cloud Volumes ONTAP .</block>
   <block id="6e1a9790b199742bec95dea2070e2f3f" category="summary">Gerencie suas licenças baseadas em nós no NetApp Console para garantir que cada sistema Cloud Volumes ONTAP tenha uma licença válida com a capacidade necessária.</block>
   <block id="160221c1e99e53b72af8a65c2440852b" category="doc">Gerenciar licenciamento baseado em nó para Cloud Volumes ONTAP</block>
   <block id="63e5ea33dc9b9a10458ac73abae91075" category="paragraph">Gerencie licenças baseadas em nós no NetApp Console para garantir que cada sistema Cloud Volumes ONTAP tenha uma licença válida com a capacidade necessária.</block>
@@ -4788,37 +4739,18 @@
   <block id="5e41481253f1e5476c9db04d39b740c0" category="list-text"><block ref="5e41481253f1e5476c9db04d39b740c0" category="inline-link-macro-rx"></block></block>
   <block id="cf6c57784f8a4a391aba92ff47d6fb8f" category="summary">Antes de abrir um caso de suporte com o suporte técnico da NetApp , você precisa adicionar uma conta no site de suporte da NetApp e depois se registrar para receber suporte.</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Registre-se para obter suporte</block>
-  <block id="ece19bab46695021f109a5e50f08bebe" category="paragraph">O registro de suporte é necessário para receber suporte técnico específico para o BlueXP e suas soluções e serviços de armazenamento. O registro de suporte também é necessário para habilitar fluxos de trabalho importantes para sistemas Cloud Volumes ONTAP .</block>
-  <block id="8a3d807608e632d188a288fc5f4aa7eb" category="paragraph">O registro para suporte não habilita o suporte da NetApp para um serviço de arquivo do provedor de nuvem. Para obter suporte técnico relacionado a um serviço de arquivo do provedor de nuvem, sua infraestrutura ou qualquer solução que use o serviço, consulte "Obter ajuda" na documentação do BlueXP para esse produto.</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Visão geral do registro de suporte</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">Existem duas formas de registro para ativar o direito ao suporte:</block>
-  <block id="29360bfcdbc91d3f1514c372b4585965" category="list-text">Registrando o número de série da sua conta BlueXP (seu número de série 960xxxxxxxxx de 20 dígitos localizado na página Recursos de suporte no BlueXP).</block>
-  <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">Isso serve como seu único ID de assinatura de suporte para qualquer serviço dentro do BlueXP.  Cada assinatura de suporte em nível de conta BlueXP deve ser registrada.</block>
   <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">Registrando os números de série do Cloud Volumes ONTAP associados a uma assinatura no marketplace do seu provedor de nuvem (são números de série 909201xxxxxxxxx de 20 dígitos).</block>
-  <block id="67dbdeb11e22ea7def810bade59ce818" category="paragraph">Esses números de série são comumente chamados de _números de série PAYGO_ e são gerados pelo BlueXP no momento da implantação do Cloud Volumes ONTAP .</block>
-  <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">Registrar ambos os tipos de números de série habilita recursos como abertura de tickets de suporte e geração automática de casos. O registro é concluído adicionando contas do NetApp Support Site (NSS) ao BlueXP , conforme descrito abaixo.</block>
-  <block id="444b74bc81e823cc1c4c704219ad8ed3" category="section-title">Registre o BlueXP para suporte da NetApp</block>
-  <block id="b3bf31f8a918c712f26cdf493a908825" category="paragraph">Para se registrar para obter suporte e ativar o direito ao suporte, um usuário na sua organização BlueXP (ou conta) deve associar uma conta do Site de Suporte da NetApp ao seu login BlueXP . A maneira como você se registra para o suporte da NetApp depende se você já tem uma conta no NetApp Support Site (NSS).</block>
   <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Cliente existente com uma conta NSS</block>
-  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">Se você for um cliente da NetApp com uma conta NSS, basta se registrar para obter suporte pelo BlueXP.</block>
-  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">No canto superior direito do console BlueXP , selecione o ícone Configurações e selecione *Credenciais*.</block>
   <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">Selecione *Credenciais do usuário*.</block>
-  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Selecione *Adicionar credenciais NSS* e siga o prompt de autenticação do NetApp Support Site (NSS).</block>
   <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Para confirmar que o processo de registro foi bem-sucedido, selecione o ícone Ajuda e selecione *Suporte*.</block>
-  <block id="2ba7f9eae7a02f9c3ac0fc07517d1c48" category="paragraph">A página *Recursos* deve mostrar que sua organização BlueXP está registrada para suporte.</block>
-  <block id="759d32287efdf88cd8ac71dccc0ecf8d" category="inline-image-macro">Uma captura de tela que mostra um número de série da conta, uma caixa de seleção verde e o texto Registrado para suporte.</block>
-  <block id="4c441b388bebcddf8c08fb782095b864" category="paragraph"><block ref="4c441b388bebcddf8c08fb782095b864" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c05e530d1466e986d570cfe3f92656c3" category="paragraph">Observe que outros usuários do BlueXP não verão o mesmo status de registro de suporte se não tiverem associado uma conta do site de suporte da NetApp ao login do BlueXP .  No entanto, isso não significa que sua organização BlueXP não esteja registrada para suporte.  Desde que um usuário na organização tenha seguido essas etapas, sua organização foi registrada.</block>
   <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Cliente existente, mas sem conta NSS</block>
-  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Se você já é cliente da NetApp com licenças e números de série, mas _nenhuma_ conta NSS, precisa criar uma conta NSS e associá-la ao seu login do BlueXP .</block>
   <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">Formulário de registro de usuário do site de suporte da NetApp</block>
   <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Crie uma conta no site de suporte da NetApp preenchendo o<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
   <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Certifique-se de selecionar o Nível de usuário apropriado, que normalmente é * Cliente/Usuário final da NetApp *.</block>
-  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">Certifique-se de copiar o número de série da conta BlueXP (960xxxx) usado acima para o campo de número de série. Isso acelerará o processamento da conta.</block>
-  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">Associe sua nova conta NSS ao seu login BlueXP concluindo as etapas abaixo<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
   <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Novidade na NetApp</block>
   <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Se você é novo na NetApp e não tem uma conta NSS, siga cada etapa abaixo.</block>
-  <block id="d889e6e7cc4c5509ab5b37f8fc894e46" category="list-text">No canto superior direito do console BlueXP , selecione o ícone Ajuda e selecione *Suporte*.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Uma captura de tela do menu Ajuda onde Suporte é a primeira opção listada</block>
   <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">Localize o número de série do seu ID de conta na página de Registro de Suporte.</block>
@@ -4833,23 +4765,17 @@
   <block id="201080500e946070a2e4873042507c77" category="paragraph">A confirmação envia sua solicitação à NetApp e recomenda que você crie uma conta no site de suporte da NetApp .</block>
   <block id="a2454703f88e5bf5b433ae850a87151b" category="list-text">Certifique-se de copiar o número de série da conta (960xxxx) usado acima para o campo de número de série. Isso acelerará o processamento.</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">A NetApp entrará em contato com você durante esse processo. Este é um exercício de integração único para novos usuários.</block>
-  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Depois de ter sua conta no site de suporte da NetApp , associe a conta ao seu login BlueXP concluindo as etapas em<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
   <block id="3e616bae81890a6c8fae17c9b45af152" category="section-title">Credenciais associadas do NSS para suporte do Cloud Volumes ONTAP</block>
-  <block id="0ca08a23718c0a91743dd6c0146ca353" category="paragraph">A associação das credenciais do NetApp Support Site à sua organização BlueXP é necessária para habilitar os seguintes fluxos de trabalho principais para o Cloud Volumes ONTAP:</block>
   <block id="a0518a10626dc11fd00e2d20265ad240" category="list-text">Registrando sistemas Cloud Volumes ONTAP de pagamento conforme o uso para suporte</block>
   <block id="321aadf78ef73521712291b7aba6411f" category="paragraph">É necessário fornecer sua conta NSS para ativar o suporte para seu sistema e obter acesso aos recursos de suporte técnico da NetApp .</block>
   <block id="d51b2b497db445a16b1c9583c1abbb59" category="list-text">Implantando o Cloud Volumes ONTAP quando você traz sua própria licença (BYOL)</block>
-  <block id="2ebfeabed40c2270d9fa8325080a4b3e" category="paragraph">É necessário fornecer sua conta NSS para que o BlueXP possa carregar sua chave de licença e habilitar a assinatura para o período que você adquiriu. Isso inclui atualizações automáticas para renovações de prazo.</block>
   <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">Atualizando o software Cloud Volumes ONTAP para a versão mais recente</block>
-  <block id="c81c8e01f5d906ae1ab0c5c606f06b05" category="paragraph">Associar credenciais do NSS à sua organização BlueXP é diferente da conta do NSS associada a um login de usuário do BlueXP .</block>
-  <block id="8166996cb4a59c147200d89a061bb49c" category="paragraph">Essas credenciais NSS estão associadas ao seu ID de organização BlueXP específico.  Usuários que pertencem à organização BlueXP podem acessar essas credenciais em *Suporte &gt; Gerenciamento NSS*.</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">Se você tiver uma conta de nível de cliente, poderá adicionar uma ou mais contas NSS.</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">Se você tiver uma conta de parceiro ou revendedor, poderá adicionar uma ou mais contas NSS, mas elas não poderão ser adicionadas junto com contas de nível de cliente.</block>
   <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">Selecione *Gerenciamento NSS &gt; Adicionar conta NSS*.</block>
   <block id="85b9386ed443776127e099931d73448a" category="list-text">Quando solicitado, selecione *Continuar* para ser redirecionado para uma página de login da Microsoft.</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">A NetApp usa o Microsoft Entra ID como provedor de identidade para serviços de autenticação específicos para suporte e licenciamento.</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">Na página de login, forneça seu endereço de e-mail e senha registrados no Site de Suporte da NetApp para realizar o processo de autenticação.</block>
-  <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">Essas ações permitem que o BlueXP use sua conta NSS para coisas como downloads de licenças, verificação de atualização de software e registros de suporte futuros.</block>
   <block id="ec084bb25ed5b934c09b361069c246b2" category="list-text">A conta NSS deve ser uma conta de nível de cliente (não uma conta de convidado ou temporária). Você pode ter várias contas NSS em nível de cliente.</block>
   <block id="27387009488fe78dcc7cb7e3e432792f" category="list-text">Só pode haver uma conta NSS se essa conta for uma conta de nível de parceiro. Se você tentar adicionar contas NSS em nível de cliente e existir uma conta em nível de parceiro, você receberá a seguinte mensagem de erro:</block>
   <block id="d926847e4634e19a1aa7358becc0fa27" category="paragraph">"O tipo de cliente NSS não é permitido para esta conta, pois já existem usuários NSS de tipos diferentes."</block>
@@ -5210,8 +5136,6 @@
   <block id="9d72c2bef829db2eecf218dce9aa0f18" category="doc">Novidades no Cloud Volumes ONTAP</block>
   <block id="282a076d9f3b028a74e6186a429822bd" category="paragraph">Saiba o que há de novo no gerenciamento do Cloud Volumes ONTAP no NetApp Console.</block>
   <block id="fba77b4c3f3b2f8af51a858aaf78b37e" category="paragraph">Os aprimoramentos descritos nesta página são específicos para gerenciar o Cloud Volumes ONTAP por meio do Console.  Para saber o que há de novo no software Cloud Volumes ONTAP ,<block ref="708e09e3f2783926556b9c6d77f63a27" category="inline-link-rx"></block> .</block>
-  <block id="91d6aafc857e46203357e992ab4434f8" category="section-title">6 de outubro de 2025</block>
-  <block id="ba3c0cba3a3d15ce8426fc737476a59c" category="section-title">4 de setembro de 2025</block>
   <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">11 de agosto de 2025</block>
   <block id="f2673d4a3fe0162a501d43f5168ae950" category="section-title">14 de julho de 2025</block>
   <block id="98d06a8873f74ad318a67a8dee1dcd5f" category="section-title">25 de junho de 2025</block>
@@ -5219,19 +5143,14 @@
   <block id="e48502083eb8949c8f65b2ccddd5adec" category="section-title">12 de maio de 2025</block>
   <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">16 de abril de 2025</block>
   <block id="4409983c60e456858bb3e9ef5737f98a" category="section-title">14 de abril de 2025</block>
-  <block id="f0d468a1074534e3b37c7322f2e97bb1" category="section-title">3 de abril de 2025</block>
   <block id="5f2734b84896bdabcf7fd3574325d116" category="section-title">28 de março de 2025</block>
   <block id="0de5f5ade75808b90faefd69873b4b3c" category="section-title">12 de março de 2025</block>
   <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">10 de março de 2025</block>
-  <block id="278edfabbac204688aa13f79c6f52497" category="section-title">6 de março de 2025</block>
   <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">03 de março de 2025</block>
   <block id="df3f743aae5476a7b16bbbc329251f85" category="section-title">18 de fevereiro de 2025</block>
   <block id="c523b074da0b63e607578686184d5981" category="section-title">10 de fevereiro de 2025</block>
-  <block id="1f86b1e4048d088ce153a6f451fb30d6" category="section-title">9 de dezembro de 2024</block>
   <block id="ecbeaffbfe15c72e3bf702b0d0bf9694" category="section-title">11 de novembro de 2024</block>
   <block id="2bb8a9ed1433f0f845b92c7da5440dea" category="section-title">25 de outubro de 2024</block>
-  <block id="e5182edc3707e8e354c40ab7fa819f39" category="section-title">7 de outubro de 2024</block>
-  <block id="c842acaca9e3ea9ec2dc61f28e69ea15" category="section-title">9 de setembro de 2024</block>
   <block id="caf47538a5b97cacf4aba3098b6f9924" category="section-title">23 de agosto de 2024</block>
   <block id="2c8ad7deb621eae9ecb23ccf84d9c22c" category="section-title">Região Canadá Oeste agora com suporte na AWS</block>
   <block id="184c928c73aa00c7569ba55c0b9e0064" category="paragraph">A região Canadá Oeste agora tem suporte no AWS para Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
@@ -5241,7 +5160,6 @@
   <block id="cf153c7d2cb432b6e772832926525a09" category="section-title">Cloud Volumes ONTAP 9.15.1 GA</block>
   <block id="ffa2c93a775db2cb6243bf2a224cf240" category="paragraph">O BlueXP agora pode implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.15.1 na AWS, Azure e Google Cloud.</block>
   <block id="2d93be549c6c029e62524e3226b41f6e" category="paragraph"><block ref="7691c42cf5400dcb073921e2ec9b2ea3" category="inline-link-rx"></block> .</block>
-  <block id="9cc3df8e0a65f95d62b0d0dc557d0fa9" category="section-title">8 de agosto de 2024</block>
   <block id="e84c1e70dc9a2186ec21e22a3e9cbda0" category="section-title">Pacotes de licenciamento do Edge Cache obsoletos</block>
   <block id="882b50ca44d46bfb8d9502390cfeaf96" category="paragraph">Os pacotes de licenciamento baseados na capacidade do Edge Cache não estarão mais disponíveis para futuras implantações do Cloud Volumes ONTAP.  No entanto, você pode usar a API para aproveitar essa funcionalidade.</block>
   <block id="fdcb4cfaa6fda318a31e37ce29a14e92" category="section-title">Suporte de versão mínima para Flash Cache no Azure</block>
@@ -5271,16 +5189,13 @@
   <block id="9b699d89d2577245514962357937a87b" category="paragraph">Para obter uma lista de todas as regiões, consulte o<block ref="5328f934c7a30e2b8b67732fc162a525" category="inline-link-rx"></block> .</block>
   <block id="ee94ea94211470599a81d49f8c4b586f" category="section-title">Modelos de volume e tags não são mais suportados</block>
   <block id="96b0b2a19dd9deb6b94e53f2e29f4387" category="paragraph">Você não pode mais criar um volume a partir de um modelo ou editar as tags de um volume.  Essas ações foram associadas ao serviço de correção BlueXP , que não está mais disponível.</block>
-  <block id="4a1a05ee22994e328d9ec0402052b926" category="section-title">8 de março de 2024</block>
   <block id="1582ce9c3a0b0079717e0b0c6edf2347" category="section-title">Suporte ao Amazon Instant Metadata Service v2</block>
   <block id="4ac5b49185bd4b8f8b0ef6b8869d149f" category="paragraph">Na AWS, o Cloud Volumes ONTAP, o Mediator e o Connector agora oferecem suporte ao Amazon Instant Metadata Service v2 (IMDSv2) para todas as funções.  O IMDSv2 oferece proteção aprimorada contra vulnerabilidades.  Anteriormente, apenas o IMDSv1 era suportado.</block>
   <block id="7fcd14ee7d62b2a6f712b7ed775cdbc3" category="inline-link">Documentação de configuração e administração do BlueXP para gerenciar conectores existentes</block>
   <block id="bbe2b5062d2c900ca465f9eb12592a92" category="paragraph">Se exigido por suas políticas de segurança, você pode configurar suas instâncias do EC2 para usar o IMDSv2.  Para obter instruções, consulte<block ref="a1765820625d1912b35ab79a3305fdea" category="inline-link-rx"></block> .</block>
-  <block id="592997dde366d5775e7e052816854f74" category="section-title">5 de março de 2024</block>
   <block id="cf8f238c2116738b5ed3bacdbd527d14" category="section-title">Cloud Volumes ONTAP 9.14.1 GA</block>
   <block id="fc0f9e3eef3a6eff3efe2fe7cf358466" category="paragraph">O BlueXP agora pode implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.14.1 na AWS, Azure e Google Cloud.</block>
   <block id="60312cd5568ee3c0f5f813da72552193" category="paragraph"><block ref="171679ac61de97fa7c70db7bcf8d4dc9" category="inline-link-rx"></block> .</block>
-  <block id="d4eb5b4412a01c5991086dff8c51a89f" category="section-title">2 de fevereiro de 2024</block>
   <block id="4b2d018110adbf4819b09a7a28283445" category="section-title">Suporte para VMs da série Edv5 no Azure</block>
   <block id="d94bc26a7eea05003dc921a469161911" category="paragraph">O Cloud Volumes ONTAP agora oferece suporte às seguintes VMs da série Edv5 a partir da versão 9.14.1.</block>
   <block id="0ce1565dc58071deb098bde3e5a6a4b6" category="list-text">E4ds_v5</block>
@@ -5293,14 +5208,12 @@
   <block id="9ed7d4ae8d042664394e899e9c1f5e9a" category="section-title">Lançamentos de patches no BlueXP</block>
   <block id="5c04c0351e9f1e168f13ca5689c21d92" category="paragraph">Os lançamentos de patches estão disponíveis no BlueXP apenas para as três versões mais recentes do Cloud Volumes ONTAP.</block>
   <block id="8a3a4f00c796912ebcba47bd2cec89b3" category="paragraph"><block ref="8a3a4f00c796912ebcba47bd2cec89b3" category="inline-link-rx"></block></block>
-  <block id="fd9107be3db2a4144e054c68a7eab15f" category="section-title">8 de janeiro de 2024</block>
   <block id="dba248d0d18e6170f9bd4a4286edda53" category="section-title">Novas VMs para várias zonas de disponibilidade do Azure</block>
   <block id="c8d113632e2ef2b901829a0843658f2c" category="paragraph">A partir do Cloud Volumes ONTAP 9.13.1, os seguintes tipos de VM oferecem suporte a várias zonas de disponibilidade do Azure para implantações de pares de alta disponibilidade novas e existentes:</block>
   <block id="ceac2355e7d70d7e31592bc8ded88ab3" category="list-text">L16s_v3</block>
   <block id="2b89a58d3269391f70f9c7fb8d68f746" category="list-text">L32s_v3</block>
   <block id="c7316b16841dc002d14d45c38a750287" category="list-text">L48s_v3</block>
   <block id="b9f4aa39433f5232d4ce50f2a9a3c403" category="list-text">L64s_v3</block>
-  <block id="a037be7aafc2f071c4517e8f2c6e58e9" category="section-title">6 de dezembro de 2023</block>
   <block id="4a76045b19fb3233070f77ae414d5810" category="section-title">Cloud Volumes ONTAP 9.14.1 RC1</block>
   <block id="efb4d9478ba663f514e18b3310c2de65" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.14.1 na AWS, Azure e Google Cloud.</block>
   <block id="055c53a891e1dcea17b9e4c18351c1e5" category="section-title">Limite máximo de FlexVol volume de 300 TiB</block>
@@ -5311,7 +5224,6 @@
   <block id="b5c0350cd0b56d1a63f43cdbd710cfc0" category="list-text"><block ref="b5c0350cd0b56d1a63f43cdbd710cfc0" category="inline-link-rx"></block></block>
   <block id="c73908091fadeb9dec16abab42821644" category="inline-link">Limites de armazenamento no Google Cloud</block>
   <block id="c30ed2673a711ac69f82211d6d5cf5f0" category="list-text"><block ref="c30ed2673a711ac69f82211d6d5cf5f0" category="inline-link-rx"></block></block>
-  <block id="e8a0c291b754a75e0e91ecf69d567912" category="section-title">5 de dezembro de 2023</block>
   <block id="1fdbf90814a4e25f5b9e765470846181" category="paragraph">As seguintes alterações foram introduzidas.</block>
   <block id="de3678aecacdbfc2cde1f365589103a8" category="section-title">Suporte a novas regiões no Azure</block>
   <block id="2d87524b148f67773bbd84eaceabd1a8" category="paragraph-title">Suporte de região de zona de disponibilidade única</block>
@@ -5329,11 +5241,9 @@
   <block id="8e40e7e4940e30b2ce260ff97ad74d25" category="paragraph">A seguinte alteração foi introduzida com a versão 3.9.35 do Connector.</block>
   <block id="1c13ec96dac1171608b6dbd65bb2245c" category="section-title">Região de Berlim agora com suporte no Google Cloud</block>
   <block id="56e0da46254ac9c6f784da40f466bda0" category="paragraph">A região de Berlim agora tem suporte no Google Cloud para Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
-  <block id="d64cd771f2e77e7c0e4209d28afed019" category="section-title">8 de novembro de 2023</block>
   <block id="bbb4cf526641d95bbb8ab8bada56fa79" category="section-title">Região de Tel Aviv agora com suporte na AWS</block>
   <block id="04afad264aa486baec91a1ade145665a" category="paragraph">A região de Tel Aviv agora tem suporte no AWS para Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
   <block id="a3146a355baed19983a62f97e9e33a8e" category="paragraph">Para obter uma lista de todas as regiões, consulte o<block ref="24faa078890c2d8c97de1a6b5a5789e3" category="inline-link-rx"></block> .</block>
-  <block id="499efcb2be11e80e5bdfc003278352e3" category="section-title">1 de novembro de 2023</block>
   <block id="8904b1f88c62ce8a8381c8474f2ccb42" category="paragraph">A seguinte alteração foi introduzida com a versão 3.9.34 do Connector.</block>
   <block id="992f57af99811ae146ed6df67eccc26f" category="section-title">Região da Arábia Saudita agora com suporte no Google Cloud</block>
   <block id="9e06c986efeeff600f0b04c67d5d6354" category="paragraph">A região da Arábia Saudita agora tem suporte no Google Cloud para Cloud Volumes ONTAP e no Connector for Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
@@ -5349,7 +5259,6 @@
   <block id="8fb2033d01e3efa2825282a13f86c14e" category="list-text">Europa Ocidental</block>
   <block id="c349d3a26cf4231660785a0c5b4cb007" category="list-text">Oeste dos EUA 2</block>
   <block id="52183d0603ae187e1b8670c9880c570c" category="paragraph">Para obter uma lista de todas as regiões que oferecem suporte a várias zonas de disponibilidade, consulte o<block ref="0f1c2d6a84741595f86a459e46c2a400" category="inline-link-rx"></block> .</block>
-  <block id="69483d973a063c873a5a66f6edcc241c" category="section-title">6 de outubro de 2023</block>
   <block id="44d133359b344c4542acdebe6209e101" category="section-title">Cloud Volumes ONTAP 9.14.0</block>
   <block id="c5fa627d231c9a8813c9a2421d86136f" category="paragraph">O BlueXP agora pode implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.14.0 na AWS, Azure e Google Cloud.</block>
   <block id="24444e2a682bc377b24836f577ac4475" category="paragraph"><block ref="81dc441c35d41d83534cfed9e9baa0db" category="inline-link-rx"></block> .</block>
@@ -5384,7 +5293,6 @@
   <block id="eccfb2b7d21b722b7e6659bf39e0f295" category="section-title">Cloud Volumes ONTAP 9.13.1 GA</block>
   <block id="64118c9781a8b98caa35463a68a24220" category="paragraph">O BlueXP agora pode implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.13.1 na AWS, Azure e Google Cloud.</block>
   <block id="48b6419f92dbb3241a38ce6cc867e8ea" category="paragraph"><block ref="8b474bbdd1819ae628b9eaf17be40c38" category="inline-link-rx"></block> .</block>
-  <block id="f73b546b2cf111d3a080443f2cd3b97f" category="section-title">2 de julho de 2023</block>
   <block id="0888a7f5d81ff73f5ec9fa719b091bdc" category="section-title">Suporte para implantações de várias zonas de disponibilidade de HA no Azure</block>
   <block id="4df3cde02df4d7a411534f5e0a1565bc" category="paragraph">O Japan East e o Korea Central no Azure agora oferecem suporte a implantações de HA em várias zonas de disponibilidade para o Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
   <block id="bdecbec2a6c25b03595e885ec64c0ea0" category="section-title">Suporte de proteção autônoma contra ransomware</block>
@@ -5395,11 +5303,9 @@
   <block id="ba106db82d3577b52130dde5ddd372b4" category="section-title">Cloud Volumes ONTAP 9.13.1 RC1</block>
   <block id="9bc26bf4259fc1662eaaa13a7534abb1" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.13.1 na AWS, Azure e Google Cloud.</block>
   <block id="97a4e219dca6e7d10f98bae2e8bffec5" category="paragraph"><block ref="b51e72d129db508138e20f7a4f67c8ee" category="inline-link-rx"></block> .</block>
-  <block id="381c003443d0dbcf14a51f216a4e01dc" category="section-title">4 de junho de 2023</block>
   <block id="46f41748d329a2f863d5f787b783bcc5" category="section-title">Atualização do seletor de versão de atualização do Cloud Volumes ONTAP</block>
   <block id="25c3dcdd6e2c69b30eba973a10e656d8" category="paragraph">Na página Atualizar o Cloud Volumes ONTAP , agora você pode optar por atualizar para a versão mais recente disponível do Cloud Volumes ONTAP ou para uma versão mais antiga.</block>
   <block id="0923bc63beecd14d6e9a4d5d82331fce" category="paragraph">Para saber mais sobre como atualizar o Cloud Volumes ONTAP por meio do BlueXP, consulte<block ref="9777e426a24de9582e7ed3fdb1795e0a" category="inline-link-rx"></block> .</block>
-  <block id="71bff2737bdd059023a4784358e71a64" category="section-title">7 de maio de 2023</block>
   <block id="3b9e0ca0be1cb4ee263fc0a386a705bc" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.29 do Connector.</block>
   <block id="ef33a11b5d2090c4cf0e98ca1b79cc2d" category="section-title">Região do Catar agora com suporte no Google Cloud</block>
   <block id="357b47742b71d8fe5b5936de05c522ec" category="paragraph">A região do Catar agora tem suporte no Google Cloud para Cloud Volumes ONTAP e no Connector for Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
@@ -5416,7 +5322,6 @@
   <block id="3edccc804ac0fbfabb9606fd1fbdab3f" category="paragraph">Para obter mais informações, consulte <block ref="f804dc172fcb99ad8f5d652f7ebae769" category="inline-link-rx"></block> .</block>
   <block id="eaf72ee058835b38b417b55e2fb1c0af" category="section-title">A notificação agora é exibida ao acessar o BlueXP sem uma assinatura do marketplace</block>
   <block id="5cc1493ad28334fdb28f7ed57f0e1d41" category="paragraph">Agora, uma notificação é exibida sempre que você acessa o Cloud Volumes ONTAP no BlueXP sem uma assinatura do marketplace.  A notificação afirma que "uma assinatura de mercado para este ambiente de trabalho é necessária para estar em conformidade com os termos e condições do Cloud Volumes ONTAP ".</block>
-  <block id="38d4d167f6dd9174c3535fc5c7ba4b76" category="section-title">4 de abril de 2023</block>
   <block id="7e05b6b897bc796c472e8ff108657518" category="section-title">Suporte para regiões da China para AWS</block>
   <block id="ebef32c1ba0aec7a39eb2ce8370a97d5" category="paragraph">A partir do Cloud Volumes ONTAP 9.12.1 GA, as regiões da China agora são suportadas na AWS da seguinte forma.</block>
   <block id="fcf30aaa0348521d4d4752992c9db378" category="list-text">Sistemas de nó único são suportados.</block>
@@ -5448,7 +5353,6 @@
   <block id="6a0a3b4a70751949aff5d08a618793d7" category="section-title">Suporte para regiões da China no Azure</block>
   <block id="d9275343917167133b5d4b9c0f788071" category="paragraph">A região China Norte 3 agora tem suporte para implantações de nó único do Cloud Volumes ONTAP 9.12.1 GA e 9.13.0 GA no Azure.  Somente licenças adquiridas diretamente da NetApp (licenças BYOL) são suportadas nessas regiões.</block>
   <block id="8bd7cd8ca4a0f6685fc0baed4ead4dd1" category="admonition">Novas implantações do Cloud Volumes ONTAP nas regiões da China são suportadas apenas no 9.12.1 GA e 9.13.0 GA.  Você pode atualizar essas versões para patches e lançamentos posteriores do Cloud Volumes ONTAP.  Se você quiser implantar versões posteriores do Cloud Volumes ONTAP em regiões da China, entre em contato com o Suporte da NetApp .</block>
-  <block id="d0693e7bf28b7bbc94287cee0e4b0768" category="section-title">5 de março de 2023</block>
   <block id="eed8585d0b45afc4676b1c89f6f22a9a" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.27 do Connector.</block>
   <block id="5b420079bca1c870914caa221b31442e" category="section-title">Cloud Volumes ONTAP 9.13.0</block>
   <block id="ad598f033e541927e862b0c5e17319ec" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.13.0 na AWS, Azure e Google Cloud.</block>
@@ -5474,7 +5378,6 @@
   <block id="77e5d57bae938bc31208cded57756dc8" category="paragraph">O suporte para Flash Cache, alta velocidade de gravação e uma alta unidade máxima de transmissão (MTU) de 8.896 bytes agora está disponível para instâncias selecionadas com a versão Cloud Volumes ONTAP 9.13.0.</block>
   <block id="80d41628bf38145af2326ce3d52d8e91" category="inline-link">configurações suportadas pela licença para o Google Cloud</block>
   <block id="f35904f4bd1ce935cc8591f549ff879c" category="paragraph">Saiba mais sobre<block ref="6d4cd0cf64ff5942d587e84372ce2a39" category="inline-link-rx"></block> .</block>
-  <block id="e1bc7b26155063f1ce71b76f655669ef" category="section-title">5 de fevereiro de 2023</block>
   <block id="078640757da4b274abf89709c42d7741" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.26 do Connector.</block>
   <block id="72c6f65b45015ee1135ff4bc2cce8860" category="section-title">Criação de grupo de posicionamento na AWS</block>
   <block id="b743dbbfdeafb74e0c5a918472cb8000" category="paragraph">Uma nova configuração agora está disponível para criação de grupos de posicionamento com implantações de zona de disponibilidade única (AZ) do AWS HA.  Agora você pode optar por ignorar criações de grupos de posicionamento com falha e permitir que implantações de AZ únicas do AWS HA sejam concluídas com sucesso.</block>
@@ -5500,11 +5403,9 @@
   <block id="bf748f930fa11e46773ff6f7b815e480" category="section-title">Cloud Volumes ONTAP 9.12.0</block>
   <block id="80df4292f7c986dbd0920bb576487060" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.12.0 na AWS e no Google Cloud.</block>
   <block id="64885a300b31929a1b0ea6b5a20128d3" category="paragraph"><block ref="065aa84d514cfdc6fc00d8cb3eaf6ec4" category="inline-link-rx"></block> .</block>
-  <block id="708ffc372ba6f36174a7930961b956ab" category="section-title">8 de dezembro de 2022</block>
   <block id="dba89da91170934734e847dcfe4ad5d0" category="section-title">Cloud Volumes ONTAP 9.12.1</block>
   <block id="abd10f7bee2f791a9e8f76bf98163c27" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.12.1, que inclui suporte para novos recursos e regiões adicionais de provedores de nuvem.</block>
   <block id="ea949d9a7c8d0243148a6ff1179b5684" category="paragraph"><block ref="ea949d9a7c8d0243148a6ff1179b5684" category="inline-link-rx"></block></block>
-  <block id="83ec139c80a3d5b2f11f1a94eed47cd2" category="section-title">4 de dezembro de 2022</block>
   <block id="612111851a1740ab34a9d35045621084" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.24 do Connector.</block>
   <block id="afb589d73d8814d7f9075b4db6f76911" category="section-title">WORM + Cloud Backup agora disponível durante a criação do Cloud Volumes ONTAP</block>
   <block id="4d0c93d7ce5ce6f6010669f660c38d43" category="paragraph">A capacidade de ativar os recursos de gravação única, leitura múltipla (WORM) e backup em nuvem agora está disponível durante o processo de criação do Cloud Volumes ONTAP .</block>
@@ -5516,7 +5417,6 @@
   <block id="44f72ae2127b89a470e082ae9f772acf" category="paragraph">Uma licença ONTAP S3 agora está incluída em sistemas Cloud Volumes ONTAP novos e existentes que executam a versão 9.12.1 ou posterior no Google Cloud Platform.</block>
   <block id="093148786d1a31fd0a192e71709f0922" category="inline-link">Documentação do ONTAP : Aprenda a configurar e gerenciar serviços de armazenamento de objetos do S3</block>
   <block id="0c3f43bec2f6fa7d6a2774e7e460e607" category="paragraph"><block ref="0c3f43bec2f6fa7d6a2774e7e460e607" category="inline-link-rx"></block></block>
-  <block id="5a4346a01828d72104a6540080377b25" category="section-title">6 de novembro de 2022</block>
   <block id="6d5ba1b41fa03c2fdf0d747769a6b053" category="section-title">Movendo grupos de recursos no Azure</block>
   <block id="ea55da5ec5028d99103c938ded49761c" category="paragraph">Agora você pode mover um ambiente de trabalho de um grupo de recursos para um grupo de recursos diferente no Azure dentro da mesma assinatura do Azure.</block>
   <block id="6c2dc09b272a4aed6d56a3438a190129" category="inline-link">Movendo grupos de recursos</block>
@@ -5582,7 +5482,6 @@
   <block id="c1a328cf0660e851f6654745d3aca99e" category="paragraph"><block ref="c1a328cf0660e851f6654745d3aca99e" category="inline-link-rx"></block></block>
   <block id="1a3362a1b5304a4e1e1112496974b9ae" category="section-title">Licença ONTAP S3 no Azure</block>
   <block id="f225a4f57ea32da8b983d7bffd20b6eb" category="paragraph">Uma licença ONTAP S3 agora está incluída em sistemas Cloud Volumes ONTAP novos e existentes que executam a versão 9.9.1 ou posterior no Azure.</block>
-  <block id="f8b475a3fefebada77a30229238d0a1a" category="section-title">7 de junho de 2022</block>
   <block id="650bbb3fd1c3ec1cf13fbf6dc440ce1c" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.19 do Connector.</block>
   <block id="daa1014700acb24b76e93296bfc813fb" category="section-title">Cloud Volumes ONTAP 9.11.1</block>
   <block id="4bfb887290c16fe970b0fa22da35045f" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.11.1, que inclui suporte para novos recursos e regiões adicionais de provedores de nuvem.</block>
@@ -5614,7 +5513,6 @@
   <block id="7859fc06f13ff8714740aa72213f86e7" category="list-text"><block ref="7859fc06f13ff8714740aa72213f86e7" category="inline-link-rx"></block></block>
   <block id="3a7eebf972f838daafe4ea7948002b3d" category="inline-link">Aprenda a criar VMs de armazenamento de dados para o Cloud Volumes ONTAP no Google Cloud</block>
   <block id="07e4a4acdb333fe3d7b8dac1958d6459" category="list-text"><block ref="07e4a4acdb333fe3d7b8dac1958d6459" category="inline-link-rx"></block></block>
-  <block id="49644953fd4e9612a9842d17bef5e79b" category="section-title">2 de maio de 2022</block>
   <block id="e76164b285bb635d604e86db0ddefffb" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.18 do Connector.</block>
   <block id="44521137c9499dbef6a006058d0d9127" category="section-title">Cloud Volumes ONTAP 9.11.0</block>
   <block id="dbb2a3618007fc68b403b5db7a27888c" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.11.0.</block>
@@ -5668,7 +5566,6 @@
   <block id="dd787088b52e69b3d8bf590e16c8413c" category="paragraph">O assistente de criação de novo volume que introduzimos recentemente agora está disponível ao criar um volume em um agregado específico na opção *Alocação avançada*.</block>
   <block id="c4abca012bce01614c5a65c5b0e6ecd6" category="inline-link">Aprenda como criar volumes em um agregado específico</block>
   <block id="d893ce87ea9f6df084bb3d852a2354b3" category="paragraph"><block ref="605d69c57f8b225887c72fad0e48e71d" category="inline-link-rx"></block> .</block>
-  <block id="17fc50243c5a80f407e83d268bcab18e" category="section-title">9 de fevereiro de 2022</block>
   <block id="b1894f3de88322c422613dce3ce8f4cd" category="section-title">Atualizações do Marketplace</block>
   <block id="181e3299a212253d089ee23c58a37a10" category="list-text">Os pacotes Essentials e Professional agora estão disponíveis em todos os marketplaces de provedores de nuvem.</block>
   <block id="8b5bbca61d06a4ab0106010904673191" category="paragraph">Esses métodos de cobrança por capacidade permitem que você pague por hora ou compre um contrato anual diretamente do seu provedor de nuvem.  Você ainda tem a opção de comprar uma licença por capacidade diretamente da NetApp.</block>
@@ -5678,7 +5575,6 @@
   <block id="b353203eeb0af0c192ef9706121d7227" category="paragraph">Este método de cobrança ainda está disponível para clientes existentes que tenham uma assinatura ativa.</block>
   <block id="ad66e158a2e414eee17bb2c5185f011a" category="inline-link">Saiba mais sobre as opções de licenciamento do Cloud Volumes ONTAP</block>
   <block id="d58551678962298b964dc7f6b47bc31b" category="paragraph"><block ref="9709b770cd9cbbc5d1c2ba41ef1c9a01" category="inline-link-rx"></block> .</block>
-  <block id="5c46bd67ae4b5c23f9c243b5f396c088" category="section-title">6 de fevereiro de 2022</block>
   <block id="089a91d1490be155439f7062afd61de6" category="section-title">Trocar licenças não atribuídas</block>
   <block id="7d01c1cc395e0cffba4499f340107e1a" category="paragraph">Se você tiver uma licença baseada em nó não atribuída para o Cloud Volumes ONTAP que não tenha usado, agora você pode trocá-la convertendo-a em uma licença do Cloud Backup, uma licença do Cloud Data Sense ou uma licença do Cloud Tiering.</block>
   <block id="cc326b8fcf3d9827bf4c76a2355d4982" category="paragraph">Esta ação revoga a licença do Cloud Volumes ONTAP e cria uma licença equivalente em dólares para o serviço com a mesma data de expiração.</block>
@@ -5690,7 +5586,6 @@
   <block id="cc3717c29172e7c4beafc5f30f3639ac" category="paragraph">Redesenhamos a tela de seleção de licenciamento ao criar um novo ambiente de trabalho do Cloud Volumes ONTAP .  As mudanças destacam os métodos de cobrança por capacidade que foram introduzidos em julho de 2021 e dão suporte às próximas ofertas por meio dos mercados de provedores de nuvem.</block>
   <block id="cb859e966c34323b5da18c0c77998603" category="section-title">Atualização da Carteira Digital</block>
   <block id="912b97680395d2b9dfdd2d9fcfded8bf" category="paragraph">Atualizamos a *Carteira Digital* consolidando as licenças do Cloud Volumes ONTAP em uma única aba.</block>
-  <block id="586301717819197e24001cac47efdaaa" category="section-title">2 de janeiro de 2022</block>
   <block id="424543ac82fbe709685dcec8b007bf63" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.14 do Connector.</block>
   <block id="73af9e90d6d077cf277e49f829259963" category="section-title">Suporte para tipos adicionais de VM do Azure</block>
   <block id="bbbee7961ccb9cea5bdfe8ab78e43452" category="paragraph">O Cloud Volumes ONTAP agora é compatível com os seguintes tipos de VM no Microsoft Azure, a partir da versão 9.10.1:</block>
@@ -5733,21 +5628,18 @@
   <block id="81e5e1bf62f444795eff3721d2872fb5" category="section-title">Redução de porta</block>
   <block id="0cc520b9133a409c63dec80a3107fdda" category="paragraph">As portas 8023 e 49000 não estão mais abertas nos sistemas Cloud Volumes ONTAP no Azure para sistemas de nó único e pares de HA.</block>
   <block id="524d299ea985e3a42c95b0980478eba1" category="paragraph">Essa alteração se aplica aos _novos_ sistemas Cloud Volumes ONTAP a partir da versão 3.9.13 do Connector.</block>
-  <block id="d1c47d8bf748c203ff983262e6c108cb" category="section-title">4 de outubro de 2021</block>
   <block id="190323ddb2d35098aa0adb62b3b4fb4c" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.11 do Connector.</block>
   <block id="1217a2d42a5d039798ff2ec7be351708" category="section-title">Cloud Volumes ONTAP 9.10.0</block>
   <block id="d00e19dd07fcbaafee85f9234348a483" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.10.0.</block>
   <block id="32f35594134f3fdc6f434e91ec798f50" category="paragraph"><block ref="adde97be46da5fda88041fd113726d44" category="inline-link-rx"></block> .</block>
   <block id="9cc2b6cdaf0b50459353a2d67c0baa80" category="section-title">Tempo de implantação reduzido</block>
   <block id="66d5639668d7c3e585771304940a252b" category="paragraph">Reduzimos o tempo necessário para implantar um ambiente de trabalho do Cloud Volumes ONTAP no Microsoft Azure ou no Google Cloud quando a velocidade de gravação normal está ativada.  O tempo de implantação agora é, em média, 3 a 4 minutos menor.</block>
-  <block id="d798cbf5a08fbeb9fdd3652e5b00bb4c" category="section-title">2 de setembro de 2021</block>
   <block id="d1ef4823428a4819165321552b0897ec" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.10 do Connector.</block>
   <block id="e272f662e26b78ec82fb7603aa62b559" category="section-title">Chave de criptografia gerenciada pelo cliente no Azure</block>
   <block id="c02b5fa56aae4296da253938ec788b53" category="paragraph">Os dados são criptografados automaticamente no Cloud Volumes ONTAP no Azure usando<block ref="840493a517ea59018e3217960e80e550" category="inline-link-rx"></block> com uma chave gerenciada pela Microsoft.  Mas agora você pode usar sua própria chave de criptografia gerenciada pelo cliente, concluindo as seguintes etapas:</block>
   <block id="3edd67199a30046ea036a0ca1ad0c525" category="list-text">No BlueXP, use a API para criar um ambiente de trabalho do Cloud Volumes ONTAP que usa a chave.</block>
   <block id="25fb98f9fcb3127bfe7be5f0a105ca99" category="inline-link">Saiba mais sobre essas etapas</block>
   <block id="57f9636cd409eae93029008f8472bae7" category="paragraph"><block ref="9a0e1bea1b9830b0afb9757f4f2727bb" category="inline-link-rx"></block> .</block>
-  <block id="916678dfdf53de83f6afdf8fca563fb3" category="section-title">7 de julho de 2021</block>
   <block id="5378cd3122f1a8d3bcbde490c71a0f72" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.8 do Connector.</block>
   <block id="438f6ef2e21494cd9b1748584c8803b6" category="section-title">Novos métodos de cobrança</block>
   <block id="561845a67258d27b2238c95a99e36fe6" category="paragraph">Novos métodos de cobrança estão disponíveis para o Cloud Volumes ONTAP.</block>
@@ -5822,7 +5714,6 @@
   <block id="46d98c0abb13a137de84cc92dabaf4ee" category="paragraph">O Cloud Volumes ONTAP não oferece mais suporte a discos Cold HDD (sc1).</block>
   <block id="bdbf3117384807375f6bdb241cc66adc" category="section-title">TLS 1.2 para contas de armazenamento do Azure</block>
   <block id="add5a3253463a24d188001e4ea9295b1" category="paragraph">Quando o BlueXP cria contas de armazenamento no Azure para o Cloud Volumes ONTAP, a versão do TLS para a conta de armazenamento agora é a versão 1.2.</block>
-  <block id="1758589feb07955b2d0a7b0b09d739c8" category="section-title">8 de março de 2021</block>
   <block id="2d1fda237e9c9e24215e9d1450991976" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.4 do Connector.</block>
   <block id="4e9e74671f654c298cca727d225f4898" category="section-title">Cloud Volumes ONTAP 9.9.0</block>
   <block id="20f60b90b0876668750f23023759547d" category="paragraph">O BlueXP agora pode implantar e gerenciar o Cloud Volumes ONTAP 9.9.0.</block>
@@ -5845,7 +5736,6 @@
   <block id="933d399c3cb0f03992675d49630ab818" category="paragraph">Ao implantar um par de Cloud Volumes ONTAP HA no Google Cloud, agora você pode escolher VPCs compartilhadas para VPC-1, VPC-2 e VPC-3.  Anteriormente, somente a VPC-0 podia ser uma VPC compartilhada.  Essa alteração é compatível com o Cloud Volumes ONTAP 9.8 e posteriores.</block>
   <block id="fcc0572bd798a75498f99e20a8093f04" category="inline-link">Saiba mais sobre os requisitos de rede do Google Cloud</block>
   <block id="bec79676b2ce0546012a9fc41c70594d" category="paragraph"><block ref="4ceb822d951ddd5a03b9ed7c03d9145b" category="inline-link-rx"></block> .</block>
-  <block id="450eec7ccd07d2edbfc01a9a848e5c25" category="section-title">4 de janeiro de 2021</block>
   <block id="5a93c02f6d4fbb65f4f91aed3ecc5f9a" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.2 do Connector.</block>
   <block id="712a05ea9972d967387ea5a160a19a21" category="section-title">Postos avançados da AWS</block>
   <block id="43b4e2bfc7554b142c2e386bdb5e5828" category="paragraph">Há alguns meses, anunciamos que o Cloud Volumes ONTAP alcançou a designação Amazon Web Services (AWS) Outposts Ready.  Hoje, temos o prazer de anunciar que validamos o BlueXP e o Cloud Volumes ONTAP com o AWS Outposts.</block>
@@ -5866,7 +5756,6 @@
   <block id="1ac4c5bf1cc05cf3d4aa859843ec87b4" category="list-text">n2-standard-4 com a licença Explore e com BYOL</block>
   <block id="e73d4d7c476b6b18ed15adb41d3ea1b2" category="list-text">n2-standard-8 com a licença Standard e com BYOL</block>
   <block id="08ce51aefda2c98505d3ef29ab430caf" category="list-text">n2-standard-32 com a licença Premium e com BYOL</block>
-  <block id="998eefc7687a412e9a842ebf95b04347" category="section-title">3 de novembro de 2020</block>
   <block id="908acbbcae243fd1f200e44e637db120" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.0 do Connector.</block>
   <block id="d9bdad4a2680b0998135ed5fd46e50e3" category="section-title">Link Privado do Azure para Cloud Volumes ONTAP</block>
   <block id="4f0678a9e095858a4fa747c1c08210ee" category="paragraph">Por padrão, o BlueXP agora habilita uma conexão do Azure Private Link entre o Cloud Volumes ONTAP e suas contas de armazenamento associadas.  Um Link Privado protege conexões entre pontos de extremidade no Azure.</block>
@@ -6007,4 +5896,107 @@
   <block id="879701946bb2bc7241d0f85fd843455a" category="paragraph">endif::azure[]</block>
   <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
   <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
+  <block id="f99b3d89987ba6dd6d51c370eaeea8f2" category="admonition">Durante a descoberta, você poderá ver mensagens de falha, mas pode ignorá-las até que o processo de descoberta seja concluído. Não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal do marketplace do Azure durante a descoberta, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a um comportamento inesperado do sistema.</block>
+  <block id="bd8fc35f01f5d1ff5b0cec1a099bfb1d" category="admonition">Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal do Google Cloud, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamento inesperado ou perda de dados.</block>
+  <block id="950e7e695356602272f63f5a229978c6" category="inline-link-macro">Planejando sua configuração do Cloud Volumes ONTAP no Google Cloud</block>
+  <block id="b64ce252b77116ca032fd6f285079df7" category="list-text"><block ref="b64ce252b77116ca032fd6f285079df7" category="inline-link-macro-rx"></block></block>
+  <block id="306ce3f6735e643338e201f2701d07a8" category="admonition">Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal de nuvem da AWS, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamento inesperado ou perda de dados.</block>
+  <block id="3be958f0e24818beb81a2910a8f49340" category="admonition">Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal do Azure, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamento inesperado ou perda de dados.</block>
+  <block id="4735ad3a3627a06b0af62dc5a9601e18" category="inline-link-macro">Planejando sua configuração do Cloud Volumes ONTAP no Azure</block>
+  <block id="a2ac5dc61ef964446fc94b364b6cd75e" category="inline-link-macro">Implantar o Cloud Volumes ONTAP no Azure a partir do Azure Marketplace</block>
+  <block id="c139bb93c68d020d61606c6d1a5d5885" category="paragraph">*<block ref="4a7b975a18d85ad734dcfacfe5d6fc6a" category="inline-link-macro-rx"></block> *<block ref="e6805077b3f74e1d1c4a35647779c4ab" category="inline-link-macro-rx"></block></block>
+  <block id="2feeca48692986e9cc471ec61f847fca" category="paragraph">A NetApp fornece suporte para o NetApp Console e seus serviços de nuvem de diversas maneiras. Há diversas opções gratuitas de autoatendimento disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro no suporte inclui suporte técnico remoto por meio de tickets online.</block>
+  <block id="317cbd2c4fdbfd06a6c66bcd3f57d7ad" category="paragraph">Para obter suporte técnico relacionado a um serviço de arquivo do provedor de nuvem, sua infraestrutura ou qualquer solução que use o serviço, consulte a documentação desse produto.</block>
+  <block id="359d8b16e442ffaa72e03c95fcd60448" category="list-text"><block ref="359d8b16e442ffaa72e03c95fcd60448" category="inline-link-macro-rx"></block></block>
+  <block id="153836c062a78213f2aa165322254aa4" category="list-text"><block ref="153836c062a78213f2aa165322254aa4" category="inline-link-macro-rx"></block></block>
+  <block id="0d592360c983f234b130127efee38805" category="list-text"><block ref="0d592360c983f234b130127efee38805" category="inline-link-macro-rx"></block></block>
+  <block id="68e6fe8cde496154d24fd032b4262070" category="paragraph">Para receber suporte técnico específico para a NetApp e suas soluções de armazenamento e serviços de dados, use as opções de suporte descritas abaixo.</block>
+  <block id="5bb94d173380c00577f5e04b6f26bb94" category="paragraph">A documentação do NetApp Console que você está visualizando no momento.</block>
+  <block id="0e20091afcea2d83d0033a933ba85092" category="paragraph">Pesquise na base de conhecimento da NetApp para encontrar artigos úteis para solucionar problemas.</block>
+  <block id="777d75a90b107e4f18469f82c4f81fe2" category="paragraph">Participe da comunidade do NetApp Console para acompanhar discussões em andamento ou criar novas.</block>
+  <block id="c406bf0ac8ac87bc5bb7132a7351b2ae" category="inline-link">Aprenda a gerenciar credenciais associadas ao seu login do Console</block>
+  <block id="377118f28487e70bd456993144b72fc7" category="list-text">Para usar o recurso *Criar um caso*, você deve primeiro associar suas credenciais do site de suporte da NetApp ao seu login do console.<block ref="68c4321a756e3ffe955b62cff6fea46d" category="inline-link-rx"></block> .</block>
+  <block id="0ab80a63088581d58dcf067051f4c894" category="list-text">No NetApp Console, selecione *Ajuda &gt; Suporte*.</block>
+  <block id="a1123cd59d7bd876c080c33906ae65ce" category="list-text">*Serviço*: Selecione o serviço ao qual o problema está associado. Por exemplo, * NetApp Console* quando específico para um problema de suporte técnico com fluxos de trabalho ou funcionalidade dentro do Console.</block>
+  <block id="987df7518e2afb50a860647c832afd13" category="list-text">*Sistema*: Se aplicável ao armazenamento, selecione * Cloud Volumes ONTAP* ou *On-Prem* e, em seguida, o ambiente de trabalho associado.</block>
+  <block id="8f8e8a86e5f52b6186a37bdf266c4320" category="paragraph">A lista de sistemas está dentro do escopo da organização do Console e do agente do Console que você selecionou no banner superior.</block>
+  <block id="77c89527ec8a9f89b24c5579d19b3b4b" category="paragraph"><block ref="77c89527ec8a9f89b24c5579d19b3b4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="178fdaf97b1d1577437f11ee9d5e5229" category="paragraph">Esse erro pode significar que a conta NSS e a empresa registrada à qual ela está associada não são a mesma empresa registrada para o número de série da conta do NetApp Console (por exemplo, 960xxxx) ou o número de série do ambiente de trabalho. Você pode buscar assistência usando uma das seguintes opções:</block>
+  <block id="e1100b46295d42ed50ba7a4630710164" category="section-title">Gerencie seus casos de suporte</block>
+  <block id="316508a3483178100806a9d44b49aba2" category="paragraph">Você pode visualizar e gerenciar casos de suporte ativos e resolvidos diretamente do Console. Você pode gerenciar os casos associados à sua conta NSS e à sua empresa.</block>
+  <block id="9163e8bca6fd93c080d35ab49e3efdfa" category="list-text">No NetApp Console, selecione *Ajuda &gt; Suporte*.</block>
+  <block id="2019fd19051c3ef493dbbb9ca65bab87" category="list-text">Selecione *Gerenciamento de casos* e, se solicitado, adicione sua conta NSS ao Console.</block>
+  <block id="75e54e3a6fdbf43ed890669e079d7594" category="paragraph">A página *Gerenciamento de casos* mostra casos abertos relacionados à conta NSS associada à sua conta de usuário do Console. Esta é a mesma conta NSS que aparece no topo da página *Gerenciamento NSS*.</block>
+  <block id="8ac6be88c1aa79062825a147fb263b0e" category="list-text">Altere as colunas que aparecem na tabela selecionando<block ref="500a336e7ba1c54bcffba4e27bda4eb6" category="inline-image-macro-rx" type="image"></block> e então escolher as colunas que você gostaria de exibir.</block>
+  <block id="049b7b9fab1242f5e715952973c9474d" category="list-text">Gerencie um caso existente selecionando<block ref="7381d9baeaf62eb099ce84f1a21ed5ca" category="inline-image-macro-rx" type="image"></block> e selecionando uma das opções disponíveis:</block>
+  <block id="a58a19877ed0bf7f9b6d06fdd8387763" category="paragraph">Gerencie suas assinaturas do Keystone no NetApp Console habilitando assinaturas para uso com o Cloud Volumes ONTAP e solicitando alterações na capacidade comprometida para os níveis de serviço da sua assinatura. Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para sistemas Cloud Volumes ONTAP .</block>
+  <block id="df5e66b5e7999995b53a0f100212d79f" category="paragraph">Antes de poder usar e gerenciar assinaturas do Keystone no Console, você precisa entrar em contato com a NetApp para autorizar sua conta do Console com suas assinaturas do Keystone .</block>
+  <block id="0aa8bceb217782b5e4390aefe60d271f" category="list-text">No menu do NetApp Console , selecione *Governança &gt; Licenses and subscriptions*.</block>
+  <block id="a53c428d90f592127da49a8d5a558130" category="paragraph">Um representante da NetApp processará sua solicitação autorizando sua conta a acessar as assinaturas.</block>
+  <block id="9c2f6d6e4376237ad065b1baa0ad822d" category="paragraph">A assinatura agora está vinculada à sua organização ou conta do Console e disponível para seleção ao criar um ambiente de trabalho do Cloud Volumes ONTAP .</block>
+  <block id="10d2905ee5dfcb309d64e3633fb774c1" category="paragraph">Se quiser alterar a capacidade comprometida para os níveis de serviço da sua assinatura, você pode enviar uma solicitação à NetApp diretamente do Console. Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para sistemas Cloud Volumes ONTAP .</block>
+  <block id="e45b542fbde799582edd5059bc1991a9" category="list-text">Para a assinatura cuja capacidade você deseja ajustar, clique em <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Exibir detalhes e editar*.</block>
+  <block id="a3a13a09504a7f25eb72dede89db4f24" category="paragraph">O painel do Digital Advisor permite monitorar o uso da assinatura do Keystone e gerar relatórios.</block>
+  <block id="e29343f0ee1c0051a367e02b49c1c5ff" category="paragraph">Se não quiser mais usar uma assinatura do Keystone com o Console, você pode desvincular a assinatura. Observe que você só pode desvincular uma assinatura que não esteja vinculada a uma assinatura existente do Cloud Volumes ONTAP .</block>
+  <block id="0e1096776546966fb22c4752766d55a9" category="paragraph">A assinatura é desvinculada da sua organização ou conta do Console e não está mais disponível para seleção ao criar um ambiente de trabalho do Cloud Volumes ONTAP .</block>
+  <block id="776abbf4d80cbef17bd3c86ff37b2257" category="paragraph">O registro de suporte é necessário para receber suporte técnico específico para o NetApp Console e suas soluções de armazenamento e serviços de dados. O registro de suporte também é necessário para habilitar fluxos de trabalho importantes para sistemas Cloud Volumes ONTAP .</block>
+  <block id="ba4e23e03f4354a0f1ef2781272c8477" category="paragraph">O registro para suporte não habilita o suporte da NetApp para um serviço de arquivo do provedor de nuvem. Para obter suporte técnico relacionado a um serviço de arquivo do provedor de nuvem, sua infraestrutura ou qualquer solução que use o serviço, consulte "Obter ajuda" na documentação do produto.</block>
+  <block id="869a868c87f6fb61410cfd773b4f1bab" category="list-text">Registrando o número de série da sua conta do NetApp Console (seu número de série 960xxxxxxxxx de 20 dígitos localizado na página Recursos de suporte no Console).</block>
+  <block id="be0b51de4268d87101344aa0368b4403" category="paragraph">Isso serve como seu único ID de assinatura de suporte para qualquer serviço no Console. Cada conta do Console deve ser registrada.</block>
+  <block id="3cf9fb70d6921dd90583621f028a395f" category="paragraph">Esses números de série são comumente chamados de _números de série PAYGO_ e são gerados pelo NetApp Console no momento da implantação do Cloud Volumes ONTAP .</block>
+  <block id="bf516b6498e37e816d29ae43ae132f74" category="paragraph">Registrar ambos os tipos de números de série habilita recursos como abertura de tickets de suporte e geração automática de casos. O registro é concluído adicionando contas do NetApp Support Site (NSS) ao Console, conforme descrito abaixo.</block>
+  <block id="ba5983207e417797fefd5b9374ab4a97" category="section-title">Registre o NetApp Console para suporte ao NetApp</block>
+  <block id="dcb7105ba6e3d9411b05e726848feb80" category="paragraph">Para se registrar para obter suporte e ativar o direito ao suporte, um usuário na sua conta do NetApp Console deve associar uma conta do NetApp Support Site ao seu login no Console. A maneira como você se registra para o suporte da NetApp depende se você já tem uma conta no NetApp Support Site (NSS).</block>
+  <block id="ed5bddb699a442b85bc1bb8e1516fe57" category="paragraph">Se você for um cliente NetApp com uma conta NSS, basta se registrar para receber suporte pelo Console.</block>
+  <block id="76bc427c3d9c4b81dc353078b942f991" category="list-text">Selecione *Administração* &gt; *Credenciais*.</block>
+  <block id="e9451600769b4bf4b20ca941ba9e6d19" category="list-text">Selecione *Adicionar credenciais NSS* e siga o prompt de autenticação do NetApp Support Site (NSS).</block>
+  <block id="1d4ea9fd10f6cfcd6f6fe1f861d354a4" category="paragraph">A página *Recursos* deve mostrar que sua conta do Console está registrada para suporte.</block>
+  <block id="afe8240ca62f4b72006980ff64d371b8" category="paragraph">Observe que outros usuários do Console não verão o mesmo status de registro de suporte se não tiverem associado uma conta do Site de Suporte da NetApp ao seu login. No entanto, isso não significa que sua conta não esteja registrada para suporte. Desde que um usuário na organização tenha seguido essas etapas, sua conta foi registrada.</block>
+  <block id="42eaca1e1c2d9e1f04e932eeaa6d129d" category="paragraph">Se você já for um cliente da NetApp com licenças e números de série existentes, mas _nenhuma_ conta NSS, será necessário criar uma conta NSS e associá-la ao seu login do Console.</block>
+  <block id="bd33c4539c7d6985f6edafd4a4f2ba1d" category="list-text">Certifique-se de copiar o número de série da conta do Console (960xxxx) usado acima para o campo de número de série. Isso acelerará o processamento da conta.</block>
+  <block id="9b1f48f88cd439b7a50fe3e76eb8a853" category="list-text">Associe sua nova conta NSS ao seu login do Console concluindo as etapas em<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
+  <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">No canto superior direito do Console, selecione o ícone Ajuda e selecione *Suporte*.</block>
+  <block id="629757336278be576456cf315303b178" category="paragraph">Depois de ter sua conta do Site de Suporte NetApp , associe a conta ao seu login do Console concluindo as etapas em<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
+  <block id="f22d1a855e255746a6b925a3b22f7838" category="paragraph">É necessário associar as credenciais do NetApp Support Site à sua conta do Console para habilitar os seguintes fluxos de trabalho principais para o Cloud Volumes ONTAP:</block>
+  <block id="f3cd224f9506684fa3b5e2b89b2a566c" category="paragraph">É necessário fornecer sua conta NSS para que o Console possa carregar sua chave de licença e habilitar a assinatura para o período que você comprou. Isso inclui atualizações automáticas para renovações de prazo.</block>
+  <block id="daf104544b5203a46e1580e1b8583f1f" category="paragraph">A associação de credenciais do NSS à sua conta do NetApp Console é diferente da associação da conta do NSS a um login de usuário do Console.</block>
+  <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">Essas credenciais NSS estão associadas ao ID específico da sua conta do Console. Usuários que pertencem à organização Console podem acessar essas credenciais em *Suporte &gt; Gerenciamento NSS*.</block>
+  <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">Essas ações permitem que o Console use sua conta NSS para coisas como downloads de licenças, verificação de atualização de software e registros de suporte futuros.</block>
+  <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06 de outubro de 2025</block>
+  <block id="f5377e9f6a36b07ca646f48e10af80d8" category="section-title">04 de setembro de 2025</block>
+  <block id="7ca8399d9458bd23bcc87fad14dc0d0b" category="section-title">03 de abril de 2025</block>
+  <block id="cceeb5ea78b799b3b8575b2829590616" category="section-title">06 de março de 2025</block>
+  <block id="527d18dfa760fc67196d102d429a8ea0" category="section-title">09 de dezembro de 2024</block>
+  <block id="f66c63cf0ff76c19209f85ca687a2fb4" category="section-title">07 de outubro de 2024</block>
+  <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">09 de setembro de 2024</block>
+  <block id="a2c5fe7d69df0be5501c3a0611feca39" category="section-title">08 de agosto de 2024</block>
+  <block id="83f5e5c47142e1bacd47bf84c93fe2da" category="section-title">08 de março de 2024</block>
+  <block id="c3084a9e2d458e9a14fb0606a505126d" category="section-title">05 de março de 2024</block>
+  <block id="190265b58025063c7706910e94d55f78" category="section-title">02 de fevereiro de 2024</block>
+  <block id="9d9f1bbe6fc0fcc79eaf29c5cfb502cd" category="section-title">08 de janeiro de 2024</block>
+  <block id="096c8b6d8e141d39a5a768f7c0250751" category="section-title">06 de dezembro de 2023</block>
+  <block id="446239518c2ef0623c0d18406a68c7e5" category="section-title">05 de dezembro de 2023</block>
+  <block id="41e96c41b82196674a6b6c99d0c0b8ad" category="section-title">08 de novembro de 2023</block>
+  <block id="ffb580001d0ebfc2f4c5b4e79a47168a" category="section-title">01 de novembro de 2023</block>
+  <block id="ff1c2e86cdd326544983c6d6affd39a5" category="section-title">06 de outubro de 2023</block>
+  <block id="942e802a236d6542c0c6f797428d8abb" category="section-title">02 de julho de 2023</block>
+  <block id="a6aef5e3bbd8b059764f33a4044e30d6" category="section-title">04 de junho de 2023</block>
+  <block id="a018fc35c6be59c0e9c90d4bd464dc47" category="section-title">07 de maio de 2023</block>
+  <block id="1f80cfa485c3ac35340f554ed273a58f" category="section-title">04 de abril de 2023</block>
+  <block id="eea1e3b9ecdd5e32692761a0a78b9463" category="section-title">05 de março de 2023</block>
+  <block id="7d04cce0092e695d038c8ac0c2c6c212" category="section-title">05 de fevereiro de 2023</block>
+  <block id="8aaa9ee6a13e1ed4364f8b79f668800a" category="section-title">08 de dezembro de 2022</block>
+  <block id="d637c017da015de69f96f21acd8ef91a" category="section-title">04 de dezembro de 2022</block>
+  <block id="88268cce7d1b83c765c3f7010df80df5" category="section-title">06 de novembro de 2022</block>
+  <block id="774d45f21a2750a8e5f5b989e1851e75" category="section-title">07 de junho de 2022</block>
+  <block id="a2196cea92e51db7ddcfaeb055603b67" category="section-title">02 de maio de 2022</block>
+  <block id="a4d9ec15ed8b3688c08c647c34a00b5e" category="section-title">09 de fevereiro de 2022</block>
+  <block id="32669a6fa42c5a557a45c4d6cbe299eb" category="section-title">06 de fevereiro de 2022</block>
+  <block id="f8cd23c769793fc26c0573678e2a2d07" category="section-title">02 de janeiro de 2022</block>
+  <block id="082c0044d00a111e7b5f1e9d7edd6dbb" category="section-title">04 de outubro de 2021</block>
+  <block id="c0c4e254eb7382750d30e5d2119f551b" category="section-title">02 de setembro de 2021</block>
+  <block id="4ec78699b23bbdb93ac30d4bf4a1abbb" category="section-title">07 de julho de 2021</block>
+  <block id="0f9e6273eeca8972509b0aa49385189a" category="section-title">08 de março de 2021</block>
+  <block id="47c670fdbd357ec4b6b3895f473eae3c" category="section-title">04 de janeiro de 2021</block>
+  <block id="6337732b75aa62e45d9707965f327458" category="section-title">03 de novembro de 2020</block>
 </blocks>

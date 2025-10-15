@@ -20,7 +20,7 @@ Os aprimoramentos descritos nesta página são específicos para gerenciar o Clo
 
 
 
-== 6 de outubro de 2025
+== 06 de outubro de 2025
 
 
 
@@ -40,7 +40,7 @@ Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cl
 
 
 
-== 4 de setembro de 2025
+== 04 de setembro de 2025
 
 
 
@@ -159,7 +159,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 
 
 
-== 3 de abril de 2025
+== 03 de abril de 2025
 
 
 
@@ -211,7 +211,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 
 
 
-== 6 de março de 2025
+== 06 de março de 2025
 
 
 
@@ -282,7 +282,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capaci
 
 
 
-== 9 de dezembro de 2024
+== 09 de dezembro de 2024
 
 
 
@@ -371,7 +371,7 @@ Para obter mais informações sobre Zonas Locais da AWS com Implantações de HA
 
 
 
-== 7 de outubro de 2024
+== 07 de outubro de 2024
 
 
 
@@ -383,7 +383,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-clo
 
 
 
-== 9 de setembro de 2024
+== 09 de setembro de 2024
 
 
 
@@ -430,7 +430,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/["Saiba mais sob
 
 
 
-== 8 de agosto de 2024
+== 08 de agosto de 2024
 
 
 
@@ -515,7 +515,7 @@ Você não pode mais criar um volume a partir de um modelo ou editar as tags de 
 
 
 
-== 8 de março de 2024
+== 08 de março de 2024
 
 
 
@@ -527,7 +527,7 @@ Se exigido por suas políticas de segurança, você pode configurar suas instân
 
 
 
-== 5 de março de 2024
+== 05 de março de 2024
 
 
 
@@ -539,7 +539,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9141-relnotes/["Saiba mais sob
 
 
 
-== 2 de fevereiro de 2024
+== 02 de fevereiro de 2024
 
 
 
@@ -571,7 +571,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-clo
 
 
 
-== 8 de janeiro de 2024
+== 08 de janeiro de 2024
 
 
 
@@ -589,7 +589,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azu
 
 
 
-== 6 de dezembro de 2023
+== 06 de dezembro de 2023
 
 
 
@@ -612,7 +612,7 @@ Agora você pode criar um FlexVol volume de até 300 TiB com o System Manager e 
 
 
 
-== 5 de dezembro de 2023
+== 05 de dezembro de 2023
 
 As seguintes alterações foram introduzidas.
 
@@ -655,7 +655,7 @@ Para obter uma lista de todas as regiões, consulte o https://bluexp.netapp.com/
 
 
 
-== 8 de novembro de 2023
+== 08 de novembro de 2023
 
 A seguinte alteração foi introduzida com a versão 3.9.35 do Connector.
 
@@ -669,7 +669,7 @@ Para obter uma lista de todas as regiões, consulte o https://bluexp.netapp.com/
 
 
 
-== 1 de novembro de 2023
+== 01 de novembro de 2023
 
 A seguinte alteração foi introduzida com a versão 3.9.34 do Connector.
 
@@ -707,7 +707,7 @@ Para obter uma lista de todas as regiões que oferecem suporte a várias zonas d
 
 
 
-== 6 de outubro de 2023
+== 06 de outubro de 2023
 
 A seguinte alteração foi introduzida com a versão 3.9.34 do Connector.
 
@@ -787,7 +787,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9131-relnotes/["Saiba mais sob
 
 
 
-== 2 de julho de 2023
+== 02 de julho de 2023
 
 As seguintes alterações foram introduzidas com a versão 3.9.31 do Connector.
 
@@ -823,7 +823,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9131-relnotes["Saiba mais sobr
 
 
 
-== 4 de junho de 2023
+== 04 de junho de 2023
 
 A seguinte alteração foi introduzida com a versão 3.9.30 do Connector.
 
@@ -837,7 +837,7 @@ Para saber mais sobre como atualizar o Cloud Volumes ONTAP por meio do BlueXP, c
 
 
 
-== 7 de maio de 2023
+== 07 de maio de 2023
 
 As seguintes alterações foram introduzidas com a versão 3.9.29 do Connector.
 
@@ -881,7 +881,7 @@ Agora, uma notificação é exibida sempre que você acessa o Cloud Volumes ONTA
 
 
 
-== 4 de abril de 2023
+== 04 de abril de 2023
 
 
 
@@ -959,7 +959,7 @@ Para disponibilidade regional, consulte o https://bluexp.netapp.com/cloud-volume
 
 
 
-== 5 de março de 2023
+== 05 de março de 2023
 
 As seguintes alterações foram introduzidas com a versão 3.9.27 do Connector.
 
@@ -1010,7 +1010,7 @@ Saiba mais sobre https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/refe
 
 
 
-== 5 de fevereiro de 2023
+== 05 de fevereiro de 2023
 
 As seguintes alterações foram introduzidas com a versão 3.9.26 do Connector.
 
@@ -1074,7 +1074,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes["Saiba mais sobr
 
 
 
-== 8 de dezembro de 2022
+== 08 de dezembro de 2022
 
 
 
@@ -1086,7 +1086,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9121-relnotes["Saiba mais sobr
 
 
 
-== 4 de dezembro de 2022
+== 04 de dezembro de 2022
 
 As seguintes alterações foram introduzidas com a versão 3.9.24 do Connector.
 
@@ -1118,7 +1118,7 @@ https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["Docume
 
 
 
-== 6 de novembro de 2022
+== 06 de novembro de 2022
 
 As seguintes alterações foram introduzidas com a versão 3.9.23 do Connector.
 
@@ -1291,7 +1291,7 @@ https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["Docume
 
 
 
-== 7 de junho de 2022
+== 07 de junho de 2022
 
 As seguintes alterações foram introduzidas com a versão 3.9.19 do Connector.
 
@@ -1369,7 +1369,7 @@ Observe que você deve usar o ONTAP CLI ou o System Manager para criar uma VM de
 
 
 
-== 2 de maio de 2022
+== 02 de maio de 2022
 
 As seguintes alterações foram introduzidas com a versão 3.9.18 do Connector.
 
@@ -1503,7 +1503,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-create-volumes.htm
 
 
 
-== 9 de fevereiro de 2022
+== 09 de fevereiro de 2022
 
 
 
@@ -1529,7 +1529,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html[
 
 
 
-== 6 de fevereiro de 2022
+== 06 de fevereiro de 2022
 
 
 
@@ -1561,7 +1561,7 @@ Atualizamos a *Carteira Digital* consolidando as licenças do Cloud Volumes ONTA
 
 
 
-== 2 de janeiro de 2022
+== 02 de janeiro de 2022
 
 As seguintes alterações foram introduzidas com a versão 3.9.14 do Connector.
 
@@ -1657,7 +1657,7 @@ Essa alteração se aplica aos _novos_ sistemas Cloud Volumes ONTAP a partir da 
 
 
 
-== 4 de outubro de 2021
+== 04 de outubro de 2021
 
 As seguintes alterações foram introduzidas com a versão 3.9.11 do Connector.
 
@@ -1677,7 +1677,7 @@ Reduzimos o tempo necessário para implantar um ambiente de trabalho do Cloud Vo
 
 
 
-== 2 de setembro de 2021
+== 02 de setembro de 2021
 
 As seguintes alterações foram introduzidas com a versão 3.9.10 do Connector.
 
@@ -1695,7 +1695,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-azure-encry
 
 
 
-== 7 de julho de 2021
+== 07 de julho de 2021
 
 As seguintes alterações foram introduzidas com a versão 3.9.8 do Connector.
 
@@ -1883,7 +1883,7 @@ Quando o BlueXP cria contas de armazenamento no Azure para o Cloud Volumes ONTAP
 
 
 
-== 8 de março de 2021
+== 08 de março de 2021
 
 As seguintes alterações foram introduzidas com a versão 3.9.4 do Connector.
 
@@ -1937,7 +1937,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gc
 
 
 
-== 4 de janeiro de 2021
+== 04 de janeiro de 2021
 
 As seguintes alterações foram introduzidas com a versão 3.9.2 do Connector.
 
@@ -1994,7 +1994,7 @@ O Cloud Volumes ONTAP agora oferece suporte aos seguintes tipos de máquinas:
 
 
 
-== 3 de novembro de 2020
+== 03 de novembro de 2020
 
 As seguintes alterações foram introduzidas com a versão 3.9.0 do Connector.
 

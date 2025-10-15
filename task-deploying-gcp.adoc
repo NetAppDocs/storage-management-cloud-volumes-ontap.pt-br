@@ -272,6 +272,9 @@ Se você tiver algum problema ao implantar o sistema Cloud Volumes ONTAP , revis
 
 Para obter ajuda adicional, acesse https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Suporte NetApp Cloud Volumes ONTAP"^] .
 
+
+CAUTION: Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal do Google Cloud, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamento inesperado ou perda de dados.
+
 .Depois que você terminar
 * Se você provisionou um compartilhamento CIFS, conceda aos usuários ou grupos permissões para os arquivos e pastas e verifique se esses usuários podem acessar o compartilhamento e criar um arquivo.
 * Se você quiser aplicar cotas aos volumes, use o ONTAP System Manager ou o ONTAP CLI.
@@ -511,4 +514,11 @@ Para obter ajuda adicional, acesse https://mysupport.netapp.com/site/products/al
 +
 As cotas permitem que você restrinja ou rastreie o espaço em disco e o número de arquivos usados por um usuário, grupo ou qtree.
 
+
+
+
+CAUTION: Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal do Google Cloud, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamento inesperado ou perda de dados.
+
+.Links relacionados
+* link:task-planning-your-config-gcp.html["Planejando sua configuração do Cloud Volumes ONTAP no Google Cloud"]
 

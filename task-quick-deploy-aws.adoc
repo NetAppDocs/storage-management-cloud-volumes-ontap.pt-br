@@ -110,6 +110,9 @@ TIP: Se você quiser utilizar WORM e camadas de dados, desabilite o Backup e Rec
 .Resumo
 Verifique ou edite os detalhes inseridos e clique em *Criar*.
 
+
+CAUTION: Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal de nuvem da AWS, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamento inesperado ou perda de dados.
+
 .Links relacionados
 * link:task-planning-your-config.html["Planejando sua configuração do Cloud Volumes ONTAP"]
 * link:task-deploying-otc-aws.html["Implantar o Cloud Volumes ONTAP na AWS usando implantação avançada"]
