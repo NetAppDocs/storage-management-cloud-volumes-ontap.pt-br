@@ -2019,11 +2019,6 @@
   <block id="556696d309aaf81ce29c6a76f8f8a503" category="list-text">Par HA</block>
   <block id="ae76d7929a27ed322b88161e71bfa161" category="list-text">9.17.1 RC1</block>
   <block id="97c2102867c5b54db1b773f42a540c16" category="list-text">9.16.1 GA</block>
-  <block id="592862851dd12d3c1919101b087e511e" category="list-text">9.10.1 P3</block>
-  <block id="8198b6447184bf52b73a4e25d8850ed0" category="list-text">9.9.1 P8</block>
-  <block id="e752d3074b911c222830c7f61cf640f3" category="list-text">9.9.1 P7</block>
-  <block id="91e09743e1f25ab741e5f94a5852dfc4" category="list-text">9,8 P10</block>
-  <block id="19d6e3f3d60f0c83123cd6e040378404" category="list-text">9,7 P6</block>
   <block id="1b636e5dd7d104ae9efd572a823a9227" category="summary">Ao escolher bloquear seu ambiente do Google com o VPC Service Controls, você deve entender como o NetApp Console e o Cloud Volumes ONTAP interagem com as APIs do Google, bem como configurar seu parâmetro de serviço para implantar o Cloud Volumes ONTAP.</block>
   <block id="03b6a8927e57dee9e13ce3e743433f8c" category="doc">Configurar o VPC Service Controls para implantar o Cloud Volumes ONTAP no Google Cloud</block>
   <block id="a7b34a1b61cc62dbb7e5736e41d0dbca" category="paragraph">Ao escolher bloquear seu ambiente do Google Cloud com o VPC Service Controls, você deve entender como o NetApp Console e o Cloud Volumes ONTAP interagem com as APIs do Google Cloud, bem como configurar seu perímetro de serviço para implantar o Console e o Cloud Volumes ONTAP.</block>
@@ -3064,7 +3059,6 @@
   <block id="6594bb18196ee5d1d6c4b71b099070f5" category="inline-link">Saiba mais sobre o NetApp Backup and Recovery</block>
   <block id="221ae32e4b926c195e4bfe10427d4c4c" category="list-text"><block ref="221ae32e4b926c195e4bfe10427d4c4c" category="inline-link-rx"></block></block>
   <block id="5d3c5438b45c093fa442e485741acbb6" category="list-text">*Localização*: selecione uma região, zona de disponibilidade, VNet e sub-rede e, em seguida, marque a caixa de seleção para confirmar a conectividade de rede entre o agente do Console e o local de destino.</block>
-  <block id="1c3093638c74eef35618192ff8049216" category="admonition">Para regiões da China, implantações de nó único são suportadas apenas no Cloud Volumes ONTAP 9.12.1 GA e 9.13.0 GA.  Você pode atualizar essas versões para patches e lançamentos posteriores do Cloud Volumes ONTAP.  Se você quiser implantar versões posteriores do Cloud Volumes ONTAP em regiões da China, entre em contato com o Suporte da NetApp .  Somente licenças compradas diretamente da NetApp são suportadas nas regiões da China; assinaturas do marketplace não estão disponíveis.</block>
   <block id="de908965dc022756e01253bb2ab070dc" category="list-text">*Conectividade*: Escolha um grupo de recursos novo ou existente e, em seguida, escolha se deseja usar o grupo de segurança predefinido ou usar o seu próprio.</block>
   <block id="dd23acac46f17cbfd4d5541f8ee3c7a1" category="cell">Grupo de Recursos</block>
   <block id="2d6e88c43d1b87d3d042cce1773371b7" category="paragraph">Crie um novo grupo de recursos para o Cloud Volumes ONTAP ou use um grupo de recursos existente.  A prática recomendada é usar um novo grupo de recursos dedicado para o Cloud Volumes ONTAP.  Embora seja possível implantar o Cloud Volumes ONTAP em um grupo de recursos compartilhados existente, isso não é recomendado devido ao risco de perda de dados.  Veja o aviso acima para mais detalhes.</block>
@@ -4958,11 +4952,7 @@
   <block id="677ee5101eb2acd8a357643d03784fa7" category="section-title">Lançamentos de patches</block>
   <block id="62ae53bd919f1657ba6545513b2e3199" category="paragraph">A partir de janeiro de 2024, as atualizações de patch só estarão disponíveis se houver um lançamento de patch para as três versões mais recentes do Cloud Volumes ONTAP.  Versões de patch ocasionalmente estão disponíveis para implantação, quando a versão RC ou GA não está disponível para implantação.</block>
   <block id="25163e975710186a452c0f2fefe81448" category="inline-xref">baixando a imagem ONTAP</block>
-  <block id="8833215073f8a04b66c837c0d0e34161" category="paragraph">Usamos a versão mais recente do GA para determinar as três versões mais recentes a serem exibidas no Console.  Por exemplo, se a versão atual do GA for 9.13.1, os patches para 9.11.1-9.13.1 aparecerão no Console.  Se você quiser atualizar para uma versão de patch para versões 9.11.1 ou inferiores, você precisará usar o procedimento de atualização manual por<block ref="741f5e59386960528e5ac58506855727" category="inline-xref-macro-rx"></block> .</block>
-  <block id="b0b450f5a78908e6b78f5c13bf6b0da4" category="paragraph">Como regra geral para lançamentos de patch (P), você pode atualizar de uma versão para qualquer versão P da versão atual que você está executando ou para a próxima versão.</block>
   <block id="473579de7dd820e9afa2d1deba8066a3" category="paragraph">Aqui estão alguns exemplos:</block>
-  <block id="1893a0478b381d08866888a1c7f8607a" category="list-text">9.13.0 &gt; 9.13.1P15</block>
-  <block id="4ae2d614cc725ba442c80c740c08f75f" category="list-text">9.12.1 &gt; 9.13.1P2</block>
   <block id="ac07e79360f18c4b3fc951c45c21a6ed" category="section-title">Revertendo ou rebaixando</block>
   <block id="2383344da5e27a7119b263bf26937e0b" category="paragraph">Não há suporte para reverter ou fazer downgrade do Cloud Volumes ONTAP para uma versão anterior.</block>
   <block id="1d4a4bd5e79a1d078c7cb5902a3481e8" category="inline-link-macro">registrar manualmente os sistemas PAYGO</block>
@@ -5999,4 +5989,28 @@
   <block id="0f9e6273eeca8972509b0aa49385189a" category="section-title">08 de março de 2021</block>
   <block id="47c670fdbd357ec4b6b3895f473eae3c" category="section-title">04 de janeiro de 2021</block>
   <block id="6337732b75aa62e45d9707965f327458" category="section-title">03 de novembro de 2020</block>
+  <block id="7b6830c2d647bfeae537b084a1bc4c97" category="doc">O Cloud Volumes ONTAP no Azure agora está limitado às versões mais recentes com suporte</block>
+  <block id="3dd7b623eed29152e13ab227af7f1473" category="paragraph">As implantações e atualizações do Cloud Volumes ONTAP no Azure por meio do NetApp Console agora estão restritas às versões mais recentes com suporte.  Essa alteração garante que seus sistemas executem versões totalmente compatíveis com os recursos mais recentes e melhorias de segurança.  O Console solicitará que você atualize apenas para as versões suportadas.</block>
+  <block id="9ca9f40464321b098a9b31a750f1e5ce" category="paragraph">Para mais detalhes, consulte:</block>
+  <block id="c17919ed5cc121684523f6b5d0e3c307" category="list-text">Implantação:<block ref="b80b2163c394b4ea1470a648426a0279" category="inline-link-rx"></block></block>
+  <block id="f5463bd04e048650140d7f8d20c78c07" category="list-text">Atualizar:<block ref="005f568bce2936777e72fec03fb4642d" category="inline-link-rx"></block></block>
+  <block id="cde3a9d223695dc89e87d7de8e6788ea" category="list-text">9.16.1 P3</block>
+  <block id="0ef0eaca71746d202f974fc1a455472d" category="list-text">9.15.1 P10</block>
+  <block id="5d8dbd1afe3d89f326c0884aff9fb268" category="list-text">9.14.1 P13</block>
+  <block id="aa5aea219834bc476b285b1236830524" category="list-text">9.13.1 P16</block>
+  <block id="1fe428516837eeacfb2efcf589684031" category="list-text">9.12.1 P18</block>
+  <block id="60712fb4ddcab7f940097cec71789c95" category="inline-link-macro">suportado no Azure</block>
+  <block id="5b4234e88e699bcad5cf3cb47499cc7a" category="admonition">Para regiões da China, implantações de nó único são suportadas apenas no Cloud Volumes ONTAP 9.12.1 GA e 9.13.0 GA. Você pode atualizar essas versões para patches e lançamentos posteriores do Cloud Volumes ONTAP como<block ref="49fae7188ea01a36257ae97784b414e8" category="inline-link-macro-rx"></block> . Se você quiser implantar versões posteriores do Cloud Volumes ONTAP em regiões da China, entre em contato com o Suporte da NetApp . Somente licenças compradas diretamente da NetApp são suportadas nas regiões da China; assinaturas do marketplace não estão disponíveis.</block>
+  <block id="cde8893afeb44f6e80f8c28b3d91be6f" category="admonition">Se uma versão mais recente do Release Candidate, Disponibilidade Geral ou patch estiver disponível para a versão selecionada, o BlueXP atualizará o sistema para essa versão ao criar o ambiente de trabalho.  Por exemplo, a atualização ocorre se você selecionar Cloud Volumes ONTAP 9.16.1 P3 e 9.16.1 P4 estiver disponível. A atualização não ocorre de uma versão para outra, por exemplo, da 9.15 para a 9.16.</block>
+  <block id="bfac3fe9125d6e450e2abe9717a99a20" category="cell">9.11.1 P20</block>
+  <block id="14875de99eeeb97599f38dd52d96437b" category="paragraph">Se você tiver uma versão anterior do Cloud Volumes ONTAP no Azure, primeiro atualize para a próxima versão e siga os caminhos de atualização suportados para atingir sua versão de destino.  Por exemplo, se você tiver o Cloud Volumes ONTAP 9.7 P7, siga este caminho de atualização:</block>
+  <block id="765914ebc72765a6e31ff30ff9088e9c" category="list-text">9,7 P7 -&gt; 9,8 P18</block>
+  <block id="5c076d0399da9edcb1edf40cc09dcef3" category="list-text">9.8 P18 -&gt; 9.9.1 P15</block>
+  <block id="bc79a3f15997ab5a2e7fc09059a29063" category="list-text">9.9.1 P15 -&gt; 9.10.1 P12</block>
+  <block id="76a47c552e13574cd485f336a9781fca" category="list-text">9.10.1 P12 -&gt; 9.11.1 P20</block>
+  <block id="3bac6516573dcda631a2711ec5a49463" category="paragraph">Usamos a versão mais recente do GA para determinar as três versões mais recentes a serem exibidas no Console. Por exemplo, se a versão atual do GA for 9.13.1, os patches para 9.11.1-9.13.1 aparecerão no Console.</block>
+  <block id="c72497d8fd823cdbac209ebf7276f802" category="paragraph">Para versões de patch 9.11.1 ou inferiores, você precisará usar um procedimento de atualização manual por<block ref="741f5e59386960528e5ac58506855727" category="inline-xref-macro-rx"></block> .</block>
+  <block id="b519bdccd361fdbdef0db125787188be" category="paragraph">Como regra geral para lançamentos de patch, você pode atualizar de uma versão de patch inferior para qualquer versão de patch superior na mesma ou na próxima versão do Cloud Volumes ONTAP .</block>
+  <block id="c4b21c5ec90f72f3862370831523b7c6" category="list-text">9.13.0 -&gt; 9.13.1 P15</block>
+  <block id="143e9e868bde298af3781d33560b0714" category="list-text">9.12.1 -&gt; 9.13.1 P2</block>
 </blocks>
