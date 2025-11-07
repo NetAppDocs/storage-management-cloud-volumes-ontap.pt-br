@@ -68,7 +68,7 @@ indexpage:
     - title: Configurações suportadas
       url: https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html
     - title: Regiões de nuvem suportadas
-      url: https://www.netapp.com/console/cloud-volumes-global-regions
+      url: https://bluexp.netapp.com/cloud-volumes-global-regions
     - title: Calculadoras
       url: https://www.netapp.com/console/calculator-hub
   - title: Blogs e comunidade
