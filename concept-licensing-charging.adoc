@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-licensing-charging.html 
-keywords: capacity-based license charging, consumption for licenses, pricing for licenses, CVO licensing, CVO charging 
+keywords: capacity-based license charging, consumption for licenses, pricing for licenses, CVO licensing, CVO charging, SnapLock charging, CIFS charging, audit volumes, primary volumes, volume-based charging 
 summary: Familiarize-se com o modelo de cobrança, consumo, preços e configurações de licenças baseadas em capacidade. 
 ---
 = Saiba mais sobre licenças baseadas em capacidade para o Cloud Volumes ONTAP
@@ -64,11 +64,11 @@ Para obter informações sobre a conversão de licenças baseadas em nó em lice
 
 
 
-== Preços e configurações suportadas
+== Cobrança e configurações suportadas em licenças baseadas em capacidade.
+
+A cobrança no Cloud Volumes ONTAP é baseada em diversos fatores, como pacotes e tipos de volume. Pacotes de licenciamento baseados em capacidade estão disponíveis com o Cloud Volumes ONTAP 9.7 e posteriores.
 
 Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["Site do NetApp Console"^] .
-
-Pacotes de licenciamento baseados em capacidade estão disponíveis com o Cloud Volumes ONTAP 9.7 e posteriores.
 
 
 
@@ -109,7 +109,7 @@ Para obter informações sobre os limites de capacidade de cada provedor de nuve
 
 == Número máximo de sistemas
 
-Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por conta do NetApp Console .  Um _sistema_ é um par de Cloud Volumes ONTAP HA, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar.  A VM de armazenamento padrão não conta para o limite.  Este limite se aplica a todos os modelos de licenciamento.
+Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por organização do NetApp Console . Um _sistema_ é um par de Cloud Volumes ONTAP HA, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar. A VM de armazenamento padrão não conta para o limite. Este limite se aplica a todos os modelos de licenciamento.
 
 Por exemplo, digamos que você tenha três sistemas:
 
@@ -127,13 +127,17 @@ Este sistema conta como três sistemas: um para o par HA e dois para as VMs de a
 
 
 
-São seis sistemas no total.  Você teria então espaço para mais 14 sistemas em sua conta.
+São seis sistemas no total. Você teria então espaço para mais 14 sistemas em sua organização.
 
-Se você tiver uma implantação grande que exija mais de 24 sistemas, entre em contato com seu representante de conta ou equipe de vendas.
-
-https://docs.netapp.com/us-en/bluexp-setup-admin/concept-netapp-accounts.html["Saiba mais sobre contas do Console"^] .
+Se você tiver uma implantação de grande porte que exija mais de 24 sistemas, entre em contato com seu representante de contas ou equipe de vendas.
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Saiba mais sobre os limites de armazenamento para AWS, Azure e Google Cloud"^] .
+
+
+
+== Cobrança por volumes de leitura/gravação
+
+Se você criar ou usar um volume gravável (leitura/gravação), ele será considerado um volume primário e a cobrança será feita com base na capacidade provisionada, de acordo com a taxa mínima por máquina virtual de armazenamento (SVM).  Exemplos incluem volumes de leitura/gravação FlexVol , volumes de auditoria SnapLock e volumes de auditoria CIFS/NFS.  Todos os volumes de dados criados pelo usuário são cobrados de acordo com sua assinatura e tipo de pacote.  Os volumes internos do ONTAP que são criados automaticamente e não podem armazenar dados, como os volumes raiz do SVM, não são cobrados.
 
 
 

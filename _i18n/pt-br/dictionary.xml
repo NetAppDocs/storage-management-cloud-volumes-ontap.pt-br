@@ -373,7 +373,6 @@
   <block id="6cd0c6e49e7da9df4ec8ac28e99ac268" category="inline-link-macro">Documentação do ONTAP : Aprenda a configurar e gerenciar serviços de armazenamento de objetos S3 no ONTAP</block>
   <block id="0beeb4ae08209eddf791d03de9fcf654" category="paragraph"><block ref="47bbca2f135630a58718ba92e2c739ed" category="inline-link-macro-rx"></block> . <block ref="3c369a9b68ac3984a3598ff92fe5ee61" category="inline-link-macro-rx"></block> .</block>
   <block id="ad18d9aa7c4c9bdbf86e39bd6dd5b727" category="section-title">NVMe-TCP</block>
-  <block id="0d214dea9d89c7c64a7c82de615920d2" category="paragraph">A partir da versão 9.12.1 do ONTAP , o NVMe-TCP é suportado por provedores de nuvem.  O NetApp Console não fornece nenhum recurso de gerenciamento para NVMe-TCP.</block>
   <block id="0c4ab7dbbb0c4e5098fca90084a314bb" category="inline-link">Documentação do ONTAP : Configurar uma VM de armazenamento para NVMe</block>
   <block id="86658a348e09419591c8b4b3fa13e84e" category="paragraph">Para obter mais informações sobre como configurar o NVMe por meio do ONTAP, consulte o<block ref="0585d9dca18b467d388c2056c53b835d" category="inline-link-rx"></block> .</block>
   <block id="d5a5fd8fd787bf62e6dfdbce64a40648" category="summary">O Digital Advisor é integrado ao NetApp Console para que você possa otimizar as operações, a segurança e o desempenho dos seus clusters ONTAP em um único painel.</block>
@@ -490,7 +489,6 @@
   <block id="cd092c954573d47ecd37b6e5d96c0c03" category="paragraph">Se lidos aleatoriamente, os blocos de dados frios na camada de capacidade se tornam quentes e passam para a camada de desempenho.  Se lidos por leituras sequenciais, como aquelas associadas a índices e verificações antivírus, os blocos de dados frios permanecem frios e não passam para a camada de desempenho.</block>
   <block id="6adf97f83acf6453d4a6a4b1070f3754" category="list-text">Nenhum</block>
   <block id="1fabb891be898874fa999bd6c6178645" category="list-text">Mantém os dados de um volume na camada de desempenho, impedindo que sejam movidos para a camada de capacidade.</block>
-  <block id="769159c4f9b24256ff288a267877baab" category="paragraph">Ao replicar um volume, você pode escolher se deseja hierarquizar os dados no armazenamento de objetos.  Se fizer isso, o Console aplicará a política de *Backup* ao volume de proteção de dados.  A partir do Cloud Volumes ONTAP 9.6, a política de camadas *All* substitui a política de backup.</block>
   <block id="4768992c9064e7930243f41cf12e51be" category="section-title">Desativar o Cloud Volumes ONTAP afeta o período de resfriamento</block>
   <block id="98c767d4b7fc2be4f0613184e8e83485" category="paragraph">Blocos de dados são resfriados por varreduras de resfriamento.  Durante esse processo, os blocos que não foram utilizados têm sua temperatura movida (resfriada) para o próximo valor mais baixo.  O tempo de resfriamento padrão depende da política de níveis de volume:</block>
   <block id="44e3ba7e22b4e4f9e276efbf6443273d" category="list-text">Automático: 31 dias</block>
@@ -793,10 +791,8 @@
   <block id="63b54c0d3b4fb8e35270bfdf7b2bdcbb" category="inline-link-macro">Aprenda como alterar os métodos de cobrança</block>
   <block id="ec3e25d80cfc0e5561493729eadecef7" category="paragraph"><block ref="ea19fa0e06a6047bcaabb9af62b066c3" category="inline-link-macro-rx"></block> .</block>
   <block id="2b0470da2a26cbbea5d95f4e261d82ee" category="paragraph">Para obter informações sobre a conversão de licenças baseadas em nó em licenças baseadas em capacidade, consulte</block>
-  <block id="7af9b0ab22150a40b2c1c451de82db3c" category="section-title">Preços e configurações suportadas</block>
   <block id="35582eb3752ea3397836cc80ba8c8d00" category="inline-link">Site do NetApp Console</block>
   <block id="2a739686df6dee81bda20f0beee8ad43" category="paragraph">Para obter detalhes sobre preços, acesse o<block ref="6dd6e0ebeffdbf7b0b2bee2f498a2c82" category="inline-link-rx"></block> .</block>
-  <block id="4e4c431843fe55f93c074808800bf7d0" category="paragraph">Pacotes de licenciamento baseados em capacidade estão disponíveis com o Cloud Volumes ONTAP 9.7 e posteriores.</block>
   <block id="2204b0f79985b7b0565114e8305937a5" category="section-title">VMs de armazenamento</block>
   <block id="ee095a2fd0990ba785c303c6524d8145" category="list-text">Não há custos extras de licenciamento para VMs de armazenamento de dados adicionais (SVMs), mas há uma cobrança de capacidade mínima de 4 TiB por SVM de serviço de dados.</block>
   <block id="cc331a0f761602982769cdbb99e71272" category="list-text">Os SVMs de recuperação de desastres são cobrados de acordo com a capacidade provisionada.</block>
@@ -817,7 +813,6 @@
   <block id="b0cd7667098b2a3439c52ba1f9334faa" category="inline-link">Documentação do Google Cloud</block>
   <block id="9ccfe59c1252cf7f615b4c7dab763516" category="list-text"><block ref="9ccfe59c1252cf7f615b4c7dab763516" category="inline-link-rx"></block></block>
   <block id="170d227d215fb560bb4c8ad4e345183a" category="section-title">Número máximo de sistemas</block>
-  <block id="f27b74a698b22465262eeaf1de67760f" category="paragraph">Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por conta do NetApp Console .  Um _sistema_ é um par de Cloud Volumes ONTAP HA, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar.  A VM de armazenamento padrão não conta para o limite.  Este limite se aplica a todos os modelos de licenciamento.</block>
   <block id="21e39e83d5fa1c8ef2eacd7021384a1a" category="paragraph">Por exemplo, digamos que você tenha três sistemas:</block>
   <block id="35851ad4214e2cb5358ee8d010fd31e9" category="list-text">Um sistema Cloud Volumes ONTAP de nó único com uma VM de armazenamento (esta é a VM de armazenamento padrão criada quando você implanta o Cloud Volumes ONTAP)</block>
   <block id="8cff626e0f3fb63bbf88dedb4fd98712" category="paragraph">Este sistema conta como um sistema.</block>
@@ -825,10 +820,6 @@
   <block id="f37d86fef13241720dc9ebcc64539e54" category="paragraph">Este sistema conta como dois sistemas: um para o sistema de nó único e um para a VM de armazenamento adicional.</block>
   <block id="4c41d499b08fed91769d6d2c3b51157a" category="list-text">Um par de Cloud Volumes ONTAP HA com três VMs de armazenamento (a VM de armazenamento padrão, mais duas VMs de armazenamento adicionais que você criou)</block>
   <block id="67850a8a97f903485494427b0d760819" category="paragraph">Este sistema conta como três sistemas: um para o par HA e dois para as VMs de armazenamento adicionais.</block>
-  <block id="e1d61ff8b15b12854145940279164504" category="paragraph">São seis sistemas no total.  Você teria então espaço para mais 14 sistemas em sua conta.</block>
-  <block id="2357265e1fb763337b05d3b30d1a7528" category="paragraph">Se você tiver uma implantação grande que exija mais de 24 sistemas, entre em contato com seu representante de conta ou equipe de vendas.</block>
-  <block id="591d2349852174089342827b8714fe4f" category="inline-link">Saiba mais sobre contas do Console</block>
-  <block id="59906c19ffde10145ac7617d3934aef8" category="paragraph"><block ref="f004206da9034ec17bce4edb7ce72c1d" category="inline-link-rx"></block> .</block>
   <block id="a0aa07133f0223d64ee6522e4e293e43" category="inline-link">Saiba mais sobre os limites de armazenamento para AWS, Azure e Google Cloud</block>
   <block id="9f909224987b48cbe22536ad43c7ca22" category="paragraph"><block ref="1d60a77806a2b83c9b2383a4fa2b7908" category="inline-link-rx"></block> .</block>
   <block id="25827e83a178b9b140976a356e0ea48a" category="section-title">Notas sobre o carregamento</block>
@@ -2083,7 +2074,6 @@
   <block id="51aa8ce93131e7a6746f62c49df04fe2" category="paragraph">Crie um volume FlexCache no seu sistema Cloud Volumes ONTAP com um volume de origem criptografado.  Para etapas detalhadas e considerações adicionais, consulte as seguintes seções:</block>
   <block id="d2fab9f48db0caec032fdea6ff523a5e" category="summary">Você pode descobrir e adicionar sistemas Cloud Volumes ONTAP existentes ao Console.  Você pode fazer isso se tiver implantado um novo sistema.</block>
   <block id="243a4a66eb491b4d9b47fe9b5bb0f644" category="doc">Adicionar um sistema Cloud Volumes ONTAP existente ao NetApp Console</block>
-  <block id="87864c021fc7861daab126724867211c" category="paragraph">Você pode descobrir e adicionar sistemas Cloud Volumes ONTAP existentes ao NetApp Console.  Você pode fazer isso se tiver implantado um novo sistema.</block>
   <block id="ddf67437a4757d7231aaedf4fdf85f02" category="paragraph">Você precisa saber a senha da conta de usuário administrador do Cloud Volumes ONTAP .</block>
   <block id="f18b3bd3fb25ef360dc2c49e02897678" category="list-text">No menu de navegação à esquerda, selecione *Armazenamento &gt; Gerenciamento*.</block>
   <block id="074cf21e03ff50b13273298d7f278b00" category="list-text">Na página *Sistema*, clique em *Adicionar Sistema*.</block>
@@ -6016,4 +6006,27 @@
   <block id="b2f564ccc8dab8d25ce5727e3ac0f553" category="inline-link">Caminhos de atualização com suporte para o Azure</block>
   <block id="cd28d8af5b4308747357925ae313e125" category="list-text">Atualizar:<block ref="9fd9abde9fac7cd4edc5e352cd251056" category="inline-link-rx"></block></block>
   <block id="810ddecf604478d8ee317e1ac69d7971" category="section-title">17 de outubro de 2025</block>
+  <block id="6e4298fbeec2cc865308057fb6986a86" category="doc">Suporte aprimorado para NVMe-TCP</block>
+  <block id="84b4c7fa59d88db266b9be7eb3cff08e" category="paragraph">Anteriormente, ao implantar instâncias do Cloud Volumes ONTAP sobre NVMe-TCP, era necessário obter e aplicar manualmente as licenças NVMe antes da implantação.  Com esta atualização, o Cloud Volumes ONTAP agora instala automaticamente as licenças NVMe necessárias durante a implantação, simplificando o processo de configuração.</block>
+  <block id="14579d19ae9f1a43eae607d4450c7546" category="paragraph">Para implantações NVMe-TCP existentes que não possuem licenças, o Cloud Volumes ONTAP aplica as licenças automaticamente.  Você precisa reiniciar o sistema para que as licenças entrem em vigor.</block>
+  <block id="b3a4d40f62316bd15534c438b8057c89" category="inline-link">Protocolos de cliente suportados para Cloud Volumes ONTAP: NVMe-TCP</block>
+  <block id="748f500c59212ec947a9dc03913e95cb" category="paragraph">Para obter mais informações, consulte<block ref="b12aae47ee00e2542df4c8a098a5e7ff" category="inline-link-rx"></block> .</block>
+  <block id="fa21e183126dded03797496a925ceb6f" category="paragraph">A partir da versão 9.12.1 do ONTAP , o NVMe-TCP é compatível com todos os provedores de nuvem.  O Cloud Volumes ONTAP oferece suporte ao NVMe-TCP como protocolo de bloco para máquinas virtuais de armazenamento (SVMs) durante a implantação e instala automaticamente as licenças NVMe necessárias.</block>
+  <block id="bb688477c24b42186c3751ddefb728f4" category="paragraph">O NetApp Console não fornece nenhum recurso de gerenciamento para NVMe-TCP.</block>
+  <block id="8c340dc334134096f68b880b42a8692c" category="paragraph-title">Replicação</block>
+  <block id="6c6851f26dd089ac8e2cd4699f9f3ceb" category="paragraph">Ao replicar um volume, você pode escolher se deseja hierarquizar os dados no armazenamento de objetos. Se fizer isso, o Console aplicará a política de *Backup* ao volume de proteção de dados. A partir do Cloud Volumes ONTAP 9.6, a política de camadas *All* substitui a política de backup. Quando uma relação de replicação é excluída, o volume de destino mantém a política de hierarquização que estava em vigor durante a replicação.</block>
+  <block id="09438e246bb1f06dffcb0bf379d85c2d" category="section-title">Cobrança e configurações suportadas em licenças baseadas em capacidade.</block>
+  <block id="42c1e1bd55f7468cc1c1f67bd3b2e55e" category="paragraph">A cobrança no Cloud Volumes ONTAP é baseada em diversos fatores, como pacotes e tipos de volume. Pacotes de licenciamento baseados em capacidade estão disponíveis com o Cloud Volumes ONTAP 9.7 e posteriores.</block>
+  <block id="d52f05c9c9a1d28edf0a8c353fa4005c" category="paragraph">Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por organização do NetApp Console . Um _sistema_ é um par de Cloud Volumes ONTAP HA, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar. A VM de armazenamento padrão não conta para o limite. Este limite se aplica a todos os modelos de licenciamento.</block>
+  <block id="f06bb25c94e6b1aa8710c80dd3586a02" category="paragraph">São seis sistemas no total. Você teria então espaço para mais 14 sistemas em sua organização.</block>
+  <block id="39f86900550d222b0169a7f96cfef9a1" category="paragraph">Se você tiver uma implantação de grande porte que exija mais de 24 sistemas, entre em contato com seu representante de contas ou equipe de vendas.</block>
+  <block id="a8fb53b4243112b2693e2c613f675091" category="section-title">Cobrança por volumes de leitura/gravação</block>
+  <block id="84bd415e73410ff40bbdb14fc761f16b" category="paragraph">Se você criar ou usar um volume gravável (leitura/gravação), ele será considerado um volume primário e a cobrança será feita com base na capacidade provisionada, de acordo com a taxa mínima por máquina virtual de armazenamento (SVM).  Exemplos incluem volumes de leitura/gravação FlexVol , volumes de auditoria SnapLock e volumes de auditoria CIFS/NFS.  Todos os volumes de dados criados pelo usuário são cobrados de acordo com sua assinatura e tipo de pacote.  Os volumes internos do ONTAP que são criados automaticamente e não podem armazenar dados, como os volumes raiz do SVM, não são cobrados.</block>
+  <block id="1c7cc97d04b2c06b7aed1dbd999a1224" category="inline-link-macro">Licenciamento e cobrança no Cloud Volumes ONTAP</block>
+  <block id="fbba812442fbd9038d179b574eadad39" category="list-text"><block ref="fbba812442fbd9038d179b574eadad39" category="inline-link-macro-rx"></block></block>
+  <block id="d6719354559c5d34c9043df89f6f5853" category="list-text">Para obter mais informações sobre o WORM, consulte:<block ref="ff3d1f58a19f3b8e0bab491b41acecc3" category="inline-link-macro-rx"></block> .</block>
+  <block id="faacd8dd11a17b7255f09589dcbcd3eb" category="list-text">Para obter informações sobre o carregamento de volumes SnapLock , consulte<block ref="fbba812442fbd9038d179b574eadad39" category="inline-link-macro-rx"></block> .</block>
+  <block id="d3a90b06c127d63ce537a10a93397d85" category="paragraph">Você pode descobrir e adicionar sistemas Cloud Volumes ONTAP existentes ao NetApp Console. Você pode fazer isso se tiver implantado um novo sistema.</block>
+  <block id="b478e45f14d8c22f3f75f65edd503adc" category="admonition">Você só pode adicionar sistemas que estejam registrados com a conta que você usou para acessar o Console.  Se você possui várias contas ou organizações, certifique-se de estar conectado à conta correta antes de adicionar sistemas.  Não é possível descobrir, visualizar ou gerenciar sistemas que estejam registrados em uma conta ou organização diferente.</block>
+  <block id="77750efa6f5ff153acdc42067058017f" category="section-title">10 de novembro de 2025</block>
 </blocks>

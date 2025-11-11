@@ -196,7 +196,8 @@ Se lidos aleatoriamente, os blocos de dados frios na camada de capacidade se tor
 Nenhum:: Mantém os dados de um volume na camada de desempenho, impedindo que sejam movidos para a camada de capacidade.
 
 
-Ao replicar um volume, você pode escolher se deseja hierarquizar os dados no armazenamento de objetos.  Se fizer isso, o Console aplicará a política de *Backup* ao volume de proteção de dados.  A partir do Cloud Volumes ONTAP 9.6, a política de camadas *All* substitui a política de backup.
+.Replicação
+Ao replicar um volume, você pode escolher se deseja hierarquizar os dados no armazenamento de objetos. Se fizer isso, o Console aplicará a política de *Backup* ao volume de proteção de dados. A partir do Cloud Volumes ONTAP 9.6, a política de camadas *All* substitui a política de backup. Quando uma relação de replicação é excluída, o volume de destino mantém a política de hierarquização que estava em vigor durante a replicação.
 
 
 

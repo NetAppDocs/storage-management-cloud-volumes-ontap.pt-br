@@ -116,4 +116,5 @@ Você deve entender o seguinte sobre como habilitar a hierarquização de dados 
 
 .Link relacionado
 * link:reference-worm-snaplock.html["Crie cópias de Snapshot invioláveis para armazenamento WORM"]
+* link:concept-licensing-charging.html["Licenciamento e cobrança no Cloud Volumes ONTAP"]
 
