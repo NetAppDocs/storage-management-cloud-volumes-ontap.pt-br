@@ -27,7 +27,7 @@ https://www.netapp.com/services/keystone/["Saiba mais sobre a Keystone"^]
 Antes de poder usar e gerenciar assinaturas do Keystone no Console, você precisa entrar em contato com a NetApp para autorizar sua conta do Console com suas assinaturas do Keystone .
 
 .Passos
-. No menu do NetApp Console , selecione *Governança > Licenses and subscriptions*.
+. No menu do NetApp Console , selecione *Administração > Licenses and subscriptions*.
 . Selecione * Assinaturas Keystone *.
 . Se você vir a página *Bem-vindo ao NetApp Keystone*, envie um e-mail para o endereço listado na página.
 +
@@ -43,7 +43,7 @@ Um representante da NetApp processará sua solicitação autorizando sua conta a
 Depois que a NetApp autorizar sua conta, você poderá vincular assinaturas do Keystone para uso com o Cloud Volumes ONTAP.  Esta ação permite que os usuários selecionem a assinatura como método de cobrança para novos sistemas Cloud Volumes ONTAP .
 
 .Passos
-. No menu do NetApp Console , selecione *Governança > Licenses and subscriptions*.
+. No menu do NetApp Console , selecione *Administração > Licenses and subscriptions*.
 . Selecione * Assinaturas Keystone *.
 . Para a assinatura que você deseja vincular, clique emimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Link*.
 
@@ -58,7 +58,7 @@ A assinatura agora está vinculada à sua organização ou conta do Console e di
 Se quiser alterar a capacidade comprometida para os níveis de serviço da sua assinatura, você pode enviar uma solicitação à NetApp diretamente do Console. Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para sistemas Cloud Volumes ONTAP .
 
 .Passos
-. No menu do NetApp Console , selecione *Governança > Licenses and subscriptions*.
+. No menu do NetApp Console , selecione *Administração > Licenses and subscriptions*.
 . Selecione * Assinaturas Keystone *.
 . Para a assinatura cuja capacidade você deseja ajustar, clique em image:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Exibir detalhes e editar*.
 . Insira a capacidade comprometida solicitada para uma ou mais assinaturas.
@@ -83,7 +83,7 @@ https://docs.netapp.com/us-en/keystone-staas/integrations/aiq-keystone-details.h
 Se não quiser mais usar uma assinatura do Keystone com o Console, você pode desvincular a assinatura. Observe que você só pode desvincular uma assinatura que não esteja vinculada a uma assinatura existente do Cloud Volumes ONTAP .
 
 .Passos
-. No menu do NetApp Console , selecione *Governança > Licenses and subscriptions*.
+. No menu do NetApp Console , selecione *Administração > Licenses and subscriptions*.
 . Selecione * Keystone*.
 . Para a assinatura que você deseja desvincular, clique emimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Desvincular*.
 
