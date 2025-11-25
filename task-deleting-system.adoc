@@ -24,7 +24,7 @@ NOTE: Outros recursos, como backups gerenciados pelo NetApp Backup and Recovery 
 Quando o Console implanta o Cloud Volumes ONTAP no seu provedor de nuvem, ele habilita a proteção de encerramento nas instâncias.  Esta opção ajuda a evitar encerramento acidental.
 
 .Passos
-. Se você habilitou o Backup e a Recuperação no sistema, determine se os dados de backup ainda são necessários e então https://docs.netapp.com/us-en/bluexp-backup-recovery/task-manage-backups-ontap.html#deleting-backups["exclua os backups, se necessário"^] .
+. Se você ativou o Backup e Recuperação no sistema, determine se os dados de backup ainda são necessários e então https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-manage.html#delete-backups["exclua os backups, se necessário"^] .
 +
 O Backup and Recovery é independente do Cloud Volumes ONTAP por design.  O Backup e Recuperação não exclui backups automaticamente quando você exclui um sistema Cloud Volumes ONTAP e não há suporte atual na interface do usuário para excluir os backups após o sistema ter sido excluído.
 

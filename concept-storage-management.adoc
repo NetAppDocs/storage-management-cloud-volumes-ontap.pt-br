@@ -129,7 +129,7 @@ O gerenciamento automático de capacidade do Console não se aplica a LUNs.  Ao 
 
 === Gerenciamento de capacidade manual
 
-Se a organização ou o administrador da conta definir o Modo de Gerenciamento de Capacidade como manual, o Console informará você para tomar as ações apropriadas para decisões de capacidade.  Os mesmos exemplos descritos no modo automático se aplicam ao modo manual, mas cabe a você aceitar as ações.
+Se o administrador da organização ou da conta definir o *Modo de Gerenciamento de Capacidade* como manual, o Console informará que você deve tomar as medidas apropriadas para as decisões de capacidade. Os mesmos exemplos descritos no modo automático se aplicam ao modo manual, mas cabe a você aceitar as ações.
 
 
 

@@ -45,7 +45,7 @@ Ao criar VMs de armazenamento usando as APIs, juntamente com a configuração da
 
 
 .Antes de começar
-O agente do Console requer permissões específicas para criar VMs de armazenamento para pares de alta disponibilidade do Cloud Volumes ONTAP .  As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["as políticas fornecidas pela NetApp"^] .
+O agente do Console requer permissões específicas para criar VMs de armazenamento para pares de alta disponibilidade do Cloud Volumes ONTAP . As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["as políticas fornecidas pela NetApp"^] .
 
 
 
@@ -86,7 +86,7 @@ Inclua os seguintes parâmetros no corpo da solicitação:
 Usando as APIs, você pode renomear e excluir VMs de armazenamento em configurações de nó único e HA.
 
 .Antes de começar
-O agente do Console requer permissões específicas para gerenciar VMs de armazenamento para pares de alta disponibilidade do Cloud Volumes ONTAP .  As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["as políticas fornecidas pela NetApp"^] .
+O agente do Console requer permissões específicas para gerenciar VMs de armazenamento para pares de alta disponibilidade do Cloud Volumes ONTAP . As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["as políticas fornecidas pela NetApp"^] .
 
 
 
