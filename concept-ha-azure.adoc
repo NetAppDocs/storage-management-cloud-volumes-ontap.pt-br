@@ -74,6 +74,11 @@ A implantação zonal usa discos gerenciados Premium SSD v2 quando as seguintes 
 
 
 --
+
+
+
+NOTE: Se você escolher Discos Gerenciados SSD Premium para um ambiente que atenda aos critérios acima, o Console implantará automaticamente os Discos Gerenciados SSD Premium v2. Não é possível alternar para discos gerenciados Premium SSD v1.
+
 Discos:: Os dados do cliente residem em discos gerenciados por armazenamento redundante local (LRS).  Cada nó tem acesso ao armazenamento do outro nó.  Armazenamento adicional também é necessário paralink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["dados de inicialização, raiz, raiz do parceiro, núcleo e NVRAM"^] .
 Contas de armazenamento:: Contas de armazenamento são usadas para implantações baseadas em disco gerenciado para manipular logs de diagnóstico e camadas para armazenamento de blobs.
 

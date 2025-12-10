@@ -22,7 +22,7 @@ Várias opções de licenciamento estão disponíveis para o Cloud Volumes ONTAP
 
 As seguintes opções de licenciamento estão disponíveis para novos clientes.
 
-Licenciamento baseado em capacidade:: Pague por vários sistemas Cloud Volumes ONTAP na sua conta NetApp por capacidade provisionada.  Inclui a capacidade de adquirir serviços de dados em nuvem adicionais.  Para obter mais informações sobre modelos de consumo em licenças baseadas em capacidade, consultelink:concept-licensing-charging.html["Saiba mais sobre licenças baseadas em capacidade"] .
+Licenciamento baseado em capacidade:: Pague por vários sistemas Cloud Volumes ONTAP na sua conta NetApp por capacidade provisionada. Inclui a capacidade de adquirir serviços de dados em nuvem adicionais. Para obter mais informações sobre modelos de consumo ou opções de compra em licenças baseadas em capacidade, consultelink:concept-licensing-charging.html["Saiba mais sobre licenças baseadas em capacidade"] .
 Assinatura Keystone:: Um serviço baseado em assinatura com pagamento conforme o crescimento que oferece uma experiência de nuvem híbrida perfeita para pares de alta disponibilidade (HA).
 
 

@@ -1,0 +1,27 @@
+= Capacidade de melhorar o desempenho dos discos Premium SSD v2 no Azure.
+:allow-uri-read: 
+
+
+
+
+=== Capacidade de melhorar o desempenho dos discos Premium SSD v2 no Azure.
+
+Agora você pode melhorar o desempenho dos discos gerenciados Premium SSD v2 no Azure, modificando os parâmetros de IOPS e taxa de transferência.  Utilizando essa funcionalidade, você pode otimizar o desempenho de armazenamento de seus sistemas com base nos requisitos de sua carga de trabalho.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-perf-params-azure.html["Gerencie o desempenho de discos SSD v2 Premium para Cloud Volumes ONTAP no Azure."^].
+
+
+
+=== Simplificação da cobrança de excedentes de licenças Essentials
+
+Para contratos anuais/ofertas privadas do marketplace Cloud Volumes ONTAP , os cálculos de excedente para licenças Essentials agora estão alinhados com os pacotes Bring Your Own License (BYOL).  Anteriormente, os excedentes eram cobrados de acordo com as tarifas horárias do mercado para o pacote Essentials exato.  Agora, se o seu contrato anual no mercado incluir vários pacotes Essentials, o NetApp Console cobrará o excedente de um pacote Essentials com base na capacidade disponível de um pacote Essentials de preço mais elevado em sua assinatura.  Isso simplifica os cálculos de excedente para os pacotes Essentials e garante uma transição tranquila do licenciamento BYOL para um modelo baseado em assinatura.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing-charging.html#how-overages-are-charged-for-essentials-licenses["Como são cobradas as taxas adicionais para licenças Essentials"^]
+
+
+
+=== Suporte para séries de tamanhos do Azure Edsv6
+
+A partir da versão 9.17.1 do Cloud Volumes ONTAP , você pode implantar VMs da série Azure Edsv6 por meio do NetApp Console para novas instâncias do Cloud Volumes ONTAP .  O Cloud Volumes ONTAP 9.17.1 e versões posteriores suportarão apenas VMs de Geração 2 para novas implementações.  Essas máquinas de segunda geração são compatíveis com as tecnologias mais recentes, como a Interface de Firmware Extensível Unificada (UEFI), sistemas Azure Boost e NVMe.  São ideais para sistemas e aplicações que exigem muita memória e precisam de armazenamento local rápido, como servidores de banco de dados e mecanismos de análise.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#supported-configurations-by-license["Configurações com suporte para Cloud Volumes ONTAP no Azure"^]
