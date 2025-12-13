@@ -951,6 +951,16 @@ Agora, uma notificação é exibida sempre que você acessa o Cloud Volumes ONTA
 
 
 
+=== Novas permissões adicionadas à política do AWS IAM para mediadores de alta disponibilidade.
+
+Essas novas permissões da AWS foram adicionadas à política do IAM para mediadores de alta disponibilidade (HA) em ambientes de alta disponibilidade do Cloud Volumes ONTAP :
+
+* sts:AssumaFunção
+* ec2:DescreverSub-redes
+
+
+
+
 == 04 de abril de 2023
 
 

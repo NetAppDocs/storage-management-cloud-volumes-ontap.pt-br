@@ -4,7 +4,7 @@ permalink: task-updating-ontap-cloud.html
 keywords: update, updating, upgrading, upgrade, software, downgrade, downgrading, FTP, HTTP, mediator, local image, revert, reverting, downgrading, cloud backup 
 summary: Atualize o Cloud Volumes ONTAP no NetApp Console para obter acesso aos novos recursos e aprimoramentos mais recentes.  Você deve preparar os sistemas Cloud Volumes ONTAP antes de atualizar o software. 
 ---
-= Atualizar o software Cloud Volumes ONTAP
+= Atualizar Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
