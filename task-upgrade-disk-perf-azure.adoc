@@ -16,6 +16,9 @@ summary: Configure os parâmetros de desempenho em discos SSD v2 Premium no Azur
 [role="lead"]
 Você pode atualizar o nível de desempenho dos discos gerenciados SSD Premium no Cloud Volumes ONTAP no Azure usando o portal do Azure. Este é um processo manual que envolve a alteração do nível de desempenho de cada disco SSD Premium para um nível superior. Alterar o nível de desempenho do seu disco NVRAM pode ajudar a aliviar gargalos de desempenho e aumentar a eficiência do seu sistema Cloud Volumes ONTAP , fornecendo maior capacidade de IOPS e taxa de transferência.
 
+
+NOTE: Certifique-se de entrar em contato com o suporte da NetApp para determinar se o gargalo que você está enfrentando em seu ambiente é causado pelo disco NVRAM e se a atualização da camada resolve o problema.
+
 .Sobre esta tarefa
 * Por padrão, o Cloud Volumes ONTAP no Azure implementa discos SSD Premium para NVRAM na camada P20. O nível P20 oferece um desempenho equilibrado, adequado para a maioria das cargas de trabalho. No entanto, se a sua carga de trabalho exigir um desempenho superior, você pode atualizar o disco NVRAM para um nível superior, como o P30.
 +
@@ -26,12 +29,8 @@ TIP: Atualmente, você só pode atualizar um disco NVRAM do nível P20 para o P3
 
 
 .Antes de começar
+* Avalie cuidadosamente a necessidade dessa alteração, pois a atualização do disco NVRAM para um nível de desempenho superior acarreta custos adicionais.
 * Sua versão do Cloud Volumes ONTAP deve ser 9.11.1 ou posterior. Para versões anteriores, você pode atualizar para a versão 9.11.1 ou posterior, ou abrir uma Solicitação de Variação da Política de Recursos (FPVR) junto ao suporte da NetApp .
-* Certifique-se de entrar em contato com o suporte da NetApp para determinar se o gargalo que você está enfrentando em seu ambiente é causado pelo disco NVRAM e se a atualização da camada resolve o problema.
-+
-
-NOTE: A atualização do disco NVRAM para um nível de desempenho superior acarreta custos adicionais, portanto, é importante avaliar cuidadosamente a necessidade dessa alteração.
-
 
 
 .Passos

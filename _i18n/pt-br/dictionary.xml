@@ -4883,8 +4883,6 @@
   <block id="60fa402d7162faa0faac952aacc0cc45" category="paragraph">A versão do Cloud Volumes ONTAP para a qual você pode atualizar depende da versão do Cloud Volumes ONTAP que você está executando no momento.</block>
   <block id="011fedf4050817b8826f95a53d9555b2" category="cell">Versão atual</block>
   <block id="03d03c99e963327d79f9c5e388192eec" category="cell">Versões para as quais você pode atualizar diretamente</block>
-  <block id="401117ae72e5a93172e8ce8c23c7676d" category="cell">9.16.1 (somente para Azure e Google Cloud)</block>
-  <block id="36991a14fecff3acb300e7240e20124a" category="cell">9.17.1 (somente para Azure e Google Cloud)</block>
   <block id="d544ab02530940d46c43ea00a73d59d3" category="cell">9.14.1</block>
   <block id="f316f0dfd566f9d842d2d368b7e3ecbb" category="cell">9.14.0</block>
   <block id="57a3061930625af99195891e9e561fb2" category="cell">9.13.1</block>
@@ -5041,37 +5039,17 @@
   <block id="3fa85a72fa6129f493f73fd51c5d3577" category="inline-link">Documentação do ONTAP : Configurar o AutoSupport</block>
   <block id="624816c9fe7ea9b487697f42ef1d812e" category="paragraph">Depois de verificar se o acesso de saída à Internet está disponível, você pode testar o AutoSupport para garantir que ele pode enviar mensagens.  Para obter instruções, consulte o<block ref="0ec547f9fa42cb2a8601b4546d54623e" category="inline-link-rx"></block> .</block>
   <block id="295477dc121353b83198c98d83f89695" category="section-title">Solucionar problemas de configuração do AutoSupport</block>
-  <block id="a1946ab3756444f706cea53791b48a79" category="paragraph">Se uma conexão de saída não estiver disponível e o Console não puder configurar seu sistema Cloud Volumes ONTAP para usar o agente do Console como um servidor proxy, você receberá uma notificação do Console intitulada "&lt;nome do sistema&gt; não consegue enviar mensagens do AutoSupport ".</block>
-  <block id="db5287528bed608802655c082c0e89b3" category="paragraph">Provavelmente você está recebendo esta mensagem devido a problemas de rede.</block>
-  <block id="dde3c8b1dec7c8e74a01b666f1bf5eb8" category="paragraph">Siga estas etapas para resolver esse problema.</block>
-  <block id="81dc37ad7d24f55bbc43818904c3ff08" category="list-text">Conecte-se por SSH ao sistema Cloud Volumes ONTAP para que você possa administrar o sistema a partir da CLI do ONTAP .</block>
   <block id="aaacc29944816e45aadf00dcf2b06295" category="inline-link-macro">Aprenda como usar SSH para Cloud Volumes ONTAP</block>
   <block id="16ed58a43f5928920b01b4d3f2ffe1e7" category="paragraph"><block ref="881a093612fe18cf624d7327d89e776b" category="inline-link-macro-rx"></block> .</block>
-  <block id="cbd751aef187f8ce08c4f421fa7a69b0" category="list-text">Exibir o status detalhado do subsistema AutoSupport :</block>
   <block id="c107ec2f22978848d28bc9ad31ef0dfb" category="paragraph"><block ref="81c21a9dd47f4497ecc9a94b1e8e1b68" prefix="" category="inline-code"></block></block>
-  <block id="c104f1b6e67db66325fd6e3b3c15d6df" category="paragraph">A resposta deve ser semelhante à seguinte:</block>
-  <block id="ed81107a25dc0eeca0e3233e60698b7a" category="paragraph">Se o status da categoria http-https for "ok", significa que o AutoSupport está configurado corretamente e as mensagens podem ser enviadas.</block>
-  <block id="9f59ad83e7de9eb9a77d34e134c77c4e" category="list-text">Se o status não estiver ok, verifique a URL do proxy para cada nó do Cloud Volumes ONTAP :</block>
   <block id="f19476ab2e2055c09d74472c7f8de866" category="paragraph"><block ref="12da01faa8d30c6943c1117f98b0a34e" prefix="" category="inline-code"></block></block>
   <block id="d189be7e0d55d37168f7a5b7576db1c5" category="list-text">Se o parâmetro de URL do proxy estiver vazio, configure o Cloud Volumes ONTAP para usar o agente do Console como um proxy:</block>
   <block id="5edd12b5d04ceb05f6e5ed6adbc3a66a" category="paragraph"><block ref="21216b677a71216288c68360dba0adef" prefix="" category="inline-code"></block></block>
-  <block id="eb137357f3d5b1a66652db0bfbe38072" category="list-text">Verifique novamente o status do AutoSupport :</block>
-  <block id="fa43ae0497f481c84938feada17cb1bf" category="list-text">Se o status ainda for falha, valide se há conectividade entre o Cloud Volumes ONTAP e o agente do Console pela porta 3128.</block>
-  <block id="b30985c63680dd18c933ffcbb85fde7b" category="list-text">Se o ID de status ainda falhar após verificar se há conectividade, faça SSH para o agente do Console.</block>
   <block id="edb7bad4815e112a09251c5a6fc89fa9" category="inline-link">Saiba mais sobre como conectar-se à VM Linux para o agente do console</block>
   <block id="f77472ae668c39afdddc839efba6e05f" category="paragraph"><block ref="f77472ae668c39afdddc839efba6e05f" category="inline-link-rx"></block></block>
-  <block id="6663d276bb03698e23e1c8571b15a0ec" category="list-text">Vá para<block ref="0c515e6cdaab1ae82012a17e1bec1dee" prefix=" " category="inline-code"></block></block>
-  <block id="82d78a22685306ed68bbf81d14a33e4d" category="list-text">Abra o arquivo de configuração do proxy<block ref="623da9488a3da93e7eefb08dd3bccb0f" prefix=" " category="inline-code"></block></block>
-  <block id="a6b5e6b211bf426f61152c5d404a1ccd" category="paragraph">A estrutura básica do arquivo é a seguinte:</block>
-  <block id="7e886757743abb700fa9af0ded4353cc" category="paragraph">O valor localnet src é o CIDR do sistema Cloud Volumes ONTAP .</block>
-  <block id="ba11a8c68a86c1c549117e7fed736b67" category="list-text">Se o bloco CIDR do sistema Cloud Volumes ONTAP não estiver no intervalo especificado no arquivo, atualize o valor ou adicione uma nova entrada da seguinte maneira:</block>
   <block id="e53e86f49fbf31d6404a832e79d30758" category="paragraph"><block ref="40711ab114935e86a3ba41c4b5994cb2" prefix="" category="inline-code"></block></block>
-  <block id="56fb36ada37785127def214dd30a1607" category="paragraph">Se você adicionar esta nova entrada, não se esqueça de adicionar também uma entrada de permissão:</block>
   <block id="3e454df771adc9ead6632eefa975b41b" category="paragraph"><block ref="06a7153e7f90941a4abd483a38e2283b" prefix="" category="inline-code"></block></block>
   <block id="4d947fe0b5c4693f487f4fd1a4295c99" category="paragraph">Aqui está um exemplo:</block>
-  <block id="bb1d35cbbb58724ffea0d2f36a9f993a" category="list-text">Após editar o arquivo de configuração, reinicie o contêiner proxy como sudo:</block>
-  <block id="5bec21ecbe2e3a86d7d4ed6908def9b1" category="paragraph"><block ref="b1831e4c01f17e88347609d404d308c0" prefix="" category="inline-code"></block></block>
-  <block id="ea92910b55077f3c4e27aa9df66efbf8" category="list-text">Volte para a CLI do Cloud Volumes ONTAP e verifique se o Cloud Volumes ONTAP pode enviar mensagens de AutoSupport :</block>
   <block id="44579e142f1f753a153dbb19dac8125c" category="summary">Verifique o arquivo disk.raw baixado pelo Google Cloud em relação ao conteúdo do arquivo de resumo usando o OpenSSL.</block>
   <block id="bd915a4eab5328d0dbd80804cc09ee0a" category="doc">Verifique o arquivo disk.raw da imagem do Google Cloud para o Cloud Volumes ONTAP usando OpenSSL</block>
   <block id="9790936d7b09c3cf187b770347ee60d1" category="paragraph">Você pode verificar o arquivo disk.raw baixado pelo Google Cloud em relação ao conteúdo do arquivo de resumo disponível por meio do<block ref="4af4717946461f54169780875a3b5a98" category="inline-link-rx"></block> usando OpenSSL.</block>
@@ -6090,7 +6068,6 @@
   <block id="686adea694e622fed8c665723cc0407f" category="list-text">Você não altera o tamanho do disco. Continua com 512 GB. Este procedimento altera apenas o nível de desempenho do disco.</block>
   <block id="60148540e7bc47a2a5cb3aa5c6669625" category="list-text">Sua versão do Cloud Volumes ONTAP deve ser 9.11.1 ou posterior. Para versões anteriores, você pode atualizar para a versão 9.11.1 ou posterior, ou abrir uma Solicitação de Variação da Política de Recursos (FPVR) junto ao suporte da NetApp .</block>
   <block id="a779e934fd58bae998629bc70c905a6e" category="list-text">Certifique-se de entrar em contato com o suporte da NetApp para determinar se o gargalo que você está enfrentando em seu ambiente é causado pelo disco NVRAM e se a atualização da camada resolve o problema.</block>
-  <block id="d7cdcc7698a8a9000d22166d03400c69" category="admonition">A atualização do disco NVRAM para um nível de desempenho superior acarreta custos adicionais, portanto, é importante avaliar cuidadosamente a necessidade dessa alteração.</block>
   <block id="9d0625da71c4c34eb7b785d5b10361f5" category="paragraph">Este cenário pressupõe a existência de dois nós.<block ref="705cc8c4aab2c0dfb3a3f280da16760d" prefix=" " category="inline-code"></block> e<block ref="f43c51286fe1559c6253e0b37ec045c6" prefix=" " category="inline-code"></block> Implantação de alta disponibilidade (HA) do Cloud Volumes ONTAP . Use o portal do Azure para atualizar o nível.</block>
   <block id="1e723d832b26dbdada01d30484af1ea6" category="list-text">Execute este comando para fazer<block ref="164546f60261c7e4be0c5f5f9aaeec86" prefix=" " category="inline-code"></block> o nó ativo. Falha manual<block ref="f43c51286fe1559c6253e0b37ec045c6" prefix=" " category="inline-code"></block>.</block>
   <block id="e4a4efef44785c5db0774c22b88b3301" category="paragraph"><block ref="be0eb3f3fba241dc79337017002bd31a" prefix="" category="inline-code"></block></block>
@@ -6117,4 +6094,22 @@
   <block id="fa70443be85a3feec8a5eb9d46413a96" category="list-text">ec2:DescreverSub-redes</block>
   <block id="48f3ff89d323f3866cd390a624301cc2" category="sidebar">Gerencie o desempenho do disco no Azure.</block>
   <block id="3cf9ca795dbee25a8b72a8475b07c0fc" category="sidebar">Atualize o nível de desempenho do disco no Azure.</block>
+  <block id="81e76ca235a16e1d875f94529d326de0" category="cell">9.17.1</block>
+  <block id="66d3aa0db1db25a4a906a01992596e27" category="list-text">Avalie cuidadosamente a necessidade dessa alteração, pois a atualização do disco NVRAM para um nível de desempenho superior acarreta custos adicionais.</block>
+  <block id="648d6475bce5354b3cd3c893b2df49f3" category="paragraph">Se uma conexão de saída não estiver disponível e o Console não conseguir configurar seu sistema Cloud Volumes ONTAP para usar o agente do Console como um servidor proxy, você receberá uma notificação do Console informando que seu sistema não consegue enviar mensagens do AutoSupport . Siga estes passos para resolver este problema.</block>
+  <block id="80d895fadacc0310355c1c423023695b" category="list-text">Conecte-se de forma segura (usando SSH) ao sistema Cloud Volumes ONTAP para usar a CLI do ONTAP .</block>
+  <block id="aa97e0e01499260ff0be40e0c5ee6b4d" category="list-text">Verifique o status detalhado do subsistema AutoSupport :</block>
+  <block id="cb6394a3f752e613867a44c85f05b77d" category="paragraph">A resposta se parece com isto:</block>
+  <block id="afd20e04ccfacda1e34669053f15614a" category="paragraph">Se o status da categoria http-https for<block ref="e0aa021e21dddbd6d8cecec71e9cf564" prefix=" " category="inline-code"></block> Significa que o AutoSupport está configurado corretamente e as mensagens podem ser enviadas.</block>
+  <block id="d70d97bee2a0c0c4bc9b6d26a5db69af" category="list-text">Caso contrário, verifique o URL do proxy para cada nó do Cloud Volumes ONTAP :</block>
+  <block id="3504ac7be9d6451718f66224c379031d" category="list-text">Verifique novamente o status do AutoSupport :</block>
+  <block id="57035e3c80e6846d3837833d5c8f2544" category="list-text">Se o status ainda for falha, verifique se há conectividade entre o Cloud Volumes ONTAP e o agente do Console pela porta.<block ref="dff8e9c2ac33381546d96deea9922999" prefix=" " category="inline-code"></block>.</block>
+  <block id="084efc5dfc334f60fa8895df5bfc0151" category="list-text">Se o status ainda indicar falha após a verificação, acesse o agente do Console via SSH.</block>
+  <block id="cc4964154dd0a9e876973c53ffd0fbf7" category="list-text">Vá para<block ref="0c515e6cdaab1ae82012a17e1bec1dee" prefix=" " category="inline-code"></block>.</block>
+  <block id="c0b1a66c4164f93e913b95a49dc7cca5" category="list-text">Abra o arquivo de configuração do proxy.<block ref="623da9488a3da93e7eefb08dd3bccb0f" prefix=" " category="inline-code"></block>. Esta é a estrutura do arquivo:</block>
+  <block id="31e2a17e75e2111770329974bd621551" category="list-text">Se o seu arquivo não tiver uma entrada para o bloco CIDR do sistema Cloud Volumes ONTAP , adicione uma nova entrada e permita o acesso:</block>
+  <block id="e508adf8c3b9c47ed0e44cc8e99325b5" category="list-text">Após editar o arquivo de configuração, reinicie o contêiner proxy como<block ref="d338b3f0f405eb5e51c8cc1e5ca66f02" prefix=" " category="inline-code"></block>. Em seguida, dependendo se você estiver usando o Docker ou o Podman, execute estes comandos:</block>
+  <block id="980dfdd6fab780885793f0ec42399ae0" category="paragraph">Para o Docker, execute<block ref="b1831e4c01f17e88347609d404d308c0" prefix=" " category="inline-code"></block>.</block>
+  <block id="007b7067c04893459ac324df1874eb1e" category="paragraph">Se você estiver usando o Podman, execute<block ref="db80c2b4c5690b79ed051a59a7bb3556" prefix=" " category="inline-code"></block>.</block>
+  <block id="1432f9e7501db8840fbc871624751a97" category="list-text">Volte à CLI do ONTAP e verifique se o Cloud Volumes ONTAP consegue enviar mensagens AutoSupport :</block>
 </blocks>
