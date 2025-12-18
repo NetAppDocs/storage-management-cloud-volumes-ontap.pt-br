@@ -4742,9 +4742,6 @@
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">Usar esta opção solicitará que você faça login novamente. Observe que o token para essas contas expira após 90 dias. Uma notificação será publicada para alertá-lo sobre isso.</block>
   <block id="29e5950813e59366056c85a091ad2206" category="summary">Especificar um servidor NTP sincroniza o horário entre os sistemas na sua rede, o que pode ajudar a evitar problemas devido a diferenças de horário.</block>
   <block id="b50f1f0d50a2ec5cb27990e7dcd7bc5a" category="doc">Sincronizar o horário do sistema Cloud Volumes ONTAP usando o servidor NTP</block>
-  <block id="ebf12fa39becba02eecf5cb8886fab60" category="inline-link-macro">criar um servidor CIFS</block>
-  <block id="360104bf3231cd79990fa62b469a3981" category="inline-link">API do NetApp Console</block>
-  <block id="7ff31e38d13b7813d7a074235b820e43" category="paragraph">Especifique um servidor NTP usando o<block ref="fa6731927386c9d49581436398e9c4cc" category="inline-link-rx"></block> ou da interface do usuário quando você<block ref="f63e013edf4f3da2f43cd797b99d909b" category="inline-link-macro-rx"></block> .</block>
   <block id="b6f2459d07813a329f10d1f5ef7babc2" category="summary">Você pode reduzir os custos de armazenamento do Cloud Volumes ONTAP combinando uma camada de desempenho de SSD ou HDD para dados ativos com uma camada de capacidade de armazenamento de objetos para dados inativos.  A hierarquização de dados é alimentada pela tecnologia FabricPool .</block>
   <block id="dc856ecc0acf613e6f450c313f378cfd" category="doc">Dados Cloud Volumes ONTAP inativos em camadas para um armazenamento de objetos de baixo custo</block>
   <block id="caf4154dd66e202bf9f092a3b5b9f070" category="paragraph">Você pode reduzir os custos de armazenamento do Cloud Volumes ONTAP combinando uma camada de desempenho de SSD ou HDD para dados ativos com uma camada de capacidade de armazenamento de objetos para dados inativos.  A hierarquização de dados é alimentada pela tecnologia FabricPool .  Para uma visão geral de alto nível, consulte<block ref="69d3706831f999336fb27703356dae22" category="inline-link-macro-rx"></block> .</block>
@@ -6112,4 +6109,13 @@
   <block id="980dfdd6fab780885793f0ec42399ae0" category="paragraph">Para o Docker, execute<block ref="b1831e4c01f17e88347609d404d308c0" prefix=" " category="inline-code"></block>.</block>
   <block id="007b7067c04893459ac324df1874eb1e" category="paragraph">Se você estiver usando o Podman, execute<block ref="db80c2b4c5690b79ed051a59a7bb3556" prefix=" " category="inline-code"></block>.</block>
   <block id="1432f9e7501db8840fbc871624751a97" category="list-text">Volte à CLI do ONTAP e verifique se o Cloud Volumes ONTAP consegue enviar mensagens AutoSupport :</block>
+  <block id="64a4db9697928f2dbd10d78715e195e9" category="paragraph">Para garantir a sincronização precisa do tempo, você deve configurar um servidor NTP (Network Time Protocol) para seus sistemas Cloud Volumes ONTAP . Certifique-se de configurar um servidor NTP para seus sistemas Cloud Volumes ONTAP em todos os provedores de nuvem para manter a sincronização de tempo consistente em sua rede.</block>
+  <block id="f1b0d7a969d501d016a0fd481082d0c1" category="admonition">Se você não configurar um servidor NTP, poderá sofrer interrupções no serviço e sincronização de tempo imprecisa.</block>
+  <block id="3d2f72d3a57dc2978e458a4280c76291" category="paragraph">Você pode especificar um servidor NTP usando:</block>
+  <block id="29cb192badbe18daa5e6987be7d6ee48" category="inline-link">API do NetApp Console</block>
+  <block id="c469bf183e0ed4757464e13ff9d88b30" category="list-text"><block ref="44a005bb7629cee544dcbf8810a935c4" category="inline-link-rx"></block>.</block>
+  <block id="2e5b00a7734f4716b08d44d8793d1795" category="inline-link">criar servidor ntp de serviço de tempo em cluster</block>
+  <block id="3710ce76a11b1e405952396fc26f3b70" category="list-text">O comando ONTAP CLI<block ref="c7c9a5780d764460cfc24460dd9925c7" category="inline-link-rx"></block>.</block>
+  <block id="3978bd36e4baf3e39f68ed4d2e55c90c" category="inline-link">Como um cluster CVO usa o NTP?</block>
+  <block id="f1ee234257665a0acbef24f24801a1c2" category="list-text">Artigo da base de conhecimento (BC):<block ref="8599f7093d610d16c082becd99a24134" category="inline-link-rx"></block></block>
 </blocks>

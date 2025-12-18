@@ -14,6 +14,21 @@ summary: Especificar um servidor NTP sincroniza o horário entre os sistemas na 
 
 
 [role="lead"]
-Especificar um servidor NTP sincroniza o horário entre os sistemas na sua rede, o que pode ajudar a evitar problemas devido a diferenças de horário.
+Para garantir a sincronização precisa do tempo, você deve configurar um servidor NTP (Network Time Protocol) para seus sistemas Cloud Volumes ONTAP . Certifique-se de configurar um servidor NTP para seus sistemas Cloud Volumes ONTAP em todos os provedores de nuvem para manter a sincronização de tempo consistente em sua rede.
 
-Especifique um servidor NTP usando o https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html["API do NetApp Console"^] ou da interface do usuário quando vocêlink:task-create-volumes.html#create-a-volume["criar um servidor CIFS"] .
+
+NOTE: Se você não configurar um servidor NTP, poderá sofrer interrupções no serviço e sincronização de tempo imprecisa.
+
+Você pode especificar um servidor NTP usando:
+
+* https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html["API do NetApp Console"^].
+* O comando ONTAP CLI https://docs.netapp.com/us-en/ontap-cli//cluster-time-service-ntp-server-create.html["criar servidor ntp de serviço de tempo em cluster"^].
+
+
+.Links relacionados
+* Artigo da base de conhecimento (BC): https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs/How_does_a_CVO_cluster_use_NTP["Como um cluster CVO usa o NTP?"]
+* https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html["Prepare-se para usar a API"^]
+* https://docs.netapp.com/us-en/bluexp-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Fluxos de trabalho do Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-connector-identifier["Obtenha os identificadores necessários"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/use_rest_apis.html["Use as APIs REST para o NetApp Console"^]
+
