@@ -169,9 +169,15 @@ Para o pacote Essentials, a cobrança de capacidade mínima de 4 TiB não se apl
 
 
 
-== Como são cobradas as taxas adicionais
+== Preferências de faturamento e cobranças adicionais
 
-Se você exceder sua capacidade BYOL, será cobrado pelo excedente com base nas taxas horárias da sua assinatura do marketplace. O excedente é cobrado com base nas taxas do marketplace, com preferência pelo uso da capacidade disponível de outras licenças primeiro. Se sua licença BYOL expirar, você precisará migrar para um modelo de licenciamento baseado em capacidade por meio de marketplaces na nuvem. Para obter informações, consultelink:task-convert-node-capacity.html["Converter uma licença baseada em nó do Cloud Volumes ONTAP em uma licença baseada em capacidade"] .
+Você pode escolher como deseja ser cobrado na seção * Licenses and subscriptions* do Console. Ocorre cobrança adicional quando o seu uso ultrapassa a capacidade especificada no seu pacote de licença ou assinatura anual.
+
+* *Licenças NetApp primeiro*: Neste modelo, seu uso é cobrado inicialmente de acordo com a capacidade do seu pacote de licenças (BYOL). Caso você exceda a capacidade da sua licença, as taxas adicionais serão cobradas com base na sua assinatura anual do marketplace ou nas tarifas horárias sob demanda do marketplace (PAYGO). Se a sua licença BYOL expirar, você deverá migrar para um modelo de licenciamento baseado em capacidade por meio dos marketplaces de nuvem. Para obter informações, consulte link:task-convert-node-capacity.html["Converter uma licença baseada em nó do Cloud Volumes ONTAP em uma licença baseada em capacidade"].
+* *Apenas para assinaturas do Marketplace*: Neste modelo, seu uso é cobrado primeiro em sua assinatura anual do Marketplace. Qualquer utilização adicional será cobrada de acordo com as tarifas horárias sob demanda do mercado (PAYGO). Qualquer capacidade de licença não utilizada será desconsiderada para fins de faturamento.
+
+
+Para obter mais informações sobre as preferências de faturamento, consulte https://docs.netapp.com/us-en/console-licenses-subscriptions/concept-billing-preferences.html["Saiba mais sobre as preferências de faturamento para licenças e assinaturas."^].
 
 
 

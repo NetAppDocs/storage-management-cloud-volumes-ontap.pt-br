@@ -1,0 +1,11 @@
+= Opção de faturamento preferencial para Cloud Volumes ONTAP
+:allow-uri-read: 
+
+
+
+
+=== Opção de faturamento preferencial para Cloud Volumes ONTAP
+
+Agora você pode selecionar a opção de faturamento de sua preferência para calcular o uso e os custos adicionais do Cloud Volumes ONTAP . Desde a disponibilidade limitada do modelo de licenciamento "Traga suas próprias licenças" (BYOL) em 25 de junho de 2025, a NetApp adicionou métodos de cobrança preferenciais na seção *Licenciamento e Assinaturas* do NetApp Console. Você pode usar sua assinatura anual do marketplace para faturamento e cobranças adicionais ou o modelo BYOL existente como opção preferencial. Isso oferece a flexibilidade de escolher o método de cobrança que melhor se adapta à estratégia financeira e aos padrões de uso da sua organização.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing-charging.html#billing-preferences-and-overages["Preferências de faturamento e cobranças adicionais"^].
