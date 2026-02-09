@@ -49,7 +49,7 @@ https://cloud.google.com/kms/docs/iam#granting_roles_on_a_resource["Documentaç�
 +
 Para mais informações, consulte https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys["Documentação do Google Cloud: Usando chaves de criptografia gerenciadas pelo cliente"^]
 
-. Use o parâmetro "GcpEncryption" com sua solicitação de API ao criar um sistema.
+. Use o parâmetro ""gcpEncryption"" na sua solicitação de API ao criar um sistema.
 +
 *Exemplo*
 

@@ -101,7 +101,7 @@ Observe que o Cloud Volumes ONTAP oferece suporte ao recurso Amazon EBS Elastic 
 * Os discos _Throughput Optimized HDD (st1)_ são para cargas de trabalho acessadas com frequência que exigem throughput rápido e consistente a um preço mais baixo.
 +
 
-NOTE: A hierarquização de dados para o AWS S3 não está disponível nas Zonas Locais da AWS devido à falta de conectividade.
+NOTE: O armazenamento em camadas de dados no Amazon Simple Storage Service (Amazon S3) não é compatível se o seu sistema Cloud Volumes ONTAP estiver em uma AWS Local Zone, pois o acesso aos buckets do Amazon S3 fora da Local Zone envolve maior latência e impacta as atividades do Cloud Volumes ONTAP.
 
 
 

@@ -26,7 +26,7 @@ ifdef::aws[]
 
 == Camadas de dados na AWS
 
-Quando você habilita a hierarquização de dados na AWS, o Cloud Volumes ONTAP usa o EBS como uma camada de desempenho para dados ativos e o AWS S3 como uma camada de capacidade para dados inativos.
+Ao habilitar o armazenamento em camadas de dados na AWS, Cloud Volumes ONTAP usa EBS como camada de desempenho para dados acessados com frequência e Amazon S3 como camada de capacidade para dados inativos.
 
 Nível de desempenho:: O nível de desempenho pode ser SSDs de uso geral (gp3 ou gp2) ou SSDs de IOPS provisionados (io1).
 +

@@ -1,0 +1,241 @@
+---
+sidebar: sidebar 
+permalink: task-gcp-dm-im-conv.html 
+keywords: manual conversion tool, gcp dm im conversion, gcp deployment manager to infrastructure manager, gcp dm to im conversion 
+summary: Para suas implantações existentes no Google Cloud, você precisa atualizar seus sistemas para Cloud Volumes ONTAP 9.16.1 ou posterior e, em seguida, executar manualmente uma ferramenta de transição para converter do Google Cloud Deployment Manager para Cloud Infrastructure Manager. 
+---
+= Converter implantações existentes do Cloud Volumes ONTAP para o Infrastructure Manager
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A partir de 12 de janeiro de 2026, novas implantações do Cloud Volumes ONTAP no Google Cloud poderão usar o Google Cloud Infrastructure Manager. O Google está prestes a descontinuar o Google Cloud Deployment Manager em favor do Infrastructure Manager. Portanto, você precisa executar manualmente uma ferramenta de transição para converter suas implantações existentes do Cloud Volumes ONTAP do Deployment Manager para o Infrastructure Manager. Este é um processo único, após o qual seus sistemas começarão a usar o Infrastructure Manager automaticamente.
+
+.Sobre esta tarefa
+A ferramenta de transição está disponível na  https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab["Site de suporte da NetApp"^], e cria os seguintes artefatos:
+
+* Artefatos do Terraform, salvos em `conversion_output/deployment_name`.
+* Resumo da conversão, salvo em `conversion_output/batch_summary_<deployment_name>_<timestamp>.json`.
+* Logs de depuração, salvos no `<gcp project number>-<region>-blueprint-config/<cvo name>` diretório. Você precisa desses logs para solucionar problemas. O `<gcp project number>-<region>-blueprint-config` bucket armazena os logs do Terraform.
+
+
+[CAUTION]
+====
+Os sistemas Cloud Volumes ONTAP que utilizam o Infrastructure Manager armazenam dados e registros em buckets do Google Cloud Storage. Você poderá incorrer em custos adicionais por esses buckets, mas não edite nem exclua os buckets ou seu conteúdo:
+
+* `gs://netapp-cvo-infrastructure-manager-<project id>/dm-to-im-convert`: para armazenar arquivos Terraform do Cloud Volumes ONTAP
+* `<gcp project number>-<region>-blueprint-config`: para armazenar artefatos do Terraform do Google Cloud
+
+
+====
+.Antes de começar
+* Certifique-se de que seu sistema Cloud Volumes ONTAP esteja na versão 9.16.1 ou posterior.
+* Certifique-se de que nenhum dos recursos do Cloud Volumes ONTAP ou suas propriedades tenham sido editados manualmente no Google Cloud Console.
+* Certifique-se de que as APIs do Google Cloud estejam ativadas. Consulte  https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html#step-5-enable-google-cloud-apis["Ativar APIs do Google Cloud"^]. Certifique-se de que, junto com as outras APIs, você ative a API de Cotas do Google Cloud.
+* Verifique se a conta de serviço do agente do NetApp Console possui todas as permissões necessárias. Consulte  https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#service-account-permissions["Permissões do Google Cloud para o agente do Console"^].
+* A ferramenta de conversão utiliza os seguintes domínios. Habilite-os na porta 443 da sua rede:
++
+[cols="1,1,1,1,2"]
+|===
+| Domínio | Porta | Protocolo | Direção | Propósito 
+
+
+| cloudresourcemanager.googleapis.com | 443 | TCP | EGRESS | Validação do projeto 
+
+
+| deploymentmanager.googleapis.com | 443 | TCP | EGRESS | Descoberta de implantação 
+
+
+| config.googleapis.com | 443 | TCP | EGRESS | API do Infrastructure Manager 
+
+
+| storage.googleapis.com | 443 | TCP | EGRESS | Operações de bucket GCS 
+
+
+| iam.googleapis.com | 443 | TCP | EGRESS | Validação da conta de serviço 
+
+
+| compute.googleapis.com | 443 | TCP | EGRESS | Chamadas da Compute API usadas pelo Google Cloud e pelo Terraform Import and Plan 
+
+
+| openidconnect.googleapis.com | 443 | TCP | EGRESS | Autenticação 
+
+
+| oauth2.googleapis.com | 443 | TCP | EGRESS | Troca de token OAuth2 
+
+
+| registry.terraform.io | 443 | TCP | EGRESS | Registro de provedores do Terraform 
+
+
+| releases.hashicorp.com | 443 | TCP | EGRESS | Downloads binários do Terraform 
+
+
+| apt.releases.hashicorp.com | 443 | TCP | EGRESS | HashiCorp APT repositório 
+
+
+| us-central1-docker.pkg.dev | 443 | TCP | EGRESS | GCP Artifact Registry 
+
+
+| metadata.google.internal | 80 | HTTP | Interno | Metadados e tokens de autenticação de VM 
+|===
+
+
+.Passos
+Siga estes passos para migrar do Deployment Manager para o Infrastructure Manager e executar a ferramenta para implementações existentes do Cloud Volumes ONTAP.
+
+. Crie uma função e associe-a a uma conta de serviço:
++
+.. Crie um arquivo YAML com as seguintes permissões:
++
+[source, cli]
+----
+title: NetApp Dm TO IM Convert Solution
+description: Permissions for the service account associated with the VM where the tool will run.
+stage: GA
+includedPermissions:
+- compute.addresses.get
+- compute.disks.get
+- compute.forwardingRules.get
+- compute.healthChecks.get
+- compute.instanceGroups.get
+- compute.instances.get
+- compute.regionBackendServices.get
+- config.deployments.create
+- config.deployments.get
+- config.deployments.getLock
+- config.deployments.lock
+- config.deployments.unlock
+- config.deployments.update
+- config.deployments.delete
+- config.deployments.updateState
+- config.operations.get
+- deploymentmanager.deployments.get
+- deploymentmanager.deployments.list
+- deploymentmanager.manifests.get
+- iam.serviceAccounts.get
+- storage.buckets.create
+- storage.objects.create
+- storage.objects.delete
+- storage.objects.get
+- storage.objects.list
+----
+.. Crie uma função personalizada no Google Cloud com as permissões definidas no arquivo YAML.
+`gcloud iam roles create dmtoim_convert_tool_role --project=PROJECT_ID \
+    --file=YAML_FILE_PATH` Para mais informações, consulte https://cloud.google.com/iam/docs/creating-custom-roles["Criando e gerenciando funções personalizadas"^].
+.. Atribua a função personalizada à conta de serviço que você usará para criar a VM.
+.. Adicione a `roles/iam.serviceAccountUser` função a esta conta de serviço. Consulte https://docs.cloud.google.com/iam/docs/service-account-overview["Visão geral das contas de serviço"^].
+
+
+. [[create-vm]]Crie uma VM com as seguintes configurações. Você executa a ferramenta nesta VM.
++
+** Tipo de máquina: Google Compute Engine machine type e2-medium
+** SO: Ubuntu 25.10 AMD64 Minimal (imagem: ubuntu-minimal-2510-amd64)
+** Rede: firewall permitindo HTTP e HTTPs
+** Tamanho do disco: 20GB
+** Segurança: contas de serviço: a conta de serviço que você criou
+** Segurança: escopo de acesso - conjunto de acessos para cada API:
++
+*** Cloud Platform: ativada
+*** Compute Engine: somente leitura
+*** Armazenamento: somente leitura (padrão)
+*** API do Google Cloud Logging (anteriormente Stackdriver Logging): somente gravação (padrão)
+*** API do Stackdriver Monitoring (agora parte do Google Cloud Operations): somente gravação (padrão)
+*** Gerenciamento de serviços: somente leitura (padrão)
+*** Controle de serviço: ativado (padrão)
+*** Google Cloud Trace (anteriormente Stackdriver Trace): somente gravação (padrão)
+
+
+
+
+. Conecte-se à máquina virtual recém-criada usando SSH: `gcloud compute ssh dmtoim-convert-executor-vm --zone _<region where VM is deployed>_`
+. Faça o download da ferramenta de conversão do https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab["Site de suporte da NetApp"^] usando suas credenciais do NSS: `wget <download link from NetApp Support site>`
+. Extraia o arquivo TAR baixado: `tar -xvf <downloaded file name>`
+. Baixe e instale estes pacotes pré-requisitos:
++
+** Docker: 28.2.2 build 28.2.2-0ubuntu1 ou posterior
+** Terraform: 1.14.1 ou posterior
+** Python: 3.13.7, python3-pip, python3 venv
++
+[source, cli]
+----
+sudo apt-get update
+sudo apt-get install python3-pip python3-venv -y
+wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com noble main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+sudo apt-get install -y docker.io
+sudo systemctl start docker
+----
++
+Google Cloud CLI  `gcloud`já vem pré-instalada na máquina virtual.
+
+
+
+. Adicione o usuário atual ao grupo Docker, para que a ferramenta possa usar o Docker sem  `sudo` privilégios.
++
+[source, cli]
+----
+sudo usermod -aG docker $USER
+newgrp docker
+----
+. Instale a ferramenta de conversão:
++
+[source, cli]
+----
+cd <folder where you extracted the tool>
+ ./install.sh
+----
++
+Isso instala a ferramenta em um ambiente isolado, `dmconvert-venv` e verifica se todos os pacotes de software necessários estão instalados.
+
+. Insira o ambiente onde a ferramenta está instalada: `source dmconvert-venv/bin/activate`
+. Execute a ferramenta de conversão como um `non-sudo` usuário. Certifique-se de usar a mesma conta de serviço que a conta de serviço do agente do Console e que a conta de serviço tenha todas as https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#service-account-permissions["permissões necessárias para Google Cloud Infrastructure Manager"^].
++
+[source, cli]
+----
+dmconvert \
+--project-id=<the Google Cloud project ID for the Cloud Volumes ONTAP deployment> \
+--cvo-name=<Cloud Volumes ONTAP system name> \
+--service-account=<the service account attached to the Console agent>
+----
++
+.Depois que você terminar
+A ferramenta exibe uma lista de todos os sistemas Cloud Volumes ONTAP e detalhes do SVM. Ao concluir a execução, você pode ver os status de todos os sistemas convertidos. Cada sistema convertido aparece no Console do Google em Infrastructure Manager em um formato _<converted system name-imdeploy>_, indicando que o Console agora usa as APIs do Infrastructure Manager para gerenciar esse sistema Cloud Volumes ONTAP.
+
++
+
+CAUTION: Após a conversão, não exclua o objeto de implantação do Deployment Manager no Console do Google Cloud. Esse objeto de implantação contém metadados que o Infrastructure Manager usa para gerenciar os sistemas Cloud Volumes ONTAP.
+
+
+
+Se precisar reverter a conversão, você deve usar a mesma VM. Se você já converteu todos os sistemas e não precisa reverter para Deployment Manager, pode excluir a VM.
+
+
+
+== Reverter a conversão
+
+Se não quiser continuar com a conversão, você pode reverter para Deployment Manager seguindo estas etapas:
+
+.Passos
+. No mesmo <<create-vm,VM que você criou para executar a ferramenta>>, execute este comando:
++
+[source, cli]
+----
+dmconvert \
+--project-id=<the Google Cloud project ID for the Cloud Volumes ONTAP deployment> \
+--cvo-name=<Cloud Volumes ONTAP system name> \
+--service-account=<the service account attached to the Console agent> \
+--rollback
+----
+. Aguarde até que o rollback esteja completo.
+
+
+.Links relacionados
+* https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#console-agent-4-2-0["NetApp Console Agent 4.2.0 Notas de versão"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["Permissões necessárias para o Google Cloud Infrastructure Manager"^]
+

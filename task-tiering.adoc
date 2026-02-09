@@ -26,7 +26,7 @@ A maioria das configurações são suportadas.  Se você tiver um sistema Cloud 
 [role="quick-margin-list"]
 ifdef::aws[]
 
-* Para AWS, você precisará de um VPC Endpoint para S3. <<Requisitos para hierarquizar dados frios no AWS S3,Saber mais>> .
+* Para a AWS, você precisará de um endpoint de VPC para Amazon Simple Storage Service (Amazon S3). <<Requirements to tier cold data to AWS S3,Saber mais>>.
 
 
 endif::aws[]
@@ -142,9 +142,9 @@ ifdef::aws[]
 
 
 
-=== Requisitos para hierarquizar dados frios no AWS S3
+=== Requisitos para transferir dados frios para Amazon S3
 
-Certifique-se de que o Cloud Volumes ONTAP tenha uma conexão com o S3.  A melhor maneira de fornecer essa conexão é criando um VPC Endpoint para o serviço S3.  Para obter instruções, consulte o https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentação da AWS: Criando um endpoint de gateway"^] .
+Certifique-se de que Cloud Volumes ONTAP tenha uma conexão com Amazon S3. A melhor maneira de fornecer essa conexão é criando um endpoint de VPC para o serviço S3. Para obter instruções, consulte o  https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentação da AWS: Criando um endpoint de gateway"^].
 
 Ao criar o VPC Endpoint, certifique-se de selecionar a região, a VPC e a tabela de rotas que correspondem à instância do Cloud Volumes ONTAP .  Você também deve modificar o grupo de segurança para adicionar uma regra HTTPS de saída que habilite o tráfego para o ponto de extremidade S3.  Caso contrário, o Cloud Volumes ONTAP não poderá se conectar ao serviço S3.
 
@@ -184,7 +184,7 @@ link:task-creating-gcp-service-account.html["Aprenda como configurar esta conta 
 Você será solicitado a selecionar esta conta de serviço ao criar um sistema Cloud Volumes ONTAP .
 
 +
-Se você não selecionar uma conta de serviço durante a implantação, será necessário desligar o Cloud Volumes ONTAP, acessar o console do Google Cloud e anexar a conta de serviço às instâncias do Cloud Volumes ONTAP .  Você pode então habilitar a hierarquização de dados conforme descrito na próxima seção.
+Se você não selecionar uma conta de serviço durante a implantação, será necessário desligar o Cloud Volumes ONTAP, acessar o Google Cloud Console e, em seguida, vincular a conta de serviço às instâncias do Cloud Volumes ONTAP. Você pode então ativar o armazenamento em camadas de dados, conforme descrito na próxima seção.
 
 * Para criptografar o bucket com chaves de criptografia gerenciadas pelo cliente, ative o bucket de armazenamento do Google Cloud para usar a chave.
 +

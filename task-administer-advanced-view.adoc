@@ -29,7 +29,7 @@ Você pode executar várias funções de gerenciamento de armazenamento usando o
 * Eventos e trabalhos: visualize logs de eventos, alertas do sistema, trabalhos e logs de auditoria.
 * Proteção avançada de dados: proteja VMs de armazenamento, LUNs e grupos de consistência.
 * Gerenciamento de host: configure grupos de iniciadores SAN e clientes NFS.
-* Gerenciamento de armazenamento de objetos S3: os recursos de gerenciamento de armazenamento S3 no Cloud Volumes ONTAP estão disponíveis somente no Gerenciador do Sistema e não no Console.
+* Gerenciamento de storage de objetos ONTAP S3: Os recursos de gerenciamento de storage de objetos ONTAP S3 no Cloud Volumes ONTAP estão disponíveis apenas no System Manager, e não no Console.
 
 
 

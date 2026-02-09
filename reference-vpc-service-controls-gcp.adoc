@@ -30,7 +30,7 @@ Dependendo do estilo de implantação do agente do Console, certas exceções po
 
 == Imagens
 
-Tanto o Cloud Volumes ONTAP quanto o Console usam imagens de um projeto dentro do GCP que é gerenciado pelo NetApp.  Isso pode afetar a implantação do agente do Console e do Cloud Volumes ONTAP, se sua organização tiver uma política que bloqueie o uso de imagens que não estão hospedadas na organização.
+Tanto Cloud Volumes ONTAP quanto o Console usam imagens de um projeto no Google Cloud que é gerenciado pela NetApp. Isso pode afetar a implantação do agente do Console e do Cloud Volumes ONTAP, se sua organização tiver uma política que bloqueia o uso de imagens que não estão hospedadas dentro da organização.
 
 Você pode implantar um agente do Console manualmente usando o método de instalação manual, mas o Cloud Volumes ONTAP também precisará extrair imagens do projeto NetApp .  Você deve fornecer uma lista permitida para implantar um agente do Console e o Cloud Volumes ONTAP.
 
@@ -54,7 +54,7 @@ Exemplos das regras necessárias para extrair essas imagens com o VPC Service Co
 
 == Políticas de perímetro do VPC Service Controls
 
-As políticas permitem exceções aos conjuntos de regras do VPC Service Controls.  Para mais informações sobre políticas, visite o https://cloud.google.com/vpc-service-controls/docs/ingress-egress-rules#policy-model["Documentação da política de controles de serviço do GCP VPC"^] .
+As políticas permitem exceções aos conjuntos de regras de Controles de Serviço da VPC. Para obter mais informações sobre políticas, visite o  https://cloud.google.com/vpc-service-controls/docs/ingress-egress-rules#policy-model["Documentação da política de Service Controls VPC do Google Cloud"^].
 
 Para definir as políticas exigidas pelo Console, navegue até o Perímetro de Controles de Serviço da VPC na sua organização e adicione as seguintes políticas.  Os campos devem corresponder às opções fornecidas na página de política do VPC Service Controls.  Observe também que *todas* as regras são obrigatórias e os parâmetros *OU* devem ser usados no conjunto de regras.
 

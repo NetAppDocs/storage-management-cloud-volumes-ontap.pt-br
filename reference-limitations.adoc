@@ -31,9 +31,9 @@ NOTE: A capacidade de criar volumes FlexGroup no Console está planejada para um
 
 == O console não oferece suporte ao S3 com o Cloud Volumes ONTAP
 
-Embora o Cloud Volumes ONTAP ofereça suporte ao S3 como uma opção para armazenamento escalável, o Console não fornece nenhum recurso de gerenciamento para esse recurso.  Usar a CLI é a prática recomendada para configurar o acesso do cliente S3 do Cloud Volumes ONTAP.  Para mais detalhes, consulte o http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html["Guia de configuração do S3"^] .
+Embora Cloud Volumes ONTAP suporte S3 como opção para storage com escalabilidade horizontal, o Console não oferece recursos de gerenciamento para essa funcionalidade. Usar a linha de comando é a melhor prática para configurar o acesso do cliente S3 a partir do Cloud Volumes ONTAP. Para detalhes, consulte a  http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html["Guia de Configuração do ONTAP S3"^].
 
-link:concept-client-protocols.html["Saiba mais sobre o suporte do Cloud Volumes ONTAP para S3 e outros protocolos de cliente"] .
+link:concept-client-protocols.html["Saiba mais sobre o suporte do Cloud Volumes ONTAP para ONTAP S3 e outros protocolos de cliente"].
 
 
 

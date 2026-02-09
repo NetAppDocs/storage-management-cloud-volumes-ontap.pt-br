@@ -197,7 +197,7 @@ O único tipo de disco suportado é GP2.  As seguintes famílias de tipos de ins
 
 
 
-NOTE: O Cloud Volumes ONTAP suporta apenas essas configurações.  Selecionar tipos de disco não suportados ou instâncias não qualificadas na configuração da Zona Local da AWS pode resultar em falha na implantação.  A hierarquização de dados para o AWS S3 não está disponível nas Zonas Locais da AWS devido à falta de conectividade.
+NOTE: Cloud Volumes ONTAP suporta apenas estas configurações. Selecionar tipos de disco não suportados ou instâncias não qualificadas na configuração da AWS Local Zone pode resultar em falha na implantação. O armazenamento em camadas de dados no Amazon S3 não é suportado se o seu sistema Cloud Volumes ONTAP estiver em uma AWS Local Zone, pois o acesso aos buckets do Amazon S3 fora da Local Zone envolve maior latência e impacta as atividades do Cloud Volumes ONTAP.
 
 link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["Documentação da AWS: Tipos de instância do EC2 em zonas locais"^] .
 
