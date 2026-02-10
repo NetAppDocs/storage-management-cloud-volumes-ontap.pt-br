@@ -20,6 +20,18 @@ Os aprimoramentos descritos nesta página são específicos para gerenciar o Clo
 
 
 
+== 10 de fevereiro de 2026
+
+
+
+=== Cloud Volumes ONTAP 9.18.1 GA
+
+Agora você pode usar o NetApp Console para implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.18.1 na AWS e no Azure. Esta versão não está disponível para implantação e atualização no Google Cloud.
+
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Saiba mais sobre esta versão do Cloud Volumes ONTAP"^] .
+
+
+
 == 9 de fevereiro de 2026
 
 
@@ -142,7 +154,7 @@ Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cl
 
 Agora você pode usar o BlueXP para implantar e gerenciar o Release Candidate 1 do Cloud Volumes ONTAP 9.17.1 no Azure e no Google Cloud. No entanto, esta versão não está disponível para implantação e atualização na AWS.
 
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Saiba mais sobre esta versão do Cloud Volumes ONTAP"^] .
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9171-relnotes/["Saiba mais sobre esta versão do Cloud Volumes ONTAP"^].
 
 
 

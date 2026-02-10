@@ -16,7 +16,9 @@ summary: O NetApp Console permite que você escolha entre várias versões difer
 [role="lead"]
 O NetApp Console permite que você escolha entre várias versões diferentes do ONTAP ao adicionar um sistema Cloud Volumes ONTAP .
 
-Versões do Cloud Volumes ONTAP diferentes das listadas aqui não estão disponíveis para novas implantações.  Para obter informações sobre atualização, consultelink:task-updating-ontap-cloud.html#supported-upgrade-paths["Caminhos de atualização suportados"] .
+Versões do Cloud Volumes ONTAP diferentes das listadas aqui não estão disponíveis para novas implantações. A versão de patch ou a versão genérica (Disponibilidade Geral) em uma versão aqui representa a versão base disponível para implantação. Para obter detalhes sobre os patches disponíveis, consulte a  https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-new.html["notas de lançamento versioned"^] para cada versão.
+
+Para obter informações sobre upgrade, consulte link:task-updating-ontap-cloud.html#supported-upgrade-paths["Caminhos de atualização suportados"].
 
 ifdef::aws[]
 
@@ -27,16 +29,17 @@ ifdef::aws[]
 Nó único::
 +
 --
+* 9.18.1
 * 9.17.1 P1
-* 9.16.1 GA
-* 9.15.1 GA
+* 9.16.1
+* 9.15.1
 * 9.15.0 P1
-* 9.14.1 GA
-* 9.14.1 RC1
-* 9.14.0 GA
-* 9.13.1 GA
-* 9.12.1 GA
-* 9.12.1 RC1
+* 9.14.1
+* 9.14.1
+* 9.14.0
+* 9.13.1
+* 9.12.1
+* 9.12.1
 * 9.12.0 P1
 * 9.11.1 P3
 * 9.10.1
@@ -50,16 +53,17 @@ Nó único::
 Par HA::
 +
 --
+* 9.18.1
 * 9.17.1 P1
-* 9.16.1 GA
-* 9.15.1 GA
+* 9.16.1
+* 9.15.1
 * 9.15.0 P1
-* 9.14.1 GA
-* 9.14.1 RC1
-* 9.14.0 GA
-* 9.13.1 GA
-* 9.12.1 GA
-* 9.12.1 RC1
+* 9.14.1
+* 9.14.1
+* 9.14.0
+* 9.13.1
+* 9.12.1
+* 9.12.1
 * 9.12.0 P1
 * 9.11.1 P3
 * 9.10.1
@@ -83,7 +87,8 @@ ifdef::azure[]
 Nó único::
 +
 --
-* 9.17.1 RC1
+* 9.18.1
+* 9.17.1 P1
 * 9.16.1 P3
 * 9.15.1 P10
 * 9.14.1 P13
@@ -95,7 +100,8 @@ Nó único::
 Par HA::
 +
 --
-* 9.17.1 RC1
+* 9.18.1
+* 9.17.1 P1
 * 9.16.1 P3
 * 9.15.1 P10
 * 9.14.1 P13
@@ -117,16 +123,16 @@ ifdef::gcp[]
 Nó único::
 +
 --
-* 9.17.1 RC1
-* 9.16.1 GA
-* 9.15.1 GA
+* 9.17.1 P1
+* 9.16.1
+* 9.15.1
 * 9.15.0 P1
-* 9.14.1 GA
-* 9.14.1 RC1
-* 9.14.0 GA
-* 9.13.1 GA
-* 9.12.1 GA
-* 9.12.1 RC1
+* 9.14.1
+* 9.14.1
+* 9.14.0
+* 9.13.1
+* 9.12.1
+* 9.12.1
 * 9.12.0 P1
 * 9.11.1 P3
 * 9.10.1
@@ -139,16 +145,16 @@ Nó único::
 Par HA::
 +
 --
-* 9.17.1 RC1
-* 9.16.1 GA
-* 9.15.1 GA
+* 9.17.1 P1
+* 9.16.1
+* 9.15.1
 * 9.15.0 P1
-* 9.14.1 GA
-* 9.14.1 RC1
-* 9.14.0 GA
-* 9.13.1 GA
-* 9.12.1 GA
-* 9.12.1 RC1
+* 9.14.1
+* 9.14.1
+* 9.14.0
+* 9.13.1
+* 9.12.1
+* 9.12.1
 * 9.12.0 P1
 * 9.11.1 P3
 * 9.10.1

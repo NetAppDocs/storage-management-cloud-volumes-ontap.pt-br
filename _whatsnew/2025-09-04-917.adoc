@@ -8,4 +8,4 @@
 
 Agora você pode usar o BlueXP para implantar e gerenciar o Release Candidate 1 do Cloud Volumes ONTAP 9.17.1 no Azure e no Google Cloud. No entanto, esta versão não está disponível para implantação e atualização na AWS.
 
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Saiba mais sobre esta versão do Cloud Volumes ONTAP"^] .
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9171-relnotes/["Saiba mais sobre esta versão do Cloud Volumes ONTAP"^].
