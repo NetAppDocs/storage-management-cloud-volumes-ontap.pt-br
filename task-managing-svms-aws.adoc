@@ -44,7 +44,7 @@ Cada instância do EC2 suporta um número máximo de endereços IPv4 privados po
 
 Endereços IPv4 privados devem ser atribuídos à porta e0a na AWS antes de você criar LIFs para a nova VM de armazenamento.
 
-Observe que um LIF de gerenciamento opcional para uma VM de armazenamento requer um endereço IP privado em um único sistema de nó e em um par de HA em uma única AZ.  Este LIF de gerenciamento fornece uma conexão com ferramentas de gerenciamento como o SnapCenter.
+Observe que uma LIF de gerenciamento opcional para uma VM de armazenamento requer um endereço IP privado em um sistema de nó único e em um par de HA em uma única AZ. Essa LIF de gerenciamento fornece uma conexão com ferramentas de gerenciamento como SnapCenter.
 
 .Passos
 . Faça login na AWS e abra o serviço EC2.
@@ -72,7 +72,7 @@ Se um endereço IP não estiver em uso, você poderá usá-lo com a nova VM de a
 
 . De volta ao Console da AWS, clique em *Atribuir novo endereço IP* para atribuir endereços IP adicionais com base na quantidade necessária para a nova VM de armazenamento.
 +
-** Sistema de nó único: é necessário um IP privado secundário não utilizado.
+** sistema de nó único: é necessário um endereço IP privado secundário não utilizado.
 +
 Um IP privado secundário opcional é necessário se você quiser criar um LIF de gerenciamento na VM de armazenamento.
 
@@ -92,7 +92,7 @@ Um IP privado secundário opcional é necessário se você quiser criar um LIF d
 
 == Crie uma VM de armazenamento em um sistema de nó único
 
-Essas etapas criam uma nova VM de armazenamento em um sistema de nó único.  Um endereço IP privado é necessário para criar um NAS LIF e outro endereço IP privado opcional é necessário se você quiser criar um LIF de gerenciamento.
+Esses passos criam uma nova VM de armazenamento em um sistema de nó único. É necessário um endereço IP privado para criar uma LIF NAS e outro endereço IP privado opcional se você quiser criar uma LIF de gerenciamento.
 
 .Passos
 . Crie a VM de armazenamento e uma rota para ela.

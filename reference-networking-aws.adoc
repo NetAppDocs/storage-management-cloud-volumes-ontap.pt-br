@@ -106,13 +106,13 @@ Para obter informações sobre como configurar servidores proxy, consulte o http
 
 O Console aloca automaticamente o número necessário de endereços IP privados para o Cloud Volumes ONTAP.  Você precisa garantir que sua rede tenha endereços IP privados suficientes disponíveis.
 
-O número de LIFs que o Console aloca para o Cloud Volumes ONTAP depende se você implanta um sistema de nó único ou um par de HA.  Um LIF é um endereço IP associado a uma porta física.
+O número de LIFs que o Console aloca para Cloud Volumes ONTAP depende de se você implanta um sistema de nó único ou um par de HA. Uma LIF é um endereço IP associado a uma porta física.
 
 
 
 ==== Endereços IP para um sistema de nó único
 
-O Console aloca 6 endereços IP para um único sistema de nó.
+O Console aloca 6 endereços IP para um sistema de nó único.
 
 A tabela a seguir fornece detalhes sobre os LIFs associados a cada endereço IP privado.
 
@@ -142,7 +142,7 @@ A tabela a seguir fornece detalhes sobre os LIFs associados a cada endereço IP 
 
 ==== Endereços IP para pares HA
 
-Os pares HA exigem mais endereços IP do que um sistema de nó único.  Esses endereços IP estão distribuídos por diferentes interfaces Ethernet, conforme mostrado na imagem a seguir:
+Os pares de HA requerem mais endereços IP do que um sistema de nó único. Esses endereços IP são distribuídos por diferentes interfaces ethernet, conforme mostrado na imagem a seguir:
 
 image:diagram_cvo_aws_networking_ha.png["Um diagrama que mostra eth0, eth1, eth2 em uma configuração do Cloud Volumes ONTAP HA na AWS."]
 

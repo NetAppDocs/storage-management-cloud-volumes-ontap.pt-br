@@ -70,7 +70,7 @@ ifdef::azure[]
 
 == Armazenamento do Azure
 
-No Azure, um agregado pode conter até 12 discos, todos do mesmo tamanho.  O tipo de disco e o tamanho máximo do disco dependem se você usa um sistema de nó único ou um par de HA:
+No Azure, um agregado pode conter até 12 discos que são todos do mesmo tamanho. O tipo de disco e o tamanho máximo do disco dependem se você usa um sistema de nó único ou um par de HA:
 
 Sistemas de nó único:: Sistemas de nó único podem usar estes tipos de Azure Managed Disks:
 +

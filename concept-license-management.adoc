@@ -27,7 +27,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-l
 
 == Licenças do sistema BYOL
 
-Licenças baseadas em nós podem ser adquiridas da NetApp. O número de licenças que você pode adquirir para um único sistema de nó ou par de HA é ilimitado.
+As licenças baseadas em nós podem ser adquiridas na NetApp. O número de licenças que você pode comprar para um sistema de nó único ou par de HA é ilimitado.
 
 
 NOTE: A NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAPP"^] .

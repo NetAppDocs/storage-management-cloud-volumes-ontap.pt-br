@@ -153,7 +153,7 @@ Observe os seguintes requisitos para o cofre de chaves:
 +
 *** *Exclusão suave* (esta opção é habilitada por padrão, mas _não_ deve ser desabilitada)
 *** *Proteção contra purga*
-*** *Azure Disk Encryption para criptografia de volume* (para sistemas de nó único, pares de HA em várias zonas e implantações de HA em AZ única)
+*** *Azure Disk Encryption para criptografia de volumes* (para sistemas de nó único, pares de HA em várias zonas e implantações de par de HA em uma única zona de disponibilidade)
 +
 
 NOTE: O uso de chaves de criptografia gerenciadas pelo cliente do Azure depende da habilitação da criptografia do Azure Disk para o cofre de chaves.

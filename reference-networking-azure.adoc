@@ -94,7 +94,7 @@ Para obter informações sobre como configurar servidores proxy, consulte o http
 
 O Console aloca automaticamente o número necessário de endereços IP privados para o Cloud Volumes ONTAP no Azure.  Você precisa ter certeza de que sua rede tem endereços IP privados suficientes disponíveis.
 
-O número de LIFs alocados para o Cloud Volumes ONTAP depende se você implanta um sistema de nó único ou um par de HA.  Um LIF é um endereço IP associado a uma porta física.  Um LIF de gerenciamento de SVM é necessário para ferramentas de gerenciamento como o SnapCenter.
+O número de LIFs alocados para Cloud Volumes ONTAP depende se você implanta um sistema de nó único ou um par de HA. Uma LIF é um endereço IP associado a uma porta física. Uma LIF de gerenciamento de SVM é necessária para ferramentas de gerenciamento como SnapCenter.
 
 
 NOTE: Um iSCSI LIF fornece acesso de cliente pelo protocolo iSCSI e é usado pelo sistema para outros fluxos de trabalho de rede importantes.  Esses LIFs são necessários e não devem ser excluídos.
@@ -103,7 +103,7 @@ NOTE: Um iSCSI LIF fornece acesso de cliente pelo protocolo iSCSI e é usado pel
 
 ==== Endereços IP para um sistema de nó único
 
-O Console aloca 5 ou 6 endereços IP para um único sistema de nó:
+O Console aloca 5 ou 6 endereços IP para um sistema de nó único:
 
 * IP de gerenciamento de cluster
 * IP de gerenciamento de nó
@@ -123,7 +123,7 @@ NOTE: O IP iSCSI fornece acesso do cliente através do protocolo iSCSI.  Ele tam
 
 O Console aloca endereços IP para 4 NICs (por nó) durante a implantação.
 
-Observe que o Console cria um LIF de gerenciamento de SVM em pares de HA, mas não em sistemas de nó único no Azure.
+Observe que o Console cria uma LIF de gerenciamento de SVM em pares de HA, mas não em sistemas de nó único no Azure.
 
 *NIC0*
 
@@ -308,7 +308,7 @@ Ao adicionar um sistema Cloud Volumes ONTAP e escolher um grupo de segurança pr
 
 
 
-NOTE: Os sistemas HA têm menos regras de entrada do que os sistemas de nó único porque o tráfego de dados de entrada passa pelo Balanceador de Carga Padrão do Azure.  Por isso, o tráfego do Load Balancer deve estar aberto, conforme mostrado na regra "AllowAzureLoadBalancerInBound".
+NOTE: Os sistemas de alta disponibilidade (par de HA) têm menos regras de entrada do que os sistemas de nó único porque o tráfego de dados de entrada passa pelo Azure Standard Load Balancer. Por causa disso, o tráfego do Load Balancer deve ser aberto, conforme mostrado na regra "AllowAzureLoadBalancerInBound".
 
 * *Desativado*: esta opção restringe o acesso da rede pública à sua conta de armazenamento e desabilita a hierarquização de dados para sistemas Cloud Volumes ONTAP .  Esta é uma opção recomendada se seus endereços IP privados não devem ser expostos, mesmo dentro da mesma VNet, devido a regulamentações e políticas de segurança.
 

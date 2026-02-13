@@ -28,13 +28,13 @@ Os seguintes requisitos devem ser atendidos no Google Cloud.
 
 === Requisitos específicos para sistemas de nó único
 
-Se você quiser implantar um sistema de nó único, certifique-se de que sua rede atenda aos seguintes requisitos.
+Se você deseja implantar um sistema de nó único, certifique-se de que sua rede atenda aos seguintes requisitos.
 
 
 
 ==== Uma VPC
 
-Uma Nuvem Privada Virtual (VPC) é necessária para um sistema de nó único.
+É necessária uma Virtual Private Cloud (VPC) para um sistema de nó único.
 
 
 
@@ -111,7 +111,7 @@ As sub-redes nessas VPCs devem ter intervalos CIDR distintos.  Eles não podem t
 
 O Console aloca automaticamente o número necessário de endereços IP privados para o Cloud Volumes ONTAP no Google Cloud.  Você precisa ter certeza de que sua rede tem endereços privados suficientes disponíveis.
 
-O número de LIFs alocados para o Cloud Volumes ONTAP depende se você implanta um sistema de nó único ou um par de HA.  Um LIF é um endereço IP associado a uma porta física.  Um LIF de gerenciamento de SVM é necessário para ferramentas de gerenciamento como o SnapCenter.
+O número de LIFs alocados para Cloud Volumes ONTAP depende se você implanta um sistema de nó único ou um par de HA. Uma LIF é um endereço IP associado a uma porta física. Uma LIF de gerenciamento de SVM é necessária para ferramentas de gerenciamento como SnapCenter.
 
 * *Nó único* O Console aloca 4 endereços IP para um sistema de nó único:
 +
@@ -185,7 +185,7 @@ Embora o acesso global esteja desabilitado por padrão, há suporte para habilit
 
 O Cloud Volumes ONTAP e o agente do Console são suportados em uma VPC compartilhada do Google Cloud e também em VPCs autônomas.
 
-Para um sistema de nó único, a VPC pode ser uma VPC compartilhada ou uma VPC autônoma.
+Para um sistema de nó único, a VPC pode ser uma VPC compartilhada ou uma VPC independente.
 
 Para um par HA, são necessárias quatro VPCs.  Cada uma dessas VPCs pode ser compartilhada ou independente.  Por exemplo, VPC-0 pode ser uma VPC compartilhada, enquanto VPC-1, VPC-2 e VPC-3 podem ser VPCs independentes.
 

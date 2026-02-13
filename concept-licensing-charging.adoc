@@ -49,7 +49,7 @@ Sua licença é sempre cobrada primeiro, mas você será cobrado pela taxa horá
 
 
 * Se você tiver um contrato anual de um marketplace, _todos_ os sistemas Cloud Volumes ONTAP que você implantar serão cobrados desse contrato.  Você não pode misturar e combinar um contrato de mercado anual com BYOL.
-* Somente sistemas de nó único com BYOL são suportados nas regiões da China. As implantações na região da China estão isentas das restrições de licenciamento BYOL.
+* Apenas sistemas de nó único com BYOL são suportados nas regiões da China. Implantações na região da China estão isentas das restrições de licenciamento BYOL.
 
 
 
@@ -133,7 +133,7 @@ Para obter informações sobre os limites de capacidade de cada provedor de nuve
 
 == Número máximo de sistemas
 
-Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por organização do NetApp Console . Um _sistema_ é um par de Cloud Volumes ONTAP HA, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar. A VM de armazenamento padrão não conta para o limite. Este limite se aplica a todos os modelos de licenciamento.
+Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por organização do NetApp Console. Um _sistema_ é um par de HA do Cloud Volumes ONTAP, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar. A VM de armazenamento padrão não conta para o limite. Esse limite se aplica a todos os modelos de licenciamento.
 
 Por exemplo, digamos que você tenha três sistemas:
 
@@ -143,7 +143,7 @@ Este sistema conta como um sistema.
 
 * Um sistema Cloud Volumes ONTAP de nó único com duas VMs de armazenamento (a VM de armazenamento padrão, mais uma VM de armazenamento adicional que você criou)
 +
-Este sistema conta como dois sistemas: um para o sistema de nó único e um para a VM de armazenamento adicional.
+Este sistema é contabilizado como dois sistemas: um para o sistema de nó único e um para a VM de armazenamento adicional.
 
 * Um par de Cloud Volumes ONTAP HA com três VMs de armazenamento (a VM de armazenamento padrão, mais duas VMs de armazenamento adicionais que você criou)
 +

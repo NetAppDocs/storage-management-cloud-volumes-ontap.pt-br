@@ -16,7 +16,7 @@ summary: Pode ser necessário alterar a configuração dos sistemas Cloud Volume
 [role="lead"]
 Você pode escolher uma velocidade de gravação normal ou alta para o Cloud Volumes ONTAP no NetApp Console.  A velocidade de gravação padrão é normal.  Você pode mudar para alta velocidade de gravação se um desempenho de gravação rápido for necessário para sua carga de trabalho.
 
-Alta velocidade de gravação é suportada com todos os tipos de sistemas de nó único e algumas configurações de pares HA.  Veja as configurações suportadas no https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Notas de versão do Cloud Volumes ONTAP"^]
+Alta velocidade de gravação é suportada em todos os tipos de sistemas de nó único e em algumas configurações de par de HA. Veja as configurações suportadas em https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Notas de versão do Cloud Volumes ONTAP"^]
 
 Antes de alterar a velocidade de gravação, você develink:concept-write-speed.html["entender as diferenças entre as configurações normais e altas"] .
 

@@ -172,7 +172,7 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["Saiba mais sobre o
 
 === Configurações suportadas
 
-Assinaturas Keystone são suportadas com pares HA.  Esta opção de licenciamento não é suportada com sistemas de nó único no momento.
+Keystone Subscriptions são compatíveis com pares de HA. Esta opção de licenciamento não é compatível com sistemas de nó único neste momento.
 
 
 

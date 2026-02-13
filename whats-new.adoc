@@ -20,6 +20,24 @@ Os aprimoramentos descritos nesta página são específicos para gerenciar o Clo
 
 
 
+== 12 de fevereiro de 2026
+
+
+
+== Suporte para Ebdsv5 e E104ids_v5 VMs no Azure
+
+A partir do Cloud Volumes ONTAP 9.18.1, você pode implantar Ebdsv5 e E104ids_v5 VMs para implantações e atualizações de nó único e de alta disponibilidade (par de HA).
+
+As VMs Ebdsv5 da família Eb de máquinas virtuais do Azure são otimizadas para oferecer maior desempenho de armazenamento remoto. Você pode usar essas VMs para cargas de trabalho corporativas com uso intensivo de memória e E/S, como bancos de dados relacionais, análises na memória e outros aplicativos críticos para negócios.
+
+E104ids_v5 é uma instância de VM isolada que ajuda você a gerenciar melhor as janelas de manutenção programadas. Comparada à E80ids_v4, ela oferece uma taxa de transferência de disco e IOPS muito maiores, além de um desempenho geral de rede superior.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurações com suporte para Cloud Volumes ONTAP no Azure"^]
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/memory-optimized/edsv5-series?tabs=sizebasic["Documentação do Azure: série de tamanhos Edsv5"^]
+
+
+
 == 10 de fevereiro de 2026
 
 
@@ -1572,7 +1590,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp
 +
 Anteriormente, o BlueXP não exibia nenhuma política no VPC-1, VPC-2 ou VPC-3 que não tivesse uma tag de destino.
 
-* Ao criar um sistema de nó único do Cloud Volumes ONTAP no Google Cloud, agora você pode escolher se deseja que a política de firewall predefinida permita o tráfego somente na VPC selecionada (recomendado) ou em todas as VPCs.
+* Ao criar um sistema de nó único do Cloud Volumes ONTAP no Google Cloud, agora você pode escolher se deseja que a política de firewall predefinida permita o tráfego somente dentro da VPC selecionada (recomendado) ou em todas as VPCs.
 
 
 
@@ -1767,7 +1785,7 @@ O Cloud Volumes ONTAP agora é compatível com a região da AWS Ásia-Pacífico 
 
 === Redução de porta
 
-As portas 8023 e 49000 não estão mais abertas nos sistemas Cloud Volumes ONTAP no Azure para sistemas de nó único e pares de HA.
+As portas 8023 e 49000 não estão mais abertas nos sistemas Cloud Volumes ONTAP no Azure, tanto para sistemas de nó único quanto para pares de HA.
 
 Essa alteração se aplica aos _novos_ sistemas Cloud Volumes ONTAP a partir da versão 3.9.13 do Connector.
 
@@ -2076,7 +2094,7 @@ Há algumas limitações a serem apontadas:
 
 === Ultra SSD VNVRAM em regiões do Azure com suporte
 
-O Cloud Volumes ONTAP agora pode usar um Ultra SSD como VNVRAM quando você usa o tipo de VM E32s_v3 com um sistema de nó único https://docs.microsoft.com/en-us/azure/virtual-machines/disks-enable-ultra-ssd["em qualquer região do Azure com suporte"^] .
+Cloud Volumes ONTAP agora pode usar um SSD Ultra como VNVRAM quando você usa o tipo de VM E32s_v3 com um sistema de nó único https://docs.microsoft.com/en-us/azure/virtual-machines/disks-enable-ultra-ssd["em qualquer região do Azure com suporte"^].
 
 A VNVRAM oferece melhor desempenho de gravação.
 

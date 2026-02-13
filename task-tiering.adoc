@@ -101,7 +101,7 @@ ifdef::azure[]
 
 * O armazenamento em camadas de dados é suportado no Azure da seguinte forma:
 +
-** Versão 9.4 com sistemas de nó único
+** Versão 9.4 em sistemas de nó único
 ** Versão 9.6 com pares HA
 
 

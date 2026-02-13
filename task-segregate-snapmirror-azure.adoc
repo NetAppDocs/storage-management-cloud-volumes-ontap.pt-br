@@ -131,7 +131,7 @@ dest::> network ipspace create -ipspace <new_ipspace>
 ----
 dest::> network port show
 ----
-. Para sistemas de nó único, a porta recém-adicionada é _e0b_.  Para implantações de par HA com discos gerenciados, a porta recém-adicionada é _e0d_.  Para implantações de pares HA com blobs de página, a porta recém-adicionada é _e0e_.  Use o nome do nó, não o nome da VM.  Encontre o nome do nó executando `node show` .
+. Para sistemas de nó único, a porta recém-adicionada é _e0b_. Para implantações de par de HA com discos gerenciados, a porta recém-adicionada é _e0d_. Para implantações de par de HA com blobs de página, a porta recém-adicionada é _e0e_. Use o nome do nó, não o nome da VM. Encontre o nome do nó executando  `node show`.
 +
 [source, cli]
 ----

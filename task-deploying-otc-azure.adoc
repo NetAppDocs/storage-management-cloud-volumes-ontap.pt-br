@@ -51,7 +51,7 @@ Não é recomendado implantar o Cloud Volumes ONTAP em um grupo de recursos comp
 
 == Inicie um sistema Cloud Volumes ONTAP de nó único no Azure
 
-Se você quiser iniciar um sistema Cloud Volumes ONTAP de nó único no Azure, precisará criar um sistema de nó único no Console.
+Se você deseja iniciar um sistema Cloud Volumes ONTAP de nó único no Azure, precisa criar um sistema de nó único no Console.
 
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.

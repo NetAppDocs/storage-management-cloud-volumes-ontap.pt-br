@@ -68,7 +68,7 @@ ifdef::aws[]
 
 ==== AWS
 
-Se você usar um sistema de nó único, o Cloud Volumes ONTAP oferece suporte a alta velocidade de gravação com todos os tipos de instância.
+Se você utiliza um sistema de nó único, Cloud Volumes ONTAP oferece suporte a alta velocidade de gravação com todos os tipos de instância.
 
 A partir da versão 9.8, o Cloud Volumes ONTAP oferece suporte à alta velocidade de gravação com pares HA ao usar quase todos os tipos de instância EC2 suportados, exceto m5.xlarge e r5.xlarge.
 
@@ -82,7 +82,7 @@ ifdef::azure[]
 
 ==== Azul
 
-Se você usar um sistema de nó único, o Cloud Volumes ONTAP oferece suporte a alta velocidade de gravação com todos os tipos de VM.
+Se você utiliza um sistema de nó único, Cloud Volumes ONTAP oferece suporte a alta velocidade de gravação com todos os tipos de VM.
 
 Se você usar um par de HA, o Cloud Volumes ONTAP oferece suporte a alta velocidade de gravação com vários tipos de VM, a partir da versão 9.8.  Vá para o https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Notas de versão do Cloud Volumes ONTAP"^] para visualizar os tipos de VM que suportam alta velocidade de gravação.
 
@@ -94,7 +94,7 @@ ifdef::gcp[]
 
 ==== Google Cloud
 
-Se você usar um sistema de nó único, o Cloud Volumes ONTAP oferece suporte a alta velocidade de gravação com todos os tipos de máquina.
+Se você usa um sistema de nó único, Cloud Volumes ONTAP oferece suporte a alta velocidade de gravação com todos os tipos de máquinas.
 
 Se você usar um par de HA, o Cloud Volumes ONTAP oferecerá suporte a alta velocidade de gravação com vários tipos de VM, a partir da versão 9.13.0.  Vá para o https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html#supported-configurations-by-license["Notas de versão do Cloud Volumes ONTAP"^] para visualizar os tipos de VM que suportam alta velocidade de gravação.
 

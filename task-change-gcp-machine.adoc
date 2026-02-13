@@ -24,7 +24,7 @@ http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D
 * Alterar o tipo de máquina pode afetar as cobranças do serviço do Google Cloud.
 * A operação reinicia o Cloud Volumes ONTAP.
 +
-Para sistemas de nó único, a E/S é interrompida.
+Para sistemas de nó único, a entrada/saída é interrompida.
 
 +
 Para pares HA, a mudança não é disruptiva.  Os pares HA continuam a fornecer dados.

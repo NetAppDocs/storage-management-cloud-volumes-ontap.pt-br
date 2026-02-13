@@ -32,7 +32,7 @@ Todas as versões do Cloud Volumes ONTAP anteriores à 9.11.1 oferecem suporte a
 
 == Criar uma VM de armazenamento
 
-Com base na sua configuração e no tipo de licença, você pode criar várias VMs de armazenamento em um único sistema de nó ou em uma configuração de alta disponibilidade (HA) usando as APIs.
+Com base na sua configuração e tipo de licença, você pode criar várias VMs de armazenamento em um sistema de nó único ou em uma configuração de alta disponibilidade (par de HA) usando as APIs.
 
 .Sobre esta tarefa
 Ao criar VMs de armazenamento usando as APIs, juntamente com a configuração das interfaces de rede necessárias, o Console também modifica as `default-data-files` políticas nas VMs de armazenamento de dados removendo os seguintes serviços do LIF de dados do NAS e adicionando-os ao LIF de dados do iSCSI usado para conexões de gerenciamento de saída:
@@ -49,9 +49,9 @@ O agente do Console requer permissões específicas para criar VMs de armazename
 
 
 
-=== Sistema de nó único
+=== sistema de nó único
 
-Use a seguinte chamada de API para criar uma VM de armazenamento em um sistema de nó único.
+Utilize a seguinte chamada de API para criar uma VM de armazenamento em um sistema de nó único.
 
 `POST /gcp/vsa/working-environments/{workingEnvironmentId}/svm`
 
