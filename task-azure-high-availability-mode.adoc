@@ -14,13 +14,12 @@ summary: O modo de alta disponibilidade do Microsoft Azure deve ser habilitado p
 
 
 [role="lead"]
-O modo de alta disponibilidade (HA) do Microsoft Azure deve ser habilitado para reduzir tempos de failover não planejados e habilitar o suporte NFSv4 para o Cloud Volumes ONTAP.  Neste modo, seus nós do Cloud Volumes ONTAP HA podem atingir um objetivo de tempo de recuperação (RTO) baixo (60 segundos) durante failovers não planejados em clientes CIFS e NFSv4.
+Você deve habilitar o modo de alta disponibilidade (HA) do Microsoft Azure para reduzir os tempos de failover não planejados e habilitar o suporte a NFSv4 para Cloud Volumes ONTAP. Se você habilitar esse modo, seus nós HA do Cloud Volumes ONTAP poderão atingir um baixo tempo de recuperação (RTO) de 60 segundos durante failovers não planejados em clientes CIFS e NFSv4.
 
 A partir do Cloud Volumes ONTAP 9.10.1, reduzimos o tempo de failover não planejado para pares de HA do Cloud Volumes ONTAP em execução no Microsoft Azure e adicionamos suporte para NFSv4.  Para disponibilizar esses aprimoramentos no Cloud Volumes ONTAP, você precisa habilitar o recurso de alta disponibilidade na sua assinatura do Azure.
 
-O NetApp Console solicita esses detalhes quando o recurso precisa ser habilitado em uma assinatura do Azure.
-
-Observe o seguinte:
+.Sobre esta tarefa
+NetApp Console solicita esses detalhes quando o recurso precisa ser habilitado em uma assinatura do Azure. Observe o seguinte:
 
 * Não há problemas com a alta disponibilidade do seu par Cloud Volumes ONTAP HA.  Este recurso do Azure funciona em conjunto com o ONTAP para reduzir o tempo de interrupção do aplicativo observado pelo cliente para protocolos NFS que resultam de eventos de failover não planejados.
 * A ativação desse recurso não causa interrupções nos pares de HA do Cloud Volumes ONTAP .
@@ -29,9 +28,9 @@ Observe o seguinte:
 * Quando o modo HA está habilitado, o Console verifica o sistema a cada 12 horas para atualizar as regras internas do Balanceador de Carga do Azure.
 
 
-Um usuário do Azure que tenha privilégios de "Proprietário" pode habilitar o recurso na CLI do Azure.
-
 .Passos
+Um usuário do Azure com privilégios de _Proprietário_ pode habilitar o recurso a partir do Azure CLI.
+
 . https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart["Acesse o Azure Cloud Shell pelo Portal do Azure"^]
 . Registre o recurso de modo de alta disponibilidade:
 +
@@ -62,4 +61,9 @@ A CLI do Azure deve retornar um resultado semelhante ao seguinte:
   "type": "Microsoft.Features/providers/features"
 }
 ----
+
+
+.Links relacionados
+. https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-ha-ports-overview["Microsoft Azure documentação: Visão geral das portas de alta disponibilidade"^]
+. https://learn.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest["Microsoft Azure documentação: introdução à CLI do Azure"^]
 

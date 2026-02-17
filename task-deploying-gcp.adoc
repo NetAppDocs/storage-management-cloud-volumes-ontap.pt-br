@@ -130,7 +130,7 @@ Se você deixar o Console gerar a política de firewall para você, precisará e
 ** link:task-set-up-licensing-google.html["Aprenda como configurar o licenciamento"^]
 
 
-. *Pacotes pré-configurados*: selecione um dos pacotes para implantar rapidamente um sistema Cloud Volumes ONTAP ou clique em *Criar minha própria configuração*.
+. *Pacotes pré-configurados*: selecione um dos pacotes para implantar rapidamente um sistema Cloud Volumes ONTAP ou clique em *Criar minha própria configuração*. Os pacotes pré-configurados variam de acordo com a versão do Cloud Volumes ONTAP selecionada. Por exemplo, para Cloud Volumes ONTAP 9.18.1 e versões posteriores, o Console exibe pacotes com VMs C3, incluindo discos Hyperdisk Balanced. Você pode modificar as configurações, como parâmetros de IOPS e throughput, com base nas necessidades da sua carga de trabalho.
 +
 Se você escolher um dos pacotes, precisará apenas especificar um volume e depois revisar e aprovar a configuração.
 
@@ -151,14 +151,9 @@ Para obter ajuda na escolha do tipo e tamanho do disco, consultelink:task-planni
 
 . *Flash Cache, Velocidade de Gravação e WORM*:
 +
-.. Habilite *Flash Cache*, se desejar.
+.. Ative o *Flash Cache* ou escolha a velocidade de gravação *Normal* ou *Alta* se necessário.
 +
-
-NOTE: A partir do Cloud Volumes ONTAP 9.13.1, o _Flash Cache_ é compatível com os tipos de instância n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64.  Não é possível desabilitar o Flash Cache após a implantação.
-
-.. Escolha a velocidade de gravação *Normal* ou *Alta*, se desejar.
-+
-link:concept-write-speed.html["Saiba mais sobre velocidade de gravação"] .
+Saiba mais sobre  https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html#flash-cache-support["Cache Flash"^] e link:concept-write-speed.html["velocidade de escrita"].
 
 +
 
@@ -388,14 +383,9 @@ Para obter ajuda na escolha do tipo e tamanho do disco, consultelink:task-planni
 
 . *Flash Cache, Velocidade de Gravação e WORM*:
 +
-.. Habilite *Flash Cache*, se desejar.
+.. Ative o *Flash Cache* ou escolha a velocidade de gravação *Normal* ou *Alta* se necessário.
 +
-
-NOTE: A partir do Cloud Volumes ONTAP 9.13.1, o _Flash Cache_ é compatível com os tipos de instância n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64.  Não é possível desabilitar o Flash Cache após a implantação.
-
-.. Escolha a velocidade de gravação *Normal* ou *Alta*, se desejar.
-+
-link:concept-write-speed.html["Saiba mais sobre velocidade de gravação"^] .
+Saiba mais sobre  https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html#flash-cache-support["Cache Flash"^] e link:concept-write-speed.html["velocidade de escrita"].
 
 +
 

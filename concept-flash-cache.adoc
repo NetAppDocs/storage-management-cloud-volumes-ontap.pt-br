@@ -44,3 +44,9 @@ endif::aws[]
 
 * O reaquecimento do cache após uma reinicialização não é suportado com o Cloud Volumes ONTAP.
 
+
+.Tópicos relacionados
+* https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html["Configurações com suporte para Cloud Volumes ONTAP na AWS"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurações com suporte para Cloud Volumes ONTAP no Azure"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Configurações suportadas para Cloud Volumes ONTAP no Google Cloud"^]
+
