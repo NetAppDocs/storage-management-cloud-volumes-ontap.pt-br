@@ -503,6 +503,45 @@ NOTE: Para habilitar alta velocidade de gravação para novas implantações de 
 
 
 
+=== Configuração do Infrastructure Manager para implantações em modo privado
+
+Se você deseja implantar Cloud Volumes ONTAP 9.16.1 ou posterior no modo privado, precisa fazer algumas alterações de configuração para que Cloud Volumes ONTAP possa usar Google Cloud Infrastructure Manager como serviço de implantação em vez de Deployment Manager, que Google eventualmente descontinuará.
+
+.Antes de começar
+* Certifique-se de que seu sistema Cloud Volumes ONTAP esteja na versão 9.16.1 ou posterior. Se não estiver, atualize seu sistema. Consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-updating-ontap-cloud.html["Atualizar Cloud Volumes ONTAP"] para obter instruções.
+* Certifique-se de que as APIs do Google Cloud estejam ativadas. Consulte  https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html#step-5-enable-google-cloud-apis["Ativar APIs do Google Cloud"^].
+* Certifique-se de que a API Cloud Build esteja ativada. Consulte  https://console.cloud.google.com/flows/enableapi?apiid=cloudbuild.googleapis.com&redirect=https://console.cloud.google.com/build/docs/private-pools/set-up-private-pool-environment["Ative a API Cloud Build aqui"^].
+* Verifique se a conta de serviço do agente do Console possui todas as permissões padrão. Além disso, certifique-se de que a conta de serviço tenha as  `cloudbuild.workerpools.get` e  `cloudbuild.workerpools.list` permissões. Consulte  https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#service-account-permissions["Permissões do Google Cloud para o agente do Console"^].
+
+
+.Passos
+. Crie um pool de workers privado com essa configuração na mesma região das implantações do Cloud Volumes ONTAP. Para obter informações sobre como criar um pool de workers privado, consulte  https://docs.cloud.google.com/build/docs/private-pools/create-manage-private-pools#creating_a_new_private_pool["Documentação do Google Cloud: criar e gerenciar pools privados"^] e  https://cloud.google.com/build/pricing["Preços do Google Cloud Build"^].
++
+O pool de trabalhadores deve ter a seguinte configuração:
+
++
+** Tipo de máquina: e2-medium
+** Tamanho do disco: 100 GB
+** Atribuir IP externo: false
+** Rede: padrão ou privada.
+** A sub-rede configurada para acessar http://googleapis.com/["APIs do Google"]. Execute estas etapas para garantir que a sub-rede possa acessar as APIs do Google:
++
+... Certifique-se de que o "Acesso privado do Google" esteja ativado para a subnet.
+... Acesse *VPC Network level > Aba Private Service Access > Allocated IP ranges for services*.
+... Selecione *Allocate IP range* e aloque o intervalo de IP interno para a conexão privada com o Google Compute Service.
+... Em *Conexão privada com serviços*, selecione *Criar conexão*.
+... Selecione *Connected service producer = Google Cloud Platform*.
+... Atribua a alocação para o intervalo de IP de conexão privada que você criou na etapa anterior.
+
+
+
+
+. Implante esse pool de workers e mantenha-o em execução para o gerenciamento do Cloud Volumes ONTAP. O Google Cloud usa esse pool de workers para executar todas as operações do Terraform em um ambiente isolado.
+. Ao implantar Cloud Volumes ONTAP no modo privado, selecione o nome deste pool de workers no campo *GCP Worker Pool*. Consulte link:task-deploying-gcp.html["Inicie o Cloud Volumes ONTAP no Google Cloud"] para obter instruções.
+
+
+
+
 == Requisitos para o agente do console
 
 Se você ainda não criou um agente do Console, revise os requisitos de rede.
