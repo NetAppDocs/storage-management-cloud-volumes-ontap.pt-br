@@ -20,6 +20,30 @@ Os aprimoramentos descritos nesta página são específicos para gerenciar o Clo
 
 
 
+== 10 de março de 2026
+
+
+
+=== Capacidade de gerenciar as configurações de proxy do agente do NetApp Console para Cloud Volumes ONTAP
+
+Agora você pode gerenciar as configurações de proxy no agente do NetApp Console para Cloud Volumes ONTAP, mesmo se perder a conexão ou se o proxy estiver configurado incorretamente. Anteriormente, se o agente do Console não conseguisse se conectar ao Cloud Volumes ONTAP por 20 minutos, ele sobrescrevia suas configurações de proxy manuais com as configurações padrão. Isso causava falhas de comunicação, incluindo problemas com mensagens AutoSupport. Para manter suas configurações de proxy para sistemas existentes, execute a seguinte chamada de API:
+
+`PUT /occm/config`
+
+Inclua o seguinte parâmetro no corpo da solicitação:
+
+[source, json]
+----
+{
+  "proxyMode": "No_Overwrites"
+}
+----
+O modo padrão é standard, o que significa que o agente do Console sobrescreve suas configurações de proxy com as configurações padrão caso não consiga se conectar ao Cloud Volumes ONTAP por 20 minutos.
+
+https://docs.netapp.com/us-en/console-automation/cvo/put-occm-config.html["Configurar parâmetros modificáveis do NetApp Console"^]
+
+
+
 == 26 de fevereiro de 2026
 
 
