@@ -1,0 +1,105 @@
+= Atividades que você não pode realizar, por aba
+:allow-uri-read: 
+
+
+
+
+=== Atividades que você não pode realizar, por aba
+
+A tabela a seguir resume as atividades restritas por aba.
+
+[cols="1,4"]
+|===
+| Aba | Atividades que você não pode realizar 
+
+
+| Visão geral  a| 
+* Adicionar um volume
+* Adicionar um agregado
+* Abrir o System Manager
+* Use o botão Liga/Desliga
+* Defina uma senha
+* Atualizar a versão do ONTAP
+* Remova o sistema da área de trabalho
+* Excluir o sistema
+* Use *Atualizar agora*
+* Edite as *etiquetas do sistema* no menu de lápis de todos os recursos
+* Edite *Tempo de inatividade programado* no menu de lápis de todos os recursos
+* Edite *classes de armazenamento* no menu de lápis de todos os recursos
+* Edite *Tipo de instância* no menu de lápis de todos os recursos
+* Edite o *método de carregamento* no menu de lápis de todos os recursos
+* Edite *Tipo de licença* no menu de lápis de todos os recursos
+* Edite *velocidade de escrita* no menu de todas as funcionalidades do lápis
+* Edite *Proteção contra ransomware* no menu de opções (ícone de lápis) de todos os recursos
+* Edite *Registro de suporte* no menu de todos os recursos (ícone de lápis)
+* Edite *WORM* no menu de lápis de todos os recursos
+* Edite *Data tiering* no menu de opções (ícone de lápis)
+* Edite *CIFS setup* no menu de lápis de todos os recursos
+* Edite *Tabelas de rotas* no menu de lápis de todos os recursos
+
+
+
+
+| Volumes  a| 
+Nenhuma atualização de volume é permitida nesta aba, e você não pode adicionar volumes.
+
+* Clonar um volume
+* Editar configurações de volume
+* Excluir um volume
+* Criar uma cópia instantânea
+* Restaurar a partir de uma cópia instantânea
+* Alterar o tipo de disco (opção avançada)
+* Alterar a política de tiering (opção avançada)
+
+
+
+
+| Agregados  a| 
+* Adicionar um agregado
+* Adicionar um volume
+* Aumentar capacidade
+* Excluir um agregado
+
+
+
+
+| Replicação  a| 
+* Interromper replicação
+* Ressincronizar replicação
+* Replicação de resincronização reversa
+* Edite o cronograma
+* Editar a taxa máxima de transferência
+* Atualizar replicação
+* Excluir replicação
+
+
+
+
+| Tela principal  a| 
+* Adicionar um sistema
+* Descubra um sistema (para todos os operadores)
+* Use arrastar e soltar para *Copy and sync*
+* Use arrastar e soltar para *armazenamento em cache de volume*
+* Use arrastar e soltar para *Replication*
+* Adicionar um volume
+* Acesse *Custo e desempenho otimizados*
+* Abrir o System Manager
+* Use *Replicação* para Cloud Volumes ONTAP somente quando a permissão CVO necessária estiver disponível (não aplicável ao FSx para ONTAP ou sistemas locais)
+* Use o *armazenamento em cache de volume* para Cloud Volumes ONTAP somente quando a permissão CVO necessária estiver disponível (não aplicável ao FSx para ONTAP ou sistemas locais)
+* Insira um sistema
+* Use o botão de gerenciamento AVS
+
+
+
+
+| Sem funções  a| 
+Quando nenhuma função é atribuída, todas as ações são desativadas.
+
+* Acesse o ambiente de trabalho
+* Acesso à replicação
+* Use o assistente de criação do Cloud Volumes ONTAP
+* Use o assistente de criação de replicação
+* Descubra Cloud Volumes ONTAP
+
+
+|===

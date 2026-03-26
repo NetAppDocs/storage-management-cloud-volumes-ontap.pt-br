@@ -1138,7 +1138,6 @@
   <block id="432afd81656ecff91097001b2dbff0ad" category="section-title">Versão 9.10.0 e anteriores</block>
   <block id="7510539e42be5fefa89b6362a37647a2" category="paragraph">Você pode ativar o armazenamento WORM em um sistema Cloud Volumes ONTAP ao adicionar um novo sistema.  Cada volume criado no Console tem o WORM habilitado.  Não é possível desabilitar o armazenamento WORM em volumes individuais.</block>
   <block id="785248b65164fa7ba3b7948c05afc1cc" category="section-title">Enviando arquivos para WORM</block>
-  <block id="3fd6e3cd7f26f44db79e5d9fabdbeda0" category="paragraph">Você pode usar um aplicativo para confirmar arquivos no WORM por NFS ou CIFS, ou usar o ONTAP CLI para confirmar arquivos no WORM automaticamente.  Você também pode usar um arquivo WORM anexável para reter dados que são gravados incrementalmente, como informações de log.</block>
   <block id="49e35df1608bc4ec8dda47be9031b77e" category="inline-link">Documentação ONTAP sobre SnapLock</block>
   <block id="a30d432611fbd01e1559279ca4b99466" category="paragraph">Depois de ativar o armazenamento WORM em um sistema Cloud Volumes ONTAP , você deve usar a CLI do ONTAP para todo o gerenciamento do armazenamento WORM.  Para obter instruções, consulte o<block ref="4043230af2751621c7cbfb902f557f9b" category="inline-link-rx"></block> .</block>
   <block id="ac6d04f622113714dd7e0660e975a02b" category="section-title">Habilitando WORM em um sistema Cloud Volumes ONTAP</block>
@@ -6363,4 +6362,68 @@
   <block id="ff18cbae63293952942e32e52d2873b4" category="doc">Sincronize a hora do sistema Cloud Volumes ONTAP usando servidores NTP</block>
   <block id="29b0f551bb46a64e0ba83250d3fa3e71" category="paragraph">Configurar servidores Network Time Protocol (NTP) para seus clusters Cloud Volumes ONTAP garante a sincronização precisa do horário do seu cluster com outros sistemas em sua rede e servidores externos. Sincronizar o horário do seu cluster com servidores NTP externos ajuda a manter a consistência em toda a sua infraestrutura. NetApp configura servidores NTP por padrão para novas implantações do Cloud Volumes ONTAP. No entanto, se eles não estiverem configurados para seus clusters Cloud Volumes ONTAP existentes, você deve configurar servidores NTP para obter uma sincronização precisa do horário dentro e fora da sua rede.</block>
   <block id="34df2c4da19b4e31f0349125e9cabfc7" category="section-title">10 de março de 2026</block>
+  <block id="19fd9c11abb625f1aabd43382d3c4ecc" category="doc">Atividades que você não pode realizar, por aba</block>
+  <block id="d09c3afe3c25138ceca8e5d353ce66ad" category="section-title">Atividades que você não pode realizar, por aba</block>
+  <block id="59fb49c7093907fa9e7f335ab190da2f" category="paragraph">A tabela a seguir resume as atividades restritas por aba.</block>
+  <block id="5c6ba25104401c9ee0650230fc6ba413" category="cell">Aba</block>
+  <block id="d33bd391ad5ed956588c0cd4c08279ea" category="cell">Atividades que você não pode realizar</block>
+  <block id="3cbb7699679cf8ac6bb42f2d93fd4d72" category="list-text">Adicionar um volume</block>
+  <block id="5288a56300efd1e1c3e2751aa731a390" category="list-text">Adicionar um agregado</block>
+  <block id="a319340d2793ad3feb216caae04b1972" category="list-text">Abrir o System Manager</block>
+  <block id="50384ef287bf4f3284ec6c4fdcbb197d" category="list-text">Use o botão Liga/Desliga</block>
+  <block id="cc940bf2667209e4d71ddc12d8f2e5ed" category="list-text">Defina uma senha</block>
+  <block id="905cb7c01c2c938fc7dfb74be192c7fe" category="list-text">Atualizar a versão do ONTAP</block>
+  <block id="89d30dd0d2abc48eac8a8820c224f0cb" category="list-text">Remova o sistema da área de trabalho</block>
+  <block id="611740b36c016d17e48d1933b790fbcd" category="list-text">Excluir o sistema</block>
+  <block id="39ca4d74366a4f92b22ffc56ae7560da" category="list-text">Use *Atualizar agora*</block>
+  <block id="ec4d6779edb1b535eaa6bb011e1d3e8a" category="list-text">Edite as *etiquetas do sistema* no menu de lápis de todos os recursos</block>
+  <block id="dfac2097a6da49d3b50831a5175ce966" category="list-text">Edite *Tempo de inatividade programado* no menu de lápis de todos os recursos</block>
+  <block id="75592ee45c7658257f6bd79f9b3116ad" category="list-text">Edite *classes de armazenamento* no menu de lápis de todos os recursos</block>
+  <block id="ed9f8745eec3bd91b3ac7dd70de9e63d" category="list-text">Edite *Tipo de instância* no menu de lápis de todos os recursos</block>
+  <block id="290f18ca088f3b33f8cc9a7f895991e5" category="list-text">Edite o *método de carregamento* no menu de lápis de todos os recursos</block>
+  <block id="3f504ad8c9ab961bdefa05eee81a2824" category="list-text">Edite *Tipo de licença* no menu de lápis de todos os recursos</block>
+  <block id="e04768e231f98d617747c4dc0bfde356" category="list-text">Edite *velocidade de escrita* no menu de todas as funcionalidades do lápis</block>
+  <block id="fc793964b815197fe89abeec3562ae3e" category="list-text">Edite *Proteção contra ransomware* no menu de opções (ícone de lápis) de todos os recursos</block>
+  <block id="6bc1e721b9d4e4a6413cedb0bb58befb" category="list-text">Edite *Registro de suporte* no menu de todos os recursos (ícone de lápis)</block>
+  <block id="39c3909abd0b8b16a08b5a37e17de261" category="list-text">Edite *WORM* no menu de lápis de todos os recursos</block>
+  <block id="6773349ec708bf74e9c3a96be6606ff5" category="list-text">Edite *Data tiering* no menu de opções (ícone de lápis)</block>
+  <block id="b6806817250ca74e0d889e8170e85823" category="list-text">Edite *CIFS setup* no menu de lápis de todos os recursos</block>
+  <block id="c534251be3cf8755eaf972b5450db181" category="list-text">Edite *Tabelas de rotas* no menu de lápis de todos os recursos</block>
+  <block id="c6f01c78bfe0a0a495cb5d3ed77824a9" category="cell">Volumes</block>
+  <block id="add65f7075db5dde27f485e9f855601b" category="paragraph">Nenhuma atualização de volume é permitida nesta aba, e você não pode adicionar volumes.</block>
+  <block id="9e32a435d22aa5cbc195e861b5fe629f" category="list-text">Editar configurações de volume</block>
+  <block id="5b5eeee4d1e6b7007829d66c8b144064" category="list-text">Criar uma cópia instantânea</block>
+  <block id="ff1652826450f50c76cdfdda64d94e2f" category="list-text">Restaurar a partir de uma cópia instantânea</block>
+  <block id="7d89266e3a96ee597d44e7233b79f335" category="list-text">Alterar o tipo de disco (opção avançada)</block>
+  <block id="dc8dba8c12d7372e239d38b7304752d6" category="list-text">Alterar a política de tiering (opção avançada)</block>
+  <block id="d5350d8759b1ec84607e47908809058e" category="cell">Agregados</block>
+  <block id="261c95ed5d454ef55df25657c605d472" category="list-text">Aumentar capacidade</block>
+  <block id="8ce62ed0fdfe7abb736c3597956922c2" category="list-text">Excluir um agregado</block>
+  <block id="444c64ac4c351f349e58d8d514287ab4" category="list-text">Interromper replicação</block>
+  <block id="892027dedcdbb237fc210b3a00cf2ae5" category="list-text">Ressincronizar replicação</block>
+  <block id="78c8c117652a47404403fff983b2f82f" category="list-text">Replicação de resincronização reversa</block>
+  <block id="51f4afdf17b1f2127b36e48896363c41" category="list-text">Edite o cronograma</block>
+  <block id="487bfcf1a1cc5511a69fc77de0b7b697" category="list-text">Editar a taxa máxima de transferência</block>
+  <block id="d93259d25822e675cbf5c2324eca93de" category="list-text">Atualizar replicação</block>
+  <block id="62ef027c0c691039af4f8f02b7fbb023" category="list-text">Excluir replicação</block>
+  <block id="94c95941a7abd9bad751b430ab14297c" category="cell">Tela principal</block>
+  <block id="770e6e1d37ec8e564116ac215a622e66" category="list-text">Adicionar um sistema</block>
+  <block id="6a782ce4c3ebd625267758265f6b6404" category="list-text">Descubra um sistema (para todos os operadores)</block>
+  <block id="6aa8394552f000f4d3f4523193dd41c2" category="list-text">Use arrastar e soltar para *Copy and sync*</block>
+  <block id="52180a001f05eb6c348aa060d6cd0961" category="list-text">Use arrastar e soltar para *armazenamento em cache de volume*</block>
+  <block id="65c27faee6abce8e6bac90d9ca9cc69a" category="list-text">Use arrastar e soltar para *Replication*</block>
+  <block id="34d606f181de5f7ebc55948eff861656" category="list-text">Acesse *Custo e desempenho otimizados*</block>
+  <block id="e2ea3cc0d6339d3d8dd793bdc96b91fb" category="list-text">Use *Replicação* para Cloud Volumes ONTAP somente quando a permissão CVO necessária estiver disponível (não aplicável ao FSx para ONTAP ou sistemas locais)</block>
+  <block id="7e7cd88c62428b7db1b6d1da71873171" category="list-text">Use o *armazenamento em cache de volume* para Cloud Volumes ONTAP somente quando a permissão CVO necessária estiver disponível (não aplicável ao FSx para ONTAP ou sistemas locais)</block>
+  <block id="68508a9dfe7d188ddfacdf20bf897e7f" category="list-text">Insira um sistema</block>
+  <block id="f58a02a69585ec6ceb21ad1ac5eda505" category="list-text">Use o botão de gerenciamento AVS</block>
+  <block id="1f4c7e61bb42651b1fed2a31454fa7b2" category="cell">Sem funções</block>
+  <block id="cbc38e338398c30ad05441fc2f224550" category="paragraph">Quando nenhuma função é atribuída, todas as ações são desativadas.</block>
+  <block id="ba289c943721589929b1aa882cf8868b" category="list-text">Acesse o ambiente de trabalho</block>
+  <block id="c81a3e43374dd535dae333a1add5d041" category="list-text">Acesso à replicação</block>
+  <block id="bb499c548cf9f80e030b1ead19cf6245" category="list-text">Use o assistente de criação do Cloud Volumes ONTAP</block>
+  <block id="3e83fca6406aceb42fb8b32def1004f5" category="list-text">Use o assistente de criação de replicação</block>
+  <block id="aefa282f16e03c096e52d22b7d41c04b" category="list-text">Descubra Cloud Volumes ONTAP</block>
+  <block id="53f76082b918614f3c41bfae0d7985c6" category="inline-link">Confirmar arquivos no WORM usando ONTAP SnapLock</block>
+  <block id="90cbc44f5ba3581965b21132dff04d0e" category="paragraph">Você pode usar um aplicativo para enviar arquivos para WORM via NFS ou CIFS, ou usar a CLI do ONTAP para enviar arquivos para WORM automaticamente. Você também pode usar um arquivo anexável WORM para reter dados que são gravados incrementalmente, como informações de log. Para obter informações, consulte<block ref="e55de3a3f9aa1cb3686a8e1324558ed7" category="inline-link-rx"></block>.</block>
 </blocks>
