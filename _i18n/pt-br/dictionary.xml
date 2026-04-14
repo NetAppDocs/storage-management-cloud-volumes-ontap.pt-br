@@ -777,7 +777,6 @@
   <block id="0956d25698d6ea6e452e1cd574ab1eea" category="paragraph">Sua licença é sempre cobrada primeiro, mas você será cobrado pela taxa horária do mercado nestes casos:</block>
   <block id="6246af80c9ea9c857c70d2c643fcb249" category="list-text">Se você exceder sua capacidade licenciada</block>
   <block id="fdde7a7f3783aa0ce1e585f8be9c2def" category="list-text">Se o prazo da sua licença expirar</block>
-  <block id="36e4d5ff70cec517180ae18f1c34d2fd" category="list-text">Se você tiver um contrato anual de um marketplace, _todos_ os sistemas Cloud Volumes ONTAP que você implantar serão cobrados desse contrato.  Você não pode misturar e combinar um contrato de mercado anual com BYOL.</block>
   <block id="5bdd4028830bea76f4939d67baa460ff" category="paragraph">Após a implantação, você pode alterar o pacote para um sistema Cloud Volumes ONTAP que usa licenciamento baseado em capacidade.  Por exemplo, se você implantou um sistema Cloud Volumes ONTAP com o pacote Essentials, poderá alterá-lo para o pacote Professional caso suas necessidades comerciais mudem.</block>
   <block id="63b54c0d3b4fb8e35270bfdf7b2bdcbb" category="inline-link-macro">Aprenda como alterar os métodos de cobrança</block>
   <block id="ec3e25d80cfc0e5561493729eadecef7" category="paragraph"><block ref="ea19fa0e06a6047bcaabb9af62b066c3" category="inline-link-macro-rx"></block> .</block>
@@ -6426,4 +6425,17 @@
   <block id="aefa282f16e03c096e52d22b7d41c04b" category="list-text">Descubra Cloud Volumes ONTAP</block>
   <block id="53f76082b918614f3c41bfae0d7985c6" category="inline-link">Confirmar arquivos no WORM usando ONTAP SnapLock</block>
   <block id="90cbc44f5ba3581965b21132dff04d0e" category="paragraph">Você pode usar um aplicativo para enviar arquivos para WORM via NFS ou CIFS, ou usar a CLI do ONTAP para enviar arquivos para WORM automaticamente. Você também pode usar um arquivo anexável WORM para reter dados que são gravados incrementalmente, como informações de log. Para obter informações, consulte<block ref="e55de3a3f9aa1cb3686a8e1324558ed7" category="inline-link-rx"></block>.</block>
+  <block id="d5affa88c9505737da2bd460b6fd43bb" category="doc">Suporte aprimorado do Cloud Volumes ONTAP com VMs do Google Cloud C3</block>
+  <block id="0c095222c728afb1d3c25c10e5f27e3c" category="paragraph">Cloud Volumes ONTAP agora oferece suporte aprimorado para as VMs da série C3 do Google Cloud, possibilitando os seguintes recursos adicionais:</block>
+  <block id="f0de228b367386d27d7b8cbf65c47859" category="list-text">Em suas implementações do Cloud Volumes ONTAP, você pode alternar entre diferentes tipos de instância dentro da família C3.</block>
+  <block id="b6d05c51f23a9bec9f5098e25088be1b" category="list-text">Ao alterar o tipo de instância, se você selecionar c3-standard-44 ou c3-standard-88 e suas variantes LSSD como a VM de destino, o serviço de rede de saída do Google, Tier-1, será aplicado automaticamente. Se você alternar para qualquer outra variante C3, a camada de rede de saída será definida como Standard.</block>
+  <block id="8c530a5dacbdac6ea799436763592a2b" category="admonition">Alterar o nível da rede de saída para Tier-1 acarreta custos adicionais. Planeje a implementação e a atualização de acordo.</block>
+  <block id="592c8c8f58ba9f6037877ba4f12bbd27" category="list-text">Se você selecionar as variantes de SSD local (LSSD) do C3, Flash Cache será ativado por padrão. Não é possível alternar entre as variantes de LSSD do C3 na sua implantação do Cloud Volumes ONTAP, mesmo que a variante de destino suporte Flash Cache.</block>
+  <block id="03fe422ae9ed1fe4cea49e5cfeeac9b8" category="list-text">Em suas VMs C3, agora você pode adicionar volumes a agregados novos e existentes.</block>
+  <block id="5aaea3e4d288404c9e29a557265127f4" category="list-text">Você pode alterar as configurações de IOPS e taxa de transferência ao adicionar volumes por meio do NetApp Console ou usando a <block ref="a27faf3e52367bc8d4429006be3dde82" prefix=" " category="inline-code"></block> API.</block>
+  <block id="79755a85cb08431038b7bbe13d99c64f" category="list-text"><block ref="79755a85cb08431038b7bbe13d99c64f" category="inline-link-rx"></block></block>
+  <block id="5a1b1460ab07c6363c5bbb60593e8ced" category="admonition">Cloud Volumes ONTAP usa balanceadores de carga em modo ativo-passivo para sondagens. No Azure, apenas o nó ativo responde a uma sondagem. O nó passivo pode aparecer como inativo com um X. Esse é o comportamento esperado e não é motivo de preocupação.</block>
+  <block id="fe4b627e339ef56fd051464a11d7b4aa" category="paragraph"><block ref="fe4b627e339ef56fd051464a11d7b4aa" category="inline-link-macro-rx"></block></block>
+  <block id="9472db468c3c681023f3ca03b59df38b" category="list-text">Se você possui uma licença BYOL e um contrato anual de um marketplace, seu consumo e excedentes são cobrados de acordo com a preferência de cobrança que você definiu. Para entender como você é cobrado, consulte <block ref="0b707007d6575618559747cfb2737b16" category="inline-link-macro-rx"></block>.</block>
+  <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">13 de abril de 2026</block>
 </blocks>

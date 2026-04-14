@@ -129,3 +129,9 @@ A aquisição, a ressincronização e a devolução do armazenamento são todas 
 == Configurações de armazenamento
 
 Você pode usar um par HA como uma configuração ativa-ativa, na qual ambos os nós fornecem dados aos clientes, ou como uma configuração ativa-passiva, na qual o nó passivo responde às solicitações de dados somente se tiver assumido o armazenamento do nó ativo.
+
+
+NOTE: Cloud Volumes ONTAP usa balanceadores de carga em modo ativo-passivo para sondagens. No Azure, apenas o nó ativo responde a uma sondagem. O nó passivo pode aparecer como inativo com um X. Esse é o comportamento esperado e não é motivo de preocupação.
+
+.Link relacionado
+link:task-azure-high-availability-mode.html["Habilitar o modo de alta disponibilidade para o Cloud Volumes ONTAP no Azure"^]
