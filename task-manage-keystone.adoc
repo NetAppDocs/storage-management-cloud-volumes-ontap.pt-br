@@ -45,7 +45,7 @@ Depois que a NetApp autorizar sua conta, você poderá vincular assinaturas do K
 .Passos
 . No menu do NetApp Console , selecione *Administração > Licenses and subscriptions*.
 . Selecione * Assinaturas Keystone *.
-. Para a assinatura que você deseja vincular, clique emimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Link*.
+. Para a assinatura que você deseja vincular, selecione image:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Vincular*.
 
 
 .Resultado
@@ -60,9 +60,9 @@ Se quiser alterar a capacidade comprometida para os níveis de serviço da sua a
 .Passos
 . No menu do NetApp Console , selecione *Administração > Licenses and subscriptions*.
 . Selecione * Assinaturas Keystone *.
-. Para a assinatura cuja capacidade você deseja ajustar, clique em image:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Exibir detalhes e editar*.
+. Para a assinatura cuja capacidade você deseja ajustar, selecione image:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Ver detalhes e editar*.
 . Insira a capacidade comprometida solicitada para uma ou mais assinaturas.
-. Role para baixo, insira quaisquer detalhes adicionais para a solicitação e clique em *Enviar*.
+. Desça a página, insira quaisquer detalhes adicionais para a solicitação e selecione *Enviar*.
 
 
 .Resultado
@@ -85,7 +85,7 @@ Se não quiser mais usar uma assinatura do Keystone com o Console, você pode de
 .Passos
 . No menu do NetApp Console , selecione *Administração > Licenses and subscriptions*.
 . Selecione * Keystone*.
-. Para a assinatura que você deseja desvincular, clique emimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Desvincular*.
+. Para a assinatura que deseja desvincular, selecione image:icon-action.png["Um ícone que tem três pontos lado a lado"] e selecione *Desvincular*.
 
 
 .Resultado

@@ -3518,17 +3518,14 @@
   <block id="06f358c39bc3b4633cefd78beb67e671" category="section-title">Vincular uma assinatura</block>
   <block id="8afaab6946e4a914b70539d7502e26ac" category="paragraph">Depois que a NetApp autorizar sua conta, você poderá vincular assinaturas do Keystone para uso com o Cloud Volumes ONTAP.  Esta ação permite que os usuários selecionem a assinatura como método de cobrança para novos sistemas Cloud Volumes ONTAP .</block>
   <block id="b0afff19aa3343a6f86619d833dbd316" category="inline-image-macro">Um ícone que tem três pontos lado a lado</block>
-  <block id="fc6ada65ff8f08c80e7d6167f68c89c2" category="list-text">Para a assinatura que você deseja vincular, clique em<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Link*.</block>
   <block id="1b02ed65c5ea56c85fffa6b88378d762" category="section-title">Solicitar capacidade mais ou menos comprometida</block>
   <block id="56ecf988dec174f4d23028e78eeed82c" category="list-text">Insira a capacidade comprometida solicitada para uma ou mais assinaturas.</block>
-  <block id="dbae9df22f08344d5508b91cb73c6d15" category="list-text">Role para baixo, insira quaisquer detalhes adicionais para a solicitação e clique em *Enviar*.</block>
   <block id="8f140d9c4d508c36e3d4c57102f117eb" category="paragraph">Sua solicitação cria um tíquete no sistema da NetApp para processamento.</block>
   <block id="ec6e0d1bd46f010ced65478c609b1636" category="section-title">Monitorar o uso</block>
   <block id="20ea4c62f4c9e4254314fe7fbbef0319" category="inline-link">Saiba mais sobre o monitoramento do uso da assinatura</block>
   <block id="d7105dd212dc96a8b292b6b48f84916f" category="paragraph"><block ref="d7105dd212dc96a8b292b6b48f84916f" category="inline-link-rx"></block></block>
   <block id="0c0401d1e9169d6dd38462b1e0d04126" category="section-title">Desvincular uma assinatura</block>
   <block id="492847bcbc9ec0bd3075b612aa43e4a7" category="list-text">Selecione * Keystone*.</block>
-  <block id="a666a430e484ea214384aefaa30da852" category="list-text">Para a assinatura que você deseja desvincular, clique em<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Desvincular*.</block>
   <block id="6e1a9790b199742bec95dea2070e2f3f" category="summary">Gerencie suas licenças baseadas em nós no NetApp Console para garantir que cada sistema Cloud Volumes ONTAP tenha uma licença válida com a capacidade necessária.</block>
   <block id="160221c1e99e53b72af8a65c2440852b" category="doc">Gerenciar licenciamento baseado em nó para Cloud Volumes ONTAP</block>
   <block id="63e5ea33dc9b9a10458ac73abae91075" category="paragraph">Gerencie licenças baseadas em nós no NetApp Console para garantir que cada sistema Cloud Volumes ONTAP tenha uma licença válida com a capacidade necessária.</block>
@@ -3600,7 +3597,6 @@
   <block id="f979ec1d84a4416797fae20cc61f839b" category="inline-link">Aprenda como excluir um sistema Cloud Volumes ONTAP</block>
   <block id="0d0947c9b1ebe3ee650df057f8192855" category="paragraph"><block ref="87175a08736eca79154ad91c69792fcd" category="inline-link-rx"></block> .</block>
   <block id="342dcce6bda294bb4b60fc9333bcafbe" category="inline-link-macro">Converter licenças baseadas em nó em licenças baseadas em capacidade</block>
-  <block id="cb90b48918ed9cd8ea355c04c171177b" category="paragraph">link:<block ref="7f9a8649ca2d86db235ba56502d14f92" category="inline-link-macro-rx"></block> <block ref="431f655d5a9ac309b561fc62a4c619ea" category="inline-link-macro-rx"></block></block>
   <block id="bd0ed9183db9306d8ce58c50abb4a96b" category="summary">O NetApp Console não fornece nenhum suporte de configuração ou orquestração para recuperação de desastres de VM de armazenamento.  Você deve usar o Gerenciador do Sistema ou a CLI.</block>
   <block id="76872305ddb703eedd7fbe3e66263d83" category="doc">Configurar recuperação de desastres de VM de armazenamento para Cloud Volumes ONTAP</block>
   <block id="d25bf5fb042a0cc652d82492e5410fb6" category="paragraph">O NetApp Console não oferece suporte de configuração ou orquestração para recuperação de desastres de VM de armazenamento (SVM).  Para executar essas tarefas, use o ONTAP System Manager ou o ONTAP CLI.</block>
@@ -5731,7 +5727,6 @@
   <block id="a53c428d90f592127da49a8d5a558130" category="paragraph">Um representante da NetApp processará sua solicitação autorizando sua conta a acessar as assinaturas.</block>
   <block id="9c2f6d6e4376237ad065b1baa0ad822d" category="paragraph">A assinatura agora está vinculada à sua organização ou conta do Console e disponível para seleção ao criar um ambiente de trabalho do Cloud Volumes ONTAP .</block>
   <block id="10d2905ee5dfcb309d64e3633fb774c1" category="paragraph">Se quiser alterar a capacidade comprometida para os níveis de serviço da sua assinatura, você pode enviar uma solicitação à NetApp diretamente do Console. Solicitar capacidade adicional para um nível de serviço fornece mais armazenamento para sistemas Cloud Volumes ONTAP .</block>
-  <block id="e45b542fbde799582edd5059bc1991a9" category="list-text">Para a assinatura cuja capacidade você deseja ajustar, clique em <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Exibir detalhes e editar*.</block>
   <block id="a3a13a09504a7f25eb72dede89db4f24" category="paragraph">O painel do Digital Advisor permite monitorar o uso da assinatura do Keystone e gerar relatórios.</block>
   <block id="e29343f0ee1c0051a367e02b49c1c5ff" category="paragraph">Se não quiser mais usar uma assinatura do Keystone com o Console, você pode desvincular a assinatura. Observe que você só pode desvincular uma assinatura que não esteja vinculada a uma assinatura existente do Cloud Volumes ONTAP .</block>
   <block id="0e1096776546966fb22c4752766d55a9" category="paragraph">A assinatura é desvinculada da sua organização ou conta do Console e não está mais disponível para seleção ao criar um ambiente de trabalho do Cloud Volumes ONTAP .</block>
@@ -6438,4 +6433,9 @@
   <block id="fe4b627e339ef56fd051464a11d7b4aa" category="paragraph"><block ref="fe4b627e339ef56fd051464a11d7b4aa" category="inline-link-macro-rx"></block></block>
   <block id="9472db468c3c681023f3ca03b59df38b" category="list-text">Se você possui uma licença BYOL e um contrato anual de um marketplace, seu consumo e excedentes são cobrados de acordo com a preferência de cobrança que você definiu. Para entender como você é cobrado, consulte <block ref="0b707007d6575618559747cfb2737b16" category="inline-link-macro-rx"></block>.</block>
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">13 de abril de 2026</block>
+  <block id="b3590df4b69c4ddf7017e6977baebe49" category="list-text">Para a assinatura que você deseja vincular, selecione <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Vincular*.</block>
+  <block id="665103db45058514d7e3b032c990783d" category="list-text">Para a assinatura cuja capacidade você deseja ajustar, selecione <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Ver detalhes e editar*.</block>
+  <block id="f638b98047aa1e2c9642d2de1bcdd0d0" category="list-text">Desça a página, insira quaisquer detalhes adicionais para a solicitação e selecione *Enviar*.</block>
+  <block id="dc96e19fba7ac18b79e69398a4792825" category="list-text">Para a assinatura que deseja desvincular, selecione <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> e selecione *Desvincular*.</block>
+  <block id="5e5b6fbbd6a3b4edf3913541e4fecf17" category="list-text"><block ref="5e5b6fbbd6a3b4edf3913541e4fecf17" category="inline-link-rx"></block></block>
 </blocks>
