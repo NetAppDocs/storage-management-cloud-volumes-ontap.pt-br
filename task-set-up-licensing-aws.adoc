@@ -18,30 +18,29 @@ Depois de decidir qual opção de licenciamento você deseja usar com o Cloud Vo
 
 
 
-== Freemium
+== Definir a forma de faturamento preferencial para listagens independentes da AWS
 
-Selecione a oferta Freemium para usar o Cloud Volumes ONTAP gratuitamente com até 500 GiB de capacidade provisionada. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#free-trials["Saiba mais sobre a oferta Freemium"^] .
+Se você tiver uma assinatura AWS independente vinculada à sua conta AWS, poderá pagar pelo Cloud Volumes ONTAP por meio dessa assinatura. Se você também tiver assinaturas do NetApp Intelligent Services (NIS), poderá pagar pelos seus serviços de dados por meio do pacote associado à assinatura do NIS. Para assinaturas existentes, NetApp recomenda a migração para a abordagem de assinatura independente para um melhor gerenciamento de custos do uso do Cloud Volumes ONTAP.
+
+.Sobre esta tarefa
+Se você já é cliente e possui assinaturas NIS associadas à sua conta AWS, a NetApp recomenda a migração para o modelo de assinatura independente para melhor gerenciamento de custos do uso do Cloud Volumes ONTAP. Este é o processo completo:
+
+. Inscreva-se em um novo anúncio independente no portal da AWS.
+. Vincule a assinatura independente à sua conta da AWS.
+. Configure sua preferência de faturamento para a assinatura independente do Cloud Volumes ONTAP com o pacote Essentials.
+. (Se aplicável) Converta seu pacote Professional para um pacote Essentials e defina a preferência de cobrança. Consulte  https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-capacity-licenses.html#change-charging-methods["Alterar os métodos de cobrança para licenças de capacidade"^] para obter informações sobre como converter seu pacote Professional para um pacote Essentials.
+. Continue faturando os serviços de dados através da sua assinatura NIS.
+
 
 .Passos
-. No menu de navegação esquerdo do NetApp Console, selecione *Armazenamento > Gerenciamento*.
-. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
-+
-.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no AWS Marketplace.
-+
-Você não será cobrado pela assinatura do marketplace, a menos que exceda 500 GiB de capacidade provisionada, momento em que o sistema será automaticamente convertido para olink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages["Pacote Essentials"^] .
-
-+
-image:screenshot-aws-paygo-subscription.png["Uma captura de tela da opção de assinatura PAYGO ao criar um sistema Cloud Volumes ONTAP ."]
-
-.. Após retornar ao Console, selecione *Freemium* quando chegar à página de métodos de cobrança.
-+
-image:screenshot-freemium.png["Uma captura de tela da opção Freemium ao criar um sistema Cloud Volumes ONTAP ."]
+. No painel esquerdo do NetApp Console, selecione *Administração > Licenses and subscriptions > Preferências de faturamento > Cloud Volumes ONTAP*.
+. Na guia AWS, selecione a assinatura independente e clique no ícone de opções image:screenshot_gallery_options.gif["ícone de kabob"].
+. Na janela Editar configuração, selecione o número da assinatura da listagem independente no campo *Credenciais da conta AWS*.
+. Clique em *Configurar*. Você pode ver a assinatura como a opção preferencial para o faturamento do Cloud Volumes ONTAP na AWS.
+. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Essentials para faturar por meio da assinatura independente. Para obter informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implante Cloud Volumes ONTAP com a criação rápida"^].
 
 
-
-
-
-link:task-deploying-otc-aws.html["Veja instruções passo a passo para iniciar o Cloud Volumes ONTAP na AWS"] .
+Repita os mesmos passos para a assinatura NIS na aba *Serviços de dados* para usar a assinatura NIS para seus serviços de dados. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Professional para faturar por meio da assinatura NIS.
 
 
 
@@ -143,6 +142,33 @@ image:screenshot-aws-annual-subscription.png["Uma captura de tela da oferta de c
 .. Após retornar ao Console, selecione um pacote baseado em capacidade quando chegar à página de métodos de cobrança.
 +
 image:screenshot-professional.png["Uma captura de tela da opção Profissional ao criar um sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-otc-aws.html["Veja instruções passo a passo para iniciar o Cloud Volumes ONTAP na AWS"] .
+
+
+
+== Freemium
+
+Selecione a oferta Freemium para usar o Cloud Volumes ONTAP gratuitamente com até 500 GiB de capacidade provisionada. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#free-trials["Saiba mais sobre a oferta Freemium"^] .
+
+.Passos
+. No menu de navegação esquerdo do NetApp Console, selecione *Armazenamento > Gerenciamento*.
+. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
++
+.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no AWS Marketplace.
++
+Você não será cobrado pela assinatura do marketplace, a menos que exceda 500 GiB de capacidade provisionada, momento em que o sistema será automaticamente convertido para olink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages["Pacote Essentials"^] .
+
++
+image:screenshot-aws-paygo-subscription.png["Uma captura de tela da opção de assinatura PAYGO ao criar um sistema Cloud Volumes ONTAP ."]
+
+.. Após retornar ao Console, selecione *Freemium* quando chegar à página de métodos de cobrança.
++
+image:screenshot-freemium.png["Uma captura de tela da opção Freemium ao criar um sistema Cloud Volumes ONTAP ."]
 
 
 
