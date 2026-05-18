@@ -41,8 +41,9 @@ A tabela a seguir resume as atividades restritas por aba.
 
 
 | Volumes  a| 
-Nenhuma atualização de volume é permitida nesta aba, e você não pode adicionar volumes.
+Não é possível realizar as seguintes operações de volume:
 
+* Adicionar um volume
 * Clonar um volume
 * Editar configurações de volume
 * Excluir um volume
@@ -93,7 +94,7 @@ Nenhuma atualização de volume é permitida nesta aba, e você não pode adicio
 
 
 | Sem funções  a| 
-Quando nenhuma função é atribuída, todas as ações são desativadas.
+Quando nenhuma função é atribuída, você não pode executar nenhuma ação, incluindo:
 
 * Acesse o ambiente de trabalho
 * Acesso à replicação

@@ -4,7 +4,7 @@ permalink: task-deploying-otc-aws.html
 keywords: Cloud Volumes ONTAP, deploying, launching, creating, deploy, launch, create, aws, serial number, license key, byol, test instance, aws tags, tags, location, vpc, encryption, security group, aws-managed encryption, disk size, disk type, write speed, licensing, IAM role, preconfigured package, access control, volume protection, usage profile, register, CIFS share, quota, qtree, HA, high-availability, subscription, cloud data sense, cloud backup 
 summary: Você pode iniciar instâncias do Cloud Volumes ONTAP em uma configuração de sistema único ou como um par de HA na AWS. 
 ---
-= Inicie o Cloud Volumes ONTAP na AWS
+= Implante Cloud Volumes ONTAP usando opções avançadas na AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -523,8 +523,6 @@ Para mais informações, consultelink:https://docs.netapp.com/us-en/bluexp-cloud
 O Console inicia o par Cloud Volumes ONTAP HA.  Você pode acompanhar o progresso na página *Auditoria*.
 
 Se você tiver algum problema ao iniciar o par HA, revise a mensagem de falha.  Você também pode selecionar o sistema e clicar em Recriar ambiente.
-
-Para obter ajuda adicional, acesse https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Suporte NetApp Cloud Volumes ONTAP"^] .
 
 .Depois que você terminar
 * Se você provisionou um compartilhamento CIFS, conceda aos usuários ou grupos permissões para os arquivos e pastas e verifique se esses usuários podem acessar o compartilhamento e criar um arquivo.

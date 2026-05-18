@@ -1,16 +1,5 @@
----
-sidebar: sidebar 
-permalink: task-quick-deploy-aws.html 
-keywords: aws quick deploy, quick deploy, aws, single screen deployment AWS, SAZ, MAZ, single node, HA pair 
-summary: Você pode implantar instâncias do Cloud Volumes ONTAP em uma configuração de sistema único ou como um par de HA na AWS rapidamente. 
----
-= Implante Cloud Volumes ONTAP com a criação rápida
-:hardbreaks:
+= 
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
@@ -176,6 +165,18 @@ TIP: Se você quiser utilizar WORM e camadas de dados, desabilite o Backup e Rec
 . Verifique ou edite os detalhes inseridos e clique em *Criar*.
 
 
+ifdef::azure[]
+
+No Azure, a seção *Visão geral* exibe os recursos que serão alocados quando o processo de implantação for concluído.
+
+endif::azure[]
+
+ifdef::aws[]
+
+Na _AWS_, imediatamente após você criar o sistema Cloud Volumes ONTAP, o NetApp Console inicia uma instância de teste na VPC especificada para verificar a conectividade. Se bem-sucedido, o Console termina imediatamente a instância e então inicia a implantação do sistema. Se o Console não conseguir verificar a conectividade, a criação do sistema falhará. A instância de teste é uma `t2.nano` (para locação de VPC padrão) ou uma `m3.medium` (para locação de VPC dedicada).
+
+endif::aws[]
+
 .Depois que você terminar
 O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o progresso na página Auditoria.
 
@@ -183,8 +184,3 @@ Se você encontrar algum problema ao implantar o sistema Cloud Volumes ONTAP, re
 
 
 CAUTION: Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal da AWS ou Azure, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamentos inesperados ou perda de dados.
-
-.Links relacionados
-* link:task-planning-your-config.html["Planejando sua configuração do Cloud Volumes ONTAP"] *
-* link:task-deploying-otc-aws.html["Implantar o Cloud Volumes ONTAP na AWS usando implantação avançada"]
-

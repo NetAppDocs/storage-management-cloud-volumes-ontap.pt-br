@@ -496,8 +496,6 @@ O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o prog
 
 Se você tiver algum problema ao implantar o sistema Cloud Volumes ONTAP , revise a mensagem de falha.  Você também pode selecionar o sistema e clicar em *Recriar ambiente*.
 
-Para obter ajuda adicional, acesse https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Suporte NetApp Cloud Volumes ONTAP"^] .
-
 .Depois que você terminar
 * Se você provisionou um compartilhamento CIFS, conceda aos usuários ou grupos permissões para os arquivos e pastas e verifique se esses usuários podem acessar o compartilhamento e criar um arquivo.
 * Se você quiser aplicar cotas aos volumes, use o ONTAP System Manager ou o ONTAP CLI.
