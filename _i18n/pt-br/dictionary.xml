@@ -3833,7 +3833,6 @@
   <block id="f2feb7d422d422c2517d2196d66d00bc" category="list-text"><block ref="7746ebc5fdfe5251edf41796732ea010" prefix="" category="inline-code"></block>indica que os IPs podem migrar para o nó parceiro.</block>
   <block id="05bdf9757241650a006a0bd9021d3169" category="list-text">Crie um iSCSI LIF no nó 1.</block>
   <block id="849dd632a2c28933451bca01b48c3973" category="list-text">Este iSCSI LIF é necessário para dar suporte à migração LIF dos IPs flutuantes na VM de armazenamento.  Não precisa ser um iSCSI LIF, mas não pode ser configurado para migrar entre nós.</block>
-  <block id="d68a88edd93f0fd2099f8bff543a11a3" category="list-text"><block ref="0e101bbae12005006f38a776a7e27d49" prefix="" category="inline-code"></block>indica que um endereço IP não migra entre nós.</block>
   <block id="111daac7647573990b5b56876902380e" category="list-text">_private_ip_ é um endereço IP privado secundário não utilizado na eth0 (e0a) do cvo_node1.</block>
   <block id="5414bcb74ffdbf70d2afb028e1eb0d0b" category="list-text">Crie um iSCSI LIF no nó 2.</block>
   <block id="0a2292629d42074cb011142b9cd8f433" category="list-text">_private_ip_ é um endereço IP privado secundário não utilizado na eth0 (e0a) do cvo_node2.</block>
@@ -6526,4 +6525,5 @@
   <block id="75903a04d1a65d3e18c839c67b54316d" category="sidebar">Implante Cloud Volumes ONTAP com opções avançadas no Azure</block>
   <block id="8af1ad3469dad38ef46da37595e3b758" category="inline-link-macro">Saiba mais sobre Licenses and subscriptions funções para o NetApp Console</block>
   <block id="1ccb85040042290f711464fbb5e06609" category="paragraph">*Função de console necessária* Para executar esta tarefa, você precisa da função de administrador de Licenses and subscriptions<block ref="f7bfd1d1e66654a9d76ee2fffeede42a" category="inline-link-macro-rx"></block>.</block>
+  <block id="1c568211164221a5a183fa65ce0d8ad7" category="list-text"><block ref="f5fb311c04d189ade108ad02dc187c52" prefix="" category="inline-code"></block> Indica que um endereço IP não migra entre nós.</block>
 </blocks>
