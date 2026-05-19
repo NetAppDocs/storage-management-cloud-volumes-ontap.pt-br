@@ -6524,4 +6524,6 @@
   <block id="690f86e0be68ddfe1eb22f837c53e53c" category="sidebar">Implante Cloud Volumes ONTAP com opções avançadas na AWS</block>
   <block id="7fa0d9a7585aaeb29c655dac03f5e3d6" category="sidebar">Implante Cloud Volumes ONTAP com valores padrão no Azure</block>
   <block id="75903a04d1a65d3e18c839c67b54316d" category="sidebar">Implante Cloud Volumes ONTAP com opções avançadas no Azure</block>
+  <block id="8af1ad3469dad38ef46da37595e3b758" category="inline-link-macro">Saiba mais sobre Licenses and subscriptions funções para o NetApp Console</block>
+  <block id="1ccb85040042290f711464fbb5e06609" category="paragraph">*Função de console necessária* Para executar esta tarefa, você precisa da função de administrador de Licenses and subscriptions<block ref="f7bfd1d1e66654a9d76ee2fffeede42a" category="inline-link-macro-rx"></block>.</block>
 </blocks>

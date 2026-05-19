@@ -20,6 +20,8 @@ O NetApp Keystone é um serviço flexível baseado em assinatura, com pagamento 
 
 https://www.netapp.com/services/keystone/["Saiba mais sobre a Keystone"^]
 
+*Função de console necessária* Para executar esta tarefa, você precisa da função de administrador de Licenses and subscriptionslink:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-licenses-subscriptions.html["Saiba mais sobre Licenses and subscriptions funções para o NetApp Console"^].
+
 
 
 == Autorize sua conta
