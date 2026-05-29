@@ -49,7 +49,7 @@ O agente do Console requer permissões específicas para criar VMs de armazename
 
 
 
-=== sistema de nó único
+=== Sistema de nó único
 
 Utilize a seguinte chamada de API para criar uma VM de armazenamento em um sistema de nó único.
 
