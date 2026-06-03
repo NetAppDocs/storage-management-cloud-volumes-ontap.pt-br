@@ -524,7 +524,7 @@ O pool de trabalhadores deve ter a seguinte configuração:
 ** Tamanho do disco: 100 GB
 ** Atribuir IP externo: false
 ** Rede: padrão ou privada.
-** A sub-rede configurada para acessar http://googleapis.com/["APIs do Google"]. Execute estas etapas para garantir que a sub-rede possa acessar as APIs do Google:
+** A sub-rede configurada para acessar https://cloud.google.com/apis["APIs do Google Cloud"^]. Execute estas etapas para garantir que a sub-rede possa acessar as APIs do Google:
 +
 ... Certifique-se de que o "Acesso privado do Google" esteja ativado para a subnet.
 ... Acesse *VPC Network level > Aba Private Service Access > Allocated IP ranges for services*.

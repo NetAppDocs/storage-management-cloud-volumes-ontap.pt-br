@@ -1526,7 +1526,6 @@
   <block id="c8f224037ea295aeec347c94779d9932" category="section-title">Acesso de saída à Internet</block>
   <block id="a4b96c4e196d51924875a82348b64eb4" category="paragraph">O agente do Console também entra em contato com vários endpoints para operações diárias.  Para obter informações sobre pontos de extremidade, consulte<block ref="e553aa98dbd6de43170bbf57fd2de45c" category="inline-link-rx"></block> e<block ref="3b443e9dd660f6a0a57c859f2ddcc1c3" category="inline-link-rx"></block> .</block>
   <block id="6486582264c3651aad9b7bb2237218eb" category="cell">Impacto se indisponível</block>
-  <block id="d5788def9bc230ba887427df9594dd27" category="cell"><block ref="d5788def9bc230ba887427df9594dd27" category="inline-link-rx"></block></block>
   <block id="cce8a0225002a3fa8095ed8782f394a3" category="cell">Cofre de Chaves</block>
   <block id="b1905fad16d0cb92c82e293f1516f810" category="cell">Usado para recuperar chaves secretas do cliente do Azure Key Vault ao usar chaves gerenciadas pelo cliente (CMK).</block>
   <block id="bcf88b7ababd6bfaff375da727117c30" category="cell">Modos padrão, restrito e privado.</block>
@@ -2161,7 +2160,6 @@
   <block id="d65e638e11d00fc79443255884da16db" category="list-text">Crie um novo disco gerenciado a partir da imagem do marketplace com a versão da imagem correspondente:</block>
   <block id="0088c78e043b70edf9579595a2ee25d7" category="list-text">Exporte o arquivo VHD do disco gerenciado para o Armazenamento do Azure.  Crie um contêiner com o nível de acesso apropriado.  Neste exemplo, usamos um contêiner chamado<block ref="58aaa54fc7b24aa9f47628c9303e6032" prefix=" " category="inline-code"></block> com<block ref="0e7278cda02a9c0446dcc75a4df34eb2" prefix=" " category="inline-code"></block> nível de acesso.  Obtenha a chave de acesso da conta de armazenamento no portal do Azure: *Contas de armazenamento &gt; _examplesaname_ &gt; Chave de acesso &gt; _key1_ &gt; _key_ &gt; Mostrar &gt; _&lt;cópia&gt;_*</block>
   <block id="d58ff5368da0a9e07116d0914b0e100f" category="list-text">Baixe a imagem gerada para o seu sistema Linux.  Use o<block ref="af9d83836ecf1f49c598bcb1995b3c98" prefix=" " category="inline-code"></block> comando para baixar o arquivo VHD:</block>
-  <block id="6338049c264f4d8252a094ef7cc5b989" category="paragraph">O URL segue um formato padrão.  Para automação, você pode derivar a sequência de URL conforme mostrado abaixo.  Como alternativa, você pode usar o Azure CLI<block ref="cc8c0a97c2dfcd73caff160b65aa39e2" prefix=" " category="inline-code"></block> comando para obter a URL.  URL de exemplo:<block ref="2e490f42fcbf7cc055c7df53c297fc39" category="inline-link-rx"></block></block>
   <block id="e29c7c72ff42387a45d366d92342fa54" category="list-text">Limpe o disco gerenciado</block>
   <block id="7f38ba9b55c53cbc26b23634ed761a33" category="section-title">Exportar arquivo VHD usando a CLI do Azure no Linux</block>
   <block id="de4a72dd00c713fbc81776255cd85070" category="paragraph">Exporte a imagem do marketplace para um arquivo VHD usando a CLI do Azure de um sistema Linux local.</block>
@@ -4207,13 +4205,10 @@
   <block id="bd7492db1a0b8c1b34be6a58c6374a50" category="list-text">Crie a nova NIC na VM de destino.</block>
   <block id="a6b97c800c08f0f47cf048c9cd043899" category="list-text">Procure o ID da sub-rede do cluster de origem.</block>
   <block id="5a90251e4d045fbd97e56cd055766b1e" category="list-text">Crie a nova NIC na VM de destino com o ID de sub-rede da sub-rede do cluster de origem.  Aqui você insere o nome da nova NIC.</block>
-  <block id="5fd584f186e30730537d22a78bb11616" category="inline-xref">domínio de transmissão, LIF intercluster para o novo NIC</block>
-  <block id="d863813a11392f8ccc266be047976b56" category="list-text">Salve o endereço IP privado.  Este endereço IP, &lt;new_added_nic_primary_addr&gt;, é usado para criar um LIF intercluster em<block ref="13642ed959fde49bda6806fad0d107cf" category="inline-xref-macro-rx"></block> .</block>
   <block id="c720b471b5c9a398d1674113fb61ccb3" category="list-text">Anexe a nova NIC à VM.</block>
   <block id="04144942b75846f169eab289baa03332" category="list-text">Inicie a VM (nó).</block>
   <block id="891b715fb21f166e1ddefb85f1ada848" category="list-text">No portal do Azure, acesse *Rede* e confirme se a nova NIC, por exemplo, nic-new, existe e se a rede acelerada está habilitada.</block>
   <block id="0b2645871b4d5e300b856a5676815053" category="paragraph">Para implantações de par HA, repita as etapas para o nó parceiro.</block>
-  <block id="75ca82ebaa2ab2a348dab6de8af96db1" category="section-title">Etapa 2: Crie um novo IPspace, domínio de transmissão e LIF intercluster para o novo NIC</block>
   <block id="f81ad401f01ac6ccee4552cee262ea96" category="paragraph">Um IPspace separado para LIFs interclusters fornece separação lógica entre a funcionalidade de rede para replicação entre clusters.</block>
   <block id="bf5db4b0d890ae0f47f0666b4786c11e" category="paragraph">Use o ONTAP CLI para as etapas a seguir.</block>
   <block id="5caa556e7511fbc031e556f35273b4b5" category="list-text">Crie o novo IPspace (new_ipspace).</block>
@@ -6165,7 +6160,6 @@
   <block id="1a7265e4a0716c5c59fbf92d4b2b8f8b" category="section-title">Segurança de VNet para Cloud Volumes ONTAP no Azure</block>
   <block id="a128f7270c0bfb9c5f5d16ec39f0d354" category="paragraph">Cloud Volumes ONTAP 9.18.1 e versões posteriores em implantações em zonas de disponibilidade únicas e múltiplas do Azure oferecem suporte à criptografia do Azure Virtual Network (VNet) como parte de sua estratégia de segurança em camadas para proteger os dados em trânsito. Cloud Volumes ONTAP aproveita o protocolo Datagram Transport Layer Security (DTLS) nativo do Azure para proteger a comunicação entre os nós ONTAP, interfaces de gerenciamento e outros serviços do Azure, prevenindo interceptação e acesso não autorizado. Essa criptografia em nível de rede complementa as proteções incorporadas de armazenamento e dados em repouso do ONTAP para fornecer segurança completamente de ponta a ponta para seus dados.</block>
   <block id="472b8c31c7082d1e8c4c46bb6921f950" category="inline-link">Rede para criptografia do Azure VNet</block>
-  <block id="2f932ac183ffb505894bacafe67a78d0" category="paragraph"><block ref="2f932ac183ffb505894bacafe67a78d0" category="inline-link-rx"></block></block>
   <block id="9c297e88761d2ab159b96b1ba8f49580" category="inline-link">Criptografia da Azure Virtual Network (VNet)</block>
   <block id="539afb5045a490ab5c07c8b2f81797d3" category="paragraph">Cloud Volumes ONTAP oferece suporte <block ref="a484d984d3918d739142ebb03b7cf0fe" category="inline-link-rx"></block>à criptografia do tráfego entre máquinas virtuais (VMs) dentro de uma VNet ou entre VNets emparelhadas. Esse recurso é configurado na camada VNet do Azure e é independente da topologia do Cloud Volumes ONTAP (nó único ou HA).</block>
   <block id="6da8d6e9b798741f378936006c625899" category="paragraph">Você só precisa garantir que a Rede Acelerada esteja habilitada nas NICs da VM e revisar os requisitos e limitações de criptografia da VNet do Azure antes de habilitar o recurso. Você não deve modificar os objetos do balanceador de carga gerenciado pela NetApp.</block>
@@ -6245,8 +6239,6 @@
   <block id="81886430867de94e8c64a4d6ee03885f" category="list-text">Tamanho do disco: 100 GB</block>
   <block id="4f78751a4c59d02232a84cf0f75f106b" category="list-text">Atribuir IP externo: false</block>
   <block id="1ce82e3f1abec4157983f159c2519b6e" category="list-text">Rede: padrão ou privada.</block>
-  <block id="f6ab2d5d47935ec62410c5a522057350" category="inline-link">APIs do Google</block>
-  <block id="31ee5d7a195dd642f2dd5c5892f66a66" category="list-text">A sub-rede configurada para acessar<block ref="3a79aa9a9ac20e9b7507d4a67f3c5626" category="inline-link-rx"></block>. Execute estas etapas para garantir que a sub-rede possa acessar as APIs do Google:</block>
   <block id="4e778f784bb81e3fa2540f16b2e516f1" category="list-text">Certifique-se de que o "Acesso privado do Google" esteja ativado para a subnet.</block>
   <block id="3ddc338aacbdc94d99095f1bc9dc5e9f" category="list-text">Acesse *VPC Network level &gt; Aba Private Service Access &gt; Allocated IP ranges for services*.</block>
   <block id="d67cbfbd26657ae0f146b4f91df6172e" category="list-text">Selecione *Allocate IP range* e aloque o intervalo de IP interno para a conexão privada com o Google Compute Service.</block>
@@ -6526,4 +6518,12 @@
   <block id="3ac842cf432c6d2ce6346cfe9dea6126" category="admonition">Se uma versão Release Candidate, General Availability ou patch mais recente estiver disponível para a versão selecionada, então o Console atualiza o sistema para essa versão ao criar o ambiente de trabalho. Por exemplo, a atualização ocorre se você selecionar Cloud Volumes ONTAP 9.16.1 P3 e 9.16.1 P4 estiver disponível. A atualização não ocorre de uma versão para outra—for example, de 9.15 para 9.16.</block>
   <block id="120dc003edb30e1d44fc4426ef7b9e3d" category="paragraph">A ferramenta de transição está disponível no NetApp Support site e cria os seguintes artefatos:</block>
   <block id="f669698de3cebd29244fce6e24b7e95d" category="section-title">Sistema de nó único</block>
+  <block id="fbc3e3c2759ebe3efb09314a1953aa89" category="paragraph"><block ref="fbc3e3c2759ebe3efb09314a1953aa89" category="inline-link-rx"></block></block>
+  <block id="b39f7544362881f0aafb15d7d3e6bc25" category="cell">\https://vault.azure.net</block>
+  <block id="9662693f3c1663d2242d4d8d1147a767" category="inline-link">APIs do Google Cloud</block>
+  <block id="2080a2c0b869df45aca08894b2c01246" category="list-text">A sub-rede configurada para acessar<block ref="51f295940ba1bc73660c1286161697d0" category="inline-link-rx"></block>. Execute estas etapas para garantir que a sub-rede possa acessar as APIs do Google:</block>
+  <block id="07217be0b3d28cf0ad81e35564e43c03" category="paragraph">A URL segue um formato padrão. Para automação, você pode derivar a string da URL conforme mostrado abaixo. Como alternativa, você pode usar o comando da Azure CLI<block ref="cc8c0a97c2dfcd73caff160b65aa39e2" prefix=" " category="inline-code"></block> para obter a URL. Exemplo de URL: +https://examplesaname.bluexpinfraprod.eastus2.data.azurecr.io/vm-images/9150.01000024.05090105.vhd+</block>
+  <block id="bc076a99113847f4719da894c77ecddb" category="inline-xref">domínio de broadcast e LIF entre clusters para a nova NIC</block>
+  <block id="f1d926658b88d28bd7f5b0cf55a6dd7a" category="list-text">Salve o endereço IP privado. Este endereço IP, &lt;new_added_nic_primary_addr&gt;, é usado para criar uma LIF entre clusters em <block ref="dad33d52d8c169ff9af931bc22cbdf4c" category="inline-xref-macro-rx"></block>.</block>
+  <block id="e8ffd3ffeea761edd5ebf0cfb97c0bb0" category="section-title">[[step-second]]Etapa 2: Crie um novo IPspace, domínio de broadcast e LIF entre clusters para a nova NIC</block>
 </blocks>

@@ -53,7 +53,7 @@ A autenticação do usuário falha e os seguintes serviços permanecem indispon�
 
 
 
-| https://vault.azure.net[] | Cofre de Chaves | Usado para recuperar chaves secretas do cliente do Azure Key Vault ao usar chaves gerenciadas pelo cliente (CMK). | Modos padrão, restrito e privado. | Os serviços do Cloud Volumes ONTAP não estão disponíveis. 
+| \https://vault.azure.net | Cofre de Chaves | Usado para recuperar chaves secretas do cliente do Azure Key Vault ao usar chaves gerenciadas pelo cliente (CMK). | Modos padrão, restrito e privado. | Os serviços do Cloud Volumes ONTAP não estão disponíveis. 
 
 
 | \ https://api.bluexp.netapp.com/tenancy | Arrendamento | Usado para recuperar os recursos Cloud Volumes ONTAP do Console para autorizar recursos e usuários. | Modos padrão e restrito. | Os recursos do Cloud Volumes ONTAP e os usuários não estão autorizados. 
