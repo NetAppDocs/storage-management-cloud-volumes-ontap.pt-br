@@ -8,9 +8,6 @@
 
 Agora você pode usar a Criação Rápida para implantar Cloud Volumes ONTAP no Azure, tanto para configurações de nó único quanto para configurações de alta disponibilidade (HA). Esse processo simplificado reduz o número de etapas em comparação com o método avançado, define automaticamente os valores padrão em uma única página e minimiza a navegação, tornando a implantação mais rápida e fácil.
 
-
-NOTE: Se você usar a opção Quick create para implantar um novo sistema Cloud Volumes ONTAP no Azure, o NetApp Console seleciona as credenciais do Azure por padrão. Você pode implantar todos os seus sistemas Cloud Volumes ONTAP usando as credenciais iniciais do Azure. Se quiser usar outra assinatura e/ou credenciais, é necessário alternar para a implantação no modo avançado. Essa limitação será resolvida em uma versão futura.
-
 .Links relacionados
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-azure.html["Implante Cloud Volumes ONTAP no Azure com a criação rápida"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html["Implante Cloud Volumes ONTAP usando opções avançadas no Azure"^]
