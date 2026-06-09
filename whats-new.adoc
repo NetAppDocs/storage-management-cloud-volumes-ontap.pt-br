@@ -20,6 +20,24 @@ Os aprimoramentos descritos nesta página são específicos para gerenciar o Clo
 
 
 
+== 08 de junho de 2026
+
+
+
+=== Novas instâncias EC2 compatíveis com Cloud Volumes ONTAP na AWS
+
+Cloud Volumes ONTAP 9.16.1 e versões posteriores oferecem suporte às famílias de instâncias EC2 M6id e M6idn para implantações novas e existentes de nó único e de alta disponibilidade (HA) na AWS. Essas instâncias de 6ª geração oferecem maior poder de processamento, funcionalidades de rede mais robustas e desempenho superior em comparação com os sistemas de uso geral de 5ª geração.
+
+* *Instâncias M6id*: Oferecem um equilíbrio entre poder computacional e memória, com armazenamento NVMe local de alta velocidade e baixa latência. Todos os tamanhos de instância M6id suportam Flash Cache. Essas instâncias são ideais para cargas de trabalho como registro de dados e processamento de mídia.
+* *Instâncias M6idn*: Oferecem as mesmas funcionalidades de storage NVMe local que as instâncias M6id. Todos os tamanhos de instância M6idn suportam Flash Cache.
+
+
+Não recomendamos os tipos de instância menores m6id.xlarge, m6id.2xlarge, m6idn.xlarge e m6idn.2xlarge para cargas de trabalho de alto desempenho ou com uso intensivo de memória. Para essas cargas de trabalho, utilize um tipo de instância com maior contagem de núcleos e mais memória.
+
+Para obter mais informações, consulte  https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html["Configurações com suporte para Cloud Volumes ONTAP na AWS"^].
+
+
+
 == 18 de maio de 2026
 
 
