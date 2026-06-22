@@ -118,7 +118,7 @@ ifdef::gcp[]
 
 == Camadas de dados no Google Cloud
 
-Quando você habilita a hierarquização de dados no Google Cloud, o Cloud Volumes ONTAP usa discos persistentes como uma camada de desempenho para dados ativos e um bucket do Google Cloud Storage como uma camada de capacidade para dados inativos.
+Ao ativar o armazenamento em camadas no Google Cloud, Cloud Volumes ONTAP usa discos persistentes como camada de desempenho para dados acessados com frequência e um bucket do Google Cloud Storage como camada de capacidade para dados inativos. Você pode selecionar uma camada de armazenamento ao criar um sistema e alterá-la a qualquer momento depois. Para obter informações sobre como alterar a classe de armazenamento, consulte link:task-tiering.html["Dados inativos em camadas para armazenamento de objetos de baixo custo"].
 
 Nível de desempenho:: O nível de desempenho pode ser discos persistentes SSD, discos persistentes balanceados ou discos persistentes padrão.
 Nível de capacidade:: Um sistema Cloud Volumes ONTAP organiza dados inativos em um único bucket do Google Cloud Storage.
@@ -137,16 +137,9 @@ Quando o Console cria o bucket, ele usa as seguintes configurações padrão:
 
 
 --
-Classes de armazenamento:: A classe de armazenamento padrão para dados em camadas é a classe _Standard Storage_.  Se os dados forem acessados com pouca frequência, você pode reduzir seus custos de armazenamento mudando para _Armazenamento Nearline_ ou _Armazenamento Coldline_.  Quando você altera a classe de armazenamento, os dados inativos subsequentes são movidos diretamente para a classe que você selecionou.
+Classes de armazenamento:: O Google Cloud utiliza  https://cloud.google.com/storage/docs/storage-classes["classes de armazenamento"^] para gerenciar custos e disponibilidade de dados. Recomendamos que você selecione uma classe de armazenamento com base na frequência esperada de acesso aos dados, pois o acesso aos dados gera custos mais altos. A classe de armazenamento padrão para dados em camadas é _Standard Storage_. A menos que seja alterada manualmente, todos os dados inativos mantêm a classe de armazenamento padrão. Para alterar a classe de armazenamento de dados inativos, consulte  https://docs.cloud.google.com/storage/docs/managing-lifecycles["Documentação do Google Cloud: gerenciando o ciclo de vida de objetos"^].
 +
 --
-
-NOTE: Todos os dados inativos existentes manterão a classe de armazenamento padrão quando você alterar a classe de armazenamento.  Para alterar a classe de armazenamento de dados inativos existentes, você deve executar a designação manualmente.
-
-Os custos de acesso serão maiores se você acessar os dados, então leve isso em consideração antes de alterar a classe de armazenamento.  Para saber mais, consulte o https://cloud.google.com/storage/docs/storage-classes["Documentação do Google Cloud: Classes de armazenamento"^] .
-
-Você pode selecionar um nível de armazenamento ao criar o sistema e pode alterá-lo a qualquer momento depois.  Para obter detalhes sobre como alterar a classe de armazenamento, consultelink:task-tiering.html["Dados inativos em camadas para armazenamento de objetos de baixo custo"] .
-
 A classe de armazenamento para camadas de dados abrange todo o sistema, não é por volume.
 
 --
