@@ -18,12 +18,14 @@ O NetApp Console cria grupos de segurança da AWS que incluem as regras de entra
 
 
 
+[[rules-for-cloud-volumes-ontap]]
 == Regras para Cloud Volumes ONTAP
 
 O grupo de segurança do Cloud Volumes ONTAP exige regras de entrada e saída.
 
 
 
+[[inbound-rules]]
 === Regras de entrada
 
 Ao adicionar um sistema Cloud Volumes ONTAP e escolher um grupo de segurança predefinido, você pode optar por permitir o tráfego dentro de um dos seguintes:
@@ -110,6 +112,7 @@ Ao adicionar um sistema Cloud Volumes ONTAP e escolher um grupo de segurança pr
 |===
 
 
+[[outbound-rules]]
 === Regras de saída
 
 O grupo de segurança predefinido para o Cloud Volumes ONTAP abre todo o tráfego de saída. Se isso for aceitável, siga as regras básicas de saída. Se precisar de regras mais rígidas, use as regras de saída avançadas.
@@ -262,12 +265,14 @@ NOTE: A origem é a interface (endereço IP) no sistema Cloud Volumes ONTAP .
 |===
 
 
+[[rules-for-the-ha-mediator-external-security-group]]
 == Regras para o grupo de segurança externa do mediador HA
 
 O grupo de segurança externo predefinido para o mediador Cloud Volumes ONTAP HA inclui as seguintes regras de entrada e saída.
 
 
 
+[[inbound-rules]]
 === Regras de entrada
 
 O grupo de segurança predefinido para o mediador HA inclui a seguinte regra de entrada.
@@ -281,6 +286,7 @@ O grupo de segurança predefinido para o mediador HA inclui a seguinte regra de 
 |===
 
 
+[[outbound-rules]]
 === Regras de saída
 
 O grupo de segurança predefinido para o mediador HA abre todo o tráfego de saída. Se isso for aceitável, siga as regras básicas de saída. Se precisar de regras mais rígidas, use as regras de saída avançadas.
@@ -325,6 +331,7 @@ NOTE: Em vez de abrir as portas 443 e 53, você pode criar um endpoint de VPC de
 
 
 
+[[rules-for-the-ha-configuration-internal-security-group]]
 == Regras para o grupo de segurança interna de configuração de HA
 
 O grupo de segurança interno predefinido para uma configuração do Cloud Volumes ONTAP HA inclui as seguintes regras.  Este grupo de segurança permite a comunicação entre os nós HA e entre o mediador e os nós.
@@ -333,6 +340,7 @@ O Console sempre cria esse grupo de segurança.  Você não tem a opção de usa
 
 
 
+[[inbound-rules]]
 === Regras de entrada
 
 O grupo de segurança predefinido inclui as seguintes regras de entrada.
@@ -346,6 +354,7 @@ O grupo de segurança predefinido inclui as seguintes regras de entrada.
 |===
 
 
+[[outbound-rules]]
 === Regras de saída
 
 O grupo de segurança predefinido inclui as seguintes regras de saída.
@@ -359,6 +368,7 @@ O grupo de segurança predefinido inclui as seguintes regras de saída.
 |===
 
 
+[[rules-for-the-console-agent]]
 == Regras para o agente do Console
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Exibir regras de grupo de segurança para o agente do Console"^]

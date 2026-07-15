@@ -4,6 +4,7 @@
 
 
 
+[[private-mode-deployments-enabled-for-cloud-volumes-ontap-9-14-1]]
 === Implantações em modo privado habilitadas para o Cloud Volumes ONTAP 9.14.1
 
 Agora você pode implantar o Cloud Volumes ONTAP 9.14.1 no modo privado na AWS, Azure e Google Cloud.  O modo privado é habilitado para implantações de nó único e de alta disponibilidade (HA) do Cloud Volumes ONTAP 9.14.1.

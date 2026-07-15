@@ -21,6 +21,7 @@ NOTE: A verificação de imagem do Azure é compatível com o Cloud Volumes ONTA
 
 
 
+[[azures-alteration-of-published-vhd-files]]
 == Alteração de arquivos VHD publicados pelo Azure
 
 O 1 MB (1048576 bytes) no início e 512 bytes no final do arquivo VHD são modificados pelo Azure.  O NetApp assina o arquivo VHD restante.

@@ -18,12 +18,14 @@ O NetApp Console gerencia a configuração de componentes de rede para o Cloud V
 
 
 
+[[requirements-for-cloud-volumes-ontap]]
 == Requisitos para o Cloud Volumes ONTAP
 
 Os seguintes requisitos de rede devem ser atendidos no Azure.
 
 
 
+[[outbound-internet-access]]
 === Acesso de saída à Internet
 
 Os sistemas Cloud Volumes ONTAP exigem acesso de saída à Internet para acessar endpoints externos para diversas funções.  O Cloud Volumes ONTAP não poderá operar corretamente se esses endpoints estiverem bloqueados em ambientes com requisitos de segurança rigorosos.
@@ -78,6 +80,7 @@ A autenticação do usuário falha e os seguintes serviços permanecem indispon�
 |===
 
 
+[[network-proxy-configuration-of-netapp-console-agent]]
 === Configuração de proxy de rede do agente do NetApp Console
 
 Você pode usar a configuração de servidores proxy do agente do NetApp Console para habilitar o acesso de saída à Internet do Cloud Volumes ONTAP.  O Console suporta dois tipos de proxies:
@@ -90,6 +93,7 @@ Para obter informações sobre como configurar servidores proxy, consulte o http
 
 
 
+[[ip-addresses]]
 === Endereços IP
 
 O Console aloca automaticamente o número necessário de endereços IP privados para o Cloud Volumes ONTAP no Azure.  Você precisa ter certeza de que sua rede tem endereços IP privados suficientes disponíveis.
@@ -166,6 +170,7 @@ Além disso, 4 IPs de front-end (FIPs) são configurados para migrar em eventos 
 
 
 
+[[secure-connections-to-azure-services]]
 === Conexões seguras com serviços do Azure
 
 Por padrão, o Console habilita um Link Privado do Azure para conexões entre o Cloud Volumes ONTAP e contas de armazenamento de blobs de páginas do Azure.
@@ -178,6 +183,7 @@ link:task-enabling-private-link.html["Saiba mais sobre como usar o Azure Private
 
 
 
+[[networking-for-azure-vnet-encryption]]
 === Rede para criptografia do Azure VNet
 
 Cloud Volumes ONTAP oferece suporte  https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-encryption-overview["Criptografia da Azure Virtual Network (VNet)"^]à criptografia do tráfego entre máquinas virtuais (VMs) dentro de uma VNet ou entre VNets emparelhadas. Esse recurso é configurado na camada VNet do Azure e é independente da topologia do Cloud Volumes ONTAP (nó único ou HA).
@@ -188,6 +194,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/accelerated-networking-o
 
 
 
+[[connections-to-other-ontap-systems]]
 === Conexões com outros sistemas ONTAP
 
 Para replicar dados entre um sistema Cloud Volumes ONTAP no Azure e sistemas ONTAP em outras redes, você deve ter uma conexão VPN entre a VNet do Azure e a outra rede, por exemplo, sua rede corporativa.
@@ -196,6 +203,7 @@ Para obter instruções, consulte o https://docs.microsoft.com/en-us/azure/vpn-g
 
 
 
+[[port-for-the-ha-interconnect]]
 === Porta para a interconexão HA
 
 Um par de HA do Cloud Volumes ONTAP inclui uma interconexão de HA, que permite que cada nó verifique continuamente se seu parceiro está funcionando e espelhe dados de log para a memória não volátil do outro.  A interconexão HA usa a porta TCP 10006 para comunicação.
@@ -204,6 +212,7 @@ Por padrão, a comunicação entre os LIFs de interconexão HA é aberta e não 
 
 
 
+[[only-one-ha-pair-in-an-azure-resource-group]]
 === Apenas um par de HA em um grupo de recursos do Azure
 
 Você deve usar um grupo de recursos _dedicado_ para cada par de Cloud Volumes ONTAP HA implantado no Azure.  Somente um par de HA é suportado em um grupo de recursos.
@@ -212,6 +221,7 @@ O Console terá problemas de conexão se você tentar implantar um segundo par d
 
 
 
+[[security-group-rules]]
 === Regras do grupo de segurança
 
 O Console cria grupos de segurança do Azure que incluem as regras de entrada e saída para que o Cloud Volumes ONTAP opere com sucesso. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Exibir regras de grupo de segurança para o agente do Console"^] .
@@ -490,6 +500,7 @@ NOTE: A origem é a interface (endereço IP) no sistema Cloud Volumes ONTAP .
 |===
 
 
+[[requirements-for-the-console-agent]]
 == Requisitos para o agente do console
 
 Se você ainda não criou um agente do Console, revise também os requisitos de rede para o agente do Console.

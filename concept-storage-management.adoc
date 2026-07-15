@@ -21,12 +21,14 @@ CAUTION: Você deve criar e excluir todos os discos e agregados diretamente do C
 
 
 
+[[storage-provisioning]]
 == Provisionamento de armazenamento
 
 O Console facilita o provisionamento de armazenamento para o Cloud Volumes ONTAP comprando discos e gerenciando agregados para você.  Você só precisa criar volumes.  Você pode usar uma opção de alocação avançada para provisionar agregados por conta própria, se desejar.
 
 
 
+[[simplified-provisioning]]
 === Provisionamento simplificado
 
 Agregados fornecem armazenamento em nuvem para volumes.  O Console cria agregados para você quando você inicia uma instância e quando provisiona volumes adicionais.
@@ -80,12 +82,14 @@ endif::aws[]
 
 
 
+[[advanced-allocation]]
 === Alocação avançada
 
 Você também pode gerenciar agregados. link:task-create-aggregates.html["Na página *Alocação avançada*"] , você pode criar novos agregados que incluem um número específico de discos, adicionar discos a um agregado existente e criar volumes em agregados específicos.
 
 
 
+[[capacity-management]]
 == Gestão de capacidade
 
 O administrador da organização ou da conta pode configurar o Console para notificá-lo sobre decisões de capacidade de armazenamento ou se deseja gerenciar automaticamente os requisitos de capacidade para você.
@@ -94,6 +98,7 @@ Esse comportamento é determinado pelo _Modo de Gerenciamento de Capacidade_ em 
 
 
 
+[[automatic-capacity-management]]
 === Gerenciamento automático de capacidade
 
 O Modo de Gerenciamento de Capacidade é definido como automático por padrão.  Neste modo, o Console verifica a proporção de espaço livre a cada 15 minutos para determinar se ela fica abaixo do limite especificado.  Se for necessária mais capacidade, ele inicia a compra de novos discos, exclui coleções de discos não utilizadas (agregados), move volumes entre agregados conforme necessário e tenta evitar falhas de disco.
@@ -127,12 +132,14 @@ O gerenciamento automático de capacidade do Console não se aplica a LUNs.  Ao 
 
 
 
+[[manual-capacity-management]]
 === Gerenciamento de capacidade manual
 
 Se o administrador da organização ou da conta definir o *Modo de Gerenciamento de Capacidade* como manual, o Console informará que você deve tomar as medidas apropriadas para as decisões de capacidade. Os mesmos exemplos descritos no modo automático se aplicam ao modo manual, mas cabe a você aceitar as ações.
 
 
 
+[[learn-more]]
 === Saber mais
 
 link:task-manage-capacity-settings.html["Aprenda a modificar o modo de gerenciamento de capacidade"] .

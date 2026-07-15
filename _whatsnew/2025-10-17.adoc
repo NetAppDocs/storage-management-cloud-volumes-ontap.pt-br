@@ -4,6 +4,7 @@
 
 
 
+[[cloud-volumes-ontap-in-azure-now-limited-to-latest-supported-versions]]
 === O Cloud Volumes ONTAP no Azure agora está limitado às versões mais recentes com suporte
 
 As implantações e atualizações do Cloud Volumes ONTAP no Azure por meio do NetApp Console agora estão restritas às versões mais recentes com suporte. Isso garante compatibilidade com o hardware de última geração suportado pela Microsoft e fornece os mais novos recursos e melhorias de segurança. O Console solicitará que você atualize para as versões suportadas.

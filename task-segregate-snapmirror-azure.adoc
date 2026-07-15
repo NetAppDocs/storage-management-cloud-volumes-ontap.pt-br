@@ -18,6 +18,7 @@ Com o Cloud Volumes ONTAP no Azure, você pode segregar o tráfego de replicaç�
 
 
 
+[[about-snapmirror-traffic-segregation-in-azure]]
 == Sobre a segregação de tráfego do SnapMirror no Azure
 
 Por padrão, o NetApp Console configura todas as NICs e LIFs em uma implantação do Cloud Volumes ONTAP na mesma sub-rede.  Nessas configurações, o tráfego de replicação do SnapMirror e o tráfego de dados e gerenciamento usam a mesma sub-rede.  A segregação do tráfego do SnapMirror aproveita uma sub-rede adicional que não é roteável para a sub-rede existente usada para tráfego de dados e gerenciamento.
@@ -37,6 +38,7 @@ Revise as seguintes considerações:
 
 
 
+[[step-1-create-an-additional-nic-and-attach-to-the-destination-vm]]
 == Etapa 1: crie uma NIC adicional e anexe-a à VM de destino
 
 Esta seção fornece instruções sobre como criar uma NIC adicional e anexá-la à VM de destino.  A VM de destino é o nó único ou sistema de par HA no Cloud Volumes ONTAP no Azure onde você deseja configurar sua NIC adicional.
@@ -112,6 +114,7 @@ Para implantações de par HA, repita as etapas para o nó parceiro.
 
 
 
+[[step-secondstep-2-create-a-new-ipspace-broadcast-domain-and-intercluster-lif-for-the-new-nic]]
 == [[step-second]]Etapa 2: Crie um novo IPspace, domínio de broadcast e LIF entre clusters para a nova NIC
 
 Um IPspace separado para LIFs interclusters fornece separação lógica entre a funcionalidade de rede para replicação entre clusters.
@@ -155,6 +158,7 @@ Para implantações de par HA, repita as etapas para o nó parceiro.
 
 
 
+[[step-3-verify-cluster-peering-between-the-source-and-destination-systems]]
 == Etapa 3: verificar o peering do cluster entre os sistemas de origem e destino
 
 Esta seção fornece instruções sobre como verificar o peering entre os sistemas de origem e destino.
@@ -180,6 +184,7 @@ Para implantações de par HA, repita as etapas para o nó parceiro.
 
 
 
+[[step-4-create-svm-peering-between-the-source-and-destination-system]]
 == Etapa 4: criar peering SVM entre os sistemas de origem e destino
 
 Esta seção fornece instruções sobre como criar o peering SVM entre os sistemas de origem e de destino.
@@ -235,6 +240,7 @@ Mostra de estado de pares*`peered` * e aplicações de peering mostram*`snapmirr
 
 
 
+[[step-5-create-a-snapmirror-replication-relationship-between-the-source-and-destination-system]]
 == Etapa 5: Crie um relacionamento de replicação SnapMirror entre o sistema de origem e o de destino
 
 Esta seção fornece instruções sobre como criar um relacionamento de replicação do SnapMirror entre o sistema de origem e o de destino.

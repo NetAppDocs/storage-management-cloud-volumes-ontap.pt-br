@@ -4,6 +4,7 @@
 
 
 
+[[introducing-azure-marketplace-direct-deployment]]
 === Apresentando a implantação direta do Azure Marketplace
 
 Agora você pode aproveitar a implantação direta do Azure Marketplace para implantar o Cloud Volumes ONTAP de forma fácil e rápida diretamente do Azure Marketplace.  Usando esse método simplificado, você pode explorar os principais recursos e funcionalidades do Cloud Volumes ONTAP em seu ambiente sem precisar configurar o BlueXP Connector ou atender a outros critérios de integração necessários para implantar o Cloud Volumes ONTAP por meio do BlueXP.

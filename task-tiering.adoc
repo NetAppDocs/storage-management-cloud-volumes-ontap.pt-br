@@ -72,6 +72,7 @@ O Console cria um armazenamento de objetos para dados frios quando cria o sistem
 ====
 
 
+[[configurations-that-support-data-tiering]]
 == Configurações que suportam camadas de dados
 
 Você pode habilitar a hierarquização de dados ao usar configurações e recursos específicos.
@@ -80,6 +81,7 @@ ifdef::aws[]
 
 
 
+[[support-in-aws]]
 === Suporte na AWS
 
 * A hierarquização de dados é suportada na AWS a partir do Cloud Volumes ONTAP 9.2.
@@ -97,6 +99,7 @@ ifdef::azure[]
 
 
 
+[[support-in-azure]]
 === Suporte no Azure
 
 * O armazenamento em camadas de dados é suportado no Azure da seguinte forma:
@@ -115,6 +118,7 @@ ifdef::gcp[]
 
 
 
+[[support-in-google-cloud]]
 === Suporte no Google Cloud
 
 * A hierarquização de dados é suportada no Google Cloud a partir do Cloud Volumes ONTAP 9.6.
@@ -126,6 +130,7 @@ endif::gcp[]
 
 
 
+[[feature-interoperability]]
 === Interoperabilidade de recursos
 
 * A hierarquização de dados é suportada com tecnologias de criptografia.
@@ -134,6 +139,7 @@ endif::gcp[]
 
 
 
+[[requirements]]
 == Requisitos
 
 Dependendo do seu provedor de nuvem, certas conexões e permissões devem ser configuradas para que o Cloud Volumes ONTAP possa hierarquizar dados frios no armazenamento de objetos.
@@ -142,6 +148,7 @@ ifdef::aws[]
 
 
 
+[[requirements-to-tier-cold-data-to-amazon-s3]]
 === Requisitos para transferir dados frios para Amazon S3
 
 Certifique-se de que Cloud Volumes ONTAP tenha uma conexão com Amazon S3. A melhor maneira de fornecer essa conexão é criando um endpoint de VPC para o serviço S3. Para obter instruções, consulte o  https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentação da AWS: Criando um endpoint de gateway"^].
@@ -156,6 +163,7 @@ ifdef::azure[]
 
 
 
+[[requirements-to-tier-cold-data-to-azure-blob-storage]]
 === Requisitos para hierarquizar dados frios no armazenamento de Blobs do Azure
 
 Você não precisa configurar uma conexão entre a camada de desempenho e a camada de capacidade, desde que o Console tenha as permissões necessárias.  O Console habilita um ponto de extremidade de serviço VNet para você se a função personalizada do agente do Console tiver estas permissões:
@@ -173,6 +181,7 @@ ifdef::gcp[]
 
 
 
+[[requirements-to-tier-cold-data-to-a-google-cloud-storage-bucket]]
 === Requisitos para hierarquizar dados frios em um bucket do Google Cloud Storage
 
 * A sub-rede na qual o Cloud Volumes ONTAP reside deve ser configurada para o Private Google Access.  Para obter instruções, consulte https://cloud.google.com/vpc/docs/configure-private-google-access["Documentação do Google Cloud: Configurando o acesso privado do Google"^] .
@@ -196,6 +205,7 @@ endif::gcp[]
 
 
 
+[[enable-data-tiering-after-implementing-the-requirements]]
 === Habilitar a hierarquização de dados após implementar os requisitos
 
 O Console cria um armazenamento de objetos para dados frios quando o sistema é criado, desde que não haja problemas de conectividade ou permissões.  Se você não implementou os requisitos listados acima até depois de criar o sistema, será necessário habilitar manualmente a hierarquização por meio da API ou do ONTAP System Manager, que cria o armazenamento de objetos.
@@ -205,6 +215,7 @@ NOTE: A capacidade de habilitar a hierarquização por meio do Console estará d
 
 
 
+[[ensure-that-tiering-is-enabled-on-aggregates]]
 == Certifique-se de que a hierarquização esteja habilitada em agregados
 
 A hierarquização de dados deve ser habilitada em um agregado para habilitar a hierarquização de dados em um volume.  Você deve estar ciente dos requisitos para novos volumes e para volumes existentes.
@@ -239,6 +250,7 @@ Agora você pode habilitar a hierarquização de dados em volumes novos e existe
 
 
 
+[[tier-data-from-read-write-volumes]]
 == Dados em camadas de volumes de leitura e gravação
 
 O Cloud Volumes ONTAP pode hierarquizar dados inativos em volumes de leitura e gravação para armazenamento de objetos econômico, liberando a camada de desempenho para dados importantes.
@@ -273,6 +285,7 @@ O Console cria um novo agregado para o volume se ainda não existir um agregado 
 
 
 
+[[tier-data-from-data-protection-volumes]]
 == Dados em camadas de volumes de proteção de dados
 
 O Cloud Volumes ONTAP pode hierarquizar dados de um volume de proteção de dados para uma camada de capacidade.  Se você ativar o volume de destino, os dados serão movidos gradualmente para a camada de desempenho à medida que forem lidos.
@@ -294,6 +307,7 @@ Para obter ajuda com a replicação de dados, consulte https://docs.netapp.com/u
 
 
 
+[[change-the-storage-class-for-tiered-data]]
 == Alterar a classe de armazenamento para dados em camadas
 
 Depois de implantar o Cloud Volumes ONTAP, você pode reduzir seus custos de armazenamento alterando a classe de armazenamento para dados inativos que não foram acessados ​​por 30 dias.  Os custos de acesso serão maiores se você acessar os dados, então leve isso em consideração antes de alterar a classe de armazenamento.
@@ -309,6 +323,7 @@ Para obter informações sobre classes de armazenamento suportadas, consultelink
 
 
 
+[[change-the-free-space-ratio-for-data-tiering]]
 == Alterar a proporção de espaço livre para camadas de dados
 
 A proporção de espaço livre para hierarquização de dados define quanto espaço livre é necessário nos SSDs/HDDs do Cloud Volumes ONTAP ao hierarquizar dados no armazenamento de objetos.  A configuração padrão é 10% de espaço livre, mas você pode ajustá-la de acordo com suas necessidades.
@@ -336,6 +351,7 @@ image:screenshot-cvo-settings-page.png["Uma visão geral das configurações de 
 
 
 
+[[change-the-cooling-period-for-the-auto-tiering-policy]]
 == Alterar o período de resfriamento da política de hierarquização automática
 
 Se você habilitou o armazenamento em camadas de dados em um volume do Cloud Volumes ONTAP usando a política de armazenamento em camadas _automático_, poderá ajustar o período de resfriamento padrão com base nas necessidades do seu negócio.  Esta ação é suportada somente usando ONTAP CLI e API.
@@ -354,6 +370,7 @@ O período de resfriamento padrão para a política de hierarquização automát
 
 
 
+[[remove-an-s3-bucket-on-decommissioning-a-system]]
 == Remover um bucket S3 ao descomissionar um sistema
 
 Você pode excluir um bucket do S3 com os dados em camadas de um sistema Cloud Volumes ONTAP ao desativar o ambiente.

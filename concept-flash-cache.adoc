@@ -18,18 +18,21 @@ Algumas configurações do Cloud Volumes ONTAP incluem armazenamento NVMe local,
 
 
 
+[[whats-flash-cache]]
 == O que é Flash Cache?
 
 O Flash Cache acelera o acesso aos dados por meio do cache inteligente em tempo real de dados de usuários lidos recentemente e metadados do NetApp . É eficaz para cargas de trabalho aleatórias com uso intensivo de leitura, incluindo bancos de dados, e-mail e serviços de arquivo.
 
 
 
+[[supported-configurations]]
 == Configurações suportadas
 
 O Flash Cache é compatível com configurações específicas do Cloud Volumes ONTAP .  Veja as configurações suportadas no https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de versão do Cloud Volumes ONTAP"^]
 
 
 
+[[limitations]]
 == Limitações
 
 ifdef::aws[]

@@ -29,6 +29,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html[
 
 
 
+[[manage-paygo-licenses]]
 == Gerenciar licenças PAYGO
 
 O menu Licenses and subscriptions permite que você visualize detalhes sobre cada um dos seus sistemas PAYGO Cloud Volumes ONTAP , incluindo o número de série e o tipo de licença PAYGO.
@@ -48,6 +49,7 @@ image:screenshot_paygo_licenses.png["Uma captura de tela que mostra uma tabela n
 
 
 
+[[manage-byol-licenses]]
 == Gerenciar licenças BYOL
 
 Gerencie licenças que você comprou diretamente da NetApp adicionando e removendo licenças de sistema e licenças de capacidade extra.
@@ -57,6 +59,7 @@ NOTE: A NetApp restringiu a compra, extensão e renovação de licenças BYOL. P
 
 
 
+[[add-unassigned-licenses]]
 === Adicionar licenças não atribuídas
 
 Adicione uma licença baseada em nó ao Console para que você possa selecionar a licença ao criar um novo sistema Cloud Volumes ONTAP .  O Console identifica essas licenças como _não atribuídas_.
@@ -80,6 +83,7 @@ O Console adiciona a licença.  A licença será identificada como não atribuí
 
 
 
+[[exchange-unassigned-node-based-licenses]]
 === Trocar licenças baseadas em nós não atribuídas
 
 Se você tiver uma licença baseada em nó não atribuída para o Cloud Volumes ONTAP que não tenha usado, poderá trocá-la convertendo-a em uma licença do NetApp Backup and Recovery , uma licença do NetApp Data Classification ou uma licença do NetApp Cloud Tiering .
@@ -114,6 +118,7 @@ O Console converte a licença não atribuída para o serviço que você selecion
 
 
 
+[[obtain-a-system-license-file]]
 === Obter um arquivo de licença do sistema
 
 Na maioria dos casos, o Console pode obter automaticamente seu arquivo de licença usando sua conta do Site de Suporte da NetApp .  Mas se isso não for possível, você precisará carregar manualmente o arquivo de licença.  Se você não tiver o arquivo de licença, poderá obtê-lo em netapp.com.
@@ -132,6 +137,7 @@ image:screenshot-license-generator.png["Captura de tela: mostra um exemplo da p�
 
 
 
+[[update-a-system-license]]
 === Atualizar uma licença do sistema
 
 Quando você renova uma assinatura BYOL entrando em contato com um representante da NetApp , o Console obtém automaticamente a nova licença da NetApp e a instala no sistema Cloud Volumes ONTAP .  Se o Console não conseguir acessar o arquivo de licença pela conexão segura com a Internet, você poderá obter o arquivo e carregá-lo manualmente.
@@ -152,6 +158,7 @@ O Console atualiza a licença no sistema Cloud Volumes ONTAP .
 
 
 
+[[manage-extra-capacity-licenses]]
 === Gerenciar licenças de capacidade extra
 
 Você pode adquirir licenças de capacidade extra para um sistema Cloud Volumes ONTAP BYOL para alocar mais do que os 368 TiB de capacidade fornecidos com uma licença de sistema BYOL.  Por exemplo, você pode comprar uma capacidade de licença extra para alocar até 736 TiB de capacidade para o Cloud Volumes ONTAP.  Ou você pode comprar três licenças de capacidade extra para obter até 1,4 PiB.
@@ -210,6 +217,7 @@ Se uma licença de capacidade extra expirou e não estiver mais em uso, você po
 
 
 
+[[change-between-paygo-and-byol]]
 == Mudança entre PAYGO e BYOL
 
 A conversão de um sistema de licenciamento PAYGO por nó para licenciamento BYOL por nó (e vice-versa) não é suportada.  Se você quiser alternar entre uma assinatura paga conforme o uso e uma assinatura BYOL, será necessário implantar um novo sistema e replicar os dados do sistema existente para o novo sistema.

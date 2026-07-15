@@ -18,6 +18,7 @@ Os dados são criptografados automaticamente no Cloud Volumes ONTAP no Azure usa
 
 
 
+[[data-encryption-overview]]
 == Visão geral da criptografia de dados
 
 Os dados do Cloud Volumes ONTAP são criptografados automaticamente no Azure usando https://learn.microsoft.com/en-us/azure/security/fundamentals/encryption-overview["Criptografia do Serviço de Armazenamento do Azure"^] .  A implementação padrão usa uma chave gerenciada pela Microsoft.  Nenhuma configuração é necessária.
@@ -30,6 +31,7 @@ Se você quiser usar uma chave gerenciada pelo cliente com o Cloud Volumes ONTAP
 
 
 
+[[how-data-is-encrypted]]
 === Como os dados são criptografados
 
 O Console usa um conjunto de criptografia de disco, que permite o gerenciamento de chaves de criptografia com discos gerenciados, não blobs de páginas.  Todos os novos discos de dados também usam o mesmo conjunto de criptografia de disco.  Versões anteriores usarão a chave gerenciada pela Microsoft, em vez da chave gerenciada pelo cliente.
@@ -98,6 +100,7 @@ Todas as contas de armazenamento do Azure para o Cloud Volumes ONTAP são cripto
 
 
 
+[[key-rotation-in-cloud-volumes-ontap]]
 == Rotação de chaves no Cloud Volumes ONTAP
 
 Ao configurar suas chaves de criptografia, você deve usar o portal do Azure para configurar e habilitar a rotação automática de chaves.  Criar e habilitar uma nova versão de chaves de criptografia garante que o Cloud Volumes ONTAP possa detectar e usar automaticamente a versão mais recente da chave para criptografia, garantindo que seus dados permaneçam seguros sem a necessidade de intervenção manual.
@@ -113,6 +116,7 @@ NOTE: Após configurar as chaves, certifique-se de ter selecionado https://learn
 
 
 
+[[create-a-user-assigned-managed-identity]]
 == Crie uma identidade gerenciada atribuída pelo usuário
 
 Você tem a opção de criar um recurso chamado identidade gerenciada atribuída pelo usuário.  Isso permite que você criptografe suas contas de armazenamento ao criar um sistema Cloud Volumes ONTAP .  Recomendamos criar este recurso antes de criar um cofre de chaves e gerar uma chave.
@@ -136,6 +140,7 @@ O recurso tem o seguinte ID: `userassignedidentity` .
 
 
 
+[[create-a-key-vault-and-generate-a-key]]
 == Crie um cofre de chaves e gere uma chave
 
 O cofre de chaves deve residir na mesma assinatura e região do Azure em que você planeja criar o sistema Cloud Volumes ONTAP .
@@ -198,6 +203,7 @@ Observe os seguintes requisitos para a chave:
 
 
 
+[[create-a-system-that-uses-the-encryption-key]]
 == Crie um sistema que use a chave de criptografia
 
 Depois de criar o cofre de chaves e gerar uma chave de criptografia, você pode criar um novo sistema Cloud Volumes ONTAP configurado para usar a chave.  Essas etapas são suportadas pelo uso da API.

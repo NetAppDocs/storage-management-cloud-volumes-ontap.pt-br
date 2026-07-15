@@ -3,7 +3,7 @@
 
 
 [role="lead"]
-Você pode implantar Cloud Volumes ONTAP na Amazon Web Services (AWS) e Microsoft Azure usando `Quick create` para uma implantação mais rápida, tanto em configurações de nó único quanto de alta disponibilidade (HA). Esse processo simplificado reduz as etapas de implantação em comparação com o método avançado, definindo automaticamente os valores padrão em uma única página e minimizando a navegação.
+Você pode implantar Cloud Volumes ONTAP na Amazon Web Services (AWS), Microsoft Azure e Google Cloud usando `Quick create` para uma implantação mais rápida, tanto em configurações de nó único quanto de alta disponibilidade (HA). Esse processo simplificado reduz as etapas de implantação em comparação com o método avançado, definindo automaticamente os valores padrão em uma única página e minimizando a navegação.
 
 .Antes de começar
 Antes de começar, certifique-se de ter o seguinte:
@@ -28,6 +28,11 @@ link:task-planning-your-config.html["Planejando sua configuração na AWS"]
 link:task-planning-your-config-azure.html["Planejando sua configuração no Azure"]
 
 --
+.Google Cloud
+--
+link:task-planning-your-config-gcp.html["Planejando sua configuração no Google Cloud"]
+
+--
 ====
 . Conhecimento dos requisitos de licenciamento do Cloud Volumes ONTAP. Para obter informações, consulte:
 +
@@ -41,6 +46,11 @@ link:task-set-up-licensing-aws.html["Configure o licenciamento na AWS"]
 .Azul
 --
 link:task-set-up-licensing-azure.html["Configure o licenciamento no Azure"]
+
+--
+.Google Cloud
+--
+link:task-planning-your-config-gcp.html["Planejando sua configuração no Google Cloud"]
 
 --
 ====
@@ -58,13 +68,18 @@ link:reference-networking-aws.html["Requisitos de rede na AWS"]
 link:reference-networking-azure.html["Requisitos de rede no Azure"]
 
 --
+.Google Cloud
+--
+link:reference-networking-gcp.html["Requisitos de rede no Google Cloud"]
+
+--
 ====
 
 
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
 . [[subscribe]]Na página Canvas, clique em *Adicionar Sistema* e siga as instruções.
-. Selecione seu provedor de nuvem (*Amazon Web Services* ou *Microsoft Azure*) > *Cloud Volumes ONTAP/Cloud Volumes ONTAP HA* > *Adicionar novo*. A opção *Criação rápida* está selecionada por padrão.
+. Selecione seu provedor de nuvem (*Amazon Web Services*, *Microsoft Azure* ou *Google Cloud*) > *Cloud Volumes ONTAP/Cloud Volumes ONTAP HA* > *Adicionar novo*. A opção *Criação rápida* está selecionada por padrão.
 +
 .Capturas de tela de exemplo da opção Quick create
 [%collapsible]
@@ -81,15 +96,36 @@ image:screenshot-aws-quick-create.png["width=500,alt=\"AWS Quick Create\""]
 image:screenshot-azure-quick-create.png["width=500,alt=\"Criação Rápida do Azure\""]
 
 --
+.Google Cloud
+--
+image:screenshot-quick-start-gcp.png["width=500,alt=\"Criação Rápida do Google Cloud\""]
+
+--
 =====
 ====
 
 
 .Detalhes do sistema
-. *Conta/credenciais do provedor de nuvem*: Os detalhes da conta e da assinatura são preenchidos automaticamente com base no seu agente do Console. Se você tiver várias contas ou assinaturas, selecione aquela que deseja usar. Se um agente do Console estiver indisponível, você será solicitado a  https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["criar um agente de console"^].
+. *Conta/credenciais do provedor de nuvem/projeto do Google Cloud*: Os detalhes da conta e da assinatura são preenchidos automaticamente com base no seu agente do Console. Se você tiver várias contas ou assinaturas, selecione a que deseja usar. Se um agente do Console não estiver disponível, você será solicitado a  https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["criar um agente de console"^].
+
+
+ifdef::gcp[]
+
+Para o _Google Cloud_, você precisa selecionar uma assinatura do marketplace com o nome do projeto.
+
+endif::gcp[]
+
 . *Nome*: Insira um nome para o seu sistema Cloud Volumes ONTAP (também chamado de nome do cluster). O Console usa o nome do sistema (cluster) para nomear o sistema Cloud Volumes ONTAP e a instância da VM. Ele também usa o nome como prefixo para o grupo de segurança predefinido, caso você selecione essa opção.
 . *Credenciais do ONTAP*: Estas são as credenciais da conta de administrador do cluster Cloud Volumes ONTAP. Você pode usar essas credenciais para se conectar ao Cloud Volumes ONTAP por meio do ONTAP System Manager ou da ONTAP CLI. Você pode manter o nome de usuário padrão _admin_ ou alterá-lo para um nome de usuário personalizado.
-. *Tags*: As tags são os metadados dos seus recursos da AWS ou do Azure. O Console adiciona as tags à instância do Cloud Volumes ONTAP e a cada recurso associado à instância. Você pode adicionar até 15 tags na interface de usuário ao criar um sistema Cloud Volumes ONTAP e, em seguida, adicionar mais após a criação. Para obter mais informações, consulte:
+
+
+ifdef::gcp[]
+
+Para o Google Cloud, se você planeja usar link:concept-data-tiering.html["hierarquização de dados"] ou  https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] com Cloud Volumes ONTAP, então você precisa habilitar a *Conta de Serviço* e selecionar uma conta de serviço que tenha a função predefinida de Storage Admin. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^]. A conta de serviço associada ao agente do Console https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["deve ter as permissões necessárias"^].
+
+endif::gcp[]
+
+. *Etiquetas/Rótulos*: As etiquetas são os metadados dos seus recursos da AWS ou Azure. O Console adiciona as etiquetas à instância do Cloud Volumes ONTAP e a cada recurso associado à instância. Você pode adicionar até 15 etiquetas na interface de usuário ao criar um sistema Cloud Volumes ONTAP e, em seguida, adicionar mais depois que ele for criado. Para obter mais informações, consulte:
 +
 [role="tabbed-block"]
 ====
@@ -101,6 +137,11 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["Documentaç
 .Azul
 --
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json["Documentação do Azure: marque recursos"^].
+
+--
+.Google Cloud
+--
+https://docs.cloud.google.com/storage/docs/tags-and-labels["Documentação do Google Cloud: tags e rótulos"^].
 
 --
 ====
@@ -118,7 +159,7 @@ https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-res
 ====
 .Para AWS
 --
-*VPC*: Para AWS, insira uma VPC para a região com uma sub-rede conforme seu planejamento
+*VPC*: Para AWS, insira uma rede Amazon Virtual Private Cloud (VPC) para a região com uma sub-rede conforme sua implantação planejada.
 
 .Alta disponibilidade da AWS
 Se você selecionou uma configuração de alta disponibilidade (HA), insira as seguintes informações:
@@ -140,7 +181,18 @@ Se você selecionou uma configuração de alta disponibilidade (HA), insira as s
 --
 .Para o Azure
 --
-*VNET*: para o Azure, selecione a VNET necessária.
+*VNET*: Selecione a Rede Virtual do Azure (VNet) necessária. Para obter informações sobre os requisitos da VNet, consulte link:reference-networking-azure.html#networking-for-azure-vnet-encryption["Rede para criptografia do Azure VNet"].
+
+--
+.Para o Google Cloud
+--
+*VPC e sub-rede*: Para o Google Cloud, insira uma rede Google Virtual Private Cloud (VPC) para a região e uma sub-rede conforme seu plano de implantação.
+
+.HA em AZ única ou em múltiplas AZs
+Se você selecionou uma configuração de HA, insira as seguintes informações: *Zona para os nós 1 e 2 e o mediador*: Adicione as zonas para os dois nós e o mediador. *Conectividade* Selecione quatro VPCs diferentes para a configuração de HA e uma sub-rede em cada VPC. Para mais informações sobre VPC-1, VPC-2 e VPC-3, consulte link:reference-networking-gcp.html#requirements-specific-to-single-node-systems["Regras para VPC-1, VPC-2 e VPC-3"].
+
+
+NOTE: Cloud Volumes ONTAP 9.19.1 e versões posteriores oferecem suporte a link:concept-ha-google-cloud.html["Discos compartilhados para configurações de HA em uma única zona de disponibilidade"], tornando a instância do mediador opcional ou redundante. Nessa configuração, você não precisa de uma zona de mediador, VPC ou sub-rede para replicação de dados.
 
 --
 ====
@@ -151,18 +203,26 @@ Se você selecionou uma configuração de alta disponibilidade (HA), insira as s
 .Cobrança e Serviços
 . *Licença*: Selecione o tipo de licença que deseja usar com este Cloud Volumes ONTAP. Você pode escolher entre as licenças Professional, Essentials e Freemium. Para obter informações sobre as diferentes licenças, consulte link:concept-licensing.html["Saiba mais sobre as licenças do Cloud Volumes ONTAP"^].
 . *Serviços e recursos de dados*: mantenha os serviços ativados ou desative os serviços que você não deseja usar com o Cloud Volumes ONTAP.
-+
-** https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Saiba mais sobre a classificação da NetApp"^]
-** https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre o NetApp Backup and Recovery"^]
-** link:concept-worm.html["Saiba mais sobre o armazenamento WORM no Cloud Volumes ONTAP"]
+
+
+ifdef::gcp[]
+
+No Google Cloud, para selecionar Backup e Recovery ou usar NetApp Cloud Tiering, você precisa ter especificado a Service Account.
+
+endif::gcp[]
+
+* https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Saiba mais sobre a classificação da NetApp"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre o NetApp Backup and Recovery"^]
+* link:concept-worm.html["Saiba mais sobre o armazenamento WORM no Cloud Volumes ONTAP"]
 +
 
 TIP: Se você quiser utilizar WORM e camadas de dados, desabilite o Backup e Recuperação e implante um sistema Cloud Volumes ONTAP com versão 9.8 ou superior.
 
++
+.. * Conta do site de suporte da NetApp *: se você tiver várias contas, selecione aquela que deseja usar.
+.. Verifique ou edite os detalhes inseridos e clique em *Criar*.
 
 
-. * Conta do site de suporte da NetApp *: se você tiver várias contas, selecione aquela que deseja usar.
-. Verifique ou edite os detalhes inseridos e clique em *Criar*.
 
 
 ifdef::azure[]

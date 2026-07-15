@@ -18,6 +18,7 @@ Depois de decidir qual opção de licenciamento você deseja usar com o Cloud Vo
 
 
 
+[[setting-preferred-billing-for-standalone-aws-listing]]
 == Definir a forma de faturamento preferencial para listagens independentes da AWS
 
 Se você tiver uma assinatura AWS independente vinculada à sua conta AWS, poderá pagar pelo Cloud Volumes ONTAP por meio dessa assinatura. Se você também tiver assinaturas do NetApp Intelligent Services (NIS), poderá pagar pelos seus serviços de dados por meio do pacote associado à assinatura do NIS. Para assinaturas existentes, NetApp recomenda a migração para a abordagem de assinatura independente para um melhor gerenciamento de custos do uso do Cloud Volumes ONTAP.
@@ -44,6 +45,7 @@ Repita os mesmos passos para a assinatura NIS na aba *Serviços de dados* para u
 
 
 
+[[capacity-based-license]]
 == Licença baseada em capacidade
 
 O licenciamento baseado em capacidade permite que você pague pelo Cloud Volumes ONTAP por TiB de capacidade. O licenciamento baseado em capacidade está disponível na forma de um _pacote_: o pacote Essentials ou o pacote Professional.
@@ -61,6 +63,7 @@ As seções a seguir descrevem como começar a usar cada um desses modelos de co
 
 
 
+[[byol]]
 === Traga sua própria bebida
 
 Pague antecipadamente comprando uma licença (BYOL) da NetApp para implantar sistemas Cloud Volumes ONTAP em qualquer provedor de nuvem.
@@ -97,6 +100,7 @@ link:task-deploying-otc-aws.html["Veja instruções passo a passo para iniciar o
 
 
 
+[[paygo-subscription]]
 === Assinatura PAYGO
 
 Pague por hora assinando a oferta do marketplace do seu provedor de nuvem.
@@ -126,6 +130,7 @@ TIP: Você pode gerenciar as assinaturas do AWS Marketplace associadas às suas 
 
 
 
+[[annual-contract]]
 === Contrato anual
 
 Pague anualmente comprando um contrato anual no marketplace do seu provedor de nuvem.
@@ -151,6 +156,7 @@ link:task-deploying-otc-aws.html["Veja instruções passo a passo para iniciar o
 
 
 
+[[freemium]]
 == Freemium
 
 Selecione a oferta Freemium para usar o Cloud Volumes ONTAP gratuitamente com até 500 GiB de capacidade provisionada. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#free-trials["Saiba mais sobre a oferta Freemium"^] .
@@ -178,6 +184,7 @@ link:task-deploying-otc-aws.html["Veja instruções passo a passo para iniciar o
 
 
 
+[[keystone-subscription]]
 == Assinatura Keystone
 
 Uma assinatura Keystone é um serviço baseado em assinatura com pagamento conforme o crescimento. link:concept-licensing.html#keystone-subscription["Saiba mais sobre as assinaturas do NetApp Keystone"^] .
@@ -201,6 +208,7 @@ link:task-deploying-otc-aws.html["Veja instruções passo a passo para iniciar o
 
 
 
+[[node-based-license]]
 == Licença baseada em nó
 
 Uma licença baseada em nó é a licença da geração anterior para o Cloud Volumes ONTAP. Uma licença baseada em nó pode ser adquirida da NetApp (BYOL) e está disponível para renovações de licença apenas em casos específicos. Para obter informações, consulte:

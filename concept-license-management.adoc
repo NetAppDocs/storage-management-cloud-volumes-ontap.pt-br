@@ -25,6 +25,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-l
 
 
 
+[[byol-system-licenses]]
 == Licenças do sistema BYOL
 
 As licenças baseadas em nós podem ser adquiridas na NetApp. O número de licenças que você pode comprar para um sistema de nó único ou par de HA é ilimitado.
@@ -38,6 +39,7 @@ Esteja ciente de que os limites do disco podem impedir que você atinja o limite
 
 
 
+[[license-management-for-a-new-system]]
 == Gerenciamento de licenças para um novo sistema
 
 Ao criar um sistema BYOL baseado em nó, o Console solicita o número de série da sua licença e sua conta do Site de Suporte da NetApp .  O Console usa a conta para baixar o arquivo de licença do NetApp e instalá-lo no sistema Cloud Volumes ONTAP .
@@ -48,6 +50,7 @@ Se o Console não puder acessar o arquivo de licença por meio de uma conexão s
 
 
 
+[[license-expiration]]
 == Expiração da licença
 
 O Console exibe um aviso 30 dias antes da expiração de uma licença baseada em nó e novamente quando a licença expira.  A imagem a seguir mostra um aviso de expiração de 30 dias que aparece na interface do usuário:
@@ -62,6 +65,7 @@ Se você não renovar a licença a tempo, o sistema Cloud Volumes ONTAP será de
 
 
 
+[[license-renewal]]
 == Renovação de licença
 
 Se você renovar uma assinatura BYOL baseada em nó entrando em contato com um representante da NetApp , o Console obterá automaticamente a nova licença da NetApp e a instalará no sistema Cloud Volumes ONTAP .
@@ -70,6 +74,7 @@ Se o Console não puder acessar o arquivo de licença por meio de uma conexão s
 
 
 
+[[license-transfer-to-a-new-system]]
 == Transferência de licença para um novo sistema
 
 Uma licença BYOL baseada em nó é transferível entre sistemas Cloud Volumes ONTAP quando você exclui um sistema existente e cria um novo usando a mesma licença.

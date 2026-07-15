@@ -18,6 +18,7 @@ Você pode parar e iniciar o Cloud Volumes ONTAP no NetApp Console para gerencia
 
 
 
+[[scheduling-automatic-shutdowns-of-cloud-volumes-ontap]]
 == Agendamento de desligamentos automáticos do Cloud Volumes ONTAP
 
 Talvez você queira desligar o Cloud Volumes ONTAP durante intervalos de tempo específicos para reduzir seus custos de computação.  Em vez de fazer isso manualmente, você pode configurar o Console para desligar e reiniciar automaticamente os sistemas em horários específicos.
@@ -63,6 +64,7 @@ A programação foi salva.  O item de linha Tempo de inatividade agendado corres
 
 
 
+[[stopping-cloud-volumes-ontap]]
 == Parando Cloud Volumes ONTAP
 
 Parar o Cloud Volumes ONTAP evita que você acumule custos de computação e cria instantâneos dos discos raiz e de inicialização, o que pode ser útil para solução de problemas.

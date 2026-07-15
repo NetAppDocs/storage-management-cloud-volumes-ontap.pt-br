@@ -96,6 +96,7 @@ Uma vez acessível, use o ONTAP System Manager ou o ONTAP CLI para efetuar login
 
 
 
+[[troubleshoot-deployment-issues]]
 == Solucionar problemas de implantação
 
 Os sistemas Cloud Volumes ONTAP implantados diretamente pelo marketplace do Azure não incluem suporte da NetApp.  Caso surjam problemas durante a implantação, você pode solucioná-los e resolvê-los de forma independente.
@@ -114,6 +115,7 @@ Os sistemas Cloud Volumes ONTAP implantados diretamente pelo marketplace do Azur
 
 
 
+[[discover-the-deployed-systems-in-console]]
 == Descubra os sistemas implantados no Console
 
 Você pode descobrir os sistemas Cloud Volumes ONTAP que você implantou usando a implantação direta do Azure Marketplace e gerenciá-los na página *Sistemas* no Console.  O agente do Console descobre os sistemas, os adiciona e aplica as licenças necessárias, além de desbloqueia todos os recursos do Console para esses sistemas.  A configuração HA original em uma única AZ com discos gerenciados PSSD v2 é mantida, e o sistema é registrado na mesma assinatura do Azure e no mesmo grupo de recursos da implantação original.

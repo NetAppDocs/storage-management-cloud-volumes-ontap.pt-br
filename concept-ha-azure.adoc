@@ -18,10 +18,12 @@ Um par de alta disponibilidade (HA) do Cloud Volumes ONTAP fornece confiabilidad
 
 
 
+[[ha-components]]
 == Componentes HA
 
 
 
+[[ha-single-availability-zone-configuration-with-page-blobs]]
 === Configuração de zona de disponibilidade única de HA com blobs de página
 
 Uma configuração de blob de página HA do Cloud Volumes ONTAP no Azure inclui os seguintes componentes:
@@ -54,6 +56,7 @@ NOTE: A partir do Cloud Volumes ONTAP 9.15.0P1, os blobs de páginas do Azure n�
 
 
 
+[[ha-single-availability-zone-configuration-with-shared-managed-disks]]
 === Configuração de zona de disponibilidade única de HA com discos gerenciados compartilhados
 
 Uma configuração de zona de disponibilidade única do Cloud Volumes ONTAP HA em execução no disco gerenciado compartilhado inclui os seguintes componentes:
@@ -85,6 +88,7 @@ Contas de armazenamento:: Contas de armazenamento são usadas para implantaçõe
 
 
 
+[[ha-multiple-availability-zone-configuration]]
 === Configuração de várias zonas de disponibilidade de HA
 
 Uma configuração de várias zonas de disponibilidade do Cloud Volumes ONTAP HA no Azure inclui os seguintes componentes:
@@ -101,6 +105,7 @@ Contas de armazenamento:: Contas de armazenamento são usadas para implantaçõe
 
 
 
+[[rpo-and-rto]]
 == RPO e RTO
 
 Uma configuração de HA mantém alta disponibilidade dos seus dados da seguinte maneira:
@@ -111,6 +116,7 @@ Uma configuração de HA mantém alta disponibilidade dos seus dados da seguinte
 
 
 
+[[storage-takeover-and-giveback]]
 == Aquisição e devolução de armazenamento
 
 Semelhante a um cluster ONTAP físico, o armazenamento em um par de HA do Azure é compartilhado entre nós.  As conexões com o armazenamento do parceiro permitem que cada nó acesse o armazenamento do outro no caso de uma _aquisição_.  Os mecanismos de failover do caminho de rede garantem que clientes e hosts continuem a se comunicar com o nó sobrevivente.  O parceiro _devolve_ o armazenamento quando o nó é reativado.
@@ -126,6 +132,7 @@ A aquisição, a ressincronização e a devolução do armazenamento são todas 
 
 
 
+[[storage-configurations]]
 == Configurações de armazenamento
 
 Você pode usar um par HA como uma configuração ativa-ativa, na qual ambos os nós fornecem dados aos clientes, ou como uma configuração ativa-passiva, na qual o nó passivo responde às solicitações de dados somente se tiver assumido o armazenamento do nó ativo.

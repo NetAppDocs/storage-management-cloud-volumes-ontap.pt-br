@@ -20,6 +20,7 @@ A única etapa de configuração necessária é garantir que o Cloud Volumes ONT
 
 
 
+[[autosupport-requirements]]
 == Requisitos do AutoSupport
 
 Os nós do Cloud Volumes ONTAP exigem acesso de saída à Internet para o NetApp AutoSupport, que monitora proativamente a integridade do seu sistema e envia mensagens ao suporte técnico da NetApp .
@@ -41,6 +42,7 @@ Depois de verificar se o acesso de saída à Internet está disponível, você p
 
 
 
+[[troubleshoot-your-autosupport-configuration]]
 == Solucionar problemas de configuração do AutoSupport
 
 Se uma conexão de saída não estiver disponível e o Console não conseguir configurar seu sistema Cloud Volumes ONTAP para usar o agente do Console como um servidor proxy, você receberá uma notificação do Console informando que seu sistema não consegue enviar mensagens do AutoSupport . Siga estes passos para resolver este problema.

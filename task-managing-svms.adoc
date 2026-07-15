@@ -18,12 +18,14 @@ Uma VM de armazenamento é uma máquina virtual executada no ONTAP que fornece s
 
 
 
+[[supported-number-of-storage-vms]]
 == Número suportado de VMs de armazenamento
 
 Várias VMs de armazenamento são suportadas com determinadas configurações.  Vá para o https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de versão do Cloud Volumes ONTAP"^] para verificar o número de VMs de armazenamento suportadas para sua versão do Cloud Volumes ONTAP.
 
 
 
+[[work-with-multiple-storage-vms]]
 == Trabalhar com várias VMs de armazenamento
 
 O NetApp Console oferece suporte a quaisquer VMs de armazenamento adicionais que você criar no ONTAP System Manager ou na CLI do ONTAP .
@@ -38,6 +40,7 @@ image:screenshot_replicate_volume_svm.gif["Uma captura de tela que mostra a capa
 
 
 
+[[modify-the-name-of-the-default-storage-vm]]
 == Modifique o nome da VM de armazenamento padrão
 
 O Console nomeia automaticamente a única VM de armazenamento que ele cria para o Cloud Volumes ONTAP.  No ONTAP System Manager, na CLI ou na API do ONTAP , você pode modificar o nome da VM de armazenamento se tiver padrões de nomenclatura rígidos.  Por exemplo, você pode querer que o nome corresponda à forma como você nomeia as VMs de armazenamento para seus clusters ONTAP .

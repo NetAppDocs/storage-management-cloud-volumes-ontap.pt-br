@@ -4,6 +4,7 @@
 
 
 
+[[storage-vm-creation-automated-through-the-apis-in-azure]]
 === Criação de VM de armazenamento automatizada por meio de APIs no Azure
 
 Agora você pode usar as APIs do BlueXP para criar, renomear e excluir VMs de armazenamento de serviço de dados adicionais para o Cloud Volumes ONTAP no Azure.  O uso das APIs automatiza o processo de criação de VM de armazenamento, incluindo a configuração das interfaces de rede necessárias, LIFs e um LIF de gerenciamento, caso você precise usar uma VM de armazenamento para fins de gerenciamento.

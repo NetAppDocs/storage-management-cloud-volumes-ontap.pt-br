@@ -18,12 +18,14 @@ O Cloud Volumes ONTAP oferece suporte aos protocolos de cliente iSCSI, NFS, SMB,
 
 
 
+[[iscsi]]
 == iSCSI
 
 iSCSI é um protocolo de bloco que pode ser executado em redes Ethernet padrão.  A maioria dos sistemas operacionais de cliente oferece um iniciador de software que é executado em uma porta Ethernet padrão.
 
 
 
+[[nfs]]
 == NFS
 
 NFS é o protocolo tradicional de acesso a arquivos para sistemas UNIX e LINUX.  Os clientes podem acessar arquivos em volumes ONTAP usando os protocolos NFSv3, NFSv4 e NFSv4.1.  Você pode controlar o acesso aos arquivos usando permissões no estilo UNIX, permissões no estilo NTFS ou uma combinação de ambos.
@@ -32,12 +34,14 @@ Os clientes podem acessar os mesmos arquivos usando os protocolos NFS e SMB.
 
 
 
+[[smb]]
 == PMEs
 
 SMB é o protocolo tradicional de acesso a arquivos para sistemas Windows.  Os clientes podem acessar arquivos em volumes ONTAP usando os protocolos SMB 2.0, SMB 2.1, SMB 3.0 e SMB 3.1.1.  Assim como no NFS, uma mistura de estilos de permissão é suportada.
 
 
 
+[[s3]]
 == S3
 
 O Cloud Volumes ONTAP oferece suporte ao S3 como uma opção para armazenamento escalável.  O suporte ao protocolo S3 permite que você configure o acesso do cliente S3 a objetos contidos em um bucket em uma VM de armazenamento (SVM).
@@ -46,6 +50,7 @@ link:https://docs.netapp.com/us-en/ontap/s3-multiprotocol/index.html#how-s3-mult
 
 
 
+[[nvme-tcp]]
 == NVMe-TCP
 
 A partir da versão 9.12.1 do ONTAP , o NVMe-TCP é compatível com todos os provedores de nuvem.  O Cloud Volumes ONTAP oferece suporte ao NVMe-TCP como protocolo de bloco para máquinas virtuais de armazenamento (SVMs) durante a implantação e instala automaticamente as licenças NVMe necessárias.

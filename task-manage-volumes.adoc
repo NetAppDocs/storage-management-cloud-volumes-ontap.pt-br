@@ -20,6 +20,7 @@ Você pode gerenciar volumes no NetApp Console Standard View ou por meio do ONTA
 
 
 
+[[manage-volumes]]
 == Gerenciar volumes
 
 Ao usar a Exibição Padrão do Console, você pode gerenciar volumes de acordo com suas necessidades de armazenamento.  Você pode visualizar, editar, clonar, restaurar e excluir volumes.
@@ -122,6 +123,7 @@ NOTE: O Console move o volume para um agregado existente que usa o tipo de disco
 
 
 
+[[resize-a-volume]]
 == Redimensionar um volume
 
 Por padrão, um volume cresce automaticamente até um tamanho máximo quando fica sem espaço.  O valor padrão é 1.000, o que significa que o volume pode crescer até 11 vezes seu tamanho.  Este valor pode ser configurado nas configurações do agente do Console.
@@ -144,6 +146,7 @@ Certifique-se de levar em consideração os limites de capacidade do seu sistema
 
 
 
+[[modify-the-cifs-server]]
 == Modificar o servidor CIFS
 
 Se você alterar seus servidores DNS ou domínio do Active Directory, precisará modificar o servidor CIFS no Cloud Volumes ONTAP para que ele possa continuar a fornecer armazenamento aos clientes.
@@ -209,6 +212,7 @@ O Cloud Volumes ONTAP atualiza o servidor CIFS com as alterações.
 
 
 
+[[move-a-volume]]
 == Mover um volume
 
 Mova volumes para utilização da capacidade, melhor desempenho e para satisfazer acordos de nível de serviço.
@@ -227,6 +231,7 @@ Para obter instruções, consulte olink:http://docs.netapp.com/ontap-9/topic/com
 
 
 
+[[move-a-volume-when-console-displays-an-action-required-message]]
 == Mover um volume quando o Console exibir uma mensagem de Ação Necessária
 
 O Console pode exibir uma mensagem Ação Necessária informando que mover um volume é necessário para evitar problemas de capacidade, mas que você precisa corrigir o problema sozinho.  Se isso acontecer, você precisará identificar como corrigir o problema e então mover um ou mais volumes.
@@ -246,6 +251,7 @@ TIP: O Console exibe estas mensagens de Ação Necessária quando um agregado at
 
 
 
+[[identify-how-to-correct-capacity-issues]]
 === Identificar como corrigir problemas de capacidade
 
 Se o Console não puder fornecer recomendações para mover um volume a fim de evitar problemas de capacidade, você deverá identificar os volumes que precisa mover e se deve movê-los para outro agregado no mesmo sistema ou para outro sistema.
@@ -289,6 +295,7 @@ Para obter informações, consulte<<move-volumes-aggregate-capacity,Mover volume
 
 
 
+[[move-volumes-to-another-system-to-avoid-capacity-issues]]
 === Mover volumes para outro sistema para evitar problemas de capacidade
 
 Você pode mover um ou mais volumes para outro sistema Cloud Volumes ONTAP para evitar problemas de capacidade.  Talvez seja necessário fazer isso caso o sistema tenha atingido o limite de disco.
@@ -323,6 +330,8 @@ Para obter informações, consultelink:task-manage-volumes.html#manage-volumes["
 
 
 
+[[move-volumes-to-another-aggregate-to-avoid-capacity-issues]]
+[[move-volumes-aggregate-capacity]]
 === Mover volumes para outro agregado para evitar problemas de capacidade
 
 Você pode mover um ou mais volumes para outro agregado para evitar problemas de capacidade.
@@ -364,6 +373,7 @@ Para obter instruções, consulte olink:http://docs.netapp.com/ontap-9/topic/com
 
 
 
+[[reasons-why-a-volume-move-might-perform-slowly]]
 == Razões pelas quais uma movimentação de volume pode ter um desempenho lento
 
 Mover um volume pode levar mais tempo do que o esperado se qualquer uma das seguintes condições for verdadeira para o Cloud Volumes ONTAP:
@@ -382,6 +392,7 @@ Um esquema de nomenclatura mais antigo será usado se a hierarquização de dado
 
 
 
+[[view-flexgroup-volumes]]
 == Exibir volumes do FlexGroup
 
 Você pode visualizar volumes FlexGroup criados por meio do ONTAP System Manager ou do ONTAP CLI diretamente na guia Volumes no Console.  Você pode ver informações detalhadas dos volumes FleGroup por meio de um bloco dedicado *Volumes*, onde você pode identificar cada grupo de volumes FlexGroup por meio do texto do ícone.  Além disso, você pode identificar e classificar volumes FlexGroup na exibição de lista de volumes por meio da coluna Estilo de Volume.

@@ -18,6 +18,7 @@ O NetApp Console permite que você escolha velocidade de gravação normal ou al
 
 
 
+[[normal-write-speed]]
 == Velocidade de gravação normal
 
 Quando você escolhe a velocidade de gravação normal, os dados são gravados diretamente no disco.  Quando os dados são gravados diretamente no disco, reduz-se a probabilidade de perda de dados no caso de uma interrupção não planejada do sistema ou de uma falha em cascata envolvendo uma interrupção não planejada do sistema (somente pares de HA).
@@ -26,6 +27,7 @@ A velocidade de gravação normal é a opção padrão.
 
 
 
+[[high-write-speed]]
 == Alta velocidade de gravação
 
 Quando você escolhe alta velocidade de gravação, os dados são armazenados em buffer na memória antes de serem gravados no disco, o que proporciona um desempenho de gravação mais rápido.  Devido a esse armazenamento em cache, há potencial para perda de dados caso ocorra uma interrupção não planejada do sistema.
@@ -34,12 +36,14 @@ A quantidade de dados que podem ser perdidos no caso de uma interrupção não p
 
 
 
+[[when-to-use-high-write-speed]]
 === Quando usar alta velocidade de gravação
 
 Alta velocidade de gravação é uma boa escolha se um desempenho de gravação rápido for necessário para sua carga de trabalho e você puder suportar o risco de perda de dados no caso de uma interrupção não planejada do sistema ou uma falha em cascata envolvendo uma interrupção não planejada do sistema (somente pares de HA).
 
 
 
+[[recommendations-when-using-high-write-speed]]
 === Recomendações ao usar alta velocidade de gravação
 
 Se você habilitar alta velocidade de gravação, deverá garantir proteção contra gravação na camada do aplicativo ou que os aplicativos possam tolerar perda de dados, caso isso ocorra.
@@ -48,6 +52,7 @@ ifdef::aws[]
 
 
 
+[[high-write-speed-with-an-ha-pair-in-aws]]
 === Alta velocidade de gravação com um par HA na AWS
 
 Se você planeja habilitar alta velocidade de gravação em um par de HA na AWS, deve entender a diferença nos níveis de proteção entre uma implantação de várias Zonas de Disponibilidade (AZ) e uma implantação de uma única AZ.  A implantação de um par de HA em várias AZs oferece mais resiliência e pode ajudar a reduzir a chance de perda de dados.
@@ -58,6 +63,7 @@ endif::aws[]
 
 
 
+[[configurations-that-support-high-write-speed]]
 === Configurações que suportam alta velocidade de gravação
 
 Nem todas as configurações do Cloud Volumes ONTAP oferecem suporte a alta velocidade de gravação.  Essas configurações usam velocidade de gravação normal por padrão.
@@ -104,12 +110,14 @@ endif::gcp[]
 
 
 
+[[how-to-select-a-write-speed]]
 == Como selecionar uma velocidade de gravação
 
 Você pode escolher uma velocidade de gravação ao adicionar um novo sistema Cloud Volumes ONTAP e podelink:task-modify-write-speed.html["alterar a velocidade de gravação de um sistema existente"] .
 
 
 
+[[what-to-expect-if-data-loss-occurs]]
 == O que esperar se ocorrer perda de dados
 
 Se ocorrer perda de dados devido à alta velocidade de gravação, o Sistema de Gerenciamento de Eventos (EMS) relata os dois eventos a seguir:
@@ -133,6 +141,7 @@ Quando isso acontece, o Cloud Volumes ONTAP deve conseguir inicializar e continu
 
 
 
+[[how-to-stop-data-access-if-data-loss-occurs]]
 == Como interromper o acesso aos dados em caso de perda de dados
 
 Se você estiver preocupado com a perda de dados, quiser que os aplicativos parem de ser executados após a perda de dados e que o acesso aos dados seja retomado após o problema de perda de dados ser resolvido adequadamente, você pode usar a opção NVFAIL da CLI para atingir esse objetivo.

@@ -18,6 +18,7 @@ Você deve estar familiarizado com a cobrança e o uso de capacidade para licen�
 
 
 
+[[consumption-models-or-license-purchase-options]]
 == Modelos de consumo ou opções de compra de licença
 
 Os pacotes de licenciamento baseados em capacidade estão disponíveis com os seguintes modelos de consumo ou opções de compra:
@@ -48,12 +49,13 @@ Sua licença é sempre cobrada primeiro, mas você será cobrado pela taxa horá
 ** Se o prazo da sua licença expirar
 
 
-* Se você possui uma licença BYOL e um contrato anual de um marketplace, seu consumo e excedentes são cobrados de acordo com a preferência de cobrança que você definiu. Para entender como você é cobrado, consulte link:concept-licensing-charging.html#concept-licensing-charging.html#billing-preferences-and-overages["Preferências de faturamento e cobranças adicionais"].
+* Se você possui uma licença BYOL e um contrato anual de um marketplace, seu consumo e excedentes são cobrados de acordo com a preferência de cobrança que você definiu. Para entender como você é cobrado, consulte link:concept-licensing-charging.html#billing-preferences-and-overages["Preferências de faturamento e cobranças adicionais"].
 * Apenas sistemas de nó único com BYOL são suportados nas regiões da China. Implantações na região da China estão isentas das restrições de licenciamento BYOL.
 
 
 
 
+[[changing-of-license-packages]]
 == Alteração de pacotes de licença
 
 Após a implantação, você pode alterar o pacote para um sistema Cloud Volumes ONTAP que usa licenciamento baseado em capacidade.  Por exemplo, se você implantou um sistema Cloud Volumes ONTAP com o pacote Essentials, poderá alterá-lo para o pacote Professional caso suas necessidades comerciais mudem.
@@ -64,6 +66,7 @@ Para obter informações sobre a conversão de licenças baseadas em nó em lice
 
 
 
+[[how-you-are-charged-for-supported-storage-types-and-packages]]
 == Como você é cobrado pelos tipos de armazenamento e pacotes disponíveis
 
 A cobrança no Cloud Volumes ONTAP é baseada em diversos fatores, como pacotes e tipos de volume. Pacotes de licenciamento baseados em capacidade estão disponíveis com o Cloud Volumes ONTAP 9.7 e posteriores.
@@ -72,6 +75,7 @@ Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["
 
 
 
+[[storage-vms]]
 === VMs de armazenamento
 
 * Não há custos extras de licenciamento para VMs de armazenamento de dados adicionais (SVMs), mas há uma cobrança de capacidade mínima de 4 TiB por SVM de serviço de dados.
@@ -80,12 +84,14 @@ Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["
 
 
 
+[[ha-pairs]]
 === Pares HA
 
 Para pares de HA, você só é cobrado pela capacidade provisionada em um nó.  Você não é cobrado pelos dados espelhados de forma síncrona no nó parceiro.
 
 
 
+[[flexclone-and-flexcache-volumes]]
 === Volumes FlexClone e FlexCache
 
 * Você não será cobrado pela capacidade usada pelos volumes FlexClone .
@@ -94,12 +100,14 @@ Para pares de HA, você só é cobrado pela capacidade provisionada em um nó.  
 
 
 
+[[readwrite-volumes]]
 === Volumes de leitura/gravação
 
 Se você criar ou usar um volume gravável (leitura/gravação), ele será considerado um volume primário e a cobrança será feita com base na capacidade provisionada, de acordo com a taxa mínima por máquina virtual de armazenamento (SVM).  Exemplos incluem volumes de leitura/gravação FlexVol , volumes de auditoria SnapLock e volumes de auditoria CIFS/NFS.  Todos os volumes de dados criados pelo usuário são cobrados de acordo com sua assinatura e tipo de pacote.  Os volumes internos do ONTAP que são criados automaticamente e não podem armazenar dados, como os volumes raiz do SVM, não são cobrados.
 
 
 
+[[essentials-packages]]
 === Pacotes essenciais
 
 Com o pacote Essentials, você é cobrado pelo tipo de implantação (HA ou nó único) e pelo tipo de volume (primário ou secundário).  Os preços, do maior para o menor, estão na seguinte ordem: _Essentials Primary HA_, _Essentials Primary Single Node_, _Essentials Secondary HA_ e _Essentials Secondary Single Node_.  Como alternativa, quando você compra um contrato de mercado ou aceita uma oferta privada, as taxas de capacidade são as mesmas para qualquer tipo de implantação ou volume.
@@ -118,6 +126,7 @@ NOTE: Se um volume somente leitura/DP se tornar um volume primário, o Console o
 
 
 
+[[capacity-limit]]
 == Limite de capacidade
 
 No modelo de licenciamento baseado em capacidade, cada sistema Cloud Volumes ONTAP oferece suporte à hierarquização para armazenamento de objetos, e a capacidade total em camadas pode ser ampliada até o limite de bucket do provedor de nuvem. Embora a licença não imponha restrições de capacidade, siga as https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Melhores práticas do FabricPool"^] para garantir desempenho ideal, confiabilidade e eficiência de custos ao configurar e gerenciar camadas.
@@ -131,6 +140,7 @@ Para obter informações sobre os limites de capacidade de cada provedor de nuve
 
 
 
+[[max-number-of-systems]]
 == Número máximo de sistemas
 
 Com o licenciamento baseado em capacidade, o número máximo de sistemas Cloud Volumes ONTAP é limitado a 24 por organização do NetApp Console. Um _sistema_ é um par de HA do Cloud Volumes ONTAP, um sistema de nó único do Cloud Volumes ONTAP ou quaisquer VMs de armazenamento adicionais que você criar. A VM de armazenamento padrão não conta para o limite. Esse limite se aplica a todos os modelos de licenciamento.
@@ -159,6 +169,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Saiba mai
 
 
 
+[[minimum-charge]]
 == Carga mínima
 
 Há uma cobrança mínima de 4 TiB para cada VM de armazenamento de dados que tenha pelo menos um volume primário (leitura e gravação).  Se a soma dos volumes primários for menor que 4 TiB, o Console aplicará a cobrança mínima de 4 TiB àquela VM de armazenamento.
@@ -169,6 +180,7 @@ Para o pacote Essentials, a cobrança de capacidade mínima de 4 TiB não se apl
 
 
 
+[[billing-preferences-and-overages]]
 == Preferências de faturamento e cobranças adicionais
 
 Você pode escolher como deseja ser cobrado na seção * Licenses and subscriptions* do Console. Ocorre cobrança adicional quando o seu uso ultrapassa a capacidade especificada no seu pacote de licença ou assinatura anual.
@@ -181,6 +193,7 @@ Para obter mais informações sobre as preferências de faturamento, consulte ht
 
 
 
+[[how-overages-are-charged-for-essentials-licenses]]
 === Como são cobradas as taxas adicionais para licenças Essentials
 
 Se você adquirir uma licença Essentials da NetApp (BYOL) e exceder a capacidade licenciada para um pacote Essentials específico, o Console cobrará o excedente em uma licença Essentials de preço mais elevado (caso você tenha uma com capacidade disponível).  O console utiliza primeiro a capacidade disponível pela qual você pagou antes de cobrar da plataforma de streaming.  Caso não haja capacidade disponível com sua licença BYOL, a capacidade excedida será cobrada de acordo com as tarifas horárias sob demanda do mercado (PAYGO) e adicionada à sua fatura mensal.

@@ -22,6 +22,7 @@ Para obter informações sobre como executar chamadas de API Cloud Volumes ONTAP
 
 
 
+[[supported-number-of-storage-vms]]
 == Número suportado de VMs de armazenamento
 
 A partir do Cloud Volumes ONTAP 9.9.0, com base na sua licença, várias VMs de armazenamento são suportadas com configurações específicas.  Consulte o https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html["Notas de versão do Cloud Volumes ONTAP"^] para verificar o número de VMs de armazenamento suportadas para sua versão do Cloud Volumes ONTAP.
@@ -30,6 +31,7 @@ Todas as versões do Cloud Volumes ONTAP anteriores à 9.9.0 oferecem suporte a 
 
 
 
+[[create-a-storage-vm]]
 == Criar uma VM de armazenamento
 
 Dependendo da sua configuração e tipo de licença, você pode criar várias VMs de armazenamento em um sistema de nó único ou em uma configuração de alta disponibilidade (HA) usando as APIs do NetApp Console.
@@ -49,6 +51,7 @@ O agente do Console requer permissões específicas para criar VMs de armazename
 
 
 
+[[single-node-system]]
 === Sistema de nó único
 
 Utilize a seguinte chamada de API para criar uma VM de armazenamento em um sistema de nó único.
@@ -65,6 +68,7 @@ Inclua os seguintes parâmetros no corpo da solicitação:
 ----
 
 
+[[ha-pair]]
 === Par HA
 
 Use a seguinte chamada de API para criar uma VM de armazenamento em um par de HA:
@@ -81,6 +85,7 @@ Inclua os seguintes parâmetros no corpo da solicitação:
 ----
 
 
+[[manage-storage-vms-on-single-node-systems-and-ha-pairs]]
 == Gerencie máquinas virtuais de armazenamento em sistemas de nó único e pares de HA
 
 Usando as APIs, você pode renomear e excluir VMs de armazenamento em configurações de nó único e HA.
@@ -90,6 +95,7 @@ O agente do Console requer permissões específicas para gerenciar VMs de armaze
 
 
 
+[[rename-a-storage-vm]]
 === Renomear uma VM de armazenamento
 
 Para renomear uma VM de armazenamento, você deve fornecer os nomes da VM de armazenamento existente e da nova VM de armazenamento como parâmetros.
@@ -129,6 +135,7 @@ Inclua os seguintes parâmetros no corpo da solicitação:
 
 
 
+[[delete-a-storage-vm]]
 === Excluir uma VM de armazenamento
 
 Em uma configuração de nó único ou HA, você pode remover uma VM de armazenamento se ela não tiver nenhum volume ativo.

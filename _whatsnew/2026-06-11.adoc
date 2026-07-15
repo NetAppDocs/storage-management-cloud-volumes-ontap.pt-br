@@ -4,6 +4,7 @@
 
 
 
+[[support-for-a-new-azure-region-in-cloud-volumes-ontap]]
 === Suporte para uma nova região do Azure no Cloud Volumes ONTAP
 
 Agora você pode implantar Cloud Volumes ONTAP 9.12.1 GA e versões posteriores em zonas de disponibilidade únicas e múltiplas no Azure na região Malaysia West (malaysiawest). Isso inclui suporte para implantações de nó único e de alta disponibilidade (HA).

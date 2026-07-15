@@ -20,6 +20,7 @@ Os Controles de Serviço VPC permitem que você controle o acesso a serviços ge
 
 
 
+[[how-netapp-services-communicate-with-vpc-service-controls]]
 == Como os serviços NetApp se comunicam com os VPC Service Controls
 
 O Console se comunica diretamente com as APIs do Google Cloud.  Isso é acionado por um endereço IP externo fora do Google Cloud (por exemplo, de api.services.cloud.netapp.com) ou dentro do Google Cloud a partir de um endereço interno atribuído ao agente do Console.
@@ -28,6 +29,7 @@ Dependendo do estilo de implantação do agente do Console, certas exceções po
 
 
 
+[[images]]
 == Imagens
 
 Tanto Cloud Volumes ONTAP quanto o Console usam imagens de um projeto no Google Cloud que é gerenciado pela NetApp. Isso pode afetar a implantação do agente do Console e do Cloud Volumes ONTAP, se sua organização tiver uma política que bloqueia o uso de imagens que não estão hospedadas dentro da organização.
@@ -36,12 +38,14 @@ Você pode implantar um agente do Console manualmente usando o método de instal
 
 
 
+[[deploying-a-console-agent]]
 === Implantando um agente de console
 
 O usuário que implanta um agente do Console precisa ser capaz de referenciar uma imagem hospedada no projectId _netapp-cloudmanager_ e no número do projeto _14190056516_.
 
 
 
+[[deploying-cloud-volumes-ontap]]
 === Implantando o Cloud Volumes ONTAP
 
 * A conta de serviço do Console precisa fazer referência a uma imagem hospedada no projectId _netapp-cloudmanager_ e ao número do projeto _14190056516_ do projeto de serviço.
@@ -52,6 +56,7 @@ Exemplos das regras necessárias para extrair essas imagens com o VPC Service Co
 
 
 
+[[vpc-service-controls-perimeter-policies]]
 == Políticas de perímetro do VPC Service Controls
 
 As políticas permitem exceções aos conjuntos de regras de Controles de Serviço da VPC. Para obter mais informações sobre políticas, visite o  https://cloud.google.com/vpc-service-controls/docs/ingress-egress-rules#policy-model["Documentação da política de Service Controls VPC do Google Cloud"^].
@@ -60,6 +65,7 @@ Para definir as políticas exigidas pelo Console, navegue até o Perímetro de C
 
 
 
+[[ingress-rules]]
 === Regras de entrada
 
 ....
@@ -107,6 +113,7 @@ To:
 ....
 
 
+[[egress-rules]]
 === Regras de saída
 
 ....

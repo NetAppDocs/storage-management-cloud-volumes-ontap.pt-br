@@ -25,6 +25,7 @@ Você tem várias maneiras de criar um novo volume:
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Algumas notas sobre provisionamento de volume:
@@ -43,6 +44,7 @@ endif::aws[]
 
 
 
+[[create-a-volume]]
 == Criar um volume
 
 A maneira mais comum de criar um volume é especificar o tipo de volume que você precisa e então deixar o Console cuidar da alocação de disco para você.  Mas você também tem a opção de escolher o agregado específico no qual deseja criar o volume.
@@ -219,6 +221,8 @@ O Console cria o volume no sistema Cloud Volumes ONTAP .
 
 
 
+[[create-a-volume-on-the-second-node-in-an-ha-configuration]]
+[[create-volume-second-node]]
 == Crie um volume no segundo nó em uma configuração de HA
 
 Por padrão, o Console cria volumes no primeiro nó em uma configuração de HA.  Se precisar de uma configuração ativa-ativa, na qual ambos os nós fornecem dados aos clientes, você deve criar agregados e volumes no segundo nó.
@@ -247,6 +251,7 @@ endif::aws[]
 
 
 
+[[after-you-create-a-volume]]
 == Depois de criar um volume
 
 Se você provisionou um compartilhamento CIFS, conceda aos usuários ou grupos permissões para os arquivos e pastas e verifique se esses usuários podem acessar o compartilhamento e criar um arquivo.

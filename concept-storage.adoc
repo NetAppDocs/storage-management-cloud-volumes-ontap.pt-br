@@ -21,6 +21,7 @@ CAUTION: Você deve criar e excluir todos os discos e agregados do NetApp Consol
 
 
 
+[[overview]]
 == Visão geral
 
 O Cloud Volumes ONTAP usa o armazenamento do provedor de nuvem como discos e os agrupa em um ou mais agregados.  Agregados fornecem armazenamento para um ou mais volumes.
@@ -36,6 +37,7 @@ ifdef::aws[]
 
 
 
+[[aws-storage]]
 == Armazenamento AWS
 
 Na AWS, o Cloud Volumes ONTAP usa armazenamento EBS para dados do usuário e armazenamento NVMe local como Flash Cache em alguns tipos de instância EC2.
@@ -68,6 +70,7 @@ ifdef::azure[]
 
 
 
+[[azure-storage]]
 == Armazenamento do Azure
 
 No Azure, um agregado pode conter até 12 discos que são todos do mesmo tamanho. O tipo de disco e o tamanho máximo do disco dependem se você usa um sistema de nó único ou um par de HA:
@@ -113,11 +116,14 @@ ifdef::gcp[]
 
 
 
+[[google-cloud-storage]]
 == Armazenamento em nuvem do Google
 
 No Google Cloud, um agregado pode conter até 6 discos, todos do mesmo tamanho.  O tamanho máximo do disco é 64 TiB.
 
 O tipo de disco pode ser _Discos persistentes SSD zonais_, _Discos persistentes balanceados zonais_ ou _Discos persistentes padrão zonais_.  Você pode emparelhar discos persistentes com um bucket do Google Storage paralink:concept-data-tiering.html["armazenamento de objetos de baixo custo"] .
+
+Cloud Volumes ONTAP oferece suporte a discos Hyperdisk Balanced para implantações de nó único na versão 9.18.1 e posteriores, e para configurações de alta disponibilidade (par de HA) em zonas de disponibilidade (AZs) únicas na versão 9.19.1 e posteriores.
 
 *Links relacionados*
 
@@ -129,12 +135,14 @@ endif::gcp[]
 
 
 
+[[raid-type]]
 == Tipo RAID
 
 O tipo de RAID para cada agregado do Cloud Volumes ONTAP é RAID0 (striping).  O Cloud Volumes ONTAP depende do provedor de nuvem para disponibilidade e durabilidade do disco.  Nenhum outro tipo de RAID é suportado.
 
 
 
+[[hot-spares]]
 === Peças de reposição quentes
 
 O RAID0 não suporta o uso de hot spares para redundância.
