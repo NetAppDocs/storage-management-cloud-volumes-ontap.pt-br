@@ -6570,8 +6570,6 @@
   <block id="886863730bd12cb56f89bdf0ee2221be" category="list-text">*Otimização de custos*: reduz e otimiza custos para gerar maior valor para o negócio.</block>
   <block id="109cdb23e41e8df9e7f4319a28a800c9" category="inline-link">Análise de configuração para Cloud Volumes ONTAP</block>
   <block id="30e75dda73d152784f441d20f2d17069" category="list-text"><block ref="30e75dda73d152784f441d20f2d17069" category="inline-link-rx"></block></block>
-  <block id="5bff0e2ec30fb9a44ab23683ebe9af90" category="inline-link">Implementar configurações de sistema bem arquitetadas</block>
-  <block id="fae0b0bdb2210aacd56925bf63411bc1" category="list-text"><block ref="fae0b0bdb2210aacd56925bf63411bc1" category="inline-link-rx"></block></block>
   <block id="8381df48e9be426c5a0c10881c1deb6b" category="paragraph">Se você deseja usar Amazon Web Services (AWS) criptografia com Cloud Volumes ONTAP, então é necessário configurar o AWS Key Management Service (KMS).</block>
   <block id="d4a0c1bae3ce52b89988e4025c15728f" category="paragraph">Uma chave mestra do cliente (CMK) pode ser gerenciada pela AWS ou pelo cliente. Ela pode estar na mesma conta da AWS que o NetApp Console e Cloud Volumes ONTAP, ou em uma conta da AWS diferente (contas compartilhadas). A AWS habilita o gerenciamento de chaves somente por meio do Console da AWS. Para mais informações, consulte <block ref="489bfcd850e0fa4bfd74a278f7f67b66" category="inline-link-rx"></block>.</block>
   <block id="6268b495b409110e383079b8b2ae93f9" category="list-text">Certifique-se de ter informações sobre as funções de Gerenciamento de Identidade e Acesso (IAM) do agente do NetApp Console para a AWS.</block>
@@ -6616,4 +6614,6 @@
   <block id="51c9eb8f2bdf1ba7a4e0dbc5ca8299bd" category="inline-link">Gerencie as credenciais da AWS e as assinaturas do marketplace para o NetApp Console</block>
   <block id="fd6c8706b70c72f62dc54104dbcb57c2" category="list-text"><block ref="fd6c8706b70c72f62dc54104dbcb57c2" category="inline-link-rx"></block></block>
   <block id="ac750267020c9b3c0e32de825d9b57fc" category="section-title">20 de julho de 2026</block>
+  <block id="12959707639320f789d4bb4fbba777f1" category="inline-link">Implemente configurações de sistema Cloud Volumes ONTAP bem arquitetadas</block>
+  <block id="e8227a8388a93064d0bbb4e13f50ff6e" category="list-text"><block ref="e8227a8388a93064d0bbb4e13f50ff6e" category="inline-link-rx"></block></block>
 </blocks>
