@@ -37,48 +37,10 @@ Quando você cria um volume, o Console faz uma das três coisas:
 
 * Ele coloca o volume em um agregado existente que tem espaço livre suficiente.
 * Ele coloca o volume em um agregado existente comprando mais discos para esse agregado.
-
-
-ifdef::aws[]
-
-+ No caso de um agregado na AWS que suporta Volumes Elásticos, ele também aumenta o tamanho dos discos em um grupo RAID. link:concept-aws-elastic-volumes.html["Saiba mais sobre o suporte para Elastic Volumes"] .
-
-endif::aws[]
-
 * Ele compra discos para um novo agregado e coloca o volume nesse agregado.
 
 
 O Console determina onde colocar um novo volume observando vários fatores: o tamanho máximo de um agregado, se o provisionamento fino está habilitado e os limites de espaço livre para agregados.
-
-ifdef::aws[]
-
-
-
-==== Seleção de tamanho de disco para agregados na AWS
-
-Quando o Console cria novos agregados para o Cloud Volumes ONTAP na AWS, ele aumenta gradualmente os tamanhos dos discos conforme o número de agregados aumenta para maximizar a capacidade do sistema antes de atingir os limites do disco de dados da AWS.
-
-Por exemplo, o Console pode escolher os seguintes tamanhos de disco:
-
-[cols="3*"]
-|===
-| Número agregado | Tamanho do disco | Capacidade máxima agregada 
-
-
-| 1 | 500 GiB | 3 TiB 
-
-
-| 4 | 1 TiB | 6 TiB 
-
-
-| 6 | 2 TiB | 12 TiB 
-|===
-
-NOTE: Esse comportamento não se aplica a agregados que oferecem suporte ao recurso Amazon EBS Elastic Volumes.  Agregados que têm Volumes Elásticos habilitados são compostos de um ou dois grupos RAID.  Cada grupo RAID tem quatro discos idênticos com a mesma capacidade. link:concept-aws-elastic-volumes.html["Saiba mais sobre o suporte para Elastic Volumes"] .
-
-Você pode escolher o tamanho do disco usando a opção de alocação avançada.
-
-endif::aws[]
 
 
 
@@ -106,20 +68,12 @@ O Modo de Gerenciamento de Capacidade é definido como automático por padrão. 
 Os exemplos a seguir ilustram como esse modo funciona:
 
 * Se um agregado atingir o limite de capacidade e tiver espaço para mais discos, o Console comprará automaticamente novos discos para esse agregado para que os volumes possam continuar a crescer.
+* Se um agregado atingir o limite de capacidade e não puder suportar discos adicionais, o Console move automaticamente um volume desse agregado para um agregado com capacidade disponível ou para um novo agregado.
 +
-ifdef::aws[]
+Se o Console criar um novo agregado para o volume, ele escolherá um tamanho de disco que acomode o tamanho desse volume.
 
-
-
-No caso de um agregado na AWS que suporta Volumes Elásticos, ele também aumenta o tamanho dos discos em um grupo RAID. link:concept-aws-elastic-volumes.html["Saiba mais sobre o suporte para Elastic Volumes"] .
-
-endif::aws[]
-
-+ * Se um agregado atingir o limite de capacidade e não puder suportar nenhum disco adicional, o Console moverá automaticamente um volume desse agregado para um agregado com capacidade disponível ou para um novo agregado.
-
-+ Se o Console criar um novo agregado para o volume, ele escolherá um tamanho de disco que acomode o tamanho desse volume.
-
-+ Observe que agora há espaço livre disponível no agregado original.  Volumes existentes ou novos volumes podem usar esse espaço.  O espaço não pode ser devolvido ao provedor de nuvem neste cenário.
++
+Observe que agora há espaço livre disponível no agregado original. Volumes existentes ou novos volumes podem usar esse espaço. O espaço não pode ser devolvido ao provedor de nuvem neste cenário.
 
 * Se um agregado não contiver volumes por mais de 12 horas, o Console o excluirá.
 
@@ -137,9 +91,7 @@ O gerenciamento automático de capacidade do Console não se aplica a LUNs.  Ao 
 
 Se o administrador da organização ou da conta definir o *Modo de Gerenciamento de Capacidade* como manual, o Console informará que você deve tomar as medidas apropriadas para as decisões de capacidade. Os mesmos exemplos descritos no modo automático se aplicam ao modo manual, mas cabe a você aceitar as ações.
 
+.Links relacionados
+* link:task-manage-capacity-settings.html["Aprenda a modificar o modo de gerenciamento de capacidade"] .
+* Para obter informações sobre provisionamento na AWS, consulte link:reference-configs-aws.html["Provisionamento de disco para agregados na AWS"].
 
-
-[[learn-more]]
-=== Saber mais
-
-link:task-manage-capacity-settings.html["Aprenda a modificar o modo de gerenciamento de capacidade"] .

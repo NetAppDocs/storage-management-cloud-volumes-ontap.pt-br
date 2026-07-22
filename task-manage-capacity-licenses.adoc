@@ -255,3 +255,11 @@ O relatório de uso é baixado.
 
 . Abra o arquivo baixado para acessar os relatórios.
 
+
+.Links relacionados
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Licenciamento para Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing-charging.html["Saiba mais sobre licenças baseadas em capacidade"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Gerenciar licenciamento baseado em nós"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Converter uma licença baseada em nós para uma licença baseada em capacidade."^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-keystone.html["Gerenciar assinaturas do Keystone"^]
+

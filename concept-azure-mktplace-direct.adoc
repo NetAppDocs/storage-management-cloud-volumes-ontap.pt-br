@@ -32,7 +32,7 @@ Aqui está a comparação de recursos entre as duas opções.  Observe que os re
 
 | *Tipos de máquinas virtuais (VM) suportados*  a| 
 Tipos de instância Eds_v5 e Ls_v3
-| Gama completa de tipos de VM.https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurações com suporte no Azure"^] 
+| Gama completa de tipos de máquinas virtuais. link:reference-configs-azure.html["Configurações com suporte no Azure"] 
 
 
 | *Licença* | Licença gratuita | Qualquer licença baseada em capacidade.link:concept-licensing.html["Licenciamento do Cloud Volumes ONTAP"] 
@@ -47,7 +47,7 @@ Tipos de instância Eds_v5 e Ls_v3
 | *Modelo de implantação* | Implantação do modo de alta disponibilidade (HA) em zona de disponibilidade única (AZ) | Todas as configurações suportadas, incluindo modos de nó único e HA, implantações de AZ únicas e múltiplas 
 
 
-| *Tipo de disco suportado* | Discos gerenciados SSD v2 premium | Suporte mais amplo.link:concept-storage.html#azure-storage["Configuração padrão para Cloud Volumes ONTAP"] 
+| *Tipo de disco suportado* | Discos gerenciados SSD v2 premium | Apoio mais amplo. link:reference-configs-azure.html#azure-storage-for-user-data["Tipos de disco suportados no Azure"] 
 
 
 | *Velocidade de gravação (modo de gravação rápida)* | Não suportado | Suportado, com base na sua configuração. link:concept-write-speed.html["Saiba mais sobre velocidades de gravação no Cloud Volumes ONTAP"] . 

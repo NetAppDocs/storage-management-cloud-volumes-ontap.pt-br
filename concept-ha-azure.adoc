@@ -52,7 +52,7 @@ https://docs.microsoft.com/en-us/azure/storage/common/storage-scalability-target
 
 
 
-NOTE: A partir do Cloud Volumes ONTAP 9.15.0P1, os blobs de páginas do Azure não têm mais suporte para novas implantações de pares de alta disponibilidade.  Se você atualmente usa blobs de páginas do Azure em implantações de pares de alta disponibilidade existentes, pode migrar para tipos de instância de VM mais recentes nas VMs das séries Edsv4 e Edsv5. link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Saiba mais sobre as configurações com suporte no Azure"^] .
+NOTE: A partir do Cloud Volumes ONTAP 9.15.0P1, os blobs de páginas do Azure não são mais suportados para novas implantações de par de HA. Se você atualmente usa blobs de páginas do Azure em implantações de par de HA existentes, pode migrar para tipos de instância de VM mais recentes nas VMs da série Edsv4 e VMs da série Edsv5. link:link:reference-configs-azure.html#ha-pairs["Saiba mais sobre as configurações com suporte no Azure"].
 
 
 

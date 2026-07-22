@@ -4,7 +4,7 @@ permalink: task-getting-started-gcp.html
 keywords: google cloud platform, gcp, cloud manager, deploy the Console, launch the Console, create the Console, getting started, networking, gcp networking, service account, tiering, data tiering, bucket, fabricpool, cloud backup, storage access key, gcp role, role, iam role, permissions, gcp permissions, cloud backup, the Console 
 summary: Comece a usar o Cloud Volumes ONTAP para Google Cloud em poucas etapas. 
 ---
-= Início rápido para o Cloud Volumes ONTAP no Google Cloud
+= Visão geral da implantação do Cloud Volumes ONTAP no Google Cloud
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,55 +14,100 @@ summary: Comece a usar o Cloud Volumes ONTAP para Google Cloud em poucas etapas.
 
 
 [role="lead"]
-Comece a usar o Cloud Volumes ONTAP no Google Cloud em poucas etapas.
+Para implantar Cloud Volumes ONTAP, primeiro você precisa conhecer sua assinatura do Google Cloud e suas licenças do Cloud Volumes ONTAP. Você também deve verificar se possui um agente do NetApp Console criado para seu projeto e organização do Google Cloud. Muitas das informações neste tópico precisam ser executadas como parte da configuração do Console antes mesmo de você começar a implantar Cloud Volumes ONTAP.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]Criar um agente de console
-[role="quick-margin-para"]
-Se você não tiver um https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Agente de console"^] No entanto, você precisa criar um. https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html["Aprenda a criar um agente de console no Google Cloud"^]
+[cols="20,35,25,25"]
+|===
+| Tarefa | Descrição | Referência | Notas para implantações em modo privado 
 
-[role="quick-margin-para"]
-Observe que se você quiser implantar o Cloud Volumes ONTAP em uma sub-rede onde não há acesso à Internet disponível, será necessário instalar manualmente o agente do Console e acessar o NetApp Console que está em execução nesse agente do Console. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Aprenda a instalar manualmente o agente do Console em um local sem acesso à Internet"^]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Planeje sua configuração
-[role="quick-margin-para"]
+ a| 
+Criar um agente do Console
+ a| 
+Se você ainda não possui um agente de Console, crie um antes de implantar Cloud Volumes ONTAP. Se a implantação for em uma sub-rede sem acesso à internet, instale manualmente o agente de Console e acesse o NetApp Console em execução nesse agente.
+ a| 
+Consulte o guia de configuração do console: https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html["Crie um agente do Console no Google Cloud"^]
+ a| 
+Se a implantação for feita em uma sub-rede sem acesso à internet, instale manualmente o agente do Console e acesse a interface de usuário do NetApp Console que está sendo executada nesse agente do Console. Consulte o guia de configuração do Console: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Instale manualmente o agente do Console sem acesso à internet"^]
+
+
+
+ a| 
+Planeje sua configuração
+ a| 
 O Console oferece pacotes pré-configurados que correspondem aos seus requisitos de carga de trabalho, ou você pode criar sua própria configuração.  Se você escolher sua própria configuração, deverá entender as opções disponíveis.
+ a| 
+link:task-planning-your-config-gcp.html["Planeje sua configuração"]
+ a| 
+Você precisa ter considerações de planejamento semelhantes para implantações em modo privado.
 
-[role="quick-margin-para"]
-link:task-planning-your-config-gcp.html["Saiba mais sobre o planejamento de sua configuração"] .
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Configure sua rede
-[role="quick-margin-list"]
+
+ a| 
+Configure sua rede
+ a| 
 . Certifique-se de que sua VPC e sub-redes oferecerão suporte à conectividade entre o agente do Console e o Cloud Volumes ONTAP.
-. Se você planeja habilitar a hierarquização de dados, https://cloud.google.com/vpc/docs/configure-private-google-access["configurar a sub-rede Cloud Volumes ONTAP para acesso privado do Google"^] .
+. Se você planeja habilitar o armazenamento em camadas de dados, configure a sub-rede do Cloud Volumes ONTAP para Private Google Access.
 . Se você estiver implantando um par de HA, certifique-se de ter quatro VPCs, cada uma com sua própria sub-rede.
 . Se você estiver usando uma VPC compartilhada, forneça a função _Usuário da rede de computação_ à conta de serviço do agente do console.
 . Habilite o acesso de saída à Internet da VPC de destino para o NetApp AutoSupport.
-+
-Esta etapa não é necessária se você estiver implantando o Cloud Volumes ONTAP em um local onde não há acesso à Internet disponível.
+
+ a| 
+Consulte:
+
+* link:reference-networking-gcp.html["Requisitos de rede para Google Cloud"]
+* Consulte a documentação do Google Cloud: https://cloud.google.com/vpc/docs/configure-private-google-access["Configurar o acesso privado do Google"^]
+
+ a| 
+O acesso à internet para conexões de saída do AutoSupport não é necessário. Todos os outros requisitos de rede permanecem os mesmos.
 
 
 
-[role="quick-margin-para"]
-link:reference-networking-gcp.html["Saiba mais sobre os requisitos de rede"] .
+ a| 
+Configure uma conta de serviço
+ a| 
+Cloud Volumes ONTAP requer uma conta de serviço do Google Cloud para habilitar o armazenamento em camadas de dados, permitindo o envio de dados inativos para storage de objetos de baixo custo no Google Cloud, e também para habilitar o NetApp Backup and Recovery para fazer backup de volumes em storage de objetos de baixo custo.
+ a| 
+* link:task-creating-gcp-service-account.html["Configure uma conta de serviço"]
+* link:concept-data-tiering.html["Saiba mais sobre hierarquização de dados"]
+* Consulte o  https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery documentos"^]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]Configurar uma conta de serviço
-[role="quick-margin-para"]
-O Cloud Volumes ONTAP requer uma conta de serviço do Google Cloud para duas finalidades.  A primeira é quando você habilitalink:concept-data-tiering.html["hierarquização de dados"] para hierarquizar dados frios para armazenamento de objetos de baixo custo no Google Cloud.  A segunda é quando você habilita o https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] para fazer backup de volumes em armazenamento de objetos de baixo custo.
+ a| 
+Não há considerações adicionais para implantações em modo privado.
 
-[role="quick-margin-para"]
-Você pode configurar uma conta de serviço e usá-la para ambas as finalidades.  A conta de serviço deve ter a função *Administrador de armazenamento*.
 
-[role="quick-margin-para"]
-link:task-creating-gcp-service-account.html["Leia as instruções passo a passo"] .
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Habilitar APIs do Google Cloud
-[role="quick-margin-para"]
-https://cloud.google.com/apis/docs/getting-started#enabling_apis["Habilite as APIs do Google Cloud em seu projeto"^]. https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html#step-5-enable-google-cloud-apis["Essas APIs"^], que você talvez já tenha habilitado ao criar o agente do Console, são necessários para implantar Cloud Volumes ONTAP no Google Cloud.
+ a| 
+Ativar APIs do Google Cloud
+ a| 
+Habilite as APIs do Google Cloud necessárias no seu projeto. Você pode já tê-las habilitado ao criar o agente do Console.
+ a| 
+Consulte a documentação do Google Cloud: https://cloud.google.com/apis/docs/getting-started#enabling_apis["Ativar APIs do Google Cloud"^]
+ a| 
+As APIs precisam estar habilitadas. Trabalhe com seu administrador da nuvem para habilitar as APIs necessárias em seu ambiente privado.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]Inicie o Cloud Volumes ONTAP usando o Console
-[role="quick-margin-para"]
-Clique em *Adicionar Sistema*, selecione o tipo de sistema que você gostaria de implantar e conclua as etapas do assistente. link:task-deploying-gcp.html["Leia as instruções passo a passo"] .
 
+
+ a| 
+Implante Cloud Volumes ONTAP a partir do Console
+ a| 
+Após cumprir todos os pré-requisitos, você pode concluir as etapas do assistente para implantar Cloud Volumes ONTAP no Google Cloud.
+ a| 
+Consulte:
+
+* link:task-quick-deploy-gcp.html["Implante Cloud Volumes ONTAP com a criação rápida"]
+* link:task-deploying-gcp.html["Implante Cloud Volumes ONTAP usando opções avançadas"]
+
+ a| 
+Antes de iniciar a implantação, certifique-se de que você adquiriu uma licença do Cloud Volumes ONTAP da NetApp. Implantações em modo privado exigem licenças BYOL baseadas em nó. Assinaturas do Marketplace não são compatíveis para cobrança do uso do Cloud Volumes ONTAP. Obtenha o arquivo de licença da NetApp e faça o upload durante a implantação. Consulte:
+
+* link:concept-license-management.html["Gerenciamento de licenças para BYOL baseado em nó"]
+* link:task-manage-node-licenses.html["Gerencie licenças BYOL baseadas em nós"]
+* link:task-quick-deploy-gcp.html["Implante Cloud Volumes ONTAP com a criação rápida"]
+* link:task-deploying-gcp.html["Implante Cloud Volumes ONTAP usando opções avançadas"]
+
+
+|===
 .Links relacionados
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Criando um agente de console"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Instalando o software do agente do Console em um host Linux"^]

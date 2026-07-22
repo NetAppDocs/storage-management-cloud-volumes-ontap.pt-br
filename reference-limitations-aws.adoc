@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations-aws.html 
+keywords: limitations, aws, amazon web services, flashe cache, alarms, cloudwatch, giveback, govcloud, c2s, aws outpost, outposts 
+summary: Essas limitações conhecidas são específicas do Cloud Volumes ONTAP na Amazon Web Services. 
+---
+= Limitações conhecidas do Cloud Volumes ONTAP na AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As seguintes limitações conhecidas são específicas do Cloud Volumes ONTAP na Amazon Web Services. Certifique-se também de revisar link:reference-limitations.html["Limitações do Cloud Volumes ONTAP em todos os provedores de nuvem"].
+
+
+
+[[aws-outpost-limitations]]
+== Limitações do AWS Outpost
+
+Se você tiver um AWS Outpost, poderá implantar Cloud Volumes ONTAP nesse Outpost selecionando a VPC do Outpost durante a implantação. A experiência é a mesma que em qualquer outra VPC que reside na AWS. Observe que você precisará primeiro implantar um agente Console no seu AWS Outpost.
+
+Há algumas limitações a serem apontadas:
+
+* Somente sistemas Cloud Volumes ONTAP de nó único são suportados no momento
+* As instâncias do EC2 que você pode usar com o Cloud Volumes ONTAP são limitadas ao que está disponível no seu Outpost
+* Somente SSDs de uso geral (gp2) são suportados no momento
+
+
+
+
+[[flash-cache-limitations]]
+== Limitações do Flash Cache
+
+Os tipos de instância C5D e R5D incluem armazenamento NVMe local, que Cloud Volumes ONTAP utiliza como _Flash Cache_. Observe as seguintes limitações:
+
+* A compressão deve ser desativada em todos os volumes para aproveitar as melhorias de desempenho do Flash Cache até o Cloud Volumes ONTAP 9.12.0. Ao implantar ou atualizar para Cloud Volumes ONTAP 9.12.1, não é necessário desativar a compressão.
++
+Você pode escolher não definir eficiência de storage ao criar um volume no NetApp Console, ou pode criar um volume e depois  http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["desabilitar a compactação de dados usando a CLI"^].
+
+* O reaquecimento do cache após uma reinicialização não é suportado com o Cloud Volumes ONTAP.
+
+
+
+
+[[false-alarms-reported-by-amazon-cloudwatch]]
+== Falsos alarmes relatados pela Amazon CloudWatch
+
+Cloud Volumes ONTAP não libera CPUs quando ociosas, então  https://aws.amazon.com/cloudwatch/["Amazon CloudWatch"^] pode relatar um aviso de CPU alta para a instância EC2 porque vê 100% de uso. Você pode ignorar esse alarme. O comando statistics do ONTAP exibe o uso real das CPUs.
+
+
+
+[[cloud-volumes-ontap-ha-pairs-do-not-support-immediate-storage-giveback]]
+== Os pares de HA do Cloud Volumes ONTAP não suportam giveback imediato de storage
+
+Após a reinicialização de um nó, o parceiro deve sincronizar os dados antes de poder devolver o armazenamento. O tempo necessário para ressincronizar os dados depende da quantidade de dados gravados pelos clientes enquanto o nó estava inativo e da velocidade de gravação de dados durante o tempo de giveback.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html["Aprenda como funciona o armazenamento em um par de HA do Cloud Volumes ONTAP em execução na AWS"^].

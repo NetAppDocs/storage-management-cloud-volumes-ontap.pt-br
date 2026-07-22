@@ -57,7 +57,7 @@ link:https://docs.aws.amazon.com/local-zones/latest/ug/getting-started.html["Doc
 
 O Cloud Volumes ONTAP oferece suporte a vários tipos de instância, dependendo do tipo de licença escolhido.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html["Configurações com suporte para Cloud Volumes ONTAP na AWS"^]
+link:reference-configs-aws.html["Configurações com suporte para Cloud Volumes ONTAP na AWS"]
 
 
 

@@ -1,19 +1,52 @@
 ---
 sidebar: sidebar 
 permalink: concept-degraded-ha-pair.html 
-keywords: storage takeover, storage giveback, degraded, degraded status, degraded state, ha pair, ha takeover, takeover, giveback 
-summary: Quando um nó em um par HA não está disponível, o outro nó fornece dados para seu parceiro para fornecer serviço de dados contínuo.  Isso é chamado de aquisição de armazenamento.  Várias ações ficarão indisponíveis até que a devolução no armazenamento seja concluída. 
+keywords: 'high-availability (HA) configuration in Cloud Volumes ONTAP, CVO HA, storage takeover, storage giveback, degraded, degraded status, ha takeover, takeover, giveback, disaster recovery, svm disaster recovery, storage vm dr' 
+summary: 'Uma configuração de alta disponibilidade (HA) no Cloud Volumes ONTAP garante continuidade dos negócios e tolerância de falhas para o storage da sua empresa.' 
 ---
-= Operações indisponíveis quando um nó no par Cloud Volumes ONTAP HA está offline
-:hardbreaks:
+= Configuração de par de HA do Cloud Volumes ONTAP
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
+Uma configuração de alta disponibilidade (HA) no Cloud Volumes ONTAP garante continuidade dos negócios e tolerância de falhas para o storage da sua empresa. Ao implantar dois nós ONTAP em domínios de falha separados, o sistema oferece operações não disruptivas (NDO) e failover contínuo em caso de falhas de hardware, interrupções de rede ou manutenção de rotina.
+
+Implante um par de HA quando sua arquitetura exigir:
+
+* *Cargas de trabalho críticas*: Bancos de dados e aplicativos corporativos que não podem tolerar downtime.
+* *Atualizações não disruptivas*: atualizações para versões do ONTAP ou alterações nas instâncias de computação em nuvem subjacentes sem tirar o storage do ar.
+* *Resiliência multizona*: Proteção contra falhas isoladas de zonas de disponibilidade dentro de uma região de nuvem.
+
+
+
+
+[[how-ha-pairs-work]]
+== Como funcionam os pares de HA
+
+A configuração de HA opera como um cluster ativo-ativo do ponto de vista do gerenciamento, enquanto os agregados de dados individuais pertencem a um nó específico.
+
+* *Replicação síncrona*: Os dados gravados na NVRAM do nó primário são espelhados de forma síncrona na NVRAM do nó parceiro antes de confirmar a gravação para o cliente.
+* *Suporte a instância mediadora*: Uma instância mediadora de terceiro monitora a integridade de ambos os nós. Se o nó primário parar de responder, o mediador orquestra uma transferência de storage.
+* *Transferência de armazenamento*: O nó sobrevivente assume a propriedade dos agregados de armazenamento e interfaces de rede do parceiro, retomando o fornecimento de dados em segundos.
+
+
+
+
+[[ha-configuration-requirements-and-limitations]]
+== Requisitos e limitações de configuração de HA
+
+Ao implementar um par de HA no Cloud Volumes ONTAP, considere os seguintes requisitos e limitações:
+
+* *Dimensionamento de computação*: Ambos os nós em um par de HA devem usar exatamente o mesmo tipo de instância de computação em nuvem ou formato de máquina.
+* *Suporte a protocolos*: a disponibilidade contínua (CA) SMB/CIFS é suportada para cargas de trabalho Hyper-V e SQL Server, mas requer sinalizadores de configuração ONTAP específicos.
+* *Tempo de failover*: Embora a transferência de armazenamento seja normalmente medida em segundos, as configurações de tempo limite do lado do cliente (como os tempos limite do iniciador iSCSI) devem ser configuradas corretamente para evitar interrupções no aplicativo.
+
+
+
+
+[[operations-unavailable-when-a-node-in-an-ha-pair-is-offline]]
+== Operações indisponíveis quando um nó em um par de HA está offline
+
 Quando um nó em um par HA não está disponível, o outro nó fornece dados para seu parceiro para fornecer serviço de dados contínuo.  Isso é chamado de _aquisição de armazenamento_.  Várias ações ficarão indisponíveis até que a devolução no armazenamento seja concluída.
 
 
@@ -32,3 +65,24 @@ As seguintes ações não estão disponíveis na aquisição de armazenamento:
 
 
 Essas ações estarão disponíveis novamente após a conclusão da devolução do armazenamento e o estado do sistema voltar ao normal.
+
+
+
+[[storage-vm-disaster-recovery-for-cloud-volumes-ontap]]
+== Recuperação de desastres de storage VM para Cloud Volumes ONTAP
+
+O NetApp Console não oferece suporte à configuração ou orquestração para recuperação de desastres (DR) de storage VM (SVM). Para configurar DR para Cloud Volumes ONTAP, você precisa usar o ONTAP System Manager ou a ONTAP CLI para configurar a replicação de SVM do SnapMirror.
+
+Se você configurar a replicação SVM do SnapMirror entre dois sistemas Cloud Volumes ONTAP, a replicação deve ser entre dois sistemas par de HA ou dois sistemas de nó único. Você não pode configurar a replicação SVM do SnapMirror entre um par de HA e um sistema de nó único.
+
+Consulte os seguintes documentos para obter instruções do ONTAP CLI.
+
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["Guia expresso de preparação para recuperação de desastres do SVM"^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["Guia de Recuperação de Desastres SVM Express"^]
+
+
+.Links relacionados
+* link:concept-ha.html["Saiba mais sobre pares de alta disponibilidade do Cloud Volumes ONTAP na AWS"]
+* link:concept-ha-azure.html["Saiba mais sobre pares de alta disponibilidade do Cloud Volumes ONTAP no Azure"]
+* link:concept-ha-google-cloud.html["Saiba mais sobre pares de HA do Cloud Volumes ONTAP no GCP"]
+

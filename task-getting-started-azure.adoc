@@ -4,7 +4,7 @@ permalink: task-getting-started-azure.html
 keywords: microsoft, azure, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, marketplace, virtual machine, vnet, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, cloud central, permissions, custom role, role, json, permissions, virtual machine, connectivity, internet, outbound, endpoint, connection, networks, vpn, replicating, policy, iam, setupasservice, sign up, cloud manager, BlueXP, cloud volumes ontap, cloud ontap, subscription, create 
 summary: Comece a usar o Cloud Volumes ONTAP para Azure em poucas etapas. 
 ---
-= Início rápido para Cloud Volumes ONTAP no Azure
+= Visão geral da implantação do Cloud Volumes ONTAP no Azure
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,35 +14,68 @@ summary: Comece a usar o Cloud Volumes ONTAP para Azure em poucas etapas.
 
 
 [role="lead"]
-Comece a usar o Cloud Volumes ONTAP para Azure em poucas etapas.
+Para implantar Cloud Volumes ONTAP, primeiro você precisa conhecer sua assinatura do Azure e suas licenças do Cloud Volumes ONTAP. Você também deve verificar se possui um agente do NetApp Console criado para sua assinatura e organização do Azure. Muitas das informações neste tópico precisam ser executadas como parte da configuração do Console antes mesmo de você começar a implantar Cloud Volumes ONTAP.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]Criar um agente de console
-[role="quick-margin-para"]
-Se você não tem um https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Agente de console"^] no entanto, você precisa criar um. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Aprenda a criar um agente de console no Azure"^]
+[cols="20,35,25,25"]
+|===
+| Tarefa | Descrição | Referência | Notas para implantações em modo privado 
 
-[role="quick-margin-para"]
-Observe que se você quiser implantar o Cloud Volumes ONTAP em uma sub-rede onde não há acesso à Internet disponível, será necessário instalar manualmente o agente do Console e acessar o NetApp Console que está em execução nesse agente do Console. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Aprenda a instalar manualmente o agente do Console em um local sem acesso à Internet"^]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Planeje sua configuração
-[role="quick-margin-para"]
-O Console oferece pacotes pré-configurados que correspondem aos seus requisitos de carga de trabalho, ou você pode criar sua própria configuração.  Se você escolher sua própria configuração, deverá entender as opções disponíveis.  Para obter informações, consultelink:task-planning-your-config-azure.html["Planeje sua configuração do Cloud Volumes ONTAP no Azure"] .
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Configure sua rede
-[role="quick-margin-list"]
-. Certifique-se de que sua VNet e sub-redes oferecerão suporte à conectividade entre o agente do Console e o Cloud Volumes ONTAP.
-. Habilite o acesso de saída à Internet da VPC de destino para o NetApp AutoSupport.
-+
-Esta etapa não é necessária se você estiver implantando o Cloud Volumes ONTAP em um local onde não há acesso à Internet disponível.
+ a| 
+Criar um agente do Console
+ a| 
+Se você ainda não possui um agente de Console, crie um antes de implantar Cloud Volumes ONTAP.
+ a| 
+Consulte o guia de configuração do console: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Crie um agente de console no Azure"^]
+ a| 
+Se a implantação for feita em uma sub-rede sem acesso à internet, instale manualmente o agente do Console e acesse a interface de usuário do NetApp Console que está sendo executada nesse agente do Console. Consulte o guia de configuração do Console: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Instale manualmente o agente do Console sem acesso à internet"^]
 
 
 
-[role="quick-margin-para"]
-link:reference-networking-azure.html["Saiba mais sobre os requisitos de rede"] .
+ a| 
+Planeje sua configuração
+ a| 
+O Console oferece pacotes pré-configurados que correspondem aos seus requisitos de carga de trabalho, ou você pode criar sua própria configuração.  Se você escolher sua própria configuração, deverá entender as opções disponíveis.
+ a| 
+link:task-planning-your-config-azure.html["Planeje sua configuração do Cloud Volumes ONTAP no Azure"]
+ a| 
+Você precisa ter considerações de planejamento semelhantes para implantações em modo privado.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]Inicie o Cloud Volumes ONTAP
-[role="quick-margin-para"]
-Clique em *Adicionar Sistema*, selecione o tipo de sistema que você gostaria de implantar e conclua as etapas do assistente. link:task-deploying-otc-azure.html["Leia as instruções passo a passo"] .
 
+
+ a| 
+Configure sua rede
+ a| 
+. Certifique-se de que sua VNet e sub-redes suportem a conectividade entre o agente do Console e Cloud Volumes ONTAP.
+. Habilite o acesso de saída à internet da VNet de destino para NetApp AutoSupport.
+
+ a| 
+link:reference-networking-azure.html["Requisitos de rede para Azure"]
+ a| 
+O acesso à internet para conexões de saída do AutoSupport não é necessário. Todos os outros requisitos de rede permanecem os mesmos.
+
+
+
+ a| 
+Implante Cloud Volumes ONTAP a partir do Console
+ a| 
+Após cumprir todos os pré-requisitos, você pode concluir as etapas do assistente para implantar Cloud Volumes ONTAP no Azure.
+ a| 
+Consulte:
+
+* link:task-quick-deploy-azure.html["Implante Cloud Volumes ONTAP com a criação rápida"]
+* link:task-deploying-otc-azure.html["Implante Cloud Volumes ONTAP usando opções avançadas"]
+
+ a| 
+Antes de iniciar a implantação, certifique-se de que você adquiriu uma licença do Cloud Volumes ONTAP da NetApp. Implantações em modo privado exigem licenças BYOL baseadas em nó. Assinaturas do Marketplace não são compatíveis para cobrança do uso do Cloud Volumes ONTAP. Obtenha o arquivo de licença da NetApp e faça o upload durante a implantação. Consulte:
+
+* link:concept-license-management.html["Gerenciamento de licenças para BYOL baseado em nó"]
+* link:task-manage-node-licenses.html["Gerencie licenças BYOL baseadas em nós"]
+* link:task-quick-deploy-azure.html["Implante Cloud Volumes ONTAP com a criação rápida"]
+* link:task-deploying-otc-azure.html["Implante Cloud Volumes ONTAP usando opções avançadas"]
+
+
+|===
 .Links relacionados
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Criando um agente de console a partir do console"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-marketplace.html["Criando um agente de console no Azure Marketplace"^]

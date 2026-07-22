@@ -57,14 +57,14 @@ Para obter uma lista de tipos de VM suportados com os seguintes pacotes baseados
 
 ifdef::azure[]
 
-* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurações com suporte no Azure"^]
+* link:link:reference-configs-azure.html["Configurações com suporte no Azure"]
 
 
 endif::azure[]
 
 ifdef::gcp[]
 
-* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Configurações suportadas no Google Cloud"^]
+* link:link:reference-configs-gcp.html["Configurações suportadas no Google Cloud"^]
 
 
 endif::gcp[]
@@ -296,3 +296,11 @@ Para saber como você pode realizar essa conversão, consultelink:task-convert-n
 
 
 NOTE: A conversão de um sistema de licenciamento baseado em capacidade para baseado em nó não é suportada.
+
+.Links relacionados
+* link:concept-licensing-charging.html["Saiba mais sobre licenças baseadas em capacidade"]
+* link:task-manage-capacity-licenses.html["Gerenciar licenciamento baseado em capacidade para Cloud Volumes ONTAP"]
+* link:task-manage-node-licenses.html["Gerenciar licenciamento baseado em nós"]
+* link:task-convert-node-capacity.html["Converter uma licença baseada em nós para uma licença baseada em capacidade."]
+* link:task-manage-keystone.html["Gerenciar assinaturas do Keystone"]
+

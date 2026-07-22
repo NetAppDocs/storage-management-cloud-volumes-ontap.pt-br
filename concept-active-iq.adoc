@@ -14,9 +14,57 @@ summary: O componente AutoSupport do ONTAP coleta telemetria e a envia para aná
 
 
 [role="lead"]
-O componente AutoSupport do ONTAP coleta telemetria e a envia para análise.  O Active IQ Digital Advisor (também conhecido como Digital Advisor) analisa os dados do AutoSupport e fornece atendimento proativo e otimização.  Usando inteligência artificial, o Digital Advisor pode identificar problemas potenciais e ajudar você a resolvê-los antes que eles afetem seus negócios.
+O componente AutoSupport do ONTAP coleta telemetria e a envia para análise. Active IQ Digital Advisor (também conhecido como Digital Advisor) analisa os dados do AutoSupport e fornece cuidados proativos e otimização.
+
+https://www.netapp.com/data-services/digital-advisor/["NetApp Active IQ Digital Advisor"^] (também conhecido como Digital Advisor) está integrado ao NetApp Console para que você possa otimizar as operações, a segurança e o desempenho dos seus sistemas Cloud Volumes ONTAP em um painel único. Usando inteligência artificial, Digital Advisor pode identificar problemas potenciais e ajudar você a resolvê-los antes que afetem seus negócios.
 
 O Digital Advisor permite que você otimize sua infraestrutura de dados em sua nuvem híbrida global, fornecendo análises preditivas acionáveis ​​e suporte proativo por meio de um portal baseado em nuvem e aplicativo móvel.  Insights e recomendações baseados em dados do Digital Advisor estão disponíveis para todos os clientes da NetApp com um contrato ativo do SupportEdge (os recursos variam de acordo com o produto e o nível de suporte).
+
+Você pode visualizar o status geral do seu sistema de armazenamento, informações de alto nível sobre o bem-estar do sistema, inventário, planejamento e insights valiosos em nível de lista de observação usando o Digital Advisor.
+
+* Analise e otimize a saúde dos seus sistemas de armazenamento
+* Obtenha insights sobre todos os riscos aos seus sistemas de armazenamento e as ações para mitigar os riscos
+* Analise o desempenho dos seus dispositivos de armazenamento visualizando o formato gráfico dos dados de desempenho
+* Obtenha detalhes sobre sistemas que excederam 90% da capacidade ou estão próximos de 90% da capacidade
+
+
+
+
+[[supported-ontap-systems]]
+== Sistemas ONTAP suportados
+
+O Digital Advisor fornece informações para todos os sistemas ONTAP locais e sistemas Cloud Volumes ONTAP na sua conta NSS.
+
+
+
+[[cost]]
+== Custo
+
+Não há custo para usar este serviço através do Console.
+
+
+
+[[how-digital-advisor-works-with-netapp-console]]
+== Como o Digital Advisor funciona com o NetApp Console
+
+A interface do usuário do Digital Advisor está completamente integrada ao Console.
+
+No painel esquerdo, clique em *Saúde > Digital Advisor*.
+
+* Se você já registrou uma conta NSS existente no Console, a interface do Digital Advisor aparecerá exatamente como você a veria em uma implementação autônoma em https://activeiq.netapp.com/[] .
++
+image:screenshot_aiq_digital_advisor.png["Uma captura de tela da interface do usuário do Digital Advisor no Console."]
+
+* Se você não registrou uma conta NSS no Console, registre uma conta NSS agora e então a interface do Digital Advisor será exibida.  Consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Gerenciar credenciais NSS associadas a uma organização ou conta"] para obter as instruções.
+
+
+
+NOTE: A partir de 3 de dezembro de 2021, a NetApp mudou para uma nova metodologia de registro de credenciais para contas NSS. Para obter mais informações, consulte  https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/FAQs_for_NetApp_adoption_of_MS_Azure_AD_B2C_for_login["esta FAQ"] .  Se sua conta NSS usar o conjunto antigo de credenciais, você precisará atualizar a conta para as novas credenciais.
+
+
+
+[[how-you-can-use-digital-advisor]]
+== Como você pode usar Digital Advisor
 
 Aqui estão algumas coisas que você pode fazer com o Digital Advisor:
 

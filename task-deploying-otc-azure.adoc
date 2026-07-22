@@ -166,7 +166,7 @@ link:concept-write-speed.html["Saiba mais sobre velocidade de gravação"^] .
 
 .. Ative o armazenamento WORM (escreva uma vez e leia muitas vezes), se desejar.
 +
-Esta opção está disponível apenas para determinados tipos de VM.  Para descobrir quais tipos de VM são suportados, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Configurações suportadas por licença para pares HA"^] .
+Esta opção está disponível apenas para determinados tipos de VM. Para descobrir quais tipos de VM são compatíveis, consulte link:link:reference-configs-azure.html#ha-pairs["Configurações suportadas por licença para pares HA"].
 
 +
 O WORM não pode ser habilitado se a hierarquização de dados estiver habilitada para as versões 9.7 e anteriores do Cloud Volumes ONTAP .  A reversão ou o downgrade para o Cloud Volumes ONTAP 9.8 é bloqueado após a ativação do WORM e da hierarquização.
@@ -392,7 +392,7 @@ link:concept-data-tiering.html["Saiba mais sobre camadas de dados"^] .
 
 ** A partir do Cloud Volumes ONTAP 9.15.0P1, os blobs de páginas do Azure não têm mais suporte para novas implantações de pares de alta disponibilidade.  Se você atualmente usa blobs de páginas do Azure em implantações de pares de alta disponibilidade existentes, pode migrar para tipos de instância de VM mais recentes nas VMs das séries Edsv4 e Edsv5.
 +
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Saiba mais sobre as configurações com suporte no Azure"^] .
+link:link:reference-configs-azure.html#ha-pairs["Saiba mais sobre as configurações com suporte no Azure"^].
 
 
 
@@ -404,7 +404,7 @@ link:concept-write-speed.html["Saiba mais sobre velocidade de gravação"^] .
 
 .. Ative o armazenamento WORM (escreva uma vez e leia muitas vezes), se desejar.
 +
-Esta opção está disponível apenas para determinados tipos de VM.  Para descobrir quais tipos de VM são suportados, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Configurações suportadas por licença para pares HA"^] .
+Esta opção está disponível apenas para determinados tipos de VM. Para descobrir quais tipos de VM são compatíveis, consulte link:link:reference-configs-azure.html#ha-pairs["Configurações suportadas por licença para pares HA"^].
 
 +
 O WORM não pode ser habilitado se a hierarquização de dados estiver habilitada para as versões 9.7 e anteriores do Cloud Volumes ONTAP .  A reversão ou o downgrade para o Cloud Volumes ONTAP 9.8 é bloqueado após a ativação do WORM e da hierarquização.

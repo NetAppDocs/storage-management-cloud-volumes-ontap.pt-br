@@ -4,7 +4,7 @@ permalink: concept-license-management.html
 keywords: byol, bring your own license, expiration, warning, node-based byol, node license, capacity 
 summary: Cada sistema Cloud Volumes ONTAP que tem um BYOL baseado em nó deve ter uma licença de sistema instalada com uma assinatura ativa.  O Console simplifica o processo gerenciando licenças para você e exibindo um aviso antes que elas expirem. 
 ---
-= Gerenciamento de licenças para BYOL baseado em nó
+= Saiba mais sobre o BYOL baseado em nós do Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ Cada sistema Cloud Volumes ONTAP que tem uma licença "traga sua própria licen�
 
 NOTE: Uma licença baseada em nó é a licença da geração anterior para o Cloud Volumes ONTAP. Uma licença baseada em nó pode ser adquirida da NetApp (BYOL) e está disponível para renovações de licença apenas em casos específicos.
 
-link:concept-licensing.html["Saiba mais sobre as opções de licenciamento do Cloud Volumes ONTAP"] .
+link:concept-licensing.html["Saiba mais sobre as licenças do Cloud Volumes ONTAP"].
 
 link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Saiba mais sobre como gerenciar licenças baseadas em nós"^] .
 
@@ -82,3 +82,12 @@ Uma licença BYOL baseada em nó é transferível entre sistemas Cloud Volumes O
 Por exemplo, você pode querer excluir um sistema licenciado existente e usar a licença com um novo sistema BYOL em uma VPC/VNet ou provedor de nuvem diferente.  Observe que somente números de série _independentes de nuvem_ funcionam em qualquer provedor de nuvem.  Os números de série independentes de nuvem começam com o prefixo _908xxxx_.
 
 É importante observar que sua licença BYOL está vinculada à sua empresa e a um conjunto específico de credenciais do site de suporte da NetApp .
+
+.Links relacionados
+* link:concept-licensing.html["Licenciamento para Cloud Volumes ONTAP"^]
+* link:concept-licensing-charging.html["Saiba mais sobre licenças baseadas em capacidade"^]
+* link:task-manage-capacity-licenses.html["Gerenciar licenciamento baseado em capacidade para Cloud Volumes ONTAP"^]
+* link:task-manage-node-licenses.html["Gerenciar licenciamento baseado em nós"^]
+* link:task-convert-node-capacity.html["Converter uma licença baseada em nós para uma licença baseada em capacidade."^]
+* link:task-manage-keystone.html["Gerenciar assinaturas do Keystone"^]
+

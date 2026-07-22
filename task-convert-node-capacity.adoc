@@ -93,3 +93,9 @@ Para obter informações sobre ofertas privadas em hiperescalares específicos, 
 * Azure - azurepo@netapp.com
 * Google Cloud - gcppo@netapp.com
 
+
+.Links relacionados
+* link:concept-licensing.html["Licenciamento para Cloud Volumes ONTAP"]
+* link:task-manage-capacity-licenses.html["Gerenciar licenciamento baseado em capacidade para Cloud Volumes ONTAP"]
+* link:task-manage-node-licenses.html["Gerenciar licenciamento baseado em nós"]
+

@@ -108,7 +108,8 @@ Use o System Manager para gerenciar seu sistema Cloud Volumes ONTAP .  Você pod
 Se precisar de ajuda para usar o System Manager com o Cloud Volumes ONTAP, consulte o https://docs.netapp.com/us-en/ontap/index.html["Documentação do ONTAP"^] para obter instruções passo a passo.  Aqui estão alguns links de documentação do ONTAP que podem ajudar:
 
 * https://docs.netapp.com/us-en/ontap/ontap-security-hardening/roles-applications-authentication.html["Funções, aplicativos e autenticação do ONTAP"^]
-* https://docs.netapp.com/us-en/ontap/system-admin/access-cluster-system-manager-browser-task.html["Use o Gerenciador de Sistema para acessar um cluster"^] .
+* https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html["Interfaces de usuário do ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/concept_administration_overview.html["Aprenda sobre administração de clusters com ONTAP System Manager"^]
 * https://docs.netapp.com/us-en/ontap/volume-admin-overview-concept.html["Gerenciamento de volume e LUN"^]
 * https://docs.netapp.com/us-en/ontap/network-manage-overview-concept.html["Gerenciamento de rede"^]
 * https://docs.netapp.com/us-en/ontap/concept_dp_overview.html["Proteção de dados"^]
