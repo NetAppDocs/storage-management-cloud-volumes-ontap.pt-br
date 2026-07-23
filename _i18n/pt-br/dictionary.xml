@@ -7523,4 +7523,10 @@
   <block id="74daf668e35e08a20a58d1c4568fda62" category="sidebar">Integrações do Cloud Volumes ONTAP com outros produtos</block>
   <block id="b67ce24b0ef9db5e8910cc39a69b1ef6" category="sidebar">Integrações com provedores de nuvem</block>
   <block id="e80ee78606b9fe45ef7d7303b64be29a" category="sidebar">Cloud Volumes ONTAP e AutoSupport-Digital Advisor</block>
+  <block id="a085284f5224dbc53fb00943e5efc79a" category="doc">Suporte para a região do Chile Central no Azure</block>
+  <block id="b8f489089455a848257f3e898316d7b6" category="paragraph">Agora você pode implantar Cloud Volumes ONTAP 9.12.1 GA e versões posteriores na região Chile Central (chilecentral) do Azure. Os seguintes tipos de implantação são compatíveis:</block>
+  <block id="3d1317b428299aa3785275ff6eb8e119" category="list-text">Nó único</block>
+  <block id="fce4191353d1af53ceb25c03f87affd6" category="list-text">Alta disponibilidade (HA) em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)</block>
+  <block id="b13ad1c6dffe5af53f8b858c49f7a32c" category="list-text">Alta disponibilidade em múltiplas zonas de disponibilidade usando armazenamento com redundância de zona (ZRS)</block>
+  <block id="668ee036e2ed867c0005914c6da1d380" category="section-title">23 de julho de 2026</block>
 </blocks>
