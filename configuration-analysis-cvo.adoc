@@ -24,7 +24,7 @@ Principais funcionalidades incluem:
 * Insights para ação
 
 
-Diretiva não resolvida em https://raw.githubusercontent.com/NetAppDocs/console-well-architected/main/cvo/configuration-analysis-cvo.adoc[] - include::well-architected-workloads.adoc[]
+Diretiva não resolvida em  https://raw.githubusercontent.com/NetAppDocs/console-well-architected/main/cvo/configuration-analysis-cvo.adoc[] - include::_include/well-architected-workloads.adoc[]
 
 
 
