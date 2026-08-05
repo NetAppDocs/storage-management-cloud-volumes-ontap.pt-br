@@ -7286,7 +7286,6 @@
   <block id="2e5d14f7919ff3c6138e7845aec4f915" category="sidebar">Versões suportadas</block>
   <block id="c4d6a904ef528003bf03bc2e65cffd26" category="sidebar">Caminho de atualização compatível</block>
   <block id="ed2ddb015b7b7b651921053fc149d928" category="sidebar">Aprenda sobre criptografia</block>
-  <block id="757c7a545c3639d3a6d5c6664431b930" category="sidebar">Monitoramento de desempenho para cargas de trabalho do Cloud Volumes ONTAP</block>
   <block id="a470b9079d65fd390c8d7493dec5f4e9" category="sidebar">Configuração suportada</block>
   <block id="a7370487cf69c78f7ad768c8dae41fd6" category="sidebar">Requisitos de rede/requisitos de segurança na AWS</block>
   <block id="36403c3548e2e3931df74ecbe98ac96a" category="sidebar">Implantação rápida</block>
@@ -7672,5 +7671,14 @@
   <block id="4375417a8b8f335f3352e1f741532269" category="sidebar">Administração usando a CLI do ONTAP</block>
   <block id="932294ad5d34f659aa544ec559cad4ad" category="sidebar">Cloud Volumes ONTAP e Keystone</block>
   <block id="887238a149638ebe371e1475e7cf53de" category="sidebar">Cloud Volumes ONTAP e painel bem arquitetado</block>
-  <block id="973b36ffce6cb4dba1d81ef122b1f245" category="paragraph">Diretiva não resolvida em <block ref="c491f271fb4c6f62c68f73c7ad844350" category="inline-link-rx"></block> - include::_include/well-architected-workloads.adoc[]</block>
+  <block id="9ffdb95250e26c7a6b468126ac7c75b0" category="section-title">Como funciona</block>
+  <block id="874fbc8635967fd5300d05269c50cea0" category="paragraph">O Workload Factory analisa diariamente suas cargas de trabalho em execução em implantações de storage de nuvem compatíveis. A análise fornece status bem arquitetado, insights e recomendações.</block>
+  <block id="27b3ab8a4b26cd2ee311ee2ac5911ba3" category="paragraph">Após a conclusão da análise diária, as configurações aparecem como "otimizadas" ou "não otimizadas" no painel Well-architected da implantação. Você encontrará problemas de configuração por categoria e uma lista de problemas de configuração e recomendações. Você pode revisar as recomendações para os problemas de configuração. Alguns problemas podem ser corrigidos automaticamente pelo Workload Factory, enquanto outros exigem intervenção manual. Nesse caso, o Workload Factory fornece instruções detalhadas para ajudar você a implementar as alterações recomendadas.</block>
+  <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">Você pode descartar a análise de configurações que não se aplicam aos seus ambientes. Isso evita alertas desnecessários e resultados de otimização imprecisos.</block>
+  <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">Saiba mais sobre regras personalizadas</block>
+  <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">Você também pode criar regras personalizadas em linguagem simples para validar seus ambientes em relação aos padrões da sua organização e às melhores práticas da NetApp. Teste as regras com uma simulação e, em seguida, agende a execução delas em todos os seus ambientes. <block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>.</block>
+  <block id="ee25e0b6cd574166f206b4c5b7f02df3" category="section-title">Por que isso importa</block>
+  <block id="c2bf4ab5c816a6a7be03384125f4a5d6" category="paragraph">O Workload Factory aplica as melhores práticas a grandes ambientes de storage, banco de dados e VMware, combinando avaliação contínua com insights de recomendações e remediação. As correções automatizadas aplicadas no NetApp Console reduzem erros humanos, garantem gerenciamento uniforme e preservam o desempenho e a confiabilidade em toda a sua infraestrutura de cargas de trabalho.</block>
+  <block id="8f96dd86c3b476f91f5e8deb2f840342" category="sidebar">Cloud Volumes ONTAP e outros NetApp products</block>
+  <block id="632cbf73d084e28580f4f6dfbd84efcc" category="sidebar">Cloud Volumes ONTAP e Flash Cache</block>
 </blocks>
