@@ -55,7 +55,7 @@ indexpage:
     - title: Saiba mais sobre pares de alta disponibilidade do Cloud Volumes ONTAP
         no Azure
       url: concept-ha-azure.html
-    - title: "${post_edited_translations.segment}"
+    - title: Requisitos de rede/requisitos de segurança no Azure
       url: reference-networking-azure.html
     - title: Implantação rápida
       url: task-quick-deploy-azure.html
