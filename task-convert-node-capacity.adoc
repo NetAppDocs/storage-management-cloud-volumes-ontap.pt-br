@@ -20,22 +20,37 @@ Para compromissos anuais ou de longo prazo, a NetApp recomenda que você entre e
 
 Para obter informações sobre o EOA e o EOS, consultelink:concept-licensing.html#end-of-availability-of-node-based-licenses["Fim da disponibilidade de licenças baseadas em nós"] .
 
+A NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^] .
+
+
+
+[[conversion-in-a-standard-mode-deployment]]
+== Conversão em uma implantação de modo padrão
+
+Se você possui uma implantação no modo padrão, pode converter sua licença baseada em nós para uma licença baseada em capacidade usando a ferramenta de conversão de licenças no NetApp Console. A conversão é compatível com todos os provedores de nuvem, AWS, Azure e Google Cloud. Você pode converter sua licença baseada em nós para qualquer licença baseada em capacidade adquirida no marketplace. Por exemplo, se você tiver uma licença PAYGO Standard baseada em nós, poderá convertê-la para qualquer licença baseada em capacidade adquirida no marketplace.
+
 .Sobre esta tarefa
 * Ao usar a ferramenta de conversão de licença, a transição do modelo de licenciamento baseado em nó para o modelo de licenciamento baseado em capacidade é realizada no local e on-line, o que elimina a necessidade de qualquer migração de dados ou provisionamento de recursos de nuvem adicionais.
-* É uma operação sem interrupções e não ocorre interrupção de serviço nem tempo de inatividade do aplicativo.
-* Os dados da conta e do aplicativo no seu sistema Cloud Volumes ONTAP permanecem intactos.
-* Os recursos de nuvem subjacentes permanecem inalterados após a conversão.
+* Trata-se de uma operação não disruptiva:
++
+** Não ocorre interrupção de serviço nem indisponibilidade do aplicativo.
+** Os dados da conta e do aplicativo no seu sistema Cloud Volumes ONTAP permanecem intactos.
+** Os recursos de nuvem subjacentes permanecem inalterados após a conversão.
+
+
 * A ferramenta de conversão de licenças oferece suporte a todos os tipos de implantação, como nó único, alta disponibilidade (HA) em zona de disponibilidade única (AZ), HA em várias AZs, traga sua própria licença (BYOL) e PAYGO.
-* A ferramenta oferece suporte a todas as licenças baseadas em nó como origem e todas as licenças baseadas em capacidade como destino. Por exemplo, se você tiver uma licença baseada em nó PAYGO Standard, poderá convertê-la em qualquer licença baseada em capacidade adquirida no marketplace. A NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^] .
-* A conversão é suportada por todos os provedores de nuvem: AWS, Azure e Google Cloud.
-* Após a conversão, o número de série da licença baseada em nó será substituído por um formato baseado em capacidade.  Isso é feito como parte da conversão e é refletido na sua conta do NetApp Support Site (NSS).
+* No modo padrão, a ferramenta suporta todas as licenças baseadas em nós como origem e todas as licenças baseadas em capacidade como destino. Por exemplo, se você tiver uma licença BYOL baseada em nó, poderá convertê-la em qualquer licença baseada em capacidade adquirida da NetApp.
+* Após a conversão, o número de série da licença baseada em nós é substituído por um formato baseado em capacidade. Isso é feito como parte da conversão e é refletido na sua conta do NetApp Support Site (NSS).
 * Ao fazer a transição para o modelo baseado em capacidade, seus dados continuam sendo retidos no mesmo local do licenciamento baseado em nós.  Essa abordagem garante que não haja interrupção no posicionamento dos dados e mantém os princípios de soberania dos dados durante toda a transição.
 
 
 .Antes de começar
 * Você deve ter uma conta NSS com acesso de cliente ou acesso de administrador.
-* Sua conta NSS deve ser registrada com as credenciais de usuário que você usou para acessar o Console.
-* O sistema Cloud Volumes ONTAP deve ser vinculado à conta NSS com acesso de cliente ou acesso de administrador.
++
+** Sua conta NSS deve ser registrada com as credenciais de usuário que você usou para acessar o Console.
+** O sistema Cloud Volumes ONTAP deve ser vinculado à conta NSS com acesso de cliente ou acesso de administrador.
+
+
 * Você deve ter uma licença válida baseada em capacidade, seja uma licença BYOL ou uma assinatura de mercado.
 * Uma licença baseada em capacidade deve estar disponível em sua conta.  Esta licença pode ser uma assinatura de mercado ou um pacote BYOL/oferta privada disponível em * Licenses and subscriptions* no Console.
 * Entenda os seguintes critérios antes de selecionar um pacote de destino:
@@ -59,8 +74,9 @@ Para obter informações sobre o EOA e o EOS, consultelink:concept-licensing.htm
 NOTE: Se algum desses requisitos não for atendido, a conversão da licença não ocorrerá.  Em casos específicos, a licença pode ser convertida, mas não pode ser utilizada.  Clique no ícone de informações para identificar os problemas e tomar ações corretivas.
 
 .Passos
+. No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
 . Na página *Sistemas*, clique duas vezes no nome do sistema para o qual você deseja modificar o tipo de licença.
-. Na guia Visão geral, clique no painel Recursos.
+. Na guia *Visão geral*, clique no painel *Recursos*.
 . Marque o ícone de lápis ao lado de *Método de carregamento*.  Se o método de cobrança do seu sistema for `Node Based` , você pode convertê-lo para carregamento por capacidade.
 +
 
@@ -78,7 +94,58 @@ TIP: O ícone será desabilitado se o seu sistema Cloud Volumes ONTAP já estive
 
 
 .Depois que você terminar
-Visualize o novo número de série da licença e verifique as alterações no menu * Licenses and subscriptions* do Console.
+Veja o novo número de série da licença e verifique as alterações no menu *Administração > Licenses and subscriptions* do NetApp Console.
+
+
+
+[[conversion-in-a-private-mode-deployment]]
+== Conversão em uma implantação de modo privado
+
+Se você tiver uma implantação em modo privado, poderá converter sua licença baseada em nós para uma licença baseada em capacidade usando a ferramenta de conversão de licenças no NetApp Console. A conversão é compatível com todos os provedores de nuvem, AWS, Azure e Google Cloud.
+
+Como as assinaturas do marketplace não são suportadas no modo privado, você precisa adquirir um pacote Essentials (bring your own license (BYOL)) da NetApp. Isso permite que você mantenha os benefícios do licenciamento baseado em capacidade dentro do modelo BYOL, sem a necessidade de assinaturas do marketplace.
+
+
+NOTE: A conversão de licenças baseadas em nós para qualquer licença baseada em capacidade que não seja Essentials não é suportada no modo privado.
+
+.Sobre esta tarefa
+* Após a conversão, toda a capacidade da sua licença baseada em nós passa a ser rastreada no pacote Essentials, e você continua sendo cobrado pelo seu contrato BYOL.
+* Ao utilizar a ferramenta de conversão de licenças, a transição do modelo de licenciamento baseado em nós para o modelo de licenciamento baseado em capacidade é realizada no local, eliminando a necessidade de qualquer migração de dados ou provisionamento de recursos adicionais na nuvem.
+* Trata-se de uma operação não disruptiva:
++
+** Não ocorre interrupção de serviço nem indisponibilidade do aplicativo.
+** Os dados da conta e do aplicativo no seu sistema Cloud Volumes ONTAP permanecem intactos.
+** Os recursos de nuvem subjacentes permanecem inalterados após a conversão.
+** Seus dados continuam sendo mantidos no mesmo local que o licenciamento baseado em nós. Essa abordagem garante que não haverá interrupção no armazenamento de dados e preserva os princípios de soberania de dados durante toda a transição.
+
+
+* A ferramenta de conversão de licenças suporta todos os tipos de implantação, como configuração de nó único e de alta disponibilidade (HA) em uma única zona de disponibilidade (AZ) e em várias AZ.
+* Após a conversão, os Cloud Volumes ONTAP são atualizados com novos números de série.
+
+
+.Antes de começar
+* Como as implementações do Cloud Volumes ONTAP em modo privado não são compatíveis com assinaturas do marketplace, você deve adquirir sua licença Essentials baseada em capacidade na NetApp.
+* A licença baseada em capacidade deve ter uma capacidade semelhante à da licença baseada em nós para a conversão.
+* O pacote Essentials baseado em capacidade deve corresponder ao seu tipo de licença BYOL baseado em nó. Por exemplo, uma implantação em modo privado com volume secundário (HA) deve ter a respectiva licença Essentials Secondary HA ou uma licença com a melhor correspondência, como Essentials Primary, Essentials Primary HA.
+
+
+.Passos
+. No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
+. Na página *Sistemas*, clique duas vezes no nome do sistema para o qual você deseja modificar o tipo de licença.
+. Na guia *Visão geral*, clique no painel *Recursos*.
+. Verifique o ícone de lápis ao lado de *Método de cobrança*. Se o método de cobrança do seu sistema for  `Node Based`, você pode convertê-lo para uma licença baseada em capacidade.
++
+
+TIP: O ícone será desabilitado se o seu sistema Cloud Volumes ONTAP já estiver carregado pela capacidade ou se algum dos requisitos não for atendido.
+
+. Na tela *Converter licenças baseadas em nó para baseadas em capacidade*, verifique o nome do sistema e os detalhes da licença de origem.
+. Selecione Essentials como o pacote de destino para converter a licença existente:
+. Você pode selecionar a caixa de seleção para excluir a licença baseada em nó do Console após a conclusão da conversão. Se a conversão ainda estiver em andamento, selecionar esta caixa de seleção não removerá a licença do Console.
+. Marque a caixa de seleção para confirmar que você entende as implicações da alteração e clique em *Continuar*.
+
+
+.Depois que você terminar
+Veja o novo número de série da licença e verifique as alterações no menu *Administração > Licenses and subscriptions* do NetApp Console.
 
 
 

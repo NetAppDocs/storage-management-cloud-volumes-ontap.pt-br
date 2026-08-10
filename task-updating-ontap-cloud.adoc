@@ -54,6 +54,9 @@ ifdef::aws[]
 | Versão atual | Versões para as quais você pode atualizar diretamente 
 
 
+| 9.18.1 | 9.19.1 
+
+
 | 9.17.1 P1 | 9.18.1 
 
 
@@ -203,7 +206,7 @@ ifdef::gcp[]
 | Versão atual | Versões para as quais você pode atualizar diretamente 
 
 
-| 9.18.1 | 9.19.1 RC 
+| 9.18.1 | 9.19.1 
 
 
 | 9.17.1 P1 | 9.18.1 

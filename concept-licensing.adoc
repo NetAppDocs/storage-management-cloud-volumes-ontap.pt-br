@@ -14,14 +14,18 @@ summary: Várias opções de licenciamento estão disponíveis para o Cloud Volu
 
 
 [role="lead"]
-Várias opções de licenciamento estão disponíveis para o Cloud Volumes ONTAP. Cada opção permite que você escolha um modelo de consumo que atenda às suas necessidades.
+Diversos modelos de licenciamento estão disponíveis para o Cloud Volumes ONTAP. Cada opção permite que você escolha um modelo de consumo que atenda às suas necessidades.
+
+Você tem opções para comprar ou renovar suas Licenses and subscriptions em marketplaces de nuvem ou por meio da NetApp (traga sua própria licença (BYOL)). O marketplace oferece assinaturas anuais e opções de pagamento conforme o uso (PAYGO). Para informações, consulte link:concept-license-management.html["Saiba mais sobre licenças baseadas em capacidade para o Cloud Volumes ONTAP"].
+
+As licenças BYOL estão disponíveis para compra na NetApp e podem ser usadas com qualquer provedor de nuvem. Para obter mais informações sobre a disponibilidade de licenças BYOL, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^].
 
 
 
 [[licensing-overview]]
 == Visão geral do licenciamento
 
-As seguintes opções de licenciamento estão disponíveis para novos clientes.
+Novos clientes podem optar pela cobrança por meio de assinaturas anuais baseadas em capacidade no marketplace ou assinaturas Keystone. Algumas implantações, como as em modo privado, também possuem as licenças BYOL baseadas em nós da geração anterior.
 
 Licenciamento baseado em capacidade:: Pague por vários sistemas Cloud Volumes ONTAP na sua conta NetApp por capacidade provisionada. Inclui a capacidade de adquirir serviços de dados em nuvem adicionais. Para obter mais informações sobre modelos de consumo ou opções de compra em licenças baseadas em capacidade, consultelink:concept-licensing-charging.html["Saiba mais sobre licenças baseadas em capacidade"] .
 Assinatura Keystone:: Um serviço baseado em assinatura com pagamento conforme o crescimento que oferece uma experiência de nuvem híbrida perfeita para pares de alta disponibilidade (HA).
@@ -243,6 +247,9 @@ A partir de 11 de novembro de 2024, a disponibilidade limitada de licenças base
 
 Se você tiver um contrato válido baseado em nó que se estenda além da data do EOA, poderá continuar a usar a licença até que o contrato expire.  Após o término do contrato, será necessário fazer a transição para o modelo de licenciamento baseado em capacidade.  Se você não tiver um contrato de longo prazo para um nó Cloud Volumes ONTAP , é importante planejar sua conversão antes da data de EOS.
 
+
+NOTE: Implantações em modo privado do Cloud Volumes ONTAP em nuvem privada.
+
 Saiba mais sobre cada tipo de licença e o impacto do EOA sobre ele nesta tabela:
 
 [cols="2*"]
@@ -270,13 +277,8 @@ Licença válida baseada em nó com assinatura PAYGO
 Deixará de receber suporte da NetApp após a data de EOS, até que você faça a transição para uma licença baseada em capacidade.
 
 |===
-.Exclusões
-A NetApp reconhece que certas situações exigem consideração especial, e o EOA e o EOS do licenciamento baseado em nó não se aplicarão aos seguintes casos:
-
-* Clientes do setor público dos EUA
-* Implantações em modo privado
-* Implantações da região da China do Cloud Volumes ONTAP na AWS
-
+.Exceções
+NetApp reconhece que certas situações exigem considerações especiais, como implantações do Cloud Volumes ONTAP na AWS na região da China, e que o EOA e o EOS do modelo de licenciamento baseado em nós podem não se aplicar aos seguintes casos:
 
 Para esses cenários específicos, a NetApp oferecerá suporte para atender aos requisitos exclusivos de licenciamento em conformidade com as obrigações contratuais e necessidades operacionais.
 
