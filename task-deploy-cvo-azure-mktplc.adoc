@@ -22,7 +22,7 @@ Para mais informações sobre esta oferta, consultelink:concept-azure-mktplace-d
 O Cloud Volumes ONTAP implantado usando a implantação direta do Azure Marketplace possui estas propriedades. Observe que os recursos de uma instância independente implantada por meio do Azure Marketplace mudam quando ela é descoberta no NetApp Console.
 
 * A versão mais recente do Cloud Volumes ONTAP (9.16.1 ou posterior).
-* Uma licença gratuita para o Cloud Volumes ONTAP é fornecida para até 500 GiB de capacidade provisionada, sem suporte da NetApp e sem data de expiração. Capacidade acima de 500 GiB requer um direito de licenciamento válido e pode gerar cobranças. Para acessar a experiência completa do Cloud Volumes ONTAP e os recursos avançados de gerenciamento, conecte seu sistema Cloud Volumes ONTAP ao NetApp Console. A descoberta e o gerenciamento por meio do NetApp Console exigem uma assinatura válida do Azure Marketplace associada à sua conta do NetApp Console.
+* Uma licença gratuita para o Cloud Volumes ONTAP é fornecida para até 500 GiB de capacidade provisionada, sem suporte da NetApp e sem data de expiração. Capacidade acima de 500 GiB requer um direito de licenciamento válido e pode gerar cobranças. Para acessar a experiência completa do Cloud Volumes ONTAP e os recursos avançados de gerenciamento, conecte seu sistema Cloud Volumes ONTAP ao Console. A descoberta e o gerenciamento pelo Console exigem uma assinatura válida do Azure Marketplace associada à sua conta do Console.
 * Dois nós configurados em modo de alta disponibilidade (HA) em uma única zona de disponibilidade (AZ), provisionados com números de série padrão.  As máquinas virtuais de armazenamento (VMs de armazenamento) são implantadas em umlink:concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["modo de orquestração flexível"] .
 * Um agregado para a instância criada por padrão.
 * Um disco gerenciado SSD v2 Premium com capacidade provisionada de 500 GiB, além de um disco raiz e um disco de dados.
@@ -39,7 +39,7 @@ O Cloud Volumes ONTAP implantado usando a implantação direta do Azure Marketpl
 
 
 .Antes de começar
-* Se você planeja descobrir e gerenciar o sistema implantado no NetApp Console, certifique-se de que a conta do NetApp Console esteja associada a uma assinatura válida do Azure Marketplace. A descoberta do sistema no NetApp Console requer uma assinatura válida.
+* Se você planeja descobrir e gerenciar o sistema implantado no Console, certifique-se de que a conta do Console esteja associada a uma assinatura válida do Azure Marketplace. A descoberta do sistema no Console requer uma assinatura válida.
 * Certifique-se de atender aos requisitos de rede para umlink:concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["Implantação de HA em uma única AZ"] no Azure. Consulte link:reference-networking-azure.html["Configurar a rede do Azure para o Cloud Volumes ONTAP"] .
 * Você precisa ter uma destas funções do Azure atribuídas para implantar o Cloud Volumes ONTAP:
 +
