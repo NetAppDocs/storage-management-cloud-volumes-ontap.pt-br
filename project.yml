@@ -61,6 +61,8 @@ sidebar:
     - title: Implantar na Amazon Web Services
       flavor: aws
       entries:
+      - title: Integre o Cloud Volumes ONTAP a partir do AWS Marketplace
+        url: "/task-onboard-cvo-aws-marketplace.html"
       - title: Visão geral da implantação
         url: "/task-getting-started-aws.html"
       - title: Planeje sua configuração

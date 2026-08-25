@@ -106,6 +106,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html[
 O Console sempre tenta cobrar primeiro por uma licença. Se uma licença não estiver disponível, ele cobra por uma assinatura do marketplace. Você não precisa converter uma assinatura BYOL em uma assinatura do marketplace ou vice-versa.
 
 * Se você tiver uma oferta ou contrato privado do marketplace do seu provedor de nuvem, mudar para um método de cobrança que não está incluído no seu contrato resultará na cobrança pelo BYOL (se você comprou uma licença da NetApp) ou pelo PAYGO.
+* Se você planeja faturar a capacidade do Cloud Volumes ONTAP por meio da assinatura independente do Cloud Volumes ONTAP no AWS Marketplace, o sistema Cloud Volumes ONTAP deve usar um pacote baseado em capacidade compatível (Essentials ou Freemium). O pacote Professional não é compatível com a listagem independente e continua sendo faturado por meio da assinatura NIS. Depois de selecionar o pacote desejado, use *Preferências de faturamento* no NetApp Console para escolher a assinatura do Marketplace usada para o faturamento do Cloud Volumes ONTAP.
 
 
 .Passos

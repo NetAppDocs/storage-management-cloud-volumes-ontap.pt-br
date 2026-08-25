@@ -1,0 +1,17 @@
+= Suporte para as regiões Austria East e Belgium Central no Azure
+:allow-uri-read: 
+
+
+
+
+[[support-for-austria-east-and-belgium-central-regions-in-azure]]
+=== Suporte para as regiões Austria East e Belgium Central no Azure
+
+Agora você pode implantar o Cloud Volumes ONTAP 9.12.1 GA e versões posteriores nas regiões Austria East (austriaeast) e Belgium Central (belgiumcentral) no Azure. Os seguintes tipos de implantação são compatíveis:
+
+* Nó único
+* Alta disponibilidade (HA) em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)
+* Alta disponibilidade em múltiplas zonas de disponibilidade usando armazenamento com redundância de zona (ZRS)
+
+
+Para obter uma lista de todas as regiões suportadas, consulte o https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiões globais no Azure"^] .

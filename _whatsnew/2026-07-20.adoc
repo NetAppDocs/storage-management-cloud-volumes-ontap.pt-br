@@ -21,6 +21,7 @@ O novo fluxo de integração simplifica sua transição de uma assinatura do mar
 
 
 .Links relacionados
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-onboard-cvo-aws-marketplace.html["Integre o Cloud Volumes ONTAP a partir do AWS Marketplace"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implante Cloud Volumes ONTAP com a criação rápida"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#flexible-billing-for-cloud-volumes-ontap-and-data-services-in-aws["Faturamento flexível para Cloud Volumes ONTAP e serviços de dados na AWS"^]
 
