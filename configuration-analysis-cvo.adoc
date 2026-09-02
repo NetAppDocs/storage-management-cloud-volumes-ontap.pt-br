@@ -81,6 +81,10 @@ Agende snapshots locais para backup eficiente e restaurações rápidas. Snapsho
 +
 A capacidade da camada de armazenamento SSD não deve exceder 80% de utilização. Isso pode afetar as operações de leitura e gravação de dados na camada de armazenamento do seu pool de capacidade e impactar a taxa de transferência do seu sistema. Quando a capacidade se esgota, os volumes de dados tornam-se somente leitura. Os serviços que tentam gravar novos dados também falham.
 
+* *replicação de dados*
++
+Proteja seus dados do Cloud Volumes ONTAP por meio de replicação remota. A replicação de dados remota oferece recursos de recuperação de desastres ao manter cópias sincronizadas dos seus dados em locais diferentes, garantindo a continuidade dos negócios em caso de falhas ou desastres do sistema.
+
 
 
 
