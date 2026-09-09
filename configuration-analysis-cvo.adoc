@@ -14,7 +14,7 @@ summary: O painel bem arquitetado no NetApp Console analisa regularmente as conf
 
 
 [role="lead"]
-O painel bem arquitetado no NetApp Console analisa regularmente as configurações do sistema de storage para determinar se há algum problema de configuração nos seus sistemas Cloud Volumes ONTAP. Quando problemas são encontrados, o painel mostra para você quais são os problemas e explica o que precisa ser alterado para garantir que seus sistemas de storage alcancem desempenho máximo, eficiência de custos e conformidade com as melhores práticas.
+O Workload Factory analisa regularmente as configurações do sistema de storage para determinar se existem problemas de configuração nos seus Cloud Volumes ONTAP. Quando problemas são encontrados, o painel bem arquitetado exibe quais são os problemas e recomendações sobre o que precisa ser alterado para garantir que seus sistemas de storage alcancem desempenho máximo, eficiência de custos e conformidade com as melhores práticas.
 
 Principais funcionalidades incluem:
 

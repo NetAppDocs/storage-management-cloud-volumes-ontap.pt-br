@@ -7855,4 +7855,5 @@
   <block id="c465a7bd98f96ab6b7e15dbed5471998" category="list-text">*replicação de dados*</block>
   <block id="b03b92c4dfcafd9226ecc9026f960e01" category="paragraph">Proteja seus dados do Cloud Volumes ONTAP por meio de replicação remota. A replicação de dados remota oferece recursos de recuperação de desastres ao manter cópias sincronizadas dos seus dados em locais diferentes, garantindo a continuidade dos negócios em caso de falhas ou desastres do sistema.</block>
   <block id="5e6b403f3ce4af919738fd94fe35d2d0" category="section-title">02 de setembro de 2026</block>
+  <block id="ee3e9d951c79faa2be7ec2e79fdaf3dd" category="paragraph">O Workload Factory analisa regularmente as configurações do sistema de storage para determinar se existem problemas de configuração nos seus Cloud Volumes ONTAP. Quando problemas são encontrados, o painel bem arquitetado exibe quais são os problemas e recomendações sobre o que precisa ser alterado para garantir que seus sistemas de storage alcancem desempenho máximo, eficiência de custos e conformidade com as melhores práticas.</block>
 </blocks>
