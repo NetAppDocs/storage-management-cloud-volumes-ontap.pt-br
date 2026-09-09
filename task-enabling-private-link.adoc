@@ -38,7 +38,7 @@ O agente do Console deve ser implantado na mesma região do Azure que os sistema
 
 .Passos
 . No painel de navegação esquerdo, acesse *Administração > Agentes*.
-. Clique noimage:icon-action.png[""] ícone para o agente do Console que gerencia seu sistema Cloud Volumes ONTAP .
+. Clique no image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] ícone do agente do Console que gerencia o seu Cloud Volumes ONTAP.
 . Selecione * Configurações do Cloud Volumes ONTAP *.
 +
 image::screenshot-settings-cloud-volumes-ontap.png[Uma captura de tela da opção Configurações do Cloud Volumes ONTAP no ícone Configurações.]

@@ -264,7 +264,7 @@ Por exemplo, as informações avançadas devem dizer algo semelhante ao seguinte
 . Identifique um ou mais volumes a serem movidos para fora do agregado:
 +
 .. No sistema Cloud Volumes ONTAP , clique na guia *Agregados*.
-.. No bloco agregado, clique emimage:icon-action.png[""] ícone e clique em *Exibir detalhes agregados*.
+.. No bloco de agregados, clique no ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] e, em seguida, clique em *Ver detalhes do agregado*.
 .. Na aba *Visão geral* da tela *Detalhes do agregado*, revise o tamanho de cada volume e escolha um ou mais volumes para mover para fora do agregado.
 +
 Você deve escolher volumes grandes o suficiente para liberar espaço no total, evitando problemas adicionais de capacidade no futuro.
@@ -348,7 +348,7 @@ Mover dois ou mais volumes é necessário para evitar problemas de capacidade; n
 . Verifique se um agregado existente tem capacidade disponível para os volumes que você precisa mover:
 +
 .. No sistema Cloud Volumes ONTAP , clique na guia *Agregados*.
-.. No bloco agregado necessário, clique emimage:icon-action.png[""] ícone e então *Exibir detalhes agregados* para visualizar a capacidade disponível (tamanho provisionado menos capacidade agregada usada).
+.. No bloco de agregado necessário, clique no ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] e depois em *Ver detalhes do agregado* para visualizar a capacidade disponível (tamanho provisionado menos a capacidade do agregado utilizada).
 +
 image::screenshot_aggr_capacity.png[capacidade de agregação de captura de tela]
 
@@ -356,7 +356,7 @@ image::screenshot_aggr_capacity.png[capacidade de agregação de captura de tela
 
 . Se necessário, adicione discos a um agregado existente:
 +
-.. Selecione o agregado e clique emimage:icon-action.png[""] ícone > *Adicionar discos*.
+.. Selecione o agregado, depois clique no ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] > *Adicionar discos*.
 .. Selecione o número de discos a serem adicionados e clique em *Adicionar*.
 
 

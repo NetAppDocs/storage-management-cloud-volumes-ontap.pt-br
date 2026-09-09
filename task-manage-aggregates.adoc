@@ -29,11 +29,11 @@ Se um agregado estiver ficando sem espaço, você poderá mover volumes para out
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
 . Na página *Sistemas*, clique duas vezes no sistema Cloud Volumes ONTAP no qual você deseja gerenciar agregados.
 . Nos detalhes do sistema, clique na aba *Agregados*.
-. Para o agregado necessário, clique emimage:icon-action.png[""] ícone para as ações de gerenciamento.
+. Para o agregado desejado, clique no ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] para as ações de gerenciamento.
 +
 image:screenshot_aggr_menu_options.png["Uma captura de tela das opções do menu Agregados."]
 
-. Gerencie seus agregados a partir das opções disponíveis noimage:icon-action.png[""] menu.
+. Gerencie seus agregados a partir das opções disponíveis no image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] menu.
 
 
 
@@ -43,7 +43,7 @@ ifdef::aws[]
 
 Para a AWS, você pode aumentar a capacidade de um agregado que oferece suporte ao Amazon EBS Elastic Volumes.
 
-. Sob oimage:icon-action.png[""] menu, clique em *Aumentar capacidade*.
+. No image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] menu, clique em *Aumentar capacidade*.
 . Insira a capacidade adicional que você gostaria de adicionar e clique em *Aumentar*.
 
 

@@ -65,7 +65,7 @@ Selecione a aba Volumes e clique em *Adicionar Volume*.image:screenshot_add_volu
 --
 .Agregado específico
 --
-.. Na aba *Agregados*, vá até o agregado desejado e clique no botãoimage:icon-action.png[""] ícone.
+.. Na aba *Agregados*, acesse o agregado desejado e clique no ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"].
 .. Selecione *Adicionar volume*.image:screenshot_add_volume_button_agg.png["Uma captura de tela do botão Adicionar volume na aba Agregados."]
 
 

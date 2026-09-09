@@ -35,7 +35,7 @@ https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.htm
 . Exclua o sistema Cloud Volumes ONTAP .
 +
 .. Na página *Sistemas*, clique duas vezes no nome do sistema Cloud Volumes ONTAP que você deseja excluir.
-.. No canto superior direito do Console, clique emimage:icon-action.png[""] ícone e selecione *Excluir*.
+.. No canto superior direito do Console, clique no ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] e selecione *Excluir*.
 .. Digite o nome do sistema que você deseja excluir e clique em *Excluir*.  Pode levar até cinco minutos para excluir um sistema.
 
 
