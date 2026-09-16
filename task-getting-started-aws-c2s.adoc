@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-getting-started-aws-c2s.html 
 keywords: commercial cloud services, c2s, secret cloud, top secret cloud, aws secret region, the Console 
-summary: Semelhante a uma região padrão da AWS, você pode implantar o Cloud Volumes ONTAP em ambientes AWS Secret Cloud e Top Secret Cloud, que fornecem recursos de nível empresarial para seu armazenamento em nuvem.  As regiões AWS Secret Cloud e Top Secret Cloud são regiões fechadas específicas para a Comunidade de Inteligência dos EUA; as instruções nesta página se aplicam somente aos usuários das regiões AWS Secret Cloud e Top Secret Cloud. 
+summary: Você pode implantar o Cloud Volumes ONTAP nos ambientes AWS Secret Cloud e Top Secret Cloud. As regiões AWS Secret Cloud e Top Secret Cloud são regiões fechadas específicas para a Comunidade de Inteligência dos EUA. As instruções nesta página se aplicam somente a usuários das regiões AWS Secret Cloud e Top Secret Cloud. 
 ---
 = Implantar o Cloud Volumes ONTAP no AWS Secret Cloud ou no AWS Top Secret Cloud
 :hardbreaks:
@@ -33,7 +33,7 @@ O agente do Console é necessário para implantar e gerenciar o Cloud Volumes ON
 No AWS Secret Cloud e Top Secret Cloud, o Console opera no _modo privado_.  No modo privado, não há conectividade com a camada SaaS do Console.  Você pode acessar o Console por meio de um aplicativo local baseado na Web que pode acessar o agente do Console.
 
 +
-Para saber mais sobre como funciona o modo privado, consultelink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode["o modo de implantação privada no Console"^] .
+Para saber mais sobre como funciona o modo privado, consulte link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html#private-mode["o modo de implantação privada no Console"^].
 
 
 

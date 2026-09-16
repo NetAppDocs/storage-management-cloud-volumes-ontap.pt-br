@@ -26,9 +26,9 @@ Criar um agente do Console
  a| 
 Se você ainda não possui um agente de Console, crie um antes de implantar Cloud Volumes ONTAP.
  a| 
-Consulte o guia de configuração do console: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Crie um agente de console no Azure"^]
+Consulte o guia de configuração do console: https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Crie um agente de console no Azure"^]
  a| 
-Se a implantação for feita em uma sub-rede sem acesso à internet, instale manualmente o agente do Console e acesse a interface de usuário do NetApp Console que está sendo executada nesse agente do Console. Consulte o guia de configuração do Console: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Instale manualmente o agente do Console sem acesso à internet"^]
+Se a implantação for feita em uma sub-rede sem acesso à internet, instale manualmente o agente do Console e acesse a interface de usuário do NetApp Console que está sendo executada nesse agente do Console. Consulte o guia de configuração do console: https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["Instale manualmente o agente do Console sem acesso à internet"^]
 
 
 
@@ -77,8 +77,8 @@ Antes de iniciar a implantação, certifique-se de que você adquiriu uma licen�
 
 |===
 .Links relacionados
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Criando um agente de console a partir do console"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-marketplace.html["Criando um agente de console no Azure Marketplace"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Instalando o software do agente do Console em um host Linux"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["O que o Console faz com as permissões"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Criando um agente de console a partir do console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-marketplace.html["Criando um agente de console no Azure Marketplace"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Instalando o software do agente do Console em um host Linux"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["O que o Console faz com as permissões"^]
 

@@ -173,7 +173,7 @@ Você não precisa configurar uma conexão entre a camada de desempenho e a cama
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-A função personalizada inclui as permissões por padrão. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Exibir permissão do Azure para o agente do Console"^]
+A função personalizada inclui as permissões por padrão. https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["Exibir permissão do Azure para o agente do Console"^]
 
 endif::azure[]
 
@@ -301,7 +301,7 @@ O Cloud Volumes ONTAP pode hierarquizar dados de um volume de proteção de dado
 image:screenshot_replication_tiering.gif["Captura de tela que mostra a opção de camadas do S3 ao replicar um volume."]
 
 +
-Para obter ajuda com a replicação de dados, consulte https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replicando dados de e para a nuvem"^] .
+Para obter ajuda com a replicação de dados, consulte  https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["Replicando dados de e para a nuvem"^].
 
 
 

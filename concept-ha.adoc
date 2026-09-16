@@ -94,7 +94,7 @@ Se você não conseguir configurar um gateway de trânsito, endereços IP privad
 
 Você deve revisar os requisitos para endereços IP flutuantes e tabelas de rotas antes de implantar uma configuração de HA em várias zonas de disponibilidade.  Você deve especificar os endereços IP flutuantes ao implantar a configuração.  Os endereços IP privados são criados automaticamente.
 
-Para mais informações, consulte link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["Requisitos de rede da AWS para Cloud Volumes ONTAP HA em várias AZs"^] .
+Para mais informações, consulte link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["Requisitos de rede da AWS para Cloud Volumes ONTAP HA em várias AZs"^].
 
 
 

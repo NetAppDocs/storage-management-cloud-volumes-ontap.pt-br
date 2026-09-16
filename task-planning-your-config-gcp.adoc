@@ -107,7 +107,7 @@ Consulte o seguinte para mais detalhes:
 
 Além do armazenamento para dados do usuário, o Console também adquire armazenamento em nuvem para dados do sistema Cloud Volumes ONTAP (dados de inicialização, dados raiz, dados principais e NVRAM).  Para fins de planejamento, pode ser útil revisar esses detalhes antes de implantar o Cloud Volumes ONTAP.
 
-* link:reference-default-configs.html#google-cloud-single-node["Visualize os discos padrão para dados do sistema Cloud Volumes ONTAP no Google Cloud"] .
+* link:reference-configs-gcp.html#google-cloud-single-node["Visualize os discos padrão para dados do sistema Cloud Volumes ONTAP no Google Cloud"].
 * https://docs.cloud.google.com/docs/quotas/overview["Documentação do Google Cloud: Visão geral das quotas de nuvem"^]
 +
 O Google Cloud Compute Engine impõe cotas no uso de recursos, portanto, você deve garantir que não atingiu seu limite antes de implantar o Cloud Volumes ONTAP.
@@ -115,7 +115,7 @@ O Google Cloud Compute Engine impõe cotas no uso de recursos, portanto, você d
 
 
 
-TIP: O agente do Console também requer um disco do sistema. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-default-config.html["Exibir detalhes sobre a configuração padrão do agente do Console"^] .
+TIP: O agente do Console também requer um disco de sistema. https://docs.netapp.com/us-en/console-setup-admin/reference-connector-default-config.html["Exibir detalhes sobre a configuração padrão do agente do Console"^].
 
 
 

@@ -21,4 +21,4 @@ O BlueXP agora oferece suporte a AWS Local Zones para implantações de alta dis
 
 NOTE: As zonas locais da AWS não são suportadas ao usar o BlueXP no modo restrito.
 
-Para obter mais informações sobre Zonas Locais da AWS com Implantações de HA, consultelink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html#aws-local-zones["Zonas locais da AWS"^] .
+Para obter mais informações sobre as Zonas Locais da AWS com implantações de alta disponibilidade, consulte link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-ha.html#aws-local-zones["Zonas locais da AWS"^].

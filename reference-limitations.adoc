@@ -71,7 +71,7 @@ O número máximo de transferências simultâneas de SnapMirror ou SnapVault par
 
 Você não deve usar snapshots do seu provedor de nuvem como parte do seu plano de backup e recuperação para dados do Cloud Volumes ONTAP. Você deve sempre usar cópias de Snapshot do ONTAP ou soluções de backup de terceiro para fazer backup e restaurar dados hospedados no Cloud Volumes ONTAP.
 
-https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Aprenda a usar NetApp Backup and Recovery para fazer backup e restaurar dados do ONTAP"^].
+https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Aprenda a usar NetApp Backup and Recovery para fazer backup e restaurar dados do ONTAP"^].
 
 
 NOTE: Os pontos de consistência do ONTAP no sistema de arquivos WAFL determinam a consistência de dados. Somente o ONTAP pode colocar o sistema de arquivos WAFL em estado de espera para criar um backup consistente com falhas.

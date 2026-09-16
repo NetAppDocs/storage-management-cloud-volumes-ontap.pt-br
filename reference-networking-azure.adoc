@@ -30,7 +30,7 @@ Os seguintes requisitos de rede devem ser atendidos no Azure.
 
 Os sistemas Cloud Volumes ONTAP exigem acesso de saída à Internet para acessar endpoints externos para diversas funções.  O Cloud Volumes ONTAP não poderá operar corretamente se esses endpoints estiverem bloqueados em ambientes com requisitos de segurança rigorosos.
 
-O agente do Console também entra em contato com vários endpoints para operações diárias.  Para obter informações sobre pontos de extremidade, consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-3-set-up-networking["Exibir endpoints contatados pelo agente do Console"^] e https://docs.netapp.com/us-en/bluexp-setup-admin/reference-networking-saas-console.html["Preparar a rede para usar o Console"^] .
+O agente do Console também contata vários endpoints para operações diárias. Para obter informações sobre endpoints, consulte  https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html#step-3-set-up-networking["Exibir endpoints contatados pelo agente do Console"^] e  https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html["Preparar a rede para usar o Console"^].
 
 
 
@@ -89,7 +89,7 @@ Você pode usar a configuração de servidores proxy do agente do NetApp Console
 * *Proxy transparente*: A rede está configurada para rotear automaticamente o tráfego de saída do Cloud Volumes ONTAP por meio do proxy para o agente do Console.  Ao configurar um proxy transparente, o administrador precisa fornecer apenas um certificado de CA raiz para conectividade do Cloud Volumes ONTAP, não o endereço HTTP do servidor proxy.  Certifique-se de obter e carregar o mesmo certificado de CA raiz para o seu sistema Cloud Volumes ONTAP usando o https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP CLI: instalação do certificado de segurança"^] comando.
 
 
-Para obter informações sobre como configurar servidores proxy, consulte o https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["Configurar o agente do Console para usar um servidor proxy"^] .
+Para obter informações sobre como configurar servidores proxy, consulte o  https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["Configurar o agente do Console para usar um servidor proxy"^].
 
 
 
@@ -224,7 +224,7 @@ O Console terá problemas de conexão se você tentar implantar um segundo par d
 [[security-group-rules]]
 === Regras do grupo de segurança
 
-O Console cria grupos de segurança do Azure que incluem as regras de entrada e saída para que o Cloud Volumes ONTAP opere com sucesso. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Exibir regras de grupo de segurança para o agente do Console"^] .
+O Console cria grupos de segurança do Azure que incluem as regras de entrada e saída para que o Cloud Volumes ONTAP funcione corretamente https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Exibir regras de grupo de segurança para o agente do Console"^].
 
 Os grupos de segurança do Azure para o Cloud Volumes ONTAP exigem que as portas apropriadas estejam abertas para comunicação interna entre os nós. https://docs.netapp.com/us-en/ontap/networking/ontap_internal_ports.html["Saiba mais sobre as portas internas do ONTAP"^] .
 
@@ -505,8 +505,8 @@ NOTE: A origem é a interface (endereço IP) no sistema Cloud Volumes ONTAP .
 
 Se você ainda não criou um agente do Console, revise também os requisitos de rede para o agente do Console.
 
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Exibir requisitos de rede para o agente do Console"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regras de grupo de segurança no Azure"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Exibir requisitos de rede para o agente do Console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Regras de grupo de segurança no Azure"^]
 
 
 .Link relacionado

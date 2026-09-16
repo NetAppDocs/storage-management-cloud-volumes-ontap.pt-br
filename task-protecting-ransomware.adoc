@@ -63,7 +63,7 @@ image:screenshot_ransomware_protection.gif["Uma captura de tela que mostra a pá
 
 O Cloud Volumes ONTAP oferece suporte ao recurso Autonomous Ransomware Protection (ARP), que realiza análises em cargas de trabalho para detectar e alertar proativamente sobre atividades anormais que podem indicar um ataque de ransomware.
 
-Separado das proteções de extensão de arquivo fornecidas pelo https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html#protection-from-common-ransomware-file-extensions["configuração de proteção contra ransomware"] , o recurso ARP usa análise de carga de trabalho para alertar o usuário sobre ataques potenciais com base na “atividade anormal” detectada.  Tanto a configuração de proteção contra ransomware quanto o recurso ARP podem ser usados em conjunto para uma proteção abrangente contra ransomware.
+Separado da proteção de extensão de arquivo fornecida pelo  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-protecting-ransomware.html#protection-from-common-ransomware-file-extensions["configuração de proteção contra ransomware"], o recurso ARP utiliza análise de carga de trabalho para alertar você sobre possíveis ataques com base em "atividade anormal" detectada. Tanto a configuração de proteção contra ransomware quanto o recurso ARP podem ser usados em conjunto para uma proteção abrangente contra ransomware.
 
 O recurso ARP está disponível para uso com assinaturas de licença própria (BYOL) e de mercado para suas licenças, sem custo adicional.
 

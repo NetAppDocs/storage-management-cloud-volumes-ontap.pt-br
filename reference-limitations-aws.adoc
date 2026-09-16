@@ -58,4 +58,4 @@ Cloud Volumes ONTAP não libera CPUs quando ociosas, então  https://aws.amazon.
 
 Após a reinicialização de um nó, o parceiro deve sincronizar os dados antes de poder devolver o armazenamento. O tempo necessário para ressincronizar os dados depende da quantidade de dados gravados pelos clientes enquanto o nó estava inativo e da velocidade de gravação de dados durante o tempo de giveback.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html["Aprenda como funciona o armazenamento em um par de HA do Cloud Volumes ONTAP em execução na AWS"^].
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-ha.html["Aprenda como funciona o armazenamento em um par de HA do Cloud Volumes ONTAP em execução na AWS"^].

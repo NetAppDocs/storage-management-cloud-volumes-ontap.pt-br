@@ -18,7 +18,7 @@ Uma VM de armazenamento é uma máquina virtual executada no ONTAP que fornece s
 
 Para criar e gerenciar VMs adicionais de armazenamento de dados no Azure, você deve usar as APIs.  Isso ocorre porque as APIs automatizam o processo de criação de VMs de armazenamento e configuração das interfaces de rede necessárias.  Ao criar as VMs de armazenamento, o NetApp Console configura os serviços LIF necessários, bem como um LIF iSCSI necessário para comunicações SMB/CIFS de saída da VM de armazenamento.
 
-Para obter informações sobre como executar chamadas de API Cloud Volumes ONTAP , consulte https://docs.netapp.com/us-en/bluexp-automation/cm/your_api_call.html#step-1-select-the-identifie["Sua primeira chamada de API"^] .
+Para obter informações sobre como executar chamadas da API do Cloud Volumes ONTAP, consulte  https://docs.netapp.com/us-en/console-automation/cm/your_api_call.html#step-1-select-the-identifie["Sua primeira chamada de API"^].
 
 
 
@@ -47,7 +47,7 @@ Ao criar VMs de armazenamento usando as APIs, juntamente com a configuração da
 
 
 .Antes de começar
-O agente do Console requer permissões específicas para criar VMs de armazenamento para o Cloud Volumes ONTAP.  As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["as políticas fornecidas pela NetApp"^] .
+O agente do Console requer permissões específicas para criar VMs de armazenamento para o Cloud Volumes ONTAP. As permissões necessárias estão incluídas em  https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["as políticas fornecidas pela NetApp"^].
 
 
 
@@ -91,7 +91,7 @@ Inclua os seguintes parâmetros no corpo da solicitação:
 Usando as APIs, você pode renomear e excluir VMs de armazenamento em configurações de nó único e HA.
 
 .Antes de começar
-O agente do Console requer permissões específicas para gerenciar VMs de armazenamento para o Cloud Volumes ONTAP.  As permissões necessárias estão incluídas em https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["as políticas fornecidas pela NetApp"^] .
+O agente do Console requer permissões específicas para gerenciar VMs de armazenamento para o Cloud Volumes ONTAP. As permissões necessárias estão incluídas em  https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["as políticas fornecidas pela NetApp"^].
 
 
 
@@ -152,8 +152,8 @@ Em uma configuração de nó único ou HA, você pode remover uma VM de armazena
 
 
 .Informações relacionadas
-* https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html["Prepare-se para usar a API"^]
-* https://docs.netapp.com/us-en/bluexp-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Fluxos de trabalho do Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-connector-identifier["Obtenha os identificadores necessários"^]
-* https://docs.netapp.com/us-en/bluexp-automation/platform/use_rest_apis.html["Use as APIs REST para o NetApp Console"^]
+* https://docs.netapp.com/us-en/console-automation/cm/prepare.html["Prepare-se para usar a API"^]
+* https://docs.netapp.com/us-en/console-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Fluxos de trabalho do Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/console-automation/platform/get_identifiers.html#get-the-connector-identifier["Obtenha os identificadores necessários"^]
+* https://docs.netapp.com/us-en/console-automation/platform/use_rest_apis.html["Use as APIs REST para o NetApp Console"^]
 

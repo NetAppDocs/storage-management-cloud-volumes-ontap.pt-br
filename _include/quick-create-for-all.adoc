@@ -121,7 +121,7 @@ endif::gcp[]
 
 ifdef::gcp[]
 
-Para o Google Cloud, se você planeja usar link:concept-data-tiering.html["hierarquização de dados"] ou  https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] com Cloud Volumes ONTAP, então você precisa habilitar a *Conta de Serviço* e selecionar uma conta de serviço que tenha a função predefinida de Storage Admin. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^]. A conta de serviço associada ao agente do Console https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["deve ter as permissões necessárias"^].
+Para o Google Cloud, se você planeja usar link:concept-data-tiering.html["hierarquização de dados"] ou  https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] com Cloud Volumes ONTAP, então você precisa habilitar a *Conta de Serviço* e selecionar uma conta de serviço que tenha a função predefinida de Storage Admin. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^]. A conta de serviço associada ao agente do Console  https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["deve ter as permissões necessárias"^].
 
 endif::gcp[]
 
@@ -170,7 +170,7 @@ Se você selecionou uma configuração de alta disponibilidade (HA), insira as s
 
 .HA em várias AZ
 ... *Zonas de disponibilidade e mediador*: selecione as zonas de disponibilidade (AZs) para cada nó, o mediador e as sub-redes correspondentes onde você deseja implantar o par Cloud Volumes ONTAP HA.
-... *IPs flutuantes*: se você escolher várias AZs, especifique os endereços IP flutuantes para os serviços NFS e CIFS e para o gerenciamento de cluster e SVM.  Os endereços IP devem estar fora do bloco CIDR para todas as VPCs na região.  Para obter detalhes adicionais, consultelink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["Requisitos de rede da AWS para Cloud Volumes ONTAP HA em várias AZs"^] .
+... *IPs flutuantes*: Se você selecionou várias AZs, especifique os endereços IP flutuantes para os serviços NFS e CIFS e para o gerenciamento do cluster e da SVM. Os endereços IP devem estar fora do bloco CIDR de todas as VPCs na região. Para obter mais detalhes, consulte link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["Requisitos de rede da AWS para Cloud Volumes ONTAP HA em várias AZs"^].
 ... *Acesso do mediador*: especifique as informações de acesso do mediador.  O mediador é uma instância separada que monitora a integridade do par HA e fornece quorum em caso de falha.  Forneça o nome do par de chaves para permitir que a instância do mediador se conecte ao serviço AWS EC2 e selecione o método de conexão.
 ... *Tabelas de rotas*: se você escolher várias zonas de disponibilidade, selecione as tabelas de rotas que incluem rotas para os endereços IP flutuantes.  Se você tiver mais de uma tabela de rotas, é importante selecionar as tabelas de rotas corretas.  Caso contrário, alguns clientes podem não ter acesso ao par Cloud Volumes ONTAP HA.  Para obter mais informações sobre tabelas de rotas, consulte o http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["Documentação da AWS: Tabelas de rotas"^] .
 

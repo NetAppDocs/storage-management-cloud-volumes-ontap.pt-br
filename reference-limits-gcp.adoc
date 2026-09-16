@@ -25,7 +25,7 @@ A capacidade máxima do sistema Cloud Volumes ONTAP é determinada pela sua lice
 
 NetApp não suporta exceder o limite de capacidade do sistema. Se você atingir o limite de capacidade licenciado, o NetApp Console exibirá uma mensagem de ação necessária e não permitirá mais adicionar discos adicionais.
 
-Em algumas configurações, os limites de disco impedem que você atinja o limite de capacidade usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^]. Consulte os limites de disco abaixo para mais detalhes.
+Em algumas configurações, os limites de disco impedem que você atinja o limite de capacidade usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^]. Consulte os limites de disco abaixo para mais detalhes.
 
 [[cap-license-gcp]]
 .Limite de capacidade para licenças baseadas em capacidade
@@ -131,7 +131,7 @@ Algumas configurações permitem que você crie VMs de armazenamento adicionais 
 
 Esses são os limites testados. Configurar mais VMs de armazenamento não é suportado.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html["Saiba como criar VMs de armazenamento adicionais"^].
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-managing-svms-gcp.html["Saiba como criar VMs de armazenamento adicionais"^].
 
 [cols="2*"]
 |===
@@ -259,4 +259,4 @@ As VMs de armazenamento que você configurar para recuperação de desastres (DR
 
 Após a reinicialização de um nó, o parceiro deve sincronizar os dados antes de poder devolver o armazenamento. O tempo necessário para ressincronizar os dados depende da quantidade de dados gravados pelos clientes enquanto o nó estava inativo e da velocidade de gravação de dados durante o tempo de giveback.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-google-cloud.html["Aprenda como funciona o storage em um par de HA do Cloud Volumes ONTAP em execução no Google Cloud"^].
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-ha-google-cloud.html["Aprenda como funciona o storage em um par de HA do Cloud Volumes ONTAP em execução no Google Cloud"^].

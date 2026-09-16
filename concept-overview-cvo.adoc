@@ -34,7 +34,7 @@ O Cloud Volumes ONTAP utiliza o SnapMirror, a tecnologia de replicação líder 
 O Cloud Volumes ONTAP também se integra ao NetApp Backup and Recovery para fornecer recursos de backup e restauração para proteção e arquivamento de longo prazo dos seus dados na nuvem.
 
 +
-link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre backup e recuperação"^]
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre backup e recuperação"^]
 
 * Camadas de dados
 +
@@ -56,7 +56,7 @@ O Cloud Volumes ONTAP oferece suporte à criptografia de dados e proteção cont
 A integração com a NetApp Data Classification ajuda você a entender o contexto dos dados e identificar dados confidenciais.
 
 +
-https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre Classificação de Dados"^]
+https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre Classificação de Dados"^]
 
 
 
@@ -65,4 +65,4 @@ NOTE: Licenças para recursos do ONTAP estão incluídas no Cloud Volumes ONTAP.
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Ver configurações Cloud Volumes ONTAP suportadas"^]
 
-https://bluexp.netapp.com/ontap-cloud["Saiba mais sobre o Cloud Volumes ONTAP"^]
+link:https://www.netapp.com/ontap-cloud/["Saiba mais sobre o Cloud Volumes ONTAP"^]

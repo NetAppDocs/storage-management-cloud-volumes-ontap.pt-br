@@ -51,7 +51,7 @@ image::screenshot-settings-cloud-volumes-ontap.png[Uma captura de tela da opçã
 .Depois que você terminar
 Se você desabilitou os Links Privados do Azure e o agente do Console usa um servidor proxy, você deve habilitar o tráfego direto da API.
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html#enable-a-proxy-on-a-connector["Aprenda como habilitar o tráfego direto da API no agente do Console"^]
+https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html#enable-a-proxy-on-a-connector["Aprenda como habilitar o tráfego direto da API no agente do Console"^]
 
 
 

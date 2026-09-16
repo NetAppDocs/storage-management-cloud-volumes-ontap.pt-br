@@ -25,7 +25,7 @@ Se você habilitar essa configuração, o Cloud Volumes ONTAP vetará os bloquei
 CAUTION: Esse processo pode ser prejudicial aos clientes do CIFS.  Dados não confirmados de clientes CIFS podem ser perdidos.
 
 .Antes de começar
-Você precisa criar um agente do Console antes de poder alterar as configurações do Console. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#how-to-create-a-connector["Aprenda como"^] .
+Você precisa criar um agente de console antes de poder alterar as configurações do console. https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#how-to-create-a-connector["Aprenda como"^]
 
 .Passos
 . No painel de navegação esquerdo, acesse *Administração > Agentes*.

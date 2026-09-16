@@ -30,7 +30,7 @@ O Backup and Recovery é independente do Cloud Volumes ONTAP por design.  O Back
 
 . Se você habilitou a Classificação de Dados neste sistema e nenhum outro sistema usa este serviço, você precisa excluir a instância do serviço.
 +
-https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#the-cloud-data-sense-instance["Saiba mais sobre a instância de Classificação de Dados"^] .
+https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html#the-cloud-data-sense-instance["Saiba mais sobre a instância de Classificação de Dados"^].
 
 . Exclua o sistema Cloud Volumes ONTAP .
 +

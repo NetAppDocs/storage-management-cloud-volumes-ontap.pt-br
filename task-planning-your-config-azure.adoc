@@ -112,10 +112,10 @@ Consulte o Azure para IOPS e taxa de transferência por tamanho de disco:
 
 Além do armazenamento para dados do usuário, o Console também adquire armazenamento em nuvem para dados do sistema Cloud Volumes ONTAP (dados de inicialização, dados raiz, dados principais e NVRAM).  Para fins de planejamento, pode ser útil revisar esses detalhes antes de implantar o Cloud Volumes ONTAP.
 
-link:reference-default-configs.html#azure-single-node["Exibir os discos padrão para dados do sistema Cloud Volumes ONTAP no Azure"] .
+link:reference-configs-azure.html#azure-single-node["Exibir os discos padrão para dados do sistema Cloud Volumes ONTAP no Azure"].
 
 
-TIP: O agente do Console também requer um disco do sistema. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-default-config.html["Exibir detalhes sobre a configuração padrão do agente do Console"^] .
+TIP: O agente do Console também requer um disco de sistema. https://docs.netapp.com/us-en/console-setup-admin/reference-connector-default-config.html["Exibir detalhes sobre a configuração padrão do agente do Console"^].
 
 
 

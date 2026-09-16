@@ -28,9 +28,9 @@ Criar um agente do Console
  a| 
 Se você ainda não possui um agente de Console, crie um antes de implantar Cloud Volumes ONTAP. Se a implantação for em uma sub-rede sem acesso à internet, instale manualmente o agente de Console e acesse o NetApp Console em execução nesse agente.
  a| 
-Consulte o guia de configuração do console: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Crie um agente de Console na AWS"^]
+Consulte o guia de configuração do console: https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Crie um agente de Console na AWS"^]
  a| 
-Se a implantação for feita em uma sub-rede sem acesso à internet, instale manualmente o agente do Console e acesse a interface de usuário do NetApp Console que está sendo executada nesse agente do Console. Consulte o guia de configuração do Console: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Instale manualmente o agente do Console sem acesso à internet"^]
+Se a implantação for feita em uma sub-rede sem acesso à internet, instale manualmente o agente do Console e acesse a interface de usuário do NetApp Console que está sendo executada nesse agente do Console. Consulte o guia de configuração do console: https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["Instale manualmente o agente do Console sem acesso à internet"^]
 
 
 
@@ -89,8 +89,8 @@ Antes de iniciar a implantação, certifique-se de que você adquiriu uma licen�
 
 |===
 .Links relacionados
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-bluexp.html["Crie um agente de console para AWS"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-marketplace.html["Crie um agente de console no AWS Marketplace"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Instalar e configurar um agente do Console no local"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["Permissões da AWS para o agente do Console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html["Crie um agente de console para AWS"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-marketplace.html["Crie um agente de console no AWS Marketplace"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Instalar e configurar um agente do Console no local"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["Permissões da AWS para o agente do Console"^]
 

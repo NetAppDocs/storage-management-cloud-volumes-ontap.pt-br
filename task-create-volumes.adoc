@@ -30,7 +30,7 @@ Você tem várias maneiras de criar um novo volume:
 
 Algumas notas sobre provisionamento de volume:
 
-* Quando você cria um volume iSCSI, o Console cria automaticamente um LUN para você.  Simplificamos criando apenas um LUN por volume, portanto não há gerenciamento envolvido.  Depois de criar o volume,link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-connect-lun.html["use o IQN para conectar-se ao LUN de seus hosts"^] .
+* Ao criar um volume iSCSI, o Console cria automaticamente um LUN para você. Simplificamos o processo criando apenas um LUN por volume, então não há necessidade de gerenciamento. Após criar o volume, link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-connect-lun.html["use o IQN para conectar-se ao LUN de seus hosts"^].
 * Você pode criar LUNs adicionais no ONTAP System Manager ou no ONTAP CLI.
 
 
@@ -157,7 +157,7 @@ ifdef::gcp[]
 endif::gcp[]
 
 Domínio DNS:: O domínio DNS para a máquina virtual de armazenamento (SVM) do Cloud Volumes ONTAP .  Na maioria dos casos, o domínio é o mesmo que o domínio do AD.
-Servidor NTP:: Selecione *Usar domínio do Active Directory* para configurar um servidor NTP usando o DNS do Active Directory.  Se você precisar configurar um servidor NTP usando um endereço diferente, use a API.  Para obter informações, consulte o https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentação de automação do NetApp Console"^] .
+Servidor NTP:: Selecione *Usar domínio do Active Directory* para configurar um servidor NTP usando o DNS do Active Directory. Se você precisar configurar um servidor NTP usando um endereço diferente, então deverá usar a API. Para obter informações, consulte a  https://docs.netapp.com/us-en/console-automation/index.html["NetApp Console documentação de automação"^].
 +
 --
 Observe que você só pode configurar um servidor NTP ao criar um servidor CIFS.  Não é configurável depois de criar o servidor CIFS.
@@ -180,7 +180,7 @@ Iniciador do host (IQN):: Os destinos iSCSI se conectam à rede por meio de adap
 ifdef::aws[]
 
 +
-*** link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config.html#size-your-system-in-aws["Dimensionando seu sistema na AWS"^]
+*** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-planning-your-config.html#size-your-system-in-aws["Dimensionando seu sistema na AWS"^]
 
 
 
@@ -191,14 +191,14 @@ endif::aws[]
 
 ifdef::azure[]
 
-* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure["Dimensionando seu sistema no Azure"^]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure["Dimensionando seu sistema no Azure"^]
 
 
 endif::azure[]
 
 ifdef::gcp[]
 
-* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensionando seu sistema no Google Cloud"^]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensionando seu sistema no Google Cloud"^]
 
 
 endif::gcp[]

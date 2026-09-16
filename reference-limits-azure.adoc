@@ -108,7 +108,7 @@ Os limites não incluem o disco raiz, o disco principal e a VNVRAM.
 [[limits-for-different-deployment-modes-of-capacity-based-licensing]]
 === Limites para diferentes modos de implantação do modelo de licenciamento baseado em capacidade
 
-Os seguintes limites de disco aplicam-se aos sistemas Cloud Volumes ONTAP que utilizam um pacote de licenciamento baseado em capacidade https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Saiba mais sobre as opções de licenciamento do Cloud Volumes ONTAP"^].
+Os seguintes limites de disco aplicam-se aos sistemas Cloud Volumes ONTAP que utilizam um pacote de licenciamento baseado em capacidade https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Saiba mais sobre as opções de licenciamento do Cloud Volumes ONTAP"^].
 
 
 NOTE: Para obter informações sobre os limites máximos de capacidade do sistema e de capacidade de camadas de dados para um único nó, pares de HA em uma única zona de disponibilidade com blobs de página e pares de HA em uma única e múltiplas zonas de disponibilidade com discos gerenciados compartilhados, consulte <<cap-license-azure>>.
@@ -341,7 +341,7 @@ NOTE: Para obter informações sobre os limites máximos de capacidade do sistem
 
 Os seguintes limites de disco aplicam-se aos sistemas Cloud Volumes ONTAP que utilizam licenciamento baseado em nós. O licenciamento baseado em nós é o modelo da geração anterior que permite licenciar Cloud Volumes ONTAP por nó. O licenciamento baseado em nós ainda está disponível para clientes existentes.
 
-Você pode adquirir várias licenças baseadas em nós para um Cloud Volumes ONTAP de nó único ou sistema de par de HA BYOL para alocar mais de 368 TiB de capacidade, até o limite máximo de capacidade do sistema testado e suportado de 2 PiB. Observe que os limites de disco podem impedir que você atinja o limite de capacidade usando apenas discos. Você pode ultrapassar o limite de disco por meio de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Aprenda como adicionar licenças de sistema adicionais ao Cloud Volumes ONTAP"^]. Cloud Volumes ONTAP suporta até a capacidade máxima do sistema testada e suportada de 2 PiB, e ultrapassar o limite de 2 PiB resulta em uma configuração de sistema não suportada.
+Você pode adquirir várias licenças baseadas em nós para um Cloud Volumes ONTAP de nó único ou sistema de par de HA BYOL para alocar mais de 368 TiB de capacidade, até o limite máximo de capacidade do sistema testado e suportado de 2 PiB. Observe que os limites de disco podem impedir que você atinja o limite de capacidade usando apenas discos. Você pode ultrapassar o limite de disco por meio de https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^]. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Aprenda como adicionar licenças de sistema adicionais ao Cloud Volumes ONTAP"^]. Cloud Volumes ONTAP suporta até a capacidade máxima do sistema testada e suportada de 2 PiB, e ultrapassar o limite de 2 PiB resulta em uma configuração de sistema não suportada.
 
 
 
@@ -631,7 +631,7 @@ Algumas configurações permitem que você crie VMs de armazenamento adicionais 
 
 Esses são os limites testados. Configurar mais máquinas virtuais de armazenamento não é suportado.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azure.html["Saiba como criar VMs de armazenamento adicionais"^].
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-managing-svms-azure.html["Saiba como criar VMs de armazenamento adicionais"^].
 
 [cols="2*"]
 |===

@@ -36,7 +36,7 @@ TIP: O NetApp Console altera um nó por vez, iniciando a aquisição e aguardand
 
 
 .Referência
-Para obter uma lista dos tipos de instâncias compatíveis na AWS, consulte link:reference-configs-aws.html#supported-ec2-compute["Instâncias EC2 suportadas"].
+Para obter uma lista dos tipos de instâncias compatíveis na AWS, consulte link:reference-configs-aws.html#supported-storage["Instâncias EC2 suportadas"].
 
 Se você não conseguir alterar o tipo de instância de c4, m4 ou r4, consulte o artigo da KBlink:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Converting_an_AWS_Xen_CVO_instance_to_Nitro_(KVM)["Convertendo uma instância AWS Xen CVO para Nitro (KVM)"^] .
 

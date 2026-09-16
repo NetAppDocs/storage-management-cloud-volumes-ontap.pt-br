@@ -14,7 +14,7 @@ summary: Configure o Cloud Volumes ONTAP com acesso multiprotocolo ONTAP S3 para
 
 
 [role="lead"]
-Você pode integrar Cloud Volumes ONTAP com https://community.fabric.microsoft.com/["Microsoft Fabric"^] usando https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview["Microsoft OneLake"^] para disponibilizar os dados NAS existentes do Cloud Volumes ONTAP para os serviços de análise e IA da Microsoft, como Power BI, Azure AI Search, OpenAI e Microsoft Copilot. A integração não requer movimentação de dados nem duplicação. A integração usa https://docs.netapp.com/us-en/ontap/s3-multiprotocol/index.html["ONTAP S3 multi-protocolo"^] acesso para conectar Cloud Volumes ONTAP a um Microsoft Fabric lakehouse existente.
+Você pode integrar o Cloud Volumes ONTAP com link:https://community.fabric.microsoft.com/["Microsoft Fabric"^] usando link:https://learn.microsoft.com/en-us/fabric/onelake/onelake-overview["Microsoft OneLake"^] para disponibilizar os dados NAS existentes do Cloud Volumes ONTAP para os serviços de análise e IA da Microsoft, como Power BI, Azure AI Search, OpenAI e Microsoft Copilot. A integração não requer movimentação de dados nem duplicação. A integração utiliza o acesso link:https://docs.netapp.com/us-en/ontap/s3-multiprotocol/index.html["ONTAP S3 multi-protocolo"^] para conectar o Cloud Volumes ONTAP a um lakehouse Microsoft Fabric existente.
 
 
 

@@ -19,7 +19,7 @@ A verificação da assinatura de um arquivo VHD exportado no Linux inclui a vali
 .Passos
 . Baixe o arquivo de imagem do Azure em https://mysupport.netapp.com/site/["Site de suporte da NetApp"^] e extraia o arquivo digest (.sig), o arquivo de certificado de chave pública (.pem) e o arquivo de certificado de cadeia (.pem).
 +
-Consulte https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-azure-download-digest-file.html["Baixe o arquivo de resumo da imagem do Azure"^] para maiores informações.
+Consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-azure-download-digest-file.html["Baixe o arquivo de resumo da imagem do Azure"^] para obter mais informações.
 
 . Verifique a cadeia de confiança.
 +

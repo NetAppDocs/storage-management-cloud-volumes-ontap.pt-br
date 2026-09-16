@@ -26,7 +26,7 @@ Os pacotes de licenciamento baseados em capacidade estão disponíveis com os se
 * *BYOL*: Traga sua própria carteira de motorista (BYOL).  Uma licença adquirida da NetApp que pode ser usada para implantar o Cloud Volumes ONTAP em qualquer provedor de nuvem.
 +
 
-NOTE: NetApp restringiu a compra, extensão e renovação de licenças BYOL e limitou a disponibilidade em cenários específicos, como em implantações em modo privado. Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^].
+NOTE: NetApp restringiu a compra, extensão e renovação de licenças BYOL e limitou a disponibilidade em cenários específicos, como em implantações em modo privado. Para obter mais informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^].
 
 
 
@@ -71,7 +71,7 @@ Para obter informações sobre a conversão de licenças baseadas em nó em lice
 
 A cobrança no Cloud Volumes ONTAP é baseada em diversos fatores, como pacotes e tipos de volume. Pacotes de licenciamento baseados em capacidade estão disponíveis com o Cloud Volumes ONTAP 9.7 e posteriores.
 
-Para obter detalhes sobre preços, acesse o https://bluexp.netapp.com/pricing/["Site do NetApp Console"^] .
+Para obter detalhes sobre preços, acesse o link:https://www.netapp.com/pricing/["NetApp site de preços"^].
 
 
 
@@ -200,7 +200,7 @@ Se você adquirir uma licença Essentials da NetApp (BYOL) e exceder a capacidad
 
 Da mesma forma, se você tiver um contrato anual no marketplace ou uma oferta privada com vários pacotes Essentials e seu uso exceder a capacidade contratada para uma implantação e um tipo de volume de um pacote específico, o Console cobrará o excedente com base em um pacote Essentials de preço mais alto, de acordo com a capacidade disponível.  Após o esgotamento dessa capacidade, o excedente restante será cobrado de acordo com as tarifas horárias sob demanda (PAYGO) do mercado e adicionado à sua fatura mensal.
 
-Para obter informações sobre a cobrança de licenças Essentials, consultelink:concept-licensing-charging.html#essentialscharging["Pacotes essenciais"] .
+Para obter informações sobre a cobrança de licenças Essentials, consulte <<Pacotes essenciais>>.
 
 Aqui está um exemplo. Digamos que você tenha as seguintes licenças para o pacote Essentials:
 

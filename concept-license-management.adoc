@@ -21,7 +21,7 @@ NOTE: Uma licença baseada em nó é a licença da geração anterior para o Clo
 
 link:concept-licensing.html["Saiba mais sobre as licenças do Cloud Volumes ONTAP"].
 
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Saiba mais sobre como gerenciar licenças baseadas em nós"^] .
+link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Saiba mais sobre como gerenciar licenças baseadas em nós"^].
 
 
 
@@ -31,7 +31,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-l
 As licenças baseadas em nós podem ser adquiridas na NetApp. O número de licenças que você pode comprar para um sistema de nó único ou par de HA é ilimitado.
 
 
-NOTE: A NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para obter mais informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAPP"^] .
+NOTE: NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para mais informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAPP"^].
 
 Uma licença baseada em nó fornece até 368 TiB de capacidade para um único nó ou par de HA. Você pode ter adquirido várias licenças para um sistema Cloud Volumes ONTAP BYOL para alocar mais de 368 TiB de capacidade. Por exemplo, você pode ter duas licenças para alocar até 736 TiB de capacidade para o Cloud Volumes ONTAP. Ou você pode ter quatro licenças para obter até 1,4 PiB.
 
@@ -44,7 +44,7 @@ Esteja ciente de que os limites do disco podem impedir que você atinja o limite
 
 Ao criar um sistema BYOL baseado em nó, o Console solicita o número de série da sua licença e sua conta do Site de Suporte da NetApp .  O Console usa a conta para baixar o arquivo de licença do NetApp e instalá-lo no sistema Cloud Volumes ONTAP .
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Aprenda como adicionar contas do site de suporte da NetApp ao console"^] .
+https://docs.netapp.com/us-en/console-setup-admin/task-adding-nss-accounts.html["Aprenda como adicionar contas do site de suporte da NetApp ao console"^].
 
 Se o Console não puder acessar o arquivo de licença por meio de uma conexão segura com a Internet, você poderálink:task-manage-node-licenses.html["obtenha o arquivo você mesmo e então carregue-o manualmente no Console"] .
 

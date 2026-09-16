@@ -26,6 +26,7 @@ Além do armazenamento para dados de usuário, NetApp também adquire storage de
 
 
 [[internal-disks-for-system-data-in-single-node-systems]]
+[[google-cloud-single-node]]
 === Discos internos para dados do sistema em sistemas de nó único
 
 * Um disco persistente SSD de 10 GiB para dados de inicialização
@@ -162,12 +163,12 @@ Notas:
 +
 O tipo de máquina custom-4-16384 não é mais compatível com novos sistemas Cloud Volumes ONTAP. Se você já possui um sistema em execução nesse tipo de máquina, pode continuar usando-o, mas recomendamos a migração para o tipo de máquina n2-standard-4.
 
-. ^2^ Os limites de disco podem impedir que você atinja o limite máximo de capacidade do sistema usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^].
+. ^2^ Os limites de disco podem impedir que você atinja o limite máximo de capacidade do sistema usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^].
 +
 link:reference-limits-gcp.html["Saiba mais sobre os limites de disco no Google Cloud"].
 
 . ^3^ O desempenho de gravação aprimorado é ativado ao usar discos persistentes balanceados e discos persistentes Performance (SSD).
-. ^4^ A partir de 11 de agosto de 2025, a licença Cloud Volumes ONTAP Optimized será descontinuada e não estará mais disponível para compra ou renovação no marketplace do Google Cloud para assinaturas de pagamento conforme o uso (PAYGO). Para obter informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Novidades no Cloud Volumes ONTAP"^].
+. ^4^ A partir de 11 de agosto de 2025, a licença Cloud Volumes ONTAP Optimized será descontinuada e não estará mais disponível para compra ou renovação no marketplace do Google Cloud para assinaturas de pagamento conforme o uso (PAYGO). Para obter informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Novidades no Cloud Volumes ONTAP"^].
 . ^5^ Você pode implantar as VMs da família C3 de nova geração em https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#improved-cloud-volumes-ontap-support-with-google-cloud-c3-vms["Cloud Volumes ONTAP 9.18.1 e versões posteriores"^]. As máquinas c3-standard-44 e c3-standard-88 e suas variantes LSSD oferecem suporte à largura de banda Tier-1 no Google Cloud Console por padrão. Consulte link:reference-configs-gcp.html#flash-cache-support["Suporte ao Flash Cache"] para obter mais informações sobre as variantes LSSD.
 
 
@@ -223,7 +224,7 @@ link:reference-limits-gcp.html["Saiba mais sobre os limites de disco no Google C
 |===
 Notas:
 
-. ^1^ Os limites de disco podem impedir que você atinja o limite máximo de capacidade do sistema usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^].
+. ^1^ Os limites de disco podem impedir que você atinja o limite máximo de capacidade do sistema usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^].
 +
 link:reference-limits-gcp.html["Saiba mais sobre os limites de disco no Google Cloud"].
 
@@ -313,12 +314,12 @@ Notas:
 +
 O tipo de máquina custom-4-16384 não é mais compatível com novos sistemas Cloud Volumes ONTAP. Se você já possui um sistema em execução nesse tipo de máquina, pode continuar usando-o, mas recomendamos a migração para o tipo de máquina n2-standard-4.
 
-. ^2^ Os limites de disco podem impedir que você atinja o limite máximo de capacidade do sistema usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^].
+. ^2^ Os limites de disco podem impedir que você atinja o limite máximo de capacidade do sistema usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^].
 +
 link:reference-limits-gcp.html["Saiba mais sobre os limites de disco no Google Cloud"].
 
 . ^3^ O desempenho de gravação aprimorado é ativado ao usar discos persistentes balanceados e discos persistentes Performance (SSD).
-. ^4^ A partir de 11 de agosto de 2025, a licença Cloud Volumes ONTAP Optimized será descontinuada e não estará mais disponível para compra ou renovação no marketplace do Google Cloud para assinaturas de pagamento conforme o uso (PAYGO). Para obter informações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Novidades no Cloud Volumes ONTAP"^].
+. ^4^ A partir de 11 de agosto de 2025, a licença Cloud Volumes ONTAP Optimized será descontinuada e não estará mais disponível para compra ou renovação no marketplace do Google Cloud para assinaturas de pagamento conforme o uso (PAYGO). Para obter informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Novidades no Cloud Volumes ONTAP"^].
 . ^5^ Você pode implantar as VMs da nova geração da família C3 em  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#support-for-next-generation-google-cloud-vms-in-cloud-volumes-ontap-ha["Cloud Volumes ONTAP 9.19.1 e versões posteriores para implantações HA de zona única"^]. As máquinas c3-standard-44 e c3-standard-88 e suas variantes LSSD oferecem suporte à largura de banda Tier-1 no Google Cloud Console por padrão. Consulte link:reference-configs-gcp.html#flash-cache-support["Suporte ao Flash Cache"] para obter mais informações sobre as variantes LSSD.
 
 
@@ -372,7 +373,7 @@ link:reference-limits-gcp.html["Saiba mais sobre os limites de disco no Google C
 |===
 Notas:
 
-. ^1^ Os limites de disco podem impedir que você atinja o limite máximo de capacidade do sistema usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^].
+. ^1^ Os limites de disco podem impedir que você atinja o limite máximo de capacidade do sistema usando apenas discos. Você pode atingir o limite de capacidade por  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["hierarquização de dados inativos para armazenamento de objetos"^].
 +
 link:reference-limits-gcp.html["Saiba mais sobre os limites de disco no Google Cloud"].
 
@@ -401,7 +402,7 @@ A partir do Cloud Volumes ONTAP 9.13.0, o _Flash Cache_, alta velocidade de grav
 * n2-padrão-64
 
 
-Você pode habilitar o _Flash Cache_ e a alta velocidade de gravação ao implantar um tipo de instância elegível. Para habilitar a unidade máxima de transmissão de 8.896 bytes, você deve escolher VPC-1, VPC-2 ou VPC-3 para a implantação. O MTU maior permite maior taxa de transferência de rede. Para obter mais informações sobre como iniciar uma dessas implantações, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Lançando Cloud Volumes ONTAP no Google Cloud"^].
+Você pode habilitar o _Flash Cache_ e a alta velocidade de gravação ao implantar um tipo de instância elegível. Para habilitar a unidade máxima de transmissão de 8.896 bytes, você deve escolher VPC-1, VPC-2 ou VPC-3 para a implantação. O MTU maior permite maior taxa de transferência de rede. Para obter mais informações sobre como iniciar uma dessas implantações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["Lançando Cloud Volumes ONTAP no Google Cloud"^].
 
 
 NOTE: _Flash Cache_, o modo de gravação de alta velocidade e um MTU de 8.896 dependem de recursos e não podem ser desativados individualmente em uma instância configurada.

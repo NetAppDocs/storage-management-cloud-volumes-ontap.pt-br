@@ -62,4 +62,4 @@ Para mais informações, consulte https://cloud.google.com/storage/docs/encrypti
 ----
 
 
-Consulte o https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentação de automação do NetApp Console"^] para mais detalhes sobre o uso do parâmetro "GcpEncryption".
+Consulte o  https://docs.netapp.com/us-en/console-automation/index.html["Documentação de automação do NetApp Console"^] para obter mais detalhes sobre como usar o parâmetro "GcpEncryption".

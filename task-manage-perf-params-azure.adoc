@@ -18,7 +18,7 @@ Você pode otimizar o desempenho do Cloud Volumes ONTAP no Azure configurando os
 
 Os discos Premium SSD v2 suportam cargas de trabalho que exigem desempenho rápido e confiável, com baixa latência, alto IOPS e alta taxa de transferência.  Ajustando as configurações de IOPS e taxa de transferência, você pode personalizar o desempenho dos agregados em sua implementação.  Para obter mais informações sobre os discos Premium SSD v2, consulte: https://learn.microsoft.com/en-us/azure/virtual-machines/disks-deploy-premium-v2?tabs=azure-cli["Implante um disco SSD Premium v2"] .
 
-Utilize as APIs para automatizar o processo de modificação das configurações de disco do Premium SSD v2.  Para obter informações sobre como executar chamadas da API Cloud Volumes ONTAP , consulte https://docs.netapp.com/us-en/bluexp-automation/cm/your_api_call.html#step-1-select-the-identifie["Sua primeira chamada de API"^] .
+Use as APIs para automatizar o processo de modificação das configurações de disco Premium SSD v2. Para obter informações sobre como executar chamadas da API do Cloud Volumes ONTAP, consulte  https://docs.netapp.com/us-en/console-automation/cm/your_api_call.html#step-1-select-the-identifie["Sua primeira chamada de API"^].
 
 .Sobre esta tarefa
 * Este recurso se aplica a implantações do Cloud Volumes ONTAP em zonas de disponibilidade única do Azure.
@@ -66,9 +66,9 @@ Inclua os seguintes parâmetros no corpo da solicitação:
 Após a API retornar uma resposta indicando que a operação foi bem-sucedida, verifique os parâmetros modificados consultando os detalhes do disco no portal do Azure para o seu sistema Cloud Volumes ONTAP .
 
 .Informações relacionadas
-* https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html["Prepare-se para usar a API"^]
-* https://docs.netapp.com/us-en/bluexp-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Fluxos de trabalho do Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-connector-identifier["Obtenha os identificadores necessários"^]
-* https://docs.netapp.com/us-en/bluexp-automation/platform/use_rest_apis.html["Utilize APIs REST para Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/console-automation/cm/prepare.html["Prepare-se para usar a API"^]
+* https://docs.netapp.com/us-en/console-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Fluxos de trabalho do Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/console-automation/platform/get_identifiers.html#get-the-connector-identifier["Obtenha os identificadores necessários"^]
+* https://docs.netapp.com/us-en/console-automation/platform/use_rest_apis.html["Utilize APIs REST para Cloud Volumes ONTAP"^]
 * https://learn.microsoft.com/en-us/azure/virtual-machines/use-premium-ssd-v2-with-availability-set?tabs=CLI["Use o SSD Premium v2 com VMs no conjunto de disponibilidade."^]
 
