@@ -75,7 +75,7 @@ Implante Cloud Volumes ONTAP a partir do Console
  a| 
 Após cumprir todos os pré-requisitos, você pode concluir as etapas do assistente para implantar Cloud Volumes ONTAP na AWS.
  a| 
-* link:task-quick-deploy-aws.html["Implante Cloud Volumes ONTAP com a criação rápida"]
+* link:task-quick-deploy-aws.html["Implante o Cloud Volumes ONTAP com a criação rápida na AWS"]
 * link:task-deploying-otc-aws.html["Implante Cloud Volumes ONTAP usando opções avançadas"]
 
  a| 
@@ -83,7 +83,6 @@ Antes de iniciar a implantação, certifique-se de que você adquiriu uma licen�
 
 * link:concept-license-management.html["Gerenciamento de licenças para BYOL baseado em nó"]
 * link:task-manage-node-licenses.html["Gerencie licenças BYOL baseadas em nós"]
-* link:task-quick-deploy-aws.html["Implante Cloud Volumes ONTAP com a criação rápida"]
 * link:task-deploying-otc-aws.html["Implante Cloud Volumes ONTAP usando opções avançadas"]
 
 

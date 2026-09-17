@@ -1478,7 +1478,6 @@
   <block id="80292c326dbd4c631ce6da31d922620c" category="paragraph">Você deve usar um grupo de recursos _dedicado_ para cada par de Cloud Volumes ONTAP HA implantado no Azure.  Somente um par de HA é suportado em um grupo de recursos.</block>
   <block id="2d7b1fe0a5512f641a66eaf3dabde3d2" category="paragraph">O Console terá problemas de conexão se você tentar implantar um segundo par de Cloud Volumes ONTAP HA em um grupo de recursos do Azure.</block>
   <block id="72cb359256f1b923869ffe5643075163" category="paragraph">Os grupos de segurança do Azure para o Cloud Volumes ONTAP exigem que as portas apropriadas estejam abertas para comunicação interna entre os nós.<block ref="9235b6a724dccf5c41be51f4736123ae" category="inline-link-rx"></block> .</block>
-  <block id="e3f7f3a3bb47d39a7fd58de8d5070b2b" category="paragraph">Não recomendamos modificar os grupos de segurança predefinidos ou usar grupos de segurança personalizados.  No entanto, se necessário, observe que o processo de implantação exige que o sistema Cloud Volumes ONTAP tenha acesso total dentro de sua própria sub-rede.  Após a conclusão da implantação, se você decidir modificar o grupo de segurança de rede, certifique-se de manter as portas do cluster e as portas de rede HA abertas.  Isso garante uma comunicação perfeita dentro do cluster Cloud Volumes ONTAP (comunicação de qualquer para qualquer entre os nós).</block>
   <block id="302d2301b273d2d6c222fdca1f337988" category="paragraph">Ao adicionar um sistema Cloud Volumes ONTAP e escolher um grupo de segurança predefinido, você pode optar por permitir o tráfego dentro de um dos seguintes:</block>
   <block id="3ed4080616d1d3c88deef90096108130" category="list-text">*Somente VNet selecionada*: A origem do tráfego de entrada é o intervalo de sub-redes da VNet para o sistema Cloud Volumes ONTAP e o intervalo de sub-redes da VNet onde o agente do Console reside.  Esta é a opção recomendada.</block>
   <block id="cd8b82367babbe39683e8fb9f0c22ed5" category="list-text">*Todas as VNets*: A origem do tráfego de entrada é o intervalo de IP 0.0.0.0/0.</block>
@@ -5771,8 +5770,6 @@
   <block id="055fe1da24359dd71a9c8b67896496aa" category="list-text">Na guia AWS, selecione a assinatura independente e clique no ícone de opções <block ref="ac91b27a7720c4844510cacb9be7afe5" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="ca114d54630fd2217b0a7f7b707b2524" category="list-text">Na janela Editar configuração, selecione o número da assinatura da listagem independente no campo *Credenciais da conta AWS*.</block>
   <block id="1a8a4084eaf9e7b7e14963049e616310" category="list-text">Clique em *Configurar*. Você pode ver a assinatura como a opção preferencial para o faturamento do Cloud Volumes ONTAP na AWS.</block>
-  <block id="5308f0957f4f665b7b8a7a70e7f26dbb" category="inline-link">Implante Cloud Volumes ONTAP com a criação rápida</block>
-  <block id="69bad18c1431b72e27676656dcb02294" category="list-text">Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Essentials para faturar por meio da assinatura independente. Para obter informações, consulte <block ref="3bd26a21bb4b5b57e3e4e28150d4f309" category="inline-link-rx"></block>.</block>
   <block id="a731966b7a272e5b052ef9a7b9ea958e" category="paragraph">Repita os mesmos passos para a assinatura NIS na aba *Serviços de dados* para usar a assinatura NIS para seus serviços de dados. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Professional para faturar por meio da assinatura NIS.</block>
   <block id="55a36fface9a3342eae20532f4dd2f82" category="section-title">12 de maio de 2026</block>
   <block id="fe315d7471968d18b362c1b1144a20b0" category="paragraph">Antes de começar, certifique-se de ter o seguinte:</block>
@@ -5826,8 +5823,6 @@
   <block id="edbf603043ea71af5a3f46821ad9d4a3" category="admonition">Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal da AWS ou Azure, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamentos inesperados ou perda de dados.</block>
   <block id="a4ad56ab8baa8582d6dba6091a9bd877" category="doc">Implantação simplificada do Cloud Volumes ONTAP no Azure</block>
   <block id="8bfd035a33aa401829a9de89b5e0c246" category="paragraph">Agora você pode usar a Criação Rápida para implantar Cloud Volumes ONTAP no Azure, tanto para configurações de nó único quanto para configurações de alta disponibilidade (HA). Esse processo simplificado reduz o número de etapas em comparação com o método avançado, define automaticamente os valores padrão em uma única página e minimiza a navegação, tornando a implantação mais rápida e fácil.</block>
-  <block id="da7aee176a6e0989fc4edf2b02e0af34" category="inline-link">Implante Cloud Volumes ONTAP no Azure com a criação rápida</block>
-  <block id="8928e512cc17b6dd2c97fcb7dff5a06a" category="list-text"><block ref="8928e512cc17b6dd2c97fcb7dff5a06a" category="inline-link-rx"></block></block>
   <block id="6d1c2cdb212ea73452146a3edb82fe12" category="inline-link">Implante Cloud Volumes ONTAP usando opções avançadas no Azure</block>
   <block id="3cf666a1e5ff2ecf85c4a0bcf868d65f" category="list-text"><block ref="3cf666a1e5ff2ecf85c4a0bcf868d65f" category="inline-link-rx"></block></block>
   <block id="94b7b54556632ab5a087eae13f0e0af9" category="doc">Implante Cloud Volumes ONTAP usando opções avançadas na AWS</block>
@@ -5910,8 +5905,6 @@
   <block id="7f779554154f7bbce7ebe34e61b8a90f" category="list-text">Você pode alterar as configurações de IOPS e taxa de transferência ao adicionar agregados por meio do NetApp Console ou usando a <block ref="566e7ce0d4fe7a4872db87a6368a9417" prefix=" " category="inline-code"></block> API.</block>
   <block id="2d6c818daeac263c2afd4036d7f74e1e" category="section-title">Implantação simplificada do Cloud Volumes ONTAP no Google Cloud</block>
   <block id="cb811eee80c50a73b0cadcc740ccb6e0" category="paragraph">Agora você pode usar o assistente de *Criação rápida* para implantar Cloud Volumes ONTAP no Google Cloud, tanto para configurações de nó único quanto para configurações de alta disponibilidade (HA). Esse processo simplificado reduz etapas, define valores padrão automaticamente em uma única página e minimiza a navegação para uma implantação mais rápida e fácil.</block>
-  <block id="66ac7407a9c84ca6778fae23ed993062" category="inline-link">Implante Cloud Volumes ONTAP no Google Cloud com a criação rápida</block>
-  <block id="0dfb1e2c47e659e01c54c2e333c51aab" category="list-text"><block ref="0dfb1e2c47e659e01c54c2e333c51aab" category="inline-link-rx"></block></block>
   <block id="2ac8bb0efb00600c2a41354a94948174" category="inline-link">Implante Cloud Volumes ONTAP usando opções avançadas no Google Cloud</block>
   <block id="6c9068df44f8a14533034d80a58ea324" category="list-text"><block ref="6c9068df44f8a14533034d80a58ea324" category="inline-link-rx"></block></block>
   <block id="12d92330947695a8724da477e7db5baa" category="section-title">Apresentando funções de acesso para Cloud Volumes ONTAP</block>
@@ -5965,7 +5958,6 @@
   <block id="3545b8b6c97019ee16382e1e9f1566d6" category="list-text">Associando sua assinatura: você pode associar sua assinatura automaticamente ao Console, evitando as etapas manuais de vinculá-la você mesmo.</block>
   <block id="7fe500a5c571cd7ec037fadddeb65e6d" category="list-text">Implantação do agente do console com configuração de credenciais da AWS: você pode criar automaticamente as funções da AWS necessárias. O processo implanta uma pilha CloudFormation na sua conta da AWS com as funções e políticas necessárias para sua revisão e, em seguida, as associa ao NetApp Console, eliminando a configuração manual do IAM. Em seguida, você continua com a configuração do agente, rede e configurações do grupo de segurança para iniciar a implantação do agente.</block>
   <block id="1dc23a84b7e2b375289ce6857c758408" category="list-text">Implante um novo sistema Cloud Volumes ONTAP na AWS: você acessa diretamente o <block ref="956eaa6186169471a13345860cad0757" prefix=" " category="inline-code"></block> assistente para uma implantação do Cloud Volumes ONTAP mais rápida e simplificada.</block>
-  <block id="92818173e0caa5fc0e16c368b850e85b" category="list-text"><block ref="92818173e0caa5fc0e16c368b850e85b" category="inline-link-rx"></block></block>
   <block id="45155a6d96a264e24647f30ebb774e4f" category="list-text"><block ref="45155a6d96a264e24647f30ebb774e4f" category="inline-link-rx"></block></block>
   <block id="e8f7f517a7c22ec0466a4d916c974b67" category="section-title">Análise de configuração bem arquitetada para Cloud Volumes ONTAP no Azure</block>
   <block id="8579a865aaeb9e025994731e2e5b4b7b" category="paragraph">O NetApp Console agora oferece suporte à análise de configuração bem arquitetada para sistemas Cloud Volumes ONTAP em execução no Microsoft Azure. O Console analisa suas implantações diariamente e fornece um status de arquitetura bem arquitetada, insights e recomendações para ajudar você a manter sistemas alinhados com as melhores práticas da NetApp e a estrutura well-architected.</block>
@@ -6900,7 +6892,6 @@
   <block id="2890ecdc70e02afe7e3a31c92bf55434" category="paragraph">Etapas semelhantes se aplicam a implantações em modo privado.</block>
   <block id="ce7ffa9f1434857273b5b40df89fe170" category="paragraph">Implante Cloud Volumes ONTAP a partir do Console</block>
   <block id="9afbf91fc5dacff8aee5144e68e0c23c" category="paragraph">Após cumprir todos os pré-requisitos, você pode concluir as etapas do assistente para implantar Cloud Volumes ONTAP na AWS.</block>
-  <block id="7988489db427729a73853b519bbd74e5" category="list-text"><block ref="7988489db427729a73853b519bbd74e5" category="inline-link-macro-rx"></block></block>
   <block id="dd80703f7d89793c8c6bcd9eb27c0ffa" category="inline-link-macro">Implante Cloud Volumes ONTAP usando opções avançadas</block>
   <block id="63e3b7b0b8eabb63c1a575019f00025a" category="list-text"><block ref="63e3b7b0b8eabb63c1a575019f00025a" category="inline-link-macro-rx"></block></block>
   <block id="13a8f9ff894e3f4bcda70be513c557c4" category="paragraph">Antes de iniciar a implantação, certifique-se de que você adquiriu uma licença do Cloud Volumes ONTAP da NetApp. Implantações em modo privado exigem licenças BYOL baseadas em nó. Assinaturas do Marketplace não são compatíveis para cobrança do uso do Cloud Volumes ONTAP. Obtenha o arquivo de licença da NetApp e faça o upload durante a implantação. Consulte:</block>
@@ -6918,7 +6909,6 @@
   <block id="8067dceda8c922cafa53a5f6a696c873" category="paragraph"><block ref="8067dceda8c922cafa53a5f6a696c873" category="inline-link-macro-rx"></block></block>
   <block id="34f79dfeddc8c0c0cf29bb075dba1e0a" category="paragraph">Após cumprir todos os pré-requisitos, você pode concluir as etapas do assistente para implantar Cloud Volumes ONTAP no Azure.</block>
   <block id="6563093287f74a616e9d7ac49b4d6a44" category="paragraph">Consulte:</block>
-  <block id="a0e1f80d9ffd45a9a79c524fcf4e035b" category="list-text"><block ref="a0e1f80d9ffd45a9a79c524fcf4e035b" category="inline-link-macro-rx"></block></block>
   <block id="e67c04a7ad4eeda74ceb878c0553eff4" category="list-text"><block ref="e67c04a7ad4eeda74ceb878c0553eff4" category="inline-link-macro-rx"></block></block>
   <block id="755ff4f3bf37dc77238bd9ce18d2513f" category="doc">Visão geral da implantação do Cloud Volumes ONTAP no Google Cloud</block>
   <block id="3c0c2050848fa2bd86d68cd9d6bc0637" category="paragraph">Para implantar Cloud Volumes ONTAP, primeiro você precisa conhecer sua assinatura do Google Cloud e suas licenças do Cloud Volumes ONTAP. Você também deve verificar se possui um agente do NetApp Console criado para seu projeto e organização do Google Cloud. Muitas das informações neste tópico precisam ser executadas como parte da configuração do Console antes mesmo de você começar a implantar Cloud Volumes ONTAP.</block>
@@ -6941,7 +6931,6 @@
   <block id="3aa88e14f76a8581416d0bc54d696335" category="paragraph">Consulte a documentação do Google Cloud: <block ref="0d7e4a8564255c1fc289d23249d3b568" category="inline-link-rx"></block></block>
   <block id="17e44be1a44fd14dacaae11875ff356b" category="paragraph">As APIs precisam estar habilitadas. Trabalhe com seu administrador da nuvem para habilitar as APIs necessárias em seu ambiente privado.</block>
   <block id="19d8bd352f2c40ce75403d13170b311b" category="paragraph">Após cumprir todos os pré-requisitos, você pode concluir as etapas do assistente para implantar Cloud Volumes ONTAP no Google Cloud.</block>
-  <block id="8db3889b9094da1779e8e10e063742d5" category="list-text"><block ref="8db3889b9094da1779e8e10e063742d5" category="inline-link-macro-rx"></block></block>
   <block id="7c9fa6cfa8bf4914f6804681fe5a5c2d" category="list-text"><block ref="7c9fa6cfa8bf4914f6804681fe5a5c2d" category="inline-link-macro-rx"></block></block>
   <block id="0375af31d39c4bfde1c980cd053ab2b9" category="doc">VMs de armazenamento Cloud Volumes ONTAP</block>
   <block id="54448f9a8312c7b08e3e97308160554c" category="paragraph">Uma máquina virtual de armazenamento (SVM) é uma máquina virtual executada no ONTAP que fornece serviços de armazenamento e dados para seus clientes. Você pode conhecê-la como _SVM_ ou _vserver_. Cloud Volumes ONTAP é configurado com uma máquina virtual de armazenamento por padrão, mas algumas configurações suportam máquinas virtuais de armazenamento adicionais.</block>
@@ -7527,7 +7516,6 @@
   <block id="b0845b98104086e018330dff1f994b3a" category="list-text">Na janela de pós-implantação, selecione *Add system*.</block>
   <block id="beec7c8b8f52f7e44dec39ce075d3abb" category="list-text">Inicie o fluxo de trabalho de criação do sistema Cloud Volumes ONTAP.</block>
   <block id="e4998cdb09fc1ae76d7c7b0f97a04fd9" category="list-text">Conclua a configuração do sistema.</block>
-  <block id="8dbb4c9a73791ff9189a74648db065ad" category="paragraph">Para obter instruções detalhadas sobre a implantação do sistema, consulte <block ref="3bd26a21bb4b5b57e3e4e28150d4f309" category="inline-link-rx"></block>.</block>
   <block id="72d7b93cee23363a2907b2be8b237290" category="section-title">Resolução de problemas e recuperação</block>
   <block id="cb1bc5edf506394ee9927cb447901c17" category="paragraph">Use esta seção se você sair do fluxo de ambientação antes de concluí-lo ou se a implantação do agente falhar. Essas etapas ajudam você a retomar de onde parou ou a recuperar e tentar a implantação novamente.</block>
   <block id="90a521d73cad15b4a353df47ccdc06d8" category="section-title">Retomar configuração</block>
@@ -7849,4 +7837,16 @@
   <block id="7df6c0dd0528ad9774b45898063090a4" category="paragraph"><block ref="dc9f69e3a8e3128c351ac73e19819cc9" category="inline-link-rx"></block>.</block>
   <block id="01988715156f44a53eb56faf9b69550d" category="paragraph"><block ref="fdf6f50138bbdc950c2bd1272476f30e" category="inline-link-rx"></block>.</block>
   <block id="8798ec6bebe0dbdc8a5621562ddc3007" category="list-text"><block ref="8798ec6bebe0dbdc8a5621562ddc3007" category="inline-link-rx"></block></block>
+  <block id="1b74bdaaeb695f9d39e8913cd8508559" category="inline-link">Implante o Cloud Volumes ONTAP com a criação rápida no Azure</block>
+  <block id="0796c5be1b7e3f0ba6006690f24de331" category="list-text"><block ref="0796c5be1b7e3f0ba6006690f24de331" category="inline-link-rx"></block></block>
+  <block id="fa64a8ba43091dc1f18b40ede22ba208" category="inline-link">Implante o Cloud Volumes ONTAP com a criação rápida no Google Cloud</block>
+  <block id="c334239a4338073665306baf11363bc2" category="list-text"><block ref="c334239a4338073665306baf11363bc2" category="inline-link-rx"></block></block>
+  <block id="d9862ed1f24a79da571ce975d43849ac" category="inline-link">Implante o Cloud Volumes ONTAP com a criação rápida na AWS</block>
+  <block id="a8756e706557440388ef829ae5f6fe1f" category="list-text"><block ref="a8756e706557440388ef829ae5f6fe1f" category="inline-link-rx"></block></block>
+  <block id="fd857327903d761ee1b293fadbb70f89" category="paragraph">Não recomendamos modificar os grupos de segurança predefinidos nem usar grupos de segurança personalizados. No entanto, se for imprescindível, observe que o processo de implantação exige que o Cloud Volumes ONTAP tenha acesso total à sua própria sub-rede. Após a conclusão da implantação, se você decidir modificar o grupo de segurança de rede, certifique-se de manter as portas do cluster e as portas da rede de HA abertas, pois a rede de HA depende da comunicação irrestrita entre os dois nós. Além disso, os endereços IP dos nós são definidos automaticamente durante a implantação. Isso garante uma comunicação perfeita dentro do cluster do Cloud Volumes ONTAP (comunicação qualquer para qualquer entre os nós).</block>
+  <block id="0f37e7019150020ad56dacb33e050ce0" category="list-text"><block ref="0f37e7019150020ad56dacb33e050ce0" category="inline-link-macro-rx"></block></block>
+  <block id="c5ff6e289ca10cde1a5f81d196d305dc" category="list-text"><block ref="c5ff6e289ca10cde1a5f81d196d305dc" category="inline-link-macro-rx"></block></block>
+  <block id="0a96b1cb21a865ff7a38d495809cc48e" category="list-text"><block ref="0a96b1cb21a865ff7a38d495809cc48e" category="inline-link-macro-rx"></block></block>
+  <block id="75b888c439b50482e442b156f85f8b7b" category="paragraph">Para obter instruções detalhadas sobre a implantação do sistema, consulte <block ref="51799ed8a3c9382ecde3d4e502dc227c" category="inline-link-rx"></block>.</block>
+  <block id="60bc46bac54334a76b532d0019347623" category="list-text">Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Essentials para faturar por meio da assinatura independente. Para obter informações, consulte <block ref="51799ed8a3c9382ecde3d4e502dc227c" category="inline-link-rx"></block>.</block>
 </blocks>

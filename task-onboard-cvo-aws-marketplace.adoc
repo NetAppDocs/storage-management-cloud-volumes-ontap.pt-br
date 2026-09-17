@@ -222,7 +222,7 @@ Após o agente estar pronto, crie seu primeiro sistema Cloud Volumes ONTAP na AW
 . Conclua a configuração do sistema.
 
 
-Para obter instruções detalhadas sobre a implantação do sistema, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implante Cloud Volumes ONTAP com a criação rápida"^].
+Para obter instruções detalhadas sobre a implantação do sistema, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implante o Cloud Volumes ONTAP com a criação rápida na AWS"^].
 
 
 

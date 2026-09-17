@@ -38,7 +38,7 @@ Se você já é cliente e possui assinaturas NIS associadas à sua conta AWS, a 
 . Na guia AWS, selecione a assinatura independente e clique no ícone de opções image:screenshot_gallery_options.gif["ícone de kabob"].
 . Na janela Editar configuração, selecione o número da assinatura da listagem independente no campo *Credenciais da conta AWS*.
 . Clique em *Configurar*. Você pode ver a assinatura como a opção preferencial para o faturamento do Cloud Volumes ONTAP na AWS.
-. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Essentials para faturar por meio da assinatura independente. Para obter informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implante Cloud Volumes ONTAP com a criação rápida"^].
+. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Essentials para faturar por meio da assinatura independente. Para obter informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implante o Cloud Volumes ONTAP com a criação rápida na AWS"^].
 
 
 Repita os mesmos passos para a assinatura NIS na aba *Serviços de dados* para usar a assinatura NIS para seus serviços de dados. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Professional para faturar por meio da assinatura NIS.
