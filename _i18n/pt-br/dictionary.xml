@@ -1651,7 +1651,6 @@
   <block id="a21848ca8e1b04c74552ca38f4284f2b" category="cell">Mensagens de encaminhamento do Syslog</block>
   <block id="e4ccfb5e65126f4e0ac934b981e1c7e0" category="paragraph">Se você ainda não criou um agente do Console, revise também os requisitos de rede para o agente do Console.</block>
   <block id="569fe31933e5918613ae1efa70e82d16" category="inline-link">Regras de grupo de segurança no Azure</block>
-  <block id="806bf55e3fada643423a5e8b443a821f" category="summary">Configure sua rede do Google Cloud para que os sistemas Cloud Volumes ONTAP possam operar corretamente.</block>
   <block id="8163eb1a73467820de782c3a3ebd563a" category="doc">Configurar a rede do Google Cloud para o Cloud Volumes ONTAP</block>
   <block id="589257f6242e3a6232a5f72f7867c4b6" category="inline-link-macro">saiba como os pares de HA funcionam no Google Cloud</block>
   <block id="c8e39b92d04aae2c3a6d3e6f428d480e" category="paragraph">Se você deseja implantar um par de HA, você deve<block ref="135d51832239d75e9eff2c1e7574765f" category="inline-link-macro-rx"></block> .</block>
@@ -3933,7 +3932,6 @@
   <block id="31cfe21e9465f2898f2b13f830136b3b" category="inline-link">Adicione sua conta do site de suporte da NetApp ao console</block>
   <block id="3207026ba19ccd796b2c4277be209fbb" category="paragraph">O Console consulta automaticamente o serviço de licenciamento da NetApp para obter detalhes sobre as licenças associadas à sua conta do Site de Suporte da NetApp .  Se não houver erros, o Console adicionará automaticamente as licenças ao Console.</block>
   <block id="78f7ee59f5b8117330beb5ce37c3e39d" category="inline-link-macro">adicione manualmente a licença ao Console</block>
-  <block id="c95180dbd3a8987d4dea53f7e95fae82" category="paragraph">Sua licença deve estar disponível no Console antes que você possa usá-la com o Cloud Volumes ONTAP.  Se necessário, você pode<block ref="19f97ce9176222c84cb0e330227fb9ce" category="inline-link-macro-rx"></block> .</block>
   <block id="cd47b6ba1f96bb028270f3efb891831c" category="list-text">Na página *Sistemas* do Console, clique em *Adicionar Sistema* e siga as etapas.</block>
   <block id="56d5a0565e658b5d14d92cd4f4f444ae" category="paragraph">A licença que você comprou da NetApp é sempre cobrada primeiro, mas você será cobrado pela taxa horária no mercado se exceder sua capacidade licenciada ou se o prazo de sua licença expirar.</block>
   <block id="0412ae79fd9c84c83f86aee6ff87fc52" category="list-text">Após retornar ao Console, selecione um pacote baseado em capacidade quando chegar à página de métodos de cobrança.</block>
@@ -5629,8 +5627,6 @@
   <block id="2977507bb7188d1e96246a14057a3902" category="inline-link">Guia rápido para implantações em modo privado</block>
   <block id="2d0e6ad25589f8f4affb38c55f4f325f" category="list-text"><block ref="2d0e6ad25589f8f4affb38c55f4f325f" category="inline-link-rx"></block></block>
   <block id="4caab03d94f5f056dee76ac3abd4066d" category="inline-link">Configuração do Infrastructure Manager para implantações em modo privado</block>
-  <block id="d79d7aeb01a8087d8ac3417a9437a457" category="paragraph">Em implantações em modo privado, você precisa fazer algumas alterações de configuração no Cloud Volumes ONTAP para começar a usar o Infrastructure Manager. Consulte <block ref="a3ca45cd087005e24df23da60619241b" category="inline-link-rx"></block>.</block>
-  <block id="72f140aadeef542ffaaccb8f92bb751b" category="paragraph">Se você deseja implantar Cloud Volumes ONTAP 9.16.1 ou posterior no modo privado, precisa fazer algumas alterações de configuração para que Cloud Volumes ONTAP possa usar Google Cloud Infrastructure Manager como serviço de implantação em vez de Deployment Manager, que Google eventualmente descontinuará.</block>
   <block id="d8ded2f209878a774abc9ec32f535df0" category="list-text">Certifique-se de que seu sistema Cloud Volumes ONTAP esteja na versão 9.16.1 ou posterior. Se não estiver, atualize seu sistema. Consulte <block ref="2bd5b2c5d36e72902dcf55c00d490964" category="inline-link-rx"></block> para obter instruções.</block>
   <block id="d65cea469279b26fd96aefa9946737d3" category="list-text">Certifique-se de que as APIs do Google Cloud estejam ativadas. Consulte <block ref="284597b9b55c9d9b3851ec2830376fdc" category="inline-link-rx"></block>.</block>
   <block id="c1a7d01779c80df928434b55a0985909" category="inline-link">Ative a API Cloud Build aqui</block>
@@ -5657,7 +5653,6 @@
   <block id="a55abb3f1f891995d70f70a7d8476b90" category="example-title">Para implantações em modo privado, assegure estes pré-requisitos adicionais:</block>
   <block id="043abbc7d82ea8f85b4eb2cfc1ed8c1a" category="list-text">Certifique-se de ter a versão mais recente do agente do Console. Baixe o instalador do produto no site de suporte da NetApp e, em seguida, instale manualmente o agente em seu host para que o agente possa usar as APIs do Infrastructure Manager.</block>
   <block id="25dde09ff44d3749c7c30e9d6de5ea84" category="list-text">Se você estiver executando a ferramenta em modo privado, certifique-se de que, junto com as outras APIs, você tenha habilitado a API Cloud Build.<block ref="284597b9b55c9d9b3851ec2830376fdc" category="inline-link-rx"></block>.</block>
-  <block id="61396513f8cad4235cc6230c5b5bd890" category="list-text">Certifique-se de ter concluído as configurações de rede e criado o pool de trabalhadores para implantações em modo privado. Consulte <block ref="394ae5ca2623ff2541a3ab80e68c7904" category="inline-link-macro-rx"></block>.</block>
   <block id="cee17a2118e2f87df1ef45ab60919d83" category="cell">cloudbuild.googleapis.com</block>
   <block id="e61855b4554dd4f867078342b0fe3ed9" category="cell">Operações de compilação necessárias apenas para o modo privado</block>
   <block id="77ef2eaf8c2a9596bf70daf2be42abe2" category="cell">pypi.org</block>
@@ -5691,7 +5686,6 @@
   <block id="56fe813ce089ce40cf0ddd7a34baa41d" category="section-title">Execute a ferramenta de conversão</block>
   <block id="127f0169d9159483efb1bf11269a83d6" category="paragraph">Esses passos são para Ubuntu e SUSE Linux Enterprise Server para executar a ferramenta de conversão.</block>
   <block id="582f01440b1fe8b3b54fbaaa3e0ae2a5" category="example-title">Execute a ferramenta em implantações no modo privado</block>
-  <block id="e3e9593585f6673afa2b7fc51d4207a1" category="paragraph">Especifique o <block ref="8fc12ad6381abbb87712055c7f5e50f1" prefix=" " category="inline-code"></block>parâmetro para executar a ferramenta em implantações no modo privado. Para configuração do pool de workers, consulte <block ref="394ae5ca2623ff2541a3ab80e68c7904" category="inline-link-macro-rx"></block>.</block>
   <block id="c6e9d79a05da6fd3036f2ce45e30d798" category="paragraph">A ferramenta exibe uma lista de todos os sistemas Cloud Volumes ONTAP e detalhes do SVM. Ao concluir a execução, você pode ver os status de todos os sistemas convertidos. Cada sistema convertido aparece no Console do Google em Infrastructure Manager em um formato _&lt;system-name-imdeploy&gt;_, indicando que o Console agora usa as APIs do Infrastructure Manager para gerenciar esse sistema Cloud Volumes ONTAP.</block>
   <block id="73f8b632600f6bf7d4edd2fb31ec35be" category="admonition">Após a conversão, não exclua o objeto de implantação do Deployment Manager no Console do Google Cloud. Esse objeto de implantação contém informações que podem ser necessárias para reverter o sistema convertido.</block>
   <block id="56a5c925d77740ea69d50272863f3f75" category="section-title">26 de fevereiro de 2026</block>
@@ -7032,8 +7026,6 @@
   <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">Observabilidade proativa</block>
   <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">Insights para ação</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">Requisitos de análise</block>
-  <block id="021c4674734853c034b954078fa080f3" category="inline-link-macro">implantar um agente do NetApp Console</block>
-  <block id="ed3de084ebd57dfb5d10d8d07d5ff7c2" category="paragraph">Para uma análise completa do sistema Cloud Volumes ONTAP, você precisa <block ref="19a2c83f86e8c849ea6629f601093445" category="inline-link-macro-rx"></block> configurar a conectividade entre seus sistemas e o NetApp Console.</block>
   <block id="f064aed6dd86a2b762ecf9bcf528b941" category="section-title">Melhores práticas e recomendações para sistemas Cloud Volumes ONTAP</block>
   <block id="df022fa81268ad87abe9b34e29e60ea4" category="paragraph">O painel de controle de arquitetura bem projetada avalia as configurações de armazenamento para fornecer uma visão detalhada das melhores práticas de configuração do ONTAP e da conformidade com o Azure Well-Architected Framework. A avaliação também recomenda melhorias e correções.</block>
   <block id="ffd9fc00ab43b8283346c6266e00d684" category="paragraph">A análise bem arquitetada categoriza as configurações nos seguintes pilares da estrutura: _confiabilidade_, _segurança_, _excelência operacional_, _otimização de custos_ e _eficiência de desempenho_.</block>
@@ -7421,7 +7413,6 @@
   <block id="22b14536778a26fb341e73c9dfc20414" category="list-text"><block ref="22b14536778a26fb341e73c9dfc20414" category="inline-link-rx"></block></block>
   <block id="9a707d77cf426a13d6626ab2d67f565d" category="doc">Suporte para as regiões Austria East e Belgium Central no Azure</block>
   <block id="44e833213a99257d69192896111996f4" category="paragraph">Agora você pode implantar o Cloud Volumes ONTAP 9.12.1 GA e versões posteriores nas regiões Austria East (austriaeast) e Belgium Central (belgiumcentral) no Azure. Os seguintes tipos de implantação são compatíveis:</block>
-  <block id="1ee2856eba991f06fff41aa25f053f64" category="paragraph">Você também deve estabelecer conectividade de saída com os seguintes endpoints:</block>
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="list-text">\https://api.workloads.netapp.com</block>
   <block id="9f45fe3cd2af64a1afc3f4b7f81bdae6" category="list-text">\https://ws.workloads.bluexp.netapp.com</block>
   <block id="69fad001104806c7d3df4d9a347564cb" category="inline-link-macro">Integre o Cloud Volumes ONTAP no AWS Marketplace</block>
@@ -7849,4 +7840,15 @@
   <block id="0a96b1cb21a865ff7a38d495809cc48e" category="list-text"><block ref="0a96b1cb21a865ff7a38d495809cc48e" category="inline-link-macro-rx"></block></block>
   <block id="75b888c439b50482e442b156f85f8b7b" category="paragraph">Para obter instruções detalhadas sobre a implantação do sistema, consulte <block ref="51799ed8a3c9382ecde3d4e502dc227c" category="inline-link-rx"></block>.</block>
   <block id="60bc46bac54334a76b532d0019347623" category="list-text">Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Essentials para faturar por meio da assinatura independente. Para obter informações, consulte <block ref="51799ed8a3c9382ecde3d4e502dc227c" category="inline-link-rx"></block>.</block>
+  <block id="8dfa69a16c9a3090245af0738da1b3b3" category="paragraph">Em implantações em modo privado, você precisa fazer algumas alterações de configuração no Cloud Volumes ONTAP para começar a usar o Infrastructure Manager. Consulte <block ref="2d72fce957adfd77b9a2cafc57bfb2b8" category="inline-link-rx"></block>.</block>
+  <block id="54675850f07c5f375dabbd24ce963055" category="paragraph">Certifique-se de que o agente do Console associado ao Cloud Volumes ONTAP tenha acesso aos seguintes endpoints:</block>
+  <block id="8e7b9a9e43a2aeb3a7aabc300317310a" category="summary">Configure sua rede do Google Cloud para que os sistemas Cloud Volumes ONTAP possam operar corretamente. Você aprenderá sobre requisitos de rede, endereços IP privados, VPCs, sub-redes, espelhamento de pacotes, regras de firewall e configurações de alta disponibilidade para o CVO, além dos requisitos do agente do Console.</block>
+  <block id="ecdc6a1891228ecd86842e25403089c2" category="section-title">Configuração do Infrastructure Manager em modo privado ou ambientes protegidos</block>
+  <block id="09099a34e07c1b55b04062d463b379d9" category="paragraph">Se você deseja implantar o Cloud Volumes ONTAP 9.16.1 ou posterior no modo privado ou em um projeto protegido pelo VPC Service Controls, é necessário fazer algumas alterações de configuração para que o Cloud Volumes ONTAP possa usar o Google Cloud Infrastructure Manager como serviço de implantação em vez do Deployment Manager, que o Google eventualmente descontinuará.</block>
+  <block id="3be0ccabbc043586c0889f1f415a8b9f" category="paragraph">Se você implantar o Cloud Volumes ONTAP em um projeto protegido por VPC Service Controls, crie o pool de workers privado no mesmo projeto que o agente do Console. O pool de workers deve estar em execução. O pool de workers público padrão do Cloud Build do Google Cloud não pode ser executado dentro de um perímetro de serviço.</block>
+  <block id="f4a4ada049ad3a9b0e3d9b625436e9a9" category="paragraph">Se você implantar o Cloud Volumes ONTAP em um projeto protegido pelo VPC Service Controls, crie o sistema Cloud Volumes ONTAP usando a API e inclua o parâmetro <block ref="127211a07a94fab89b03bd83ab2202c0" prefix=" " category="inline-code"></block> no corpo da solicitação de criação.</block>
+  <block id="115d3c8236e5dc5d086a75c0cf66c531" category="admonition">Atualmente, não há suporte para inclusão de um pool de workers ao implantar o Cloud Volumes ONTAP usando a interface do usuário do Console. Para projetos protegidos por Controles de Serviço de VPC, a API é a única maneira compatível de implantar o Cloud Volumes ONTAP.</block>
+  <block id="70a3e02e226af164a67315a0bf5fe570" category="list-text">Certifique-se de ter concluído as configurações de rede e criado o pool de trabalhadores para implantações em modo privado. Consulte <block ref="e482e79d7a86cf247d85a7cad0d36465" category="inline-link-macro-rx"></block>.</block>
+  <block id="d7d760cd1b52022e615021b6f8f10dee" category="paragraph">Especifique o <block ref="8fc12ad6381abbb87712055c7f5e50f1" prefix=" " category="inline-code"></block>parâmetro para executar a ferramenta em implantações no modo privado. Para configuração do pool de workers, consulte <block ref="e482e79d7a86cf247d85a7cad0d36465" category="inline-link-macro-rx"></block>.</block>
+  <block id="80eeb3d4d3560338374cd151f3c11997" category="paragraph">Sua licença precisa estar disponível no Console antes que você possa usá-la com o Cloud Volumes ONTAP. Se necessário, você pode <block ref="197414bd6021ce3306666e377bab3f64" category="inline-link-macro-rx"></block>.</block>
 </blocks>

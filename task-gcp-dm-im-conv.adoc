@@ -44,7 +44,7 @@ Os sistemas Cloud Volumes ONTAP que utilizam o Infrastructure Manager armazenam 
 ====
 ** Certifique-se de ter a versão mais recente do agente do Console. Baixe o instalador do produto no site de suporte da NetApp e, em seguida, instale manualmente o agente em seu host para que o agente possa usar as APIs do Infrastructure Manager.
 ** Se você estiver executando a ferramenta em modo privado, certifique-se de que, junto com as outras APIs, você tenha habilitado a API Cloud Build. https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html#step-5-enable-google-cloud-apis["Ativar APIs do Google Cloud"^].
-** Certifique-se de ter concluído as configurações de rede e criado o pool de trabalhadores para implantações em modo privado. Consulte link:reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuração do Infrastructure Manager para implantações em modo privado"].
+** Certifique-se de ter concluído as configurações de rede e criado o pool de trabalhadores para implantações em modo privado. Consulte link:reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuração do Infrastructure Manager para implantações em modo privado"].
 
 
 ====
@@ -293,7 +293,7 @@ dmconvert \
 .Execute a ferramenta em implantações no modo privado
 [%collapsible]
 ====
-Especifique o  `--worker-pool`parâmetro para executar a ferramenta em implantações no modo privado. Para configuração do pool de workers, consulte link:reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuração do Infrastructure Manager para implantações em modo privado"].
+Especifique o  `--worker-pool`parâmetro para executar a ferramenta em implantações no modo privado. Para configuração do pool de workers, consulte link:reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuração do Infrastructure Manager para implantações em modo privado"].
 
 [source, cli]
 ----
