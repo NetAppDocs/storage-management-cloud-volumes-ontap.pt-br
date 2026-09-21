@@ -7,14 +7,11 @@
 [[deploy-cloud-volumes-ontap-in-private-mode]]
 == Implante o Cloud Volumes ONTAP em modo privado
 
-Você pode implantar o Cloud Volumes ONTAP em modo privado seguindo um processo de conversão documentado, passo a passo, diretamente em seu ambiente existente. Na implantação em modo privado, o Cloud Volumes ONTAP é implantado em sua própria nuvem privada (VPC) ou rede virtual (VNet) e não está conectado à internet pública. Você pode usar a implantação em modo privado para atender aos requisitos de segurança e conformidade da sua organização.
+As opções de implantação em modo privado ajudam você a atender aos requisitos de segurança e conformidade da sua organização. Uma implantação em modo privado segue o mesmo procedimento de uma implantação em modo padrão. Ela opera em sua própria nuvem privada (VPC) ou rede virtual (VNet), sem conectividade com a internet pública.
 
-As implantações em modo privado anteriormente utilizavam apenas licenças baseadas em nós que você podia adquirir da NetApp. A licença baseada em nós é a licença de geração anterior para o Cloud Volumes ONTAP. NetApp havia restringido a compra, extensão e renovação de licenças baseadas em nós, salvo exceções, desde  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["2025-06-25"]. A partir de 31 de julho de 2026, o licenciamento baseado em nós atingirá o fim da disponibilidade (EOA) para esses casos excepcionais, como United States Public Sector (USPS) e outras implantações em modo privado.
+No modo privado, você deve adquirir uma licença Bring-Your-Own baseada em capacidade (BYOL) ou o pacote link:concept-license-management.html["Traga sua própria bebida"]_Essentials_ da NetApp e atribuí-lo ao seu sistema durante a implantação. Os primeiros 500 GiB de capacidade consumida não são contabilizados nos custos da sua licença. Adquira pacotes Essentials adicionais conforme os requisitos da sua carga de trabalho aumentarem. Após a implantação, você pode visualizar o número de série da licença no Console.
 
-Se você tiver uma implantação privada com uma licença baseada em nó, após isso, você:
+Para obter informações sobre como carregar um arquivo de licença para sua implantação em modo privado, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Gerencie licenças baseadas em nós para o Cloud Volumes ONTAP"].
 
-* Não é mais possível comprar ou renovar sua licença baseada em nó.
-* Não é possível acessar os recursos e aprimoramentos mais recentes.
-* Continue a ter maior rigidez operacional devido às restrições baseadas em nós.
-* Será necessário migrar para uma licença baseada em capacidade no modo privado assim que a licença baseada em nó expirar. Para obter instruções, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Converter licenças baseadas em nós para baseadas em capacidade"^].
-
+.Restrições para licenciamento baseado em nós
+As implantações em modo privado usavam anteriormente apenas licenças baseadas em nós. NetApp restringiu a compra, extensão e renovação dessas licenças de geração anterior, exceto em casos limitados, desde  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["2025-06-25"]. Se você tiver implantações em modo privado existentes com licenças baseadas em nós, deverá convertê-las para licenças baseadas em capacidade. Para obter instruções, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Converter licenças baseadas em nós para baseadas em capacidade"^].

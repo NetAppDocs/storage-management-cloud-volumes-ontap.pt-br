@@ -16,7 +16,7 @@ summary: 'Você pode ativar o armazenamento WORM (gravação única e leitura m�
 [role="lead"]
 Você pode ativar o armazenamento WORM (gravação única e leitura múltipla) em um sistema Cloud Volumes ONTAP para reter arquivos em formato inalterado por um período de retenção especificado.  O armazenamento WORM na nuvem é alimentado pela tecnologia SnapLock , o que significa que os arquivos WORM são protegidos no nível do arquivo.
 
-O recurso WORM está disponível para uso com assinaturas de traga sua própria licença (BYOL) e de mercado para suas licenças, sem custo adicional.  Entre em contato com seu representante de vendas da NetApp para adicionar o WORM à sua licença atual.
+O recurso WORM está disponível para uso com suas assinaturas do marketplace e com a licença Bring-Your-Own License (BYOL) sem custo adicional. Entre em contato com seu representante de vendas da NetApp para adicionar o WORM à sua licença atual.
 
 
 

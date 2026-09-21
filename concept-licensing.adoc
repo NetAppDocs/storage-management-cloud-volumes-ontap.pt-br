@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-licensing.html 
-keywords: freemium, professional, essentials, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, paygo, pay as you go, keystone flex, keystone, cloud backup, digital wallet, bluexp license conversion for node based, end of support, eos, end of availability, eoa, node-based 
+keywords: freemium, professional, essentials, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, paygo, pay as you go, keystone flex, keystone, cloud backup, digital wallet, license conversion for node based, end of support, eos, end of availability, eoa, node-based 
 summary: Várias opções de licenciamento estão disponíveis para o Cloud Volumes ONTAP. Cada opção permite que você escolha uma configuração que atenda às suas necessidades. 
 ---
 = Licenciamento para Cloud Volumes ONTAP
@@ -16,7 +16,7 @@ summary: Várias opções de licenciamento estão disponíveis para o Cloud Volu
 [role="lead"]
 Diversos modelos de licenciamento estão disponíveis para o Cloud Volumes ONTAP. Cada opção permite que você escolha um modelo de consumo que atenda às suas necessidades.
 
-Você tem opções para comprar ou renovar suas Licenses and subscriptions em marketplaces de nuvem ou por meio da NetApp (traga sua própria licença (BYOL)). O marketplace oferece assinaturas anuais e opções de pagamento conforme o uso (PAYGO). Para informações, consulte link:concept-license-management.html["Saiba mais sobre licenças baseadas em capacidade para o Cloud Volumes ONTAP"].
+Você tem opções para comprar ou renovar suas licenças e assinaturas em marketplaces de nuvem ou por meio da NetApp (Bring-Your-Own License ou BYOL). O marketplace oferece assinaturas anuais e opções de pagamento conforme o uso (PAYGO). Para obter informações, consulte link:concept-license-management.html["Saiba mais sobre licenças baseadas em capacidade para o Cloud Volumes ONTAP"].
 
 As licenças BYOL estão disponíveis para compra na NetApp e podem ser usadas com qualquer provedor de nuvem. Para obter mais informações sobre a disponibilidade de licenças BYOL, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^].
 
@@ -258,21 +258,21 @@ Saiba mais sobre cada tipo de licença e o impacto do EOA sobre ele nesta tabela
 
 
  a| 
-Licença válida baseada em nó adquirida por meio de traga sua própria licença (BYOL)
+Licença válida baseada em nó adquirida da NetApp ou BYOL.
  a| 
 A licença permanece válida até o vencimento.  Licenças baseadas em nós não utilizadas existentes podem ser usadas para implantar novos sistemas Cloud Volumes ONTAP .
 
 
 
  a| 
-Licença baseada em nó expirada adquirida por meio de BYOL
+Licença BYOL baseada em nó expirada.
  a| 
 Você não terá direito de implantar novos sistemas Cloud Volumes ONTAP usando esta licença.  Os sistemas existentes podem continuar funcionando, mas você não receberá nenhum suporte ou atualizações para seus sistemas após a data do EOS.
 
 
 
  a| 
-Licença válida baseada em nó com assinatura PAYGO
+Licença válida baseada em nó com assinatura PAYGO.
  a| 
 Deixará de receber suporte da NetApp após a data de EOS, até que você faça a transição para uma licença baseada em capacidade.
 
@@ -288,11 +288,13 @@ NOTE: Mesmo nesses cenários, novas licenças baseadas em nós e renovações de
 
 
 [[license-conversion]]
-== Conversão de licença
+=== Conversão de licença
 
-O Console permite uma conversão perfeita de licenças baseadas em nós para licenças baseadas em capacidade por meio da ferramenta de conversão de licenças.  Para obter informações sobre o EOA do licenciamento baseado em nós, consultelink:concept-licensing.html#end-of-availability-of-node-based-licenses["Fim da disponibilidade de licenças baseadas em nós"] .
+O NetApp Console permite uma conversão perfeita de licenças baseadas em nós para licenças baseadas em capacidade por meio da ferramenta de conversão de licenças. Para obter informações sobre o EOA do licenciamento baseado em nós, consulte link:concept-licensing.html#end-of-availability-of-node-based-licenses["Fim da disponibilidade de licenças baseadas em nós"].
 
 Antes de fazer a transição, é bom se familiarizar com a diferença entre os dois modelos de licenciamento.  O licenciamento baseado em nó inclui capacidade fixa para cada instância ONTAP , o que pode restringir a flexibilidade.  O licenciamento baseado em capacidade, por outro lado, permite um pool compartilhado de armazenamento entre várias instâncias, oferecendo maior flexibilidade, otimizando a utilização de recursos e reduzindo o potencial de penalidades financeiras ao redistribuir cargas de trabalho.  O carregamento baseado na capacidade se ajusta perfeitamente às mudanças nos requisitos de armazenamento.
+
+Se você possui assinaturas do marketplace ou implantações privadas com licenças baseadas em nós, você pode link:task-convert-node-capacity.html["Converta suas licenças baseadas em nós para baseadas em capacidade"] usando a ferramenta de conversão de licenças no Console.
 
 Para saber como você pode realizar essa conversão, consultelink:task-convert-node-capacity.html["Converter uma licença baseada em nó do Cloud Volumes ONTAP em uma licença baseada em capacidade"] .
 

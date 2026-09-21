@@ -327,7 +327,7 @@ Alguns campos nesta página são autoexplicativos.  A tabela a seguir descreve o
 | Nome de usuário e senha | Estas são as credenciais para a conta de administrador do cluster Cloud Volumes ONTAP .  Você pode usar essas credenciais para se conectar ao Cloud Volumes ONTAP por meio do ONTAP System Manager ou do ONTAP CLI.  Mantenha o nome de usuário padrão _admin_ ou altere-o para um nome de usuário personalizado. 
 
 
-| Editar credenciais | Escolha as credenciais da AWS e a assinatura do marketplace para usar com este Cloud Volumes ONTAP. Clique em *Adicionar assinatura* para associar as credenciais selecionadas a uma nova assinatura do marketplace da AWS. A assinatura pode ser para um contrato anual ou para pagamento do Cloud Volumes ONTAP por hora. Se você adquiriu uma licença diretamente da NetApp (bring your own license (BYOL)), então uma assinatura da AWS não é necessária. NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para mais informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^]. https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["Aprenda como adicionar credenciais adicionais da AWS ao Console"^]. 
+| Editar credenciais | Escolha as credenciais da AWS e a assinatura do marketplace para usar com este sistema Cloud Volumes ONTAP. Clique em *Adicionar assinatura* para associar as credenciais selecionadas a uma nova assinatura do marketplace da AWS. A assinatura pode ser para um contrato anual ou para pagamento do Cloud Volumes ONTAP por hora. Se você adquiriu uma licença diretamente da NetApp (Bring-Your-Own License ou BYOL), então uma assinatura da AWS não é necessária. NetApp restringiu a compra, extensão e renovação de licenças BYOL. Para mais informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidade restrita de licenciamento BYOL para Cloud Volumes ONTAP"^]. https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["Aprenda como adicionar credenciais adicionais da AWS ao Console"^]. 
 |===
 +
 
@@ -539,7 +539,22 @@ CAUTION: Após a conclusão do processo de implantação, não modifique as conf
 
 
 
+
+
+[[deploy-cloud-volumes-ontap-in-private-mode]]
+== Implante o Cloud Volumes ONTAP em modo privado
+
+As opções de implantação em modo privado ajudam você a atender aos requisitos de segurança e conformidade da sua organização. Uma implantação em modo privado segue o mesmo procedimento de uma implantação em modo padrão. Ela opera em sua própria nuvem privada (VPC) ou rede virtual (VNet), sem conectividade com a internet pública.
+
+No modo privado, você deve adquirir uma licença Bring-Your-Own baseada em capacidade (BYOL) ou o pacote link:concept-license-management.html["Traga sua própria bebida"]_Essentials_ da NetApp e atribuí-lo ao seu sistema durante a implantação. Os primeiros 500 GiB de capacidade consumida não são contabilizados nos custos da sua licença. Adquira pacotes Essentials adicionais conforme os requisitos da sua carga de trabalho aumentarem. Após a implantação, você pode visualizar o número de série da licença no Console.
+
+Para obter informações sobre como carregar um arquivo de licença para sua implantação em modo privado, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Gerencie licenças baseadas em nós para o Cloud Volumes ONTAP"].
+
+.Restrições para licenciamento baseado em nós
+As implantações em modo privado usavam anteriormente apenas licenças baseadas em nós. NetApp restringiu a compra, extensão e renovação dessas licenças de geração anterior, exceto em casos limitados, desde  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["2025-06-25"]. Se você tiver implantações em modo privado existentes com licenças baseadas em nós, deverá convertê-las para licenças baseadas em capacidade. Para obter instruções, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Converter licenças baseadas em nós para baseadas em capacidade"^].
+
 .Links relacionados
+* link:task-onboard-cvo-aws-marketplace.html["Assine e implemente o Cloud Volumes ONTAP a partir do AWS Marketplace"]
 * link:task-planning-your-config.html["Planejando sua configuração do Cloud Volumes ONTAP"]
 * link:task-quick-deploy-aws.html["Implante o Cloud Volumes ONTAP na AWS usando implantação rápida"]
 

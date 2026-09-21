@@ -39,12 +39,12 @@ Os sistemas Cloud Volumes ONTAP que utilizam o Infrastructure Manager armazenam 
 * Certifique-se de que as APIs do Google Cloud estejam ativadas. Consulte  https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html#step-5-enable-google-cloud-apis["Ativar APIs do Google Cloud"^]. Certifique-se de que, junto com as outras APIs, você ative a API de Cotas do Google Cloud.
 * Verifique se a conta de serviço do agente do NetApp Console possui todas as permissões necessárias. Consulte  https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#service-account-permissions["Permissões do Google Cloud para o agente do Console"^].
 +
-.Para implantações em modo privado, assegure estes pré-requisitos adicionais:
+.Para implantações em modo privado, assegure-se destes pré-requisitos adicionais:
 [%collapsible]
 ====
 ** Certifique-se de ter a versão mais recente do agente do Console. Baixe o instalador do produto no site de suporte da NetApp e, em seguida, instale manualmente o agente em seu host para que o agente possa usar as APIs do Infrastructure Manager.
 ** Se você estiver executando a ferramenta em modo privado, certifique-se de que, junto com as outras APIs, você tenha habilitado a API Cloud Build. https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html#step-5-enable-google-cloud-apis["Ativar APIs do Google Cloud"^].
-** Certifique-se de ter concluído as configurações de rede e criado o pool de trabalhadores para implantações em modo privado. Consulte link:reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuração do Infrastructure Manager para implantações em modo privado"].
+** Certifique-se de ter concluído as configurações de rede e criado o pool de trabalhadores para implantações em modo privado. Consulte link:reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuração do Infrastructure Manager para implantações em modo privado"].
 
 
 ====
@@ -162,7 +162,7 @@ includedPermissions:
 - storage.objects.list
 ----
 +
-.Incluir permissão adicional para implantações em modo privado
+.Incluir permissões adicionais para implantações em modo privado
 [%collapsible]
 ====
 Se você estiver executando a ferramenta em modo privado, adicione a permissão  `cloudbuild.workerpools.get` também ao arquivo YAML.
@@ -293,7 +293,7 @@ dmconvert \
 .Execute a ferramenta em implantações no modo privado
 [%collapsible]
 ====
-Especifique o  `--worker-pool`parâmetro para executar a ferramenta em implantações no modo privado. Para configuração do pool de workers, consulte link:reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuração do Infrastructure Manager para implantações em modo privado"].
+Especifique o  `--worker-pool`parâmetro para executar a ferramenta em implantações de modo privado. Para a configuração do pool de workers, consulte link:reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuração do Infrastructure Manager para implantações em modo privado"].
 
 [source, cli]
 ----

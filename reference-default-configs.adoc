@@ -32,7 +32,7 @@ O relatório de espaço lógico está habilitado na VM de armazenamento inicial.
 ** FlexClone
 ** iSCSI
 ** Gerenciamento de chaves de criptografia multilocatário (MTEKM), começando com o Cloud Volumes ONTAP 9.12.1 GA
-** NetApp Volume Encryption (somente para sistemas BYOL (traga sua própria licença) ou sistemas PAYGO (pague conforme o uso) registrados)
+** NetApp Volume Encryption (somente para sistemas Bring-Your-Own License (BYOL) ou sistemas pagamento conforme o uso (PAYGO) registrados)
 ** NFS ifdef::aws[] endif::aws[] ifdef::azure[] endif::azure[]
 ** SnapMirror
 ** SnapRestore

@@ -11,4 +11,4 @@ Anteriormente, ao implantar instâncias do Cloud Volumes ONTAP sobre NVMe-TCP, e
 
 Para implantações NVMe-TCP existentes que não possuem licenças, o Cloud Volumes ONTAP aplica as licenças automaticamente.  Você precisa reiniciar o sistema para que as licenças entrem em vigor.
 
-Para obter mais informações, consulte https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-client-protocols.html#nvme-tcp["Protocolos de cliente suportados para Cloud Volumes ONTAP: NVMe-TCP"^] .
+Para mais informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-client-protocols.html#nvme-tcp["Protocolos de cliente suportados para Cloud Volumes ONTAP: NVMe-TCP"^].

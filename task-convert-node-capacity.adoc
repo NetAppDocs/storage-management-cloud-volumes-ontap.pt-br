@@ -38,7 +38,7 @@ Se você possui uma implantação no modo padrão, pode converter sua licença b
 ** Os recursos de nuvem subjacentes permanecem inalterados após a conversão.
 
 
-* A ferramenta de conversão de licenças oferece suporte a todos os tipos de implantação, como nó único, alta disponibilidade (HA) em zona de disponibilidade única (AZ), HA em várias AZs, traga sua própria licença (BYOL) e PAYGO.
+* A ferramenta de conversão de licenças suporta todos os tipos de implantação, como nó único, alta disponibilidade (HA) em uma única zona de disponibilidade (AZ), HA em várias AZ, Bring-Your-Own License (BYOL) e pagamento conforme o uso.
 * No modo padrão, a ferramenta suporta todas as licenças baseadas em nós como origem e todas as licenças baseadas em capacidade como destino. Por exemplo, se você tiver uma licença BYOL baseada em nó, poderá convertê-la em qualquer licença baseada em capacidade adquirida da NetApp.
 * Após a conversão, o número de série da licença baseada em nós é substituído por um formato baseado em capacidade. Isso é feito como parte da conversão e é refletido na sua conta do NetApp Support Site (NSS).
 * Ao fazer a transição para o modelo baseado em capacidade, seus dados continuam sendo retidos no mesmo local do licenciamento baseado em nós.  Essa abordagem garante que não haja interrupção no posicionamento dos dados e mantém os princípios de soberania dos dados durante toda a transição.
@@ -99,11 +99,11 @@ Veja o novo número de série da licença e verifique as alterações no menu *A
 
 
 [[conversion-in-a-private-mode-deployment]]
-== Conversão em uma implantação de modo privado
+== Conversão em uma implantação em modo privado
 
 Se você tiver uma implantação em modo privado, poderá converter sua licença baseada em nós para uma licença baseada em capacidade usando a ferramenta de conversão de licenças no NetApp Console. A conversão é compatível com todos os provedores de nuvem, AWS, Azure e Google Cloud.
 
-Como as assinaturas do marketplace não são suportadas no modo privado, você precisa adquirir um pacote Essentials (bring your own license (BYOL)) da NetApp. Isso permite que você mantenha os benefícios do licenciamento baseado em capacidade dentro do modelo BYOL, sem a necessidade de assinaturas do marketplace.
+Como as assinaturas do marketplace não são compatíveis com o modo privado, você precisa adquirir um pacote Essentials Bring-Your-Own License ou BYOL da NetApp. Isso permite que você mantenha os benefícios do licenciamento baseado em capacidade dentro do modelo BYOL, sem a necessidade de assinaturas do marketplace.
 
 
 NOTE: A conversão de licenças baseadas em nós para qualquer licença baseada em capacidade que não seja Essentials não é suportada no modo privado.

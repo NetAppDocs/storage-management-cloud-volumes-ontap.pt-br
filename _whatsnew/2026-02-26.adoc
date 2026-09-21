@@ -1,15 +1,15 @@
-= Suporte para Google Infrastructure Manager em implantações no modo privado
+= Suporte para o Google Infrastructure Manager em implantações no modo privado
 :allow-uri-read: 
 
 
 
 
 [[support-for-google-infrastructure-manager-for-private-mode-deployments]]
-=== Suporte para Google Infrastructure Manager em implantações no modo privado
+=== Suporte para o Google Infrastructure Manager em implantações no modo privado
 
-Cloud Volumes ONTAP 9.16.1 e versões posteriores agora oferecem suporte ao  https://docs.cloud.google.com/infrastructure-manager/docs/overview["Google Cloud Infrastructure Manager"^] (IM) em vez do  https://docs.cloud.google.com/deployment-manager/docs/deprecations["Cloud Deployment Manager"^] (DM) para novas implantações em modo privado no Google Cloud. O Google descontinuará o Deployment Manager como serviço de infraestrutura em breve para o mais avançado Infrastructure Manager.
+O Cloud Volumes ONTAP 9.16.1 e versões posteriores agora oferecem suporte ao  https://docs.cloud.google.com/infrastructure-manager/docs/overview["Google Cloud Infrastructure Manager"^] (IM) em vez do  https://docs.cloud.google.com/deployment-manager/docs/deprecations["Cloud Deployment Manager"^] (DM) para novas implantações em modo privado no Google Cloud. O Google descontinuará o Deployment Manager como serviço de infraestrutura em breve para o mais avançado Infrastructure Manager.
 
-A partir de 25 de fevereiro de 2026, Cloud Volumes ONTAP usa Infrastructure Manager para implantações novas e existentes no modo privado. Esta tabela explica os fluxos de trabalho básicos para você:
+A partir de 25 de fevereiro de 2026, o Cloud Volumes ONTAP utiliza o Infrastructure Manager para novas e existentes implantações em modo privado. Esta tabela explica os fluxos de trabalho básicos para você:
 
 [cols="1,4,1,1,1,1"]
 |===
@@ -43,7 +43,7 @@ Todas as permissões listadas para a versão Console em:
 
 
 |===
-Em implantações em modo privado, você precisa fazer algumas alterações de configuração no Cloud Volumes ONTAP para começar a usar o Infrastructure Manager. Consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuração do Infrastructure Manager para implantações em modo privado"^].
+Em implantações em modo privado, você precisa fazer algumas alterações de configuração no Cloud Volumes ONTAP para começar a usar o Infrastructure Manager. Consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuração do Infrastructure Manager para implantações em modo privado"^].
 
 .Links relacionados
 * https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#console-agent-4-2-0["NetApp Console Agent 4.2.0 Notas de versão"^]

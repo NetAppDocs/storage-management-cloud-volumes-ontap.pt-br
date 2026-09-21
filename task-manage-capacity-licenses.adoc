@@ -73,8 +73,8 @@ Você verá apenas as assinaturas associadas à organização que você está vi
 
 
 
-[[viewing-package-details]]
-== Visualizando detalhes do pacote
+[[view-package-details]]
+== Ver detalhes do pacote
 
 Você pode visualizar detalhes sobre a capacidade utilizada por pacote alternando para o modo legado na página do Cloud Volumes ONTAP.
 

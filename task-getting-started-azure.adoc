@@ -22,6 +22,17 @@ Para implantar Cloud Volumes ONTAP, primeiro você precisa conhecer sua assinatu
 
 
  a| 
+Verifique as funções do NetApp Console
+ a| 
+Antes de criar um agente de Console e executar outras tarefas de implantação para o Cloud Volumes ONTAP, você deve verificar se as funções e permissões do IAM necessárias estão configuradas.
+ a| 
+Consulte o guia de configuração do NetApp Console: https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Funções de acesso do Cloud Volumes ONTAP no NetApp Console"^] https://docs.netapp.com/us-en/console-setup-admin/task-cvo-rbac-setup.html["Configure o acesso baseado em funções para Cloud Volumes ONTAP"^]
+ a| 
+Verifique se as funções estão configuradas corretamente.
+
+
+
+ a| 
 Criar um agente do Console
  a| 
 Se você ainda não possui um agente de Console, crie um antes de implantar Cloud Volumes ONTAP.
@@ -67,10 +78,10 @@ Consulte:
 * link:task-deploying-otc-azure.html["Implante Cloud Volumes ONTAP usando opções avançadas"]
 
  a| 
-Antes de iniciar a implantação, certifique-se de que você adquiriu uma licença do Cloud Volumes ONTAP da NetApp. Implantações em modo privado exigem licenças BYOL baseadas em nó. Assinaturas do Marketplace não são compatíveis para cobrança do uso do Cloud Volumes ONTAP. Obtenha o arquivo de licença da NetApp e faça o upload durante a implantação. Consulte:
+O modo privado suporta apenas a implantação avançada. Antes de iniciar a implantação, certifique-se de que você adquiriu uma licença do Cloud Volumes ONTAP da NetApp. As implantações em modo privado dependem de licenças BYOL. Assinaturas do Marketplace não são compatíveis para cobrança do uso do Cloud Volumes ONTAP. Obtenha o arquivo de licença da NetApp e faça o upload durante a implantação. Consulte:
 
-* link:concept-license-management.html["Gerenciamento de licenças para BYOL baseado em nó"]
-* link:task-manage-node-licenses.html["Gerencie licenças BYOL baseadas em nós"]
+* link:concept-license-management.html["Gerenciamento de licenças"]
+* link:task-manage-node-licenses.html["Gerenciar licenças BYOL"]
 * link:task-deploying-otc-azure.html["Implante Cloud Volumes ONTAP usando opções avançadas"]
 
 

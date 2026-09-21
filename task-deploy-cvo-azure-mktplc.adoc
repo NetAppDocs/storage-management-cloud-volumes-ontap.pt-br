@@ -149,6 +149,7 @@ Após a conclusão da descoberta, você poderá visualizar os sistemas listados 
 .Links relacionados
 Consulte a documentação do ONTAP para obter mais informações sobre como criar armazenamento:
 
+* link:task-onboard-cvo-aws-marketplace.html["Assine e implemente o Cloud Volumes ONTAP a partir do AWS Marketplace"]
 * https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-subscriptions.html["Adicionar uma nova assinatura do marketplace"^]
 * https://docs.netapp.com/us-en/ontap/volumes/create-volume-task.html["Criar volumes para NFS"^]
 * https://docs.netapp.com/us-en/ontap-cli/lun-create.html["Criar LUNs para iSCSI"^]

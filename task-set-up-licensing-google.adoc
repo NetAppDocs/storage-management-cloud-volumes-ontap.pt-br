@@ -50,7 +50,7 @@ O licenciamento baseado em capacidade permite que você pague pelo Cloud Volumes
 
 Os pacotes Essentials e Professional estão disponíveis nos seguintes modelos de consumo ou opções de compra:
 
-* Uma licença (traga sua própria licença (BYOL)) adquirida da NetApp
+* Uma licença adquirida da NetApp (Bring-Your-Own License ou BYOL)
 * Uma assinatura por hora, paga conforme o uso (PAYGO), do Google Cloud Marketplace
 * Um contrato anual
 

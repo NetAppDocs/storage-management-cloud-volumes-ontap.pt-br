@@ -1,0 +1,21 @@
+= Suporte para licenças baseadas em capacidade em implantações em modo privado
+:allow-uri-read: 
+
+
+
+
+[[support-for-capacity-based-licenses-in-private-mode-deployments]]
+=== Suporte para licenças baseadas em capacidade em implantações em modo privado
+
+Agora você pode implantar o Cloud Volumes ONTAP em modo privado com licenças baseadas em capacidade na AWS, Azure e Google Cloud.
+
+NetApp oferece suporte apenas ao pacote Essentials para o modelo de licenciamento baseado em capacidade no modo privado. Adquira um pacote Essentials BYOL (Bring-Your-Own License) baseado em capacidade da NetApp e atribua-o ao seu sistema durante a implantação. Os primeiros 500 GiB de capacidade consumida não são contabilizados nas suas cobranças de licença. Você pode adquirir pacotes adicionais conforme as necessidades da sua carga de trabalho aumentam.
+
+NetApp recomenda o licenciamento baseado em capacidade para todas as implementações do Cloud Volumes ONTAP em modo privado. Se você já possui implementações em modo privado com licenças baseadas em nós, pode convertê-las para o licenciamento baseado em capacidade adquirindo um pacote Essentials da NetApp. Essa nova funcionalidade de implementação, combinada com a opção de conversão, apoia o plano da NetApp de migrar gradualmente do licenciamento baseado em nós para o licenciamento baseado em capacidade.
+
+.Links relacionados
+* https://review.docs.netapp.com/us-en/storage-management-cloud-volumes-ontap_capacity-license-darkmode/concept-licensing.html["Licenciamento do Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-license-management.html["Saiba mais sobre o Cloud Volumes ONTAP BYOL"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fim da disponibilidade de licenças baseadas em nós"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Gerencie licenças baseadas em nós para o Cloud Volumes ONTAP"^]
+

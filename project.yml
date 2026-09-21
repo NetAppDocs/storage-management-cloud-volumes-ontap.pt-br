@@ -290,7 +290,7 @@ sidebar:
         url: "/concept-licensing-charging.html"
       - title: Gerenciar licenças baseadas em capacidade
         url: "/task-manage-capacity-licenses.html"
-      - title: Saiba mais sobre BYOL baseado em nós
+      - title: Saiba mais sobre o licenciamento BYOL
         url: "/concept-license-management.html"
       - title: Gerenciar licenças baseadas em nós
         url: "/task-manage-node-licenses.html"

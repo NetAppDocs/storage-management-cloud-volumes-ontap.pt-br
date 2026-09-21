@@ -100,6 +100,8 @@ indexpage:
       url: https://docs.netapp.com/us-en/console-automation/cm/prepare.html
   - title: Cloud Volumes ONTAP e outros NetApp products
     links:
+    - title: Funções do Cloud Volumes ONTAP no NetApp Console
+      url: https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html
     - title: Cloud Volumes ONTAP e Flash Cache
       url: "/concept-flash-cache.html"
     - title: Cloud Volumes ONTAP e AutoSupport-Digital Advisor
