@@ -14,4 +14,4 @@ Agora você pode implantar Cloud Volumes ONTAP 9.12.1 GA e versões posteriores 
 * Alta disponibilidade em múltiplas zonas de disponibilidade usando armazenamento com redundância de zona (ZRS)
 
 
-Para obter uma lista de todas as regiões suportadas, consulte o https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiões globais no Azure"^] .
+Para obter uma lista de todas as regiões suportadas, consulte o  https://www.netapp.com/cloud-volumes-ontap/supported-regions/["Mapa de regiões globais no Azure"^].

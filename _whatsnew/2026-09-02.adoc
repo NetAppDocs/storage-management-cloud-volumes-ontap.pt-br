@@ -11,7 +11,7 @@ O Cloud Volumes ONTAP agora oferece suporte à implantação nas regiões Azure 
 
 Para obter mais informações, consulte a documentação do Azure:
 
-* https://azure.microsoft.com/en-us/blog/azure-government-top-secret-now-generally-available-for-us-national-security-missions/["Nuvem para missões do governo dos EUA^"]
+* https://azure.microsoft.com/en-us/blog/azure-government-top-secret-now-generally-available-for-us-national-security-missions/["Nuvem para missões do governo dos EUA"^]
 * https://azure.microsoft.com/en-us/explore/global-infrastructure/government/national-security["O Azure Government Secret"^]
 * https://azure.microsoft.com/en-us/blog/azure-government-top-secret-now-generally-available-for-us-national-security-missions["Azure Government Top Secret"^]
 

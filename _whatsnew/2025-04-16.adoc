@@ -13,4 +13,4 @@ Agora você pode implantar o Cloud Volumes ONTAP 9.12.1 GA e posterior em zonas 
 * México Central
 
 
-Para obter uma lista de todas as regiões, consulte o https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiões globais no Azure"^] .
+Para obter uma lista de todas as regiões, consulte o https://www.netapp.com/cloud-volumes-ontap/supported-regions/["Mapa de regiões globais no Azure"^].

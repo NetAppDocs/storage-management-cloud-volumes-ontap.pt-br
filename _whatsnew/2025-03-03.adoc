@@ -9,4 +9,4 @@
 
 A região Norte da Nova Zelândia agora tem suporte no Azure para configurações de nó único e alta disponibilidade (HA) do Cloud Volumes ONTAP 9.12.1 GA e posteriores.  Observe que o tipo de instância Lsv3 não é suportado nesta região.
 
-Para obter uma lista de todas as regiões suportadas, consulte o https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiões globais no Azure"^] .
+Para obter uma lista de todas as regiões suportadas, consulte o  https://www.netapp.com/cloud-volumes-ontap/supported-regions/["Mapa de regiões globais no Azure"^].

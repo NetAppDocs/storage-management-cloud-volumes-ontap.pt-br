@@ -82,7 +82,6 @@
   <block id="e622e2ddfce6c06eca3078953e9e6186" category="doc">Suporte para a região Norte da Nova Zelândia no Azure</block>
   <block id="81ae8423a213b8c9bbcb79aee6ae0af8" category="paragraph">A região Norte da Nova Zelândia agora tem suporte no Azure para configurações de nó único e alta disponibilidade (HA) do Cloud Volumes ONTAP 9.12.1 GA e posteriores.  Observe que o tipo de instância Lsv3 não é suportado nesta região.</block>
   <block id="1453deb356953584c888fcae0040c1c6" category="inline-link">Mapa de regiões globais no Azure</block>
-  <block id="b717ddfb2f9a28b7e4673751144693cc" category="paragraph">Para obter uma lista de todas as regiões suportadas, consulte o<block ref="0f1c2d6a84741595f86a459e46c2a400" category="inline-link-rx"></block> .</block>
   <block id="5781bb449b503c5fcaefb20bfaa81cc4" category="doc">Cloud Volumes ONTAP 9.16.1 GA</block>
   <block id="efa5e5522cbd4457ef4e551fb5d60491" category="paragraph">Agora você pode usar o BlueXP para implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.16.1 no Azure e no Google Cloud. No entanto, esta versão não está disponível para implantação e atualização na AWS.</block>
   <block id="9f97c3125a701942b4e6e648146819fc" category="inline-link-macro">Saiba mais sobre os novos recursos incluídos nesta versão do Cloud Volumes ONTAP</block>
@@ -94,13 +93,11 @@
   <block id="0cc914ed23f0f7d6bc902ae731843213" category="paragraph">As seguintes regiões agora oferecem suporte a implantações de várias zonas de disponibilidade de HA no Azure para o Cloud Volumes ONTAP 9.12.1 GA e posteriores:</block>
   <block id="2e168141b8f719cbd37e6beec663b599" category="list-text">EUA Central</block>
   <block id="7a6df46ff8e25ac610f60f312512afa4" category="list-text">Governo dos EUA - Virgínia (Região do Governo dos EUA - Virgínia)</block>
-  <block id="91aba3afcaafb3ecbed8f358c30b8a7a" category="paragraph">Para obter uma lista de todas as regiões, consulte o<block ref="0f1c2d6a84741595f86a459e46c2a400" category="inline-link-rx"></block> .</block>
   <block id="f2035db09bb2be2db0508915fa584149" category="paragraph">Agora você pode implantar o Cloud Volumes ONTAP 9.14.1 no modo privado na AWS, Azure e Google Cloud.  O modo privado é habilitado para implantações de nó único e de alta disponibilidade (HA) do Cloud Volumes ONTAP 9.14.1.</block>
   <block id="62bd7572081df25dd3f1f52151883c4a" category="inline-link">Saiba mais sobre os modos de implantação do BlueXP</block>
   <block id="b77891a5294c25aca8a6fda943805ecf" category="doc">Suporte para regiões da China para Cloud Volumes ONTAP 9.13.1 na AWS</block>
   <block id="a3f77d8413628b40c09a649cd79a6e02" category="paragraph">Agora você pode implantar o Cloud Volumes ONTAP 9.13.1 na AWS nas regiões da China. Isso inclui suporte para implantações de nó único e de alta disponibilidade (HA). Somente licenças adquiridas diretamente da NetApp são suportadas.</block>
   <block id="abe88f95b23156cb29c433c9ebe92a00" category="inline-link">Mapas de regiões globais para Cloud Volumes ONTAP</block>
-  <block id="10df570a0447a18b299f516b2e8498c2" category="paragraph">Para disponibilidade regional, consulte o<block ref="f76c632bc8b9c4e032a9d48fcbfa8dc1" category="inline-link-rx"></block> .</block>
   <block id="d0ae6326de6f7742cd369aae9832406f" category="doc">Criação de VM de armazenamento automatizada por meio de APIs no Google Cloud</block>
   <block id="1bf898a189d08a92d24b9432b7db4ed0" category="paragraph">Agora você pode usar as APIs do BlueXP para automatizar a criação de VMs de armazenamento no Google Cloud.  Você estava usando esse recurso em configurações de alta disponibilidade (HA) do Cloud Volumes ONTAP e agora também pode usá-lo em implantações de nó único.  Ao usar as APIs do BlueXP , você pode facilmente criar, renomear e excluir VMs de armazenamento de serviço de dados adicionais no seu ambiente do Google Cloud, sem a necessidade de configurar manualmente as interfaces de rede, LIFs e LIFs de gerenciamento necessários.  Essa automação simplifica o processo de gerenciamento de VMs de armazenamento.</block>
   <block id="914fe95f5aa6c2bb4ed60cded696ac13" category="inline-link">Gerenciar VMs de armazenamento de dados para o Cloud Volumes ONTAP no Google Cloud</block>
@@ -3337,7 +3334,6 @@
   <block id="e7010d3e26fcd0c3b7c9d7059b1649f0" category="list-text"><block ref="e7010d3e26fcd0c3b7c9d7059b1649f0" category="inline-link-macro-rx"></block></block>
   <block id="519fd69508502bac64035ccc9de1d25e" category="section-title">Escolha uma região com suporte</block>
   <block id="3b61cbbfa7452cc07df9dbea0756d650" category="inline-link">Veja a lista completa de regiões suportadas</block>
-  <block id="e242baa97428f1acdd0a43c0f27ecf0e" category="paragraph">O Cloud Volumes ONTAP é compatível com a maioria das regiões do Microsoft Azure.<block ref="0de6b81e82e22001f2c59ffd34a8aeac" category="inline-link-rx"></block> .</block>
   <block id="e3a47201ab0cc67c20d5aeacce3b8ced" category="section-title">Escolha um tipo de VM compatível</block>
   <block id="00d6f59010ef5b4445142547ef7725f2" category="paragraph">O Cloud Volumes ONTAP oferece suporte a vários tipos de VM, dependendo do tipo de licença escolhido.</block>
   <block id="a09c3a7be8e7dc42776a7b03793d536c" category="inline-link">Configurações com suporte para Cloud Volumes ONTAP no Azure</block>
@@ -3390,7 +3386,6 @@
   <block id="a89897d61f59af926b4d06d06e8b2884" category="summary">Ao implantar o Cloud Volumes ONTAP, você pode escolher um sistema pré-configurado que corresponda aos seus requisitos de carga de trabalho ou pode criar sua própria configuração.  Se você escolher sua própria configuração, deverá entender as opções disponíveis.</block>
   <block id="70cc6814c68e3ce95f7b70c2f1ea3e9d" category="paragraph">Ao implantar o Cloud Volumes ONTAP no Google Cloud, você pode escolher um sistema pré-configurado que corresponda aos seus requisitos de carga de trabalho ou pode criar sua própria configuração.  Se você escolher sua própria configuração, deverá entender as opções disponíveis.</block>
   <block id="f1e89d709c35aed2650bbf12a55f1ba1" category="list-text"><block ref="f1e89d709c35aed2650bbf12a55f1ba1" category="inline-link-macro-rx"></block></block>
-  <block id="c24e9fc1263121db1bb6501931efe09c" category="paragraph">O Cloud Volumes ONTAP é compatível com a maioria das regiões do Google Cloud.<block ref="0de6b81e82e22001f2c59ffd34a8aeac" category="inline-link-rx"></block> .</block>
   <block id="18ff4ec9e6259918d45028a5d6040d91" category="section-title">Escolha um tipo de máquina compatível</block>
   <block id="64efea6517490623e51052b533085d96" category="paragraph">O Cloud Volumes ONTAP oferece suporte a vários tipos de máquinas, dependendo do tipo de licença escolhido.</block>
   <block id="d1d964d1db8731b3b8174fa845b85de0" category="paragraph">Dimensionar seu sistema Cloud Volumes ONTAP pode ajudar você a atender aos requisitos de desempenho e capacidade.  Você deve estar ciente de alguns pontos-chave ao escolher um tipo de máquina, tipo de disco e tamanho de disco:</block>
@@ -3430,7 +3425,6 @@
   <block id="7669beb3752fde839271f735bd3fd173" category="paragraph">O Console permite que você escolha uma configuração de velocidade de gravação para o Cloud Volumes ONTAP, exceto para pares de alta disponibilidade (HA) no Google Cloud.  Antes de escolher uma velocidade de gravação, você deve entender as diferenças entre as configurações normal e alta, bem como os riscos e recomendações ao usar alta velocidade de gravação. <block ref="12222f10612c9f092ca31c9e99478649" category="inline-link-macro-rx"></block> .</block>
   <block id="72d7d9fbd92253175591abfdb19dc6a1" category="summary">Ao implantar o Cloud Volumes ONTAP na AWS, você pode escolher um sistema pré-configurado que corresponda aos seus requisitos de carga de trabalho ou pode criar sua própria configuração.  Se você escolher sua própria configuração, deverá entender as opções disponíveis.</block>
   <block id="b2908e7df27905e20924b93b3ff0b803" category="list-text"><block ref="b2908e7df27905e20924b93b3ff0b803" category="inline-link-macro-rx"></block></block>
-  <block id="77616d628efddeba1fd424b939777229" category="paragraph">O Cloud Volumes ONTAP é suportado na maioria das regiões da AWS.<block ref="0de6b81e82e22001f2c59ffd34a8aeac" category="inline-link-rx"></block> .</block>
   <block id="77ccb62da3cbac8ecfb3dcda7b4635b9" category="inline-link">Documentação da AWS: Aprenda como habilitar uma região</block>
   <block id="fef606ad68172c64f478d929b8842876" category="paragraph">Regiões mais recentes da AWS devem ser habilitadas antes que você possa criar e gerenciar recursos nessas regiões.<block ref="b7b79d9a35f355344e562154976e1f3d" category="inline-link-rx"></block> .</block>
   <block id="64d1ac557c8992bc5d65b98a95e0b497" category="section-title">Escolha uma Zona Local com suporte</block>
@@ -4211,7 +4205,6 @@
   <block id="2c8ad7deb621eae9ecb23ccf84d9c22c" category="section-title">Região Canadá Oeste agora com suporte na AWS</block>
   <block id="184c928c73aa00c7569ba55c0b9e0064" category="paragraph">A região Canadá Oeste agora tem suporte no AWS para Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
   <block id="0970aa81dd486fe1c8e03549b29f3d46" category="inline-link">Mapa de regiões globais na AWS</block>
-  <block id="96c6a6277896e4ed7c2cef558b5542c1" category="paragraph">Para uma lista de todas as regiões, consulte o<block ref="24faa078890c2d8c97de1a6b5a5789e3" category="inline-link-rx"></block> .</block>
   <block id="bfe1024d3c9f1a02aa5dd1d7e5dccb34" category="section-title">22 de agosto de 2024</block>
   <block id="cf153c7d2cb432b6e772832926525a09" category="section-title">Cloud Volumes ONTAP 9.15.1 GA</block>
   <block id="ffa2c93a775db2cb6243bf2a224cf240" category="paragraph">O BlueXP agora pode implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.15.1 na AWS, Azure e Google Cloud.</block>
@@ -4239,7 +4232,6 @@
   <block id="0b745a8416b0a8e3b89e7e01ba13af65" category="section-title">Região de Joanesburgo agora com suporte no Google Cloud</block>
   <block id="ec826289e3407edb59d3c5ed0aca5c74" category="paragraph">A região de Joanesburgo<block ref="6d1d2d77b70fb38d060e5653977838a2" prefix="(" category="inline-code"></block> região) agora é compatível com o Google Cloud para Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
   <block id="2bc724993144e8002899059117620062" category="inline-link">Mapa de regiões globais no Google Cloud</block>
-  <block id="9b699d89d2577245514962357937a87b" category="paragraph">Para obter uma lista de todas as regiões, consulte o<block ref="5328f934c7a30e2b8b67732fc162a525" category="inline-link-rx"></block> .</block>
   <block id="ee94ea94211470599a81d49f8c4b586f" category="section-title">Modelos de volume e tags não são mais suportados</block>
   <block id="96b0b2a19dd9deb6b94e53f2e29f4387" category="paragraph">Você não pode mais criar um volume a partir de um modelo ou editar as tags de um volume.  Essas ações foram associadas ao serviço de correção BlueXP , que não está mais disponível.</block>
   <block id="1582ce9c3a0b0079717e0b0c6edf2347" category="section-title">Suporte ao Amazon Instant Metadata Service v2</block>
@@ -4294,7 +4286,6 @@
   <block id="56e0da46254ac9c6f784da40f466bda0" category="paragraph">A região de Berlim agora tem suporte no Google Cloud para Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
   <block id="bbb4cf526641d95bbb8ab8bada56fa79" category="section-title">Região de Tel Aviv agora com suporte na AWS</block>
   <block id="04afad264aa486baec91a1ade145665a" category="paragraph">A região de Tel Aviv agora tem suporte no AWS para Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
-  <block id="a3146a355baed19983a62f97e9e33a8e" category="paragraph">Para obter uma lista de todas as regiões, consulte o<block ref="24faa078890c2d8c97de1a6b5a5789e3" category="inline-link-rx"></block> .</block>
   <block id="8904b1f88c62ce8a8381c8474f2ccb42" category="paragraph">A seguinte alteração foi introduzida com a versão 3.9.34 do Connector.</block>
   <block id="992f57af99811ae146ed6df67eccc26f" category="section-title">Região da Arábia Saudita agora com suporte no Google Cloud</block>
   <block id="9e06c986efeeff600f0b04c67d5d6354" category="paragraph">A região da Arábia Saudita agora tem suporte no Google Cloud para Cloud Volumes ONTAP e no Connector for Cloud Volumes ONTAP 9.12.1 GA e posteriores.</block>
@@ -4309,7 +4300,6 @@
   <block id="7def8b46a24f875959130a855cd80918" category="list-text">Suécia Central</block>
   <block id="8fb2033d01e3efa2825282a13f86c14e" category="list-text">Europa Ocidental</block>
   <block id="c349d3a26cf4231660785a0c5b4cb007" category="list-text">Oeste dos EUA 2</block>
-  <block id="52183d0603ae187e1b8670c9880c570c" category="paragraph">Para obter uma lista de todas as regiões que oferecem suporte a várias zonas de disponibilidade, consulte o<block ref="0f1c2d6a84741595f86a459e46c2a400" category="inline-link-rx"></block> .</block>
   <block id="44d133359b344c4542acdebe6209e101" category="section-title">Cloud Volumes ONTAP 9.14.0</block>
   <block id="c5fa627d231c9a8813c9a2421d86136f" category="paragraph">O BlueXP agora pode implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.14.0 na AWS, Azure e Google Cloud.</block>
   <block id="24444e2a682bc377b24836f577ac4475" category="paragraph"><block ref="81dc441c35d41d83534cfed9e9baa0db" category="inline-link-rx"></block> .</block>
@@ -4373,7 +4363,6 @@
   <block id="ebef32c1ba0aec7a39eb2ce8370a97d5" category="paragraph">A partir do Cloud Volumes ONTAP 9.12.1 GA, as regiões da China agora são suportadas na AWS da seguinte forma.</block>
   <block id="80a79e3e92d4834ae8746d205e83c105" category="list-text">Licenças adquiridas diretamente da NetApp são suportadas.</block>
   <block id="13615a82d1149a992b363c411914d3b8" category="inline-link">Mapas de regiões globais para Cloud Volumes ONTAP</block>
-  <block id="cec47fe41efdc9b07523c56da6796d2e" category="paragraph">Para disponibilidade regional, consulte o<block ref="7511e65336251f569b4c4f44ab1468f7" category="inline-link-rx"></block> .</block>
   <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">3 de abril de 2023</block>
   <block id="2dfd965acb2426b281b13a70df99c06b" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.28 do Connector.</block>
   <block id="7ce52c94db42646098e71a61d9836b73" category="section-title">Região de Turim agora com suporte no Google Cloud</block>
@@ -4500,7 +4489,6 @@
   <block id="c86d179c90248acd6ebdba05bd94320c" category="section-title">Novo suporte à região do Azure Cloud</block>
   <block id="c55cc410beff8f86afc3ba8027b681f7" category="paragraph">A partir da versão 9.10.1, o Cloud Volumes ONTAP agora tem suporte na região Azure West US 3.</block>
   <block id="d1ce20099e22fd96c2217da218a20a9e" category="inline-link">Veja a lista completa de regiões com suporte para o Cloud Volumes ONTAP</block>
-  <block id="c1a328cf0660e851f6654745d3aca99e" category="paragraph"><block ref="c1a328cf0660e851f6654745d3aca99e" category="inline-link-rx"></block></block>
   <block id="1a3362a1b5304a4e1e1112496974b9ae" category="section-title">Licença ONTAP S3 no Azure</block>
   <block id="f225a4f57ea32da8b983d7bffd20b6eb" category="paragraph">Uma licença ONTAP S3 agora está incluída em sistemas Cloud Volumes ONTAP novos e existentes que executam a versão 9.9.1 ou posterior no Azure.</block>
   <block id="650bbb3fd1c3ec1cf13fbf6dc440ce1c" category="paragraph">As seguintes alterações foram introduzidas com a versão 3.9.19 do Connector.</block>
@@ -4752,7 +4740,6 @@
   <block id="2fae32629d4ef4fc6341f1751b405e45" category="sidebar">Segurança</block>
   <block id="900a7d1cbee7ee0ec36bcd1f657e3d33" category="sidebar">Criptografar volumes com criptografia NetApp</block>
   <block id="d586076d8407175a440d65cf7ae51ba3" category="sidebar">Melhore a proteção contra ransomware</block>
-  <block id="c564b2555372de0d934ba75ba59f8d84" category="sidebar">Visão geral da API Cloud Volumes ONTAP</block>
   <block id="19ec08da81a826d919d64ab860845c04" category="sidebar">Referência de API</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">Solução de problemas</block>
   <block id="1cc5d81d544d68e9400f1d1195456642" category="sidebar">Regiões de nuvem suportadas</block>
@@ -6198,7 +6185,6 @@
   <block id="1adacbb72826f9b83c0140c9286c1820" category="cell">n2 (todas as variantes)</block>
   <block id="c8ffe9a587b126f152ed3d89a146b445" category="cell">124</block>
   <block id="d96409bf894217686ba124d7356686c9" category="cell">257</block>
-  <block id="9b986795dc6a434c7339bfecbd5e5c8b" category="paragraph">Para suporte a regiões do Google Cloud, consulte <block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>.</block>
   <block id="01b4b8fa1f5ea45d927ed40fc0ca5983" category="inline-link">Documentação do Google Cloud: tipos de máquinas de uso geral da série N1</block>
   <block id="752d9c77571c216848dea601a2146e64" category="list-text"><block ref="752d9c77571c216848dea601a2146e64" category="inline-link-rx"></block></block>
   <block id="f01b2e7c91fc1d27e951f6c14322b1db" category="inline-link">Documentação do Google Cloud: tipos de máquinas de uso geral da série N2</block>
@@ -6247,7 +6233,6 @@
   <block id="ed5b1d9ebcc8b8d189007ac8c9494846" category="section-title">Limitações nas implementações de HA</block>
   <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">Pares de HA não são suportados em algumas regiões.</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">Veja a lista de regiões do Azure compatíveis</block>
-  <block id="d798d4963d0ac509a1bda5483d9b9a52" category="paragraph"><block ref="5a94f18247116693735ff13d8eeaa964" category="inline-link-rx"></block>.</block>
   <block id="b2c659497c1ac3bfb0fc72c1bc792dd9" category="doc">Limitações conhecidas do Cloud Volumes ONTAP no Google Cloud</block>
   <block id="5caaf889f6f108c7753c8110e25e46bc" category="paragraph">As seguintes limitações conhecidas são específicas do Cloud Volumes ONTAP no Google Cloud Platform. Certifique-se também de revisar <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>.</block>
   <block id="aa55d70088944a0bae64dd34633165af" category="section-title">Limitação com espelhamento de pacotes</block>
@@ -6679,7 +6664,6 @@
   <block id="c7a5cb6d0f07a5d09419f0f984b0353c" category="sidebar">Crie um volume FlexVol em um sistema</block>
   <block id="97b0cb10b9751d7db1a5951f0f1d4fa7" category="sidebar">Dados inativos de tier</block>
   <block id="32761d08dfb05de9ed6cf3939fb3885a" category="sidebar">Criptografe volumes no Cloud Volumes ONTAP</block>
-  <block id="a01fbb30559112e345b9f539170bd7ea" category="sidebar">Referência da API (NetApp Console Automation)</block>
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">Mais recursos</block>
   <block id="57f987f1cc203722b3382b8d192e634b" category="sidebar">Use a CLI do ONTAP para Cloud Volumes ONTAP</block>
   <block id="75de5084889080c34d338d79014b90d7" category="sidebar">Limitações comuns</block>
@@ -7206,8 +7190,6 @@
   <block id="9775ec01b640ec37d790fc80fcd304fa" category="doc">Suporte do Cloud Volumes ONTAP nas regiões Azure Secret e Top Secret (prévia privada)</block>
   <block id="71220dfc0ef52806d7063323e20a8d01" category="paragraph">O Cloud Volumes ONTAP agora oferece suporte à implantação nas regiões Azure Government Secret e Top Secret em prévia privada. Essa funcionalidade estende o Cloud Volumes ONTAP aos ambientes classificados do Azure da Microsoft, permitindo que clientes governamentais e de defesa usem o ONTAP para gerenciamento, proteção e recuperação de desastres de dados, dando suporte a cargas de trabalho de segurança nacional. Entre em contato com a sua equipe de contas NetApp para participar.</block>
   <block id="9a4d5529d16b869118217275b6da762d" category="paragraph">Para obter mais informações, consulte a documentação do Azure:</block>
-  <block id="d6cb1d3533b658f7c8098c480b799207" category="inline-link">Nuvem para missões do governo dos EUA^</block>
-  <block id="77063c44fc617a6f3c637b1e2c35bd37" category="list-text"><block ref="77063c44fc617a6f3c637b1e2c35bd37" category="inline-link-rx"></block></block>
   <block id="985c02ef44894c5b9eb81c7ef41befb6" category="inline-link">O Azure Government Secret</block>
   <block id="97003784d2f5493688983ca3efa74e68" category="list-text"><block ref="97003784d2f5493688983ca3efa74e68" category="inline-link-rx"></block></block>
   <block id="68e1f1aba2e1561ee3226c9bcfef5ee1" category="inline-link">Azure Government Top Secret</block>
@@ -7607,8 +7589,6 @@
   <block id="77ed1894c70b52c4bd276c4386e398b5" category="inline-link-macro">Converta suas licenças baseadas em nós para baseadas em capacidade</block>
   <block id="f6baf1b492e955e0279a9f14cb4d1a91" category="paragraph">Se você possui assinaturas do marketplace ou implantações privadas com licenças baseadas em nós, você pode <block ref="db4ec6a978acbab7786496b22aa52409" category="inline-link-macro-rx"></block> usando a ferramenta de conversão de licenças no Console.</block>
   <block id="6a5ecd454fa726d7a1f82f34b7971296" category="paragraph">O recurso WORM está disponível para uso com suas assinaturas do marketplace e com a licença Bring-Your-Own License (BYOL) sem custo adicional. Entre em contato com seu representante de vendas da NetApp para adicionar o WORM à sua licença atual.</block>
-  <block id="f7e27190d04c602ebb7b131101f305a6" category="paragraph">Para obter informações sobre suporte regional da AWS, consulte <block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>.</block>
-  <block id="2a4306e4935178b821ec39f5f7b1916a" category="paragraph">Para obter suporte para regiões do Azure, consulte <block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>.</block>
   <block id="fa8cd47e4ec2a3db59105b2bede68a28" category="list-text">NetApp Volume Encryption (somente para sistemas Bring-Your-Own License (BYOL) ou sistemas pagamento conforme o uso (PAYGO) registrados)</block>
   <block id="10e6e33e8d7a64d70c731d40ea252ed8" category="paragraph">As notas a seguir fornecem detalhes sobre os números que você verá nas tabelas abaixo:</block>
   <block id="86eecdd58a14a30dd3508ee6ec90bab3" category="cell">https://cloudbuild.googleapis.com/v1 (somente para implantações em modo privado) https://cloudkms.googleapis.com/v1 https://cloudresourcemanager.googleapis.com/v1/projects https://compute.googleapis.com/compute/v1 https://www.googleapis.com/compute/beta https://www.googleapis.com/compute/v1/projects/ https://www.googleapis.com/deploymentmanager/v2/projects https://www.googleapis.com/storage/v1 https://www.googleapis.com/upload/storage/v1 https://config.googleapis.com/v1 https://iam.googleapis.com/v1 https://storage.googleapis.com/storage/v1</block>
@@ -7898,4 +7878,138 @@
   <block id="65601c8f51b1de63274aa8b67a3052ad" category="list-text">Na página Atualizar versão do Cloud Volumes ONTAP, insira o URL e selecione *Alterar imagem*.</block>
   <block id="c65eb3709abb1b2f358bd22d6b1ea6c9" category="list-text">Selecione *Continuar* para confirmar.</block>
   <block id="4147ce3eb95920fce808ef8ad51af5ba" category="list-text">Quando a transferência estiver concluída, acesse a instância da VM de<block ref="f43c51286fe1559c6253e0b37ec045c6" prefix=" " category="inline-code"></block> e selecione o botão *Parar* para desligá-la.</block>
+  <block id="030639c6688cdf5be783da65b9a42cde" category="paragraph">Para obter uma lista de todas as regiões suportadas, consulte o <block ref="085eda4cd9d5efc52830e9b3586a231f" category="inline-link-rx"></block>.</block>
+  <block id="24ba262452119f5d0f640a423b1bbb92" category="paragraph">Para obter uma lista de todas as regiões, consulte o<block ref="085eda4cd9d5efc52830e9b3586a231f" category="inline-link-rx"></block>.</block>
+  <block id="9296c60d99cddd7019fead6f85170952" category="paragraph">Para disponibilidade regional, consulte o<block ref="8360ebb88791975205a481dde2bb56eb" category="inline-link-rx"></block>.</block>
+  <block id="2c35e19e5a880895a1f3f6748fe75e56" category="inline-link">Nuvem para missões do governo dos EUA</block>
+  <block id="28426dd827c38f71cac9fa79f418b6f0" category="list-text"><block ref="28426dd827c38f71cac9fa79f418b6f0" category="inline-link-rx"></block></block>
+  <block id="9325b5a6040c409fd602c94ba64ae667" category="summary">Saiba mais sobre as tecnologias de automação que a NetApp oferece suporte para o Cloud Volumes ONTAP.</block>
+  <block id="fdfde3c36b19e9242b6e36e1e2652ec7" category="doc">Saiba mais sobre as opções de automação do Cloud Volumes ONTAP</block>
+  <block id="a88e1e67adc25856b931a5405393d700" category="paragraph">As equipes de DevOps usam diversas ferramentas para automatizar a configuração e a administração de seus ambientes de runtime de data center. Além do NetApp Console, você pode usar várias dessas tecnologias para a automação do Cloud Volumes ONTAP, incluindo as APIs do NetApp Console, procedimentos da CLI do ONTAP e ferramentas de automação, como Ansible e Terraform. As ferramentas de automação externas geralmente são baseadas em um projeto de Infrastructure as Code (IaC).</block>
+  <block id="e41eeb18c8b1c48d8645aac00cd5d0da" category="inline-link">O Lab on Demand</block>
+  <block id="faee51b031f6344652100fef4890abb9" category="paragraph">Use<block ref="2ac7731137aee09ff863c55752c09f01" category="inline-link-rx"></block> para praticar a automação do Cloud Volumes ONTAP.</block>
+  <block id="e5528296ac460cde32f9a8ce7cef4879" category="section-title">APIs do NetApp Console</block>
+  <block id="af11fd309f249172d7131ce3581a4945" category="paragraph">A NetApp Console fornece APIs REST que você pode usar para administrar programaticamente os recursos do Cloud Volumes ONTAP. As APIs oferecem suporte a operações como criar e administrar sistemas do Cloud Volumes ONTAP e adicionar agregados e volumes no Amazon Web Services (AWS), Microsoft Azure (Azure) e Google Cloud. As chamadas de API disponíveis variam de acordo com o provedor de nuvem e o tipo de implantação, incluindo configurações de nó único e de alta disponibilidade (HA).</block>
+  <block id="51d8c650be92bf9d2eb7ff808e101876" category="paragraph">Você pode usar os fluxos de trabalho da API do Cloud Volumes ONTAP para automatizar uma implantação típica e a administração subsequente de storage. Alguns fluxos de trabalho incluem a preparação para a implantação, a criação de um sistema e a administração do storage, com fluxos de trabalho específicos do provedor para AWS, Azure e Google Cloud.</block>
+  <block id="d78ed35383108fb6c04c16d0a11b20fe" category="cell">Atividades</block>
+  <block id="a56894d3fd482e0ce63d7e0d0ff9d687" category="cell">APIs e interfaces para usar</block>
+  <block id="bed81788d674a19faec19ea1897139cd" category="cell">Crie sistemas Cloud Volumes ONTAP. As chamadas de API variam de acordo com o provedor de nuvem e a implantação de nó único ou par de HA.</block>
+  <block id="c94a6ea5c88e9e8ddfdd90f8abb7b0b1" category="cell">NetApp Console APIs REST e fluxos de trabalho da API do Cloud Volumes ONTAP</block>
+  <block id="432b0073de7262db3d487decfb343c7d" category="inline-link">AWS: criar um sistema</block>
+  <block id="e86016649efebe2ef31546ac6eb54048" category="list-text"><block ref="4c0d6a5781f091a63a5bcd60c20108d5" category="inline-link-rx"></block> -<block ref="c17d7ff8f3f84064eff627c16151011f" prefix=" " category="inline-code"></block> ou<block ref="e1520e553d885c552e2794aafa8af4e1" prefix=" " category="inline-code"></block></block>
+  <block id="88d62368b67954308f86140a416041f7" category="inline-link">Azure: criar um sistema</block>
+  <block id="c33440038b9cf6d532272687909110a1" category="list-text"><block ref="ee9fea22f11cfd6240c32c45e4c02e6c" category="inline-link-rx"></block> -<block ref="a07e2a1726e30e6cfe84c616096b6af9" prefix=" " category="inline-code"></block> ou<block ref="4a6240791bd90bfdeedc93d8b6d616c0" prefix=" " category="inline-code"></block></block>
+  <block id="ac515478265f7b4b3b2292f9b3330ba2" category="inline-link">Google Cloud: criar um sistema</block>
+  <block id="76f585c45f869fdf50978a7e2ff1e845" category="list-text"><block ref="12a63ad2ee8367d38c1778ef59272c7e" category="inline-link-rx"></block> -<block ref="0152f3b4b9aef5bd3345082925e18974" prefix=" " category="inline-code"></block> ou<block ref="c03475dd69e20b05b6e22c63e47176c6" prefix=" " category="inline-code"></block></block>
+  <block id="47185c82242b10308d6360018b88573a" category="cell">Criar agregados para os sistemas Cloud Volumes ONTAP.</block>
+  <block id="07f2eead2d33f2fa381cc4b011d584ac" category="cell">NetApp Console APIs REST</block>
+  <block id="89e81a58d1597d8486ded76de8be23d6" category="inline-link">AWS: criar um agregado</block>
+  <block id="cf1d545f30052af0801fce0b3ccc9163" category="list-text"><block ref="6e50cfb82b4252d220fcc69b4d1994bb" category="inline-link-rx"></block> -<block ref="5a7ebc57a98790882874df8b94363ba5" prefix=" " category="inline-code"></block> ou<block ref="fa11b5befbbeb48a4dfbf9522c03c9ab" prefix=" " category="inline-code"></block></block>
+  <block id="bbf8ac3547d44614feec2fad9af67c61" category="inline-link">AWS: adicionar capacidade a um agregado de volumes elásticos</block>
+  <block id="942987baab44e06173ff42e3cd817a76" category="list-text"><block ref="48bbeab8a9923d62184d61097270e6b4" category="inline-link-rx"></block> -<block ref="a51d77ba8dd987edc03092f0dfc606ef" prefix=" " category="inline-code"></block> ou<block ref="f943549e3abbadb7bc772aef09cb92ee" prefix=" " category="inline-code"></block></block>
+  <block id="2c87338731e15adf4fb609c1b12597d4" category="inline-link">AWS: adicionar discos a um agregado</block>
+  <block id="421e819dd2abafde3cb198b0ee7c6ca4" category="list-text"><block ref="1c9f9c7b7636c045fa697e34035a9956" category="inline-link-rx"></block> -<block ref="dcd393b33d6270e936383754e9ad1e0b" prefix=" " category="inline-code"></block> ou<block ref="938df6d76b344520082042cfad2161b4" prefix=" " category="inline-code"></block></block>
+  <block id="d984a8d748bb774a7cd27ebf147f792a" category="cell">Configure um servidor CIFS para um sistema Cloud Volumes ONTAP.</block>
+  <block id="874050a6fcd7d0e8ffc2191d20fca4ce" category="inline-link">AWS: criar uma configuração de servidor CIFS</block>
+  <block id="473ca1a02338b38b2926a515fa43fbec" category="list-text"><block ref="34db4ad457c80017c2ed76c82c9291d7" category="inline-link-rx"></block> -<block ref="4aadb6536febae4a984285dbbbd262e3" prefix=" " category="inline-code"></block> ou<block ref="db04db98d00b0497c420d989cf58a58c" prefix=" " category="inline-code"></block></block>
+  <block id="bbf0315fb222618a57b8a659d3048769" category="inline-link">Azure: criar uma configuração de servidor CIFS</block>
+  <block id="789b884b25a59341d6d0e62e1aad4227" category="list-text"><block ref="ce8a12510b56c87d5f3fe4021956f1f6" category="inline-link-rx"></block> -<block ref="2def770fb738f26066adbdbc29092c73" prefix=" " category="inline-code"></block> ou<block ref="3a182f3234fc06b574375309b3e62c35" prefix=" " category="inline-code"></block></block>
+  <block id="c4e57fedd351ac0c19d7b8d24331d588" category="inline-link">Google Cloud: criar uma configuração de servidor CIFS</block>
+  <block id="47231a9072ad8c66641b2fb7a54f70a6" category="list-text"><block ref="e6005398d2dd810f964dee738f37b452" category="inline-link-rx"></block> -<block ref="4645de1064a783ee0ab74c226e5663d6" prefix=" " category="inline-code"></block> ou<block ref="f55a3f0f9a69dd6595b9b5a6d77f7651" prefix=" " category="inline-code"></block></block>
+  <block id="354d0dee47f6aa5512f1772288fbe0e8" category="cell">Crie e gerencie VMs de storage adicionais para fornecimento de dados e configure as interfaces de rede necessárias no Azure e no Google Cloud.</block>
+  <block id="6003f9d31c91a9ffeb354a7d3f60c495" category="cell">APIs do Cloud Volumes ONTAP para o NetApp Console</block>
+  <block id="326bd96c0e6b7d07ca1479cfc0a1c75f" category="paragraph"><block ref="887cda3aa1e8a9fdcdcba122e5a3dc37" category="inline-link-macro-rx"></block> <block ref="702b9f2fc1cec4c10bd8f265b2f20741" category="inline-link-macro-rx"></block></block>
+  <block id="8c89122cd1b4c9c7b5e3240af17e3341" category="cell">Crie um sistema Cloud Volumes ONTAP que use chaves de criptografia gerenciadas pelo cliente.</block>
+  <block id="360104bf3231cd79990fa62b469a3981" category="cell">API do NetApp Console</block>
+  <block id="0cac39c8b6d0b75bd4d288de23d99852" category="inline-link-macro">Use chaves gerenciadas pelo cliente no Azure</block>
+  <block id="f24d9b90221b24d424b81700f8192909" category="inline-link-macro">Use chaves gerenciadas pelo cliente no Google Cloud</block>
+  <block id="addc1d48a50bd2962473ca3d5444e720" category="paragraph"><block ref="3ae9ec5d4da9b4fe905f1239818df3f1" category="inline-link-macro-rx"></block> <block ref="53a0a8f4a557e8a4e3fbcea1df788ddd" category="inline-link-macro-rx"></block></block>
+  <block id="8f3998d4e32a451c0a5711ff2abf3e14" category="cell">Modifique as configurações de IOPS e taxa de transferência dos discos Azure Premium SSD v2 após a implantação.</block>
+  <block id="3081239b9e08a8aefc0bf58abc7db431" category="cell">API do Cloud Volumes ONTAP</block>
+  <block id="6d7c7f769eaa42a12066fade5112d993" category="inline-link-macro">Gerencie o desempenho do disco SSD Premium v2</block>
+  <block id="fb98b759adc4702f2fea98a65918be2d" category="paragraph"><block ref="fb98b759adc4702f2fea98a65918be2d" category="inline-link-macro-rx"></block></block>
+  <block id="a7d9285bdc2fccb8bd1114aa1d8b68e9" category="cell">Implante um par de HA do Cloud Volumes ONTAP em uma sub-rede compartilhada da AWS.</block>
+  <block id="8a7e37546ca35eb5e89b6a0a8b269239" category="inline-link-macro">Implante um par de HA em uma sub-rede compartilhada da AWS</block>
+  <block id="2cda55d19dc22cc34d1b39df24d15702" category="paragraph"><block ref="2cda55d19dc22cc34d1b39df24d15702" category="inline-link-macro-rx"></block></block>
+  <block id="84d6bbcd5f55d08d5a837fd1839af756" category="cell">Habilite a organização em categorias de dados após a criação do sistema, caso o armazenamento de objetos não tenha sido configurado durante a implantação.</block>
+  <block id="1f15576faba4a1186dededa3564603da" category="inline-link-macro">Ativar a disposição em camadas dos dados</block>
+  <block id="74f83eca5a8527c51058183c7eb3042d" category="cell"><block ref="74f83eca5a8527c51058183c7eb3042d" category="inline-link-macro-rx"></block></block>
+  <block id="629822e4d339a9d91f1a46cfbc1c29bc" category="cell">Configure um servidor NTP para um cluster Cloud Volumes ONTAP existente.</block>
+  <block id="de96d21169aba194859dc496a9f407fe" category="inline-link-macro">Configurar servidores NTP</block>
+  <block id="ae682f7b00612d59326d36855b6cadae" category="cell"><block ref="ae682f7b00612d59326d36855b6cadae" category="inline-link-macro-rx"></block></block>
+  <block id="2f8299f876158db323c08455b12b585a" category="paragraph">Para obter mais informações, consulte:</block>
+  <block id="75002176e5fb12dc110f84df17ea71fa" category="list-text"><block ref="75002176e5fb12dc110f84df17ea71fa" category="inline-link-rx"></block></block>
+  <block id="d16c17f65bc41006807ee1e260dfb738" category="list-text"><block ref="d16c17f65bc41006807ee1e260dfb738" category="inline-link-rx"></block></block>
+  <block id="4217d64a8652c92abf35281a0ac16485" category="list-text"><block ref="4217d64a8652c92abf35281a0ac16485" category="inline-link-rx"></block></block>
+  <block id="7cad274fa343ad19ecb1bbb7204bc699" category="inline-link">Implantação típica do Cloud Volumes ONTAP usando a API REST</block>
+  <block id="af6bd9ac0a0138f1bf49bfa7c440f23d" category="list-text"><block ref="af6bd9ac0a0138f1bf49bfa7c440f23d" category="inline-link-rx"></block></block>
+  <block id="de134183bea5df515a6756a539ce6f18" category="section-title">ONTAP CLI</block>
+  <block id="19353f4bb757748785e88d65f6e74e91" category="paragraph">Você pode usar a ONTAP CLI para várias tarefas de administração do Cloud Volumes ONTAP. Os procedimentos e comandos disponíveis variam de acordo com o recurso e o provedor de nuvem. Não use a ONTAP CLI nem o ONTAP System Manager para atualizar o Cloud Volumes ONTAP. Realize as atualizações a partir do NetApp Console.</block>
+  <block id="c850536c84614313f01fe940e1acebe0" category="cell">Procedimentos ou comandos da CLI</block>
+  <block id="d95867deadfe690e40f42068d6b59df8" category="cell">Referências</block>
+  <block id="7b23ad44e2f62504eb4844326be38da1" category="cell">Configure o gerenciamento de chaves de criptografia para o Cloud Volumes ONTAP.</block>
+  <block id="cada788138f5e4fbf7baeb0c846c2d90" category="cell">Comandos do AWS KMS, Azure Key Vault ou Google Cloud KMS na CLI do ONTAP</block>
+  <block id="00307e4c49877f4528950532074707c9" category="inline-link-macro">Configure o gerenciamento de chaves do AWS KMS</block>
+  <block id="06e8e83aa2b42857d1afd97a5f0fe20e" category="inline-link-macro">Configure o gerenciamento de chaves do Azure Key Vault</block>
+  <block id="ff5fd9adbcf474a696e25829a71a2c77" category="inline-link-macro">Configure o gerenciamento de chaves do Google Cloud KMS</block>
+  <block id="482c7dcae898a6ca32463e4accbcf619" category="paragraph"><block ref="d381175a46a9145d4f5abc5d56032d76" category="inline-link-macro-rx"></block> <block ref="e9ad5c18a0f47184f594195729f432f4" category="inline-link-macro-rx"></block> <block ref="6f069bceb660702d6995dd3163dd98ad" category="inline-link-macro-rx"></block></block>
+  <block id="24ca75ed13f2174be14a77636b343572" category="cell">Configure os destinos e as rotas de eventos do Event Management System (EMS).</block>
+  <block id="de35b51d5dae332d952816974cc06421" category="cell">Comandos de configuração do EMS na CLI do ONTAP</block>
+  <block id="34b1569dc58e1228e30e96930ecaee4e" category="cell"><block ref="34b1569dc58e1228e30e96930ecaee4e" category="inline-link-macro-rx"></block></block>
+  <block id="0c960f2e1d9e679ba57e3e16760281cd" category="cell"><block ref="2e5b00a7734f4716b08d44d8793d1795" prefix="" category="inline-code"></block></block>
+  <block id="d2c49b176b2bf89a6d107ff7033da97b" category="cell">Desative a compressão de dados ao criar um volume com eficiência de storage desativada.</block>
+  <block id="bda8e58b95d839057b4d9ee70c0735bf" category="cell">Comandos de eficiência de volume da CLI do ONTAP</block>
+  <block id="01e28c94ab02e08599e61f36875aa97d" category="inline-link-macro">Analise as opções de eficiência de storage</block>
+  <block id="5f2a7b1e2ce49a705febfdf542a85b15" category="inline-link-macro">Analise a limitação de eficiência de storage da AWS</block>
+  <block id="eabd0bf84a6148c56bdc1496101ed3bf" category="paragraph"><block ref="912bac3ec133895a3d70950ea5ea5be5" category="inline-link-macro-rx"></block> <block ref="189674a88c9c3be104317143057f2a05" category="inline-link-macro-rx"></block></block>
+  <block id="ecfaf475c341db59563d4547fc423076" category="cell">Crie LUNs adicionais.</block>
+  <block id="6bf3792c376b4189693127f528fe5705" category="cell">Comandos de criação de LUN na CLI do ONTAP</block>
+  <block id="6f43a459634b77cb981821c60421788d" category="inline-link-macro">Criar volumes e LUNs adicionais</block>
+  <block id="76e055cf90505baa14aa008888200440" category="cell"><block ref="76e055cf90505baa14aa008888200440" category="inline-link-macro-rx"></block></block>
+  <block id="473146d2c936547c34fddae94f78de09" category="cell">Crie volumes com o WORM desativado ou crie cópias de Snapshot para volumes SnapLock, conforme aplicável.</block>
+  <block id="a3afac203a47f9be53ed25d2d229464f" category="cell">Comandos de gerenciamento de volumes e Snapshot na CLI do ONTAP</block>
+  <block id="15830567d5d874dbbf57c00f0fa04b81" category="inline-link-macro">Gerenciar armazenamento WORM</block>
+  <block id="b493c36fe0e804aca12c202691984d48" category="inline-link-macro">Criar cópias Snapshot para armazenamento WORM</block>
+  <block id="ab5b276224c7a85c26de1e04a9221f7f" category="paragraph"><block ref="ae47b528758734aa867eebf826329789" category="inline-link-macro-rx"></block> <block ref="8414253d8e05f0d57e6e7a3ccbab701e" category="inline-link-macro-rx"></block></block>
+  <block id="c80822b08878f2eb034c674a66844f2c" category="cell">Configure o comportamento do NVFAIL para ajudar a impedir o acesso aos dados após um evento de perda de dados até que o problema seja resolvido.</block>
+  <block id="0133fae8698c06de5054ad1211854b77" category="cell">Comandos de configuração do NVFAIL na ONTAP CLI</block>
+  <block id="0b9412ac1fb181b55ef6a7c524a44124" category="inline-link-macro">Configurar NVFAIL</block>
+  <block id="8ef40b5607c1411188eca243bedcc6b2" category="cell"><block ref="8ef40b5607c1411188eca243bedcc6b2" category="inline-link-macro-rx"></block></block>
+  <block id="5200e0665cdd5a1fcf1a2b3c366b6a6f" category="cell">Segregue o tráfego de replicação do SnapMirror em uma implantação de nó único do Azure.</block>
+  <block id="30aa9de9cb1724d93bef71ee5b111cc7" category="cell">Comandos de rede e SnapMirror do ONTAP CLI</block>
+  <block id="031fa5f85e435c3ab51b6ee7855bf24d" category="cell"><block ref="031fa5f85e435c3ab51b6ee7855bf24d" category="inline-link-macro-rx"></block></block>
+  <block id="e58e23bbb15653b7db25ec49fb2139c0" category="inline-link">Guia de referência da CLI do ONTAP</block>
+  <block id="b68dd2659875b3751312fd1387884892" category="paragraph">Para obter mais informações, consulte<block ref="56919433a9012a25d7444e56a764a2ab" category="inline-link-rx"></block></block>
+  <block id="d51d5ee15f404c2f4f7863bebcde1fac" category="section-title">O Ansible</block>
+  <block id="f2006b3f888f38a6cd9904a0a993f3fb" category="paragraph">O Ansible é uma ferramenta de gerenciamento de configuração de código aberto baseada em arquivos de configuração procedurais.</block>
+  <block id="733ba000742537e7a4435573aca51393" category="inline-link">O Ansible Galaxy</block>
+  <block id="139807910facd19f02db2d5fe0f59378" category="list-text"><block ref="139807910facd19f02db2d5fe0f59378" category="inline-link-rx"></block></block>
+  <block id="5eae6f5974c9d4195ebe0cf8b607647e" category="inline-link">Documentação do Ansible</block>
+  <block id="2c17b123ab1174f57aef57626d7fe326" category="list-text"><block ref="2c17b123ab1174f57aef57626d7fe326" category="inline-link-rx"></block></block>
+  <block id="303e96f80576360d0c7b07ae7528fa4b" category="section-title">O Terraform</block>
+  <block id="e75ea875a9cecce91df4e6d2fe5dbe12" category="inline-link">Provedor Terraform da NetApp</block>
+  <block id="ae5b03629b482b45c8952bcee4d77759" category="paragraph">O Terraform é uma ferramenta de orquestração de código aberto que usa arquivos de configuração declarativos. NetApp fornece um provedor do Terraform para o Cloud Volumes ONTAP. Você pode usá-lo para automatizar e integrar sua infraestrutura com IaC. Para obter mais informações, consulte <block ref="9db86edb27cba5e99043532cee2f3846" category="inline-link-rx"></block>.</block>
+  <block id="11007b94a5cf49417110dc6230ff409f" category="inline-link">Visão geral da automação do NetApp Console</block>
+  <block id="2346e86a3d7fd592cc189c443ef62b72" category="list-text"><block ref="2346e86a3d7fd592cc189c443ef62b72" category="inline-link-rx"></block></block>
+  <block id="d2bc990612eeaf36be5a5547738b1be6" category="inline-link">Infraestrutura como código</block>
+  <block id="f5e2902021e30fbb5b577f0f1cf4610e" category="list-text"><block ref="f5e2902021e30fbb5b577f0f1cf4610e" category="inline-link-rx"></block></block>
+  <block id="b21e3010d0232bf320d611581f271d67" category="list-text"><block ref="b21e3010d0232bf320d611581f271d67" category="inline-link-rx"></block></block>
+  <block id="be960f52304f760b90b6bd73eea1c811" category="list-text"><block ref="be960f52304f760b90b6bd73eea1c811" category="inline-link-rx"></block></block>
+  <block id="0709e43ba3dfdd3d67bcbc67fb4bfa56" category="paragraph">Para obter informações sobre suporte regional da AWS, consulte <block ref="90ba6443eab00b2a9c691a5eb4bf7074" category="inline-link-rx"></block>.</block>
+  <block id="d5d5c5377914e0f5ae48f36f84a4b13c" category="paragraph">Para obter suporte para regiões do Azure, consulte <block ref="90ba6443eab00b2a9c691a5eb4bf7074" category="inline-link-rx"></block>.</block>
+  <block id="52bf55984e5170af5a3ba17d8f431af1" category="paragraph">Para suporte a regiões do Google Cloud, consulte <block ref="90ba6443eab00b2a9c691a5eb4bf7074" category="inline-link-rx"></block>.</block>
+  <block id="cf27908351815c30617e1750ca762e34" category="paragraph"><block ref="e5acb05260eb745b6c9d5a300d8e8f65" category="inline-link-rx"></block>.</block>
+  <block id="adeae359fca7d0e23001e2898362b818" category="paragraph">O Cloud Volumes ONTAP é compatível com a maioria das regiões do Microsoft Azure<block ref="df054d4012f96ec06367a9186a706206" category="inline-link-rx"></block>.</block>
+  <block id="58d2bd00c02b340cb50ae58d5a547163" category="paragraph">O Cloud Volumes ONTAP é compatível com a maioria das regiões do Google Cloud<block ref="df054d4012f96ec06367a9186a706206" category="inline-link-rx"></block>.</block>
+  <block id="9d48aed6eca755384acc2d44ba7a38af" category="paragraph">O Cloud Volumes ONTAP é compatível com a maioria das regiões da AWS<block ref="df054d4012f96ec06367a9186a706206" category="inline-link-rx"></block>.</block>
+  <block id="c41a6f828f72f3ab937ae2d504409961" category="paragraph">Para obter uma lista de todas as regiões, consulte a <block ref="b759f66ba80110c14857f0e563afdbbd" category="inline-link-rx"></block>.</block>
+  <block id="3b0d596b0d27419f9462b9d935135fb6" category="paragraph">Para obter uma lista de todas as regiões, consulte o<block ref="fb5a5089b7141a73dc90cfeebfbbcae7" category="inline-link-rx"></block>.</block>
+  <block id="e5dd7c13b99167cac19ba3dd9d51afec" category="paragraph">Para obter uma lista de todas as regiões, consulte o<block ref="b759f66ba80110c14857f0e563afdbbd" category="inline-link-rx"></block>.</block>
+  <block id="a70bdfa6a14cf487d4b00e5c896944e0" category="paragraph">Para obter uma lista de todas as regiões que suportam várias zonas de disponibilidade, consulte <block ref="085eda4cd9d5efc52830e9b3586a231f" category="inline-link-rx"></block>.</block>
+  <block id="6fd68ac6dd18e7ec1406334f92c6d517" category="paragraph">Para disponibilidade regional, consulte a <block ref="fc6a9ecc22a7b5ee5a07f9223f89cec0" category="inline-link-rx"></block>.</block>
+  <block id="4478c7d9173abfb0a9d9a27bc975ce1e" category="paragraph"><block ref="4478c7d9173abfb0a9d9a27bc975ce1e" category="inline-link-rx"></block></block>
+  <block id="b6554413211bb41fd342e2fd836971b1" category="sidebar">Automação do Cloud Volumes ONTAP</block>
+  <block id="0c06b5982fa51b01bda9bbbf8f86e47a" category="sidebar">Conceitos da API REST do NetApp Console</block>
+  <block id="532a9bd10ba3f29a7e5525254f60da9a" category="sidebar">Saiba mais sobre os processos de fluxo de trabalho da API</block>
+  <block id="86c38aa977344df13fe2cdfd45f82392" category="sidebar">Lista de chamadas da API do Cloud Volumes ONTAP para AWS, Azure e Google Cloud</block>
 </blocks>

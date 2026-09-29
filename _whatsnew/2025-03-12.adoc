@@ -13,4 +13,4 @@ As seguintes regiões agora oferecem suporte a implantações de várias zonas d
 * Governo dos EUA - Virgínia (Região do Governo dos EUA - Virgínia)
 
 
-Para obter uma lista de todas as regiões, consulte o https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiões globais no Azure"^] .
+Para obter uma lista de todas as regiões, consulte o https://www.netapp.com/cloud-volumes-ontap/supported-regions/["Mapa de regiões globais no Azure"^].
