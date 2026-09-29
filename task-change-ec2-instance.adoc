@@ -42,14 +42,14 @@ Se você não conseguir alterar o tipo de instância de c4, m4 ou r4, consulte o
 
 .Passos
 . Na página *Sistemas*, selecione o sistema.
-. Na guia Visão geral, clique no painel Recursos e, em seguida, clique no ícone de lápis ao lado de *Tipo de instância*.
+. Na guia Visão geral, selecione o painel Recursos e, em seguida, selecione o ícone de lápis ao lado de *Tipo de instância*.
 +
 image::screenshot_features_instance_type.png[400]
 
 +
 Se você estiver usando uma licença pré-paga (PAYGO) baseada em nó, você pode escolher uma licença e um tipo de instância diferentes clicando no ícone de lápis ao lado de *Tipo de licença*.
 
-. Escolha um tipo de instância, marque a caixa de seleção para confirmar que você entende as implicações da alteração e clique em *Alterar*.
+. Escolha um tipo de instância, selecione a caixa de seleção para confirmar que você entende as implicações da alteração e, em seguida, selecione *Alterar*.
 
 
 .Resultado

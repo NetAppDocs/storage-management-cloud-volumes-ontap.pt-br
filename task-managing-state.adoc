@@ -37,7 +37,7 @@ Os instantâneos são criados automaticamente somente ao executar um desligament
 
 .Passos
 . Na página *Sistemas*, clique duas vezes no sistema Cloud Volumes ONTAP .
-. Na guia Visão geral, clique no painel Recursos e depois clique no ícone de lápis ao lado de *Tempo de inatividade programado*.
+. Na guia Visão geral, selecione o painel Recursos e, em seguida, selecione o ícone de lápis ao lado de *Tempo de inatividade programado*.
 +
 image::screenshot_schedule_downtime.png[400]
 
@@ -56,7 +56,7 @@ image:screenshot_schedule_downtime_window.png["Captura de tela: mostra a tela Ag
 
 
 
-. Clique em *Salvar*.
+. Selecione *Salvar*.
 
 
 .Resultado
@@ -76,12 +76,12 @@ NOTE: Para reduzir custos, o Console exclui periodicamente snapshots mais antigo
 Quando você interrompe um par HA, o Console desliga ambos os nós.
 
 .Passos
-. No sistema, clique no ícone *Desligar*.
+. No sistema, selecione o ícone *Desligar*.
 +
 image:screenshot_turn_off_redesign.png["Captura de tela: mostra o ícone para desativar um sistema Cloud Volumes ONTAP ."]
 
 . Mantenha a opção de criar snapshots ativada porque os snapshots podem habilitar a recuperação do sistema.
-. Clique em *Desligar*.
+. Selecione *Desligar*.
 +
 Pode levar alguns minutos para parar o sistema.  Você pode reiniciar os sistemas mais tarde na página *Sistemas*.
 

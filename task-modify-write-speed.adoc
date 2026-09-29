@@ -27,7 +27,7 @@ Antes de alterar a velocidade de gravação, você develink:concept-write-speed.
 
 .Passos
 . Na página *Sistemas*, clique duas vezes no nome do sistema que você configurou para a velocidade de gravação.
-. Na guia Visão geral, clique no painel Recursos e depois clique no ícone de lápis ao lado de *Velocidade de gravação*.
+. Na guia Visão geral, selecione o painel Recursos e, em seguida, selecione o ícone de lápis ao lado de *Velocidade de gravação*.
 . Selecione *Normal* ou *Alto*.
 +
 Se você escolher Alto, precisará ler a declaração "Eu entendo..." e confirmar marcando a caixa.
@@ -36,5 +36,5 @@ Se você escolher Alto, precisará ler a declaração "Eu entendo..." e confirma
 
 NOTE: A opção de velocidade de gravação *Alta* é compatível com pares de alta disponibilidade do Cloud Volumes ONTAP no Google Cloud a partir da versão 9.13.0.
 
-. Clique em *Salvar*, revise a mensagem de confirmação e clique em *Aprovar*.
+. Selecione *Salvar*, revise a mensagem de confirmação e selecione *Aprovar*.
 

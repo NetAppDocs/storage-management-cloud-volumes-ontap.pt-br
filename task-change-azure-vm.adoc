@@ -37,11 +37,11 @@ TIP: O NetApp Console altera um nó por vez, iniciando a aquisição e aguardand
 
 .Passos
 . Na página *Sistemas*, selecione o sistema.
-. Na guia Visão geral, clique no painel Recursos e, em seguida, clique no ícone de lápis ao lado de *Tipo de VM*.
+. Na guia Visão geral, selecione o painel Recursos e, em seguida, selecione o ícone de lápis ao lado de *VM type*.
 +
 Se você estiver usando uma licença de pagamento conforme o uso (PAYGO) baseada em nó, poderá escolher uma licença e um tipo de VM diferentes clicando no ícone de lápis ao lado de *Tipo de licença*.
 
-. Selecione um tipo de VM, marque a caixa de seleção para confirmar que você entende as implicações da alteração e clique em *Alterar*.
+. Selecione um tipo de VM, marque a caixa de seleção para confirmar que você compreende as implicações da alteração e, em seguida, selecione *Alterar*.
 
 
 .Resultado

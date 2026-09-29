@@ -28,8 +28,8 @@ Se um agregado estiver ficando sem espaço, você poderá mover volumes para out
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
 . Na página *Sistemas*, clique duas vezes no sistema Cloud Volumes ONTAP no qual você deseja gerenciar agregados.
-. Nos detalhes do sistema, clique na aba *Agregados*.
-. Para o agregado desejado, clique no ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] para as ações de gerenciamento.
+. Nos detalhes do sistema, selecione a aba *Agregados*.
+. Para o agregado necessário, selecione o ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] das ações de gerenciamento.
 +
 image:screenshot_aggr_menu_options.png["Uma captura de tela das opções do menu Agregados."]
 
@@ -39,14 +39,10 @@ image:screenshot_aggr_menu_options.png["Uma captura de tela das opções do menu
 
 NOTE: Para adicionar discos a um agregado, todos os discos no agregado devem ter o mesmo tamanho.
 
-ifdef::aws[]
-
 Para a AWS, você pode aumentar a capacidade de um agregado que oferece suporte ao Amazon EBS Elastic Volumes.
 
-. No image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] menu, clique em *Aumentar capacidade*.
-. Insira a capacidade adicional que você gostaria de adicionar e clique em *Aumentar*.
+. No menu image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"], selecione *Aumentar capacidade*.
+. Insira a capacidade adicional que você deseja adicionar e selecione *Aumentar*.
 
 
 Observe que você deve aumentar a capacidade do agregado em no mínimo 256 GiB ou 10% do tamanho do agregado.  Por exemplo, se você tiver um agregado de 1,77 TiB, 10% é 181 GiB.  Isso é menor que 256 GiB, então o tamanho do agregado deve ser aumentado pelo mínimo de 256 GiB.
-
-endif::aws[]

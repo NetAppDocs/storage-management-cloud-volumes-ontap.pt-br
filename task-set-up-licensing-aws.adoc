@@ -35,10 +35,10 @@ Se você já é cliente e possui assinaturas NIS associadas à sua conta AWS, a 
 
 .Passos
 . No painel esquerdo do NetApp Console, selecione *Administração > Licenses and subscriptions > Preferências de faturamento > Cloud Volumes ONTAP*.
-. Na guia AWS, selecione a assinatura independente e clique no ícone de opções image:screenshot_gallery_options.gif["ícone de kabob"].
+. Na guia AWS, selecione a assinatura autônoma e selecione o ícone de opções image:screenshot_gallery_options.gif["ícone de kabob"].
 . Na janela Editar configuração, selecione o número da assinatura da listagem independente no campo *Credenciais da conta AWS*.
-. Clique em *Configurar*. Você pode ver a assinatura como a opção preferencial para o faturamento do Cloud Volumes ONTAP na AWS.
-. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Essentials para faturar por meio da assinatura independente. Para obter informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implante o Cloud Volumes ONTAP com a criação rápida na AWS"^].
+. Selecione *Configurar*. Você pode ver a assinatura como a opção preferencial para o faturamento do Cloud Volumes ONTAP na AWS.
+. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Essentials para faturar por meio da assinatura independente. Para obter informações, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implante Cloud Volumes ONTAP com a criação rápida"^].
 
 
 Repita os mesmos passos para a assinatura NIS na aba *Serviços de dados* para usar a assinatura NIS para seus serviços de dados. Ao implantar um novo sistema Cloud Volumes ONTAP, selecione o pacote Professional para faturar por meio da assinatura NIS.
@@ -79,9 +79,9 @@ O Console consulta automaticamente o serviço de licenciamento da NetApp para ob
 +
 Sua licença precisa estar disponível no Console antes que você possa usá-la com o Cloud Volumes ONTAP. Se necessário, você pode link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#add-a-license["adicione manualmente a licença ao Console"^].
 
-. Na página *Sistemas* do Console, clique em *Adicionar Sistema* e siga as etapas.
+. Na página *Systems* do Console, selecione *Add System* e siga as etapas.
 +
-.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no AWS Marketplace.
+.. Na página *Detalhes e Credenciais*, selecione *Editar Credenciais > Adicionar Assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no AWS Marketplace.
 +
 A licença que você comprou da NetApp é sempre cobrada primeiro, mas você será cobrado pela taxa horária no mercado se exceder sua capacidade licenciada ou se o prazo de sua licença expirar.
 
@@ -109,9 +109,9 @@ Quando você cria um sistema Cloud Volumes ONTAP , o Console solicita que você 
 
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
-. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
+. Na página *Systems*, selecione *Add System* e siga as etapas.
 +
-.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no AWS Marketplace
+.. Na página *Detalhes e Credenciais*, selecione *Editar Credenciais > Adicionar Assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no AWS Marketplace
 +
 image:screenshot-aws-paygo-subscription.png["Uma captura de tela da opção de assinatura PAYGO ao criar um sistema Cloud Volumes ONTAP ."]
 
@@ -138,9 +138,9 @@ Pague anualmente comprando um contrato anual no marketplace do seu provedor de n
 Semelhante a uma assinatura por hora, o Console solicita que você assine o contrato anual disponível no AWS Marketplace.
 
 .Passos
-. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
+. Na página *Systems*, selecione *Add System* e siga as etapas.
 +
-.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar o contrato anual no AWS Marketplace.
+.. Na página *Detalhes e Credenciais*, selecione *Editar Credenciais > Adicionar Assinatura* e siga as instruções para assinar o contrato anual no AWS Marketplace.
 +
 image:screenshot-aws-annual-subscription.png["Uma captura de tela da oferta de contrato anual ao criar um sistema Cloud Volumes ONTAP ."]
 
@@ -163,9 +163,9 @@ Selecione a oferta Freemium para usar o Cloud Volumes ONTAP gratuitamente, com a
 
 .Passos
 . No menu de navegação esquerdo do NetApp Console, selecione *Armazenamento > Gerenciamento*.
-. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
+. Na página *Systems*, selecione *Add System* e siga as etapas.
 +
-.. Na página *Detalhes e credenciais*, clique em *Editar credenciais > Adicionar assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no AWS Marketplace.
+.. Na página *Detalhes e Credenciais*, selecione *Editar Credenciais > Adicionar Assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no AWS Marketplace.
 +
 Você não será cobrado pela assinatura do marketplace, a menos que exceda 500 GiB de capacidade provisionada, momento em que o sistema é automaticamente convertido para o link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#packages["Pacote Essentials"^].
 
@@ -193,7 +193,7 @@ Uma assinatura Keystone é um serviço baseado em assinatura com pagamento confo
 . Se você ainda não tem uma assinatura, https://www.netapp.com/forms/keystone-sales-contact/["entre em contato com a NetApp"^]
 . mailto:ng-keystone-success@netapp.com[Entre em contato com a NetApp] para autorizar sua conta de usuário com uma ou mais assinaturas Keystone .
 . Depois que a NetApp autorizar sua conta,link:task-manage-keystone.html#link-a-subscription["vincule suas assinaturas para uso com o Cloud Volumes ONTAP"] .
-. Na página *Sistemas*, clique em *Adicionar Sistema* e siga as etapas.
+. Na página *Systems*, selecione *Add System* e siga as etapas.
 +
 .. Selecione o método de cobrança da Assinatura Keystone quando solicitado a escolher um método de cobrança.
 +

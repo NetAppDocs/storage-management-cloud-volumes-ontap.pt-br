@@ -71,13 +71,13 @@ Você precisa ter privilégios de administrador da organização ou da conta par
 
 .Passos
 . No painel de navegação esquerdo, acesse *Administração > Agentes*.
-. Clique no ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] do agente de Console necessário e selecione *Editar agente de Console*.
+. Selecione o ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] do agente de console necessário e selecione *Editar agente de console*.
 . Em *Forçar credenciais de usuário*, marque a caixa de seleção *Ativar/Desativar*.  Por padrão, a autenticação está desabilitada.
 +
 
 NOTE: Se você definir esse valor como *Ativar*, a autenticação será redefinida e você terá que modificar todos os fluxos de trabalho existentes para acomodar essa alteração.
 
-. Clique em *Salvar*.
+. Selecione *Salvar*.
 
 
 

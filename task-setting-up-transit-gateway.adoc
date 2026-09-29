@@ -32,10 +32,10 @@ As etapas a seguir ilustram como configurar uma configuração semelhante.
 . https://docs.aws.amazon.com/vpc/latest/tgw/tgw-getting-started.html["Crie um gateway de trânsito e anexe as VPCs ao gateway"^] .
 . Associe as VPCs à tabela de rotas do gateway de trânsito.
 +
-.. No serviço *VPC*, clique em *Tabelas de rotas do gateway de trânsito*.
+.. No serviço *VPC*, selecione *Transit Gateway Route Tables*.
 .. Selecione a tabela de rotas.
-.. Clique em *Associações* e depois selecione *Criar associação*.
-.. Escolha os anexos (VPCs) a serem associados e clique em *Criar associação*.
+.. Selecione *Associações* e selecione *Criar associação*.
+.. Escolha os anexos (as VPCs) para associar e, em seguida, selecione *Criar associação*.
 
 
 . Crie rotas na tabela de rotas do gateway de trânsito especificando os endereços IP flutuantes do par HA.
@@ -75,13 +75,13 @@ image:screenshot_transit_gateway3.png["Uma captura de tela do console da AWS que
 
 . Atualize as configurações dos grupos de segurança para Todo o tráfego para a VPC.
 +
-.. Em Nuvem Privada Virtual, clique em *Sub-redes*.
-.. Clique na aba *Tabela de rotas*, selecione o ambiente desejado para um dos endereços IP flutuantes para um par HA.
-.. Clique em *Grupos de segurança*.
+.. Em Virtual Private Cloud, selecione *Subnets*.
+.. Selecione a aba *Tabela de rotas* e selecione o ambiente desejado para um dos endereços IP flutuantes de um par de HA.
+.. Selecione *Grupos de segurança*.
 .. Selecione *Editar regras de entrada*.
-.. Clique em *Adicionar regra*.
+.. Selecione *Adicionar regra*.
 .. Em Tipo, selecione *Todo o tráfego* e, em seguida, selecione o endereço IP da VPC.
-.. Clique em *Salvar regras* para aplicar as alterações.
+.. Selecione *Save Rules* para aplicar as alterações.
 
 
 . Monte volumes em clientes usando o endereço IP flutuante.

@@ -125,7 +125,7 @@ O recurso tem o seguinte ID: `userassignedidentity` .
 
 .Passos
 . No Azure, acesse Serviços do Azure e selecione *Identidades Gerenciadas*.
-. Clique em *Criar*.
+. Selecione *Criar*.
 . Forneça os seguintes detalhes:
 +
 ** *Assinatura*: Escolha uma assinatura.  Recomendamos escolher a mesma assinatura do agente do Console.
@@ -135,7 +135,7 @@ O recurso tem o seguinte ID: `userassignedidentity` .
 
 
 . Opcionalmente, adicione tags.
-. Clique em *Criar*.
+. Selecione *Criar*.
 
 
 
@@ -172,7 +172,7 @@ NOTE: O uso de chaves de criptografia gerenciadas pelo cliente do Azure depende 
 
 
 
-. Se você selecionou a política de acesso ao cofre, clique em Criar para criar uma política de acesso para o cofre de chaves.  Caso contrário, pule para a etapa 3.
+. Se você selecionou a política de acesso do Vault, selecione Criar para criar uma política de acesso para o key vault. Caso contrário, pule para a etapa 3.
 +
 .. Selecione as seguintes permissões:
 +

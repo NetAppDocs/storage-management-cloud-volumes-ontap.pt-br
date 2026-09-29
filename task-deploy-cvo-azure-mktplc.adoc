@@ -62,7 +62,7 @@ NOTE: Se você registrou o provedor de recursos "Microsoft.storage" em sua assin
 .Passos
 . No site do Azure Marketplace, pesquise por produtos da NetApp.
 . Selecione * NetApp Cloud Volumes ONTAP direct*.
-. Clique em *Criar* para iniciar o assistente de implantação.
+. Selecione *Criar* para iniciar o assistente de implantação.
 . Selecione um plano.  A lista *Plano* normalmente exibe as versões mais recentes do Cloud Volumes ONTAP.
 . Na aba *Básico*, forneça estes detalhes:
 +

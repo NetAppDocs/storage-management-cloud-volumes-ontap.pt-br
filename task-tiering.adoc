@@ -24,26 +24,10 @@ A maioria das configurações são suportadas.  Se você tiver um sistema Cloud 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Garantir a conectividade entre o Cloud Volumes ONTAP e o armazenamento de objetos
 [role="quick-margin-list"]
-ifdef::aws[]
-
-* Para a AWS, você precisará de um endpoint de VPC para Amazon Simple Storage Service (Amazon S3). <<Requirements to tier cold data to AWS S3,Saber mais>>.
-
-
-endif::aws[]
-
-ifdef::azure[]
-
+* Para a AWS, você precisa de um endpoint de VPC para o Amazon Simple Storage Service (Amazon S3). <<Requirements to tier cold data to AWS S3,Saber mais>>.
 * No caso do Azure, você não precisará fazer nada, desde que o NetApp Console tenha as permissões necessárias. <<Requisitos para hierarquizar dados frios no armazenamento de Blobs do Azure,Saber mais>> .
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
 * Para o Google Cloud, você precisa configurar a sub-rede para o Private Google Access e configurar uma conta de serviço. <<Requisitos para hierarquizar dados frios em um bucket do Google Cloud Storage,Saber mais>> .
 
-
-endif::gcp[]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Certifique-se de ter um agregado com hierarquização habilitada
 [role="quick-margin-para"]
@@ -77,8 +61,6 @@ O Console cria um armazenamento de objetos para dados frios quando cria o sistem
 
 Você pode habilitar a hierarquização de dados ao usar configurações e recursos específicos.
 
-ifdef::aws[]
-
 
 
 [[support-in-aws]]
@@ -92,10 +74,6 @@ NOTE: Não recomendamos hierarquizar dados para armazenamento de objetos ao usar
 
 * Os dados inativos são colocados em camadas nos buckets do Amazon S3.  Não há suporte para hierarquização com outros provedores.
 
-
-endif::aws[]
-
-ifdef::azure[]
 
 
 
@@ -112,10 +90,6 @@ ifdef::azure[]
 * Os dados inativos são hierarquizados no Microsoft Azure Blob.  Não há suporte para hierarquização com outros provedores.
 
 
-endif::azure[]
-
-ifdef::gcp[]
-
 
 
 [[support-in-google-cloud]]
@@ -125,8 +99,6 @@ ifdef::gcp[]
 * O nível de desempenho pode ser discos persistentes SSD, discos persistentes balanceados ou discos persistentes padrão.
 * Os dados inativos são armazenados em camadas no Google Cloud Storage.  Não há suporte para hierarquização com outros provedores.
 
-
-endif::gcp[]
 
 
 
@@ -144,8 +116,6 @@ endif::gcp[]
 
 Dependendo do seu provedor de nuvem, certas conexões e permissões devem ser configuradas para que o Cloud Volumes ONTAP possa hierarquizar dados frios no armazenamento de objetos.
 
-ifdef::aws[]
-
 
 
 [[requirements-to-tier-cold-data-to-amazon-s3]]
@@ -156,10 +126,6 @@ Certifique-se de que Cloud Volumes ONTAP tenha uma conexão com Amazon S3. A mel
 Ao criar o VPC Endpoint, certifique-se de selecionar a região, a VPC e a tabela de rotas que correspondem à instância do Cloud Volumes ONTAP .  Você também deve modificar o grupo de segurança para adicionar uma regra HTTPS de saída que habilite o tráfego para o ponto de extremidade S3.  Caso contrário, o Cloud Volumes ONTAP não poderá se conectar ao serviço S3.
 
 Se você tiver algum problema, consulte https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["Central de conhecimento do AWS Support: Por que não consigo me conectar a um bucket do S3 usando um endpoint de VPC de gateway?"^] .
-
-endif::aws[]
-
-ifdef::azure[]
 
 
 
@@ -174,10 +140,6 @@ Você não precisa configurar uma conexão entre a camada de desempenho e a cama
 "Microsoft.Network/routeTables/join/action",
 ----
 A função personalizada inclui as permissões por padrão. https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["Exibir permissão do Azure para o agente do Console"^]
-
-endif::azure[]
-
-ifdef::gcp[]
 
 
 
@@ -200,8 +162,6 @@ Se você não selecionar uma conta de serviço durante a implantação, será ne
 link:task-setting-up-gcp-encryption.html["Aprenda a usar chaves de criptografia gerenciadas pelo cliente com o Cloud Volumes ONTAP"] .
 
 
-
-endif::gcp[]
 
 
 
@@ -240,9 +200,9 @@ image:screenshot_aggregate_tiering_enabled.png["Uma captura de tela que mostra i
 
 
 .Etapas para habilitar a hierarquização em um agregado
-. No ONTAP System Manager, clique em *Armazenamento > Níveis*.
-. Clique no menu de ação do agregado e selecione *Anexar camadas de nuvem*.
-. Selecione a camada de nuvem a ser anexada e clique em *Salvar*.
+. No System Manager do ONTAP, selecione *Armazenamento > Camadas*.
+. Selecione o menu de ações do agregado e selecione *Attach Cloud Tiers*.
+. Selecione a camada de nuvem que você deseja anexar e selecione *Salvar*.
 
 
 .O que vem a seguir?
@@ -263,10 +223,10 @@ O Cloud Volumes ONTAP pode hierarquizar dados inativos em volumes de leitura e g
 | Tarefa | Ação 
 
 
-| Criar um novo volume | Clique em *Adicionar novo volume*. 
+| Criar um novo volume | Selecione *Adicionar novo volume*. 
 
 
-| Modificar um volume existente | Selecione o bloco de volume desejado, clique em *Gerenciar volume* para acessar o painel direito Gerenciar volumes e, em seguida, clique em *Ações avançadas* e *Alterar política de níveis* no painel direito. 
+| Modificar um volume existente | Selecione o bloco de volume desejado, selecione *Gerenciar volume* para acessar o painel lateral direito Gerenciar Volumes e, em seguida, selecione *Ações avançadas* e *Alterar política de disposição em camadas* no painel direito. 
 |===
 . Selecione uma política de níveis.
 +
@@ -317,8 +277,8 @@ A classe de armazenamento para dados em camadas abrange todo o sistema, não é 
 Para obter informações sobre classes de armazenamento suportadas, consultelink:concept-data-tiering.html["Visão geral da hierarquização de dados"] .
 
 .Passos
-. No sistema Cloud Volumes ONTAP , clique no ícone de menu e depois clique em *Classes de armazenamento* ou *Níveis de armazenamento de blobs*.
-. Escolha uma classe de armazenamento e clique em *Salvar*.
+. No sistema Cloud Volumes ONTAP, selecione o ícone de menu e, em seguida, selecione *Classes de armazenamento* ou *Tiering de storage de blob*.
+. Escolha uma classe de armazenamento e selecione *Salvar*.
 
 
 
@@ -337,16 +297,16 @@ A proporção é importante para cenários de recuperação de desastres porque,
 
 .Passos
 . No painel de navegação esquerdo, acesse *Administração > Agentes*.
-. Clique no image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] ícone do agente do Console que gerencia o seu Cloud Volumes ONTAP.
+. Selecione o ícone image:icon-action.png["Um ícone que mostra três pontos horizontais para ações adicionais"] do agente do Console que gerencia seu sistema Cloud Volumes ONTAP.
 . Selecione * Configurações do Cloud Volumes ONTAP *.
 +
 image::screenshot-settings-cloud-volumes-ontap.png[Uma captura de tela da opção Configurações do Cloud Volumes ONTAP no ícone Configurações.]
 
-. Em *Capacidade*, clique em *Limites de capacidade agregada - Proporção de espaço livre para hierarquização de dados*.
+. Em *Capacidade*, selecione *Limiares de capacidade agregada - proporção de espaço livre para disposição em categorias dos dados*.
 +
 image:screenshot-cvo-settings-page.png["Uma visão geral das configurações de capacidade do Cloud Volumes ONTAP."]
 
-. Altere a proporção de espaço livre com base em suas necessidades e clique em *Salvar*.
+. Altere a proporção de espaço livre de acordo com suas necessidades e selecione *Salvar*.
 
 
 

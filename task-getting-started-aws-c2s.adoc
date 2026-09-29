@@ -68,7 +68,7 @@ Você precisa de uma política do IAM e uma função do IAM para cada um dos seg
 
 
 .Passos
-. Acesse o console do AWS IAM e clique em *Políticas*.
+. Acesse o console do AWS IAM e selecione *Políticas*.
 . Crie uma política para a instância do agente do Console.
 +
 
@@ -592,17 +592,17 @@ Se você comprou uma licença da NetApp, precisará adicioná-la ao Console para
 . No menu de navegação à esquerda, selecione * Licenses and subscriptions*.
 . No painel * Cloud Volumes ONTAP*, selecione *Exibir*.
 . Na guia * Cloud Volumes ONTAP*, selecione *Licenças > Licenças baseadas em nós*.
-. Clique em *Não atribuído*.
-. Clique em *Adicionar licenças não atribuídas*.
+. Selecione *Não atribuído*.
+. Selecione *Adicionar licenças não atribuídas*.
 . Digite o número de série da licença ou carregue o arquivo de licença.
 . Se você ainda não tiver o arquivo de licença, precisará carregá-lo manualmente em netapp.com.
 +
 .. Vá para olink:https://register.netapp.com/site/vsnr/register/getlicensefile["Gerador de arquivo de licença NetApp"^] e faça login usando suas credenciais do site de suporte da NetApp .
-.. Digite sua senha, escolha seu produto, insira o número de série, confirme que você leu e aceitou a política de privacidade e clique em *Enviar*.
+.. Digite sua senha, escolha seu produto, insira o número de série, confirme que você leu e aceitou a política de privacidade e selecione *Enviar*.
 .. Escolha se deseja receber o arquivo JSON serialnumber.NLF por e-mail ou download direto.
 
 
-. Clique em *Adicionar licença*.
+. Selecione *Adicionar Licença*.
 
 
 .Resultado
@@ -619,7 +619,7 @@ Você pode iniciar instâncias do Cloud Volumes ONTAP no AWS Secret Cloud e Top 
 Para pares HA, um par de chaves é necessário para habilitar a autenticação SSH baseada em chave para o mediador HA.
 
 .Passos
-. Na página *Sistemas*, clique em *Adicionar Sistema*.
+. Na página *Sistemas*, selecione *Adicionar Sistema*.
 . Em *Criar*, selecione Cloud Volumes ONTAP.
 +
 Para HA: em *Criar*, selecione Cloud Volumes ONTAP ou Cloud Volumes ONTAP HA.

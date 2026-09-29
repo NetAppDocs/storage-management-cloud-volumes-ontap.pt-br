@@ -35,15 +35,9 @@ O Flash Cache é compatível com configurações específicas do Cloud Volumes O
 [[limitations]]
 == Limitações
 
-ifdef::aws[]
-
 * Ao configurar o Flash Cache para o Cloud Volumes ONTAP 9.12.0 ou anterior na AWS, a compactação deve ser desabilitada em todos os volumes para aproveitar as melhorias de desempenho do Flash Cache.  Ao implantar ou atualizar para o Cloud Volumes ONTAP 9.12.1 ou posterior, não é necessário desabilitar a compactação.
 +
 Pule a seleção das configurações de eficiência de armazenamento ao criar um volume no NetApp Console ou crie um volume e, em seguida, http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["desabilitar a compactação de dados usando a CLI"^] .
-
-
-
-endif::aws[]
 
 * O reaquecimento do cache após uma reinicialização não é suportado com o Cloud Volumes ONTAP.
 

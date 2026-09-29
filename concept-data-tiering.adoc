@@ -20,8 +20,6 @@ image:diagram_data_tiering.png["Esta é uma imagem conceitual que mostra dados a
 
 A hierarquização de dados é alimentada pela tecnologia FabricPool .  O Cloud Volumes ONTAP fornece camadas de dados para todos os clusters do Cloud Volumes ONTAP sem uma licença adicional.  Quando você habilita a hierarquização de dados, os dados hierarquizados para armazenamento de objetos incorrem em cobranças.  Consulte a documentação do seu provedor de nuvem para obter detalhes sobre os custos de armazenamento de objetos.
 
-ifdef::aws[]
-
 
 
 [[data-tiering-in-aws]]
@@ -64,10 +62,6 @@ A classe de armazenamento para camadas de dados abrange todo o sistema, não é 
 
 --
 
-
-endif::aws[]
-
-ifdef::azure[]
 
 
 
@@ -112,10 +106,6 @@ O nível de acesso ao armazenamento para hierarquização de dados abrange todo 
 --
 
 
-endif::azure[]
-
-ifdef::gcp[]
-
 
 
 [[data-tiering-in-google-cloud]]
@@ -147,8 +137,6 @@ A classe de armazenamento para camadas de dados abrange todo o sistema, não é 
 
 --
 
-
-endif::gcp[]
 
 
 

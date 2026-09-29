@@ -18,8 +18,8 @@ Você pode modificar as tabelas de rotas da AWS que incluem rotas para os endere
 
 .Passos
 . Na página *Sistemas*, selecione o sistema.
-. Na guia Visão geral, clique no painel Recursos e, em seguida, clique no ícone de lápis ao lado de *Tabelas de rotas*.
-. Modifique a lista de tabelas de rotas selecionadas e clique em *Salvar*.
+. Na guia Visão geral, selecione o painel Recursos e, em seguida, selecione o ícone de lápis ao lado de *Tabelas de rotas*.
+. Modifique a lista de tabelas de rotas selecionadas e, em seguida, selecione *Salvar*.
 
 
 .Resultado

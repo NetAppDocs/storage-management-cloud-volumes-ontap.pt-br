@@ -36,25 +36,11 @@ Ao configurar o FlexCache em um sistema Cloud Volumes ONTAP onde o volume de ori
 
 .Antes de começar
 . *Configuração de criptografia*: certifique-se de que o volume de origem esteja totalmente criptografado e operacional.  Para sistemas Cloud Volumes ONTAP , isso envolve a integração com serviços de gerenciamento de chaves específicos da nuvem.
++
+** *Para a AWS*, isso normalmente significa usar o AWS Key Management Service (KMS). Para obter informações, consulte link:task-aws-key-management.html["Gerenciar chaves com o AWS Key Management Service"].
+** *Para o Azure*, você precisa configurar o Azure Key Vault para a criptografia de volume do NetApp (NVE). Para obter informações, consulte link:task-azure-key-vault.html["Gerenciar chaves com o Azure Key Vault"].
+** *Para o Google Cloud*, use o Google Cloud Key Management Service. Para obter informações, consulte link:task-google-key-manager.html["Gerencie chaves com o Cloud Key Management Service do Google"].
 
-
-ifdef::aws[]
-
-Para a AWS, isso normalmente significa usar o AWS Key Management Service (KMS).  Para obter informações, consultelink:task-aws-key-management.html["Gerenciar chaves com o AWS Key Management Service"] .
-
-endif::aws[]
-
-ifdef::azure[]
-
-Para o Azure, você precisa configurar o Azure Key Vault para NetApp Volume Encryption (NVE).  Para obter informações, consultelink:task-azure-key-vault.html["Gerenciar chaves com o Azure Key Vault"] .
-
-endif::azure[]
-
-ifdef::gcp[]
-
-Para o Google Cloud, é o Google Cloud Key Management Service.  Para obter informações, consultelink:task-google-key-manager.html["Gerencie chaves com o Cloud Key Management Service do Google"] .
-
-endif::gcp[]
 
 . *Serviços de gerenciamento de chaves*: Antes de criar um volume FlexCache , verifique se os serviços de gerenciamento de chaves estão configurados corretamente no sistema Cloud Volumes ONTAP .  Esta configuração é essencial para que o volume FlexCache descriptografe os dados do volume de origem.
 . *Licenciamento*: Confirme se uma licença válida do FlexCache está disponível e ativada no sistema Cloud Volumes ONTAP .

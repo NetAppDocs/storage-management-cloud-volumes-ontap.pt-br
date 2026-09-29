@@ -33,7 +33,13 @@ O relatório de espaço lógico está habilitado na VM de armazenamento inicial.
 ** iSCSI
 ** Gerenciamento de chaves de criptografia multilocatário (MTEKM), começando com o Cloud Volumes ONTAP 9.12.1 GA
 ** NetApp Volume Encryption (somente para sistemas Bring-Your-Own License (BYOL) ou sistemas pagamento conforme o uso (PAYGO) registrados)
-** NFS ifdef::aws[] endif::aws[] ifdef::azure[] endif::azure[]
+** NFS
+** ONTAP S3
++
+*** AWS: começando com o Cloud Volumes ONTAP 9.11.0
+*** Azure: começando com o Cloud Volumes ONTAP 9.9.1
+
+
 ** SnapMirror
 ** SnapRestore
 ** SnapVault
@@ -43,55 +49,29 @@ O relatório de espaço lógico está habilitado na VM de armazenamento inicial.
 +
 ** Um LIF de gerenciamento de cluster
 ** Um LIF interaglomerado
+** Sistemas AWS de nó único: uma LIF de gerenciamento de SVM
+** Sistemas Azure HA: uma LIF de gerenciamento de SVM
+** Sistemas de HA do Google Cloud: uma LIF de gerenciamento de SVM
+** Um LIF de gerenciamento de nós
++
+Google Cloud: este LIF é combinado com a LIF entre clusters.
 
-
-
-
-ifdef::azure[]
-
-* Um LIF de gerenciamento de SVM em sistemas HA no Azure
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* Um LIF de gerenciamento de SVM em sistemas HA no Google Cloud
-
-
-endif::gcp[]
-
-ifdef::aws[]
-
-* Um LIF de gerenciamento de SVM em sistemas de nó único na AWS
-
-
-endif::aws[]
-
-* Um LIF de gerenciamento de nós
-
-
-ifdef::gcp[]
-
-+ No Google Cloud, esse LIF é combinado com o LIF intercluster.
-
-endif::gcp[]
-
-* Um LIF de dados iSCSI
-* Um LIF de dados CIFS e NFS
+** Um LIF de dados iSCSI
+** Um LIF de dados CIFS e NFS
 +
 
 NOTE: O failover do LIF é desabilitado por padrão para o Cloud Volumes ONTAP devido aos requisitos do provedor de nuvem.  Migrar um LIF para uma porta diferente quebra o mapeamento externo entre endereços IP e interfaces de rede na instância, tornando o LIF inacessível.
 
-+
-** O Cloud Volumes ONTAP envia backups de configuração para o agente do Console usando HTTP.
+
+
+* O Cloud Volumes ONTAP envia backups de configuração para o agente do Console usando HTTP.
 +
 Os backups podem ser acessados em \http://ipaddress/occm/offboxconfig/, onde _ipaddress_ é o endereço IP do host do agente do Console.
 
 +
 Você pode usar os backups para reconfigurar seu sistema Cloud Volumes ONTAP .  Para obter mais informações sobre backups de configuração, consulte o https://docs.netapp.com/us-en/ontap/system-admin/config-backup-file-concept.html["Documentação do ONTAP"^] .
 
-** O Console define alguns atributos de volume de forma diferente de outras ferramentas de gerenciamento (ONTAP System Manager ou ONTAP CLI, por exemplo).
+* O Console define alguns atributos de volume de forma diferente de outras ferramentas de gerenciamento (ONTAP System Manager ou ONTAP CLI, por exemplo).
 +
 A tabela a seguir lista os atributos de volume definidos de forma diferente dos padrões:
 
@@ -122,8 +102,6 @@ NOTE: O administrador da organização ou da conta pode modificar esse valor na 
 |===
 +
 Para obter informações sobre esses atributos, consultelink:https://docs.netapp.com/us-en/ontap-cli-9121/volume-create.html["Página de manual do ONTAP _volume create_"] .
-
-
 
 
 

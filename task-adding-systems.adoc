@@ -26,17 +26,16 @@ Você precisa saber a senha da conta de usuário administrador do Cloud Volumes 
 
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
-. Na página *Sistema*, clique em *Adicionar Sistema*.
+. Na página *System*, selecione *Add System*.
 . Selecione o provedor de nuvem no qual o sistema reside.
 . Escolha o tipo de sistema Cloud Volumes ONTAP a ser adicionado.
-. Clique no link para descobrir um sistema existente.
+. Selecione o link para descobrir um sistema existente.
++
+A captura de tela a seguir mostra essa opção na AWS.
 
 
-ifdef::aws[]
 
-+image:screenshot_discover_redesign.png["Uma captura de tela que mostra um link para descobrir um sistema Cloud Volumes ONTAP existente."]
-
-endif::aws[]
+image:screenshot_discover_redesign.png["Uma captura de tela que mostra um link para descobrir um sistema Cloud Volumes ONTAP existente."]
 
 . Na página Região, selecione uma região.  Você pode ver os sistemas que estão em execução na região selecionada.
 +

@@ -41,7 +41,7 @@ Este cenário pressupõe a existência de dois nós. `node01` e `node02` Implant
 `storage failover takeover -ofnode <Node02>`
 
 . Sign in no portal do Azure.
-. Quando a transferência estiver concluída, acesse a instância da máquina virtual para `node02`e clique no botão *Parar* para desligá-lo.
+. Quando a transferência estiver concluída, acesse a instância da VM de `node02` e selecione o botão *Parar* para desligá-la.
 . Navegue até o grupo de recursos para `node02` e, na lista de discos, selecione o disco NVRAM para alterar o nível.
 . Selecione *Tamanho + Desempenho*.
 . Na lista suspensa *Nível de desempenho*, selecione `P30 - 5000 IOPS, 200MB/s`.

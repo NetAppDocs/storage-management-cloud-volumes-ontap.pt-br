@@ -22,12 +22,10 @@ CAUTION: Todos os discos e agregados devem ser criados e excluídos diretamente 
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
 . Na página *Sistemas*, clique duas vezes no nome do sistema Cloud Volumes ONTAP no qual você deseja gerenciar agregados.
-. Na guia Agregados, clique em *Adicionar agregado* e especifique detalhes para o agregado.
+. Na guia Agregados, selecione *Adicionar Agregado* e especifique os detalhes do agregado.
 +
 [role="tabbed-block"]
 ====
-ifdef::aws[]
-
 .AWS
 --
 ** Se você for solicitado a escolher um tipo e tamanho de disco, consultelink:task-planning-your-config.html["Planeje sua configuração do Cloud Volumes ONTAP na AWS"] .
@@ -41,26 +39,16 @@ link:concept-aws-elastic-volumes.html["Saiba mais sobre o suporte para Elastic V
 
 
 --
-endif::aws[]
-
-ifdef::azure[]
-
 .Azul
 --
 Para obter ajuda com o tipo e tamanho do disco, consultelink:task-planning-your-config-azure.html["Planeje sua configuração do Cloud Volumes ONTAP no Azure"] .
 
 --
-endif::azure[]
-
-ifdef::gcp[]
-
 .Google Cloud
 --
 Para obter ajuda com o tipo e tamanho do disco, consultelink:task-planning-your-config-gcp.html["Planeje sua configuração do Cloud Volumes ONTAP no Google Cloud"] .
 
 --
-endif::gcp[]
-
 ====
-. Clique em *Adicionar* e depois em *Aprovar e Comprar*.
+. Selecione *Adicionar* e, em seguida, selecione *Aprovar e comprar*.
 

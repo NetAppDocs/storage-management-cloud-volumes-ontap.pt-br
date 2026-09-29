@@ -78,7 +78,7 @@ link:reference-networking-gcp.html["Requisitos de rede no Google Cloud"]
 
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
-. [[subscribe]]Na página Canvas, clique em *Adicionar Sistema* e siga as instruções.
+. [[subscribe]]Na página do Canvas, selecione *Adicionar Sistema* e siga as instruções.
 . Selecione seu provedor de nuvem (*Amazon Web Services*, *Microsoft Azure* ou *Google Cloud*) > *Cloud Volumes ONTAP/Cloud Volumes ONTAP HA* > *Adicionar novo*. A opção *Criação rápida* está selecionada por padrão.
 +
 .Capturas de tela de exemplo da opção Quick create
@@ -106,24 +106,12 @@ image:screenshot-quick-start-gcp.png["width=500,alt=\"Criação Rápida do Googl
 
 
 .Detalhes do sistema
-. *Conta/credenciais do provedor de nuvem/projeto do Google Cloud*: Os detalhes da conta e da assinatura são preenchidos automaticamente com base no seu agente do Console. Se você tiver várias contas ou assinaturas, selecione a que deseja usar. Se um agente do Console não estiver disponível, você será solicitado a  https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["criar um agente de console"^].
-
-
-ifdef::gcp[]
-
-Para o _Google Cloud_, você precisa selecionar uma assinatura do marketplace com o nome do projeto.
-
-endif::gcp[]
-
+. *Conta/credenciais do provedor de nuvem/projeto do Google Cloud*: Os detalhes da conta e da assinatura são preenchidos automaticamente com base no seu agente do Console. Se você tiver várias contas ou assinaturas, selecione a que deseja usar. Se um agente do Console não estiver disponível, você será solicitado a  https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["criar um agente de console"^]. Para o _Google Cloud_, você precisa selecionar uma assinatura do marketplace com o nome do projeto.
 . *Nome*: Insira um nome para o seu sistema Cloud Volumes ONTAP (também chamado de nome do cluster). O Console usa o nome do sistema (cluster) para nomear o sistema Cloud Volumes ONTAP e a instância da VM. Ele também usa o nome como prefixo para o grupo de segurança predefinido, caso você selecione essa opção.
 . *Credenciais do ONTAP*: Estas são as credenciais da conta de administrador do cluster Cloud Volumes ONTAP. Você pode usar essas credenciais para se conectar ao Cloud Volumes ONTAP por meio do ONTAP System Manager ou da ONTAP CLI. Você pode manter o nome de usuário padrão _admin_ ou alterá-lo para um nome de usuário personalizado.
 
 
-ifdef::gcp[]
-
 Para o Google Cloud, se você planeja usar link:concept-data-tiering.html["hierarquização de dados"] ou  https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] com Cloud Volumes ONTAP, então você precisa habilitar a *Conta de Serviço* e selecionar uma conta de serviço que tenha a função predefinida de Storage Admin. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^]. A conta de serviço associada ao agente do Console  https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["deve ter as permissões necessárias"^].
-
-endif::gcp[]
 
 . *Etiquetas/Rótulos*: As etiquetas são os metadados dos seus recursos da AWS ou Azure. O Console adiciona as etiquetas à instância do Cloud Volumes ONTAP e a cada recurso associado à instância. Você pode adicionar até 15 etiquetas na interface de usuário ao criar um sistema Cloud Volumes ONTAP e, em seguida, adicionar mais depois que ele for criado. Para obter mais informações, consulte:
 +
@@ -202,40 +190,24 @@ NOTE: Cloud Volumes ONTAP 9.19.1 e versões posteriores oferecem suporte a link:
 
 .Cobrança e Serviços
 . *Licença*: Selecione o tipo de licença que deseja usar com este Cloud Volumes ONTAP. Você pode escolher entre as licenças Professional, Essentials e Freemium. Para obter informações sobre as diferentes licenças, consulte link:concept-licensing.html["Saiba mais sobre as licenças do Cloud Volumes ONTAP"^].
-. *Serviços e recursos de dados*: mantenha os serviços ativados ou desative os serviços que você não deseja usar com o Cloud Volumes ONTAP.
-
-
-ifdef::gcp[]
-
-No Google Cloud, para selecionar Backup e Recovery ou usar NetApp Cloud Tiering, você precisa ter especificado a Service Account.
-
-endif::gcp[]
-
-* https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Saiba mais sobre a classificação da NetApp"^]
-* https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre o NetApp Backup and Recovery"^]
-* link:concept-worm.html["Saiba mais sobre o armazenamento WORM no Cloud Volumes ONTAP"]
+. *Serviços e recursos de dados*: mantenha os serviços ativados ou desative os serviços que você não deseja usar com o Cloud Volumes ONTAP. No _Google Cloud_, para selecionar Backup e Recuperação ou usar o NetApp Cloud Tiering, você precisa ter especificado a Service Account.
++
+** https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Saiba mais sobre a classificação da NetApp"^]
+** https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre o NetApp Backup and Recovery"^]
+** link:concept-worm.html["Saiba mais sobre o armazenamento WORM no Cloud Volumes ONTAP"]
 +
 
 TIP: Se você quiser utilizar WORM e camadas de dados, desabilite o Backup e Recuperação e implante um sistema Cloud Volumes ONTAP com versão 9.8 ou superior.
 
-+
-.. * Conta do site de suporte da NetApp *: se você tiver várias contas, selecione aquela que deseja usar.
-.. Verifique ou edite os detalhes inseridos e clique em *Criar*.
 
 
+. * Conta do site de suporte da NetApp *: se você tiver várias contas, selecione aquela que deseja usar.
+. Confira ou edite os detalhes que você inseriu e, em seguida, selecione *Criar*.
 
-
-ifdef::azure[]
 
 No Azure, a seção *Visão geral* exibe os recursos que serão alocados quando o processo de implantação for concluído.
 
-endif::azure[]
-
-ifdef::aws[]
-
 Na _AWS_, imediatamente após você criar o sistema Cloud Volumes ONTAP, o NetApp Console inicia uma instância de teste na VPC especificada para verificar a conectividade. Se bem-sucedido, o Console termina imediatamente a instância e então inicia a implantação do sistema. Se o Console não conseguir verificar a conectividade, a criação do sistema falhará. A instância de teste é uma `t2.nano` (para locação de VPC padrão) ou uma `m3.medium` (para locação de VPC dedicada).
-
-endif::aws[]
 
 .Depois que você terminar
 O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o progresso na página Auditoria.

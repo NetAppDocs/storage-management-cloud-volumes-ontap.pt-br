@@ -18,4 +18,39 @@ O Cloud Volumes ONTAP oferece suporte ao NetApp Volume Encryption (NVE) e ao Net
 
 Tanto o NVE quanto o NAE são suportados por um gerenciador de chaves externo.
 
-ifdef::aws[] fim se::aws[] ifdef::azure[] fim se::azure[] ifdef::gcp[] fim se::gcp[] ifdef::aws[] fim se::aws[] ifdef::azure[] fim se::azure[] ifdef::gcp[] fim se::gcp[]
+Se você usar o NVE, terá a opção de usar o cofre de chaves do seu provedor de nuvem para proteger as chaves de criptografia ONTAP :
+
+* AWS Key Management Service (a partir da versão 9.12.0)
+* Cofre de Chaves do Azure (AKV)
+* Serviço de gerenciamento de chaves do Google Cloud
+
+
+Os novos agregados terão o NAE ativado por padrão após você configurar um gerenciador de chaves externo. Os novos volumes que não fazem parte de um agregado NAE terão o NVE ativado por padrão (por exemplo, se você tiver agregados existentes criados antes de configurar um gerenciador de chaves externo).
+
+O Cloud Volumes ONTAP não oferece suporte ao gerenciamento de chaves integrado.
+
+.Antes de começar
+Seu sistema Cloud Volumes ONTAP deve ser registrado no suporte da NetApp. Uma licença do NetApp Volume Encryption é instalada automaticamente em cada sistema Cloud Volumes ONTAP registrado no suporte da NetApp.
+
+* https://docs.netapp.com/us-en/console-setup-admin/task-adding-nss-accounts.html["Adicionando contas do site de suporte da NetApp ao console"^]
+* link:task-registering.html["Registre sistemas de pagamento conforme o uso"]
+
+
+
+NOTE: A NetApp Console não instala a licença NVE em sistemas localizados na região da China.
+
+.Passos
+. Analise a lista de gerenciadores de chaves compatíveis no  http://mysupport.netapp.com/matrix["Ferramenta de Matriz de Interoperabilidade da NetApp"^].
++
+
+TIP: Procure a solução *Key Managers*.
+
+. link:task-connecting-to-otc.html["Conecte-se à CLI do Cloud Volumes ONTAP"^].
+. Configurar o gerenciamento de chaves externas.
++
+** AWS: link:task-aws-key-management.html["Serviço de gerenciamento de chaves da AWS"]
+** Azure: link:task-azure-key-vault.html["Cofre de Chaves do Azure (AKV)"]
+** Google Cloud: link:task-google-key-manager.html["Serviço de gerenciamento de chaves do Google Cloud"]
+
+
+

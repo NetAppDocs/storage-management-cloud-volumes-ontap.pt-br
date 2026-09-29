@@ -56,7 +56,7 @@ Se você deseja iniciar um sistema Cloud Volumes ONTAP de nó único no Azure, p
 
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
-. [[subscribe]]Na página *Sistemas*, clique em *Adicionar Sistema* e siga as instruções.
+. [[subscribe]]Na página *Sistemas*, selecione *Adicionar Sistema* e siga as instruções.
 . *Escolha um local*: Selecione *Microsoft Azure* e * Cloud Volumes ONTAP Single Node*.
 . Se você for solicitado, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["criar um agente de console"^].
 . *Detalhes e credenciais*: Opcionalmente, altere as credenciais e a assinatura do Azure, especifique um nome de cluster, adicione tags, se necessário, e especifique as credenciais.
@@ -130,7 +130,7 @@ Se você deixar o Console gerar o grupo de segurança para você, precisará esc
 ** link:task-set-up-licensing-azure.html["Aprenda como configurar o licenciamento"^] .
 
 
-. *Pacotes pré-configurados*: selecione um dos pacotes para implantar rapidamente um sistema Cloud Volumes ONTAP ou clique em *Criar minha própria configuração*.
+. *Pacotes pré-configurados*: selecione um dos pacotes para implantar rapidamente um sistema Cloud Volumes ONTAP ou selecione *Criar minha própria configuração*.
 +
 Se você escolher um dos pacotes, precisará apenas especificar um volume e depois revisar e aprovar a configuração.
 
@@ -177,7 +177,7 @@ link:concept-worm.html["Saiba mais sobre o armazenamento WORM"^] .
 .. Se você ativar o armazenamento WORM, selecione o período de retenção.
 
 
-. *Criar volume*: insira detalhes para o novo volume ou clique em *Ignorar*.
+. *Criar Volume*: insira os detalhes para o novo volume ou selecione *Ignorar*.
 +
 link:concept-client-protocols.html["Saiba mais sobre os protocolos e versões de clientes suportados"^] .
 
@@ -247,9 +247,9 @@ Para mais informações, consulte link:https://docs.netapp.com/us-en/storage-man
 . *Revisar e aprovar*: revise e confirme suas seleções.
 +
 .. Revise os detalhes sobre a configuração.
-.. Clique em *Mais informações* para revisar detalhes sobre o suporte e os recursos do Azure que o Console comprará.
+.. Selecione *Mais informações* para consultar detalhes sobre o suporte e os recursos do Azure que o Console irá adquirir.
 .. Selecione as caixas de seleção *Eu entendo...*.
-.. Clique em *Ir*.
+.. Selecione *Ir*.
 
 
 
@@ -257,7 +257,7 @@ Para mais informações, consulte link:https://docs.netapp.com/us-en/storage-man
 .Resultado
 O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o progresso na página Auditoria.
 
-Se você tiver algum problema ao implantar o sistema Cloud Volumes ONTAP , revise a mensagem de falha.  Você também pode selecionar o sistema e clicar em *Recriar ambiente*.
+Se você encontrar algum problema ao implantar o sistema Cloud Volumes ONTAP, revise a mensagem de erro. Você também pode selecionar o sistema e escolher *Recriar ambiente*.
 
 Para obter ajuda adicional, acesse https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Suporte NetApp Cloud Volumes ONTAP"^] .
 
@@ -281,7 +281,7 @@ Se você quiser iniciar um par de Cloud Volumes ONTAP HA no Azure, precisará cr
 
 .Passos
 . No menu de navegação à esquerda, selecione *Armazenamento > Gerenciamento*.
-. [[subscribe]]Na página *Sistemas*, clique em *Adicionar Sistema* e siga as instruções.
+. [[subscribe]]Na página *Sistemas*, selecione *Adicionar Sistema* e siga as instruções.
 . Se você for solicitado, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["criar um agente de console"^].
 . *Detalhes e credenciais*: Opcionalmente, altere as credenciais e a assinatura do Azure, especifique um nome de cluster, adicione tags, se necessário, e especifique as credenciais.
 +
@@ -365,7 +365,7 @@ Se você deixar o Console gerar o grupo de segurança para você, precisará esc
 ** link:task-set-up-licensing-azure.html["Aprenda como configurar o licenciamento"^] .
 
 
-. *Pacotes pré-configurados*: selecione um dos pacotes para implantar rapidamente um sistema Cloud Volumes ONTAP ou clique em *Alterar configuração*.
+. *Pacotes pré-configurados*: selecione um dos pacotes para implantar rapidamente um sistema Cloud Volumes ONTAP ou selecione *Alterar configuração*.
 +
 Se você escolher um dos pacotes, precisará apenas especificar um volume e depois revisar e aprovar a configuração.
 
@@ -428,7 +428,7 @@ O WORM não pode ser habilitado se a hierarquização de dados estiver habilitad
 +
 link:concept-worm.html["Saiba mais sobre o armazenamento WORM"^] .
 
-. *Criar volume*: insira detalhes para o novo volume ou clique em *Ignorar*.
+. *Criar Volume*: insira os detalhes para o novo volume ou selecione *Ignorar*.
 +
 link:concept-client-protocols.html["Saiba mais sobre os protocolos e versões de clientes suportados"^] .
 
@@ -498,9 +498,9 @@ Para obter mais informações, consulte link:https://docs.netapp.com/us-en/stora
 . *Revisar e aprovar*: revise e confirme suas seleções.
 +
 .. Revise os detalhes sobre a configuração.
-.. Clique em *Mais informações* para revisar detalhes sobre o suporte e os recursos do Azure que o Console comprará.
+.. Selecione *Mais informações* para consultar detalhes sobre o suporte e os recursos do Azure que o Console irá adquirir.
 .. Selecione as caixas de seleção *Eu entendo...*.
-.. Clique em *Ir*.
+.. Selecione *Ir*.
 
 
 
@@ -508,7 +508,7 @@ Para obter mais informações, consulte link:https://docs.netapp.com/us-en/stora
 .Resultado
 O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o progresso na página Auditoria.
 
-Se você tiver algum problema ao implantar o sistema Cloud Volumes ONTAP , revise a mensagem de falha.  Você também pode selecionar o sistema e clicar em *Recriar ambiente*.
+Se você encontrar algum problema ao implantar o sistema Cloud Volumes ONTAP, revise a mensagem de erro. Você também pode selecionar o sistema e escolher *Recriar ambiente*.
 
 .Depois que você terminar
 * Se você provisionou um compartilhamento CIFS, conceda aos usuários ou grupos permissões para os arquivos e pastas e verifique se esses usuários podem acessar o compartilhamento e criar um arquivo.

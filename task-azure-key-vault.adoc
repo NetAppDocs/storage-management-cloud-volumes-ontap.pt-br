@@ -61,14 +61,14 @@ As etapas descritas capturam como registrar sua configuração do Cloud Volumes 
 .Criar segredo do cliente do Azure
 . No portal do Azure para registro do aplicativo Azure Key Vault, selecione o painel **Certificados e segredos**.
 . Selecione **Novo segredo do cliente**.  Insira um nome significativo para o seu segredo do cliente.  A NetApp recomenda um período de expiração de 24 meses; no entanto, suas políticas específicas de governança de nuvem podem exigir uma configuração diferente.
-. Clique em **Adicionar** para criar o segredo do cliente.  Copie a sequência secreta listada na coluna **Valor** e armazene-a em um local seguro para uso posterior em<<ontap>> .  O valor secreto não será exibido novamente depois que você sair da página.
+. Selecione **Adicionar** para criar o segredo do cliente. Copie a string secreta listada na coluna **Value** e armazene-a em um local seguro para uso posterior em <<ontap>>. O valor secreto não será exibido novamente depois que você sair da página.
 
 
 [[create-akv]]
 .Criar um Azure Key Vault
 . Se você tiver um Azure Key Vault existente, poderá conectá-lo à sua configuração do Cloud Volumes ONTAP ; no entanto, você deve adaptar as políticas de acesso às configurações neste processo.
 . No portal do Azure, navegue até a seção **Key Vaults**.
-. Clique em **+Criar** e insira as informações necessárias, incluindo grupo de recursos, região e nível de preço.  Além disso, insira o número de dias para manter os cofres excluídos e selecione **Ativar proteção de limpeza** no cofre de chaves.
+. Selecione **Criar** e insira as informações necessárias, incluindo grupo de recursos, região e camada de preço. Além disso, insira o número de dias para reter os cofres excluídos e selecione **Ativar proteção contra limpeza** no cofre de chaves.
 . Selecione **Avançar** para escolher uma política de acesso.
 . Selecione as seguintes opções:
 +
@@ -76,8 +76,8 @@ As etapas descritas capturam como registrar sua configuração do Cloud Volumes 
 .. Em **Acesso a recursos**, selecione **Azure Disk Encryption para criptografia de volume**.
 
 
-. Selecione **+Criar** para adicionar uma política de acesso.
-. Em **Configurar a partir de um modelo**, clique no menu suspenso e selecione o modelo **Gerenciamento de chaves, segredos e certificados**.
+. Selecione **Criar** para adicionar uma política de acesso.
+. Em **Configurar a partir de um modelo**, selecione o menu suspenso e selecione o modelo **Gerenciamento de chaves, segredos e certificados**.
 . Escolha cada um dos menus suspensos de permissões (chave, segredo, certificado) e depois **Selecionar tudo** no topo da lista do menu para selecionar todas as permissões disponíveis.  Você deve ter:
 +
 ** **Permissões de chave**: 20 selecionadas
@@ -88,7 +88,7 @@ image:screenshot-azure-key-secret-cert-all-list.png["captura de tela de Criar um
 
 
 
-. Clique em **Avançar** para selecionar o aplicativo registrado **Principal** do Azure que você criou em<<azure-app>> . Selecione **Avançar**.
+. Selecione **Avançar** para selecionar o aplicativo registrado **Principal** do Azure que você criou em <<azure-app>>. Selecione **Avançar**.
 +
 
 NOTE: Somente um principal pode ser atribuído por política.
@@ -96,7 +96,7 @@ NOTE: Somente um principal pode ser atribuído por política.
 +
 image:screenshot-azure-key-secret-cert-principal.png["captura de tela da guia principal Criar uma política de acesso"]
 
-. Clique em **Avançar** duas vezes até chegar em **Revisar e criar**.  Em seguida, clique em **Criar**.
+. Selecione **Avançar** duas vezes até chegar a **Revisar e criar**. Em seguida, selecione **Criar**.
 . Selecione **Avançar** para avançar para as opções de **Rede**.
 . Escolha o método de acesso à rede apropriado ou selecione **Todas as redes** e **Revisar + Criar** para criar o cofre de chaves.  (O método de acesso à rede pode ser prescrito por uma política de governança ou pela sua equipe corporativa de segurança na nuvem.)
 . Registre o URI do Key Vault: No key vault que você criou, navegue até o menu Visão geral e copie o **URI do Vault** da coluna da direita.  Você precisará disso para uma etapa posterior.
