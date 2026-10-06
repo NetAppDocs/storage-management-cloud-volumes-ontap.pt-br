@@ -253,7 +253,7 @@ O NetApp Console permite uma conversão perfeita de licenças baseadas em nós p
 
 Antes de fazer a transição, é bom se familiarizar com a diferença entre os dois modelos de licenciamento.  O licenciamento baseado em nó inclui capacidade fixa para cada instância ONTAP , o que pode restringir a flexibilidade.  O licenciamento baseado em capacidade, por outro lado, permite um pool compartilhado de armazenamento entre várias instâncias, oferecendo maior flexibilidade, otimizando a utilização de recursos e reduzindo o potencial de penalidades financeiras ao redistribuir cargas de trabalho.  O carregamento baseado na capacidade se ajusta perfeitamente às mudanças nos requisitos de armazenamento.
 
-Se você possui assinaturas do marketplace ou implantações privadas com licenças baseadas em nós, você pode link:task-convert-node-capacity.html["Converta suas licenças baseadas em nós para baseadas em capacidade"] usando a ferramenta de conversão de licenças no Console.
+Se você tiver assinaturas do marketplace ou implantações privadas com licenças baseadas em nós, poderá link:task-convert-node-capacity.html["Converta suas licenças baseadas em nós para baseadas em capacidade"] usando a ferramenta de conversão de licenças na Console.
 
 Para saber como você pode realizar essa conversão, consultelink:task-convert-node-capacity.html["Converter uma licença baseada em nó do Cloud Volumes ONTAP em uma licença baseada em capacidade"] .
 

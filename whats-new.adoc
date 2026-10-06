@@ -137,7 +137,7 @@ Você também pode descartar uma ou mais configurações da análise de arquitet
 
 Se você quiser incluir uma configuração descartada posteriormente, poderá reativá-la no painel de controle bem arquitetado. Isso restaura a configuração à análise e permite que você receba recomendações e correções para ela.
 
-* link:https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html["Corrija, descarte e reative configurações para Cloud Volumes ONTAP no Microsoft Azure"^]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-improve-configurations-cvo.html["Corrija, descarte e reative configurações para Cloud Volumes ONTAP no Microsoft Azure"^]
 
 
 
@@ -204,8 +204,8 @@ O painel de controle bem estruturado exibe o número total de sistemas analisado
 
 
 .Links relacionados
-* https://docs.netapp.com/us-en/console-well-architected/cvo/configuration-analysis-cvo.html["Análise de configuração para Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html["Implemente configurações de sistema Cloud Volumes ONTAP bem arquitetadas"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-configuration-analysis-cvo.html["Análise de configuração para Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-improve-configurations-cvo.html["Melhore as configurações do Cloud Volumes ONTAP no Azure usando o Workload Factory"^]
 
 
 
@@ -275,7 +275,9 @@ Agora você pode usar o assistente de *Criação rápida* para implantar Cloud V
 [[introducing-access-roles-for-cloud-volumes-ontap]]
 === Apresentando funções de acesso para Cloud Volumes ONTAP
 
-NetApp introduz funções de gerenciamento de identidade e acesso (IAM) para Cloud Volumes ONTAP, permitindo controle de acesso baseado em funções (RBAC) para maior segurança e conformidade facilitada. Os usuários podem continuar a fazer login no NetApp Console usando suas credenciais existentes para operações no Cloud Volumes ONTAP. No entanto, a autenticação agora é roteada por meio da federação de identidades, permitindo que o administrador do Console tenha um controle mais granular sobre essas funções. Todo usuário deve ter uma das seguintes funções para executar qualquer operação no Cloud Volumes ONTAP. Sem uma função, os usuários não podem visualizar ou acessar instâncias do Cloud Volumes ONTAP.
+NetApp introduz funções de gerenciamento de identidade e acesso (IAM) para o Cloud Volumes ONTAP, permitindo o controle de acesso baseado em funções (RBAC) para maior segurança e conformidade mais fácil. Os usuários podem continuar a fazer login no NetApp Console usando suas credenciais existentes para operações do Cloud Volumes ONTAP. No entanto, a autenticação agora é encaminhada por meio da federação de identidades, permitindo que o administrador do Console tenha um controle mais granular sobre essas funções. O agente do Console deve estar executando a versão 4.9.0 ou posterior antes de habilitar as funções do Cloud Volumes ONTAP.
+
+Todo usuário deve ter uma das seguintes funções para executar qualquer operação no Cloud Volumes ONTAP. Sem uma função, os usuários não podem visualizar ou acessar instâncias do Cloud Volumes ONTAP.
 
 * *Cloud Volumes ONTAP viewer*: concede acesso somente leitura às telas e guias do Cloud Volumes ONTAP. Determinadas telas e botões de ação são desativados nesta função.
 * *Cloud Volumes ONTAP operator*: Permite tarefas de gerenciamento diárias, como adicionar volumes, gerenciar armazenamento e configurar replicação.
@@ -287,13 +289,13 @@ O administrador do NetApp Console atribui funções aos usuários do Cloud Volum
 Cloud Volumes ONTAP aplica o RBAC usando um cache local das permissões de cada usuário, que é atualizado automaticamente a cada hora. Quando um usuário recebe uma nova função ou sua função existente é alterada, pode levar até uma hora para que essa alteração entre em vigor, após o que todos os fluxos de trabalho permitidos pelas funções são habilitados.
 
 
-NOTE: Quando um agente do Console é implantado pela primeira vez, ou quando um agente existente é atualizado para o Console 4.9.0 ou posterior, um processo de inicialização único atribui automaticamente funções do Cloud Volumes ONTAP a todos os usuários existentes na organização. Esse processo pode levar até 30 minutos para ser concluído. E, quando concluído, o Console atribui as funções apropriadas aos usuários existentes.
+NOTE: Quando um agente do Console é implantado pela primeira vez, ou quando um agente existente do Console é atualizado para o Console 4.9.0 ou posterior, um processo único de inicialização atribui automaticamente funções do Cloud Volumes ONTAP a todos os usuários existentes na organização. Esse processo pode levar até 30 minutos para ser concluído. Quando concluído, o Console atribui as funções apropriadas aos usuários existentes. O processo de inicialização não ocorre a menos que haja um agente em execução.
 
-As funções do Cloud Volumes ONTAP aplicam-se aos ambientes Amazon Web Service (AWS), Microsoft Azure (Azure) e Google Cloud.
+As funções do Cloud Volumes ONTAP se aplicam aos ambientes do Amazon Web Service (AWS), Microsoft Azure (Azure) e Google Cloud. As funções não se aplicam aos modos de implantação privado e restrito.
 
 .Links relacionados
-* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["NetApp Console funções de acesso"^]
 * https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Funções de acesso do Cloud Volumes ONTAP no NetApp Console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-cvo-rbac-setup.html["Configure o acesso baseado em funções para Cloud Volumes ONTAP no NetApp Console"^]
 
 
 

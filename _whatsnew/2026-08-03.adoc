@@ -26,5 +26,5 @@ Você também pode descartar uma ou mais configurações da análise de arquitet
 
 Se você quiser incluir uma configuração descartada posteriormente, poderá reativá-la no painel de controle bem arquitetado. Isso restaura a configuração à análise e permite que você receba recomendações e correções para ela.
 
-* link:https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html["Corrija, descarte e reative configurações para Cloud Volumes ONTAP no Microsoft Azure"^]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-improve-configurations-cvo.html["Corrija, descarte e reative configurações para Cloud Volumes ONTAP no Microsoft Azure"^]
 
