@@ -2,7 +2,6 @@
 :allow-uri-read: 
 
 
-[role="lead"]
 Você pode implantar Cloud Volumes ONTAP na Amazon Web Services (AWS), Microsoft Azure e Google Cloud usando `Quick create` para uma implantação mais rápida, tanto em configurações de nó único quanto de alta disponibilidade (HA). Esse processo simplificado reduz as etapas de implantação em comparação com o método avançado, definindo automaticamente os valores padrão em uma única página e minimizando a navegação.
 
 .Antes de começar
