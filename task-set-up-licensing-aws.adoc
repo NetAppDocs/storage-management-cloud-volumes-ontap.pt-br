@@ -192,7 +192,7 @@ Uma assinatura Keystone é um serviço baseado em assinatura com pagamento confo
 .Passos
 . Se você ainda não tem uma assinatura, https://www.netapp.com/forms/keystone-sales-contact/["entre em contato com a NetApp"^]
 . mailto:ng-keystone-success@netapp.com[Entre em contato com a NetApp] para autorizar sua conta de usuário com uma ou mais assinaturas Keystone .
-. Depois que a NetApp autorizar sua conta,link:task-manage-keystone.html#link-a-subscription["vincule suas assinaturas para uso com o Cloud Volumes ONTAP"] .
+. Após NetApp autorizar sua conta, link:task-manage-keystone.html["vincule suas assinaturas para uso com o Cloud Volumes ONTAP"].
 . Na página *Systems*, selecione *Add System* e siga as etapas.
 +
 .. Selecione o método de cobrança da Assinatura Keystone quando solicitado a escolher um método de cobrança.

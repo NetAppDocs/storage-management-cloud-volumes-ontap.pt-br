@@ -16,7 +16,70 @@ summary: Saiba mais sobre os novos recursos e melhorias no gerenciamento do Clou
 [role="lead"]
 Saiba o que há de novo no gerenciamento do Cloud Volumes ONTAP no NetApp Console.
 
-Os aprimoramentos descritos nesta página são específicos para gerenciar o Cloud Volumes ONTAP por meio do Console.  Para saber o que há de novo no software Cloud Volumes ONTAP , https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["acesse as Notas de versão do Cloud Volumes ONTAP"^] .
+As melhorias descritas nesta página são específicas para o gerenciamento do Cloud Volumes ONTAP por meio do Console. Para saber mais sobre as principais versões e correções, consulte https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de versão do Cloud Volumes ONTAP"^].
+
+
+
+[[14-october-2026]]
+== 14 de outubro de 2026
+
+
+
+[[cloud-volumes-ontap-9-19-1-in-azure]]
+=== O Cloud Volumes ONTAP 9.19.1 no Azure
+
+Agora você pode usar o NetApp Console para implantar e gerenciar a versão de Disponibilidade Geral (GA) do Cloud Volumes ONTAP 9.19.1 no Azure.
+
+O Console oferece suporte ao Cloud Volumes ONTAP 9.19.1 na AWS e no Google Cloud desde agosto de 2026.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-new.html["Cloud Volumes ONTAP 9.19.1 notas de lançamento"^]
+
+
+
+[[azure-encryption-at-host-for-cloud-volumes-ontap]]
+=== Criptografia de host do Azure para o Cloud Volumes ONTAP
+
+A partir do Cloud Volumes ONTAP 9.19.1 GA, a criptografia no host do Azure é habilitada por padrão para novas implantações do Azure de nó único e de alta disponibilidade (HA) que atendam aos pré-requisitos. Esse recurso criptografa os dados no servidor físico que hospeda a VM, incluindo o disco efêmero e os caches associados no nível do host, à medida que os dados são gravados no host e lidos dele.
+
+Antes de implantar o Cloud Volumes ONTAP no Azure, certifique-se de que os seguintes pré-requisitos sejam atendidos:
+
+* O  `EncryptionAtHost`recurso está registrado para sua assinatura do Azure. Consulte https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli["Documentação da Microsoft: habilitar criptografia no host"^].
+* O tipo de instância de VM selecionado oferece suporte à criptografia no host na sua região do Azure. Consulte https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli#finding-supported-vm-sizes["Documentação da Microsoft: encontrando tamanhos de VM compatíveis"^].
+
+
+Observe estes pontos:
+
+* Nenhuma configuração adicional é necessária.
+* Se esses pré-requisitos não forem atendidos, a criptografia no host do Azure não será habilitada para sua implantação do Cloud Volumes ONTAP.
+* A criptografia no host aplica-se apenas ao Azure, não à AWS ou ao Google Cloud.
+
+
+Documentação da Microsoft: https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal["Use o portal do Azure para habilitar a criptografia completamente usando a criptografia no host"^]
+
+
+
+[[backend-network-encryption-on-cloud-volumes-ontap-clusters-in-azure-and-google-cloud]]
+=== Criptografia de rede de back-end nos clusters do Cloud Volumes ONTAP no Azure e no Google Cloud
+
+O Cloud Volumes ONTAP 9.19.1 e versões posteriores oferecem suporte à criptografia de rede do cluster de back-end para configurações de HA no Azure e no Google Cloud.
+
+Habilitar a criptografia de rede do cluster pode afetar o desempenho do cluster. Tenha cautela e verifique se seu ambiente suporta a sobrecarga adicional antes de habilitar esse recurso.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enable-cluster-encryption.html["Ativar a criptografia de rede de back-end nos clusters do Cloud Volumes ONTAP"^]
+
+
+
+[[ability-to-reduce-disruptions-during-azure-scheduled-maintenance]]
+=== Capacidade de reduzir interrupções durante a manutenção programada do Azure
+
+Durante a manutenção programada, o Azure pode pausar brevemente uma VM em um par de HA do Cloud Volumes ONTAP. O ONTAP pode interpretar a pausa como uma interrupção do nó e transferir as operações de armazenamento para o nó parceiro, retornando-as quando a VM for retomada (takeover e giveback). Esse processo pode interromper conexões ativas de clientes, mesmo quando não há falha de nó.
+
+Com Cloud Volumes ONTAP 9.19.1 e versões posteriores, você pode habilitar uma configuração opcional que permite que o par de HA continue operando durante um congelamento de manutenção agendada do Azure sem iniciar automaticamente o takeover e o giveback.
+
+
+NOTE: Este recurso está disponível como uma prévia pública com o Cloud Volumes ONTAP 9.19.1.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-azure-prevent-freeze.html["Evite interrupções durante a manutenção do Azure para os pares de HA do Cloud Volumes ONTAP"^]
 
 
 
@@ -499,7 +562,7 @@ Todas as permissões listadas para a versão Console em:
 
 
 |===
-Em implantações em modo privado, você precisa fazer algumas alterações de configuração no Cloud Volumes ONTAP para começar a usar o Infrastructure Manager. Consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuração do Infrastructure Manager para implantações em modo privado"^].
+Em implantações em modo privado, você precisa fazer algumas alterações de configuração no Cloud Volumes ONTAP para começar a usar o Infrastructure Manager. Consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuração do Infrastructure Manager em modo privado ou ambientes protegidos"^].
 
 .Links relacionados
 * https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#console-agent-4-2-0["NetApp Console Agent 4.2.0 Notas de versão"^]

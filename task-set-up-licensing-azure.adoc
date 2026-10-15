@@ -79,7 +79,7 @@ NOTE: NetApp restringiu a compra, extensão e renovação de licenças BYOL. Par
 O Console consulta automaticamente o serviço de licenciamento da NetApp para obter detalhes sobre as licenças associadas à sua conta do Site de Suporte da NetApp .  Se não houver erros, o Console adicionará automaticamente as licenças ao Console.
 
 +
-Sua licença precisa estar disponível no Console antes que você possa usá-la com o Cloud Volumes ONTAP. Se necessário, você pode link:task-manage-capacity-licenses.html#how-licenses-are-added-to-netapp-console["adicione manualmente a licença ao Console"].
+Sua licença precisa estar disponível no Console antes que você possa usá-la com o Cloud Volumes ONTAP. Se necessário, você pode link:task-manage-capacity-licenses.html["adicione manualmente a licença ao Console"].
 
 . Na página *Systems*, selecione *Add System* e siga as etapas.
 +
@@ -169,7 +169,7 @@ Uma assinatura Keystone é um serviço baseado em assinatura com pagamento confo
 .Passos
 . Se você ainda não tem uma assinatura, https://www.netapp.com/forms/keystone-sales-contact/["entre em contato com a NetApp"^]
 . mailto:ng-keystone-success@netapp.com[Entre em contato com a NetApp] para autorizar sua conta de usuário no Console com uma ou mais assinaturas do Keystone .
-. Depois que a NetApp autorizar sua conta,link:task-manage-keystone.html#link-a-subscription["vincule suas assinaturas para uso com o Cloud Volumes ONTAP"] .
+. Após NetApp autorizar sua conta, link:task-manage-keystone.html["vincule suas assinaturas para uso com o Cloud Volumes ONTAP"].
 . Na página *Systems*, selecione *Add System* e siga as etapas.
 +
 .. Selecione o método de cobrança da Assinatura Keystone quando solicitado a escolher um método de cobrança.

@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: task-azure-prevent-freeze.html 
+keywords: Azure, maintenance event, HA, takeover, giveback, freeze, disruption 
+summary: Evite interrupções durante a manutenção do Azure, suprimindo o takeover automático e o giveback para um par de HA do Cloud Volumes ONTAP. 
+---
+= Evite interrupções durante a manutenção do Azure para os pares de HA do Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode configurar os pares de HA do Cloud Volumes ONTAP para suprimir o takeover automático e o giveback durante a manutenção programada do Azure. Esse recurso opcional está disponível com o Cloud Volumes ONTAP 9.19.1 e versões posteriores e está desativado por padrão.
+
+
+NOTE: Este recurso está disponível como uma prévia pública com o Cloud Volumes ONTAP 9.19.1.
+
+Microsoft Azure pode pausar brevemente uma VM durante a manutenção programada. Em uma configuração de HA do Cloud Volumes ONTAP, o ONTAP pode tratar a pausa como uma interrupção de nó e mover as operações de armazenamento para o nó parceiro e, em seguida, devolvê-las automaticamente quando a VM em pausa for retomada (takeover e giveback). Isso pode interromper conexões de cliente ativas. Se você ativar esse recurso, o par de HA continuará operando durante um congelamento de manutenção programada do Azure sem iniciar automaticamente o takeover e o giveback.
+
+.Sobre esta tarefa
+* A E/S do cliente pode ser interrompida durante o congelamento de uma VM do Azure. O ONTAP não inicia automaticamente o takeover, portanto a E/S do cliente permanece no nó afetado em vez de ser movida para o parceiro de HA. A E/S pode ser interrompida até que o nó volte a funcionar.
+* A duração de uma interrupção depende do congelamento da VM do Azure. Um congelamento mais longo pode resultar em uma interrupção de E/S mais prolongada.
+* A proteção de HA normal permanece ativa para outras condições de falha. O recurso suprime o takeover e o giveback apenas para congelamentos de manutenção agendada do Azure. Outras condições que normalmente acionam o takeover, como falha de um nó ou pânico, continuam a fazer isso.
+* Essa funcionalidade se aplica a ambos os nós em um par de HA. O comportamento de eventos de manutenção é configurado em ambos os nós e não pode ser ativado em apenas um deles.
+* O recurso persiste após reinicializações e permanece em vigor até que você o desative. Desativá-lo restaura o comportamento padrão de takeover e giveback durante a manutenção programada.
+
+
+.Antes de começar
+* Seu sistema Cloud Volumes ONTAP deve executar a versão 9.19.1 ou posterior.
+* Você precisa ter acesso de administrador ao Cloud Volumes ONTAP para concluir este procedimento.
+* Verifique se suas cargas de trabalho podem tolerar interrupções temporárias de E/S durante um congelamento de manutenção agendada do Azure e se continuar durante o congelamento é preferível à resposta padrão de takeover e giveback.
+
+
+
+
+[[prevent-automatic-takeover-and-giveback-during-azure-scheduled-maintenance]]
+== Impeça o takeover automático e o giveback durante a manutenção programada do Azure
+
+.Passos
+. Identifique o ID do sistema do par de HA do Azure. Para obter informações sobre como identificar recursos e fazer chamadas de API, consulte https://docs.netapp.com/us-en/console-automation/cm/your_api_call.html#step-1-select-the-identifie["Sua primeira chamada de API"^].
+. Envie uma `PUT` solicitação para o seguinte endpoint, substituindo `{id}` pelo ID do sistema:
++
+`PUT /occm/api/azure/ha/working-environments/{id}/opt-off-maintenance-event`
+
++
+Defina `enabled` como `true` no corpo da solicitação:
+
++
+[source, json]
+----
+{
+  "enabled": true
+}
+----
+
+
+.Resultado
+Uma solicitação bem-sucedida retorna HTTP 202 com um corpo vazio.
+
+
+IMPORTANT: A API atualiza os nós do par de HA sequencialmente. Se uma solicitação falhar antes da conclusão da operação, verifique as configurações em ambos os nós antes de tentar novamente a solicitação, pois os nós podem ter configurações diferentes.
+
+
+
+[[disable-the-feature-to-restore-default-behavior]]
+== Desative o recurso para restaurar o comportamento padrão
+
+Para restaurar o comportamento padrão de takeover e giveback durante a manutenção programada do Azure, desative o recurso.
+
+.Passos
+. Envie uma `PUT` solicitação para o mesmo endpoint, substituindo `{id}` pelo ID do sistema:
++
+`PUT /occm/api/azure/ha/working-environments/{id}/opt-off-maintenance-event`
+
++
+Defina `enabled` como `false` no corpo da solicitação:
+
++
+[source, json]
+----
+{
+  "enabled": false
+}
+----
+
