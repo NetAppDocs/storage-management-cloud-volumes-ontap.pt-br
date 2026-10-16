@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-quick-deploy-gcp.html 
 keywords: google cloud quick deploy, quick deploy, GCP, single screen deployment Google Cloud, SAZ, MAZ, single node, HA pair 
-summary: Você pode implantar instâncias do Cloud Volumes ONTAP em uma configuração de sistema único ou como um par de HA no Google Cloud rapidamente. 
+summary: Implante o Cloud Volumes ONTAP no Google Cloud como um sistema único ou um par de HA com Quick create. 
 ---
 = Implante o Cloud Volumes ONTAP com a criação rápida no Google Cloud
 :hardbreaks:
@@ -14,18 +14,18 @@ summary: Você pode implantar instâncias do Cloud Volumes ONTAP em uma configur
 
 
 [role="lead"]
-Você pode implantar Cloud Volumes ONTAP na Amazon Web Services (AWS), Microsoft Azure e Google Cloud usando `Quick create` para uma implantação mais rápida, tanto em configurações de nó único quanto de alta disponibilidade (HA). Esse processo simplificado reduz as etapas de implantação em comparação com o método avançado, definindo automaticamente os valores padrão em uma única página e minimizando a navegação.
+Você pode implantar o Cloud Volumes ONTAP na Amazon Web Services (AWS), no Microsoft Azure e no Google Cloud usando `Quick create` para uma implantação mais rápida em configurações de nó único e de alta disponibilidade (HA). Esse processo simplificado reduz as etapas de implantação em comparação com o método avançado ao definir automaticamente os valores padrão em uma única página e minimizar a navegação.
 
 .Antes de começar
-Antes de começar, certifique-se de ter o seguinte:
+Certifique-se de ter:
 
-. Um agente de Console que esteja em execução e associado ao seu projeto ou espaço de trabalho. Lembre-se de que o agente de Console precisa estar sempre em execução. Para obter mais informações, consulte:
+. Um agente do Console que esteja em execução e associado ao seu projeto ou espaço de trabalho. O agente do Console deve estar sempre em execução. Para obter mais informações, consulte:
 +
 ** https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html["Saiba mais sobre os agentes do NetApp Console"^]
 ** https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["Escolha um método de implantação do agente do console"^]
 
 
-. É necessário compreender a configuração que deseja utilizar. Antes de começar, escolha uma configuração e obtenha informações de rede com o seu administrador. Para mais informações, consulte:
+. Entenda a configuração que você deseja usar. Escolha uma configuração e obtenha informações de rede com seu administrador. Para informações, consulte:
 +
 [role="tabbed-block"]
 ====
@@ -122,7 +122,7 @@ image:screenshot-quick-start-gcp.png["width=500,alt=\"Criação Rápida do Googl
 . *Credenciais do ONTAP*: Estas são as credenciais da conta de administrador do cluster Cloud Volumes ONTAP. Você pode usar essas credenciais para se conectar ao Cloud Volumes ONTAP por meio do ONTAP System Manager ou da ONTAP CLI. Você pode manter o nome de usuário padrão _admin_ ou alterá-lo para um nome de usuário personalizado.
 
 
-Para o Google Cloud, se você planeja usar link:concept-data-tiering.html["hierarquização de dados"] ou  https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] com Cloud Volumes ONTAP, então você precisa habilitar a *Conta de Serviço* e selecionar uma conta de serviço que tenha a função predefinida de Storage Admin. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^]. A conta de serviço associada ao agente do Console  https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["deve ter as permissões necessárias"^].
+Para o _Google Cloud_, se você planeja usar link:concept-data-tiering.html["hierarquização de dados"] ou https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] com o Cloud Volumes ONTAP, será necessário habilitar *Service Account* e selecionar uma conta de serviço que tenha a função predefinida de Storage Admin. link:task-creating-gcp-service-account.html["Aprenda a criar uma conta de serviço"^]. A conta de serviço associada ao agente do Console https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["deve ter as permissões necessárias"^].
 
 . *Etiquetas/Rótulos*: As etiquetas são os metadados dos seus recursos da AWS ou Azure. O Console adiciona as etiquetas à instância do Cloud Volumes ONTAP e a cada recurso associado à instância. Você pode adicionar até 15 etiquetas na interface de usuário ao criar um sistema Cloud Volumes ONTAP e, em seguida, adicionar mais depois que ele for criado. Para obter mais informações, consulte:
 +
@@ -147,18 +147,18 @@ https://docs.cloud.google.com/storage/docs/tags-and-labels["Documentação do Go
 
 
 .Implantação e configuração
-. *Tipo de implantação/topologia*: Selecione o tipo de implantação que deseja usar, nó único, alta disponibilidade (HA) em uma única zona de disponibilidade (AZ) ou HA em várias AZs.
+. *Tipo de implantação/topologia*: selecione o tipo de implantação que você deseja usar: nó único, alta disponibilidade (HA) em uma única zona de disponibilidade (AZ) ou HA em várias AZs.
 . *Configuração de rede*: Insira as informações de rede que você registrou na planilha de planejamento para regiões, VNets e sub-redes.
 +
 .. *Região*: Por padrão, a região da conta de nuvem associada aos recursos é selecionada.
-.. *Zona de disponibilidade*: Você pode selecionar a zona de disponibilidade com base no tipo de implantação escolhido e se a região selecionada oferece suporte à zona de disponibilidade.
+.. *Zona de disponibilidade*: você pode selecionar a zona de disponibilidade com base no tipo de implantação escolhido e se a região selecionada oferece suporte à sua zona.
 .. *Sub-rede*: selecione uma sub-rede para a região.
 +
 [role="tabbed-block"]
 ====
 .Para AWS
 --
-*VPC*: Para AWS, insira uma rede Amazon Virtual Private Cloud (VPC) para a região com uma sub-rede conforme sua implantação planejada.
+*VPC*: Para AWS, insira uma rede Amazon Virtual Private Cloud (VPC) para a região com uma sub-rede de acordo com sua implantação planejada.
 
 .Alta disponibilidade da AWS
 Se você selecionou uma configuração de alta disponibilidade (HA), insira as seguintes informações:
@@ -171,7 +171,7 @@ Se você selecionou uma configuração de alta disponibilidade (HA), insira as s
 ... *Zonas de disponibilidade e mediador*: selecione as zonas de disponibilidade (AZs) para cada nó, o mediador e as sub-redes correspondentes onde você deseja implantar o par Cloud Volumes ONTAP HA.
 ... *IPs flutuantes*: Se você selecionou várias AZs, especifique os endereços IP flutuantes para os serviços NFS e CIFS e para o gerenciamento do cluster e da SVM. Os endereços IP devem estar fora do bloco CIDR de todas as VPCs na região. Para obter mais detalhes, consulte link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["Requisitos de rede da AWS para Cloud Volumes ONTAP HA em várias AZs"^].
 ... *Acesso do mediador*: especifique as informações de acesso do mediador.  O mediador é uma instância separada que monitora a integridade do par HA e fornece quorum em caso de falha.  Forneça o nome do par de chaves para permitir que a instância do mediador se conecte ao serviço AWS EC2 e selecione o método de conexão.
-... *Tabelas de rotas*: se você escolher várias zonas de disponibilidade, selecione as tabelas de rotas que incluem rotas para os endereços IP flutuantes.  Se você tiver mais de uma tabela de rotas, é importante selecionar as tabelas de rotas corretas.  Caso contrário, alguns clientes podem não ter acesso ao par Cloud Volumes ONTAP HA.  Para obter mais informações sobre tabelas de rotas, consulte o http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["Documentação da AWS: Tabelas de rotas"^] .
+... *Tabelas de roteamento*: se você escolheu várias Zonas de Disponibilidade (AZs), selecione as tabelas de roteamento que incluem rotas para os endereços IP flutuantes. Se você tiver mais de uma tabela de roteamento, certifique-se de selecionar as tabelas de roteamento corretas. Caso contrário, alguns clientes podem não ter acesso ao par de HA do Cloud Volumes ONTAP. Para obter mais informações sobre tabelas de roteamento, consulte a http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["Documentação da AWS: Tabelas de rotas"^].
 
 
 .Cobrança e Serviços
@@ -185,7 +185,7 @@ Se você selecionou uma configuração de alta disponibilidade (HA), insira as s
 --
 .Para o Google Cloud
 --
-*VPC e sub-rede*: Para o Google Cloud, insira uma rede Google Virtual Private Cloud (VPC) para a região e uma sub-rede conforme seu plano de implantação.
+*VPC e sub-rede*: Para o Google Cloud, insira uma rede Google Virtual Private Cloud (VPC) para a região e uma sub-rede de acordo com a sua implantação planejada.
 
 .HA em AZ única ou em múltiplas AZs
 Se você selecionou uma configuração de HA, insira as seguintes informações: *Zona para os nós 1 e 2 e o mediador*: Adicione as zonas para os dois nós e o mediador. *Conectividade* Selecione quatro VPCs diferentes para a configuração de HA e uma sub-rede em cada VPC. Para mais informações sobre VPC-1, VPC-2 e VPC-3, consulte link:reference-networking-gcp.html#requirements-specific-to-single-node-systems["Regras para VPC-1, VPC-2 e VPC-3"].
@@ -201,14 +201,14 @@ NOTE: Cloud Volumes ONTAP 9.19.1 e versões posteriores oferecem suporte a link:
 
 .Cobrança e Serviços
 . *Licença*: Selecione o tipo de licença que deseja usar com este Cloud Volumes ONTAP. Você pode escolher entre as licenças Professional, Essentials e Freemium. Para obter informações sobre as diferentes licenças, consulte link:concept-licensing.html["Saiba mais sobre as licenças do Cloud Volumes ONTAP"^].
-. *Serviços e recursos de dados*: mantenha os serviços ativados ou desative os serviços que você não deseja usar com o Cloud Volumes ONTAP. No _Google Cloud_, para selecionar Backup e Recuperação ou usar o NetApp Cloud Tiering, você precisa ter especificado a Service Account.
+. *Serviços e recursos de dados*: mantenha os serviços ativados ou desative os serviços que você não quer usar com Cloud Volumes ONTAP. No _Google Cloud_, para selecionar Backup and Recovery ou usar o NetApp Cloud Tiering, você deve especificar a conta de serviço.
 +
 ** https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Saiba mais sobre a classificação da NetApp"^]
 ** https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Saiba mais sobre o NetApp Backup and Recovery"^]
 ** link:concept-worm.html["Saiba mais sobre o armazenamento WORM no Cloud Volumes ONTAP"]
 +
 
-TIP: Se você quiser utilizar WORM e camadas de dados, desabilite o Backup e Recuperação e implante um sistema Cloud Volumes ONTAP com versão 9.8 ou superior.
+TIP: Se você quiser usar o WORM e o armazenamento em camadas de dados, deverá desativar o Backup and Recovery e implantar um sistema Cloud Volumes ONTAP com a versão 9.8 ou posterior.
 
 
 
@@ -218,7 +218,7 @@ TIP: Se você quiser utilizar WORM e camadas de dados, desabilite o Backup e Rec
 
 No Azure, a seção *Visão geral* exibe os recursos que serão alocados quando o processo de implantação for concluído.
 
-Na _AWS_, imediatamente após você criar o sistema Cloud Volumes ONTAP, o NetApp Console inicia uma instância de teste na VPC especificada para verificar a conectividade. Se bem-sucedido, o Console termina imediatamente a instância e então inicia a implantação do sistema. Se o Console não conseguir verificar a conectividade, a criação do sistema falhará. A instância de teste é uma `t2.nano` (para locação de VPC padrão) ou uma `m3.medium` (para locação de VPC dedicada).
+Na AWS, imediatamente após você criar o sistema Cloud Volumes ONTAP, o NetApp Console inicia uma instância de teste na VPC especificada para verificar a conectividade. Se o teste for bem-sucedido, o Console encerra imediatamente a instância e começa a implantar o sistema. Se o Console não conseguir verificar a conectividade, a criação do sistema falhará. A instância de teste é uma `t2.nano` (para locação padrão de VPC) ou uma `m3.medium` (para locação dedicada de VPC).
 
 .Depois que você terminar
 O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o progresso na página Auditoria.
@@ -226,7 +226,7 @@ O Console implanta o sistema Cloud Volumes ONTAP .  Você pode acompanhar o prog
 Se você encontrar algum problema ao implantar o sistema Cloud Volumes ONTAP, revise a mensagem de falha. Você também pode selecionar *Recriar ambiente* no sistema para continuar com a implantação usando o assistente de modo  `Advanced`.
 
 
-CAUTION: Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal da AWS ou Azure, especialmente as tags do sistema. Quaisquer alterações feitas nessas configurações podem levar a comportamentos inesperados ou perda de dados.
+CAUTION: Após a conclusão do processo de implantação, não modifique as configurações do Cloud Volumes ONTAP geradas pelo sistema no portal de nuvem da AWS ou do Azure, especialmente as tags do sistema. Alterações nessas configurações podem levar a comportamento inesperado ou perda de dados.
 
 .Links relacionados
 * link:task-planning-your-config-gcp.html["Planejando sua configuração do Cloud Volumes ONTAP"]

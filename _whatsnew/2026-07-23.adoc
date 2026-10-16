@@ -10,7 +10,7 @@
 Agora você pode implantar Cloud Volumes ONTAP 9.12.1 GA e versões posteriores na região Chile Central (chilecentral) do Azure. Os seguintes tipos de implantação são compatíveis:
 
 * Nó único
-* Alta disponibilidade (HA) em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)
+* HA em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)
 * Alta disponibilidade em múltiplas zonas de disponibilidade usando armazenamento com redundância de zona (ZRS)
 
 

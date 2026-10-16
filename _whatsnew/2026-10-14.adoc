@@ -20,7 +20,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-new.html["C
 
 A partir do Cloud Volumes ONTAP 9.19.1 GA, a criptografia no host do Azure é habilitada por padrão para novas implantações do Azure de nó único e de alta disponibilidade (HA) que atendam aos pré-requisitos. Esse recurso criptografa os dados no servidor físico que hospeda a VM, incluindo o disco efêmero e os caches associados no nível do host, à medida que os dados são gravados no host e lidos dele.
 
-Antes de implantar o Cloud Volumes ONTAP no Azure, certifique-se de que os seguintes pré-requisitos sejam atendidos:
+Antes de implantar o Cloud Volumes ONTAP no Azure, confirme se seu ambiente atende aos seguintes pré-requisitos:
 
 * O  `EncryptionAtHost`recurso está registrado para sua assinatura do Azure. Consulte https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli["Documentação da Microsoft: habilitar criptografia no host"^].
 * O tipo de instância de VM selecionado oferece suporte à criptografia no host na sua região do Azure. Consulte https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli#finding-supported-vm-sizes["Documentação da Microsoft: encontrando tamanhos de VM compatíveis"^].

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-saz-feature.html 
 keywords: Microsoft Azure feature, HA in SAZ, single availability zone, Azure feature, Virtual Machine Scale Sets in Flexible mode, VMOrchestratorZonalMultiFD, VM Orchestrator, Zonal, MultiFD, VMOrchestratorZonalMultiFD feature 
-summary: Habilite este recurso do Microsoft Azure para implantar HA no SAZ. 
+summary: Habilite o recurso VMOrchestratorZonalMultiFD no Azure para implantar nós de HA do Cloud Volumes ONTAP em domínios de falha separados de uma única zona de disponibilidade. 
 ---
 = Habilitar VMOrchestratorZonalMultiFD para Cloud Volumes ONTAP no Azure
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: Habilite este recurso do Microsoft Azure para implantar HA no SAZ.
 
 
 [role="lead"]
-Para implantar instâncias de VM em zonas de disponibilidade única (AZ) de armazenamento localmente redundante (LRS), você deve ativar o Microsoft `Microsoft.Compute/VMOrchestratorZonalMultiFD` recurso para suas assinaturas.  Em um modo de alta disponibilidade (HA), esse recurso facilita a implantação de nós em domínios de falhas separados na mesma zona de disponibilidade.
+Para implantar instâncias de VM do Cloud Volumes ONTAP em zonas de disponibilidade (AZ) únicas com armazenamento com redundância local (LRS) no Azure, ative o recurso Microsoft `Microsoft.Compute/VMOrchestratorZonalMultiFD` para suas assinaturas. No modo de alta disponibilidade (HA), esse recurso permite implantar nós em domínios de falha separados na mesma zona de disponibilidade.
 
 A menos que você ative esse recurso, a implantação zonal não ocorrerá, e a implantação não zonal anterior do LRS entrará em vigor.
 
-Para obter informações sobre a implantação de VM em uma única zona de disponibilidade, consultelink:concept-ha-azure.html["Pares de alta disponibilidade no Azure"] .
+Para obter informações sobre a implantação de VMs em uma única zona de disponibilidade, consulte link:concept-ha-azure.html["Pares de alta disponibilidade no Azure"].
 
 Execute estas etapas como um usuário com privilégios de "Proprietário":
 
@@ -31,7 +31,7 @@ Execute estas etapas como um usuário com privilégios de "Proprietário":
 az account set -s _<Nome_ou_ID_da_assinatura_do_Azure>_ az feature register --name VMOrchestratorZonalMultiFD --namespace Microsoft.Compute
 
 ====
-. Verifique o status do registro e a amostra de saída:
+. Verifique o status do registro executando este comando, que retorna uma saída semelhante a este exemplo:
 +
 []
 ====

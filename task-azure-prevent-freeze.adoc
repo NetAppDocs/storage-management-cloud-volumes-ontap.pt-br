@@ -19,13 +19,13 @@ Você pode configurar os pares de HA do Cloud Volumes ONTAP para suprimir o take
 
 NOTE: Este recurso está disponível como uma prévia pública com o Cloud Volumes ONTAP 9.19.1.
 
-Microsoft Azure pode pausar brevemente uma VM durante a manutenção programada. Em uma configuração de HA do Cloud Volumes ONTAP, o ONTAP pode tratar a pausa como uma interrupção de nó e mover as operações de armazenamento para o nó parceiro e, em seguida, devolvê-las automaticamente quando a VM em pausa for retomada (takeover e giveback). Isso pode interromper conexões de cliente ativas. Se você ativar esse recurso, o par de HA continuará operando durante um congelamento de manutenção programada do Azure sem iniciar automaticamente o takeover e o giveback.
+O Microsoft Azure pode pausar brevemente uma VM durante a manutenção programada. Em uma configuração de HA do Cloud Volumes ONTAP, o ONTAP pode tratar a pausa como uma interrupção do nó e mover as operações de armazenamento para o nó parceiro (takeover). O ONTAP então devolve automaticamente as operações quando a VM pausada é retomada (giveback). Esse comportamento pode interromper as conexões ativas de clientes. Se você habilitar esse recurso, o par de HA continuará operando durante um congelamento de manutenção programada do Azure sem iniciar automaticamente o takeover e o giveback.
 
 .Sobre esta tarefa
 * A E/S do cliente pode ser interrompida durante o congelamento de uma VM do Azure. O ONTAP não inicia automaticamente o takeover, portanto a E/S do cliente permanece no nó afetado em vez de ser movida para o parceiro de HA. A E/S pode ser interrompida até que o nó volte a funcionar.
 * A duração de uma interrupção depende do congelamento da VM do Azure. Um congelamento mais longo pode resultar em uma interrupção de E/S mais prolongada.
-* A proteção de HA normal permanece ativa para outras condições de falha. O recurso suprime o takeover e o giveback apenas para congelamentos de manutenção agendada do Azure. Outras condições que normalmente acionam o takeover, como falha de um nó ou pânico, continuam a fazer isso.
-* Essa funcionalidade se aplica a ambos os nós em um par de HA. O comportamento de eventos de manutenção é configurado em ambos os nós e não pode ser ativado em apenas um deles.
+* A proteção normal de HA permanece ativa para outras condições de falha. O recurso suprime takeover e giveback somente durante congelamentos de manutenção agendada do Azure. Outras condições que normalmente acionam takeover, como falha de um nó ou pânico, continuam a fazê-lo.
+* O recurso se aplica a ambos os nós em um par de HA. O comportamento de eventos de manutenção é configurado em ambos os nós e não pode ser ativado em apenas um deles.
 * O recurso persiste após reinicializações e permanece em vigor até que você o desative. Desativá-lo restaura o comportamento padrão de takeover e giveback durante a manutenção programada.
 
 

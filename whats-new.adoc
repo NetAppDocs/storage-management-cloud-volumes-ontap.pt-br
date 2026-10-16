@@ -41,7 +41,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-new.html["C
 
 A partir do Cloud Volumes ONTAP 9.19.1 GA, a criptografia no host do Azure é habilitada por padrão para novas implantações do Azure de nó único e de alta disponibilidade (HA) que atendam aos pré-requisitos. Esse recurso criptografa os dados no servidor físico que hospeda a VM, incluindo o disco efêmero e os caches associados no nível do host, à medida que os dados são gravados no host e lidos dele.
 
-Antes de implantar o Cloud Volumes ONTAP no Azure, certifique-se de que os seguintes pré-requisitos sejam atendidos:
+Antes de implantar o Cloud Volumes ONTAP no Azure, confirme se seu ambiente atende aos seguintes pré-requisitos:
 
 * O  `EncryptionAtHost`recurso está registrado para sua assinatura do Azure. Consulte https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli["Documentação da Microsoft: habilitar criptografia no host"^].
 * O tipo de instância de VM selecionado oferece suporte à criptografia no host na sua região do Azure. Consulte https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli#finding-supported-vm-sizes["Documentação da Microsoft: encontrando tamanhos de VM compatíveis"^].
@@ -136,7 +136,7 @@ Para obter mais informações, consulte a documentação do Azure:
 Agora você pode implantar o Cloud Volumes ONTAP 9.12.1 GA e versões posteriores nas regiões Austria East (austriaeast) e Belgium Central (belgiumcentral) no Azure. Os seguintes tipos de implantação são compatíveis:
 
 * Nó único
-* Alta disponibilidade (HA) em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)
+* HA em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)
 * Alta disponibilidade em múltiplas zonas de disponibilidade usando armazenamento com redundância de zona (ZRS)
 
 
@@ -216,7 +216,7 @@ Se você quiser incluir uma configuração descartada posteriormente, poderá re
 Agora você pode implantar Cloud Volumes ONTAP 9.12.1 GA e versões posteriores na região Chile Central (chilecentral) do Azure. Os seguintes tipos de implantação são compatíveis:
 
 * Nó único
-* Alta disponibilidade (HA) em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)
+* HA em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)
 * Alta disponibilidade em múltiplas zonas de disponibilidade usando armazenamento com redundância de zona (ZRS)
 
 
@@ -526,16 +526,16 @@ https://docs.netapp.com/us-en/console-automation/cvo/put-occm-config.html["Confi
 [[support-for-google-infrastructure-manager-for-private-mode-deployments]]
 === Suporte para o Google Infrastructure Manager em implantações no modo privado
 
-O Cloud Volumes ONTAP 9.16.1 e versões posteriores agora oferecem suporte ao  https://docs.cloud.google.com/infrastructure-manager/docs/overview["Google Cloud Infrastructure Manager"^] (IM) em vez do  https://docs.cloud.google.com/deployment-manager/docs/deprecations["Cloud Deployment Manager"^] (DM) para novas implantações em modo privado no Google Cloud. O Google descontinuará o Deployment Manager como serviço de infraestrutura em breve para o mais avançado Infrastructure Manager.
+O Cloud Volumes ONTAP 9.16.1 e versões posteriores agora oferecem suporte ao  https://docs.cloud.google.com/infrastructure-manager/docs/overview["Google Cloud Infrastructure Manager"^]Infrastructure Manager (IM) em vez do  https://docs.cloud.google.com/deployment-manager/docs/deprecations["Cloud Deployment Manager"^]Deployment Manager (DM) para novas implantações em modo privado no Google Cloud. O Google está descontinuando o Deployment Manager como um serviço de infraestrutura em favor do Infrastructure Manager, que é mais avançado.
 
-A partir de 25 de fevereiro de 2026, o Cloud Volumes ONTAP utiliza o Infrastructure Manager para novas e existentes implantações em modo privado. Esta tabela explica os fluxos de trabalho básicos para você:
+A partir de 25 de fevereiro de 2026, o Cloud Volumes ONTAP utiliza o Infrastructure Manager para implantações novas e existentes em modo privado. O fluxo de trabalho básico depende do seu cenário:
 
 [cols="1,4,1,1,1,1"]
 |===
 | Cenário | Ação | Novas APIs para o agente | Novas permissões para o agente | Novas APIs do Google Cloud para Cloud Volumes ONTAP | Recursos de documentação 
 
 
-| Agente existente e implantação existente em modo privado | Atualize para a versão mais recente do agente do NetApp Console baixando o instalador do site de suporte da NetApp e, em seguida, instalando manualmente o agente em seu host, para que ele possa usar as APIs do Infrastructure Manager. Depois disso, converta os sistemas Cloud Volumes ONTAP existentes para usar o Infrastructure Manager.  a| 
+| Agente existente e implantação existente em modo privado | Atualize para a versão mais recente do agente do Console baixando o instalador do site de suporte da NetApp e, em seguida, instalando manualmente o agente no seu host, para que ele possa usar as APIs do Infrastructure Manager. Em seguida, converta os sistemas Cloud Volumes ONTAP existentes para usar o Infrastructure Manager.  a| 
 * API do Cloud Infrastructure Manager
 * API Cloud Quotas
 * API do Cloud Build
@@ -562,7 +562,7 @@ Todas as permissões listadas para a versão Console em:
 
 
 |===
-Em implantações em modo privado, você precisa fazer algumas alterações de configuração no Cloud Volumes ONTAP para começar a usar o Infrastructure Manager. Consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuração do Infrastructure Manager em modo privado ou ambientes protegidos"^].
+Em implantações em modo privado, você precisa fazer algumas alterações de configuração no Cloud Volumes ONTAP para começar a usar o Infrastructure Manager. Consulte https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuração do Infrastructure Manager em modo privado ou ambientes protegidos"^].
 
 .Links relacionados
 * https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#console-agent-4-2-0["NetApp Console Agent 4.2.0 Notas de versão"^]
@@ -1267,14 +1267,14 @@ Para obter uma lista de todas as regiões, consulte a  https://www.netapp.com/cl
 
 O BlueXP agora pode implantar e gerenciar a versão de Disponibilidade Geral do Cloud Volumes ONTAP 9.15.1 na AWS, Azure e Google Cloud.
 
-Esta versão inclui os seguintes recursos e melhorias para o Azure. Continue lendo para saber mais sobre as configurações específicas que dão suporte a esses novos recursos.
+Esta versão inclui os seguintes recursos e melhorias para o Azure.
 
 
 
 [[support-for-premium-ssd-v2-managed-disks-in-azure]]
 === Suporte para discos gerenciados Premium SSD v2 no Azure
 
-Os discos gerenciados Premium SSD v2 agora são compatíveis com Cloud Volumes ONTAP no Azure. Esses discos premium oferecem maior desempenho com menor latência a um custo menor, tanto para nós únicos quanto para pares de HA, em comparação com os discos gerenciados Premium SSD. Assim como outros discos gerenciados, o tamanho máximo do disco é de 32 TiB. O desempenho (capacidade, taxa de transferência e IOPS) de um disco gerenciado Premium SSD v2 pode ser configurado, permitindo que as cargas de trabalho sejam econômicas e atendam às necessidades de desempenho em constante mudança.
+Os discos gerenciados Premium SSD v2 agora são compatíveis com os sistemas Cloud Volumes ONTAP no Azure. Esses discos premium oferecem maior desempenho com menor latência e a um custo menor, tanto para nós únicos quanto para pares de alta disponibilidade (HA), em comparação com os discos gerenciados Premium SSD. Assim como outros discos gerenciados, o tamanho máximo do disco é de 32 TiB. Você pode configurar o desempenho (capacidade, taxa de transferência e IOPS) dos discos gerenciados Premium SSD v2 para manter as cargas de trabalho com bom custo-benefício e atender às necessidades de desempenho em constante mudança.
 
 
 
@@ -1284,18 +1284,18 @@ Os discos gerenciados Premium SSD v2 agora são compatíveis com Cloud Volumes O
 A partir do Cloud Volumes ONTAP 9.15.1, você pode implantar instâncias de máquina virtual (VM) no modo de HA em zonas de disponibilidade (AZs) únicas no Azure. Ao contrário das implantações não zonais anteriores, o Cloud Volumes ONTAP 9.15.1 usa Microsoft Virtual Machines Scale Sets no modo de orquestração Flexível para implantar todos os recursos, incluindo domínios de falha separados dentro da mesma AZ, garantindo disponibilidade ideal. Esse modo de implantação, por padrão, usa Discos Gerenciados SSD v2 Premium quando as seguintes condições são atendidas:
 
 * A versão do Cloud Volumes ONTAP é 9.15.1 ou posterior.
-* A região e a zona selecionadas são compatíveis com discos gerenciados Premium SSD v2. Para obter informações sobre as regiões compatíveis, consulte  https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Site do Microsoft Azure: Produtos disponíveis por região"^]. Para saber como adicioná-las, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html#launching-a-cloud-volumes-ontap-ha-pair-in-azure["Implementando um par de HA do Cloud Volumes ONTAP no Azure"^].
+* A região e a zona selecionadas oferecem suporte aos Premium SSD v2 Managed Disks. Para obter informações sobre as regiões compatíveis, consulte  https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Site do Microsoft Azure: Produtos disponíveis por região"^]. Para saber como adicioná-los, consulte  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html#launching-a-cloud-volumes-ontap-ha-pair-in-azure["Implementando um par de HA do Cloud Volumes ONTAP no Azure"^].
 * A assinatura está registrada para o recurso da Microsoft `Microsoft.Compute/VMOrchestratorZonalMultiFD`. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-saz-feature.html["Aprenda como habilitar o VMOrchestratorZonalMultiFD para zonas de disponibilidade únicas"^].
 
 
-Caso algum desses critérios não seja atendido, o modo de operação de implantação não zonal anterior para armazenamento com redundância local (LRS) entra em vigor.
+Caso algum desses critérios não seja atendido, aplica-se o modo de implantação não zonal anterior para armazenamento localmente redundante (LRS).
 
 
 
 [[support-for-virtual-machines-scale-sets-to-unify-all-azure-ha-types]]
 === Suporte para conjuntos de dimensionamento de máquinas virtuais para unificar todos os tipos de HA do Azure
 
-Cloud Volumes ONTAP 9.15.1 utiliza Virtual Machines Scale Sets no modo de orquestração Flexível no Azure para implantar instâncias de máquina virtual (VM) em zonas de disponibilidade únicas para pares de HA. Abrange todas as variantes do modo de HA: page blob, LRS, storage com redundância de zona (ZRS) ou multizonal, e LRS zonal (zona de disponibilidade única).
+O Cloud Volumes ONTAP 9.15.1 usa o Virtual Machines Scale Sets no modo de orquestração Flexible no Azure para implantar instâncias de máquina virtual (VM) em zonas de disponibilidade únicas para pares de HA. Esse suporte abrange todos os tipos de HA: page blob, LRS, armazenamento com redundância de zona (ZRS) ou multizonal e LRS zonal (AZ única).
 
 * https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentação do Microsoft Azure: documentação sobre Conjuntos de Dimensionamento de Máquinas Virtuais"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-ha-azure.html["Saiba mais sobre pares de alta disponibilidade no Azure"^].
@@ -1322,7 +1322,7 @@ Para obter informações sobre como BlueXP gerencia volumes FlexCache, consulte 
 [[edge-cache-licensing-packages-deprecated]]
 === Pacotes de licenciamento do Edge Cache obsoletos
 
-Os pacotes de licenciamento baseados na capacidade do Edge Cache não estarão mais disponíveis para futuras implantações do Cloud Volumes ONTAP.  No entanto, você pode usar a API para aproveitar essa funcionalidade.
+Os pacotes de licenciamento do Edge Cache baseados em capacidade não estarão mais disponíveis para futuras implementações do Cloud Volumes ONTAP. No entanto, você pode usar a API para acessar essa funcionalidade.
 
 
 
@@ -1338,7 +1338,7 @@ Para configurações suportadas, consulte  https://docs.netapp.com/us-en/cloud-v
 [[free-trials-for-marketplace-subscriptions-deprecated]]
 === Testes gratuitos para assinaturas do marketplace foram descontinuados
 
-A licença de avaliação ou teste gratuito automático de 30 dias para assinaturas pagas conforme o uso no mercado do provedor de nuvem não estará mais disponível no Cloud Volumes ONTAP.  A cobrança por qualquer tipo de assinatura do marketplace (PAYGO ou contrato anual) será ativada a partir do primeiro uso, sem período de teste gratuito.
+O teste gratuito automático de 30 dias ou a licença de avaliação para assinaturas de pagamento conforme o uso no marketplace do provedor de nuvem não estarão mais disponíveis no Cloud Volumes ONTAP. A cobrança de qualquer tipo de assinatura do marketplace (PAYGO ou contrato anual) começa no primeiro uso, sem nenhum período de teste gratuito.
 
 
 
@@ -1416,10 +1416,10 @@ Você não pode mais criar um volume a partir de um modelo ou editar as tags de 
 
 
 
-[[amazon-instant-metadata-service-v2-support]]
-=== Suporte ao Amazon Instant Metadata Service v2
+[[amazon-instance-metadata-service-v2-support]]
+=== Suporte ao Amazon Instance Metadata Service v2
 
-Na AWS, o Cloud Volumes ONTAP, o Mediator e o Connector agora oferecem suporte ao Amazon Instant Metadata Service v2 (IMDSv2) para todas as funções.  O IMDSv2 oferece proteção aprimorada contra vulnerabilidades.  Anteriormente, apenas o IMDSv1 era suportado.
+Na AWS, o Cloud Volumes ONTAP, o Mediator e o Connector agora oferecem suporte ao Amazon Instance Metadata Service v2 (IMDSv2) para todas as funções. O IMDSv2 oferece proteção aprimorada contra vulnerabilidades. Anteriormente, apenas o IMDSv1 era compatível.
 
 Se exigido pelas suas políticas de segurança, você pode configurar suas instâncias EC2 para usar o IMDSv2. Para obter instruções, consulte  https://docs.netapp.com/us-en/console-setup-admin/task-require-imdsv2.html["Documentação de configuração e administração do BlueXP para gerenciar conectores existentes"^].
 
@@ -1532,14 +1532,14 @@ As seguintes alterações foram introduzidas.
 === Suporte a novas regiões no Azure
 
 .Suporte de região de zona de disponibilidade única
-As seguintes regiões agora oferecem suporte a implantações de zona de disponibilidade única de alta disponibilidade no Azure para o Cloud Volumes ONTAP 9.12.1 GA e posteriores:
+As seguintes regiões agora oferecem suporte a implantações de zona de disponibilidade única de alta disponibilidade no Azure para Cloud Volumes ONTAP 9.12.1 GA e versões posteriores:
 
 * Tel Aviv
 * Milão
 
 
 .Suporte a várias regiões de zona de disponibilidade
-As seguintes regiões agora oferecem suporte a implantações de múltiplas zonas de disponibilidade de alta disponibilidade no Azure para o Cloud Volumes ONTAP 9.12.1 GA e posteriores:
+As seguintes regiões agora oferecem suporte a implantações de alta disponibilidade em várias zonas de disponibilidade no Azure para o Cloud Volumes ONTAP 9.12.1 GA e versões posteriores:
 
 * Índia Central
 * Noruega Oriental
@@ -1610,7 +1610,7 @@ A seguinte alteração foi introduzida com a versão 3.9.34 do Connector.
 [[new-regions-supported-for-ha-multiple-availability-zone-deployments-in-azure]]
 === Novas regiões com suporte para implantações de várias zonas de disponibilidade de HA no Azure
 
-As seguintes regiões no Azure agora oferecem suporte a implantações de múltiplas zonas de disponibilidade de alta disponibilidade para o Cloud Volumes ONTAP 9.12.1 GA e posteriores:
+As seguintes regiões no Azure agora oferecem suporte a implantações de alta disponibilidade em várias zonas de disponibilidade para o Cloud Volumes ONTAP 9.12.1 GA e versões posteriores:
 
 * Austrália Oriental
 * Leste Asiático
@@ -1685,12 +1685,12 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploy
 [[usage-reports-enhancements]]
 === Melhorias nos relatórios de uso
 
-Várias melhorias nas informações exibidas nos relatórios de uso agora estão disponíveis.  A seguir estão as melhorias nos relatórios de uso:
+Diversas melhorias nas informações exibidas nos relatórios de uso já estão disponíveis. Os relatórios de uso incluem os seguintes aprimoramentos:
 
 * A unidade TiB agora está incluída no nome das colunas.
 * Um novo campo "nó(s)" para números de série agora está incluído.
 * Uma nova coluna “Tipo de carga de trabalho” agora está incluída no relatório de uso de VMs de armazenamento.
-* Nomes de ambientes de trabalho agora incluídos em VMs de armazenamento e relatórios de uso de volume.
+* Os nomes dos ambientes de trabalho agora estão incluídos nos relatórios de uso de VMs de storage e volumes.
 * O tipo de volume “arquivo” agora é rotulado como “Primário (Leitura/Gravação)”.
 * O tipo de volume “secundário” agora é rotulado como “Secundário (DP)”.
 
@@ -1725,7 +1725,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.31 do Connector.
 [[support-for-ha-multiple-availability-zone-deployments-in-azure]]
 === Suporte para implantações de várias zonas de disponibilidade de HA no Azure
 
-O Japan East e o Korea Central no Azure agora oferecem suporte a implantações de HA em várias zonas de disponibilidade para o Cloud Volumes ONTAP 9.12.1 GA e posteriores.
+As regiões Japan East e Korea Central no Azure agora oferecem suporte a implantações de HA em várias zonas de disponibilidade para o Cloud Volumes ONTAP 9.12.1 GA e versões posteriores.
 
 Para obter uma lista de todas as regiões que suportam várias zonas de disponibilidade, consulte  https://www.netapp.com/cloud-volumes-ontap/supported-regions/["Mapa de regiões globais no Azure"^].
 
@@ -1877,7 +1877,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 [[support-for-comments-during-volume-creation]]
 === Suporte para comentários durante a criação do volume
 
-Esta versão permite que você faça comentários ao criar um volume FlexGroup ou FlexVol volume do Cloud Volumes ONTAP ao usar a API.
+Esta versão permite que você adicione comentários ao criar um volume FlexGroup ou um volume FlexVol do Cloud Volumes ONTAP usando a API.
 
 
 
@@ -2202,7 +2202,7 @@ O BlueXP agora configura automaticamente seus sistemas Cloud Volumes ONTAP para 
 
 O AutoSupport monitora proativamente a integridade do seu sistema e envia mensagens ao suporte técnico da NetApp .
 
-O único requisito é garantir que o grupo de segurança do conector permita conexões _de entrada_ pela porta 3128.  Você precisará abrir esta porta depois de implantar o Conector.
+O único requisito é garantir que o grupo de segurança do Connector permita conexões de entrada pela porta 3128. Você precisará abrir essa porta após implantar o Connector.
 
 
 
@@ -2250,7 +2250,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.20 do Connector.
 [[digital-wallet]]
 === Carteira Digital
 
-A Carteira Digital agora mostra a capacidade total consumida na sua conta e a capacidade consumida por pacote de licenciamento.  Isso pode ajudar você a entender como está sendo cobrado e se precisa comprar capacidade adicional.
+A Digital Wallet agora mostra a capacidade total consumida em sua conta e a capacidade consumida por pacote de licença. Essas informações podem ajudar você a entender como você está sendo cobrado e se precisa adquirir capacidade adicional.
 
 
 
@@ -2311,7 +2311,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes["Saiba mais sobr
 
 Se precisar executar o gerenciamento avançado do Cloud Volumes ONTAP, você pode fazer isso usando o ONTAP System Manager, que é uma interface de gerenciamento fornecida com um sistema ONTAP .  Incluímos a interface do Gerenciador de Sistema diretamente dentro do BlueXP para que você não precise sair do BlueXP para gerenciamento avançado.
 
-Esta Visualização Avançada está disponível como uma prévia com o Cloud Volumes ONTAP 9.10.0 e posteriores. Planejamos refinar essa experiência e adicionar melhorias em versões futuras. Envie-nos seu feedback usando o chat do produto.
+Esta visualização avançada está disponível como Preview com Cloud Volumes ONTAP 9.10.0 e versões posteriores. Envie seus comentários usando o chat integrado ao produto.
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-administer-advanced-view.html["Saiba mais sobre a Visualização Avançada"].
 
@@ -2501,7 +2501,7 @@ Você ainda pode se conectar ao System Manager inserindo o endereço IP de geren
 [[charging-for-worm-storage]]
 === Cobrança pelo armazenamento WORM
 
-Agora que a tarifa especial introdutória expirou, você será cobrado pelo uso do armazenamento WORM.  O carregamento é feito por hora, de acordo com a capacidade total provisionada de volumes WORM.  Isso se aplica a sistemas Cloud Volumes ONTAP novos e existentes.
+Agora que a tarifa promocional de lançamento expirou, você será cobrado pelo uso do armazenamento WORM. A cobrança é feita por hora, de acordo com a capacidade total provisionada dos volumes WORM. Isso se aplica a sistemas Cloud Volumes ONTAP novos e existentes.
 
 https://bluexp.netapp.com/pricing["Saiba mais sobre preços para armazenamento WORM"^] .
 
@@ -2577,7 +2577,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.15 do Connector.
 [[redesigned-licensing-selection]]
 === Seleção de licenciamento redesenhada
 
-Redesenhamos a tela de seleção de licenciamento ao criar um novo ambiente de trabalho do Cloud Volumes ONTAP .  As mudanças destacam os métodos de cobrança por capacidade que foram introduzidos em julho de 2021 e dão suporte às próximas ofertas por meio dos mercados de provedores de nuvem.
+Redesenhamos a tela de seleção de licenciamento ao criar um novo ambiente de trabalho do Cloud Volumes ONTAP. As alterações destacam os métodos de cobrança por capacidade introduzidos em julho de 2021 e as ofertas de suporte disponíveis nos marketplaces dos provedores de nuvem.
 
 
 
@@ -2669,7 +2669,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9101-relnotes["Saiba mais sobr
 
 Agora você pode usar as assinaturas Keystone para pagar por pares de Cloud Volumes ONTAP HA.
 
-Uma assinatura Keystone é um serviço baseado em assinatura de pagamento conforme o crescimento que oferece uma experiência de nuvem híbrida perfeita para aqueles que preferem modelos de consumo de OpEx ao CapEx inicial ou leasing.
+Uma Keystone Subscription é um serviço baseado em assinatura com pagamento conforme o crescimento, que oferece uma experiência de nuvem híbrida perfeita para clientes que preferem modelos de consumo OpEx em vez de CapEx antecipado ou leasing.
 
 Uma assinatura Keystone é compatível com todas as novas versões do Cloud Volumes ONTAP que você pode implantar do BlueXP.
 
@@ -2750,7 +2750,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.8 do Connector.
 
 Novos métodos de cobrança estão disponíveis para o Cloud Volumes ONTAP.
 
-* *BYOL baseado em capacidade*: uma licença baseada em capacidade permite que você pague pelo Cloud Volumes ONTAP por TiB de capacidade.  A licença está associada à sua conta NetApp e permite que você crie vários sistemas Cloud Volumes ONTAP , desde que haja capacidade suficiente disponível por meio da sua licença.  O licenciamento baseado em capacidade está disponível na forma de um pacote, _Essentials_ ou _Professional_.
+* *BYOL baseado em capacidade*: uma licença baseada em capacidade permite que você pague pelo Cloud Volumes ONTAP por TiB de capacidade. A licença está associada à sua conta NetApp e permite que você crie vários sistemas Cloud Volumes ONTAP, desde que haja capacidade suficiente disponível por meio da sua licença. O licenciamento baseado em capacidade está disponível na forma de um pacote, _Essentials_ ou _Professional_.
 * *Oferta Freemium*: O Freemium permite que você use todos os recursos do Cloud Volumes ONTAP gratuitamente da NetApp (as taxas do provedor de nuvem ainda se aplicam).  Você está limitado a 500 GiB de capacidade provisionada por sistema e não há contrato de suporte.  Você pode ter até 10 sistemas Freemium.
 +
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Saiba mais sobre essas opções de licenciamento"].
@@ -2883,7 +2883,7 @@ Ao criar um novo volume NFS, o BlueXP agora exibe políticas de exportação per
 [[deletion-of-old-cloud-snapshots]]
 === Exclusão de snapshots antigos da nuvem
 
-O BlueXP agora exclui snapshots de nuvem mais antigos de discos raiz e de inicialização que são criados quando um sistema Cloud Volumes ONTAP é implantado e sempre que ele é desligado.  Somente os dois instantâneos mais recentes são retidos para os volumes raiz e de inicialização.
+O BlueXP agora exclui snapshots mais antigos na nuvem dos discos raiz e de inicialização que são criados quando um sistema Cloud Volumes ONTAP é implantado e sempre que ele é desligado. Apenas os dois snapshots mais recentes são mantidos, tanto para os volumes raiz quanto para os de inicialização.
 
 Esse aprimoramento ajuda a reduzir os custos do provedor de nuvem removendo instantâneos que não são mais necessários.
 
@@ -2921,7 +2921,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.5 do Connector.
 
 O BlueXP agora habilita relatórios de espaço lógico na VM de armazenamento inicial que ele cria para o Cloud Volumes ONTAP.
 
-Quando o espaço é relatado logicamente, o ONTAP relata o espaço do volume de forma que todo o espaço físico economizado pelos recursos de eficiência de armazenamento também seja relatado como usado.
+Quando o espaço é informado logicamente, o ONTAP informa o espaço do volume de modo que todo o espaço físico economizado pelos recursos de eficiência de storage também seja informado como usado.
 
 
 
@@ -3019,7 +3019,7 @@ As seguintes alterações foram introduzidas com a versão 3.9.2 do Connector.
 [[aws-outposts]]
 === Postos avançados da AWS
 
-Há alguns meses, anunciamos que o Cloud Volumes ONTAP alcançou a designação Amazon Web Services (AWS) Outposts Ready.  Hoje, temos o prazer de anunciar que validamos o BlueXP e o Cloud Volumes ONTAP com o AWS Outposts.
+Há alguns meses, anunciamos que o Cloud Volumes ONTAP havia obtido a designação Amazon Web Services (AWS) Outposts Ready. Validamos o BlueXP e o Cloud Volumes ONTAP com AWS Outposts.
 
 Se você tiver um AWS Outpost, poderá implantar o Cloud Volumes ONTAP nesse Outpost selecionando a VPC do Outpost no assistente do ambiente de trabalho. A experiência é a mesma de qualquer outra VPC que reside na AWS. Observe que você precisará primeiro implantar um conector no seu AWS Outpost.
 

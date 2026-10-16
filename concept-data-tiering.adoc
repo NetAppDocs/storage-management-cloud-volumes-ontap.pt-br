@@ -82,7 +82,7 @@ O Console cria a conta de armazenamento com as seguintes configurações:
 * Desempenho: Padrão
 * Redundância: De acordo com a implantação do Cloud Volume ONTAP
 +
-** Zona de disponibilidade única: Armazenamento localmente redundante (LRS)
+** Zona de disponibilidade única: armazenamento com redundância local (LRS)
 ** Zona de disponibilidade múltipla: Armazenamento redundante de zona (ZRS)
 
 
