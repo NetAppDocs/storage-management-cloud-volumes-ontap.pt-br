@@ -1,0 +1,22 @@
+= Orientações para atualizar hotfixes do ONTAP em versões específicas do Cloud Volumes ONTAP
+:allow-uri-read: 
+
+
+
+
+[[guidance-for-upgrading-ontap-hotfixes-for-specific-cloud-volumes-ontap-versions]]
+=== Orientações para atualizar hotfixes do ONTAP em versões específicas do Cloud Volumes ONTAP
+
+O ONTAP lançou os seguintes hotfixes compatíveis com as versões 9.14.1, 9.15.1, 9.16.1, 9.17.1, 9.18.1 e 9.19.1 do Cloud Volumes ONTAP:
+
+* 9.14.1P18HF1
+* 9.15.1P20HF1
+* 9.16.1P16HF1
+* 9.17.1P11HF1
+* 9.18.1P8HF1
+* 9.19.1P3HF1
+
+
+Para obter detalhes, consulte  https://security.netapp.com/advisory/ntap-20261021-0021["Aviso de Segurança NTAP 20261021-0021"^].
+
+Para os seus sistemas Cloud Volumes ONTAP, você poderá receber uma solicitação na NetApp Console para atualizar para esses hotfixes. No entanto, esses hotfixes são suportados apenas quando a versão do agente do Console é 4.12.0 ou posterior. Se a versão do agente do Console for anterior a 4.12.0, ignore a solicitação.

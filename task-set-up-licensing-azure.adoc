@@ -14,7 +14,7 @@ summary: 'Configure o licenciamento Freemium, baseado em capacidade (BYOL, PAYGO
 
 
 [role="lead"]
-Após decidir qual opção de licenciamento usar com Cloud Volumes ONTAP no Azure, você deve concluir algumas etapas antes de poder escolher essa opção de licenciamento ao criar um novo sistema.
+Após decidir qual opção de licenciamento usar com Cloud Volumes ONTAP no Azure, conclua algumas etapas de configuração para que você possa selecionar essa opção ao criar um novo sistema.
 
 
 
@@ -85,7 +85,7 @@ Sua licença precisa estar disponível no Console antes que você possa usá-la 
 +
 .. Na página *Detalhes e Credenciais*, selecione *Editar Credenciais > Adicionar Assinatura* e siga as instruções para assinar a oferta de pagamento conforme o uso no Azure Marketplace.
 +
-A licença que você adquiriu da NetApp é sempre cobrada primeiro, mas a tarifa por hora do marketplace será cobrada se você exceder a capacidade licenciada ou se o prazo da sua licença expirar.
+A licença que você adquiriu da NetApp é sempre cobrada primeiro, mas você pagará a tarifa horária do marketplace se exceder sua capacidade licenciada ou se o prazo da sua licença expirar.
 
 +
 image:screenshot-azure-paygo-subscription.png["Uma captura de tela da opção de assinatura PAYGO ao criar um sistema Cloud Volumes ONTAP ."]

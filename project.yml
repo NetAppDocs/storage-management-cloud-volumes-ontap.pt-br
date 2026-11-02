@@ -228,8 +228,8 @@ sidebar:
         url: "/reference-limits-azure.html"
       - title: Saiba mais sobre pares de alta disponibilidade no Azure
         url: "/concept-ha-azure.html"
-      - title: Evite interrupções durante a manutenção do Azure no Cloud Volumes ONTAP
-          HA
+      - title: Evite interrupções durante a manutenção do Azure para os pares de HA
+          do Cloud Volumes ONTAP
         url: "/task-azure-prevent-freeze.html"
       - title: Gerenciar chaves com o Azure Key Vault
         url: "/task-azure-key-vault.html"

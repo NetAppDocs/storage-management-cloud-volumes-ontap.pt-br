@@ -140,7 +140,7 @@ Para obter mais informações, consulte https://docs.netapp.com/us-en/ontap-cli/
 O Ansible é uma ferramenta de gerenciamento de configuração de código aberto baseada em arquivos de configuração procedurais.
 
 * https://galaxy.ansible.com/ui/repo/published/netapp/ontap/["O Ansible Galaxy"^]
-* https://docs.ansible.com/ansible/latest/user_guide/index.html["Documentação do Ansible"^]
+* https://docs.ansible.com/projects/ansible/latest/getting_started/index.html["Documentação do Ansible"^]
 
 
 

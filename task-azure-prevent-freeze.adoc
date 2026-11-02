@@ -41,7 +41,7 @@ O Microsoft Azure pode pausar brevemente uma VM durante a manutenção programad
 == Impeça o takeover automático e o giveback durante a manutenção programada do Azure
 
 .Passos
-. Identifique o ID do sistema do par de HA do Azure. Para obter informações sobre como identificar recursos e fazer chamadas de API, consulte https://docs.netapp.com/us-en/console-automation/cm/your_api_call.html#step-1-select-the-identifie["Sua primeira chamada de API"^].
+. Identifique o ID do sistema para o par de HA do Azure. Para obter informações sobre como identificar recursos e fazer chamadas de API, consulte https://docs.netapp.com/us-en/console-automation/cm/your_api_call.html#step-1-select-the-identifier["Faça uma chamada à API REST de gerenciamento do ONTAP"^].
 . Envie uma `PUT` solicitação para o seguinte endpoint, substituindo `{id}` pelo ID do sistema:
 +
 `PUT /occm/api/azure/ha/working-environments/{id}/opt-off-maintenance-event`

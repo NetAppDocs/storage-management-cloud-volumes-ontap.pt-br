@@ -59,14 +59,10 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.
 
 Dimensionar seu sistema Cloud Volumes ONTAP pode ajudar você a atender aos requisitos de desempenho e capacidade.  Você deve estar ciente de alguns pontos-chave ao escolher um tipo de máquina, tipo de disco e tamanho de disco:
 
-Tipo de máquina:: Consulte os tipos de máquinas suportados na link:reference-configs-gcp.html["Notas de versão do Cloud Volumes ONTAP"^] e, em seguida, verifique os detalhes de cada tipo de máquina no Google. Adeque os requisitos da sua carga de trabalho ao número de vCPUs e à memória do tipo de máquina. Observe que cada núcleo de CPU aumenta o desempenho da rede.
+Tipo de máquina:: Analise as especificações link:reference-configs-gcp.html["tipos de máquinas suportados"]e, em seguida, revise os detalhes do Google sobre cada tipo de máquina compatível. Verifique se os requisitos da sua carga de trabalho correspondem ao número de vCPUs e à memória disponíveis para cada tipo de máquina. Observe que cada núcleo de CPU aumenta o desempenho da rede.
 +
 --
-Consulte o seguinte para mais detalhes:
-
-* https://cloud.google.com/compute/docs/machine-types#n1_machine_types["Documentação do Google Cloud: tipos de máquinas padrão N1"^]
-* https://cloud.google.com/docs/compare/data-centers/networking#performance["Documentação do Google Cloud: Desempenho"^]
-
+Consulte https://cloud.google.com/compute/docs/machine-types["Documentação do Google: guia de recursos e comparação de famílias de máquinas"^] para obter mais detalhes
 
 --
 Tipos de disco:: Ao criar volumes para o Cloud Volumes ONTAP, você precisa escolher o armazenamento em nuvem subjacente que o Cloud Volumes ONTAP usa para um disco.  O tipo de disco pode ser qualquer um dos seguintes:

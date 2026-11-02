@@ -14,7 +14,7 @@ summary: Configure o licenciamento Freemium, baseado em capacidade ou por assina
 
 
 [role="lead"]
-Após decidir qual opção de licenciamento usar com Cloud Volumes ONTAP no Google Cloud, conclua algumas etapas de configuração antes de escolher essa opção ao criar um sistema.
+Após decidir qual opção de licenciamento usar com Cloud Volumes ONTAP no Google Cloud, conclua algumas etapas de configuração para que você possa selecionar essa opção ao criar um novo sistema.
 
 
 
@@ -57,7 +57,7 @@ Os pacotes Essentials e Professional estão disponíveis nos seguintes modelos d
 
 link:concept-licensing.html#capacity-based-licensing["Saiba mais sobre licenciamento baseado em capacidade"] .
 
-Para começar a usar cada um desses modelos de consumo, siga os passos nas próximas seções.
+Para começar, siga as etapas do modelo de consumo que você deseja usar.
 
 
 
@@ -179,7 +179,7 @@ link:task-deploying-gcp.html["Veja instruções passo a passo para iniciar o Clo
 [[node-based-license]]
 == Licença baseada em nó
 
-Uma licença baseada em nó é a licença da geração anterior para o Cloud Volumes ONTAP. Você podia adquirir uma licença baseada em nó da NetApp (BYOL). As licenças baseadas em nó agora estão disponíveis para renovação apenas em casos específicos. Para obter mais informações, consulte:
+Uma licença baseada em nó é a licença da geração anterior para o Cloud Volumes ONTAP. Você podia adquirir uma licença baseada em nó da NetApp (BYOL). As licenças baseadas em nó estão disponíveis para renovação apenas em casos específicos. Para obter mais informações, consulte:
 
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#end-of-availability-for-node-based-licenses["Fim da disponibilidade de licenças baseadas em nós"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fim da disponibilidade de licenças baseadas em nós"^]
