@@ -20,3 +20,5 @@ O ONTAP lançou os seguintes hotfixes compatíveis com as versões 9.14.1, 9.15.
 Para obter detalhes, consulte  https://security.netapp.com/advisory/ntap-20261021-0021["Aviso de Segurança NTAP 20261021-0021"^].
 
 Para os seus sistemas Cloud Volumes ONTAP, você poderá receber uma solicitação na NetApp Console para atualizar para esses hotfixes. No entanto, esses hotfixes são suportados apenas quando a versão do agente do Console é 4.12.0 ou posterior. Se a versão do agente do Console for anterior a 4.12.0, ignore a solicitação.
+
+https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#console-agent-4-12-0["Agente do Console 4.12.0"^]
