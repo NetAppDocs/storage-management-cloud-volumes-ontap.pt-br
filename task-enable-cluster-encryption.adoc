@@ -14,7 +14,7 @@ summary: Habilite a criptografia da rede de back-end do cluster para proteger o 
 
 
 [role="lead"]
-Para o Cloud Volumes ONTAP 9.19.1 e versões posteriores, habilite a criptografia de rede do cluster de back-end para proteger o tráfego interno leste-oeste em configurações de alta disponibilidade (HA) no Azure e no Google Cloud. Essa configuração protege o tráfego em trânsito; ela não criptografa os dados de volume em repouso.
+A partir do Cloud Volumes ONTAP 9.19.1 e versões posteriores, você pode habilitar a criptografia de rede do cluster de back-end para proteger o tráfego interno entre nós do Cloud Volumes ONTAP em configurações de alta disponibilidade (HA) do Azure e do Google Cloud. Essa configuração protege o tráfego em trânsito, mas não criptografa os dados de volume em repouso.
 
 O ONTAP utiliza o Cluster Session Management (CSM) em Kernel TLS (kTLS) e IPsec por software para proteger o tráfego em redes de back-end para configurações de HA. O Cloud Volumes ONTAP 9.19.1 e versões posteriores estendem essa proteção ao tráfego de cluster de back-end.
 
