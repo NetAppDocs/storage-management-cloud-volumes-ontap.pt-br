@@ -1,0 +1,49 @@
+= Nova função de colaborador do Cloud Volumes ONTAP
+:allow-uri-read: 
+
+
+
+
+[[new-cloud-volumes-ontap-contributor-role]]
+=== Nova função de colaborador do Cloud Volumes ONTAP
+
+NetApp adiciona a função *Cloud Volumes ONTAP contributor*, que tem mais permissões do que a função de operador, mas menos do que a função de administrador. Um usuário com a função de operador pode executar vários fluxos de trabalho do dia a dia, incluindo tarefas de replicação do SnapMirror. A função de administrador abrange esses fluxos de trabalho, mas também permite que usuários administradores excluam sistemas do Cloud Volumes ONTAP, o que muitas organizações não desejam para usuários operacionais. Essa função é importante porque o Console não oferece suporte à verificação por múltiplos administradores (MAV) no momento, e, sem ela, um usuário administrador pode executar operações sensíveis, como excluir sistemas, sem uma segunda aprovação. A função de colaborador permite que os usuários executem a maioria das operações críticas, como criar sistemas, gerenciar a replicação e gerenciar o armazenamento, ao mesmo tempo que impede a exclusão de sistemas.
+
+A função de colaborador inclui todas as permissões de operador, incluindo recursos adicionais para:
+
+* Criar sistemas Cloud Volumes ONTAP
+* Atualize as configurações do sistema, como alterar o tipo de instância ou atualizar a versão do ONTAP
+* Gerencie a replicação, incluindo interromper, ressincronizar, fazer a ressincronização reversa e editar agendamentos de replicação e taxas de transferência
+* Gerenciar o armazenamento, como adicionar agregados e aumentar a capacidade
+
+
+Um usuário com a função de colaborador não pode executar estas tarefas:
+
+* Excluir sistemas, volumes, agregados ou relacionamentos de replicação
+* Ligar ou desligar sistemas
+* Defina uma senha
+* Acesse ONTAP System Manager
+
+
+Você atribui a função de colaborador em *Administração > Identidade*, da mesma forma que atribui as outras funções do Cloud Volumes ONTAP aos usuários.
+
+.Links relacionados
+* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Funções de acesso do Cloud Volumes ONTAP no NetApp Console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-cvo-rbac-setup.html["Configure o acesso baseado em funções para Cloud Volumes ONTAP no NetApp Console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["NetApp Console funções de acesso"^]
+
+
+
+
+[[microsoft-entra-id-hybrid-user-authentication-for-smb-public-preview]]
+=== Autenticação híbrida de usuário do Microsoft Entra ID para SMB (prévia pública)
+
+O Cloud Volumes ONTAP 9.19.1 e versões posteriores oferecem suporte à autenticação híbrida de usuário com https://www.microsoft.com/en-in/security/business/identity-access/microsoft-entra-id["Microsoft Entra ID"^] para acessar compartilhamentos SMB.
+
+Anteriormente, o Cloud Volumes ONTAP suportava autenticação SMB apenas para usuários de domínio, o que exigia a configuração local do Active Directory (AD). Com a autenticação híbrida de usuários, você pode estender a autenticação SMB para a nuvem por meio do Microsoft Entra ID, enquanto continua usando sua infraestrutura local de AD existente.
+
+Com autenticação híbrida de usuários, os usuários são criados no AD local e sincronizados com o Microsoft Entra ID usando https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect["O Microsoft Entra Connect"^]. O ONTAP autentica os usuários que acessam compartilhamentos SMB comunicando-se com o AD local e com o Microsoft Entra ID.
+
+Este recurso está disponível como pré-visualização pública. A configuração é compatível apenas por meio da CLI do ONTAP. A integração com o NetApp Console ainda não está disponível.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-azure-entra-id-smb-auth.html["Configure a autenticação do Microsoft Entra ID para SMB"^]

@@ -6920,13 +6920,11 @@
   <block id="e01bdff1ce4770f66f1a74a9b5892c8b" category="list-text">Faça login no Console e conclua a autenticação.</block>
   <block id="ac9188736d7d24740d106bad6d2f1a24" category="section-title">Crie sua organização</block>
   <block id="4c27c7ddbdd91ad9f40d0e69913d02f8" category="list-text">Insira o nome da organização.</block>
-  <block id="340e0bcb7d46eb5bd14fee5c751d3175" category="list-text">Opcional: associe uma conta do NetApp Support Site (NSS).</block>
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Selecione *Criar*.</block>
   <block id="3bdc84428bee979e77f1781f40304f42" category="inline-link-macro">Saiba como gerenciar assinaturas</block>
   <block id="999c350fcbd9f270e794eb9f39020947" category="section-title">Implante um agente do Console na AWS</block>
   <block id="0e5a6ed81e42dfb7b8082abc4bd85af9" category="inline-link-macro">Referência de permissões da AWS</block>
   <block id="f6775e307e0e96c3d2d2aa4261c2dc06" category="open-title">Criar função para mim (recomendado)</block>
-  <block id="947040282161ce63e6c467b9272f0987" category="list-text">Adicione o ID da conta AWS e, opcionalmente, o ID externo. O Console define um nome de função padrão.</block>
   <block id="c922cc18eca71598d4a86b7707d7eba0" category="open-title">Assumir função</block>
   <block id="e656cb1ebc2e559e3bcc2002585434ed" category="open-title">Chaves AWS</block>
   <block id="ef9fe436c6881c3aeb226ecf309827f0" category="inline-link">Configure a rede para a implantação no AWS Marketplace</block>
@@ -7827,12 +7825,9 @@
   <block id="2ebfd6a7d346b4f849cfb04c2d3a5434" category="paragraph">Você pode integrar o Cloud Volumes ONTAP na AWS usando o AWS Marketplace ou o NetApp Console. A tabela a seguir fornece uma visão geral de alto nível das tarefas que você precisa concluir para implantar o Cloud Volumes ONTAP na AWS.</block>
   <block id="5e51aa22235e0104a5fffb9b0e0b97ac" category="inline-link-macro">Integre a oferta independente do Cloud Volumes ONTAP no AWS Marketplace</block>
   <block id="c15e37bc266e7b7e0212916e681f40ad" category="admonition">Se você assinar a oferta independente do Cloud Volumes ONTAP no AWS Marketplace, as etapas serão diferentes. Para obter informações sobre a integração pelo AWS Marketplace, consulte <block ref="e7b82cae26dca0ede070f2a3673c283d" category="inline-link-macro-rx"></block>.</block>
-  <block id="956257b7d0ca445001951932f7e84848" category="doc">Assine e implante a oferta autônoma do Cloud Volumes ONTAP no AWS Marketplace</block>
   <block id="723d1c9b2cb416390ec6382bd2a185db" category="paragraph">Assine a oferta independente do Cloud Volumes ONTAP no AWS Marketplace, implante um agente do Console e crie seu primeiro sistema.</block>
-  <block id="a579432a8e3b22d3a85649d7f57e5065" category="paragraph">Antes de começar, certifique-se de ter:</block>
   <block id="7f9aae631f852dc3f30a5113d517404f" category="list-text">Uma conta do NetApp Console ou as informações necessárias para criar uma.</block>
   <block id="2cdcb75cdf45ad60c49310aa4953ecf2" category="inline-link-macro">Saiba mais sobre os requisitos de rede do agente Console</block>
-  <block id="9c29150d1a4df0c7450a869ce2723638" category="list-text">Garantiu que a rede do agente do Console atenda aos requisitos. <block ref="a3f5b6fd7f8b50cbffb3cbeb6fa40451" category="inline-link-macro-rx"></block></block>
   <block id="9706dc62b1cd200c516832184fe17aea" category="list-text">Uma conta e uma identidade da AWS com permissão para se inscrever no AWS Marketplace e aceitar os termos da oferta.</block>
   <block id="40452a9c0c304507d341249cbb861fed" category="paragraph">Se você selecionar *Criar função para mim*, a identidade da AWS que envia a pilha Quick Create do CloudFormation precisa das permissões abaixo. Para usar a mesma identidade para assinar e enviar a pilha, atribua essas permissões antes de começar. Se você usar uma identidade diferente para enviar a pilha, atribua essas permissões a essa identidade. Essas permissões permitem que o CloudFormation crie a função de implantação; elas não são as permissões usadas pelo agente em execução.</block>
   <block id="30e4c20d5d10c9da535f38ab1c548e1b" category="listing-title">Permissões mínimas para CloudFormation Quick Create</block>
@@ -7841,15 +7836,12 @@
   <block id="a11a0a42613839623b80519a128fe81d" category="list-text">Acesse o AWS Marketplace usando sua conta da AWS com as permissões necessárias.</block>
   <block id="ef6da38a0094b683cff50de6f2edfb73" category="list-text">Localize a oferta independente do Cloud Volumes ONTAP da NetApp. O AWS Marketplace oferece duas opções para o Cloud Volumes ONTAP:</block>
   <block id="65e2afdf3ea7ead73c73f2ccc67a88bb" category="list-text">A oferta independente para a assinatura anual do Cloud Volumes ONTAP</block>
-  <block id="828bc789f8fea62d7d9dcfb1c8df6b67" category="list-text">A oferta combinada do NetApp Intelligent Service para serviços de dados da NetApp e assinaturas do Cloud Volumes ONTAP.</block>
-  <block id="f734624cb745f5a29fe5ff81d7f7049f" category="list-text">Escolha a oferta _independente_. Estas etapas orientam você na assinatura da oferta independente.</block>
   <block id="0bede5b2fb82cb93a6b7341f902bd965" category="list-text">Depois de assinar, selecione *Configurar produto* para ser redirecionado ao NetApp Console e concluir a implantação.</block>
   <block id="8e54d24c608de9f6d76f0ddf776cd3cc" category="paragraph">Continue a configuração no NetApp Console após concluir a assinatura do Marketplace.</block>
   <block id="e17e44482e762e707860b1c0d43859ab" category="list-text">Se você selecionar *Sign up*, conclua o seguinte:</block>
   <block id="001e71c8221c566f7d55a6c444a3bb93" category="list-text">Preencha os campos obrigatórios.</block>
   <block id="7f80592ced9735452b147a4ca330f6d9" category="paragraph">Crie uma organização somente se for seu primeiro acesso ou se você ainda não pertencer a uma. Se você já pertence a uma organização, ignore esta seção e continue para <block ref="7acf9f6f7caab8589fdd395956f11b46" category="inline-xref-macro-rx"></block>.</block>
   <block id="4e153039c8e6ff6a95edc5ef7d826812" category="paragraph">Uma organização ajuda você a gerenciar usuários, funções, permissões, licenças e sistemas.</block>
-  <block id="af155629373d274993ac8a266ab76b89" category="paragraph">Após associar sua assinatura ao NetApp Console, implante um agente do Console para gerenciar recursos da AWS e sistemas Cloud Volumes ONTAP.</block>
   <block id="d53a7c0871705c4ac01b2df9d5b241e5" category="paragraph">Analise os requisitos de autorização e de rede da AWS antes de implantar o agente.</block>
   <block id="03f6071650b6469d9c9a93a196a61040" category="list-text">Decida como autorizar o Console a implantar o agente.</block>
   <block id="05a3fe2e02c1f1540ccef223505a2330" category="inline-xref">Exemplo de JSON acima</block>
@@ -7876,7 +7868,6 @@
   <block id="5b7f5df4a7a01162f4bed8b97f90562e" category="inline-link-macro">Saiba mais sobre como criar uma função</block>
   <block id="e2821614155d778a682e7da539728675" category="paragraph">Se você já possui uma função com as permissões AWS necessárias, forneça o ARN dela para que o Console possa assumi-la e implantar o agente <block ref="317303ab0e471a0d3619a16accefb685" category="inline-link-macro-rx"></block>.</block>
   <block id="61a42cfed56b2ddd6374f98e34e921bc" category="list-text">Selecione *Assumir função*.</block>
-  <block id="c62afca1b3bd89404213a6f0e7d2efe4" category="paragraph">O Console cria um nome para a função assumida que você pode alterar se desejar.</block>
   <block id="773589cad93758ea895e6e7d3f6d269d" category="list-text">Insira o ARN da função existente.</block>
   <block id="98af778bae37b93b59c535e2a555cb8e" category="list-text">Selecione *Validar credenciais*.</block>
   <block id="f31ef44b0f2acc926f4cbe2b14abc63a" category="inline-link-macro">Aprenda como criar uma função para um usuário</block>
@@ -7885,7 +7876,6 @@
   <block id="4e231d57b5ff3fb02e79c5e9519d1239" category="list-text">Insira a chave de acesso e o segredo da função que você deseja usar.</block>
   <block id="070673c42aa09e5b740913726c0c83c0" category="list-text">Configure os detalhes de implantação do agente, incluindo o nome da instância do agente e se o Console deve criar a função do IAM para o agente em execução ou usar uma função existente.</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">Saiba mais sobre a política de IAM para o agente do Console</block>
-  <block id="5da5e1a2666b568b0f2281c713180ef8" category="paragraph">Quando o Console cria o agente do Console, ele cria uma função do IAM e um perfil para o agente ou usa uma função que você fornece. Essa função inclui permissões que permitem ao agente gerenciar recursos da AWS. Certifique-se de que a função seja atualizada conforme novas permissões forem adicionadas em versões futuras. <block ref="7f447941d99d36030500c16d428fc2ff" category="inline-link-macro-rx"></block>.</block>
   <block id="9ca3e0361a9e911cee0cf7cfaf465ecc" category="list-text">Configure a rede selecionando uma VPC, sub-rede, par de chaves, comportamento do IP público e configurações de proxy, se necessário.</block>
   <block id="1e01fdf07bb63446d747d736af983957" category="list-text">Configure as regras do seu grupo de segurança para permitir tráfego de entrada HTTP (80), HTTPS (443) e SSH (22) para solucionar problemas de acesso à VM do agente.</block>
   <block id="461008ea76e4abfc7758a2885f6cdf98" category="inline-link-macro">Visualizar regras de grupo de segurança para Amazon Web Services</block>
@@ -7894,12 +7884,10 @@
   <block id="d34ca49cea2b1e9ae7d439596fd49f50" category="paragraph">Acompanhe o progresso da implantação até sua conclusão. Você pode expandir os registros de eventos para revisar as atividades detalhadas.</block>
   <block id="bdd1d9820619a1ccc976a093ca5d4720" category="paragraph">Para obter informações completas sobre os requisitos de rede e permissões do agente do Console, consulte:</block>
   <block id="787c504b628f17f67b110fffe7ae00a8" category="paragraph">Após o Console implantar o agente, siga as etapas em<block ref="51799ed8a3c9382ecde3d4e502dc227c" category="inline-link-rx"></block> para criar seu primeiro sistema.</block>
-  <block id="a1e7b53d70ba6579ff07cffd44cfdf8d" category="paragraph">Se você ainda não está pronto para criar seu sistema Cloud Volumes ONTAP, pode retornar à página Sistemas a qualquer momento para criá-lo posteriormente.</block>
   <block id="7aa08f57a5f5ecd2cec4636034d53f91" category="paragraph">Retome o processo de integração de onde parou ou tente novamente a implantação do agente após uma falha.</block>
   <block id="5302bc1044bf2997c712f10444d007ae" category="paragraph">Se você sair antes da conclusão do processo de integração, continue a partir da última etapa concluída.</block>
   <block id="9aca15ba5b18529516b4cd632ddf7639" category="paragraph">Se o Console não conseguir implantar o agente, siga estes passos para tentar novamente:</block>
   <block id="492b64735bc91205336e73d3b231f7ea" category="paragraph">Para obter ajuda com a implantação do agente, assinaturas da AWS ou tarefas do Cloud Volumes ONTAP, consulte:</block>
-  <block id="76d37acbce48c445bc735fe56c61f7ac" category="sidebar">Implante o Cloud Volumes ONTAP a partir do AWS Marketplace</block>
   <block id="1f4aec85e2be241e736a55d9da306e72" category="doc">O Cloud Volumes ONTAP 9.19.1 no Azure</block>
   <block id="38649e84871938dc48da678f8c0225b7" category="paragraph">Agora você pode usar o NetApp Console para implantar e gerenciar a versão de Disponibilidade Geral (GA) do Cloud Volumes ONTAP 9.19.1 no Azure.</block>
   <block id="55827b1b260053ade23e437507e4d4d6" category="paragraph">O Console oferece suporte ao Cloud Volumes ONTAP 9.19.1 na AWS e no Google Cloud desde agosto de 2026.</block>
@@ -8183,4 +8171,162 @@
   <block id="0e6d56fe5393252331d7343659494473" category="example-title">Execute a ferramenta em implantações no modo privado ou no modo protegido</block>
   <block id="eeb17a28d1d99b5b083875c964f9eaca" category="paragraph">Especifique o <block ref="8fc12ad6381abbb87712055c7f5e50f1" prefix=" " category="inline-code"></block> parâmetro para executar a ferramenta em implantações de modo privado ou modo protegido. Para a configuração do pool de trabalho, consulte <block ref="f6826eadb975b62aabcce78c0bcbe6da" category="inline-link-macro-rx"></block>.</block>
   <block id="effe1179a23b252f4eedfe689321b115" category="paragraph">Se você tiver uma implantação entre projetos, especifique o<block ref="f771f2cb6e50d935d8e7d8a76e19a7e5" prefix=" " category="inline-code"></block> parâmetro:</block>
+  <block id="0826142964deaae8afd3cda87c05f9f5" category="doc">Nova função de colaborador do Cloud Volumes ONTAP</block>
+  <block id="14332acd533c12a2fdcddeb8adea61b3" category="paragraph">NetApp adiciona a função *Cloud Volumes ONTAP contributor*, que tem mais permissões do que a função de operador, mas menos do que a função de administrador. Um usuário com a função de operador pode executar vários fluxos de trabalho do dia a dia, incluindo tarefas de replicação do SnapMirror. A função de administrador abrange esses fluxos de trabalho, mas também permite que usuários administradores excluam sistemas do Cloud Volumes ONTAP, o que muitas organizações não desejam para usuários operacionais. Essa função é importante porque o Console não oferece suporte à verificação por múltiplos administradores (MAV) no momento, e, sem ela, um usuário administrador pode executar operações sensíveis, como excluir sistemas, sem uma segunda aprovação. A função de colaborador permite que os usuários executem a maioria das operações críticas, como criar sistemas, gerenciar a replicação e gerenciar o armazenamento, ao mesmo tempo que impede a exclusão de sistemas.</block>
+  <block id="0fba01d9b0e41b7d0de97f3cfdb7dcec" category="paragraph">A função de colaborador inclui todas as permissões de operador, incluindo recursos adicionais para:</block>
+  <block id="535581d758075804b4cc52814e262a35" category="list-text">Criar sistemas Cloud Volumes ONTAP</block>
+  <block id="31252110f902a9c33dd1668a2ddf9d60" category="list-text">Atualize as configurações do sistema, como alterar o tipo de instância ou atualizar a versão do ONTAP</block>
+  <block id="1c755f1ffdbed31cec4887edbc313b67" category="list-text">Gerencie a replicação, incluindo interromper, ressincronizar, fazer a ressincronização reversa e editar agendamentos de replicação e taxas de transferência</block>
+  <block id="caa47e3dc29de6679c6dde1ec5cda5ca" category="list-text">Gerenciar o armazenamento, como adicionar agregados e aumentar a capacidade</block>
+  <block id="105df9d41da1a27f8246ba8df705efc9" category="paragraph">Um usuário com a função de colaborador não pode executar estas tarefas:</block>
+  <block id="75bfd853ccf811b5f9e995e9b420f0ee" category="list-text">Excluir sistemas, volumes, agregados ou relacionamentos de replicação</block>
+  <block id="26539d0b254897846cdbf2f9df3a2da2" category="list-text">Ligar ou desligar sistemas</block>
+  <block id="cc940bf2667209e4d71ddc12d8f2e5ed" category="list-text">Defina uma senha</block>
+  <block id="c8764bac128bda390f467bc548de68a5" category="list-text">Acesse ONTAP System Manager</block>
+  <block id="2ece167d1d26caae4635d1e5a4d74785" category="paragraph">Você atribui a função de colaborador em *Administração &gt; Identidade*, da mesma forma que atribui as outras funções do Cloud Volumes ONTAP aos usuários.</block>
+  <block id="7d8c2cdcdb7f43c46c64f18123f8002b" category="list-text"><block ref="7d8c2cdcdb7f43c46c64f18123f8002b" category="inline-link-rx"></block></block>
+  <block id="ef4dbf81033bbcf56fd22e4eb2c913da" category="section-title">Autenticação híbrida de usuário do Microsoft Entra ID para SMB (prévia pública)</block>
+  <block id="4df90909cc2d04997870c4949a39d14b" category="inline-link">Microsoft Entra ID</block>
+  <block id="dd462d22f562824f1314114fe0506920" category="paragraph">O Cloud Volumes ONTAP 9.19.1 e versões posteriores oferecem suporte à autenticação híbrida de usuário com<block ref="c92d60eae0a0d9ece702070bd9116954" category="inline-link-rx"></block> para acessar compartilhamentos SMB.</block>
+  <block id="56ed7687386c4ddd3c49ce19fe20121e" category="paragraph">Anteriormente, o Cloud Volumes ONTAP suportava autenticação SMB apenas para usuários de domínio, o que exigia a configuração local do Active Directory (AD). Com a autenticação híbrida de usuários, você pode estender a autenticação SMB para a nuvem por meio do Microsoft Entra ID, enquanto continua usando sua infraestrutura local de AD existente.</block>
+  <block id="66b8d64c32b9c85c4b6e1af3b9d47224" category="inline-link">O Microsoft Entra Connect</block>
+  <block id="b733c58ccb9be823aebceeba2e6d6c49" category="paragraph">Com autenticação híbrida de usuários, os usuários são criados no AD local e sincronizados com o Microsoft Entra ID usando<block ref="98031aa8f0e636ad4eef034480e4f6c2" category="inline-link-rx"></block>. O ONTAP autentica os usuários que acessam compartilhamentos SMB comunicando-se com o AD local e com o Microsoft Entra ID.</block>
+  <block id="00a970696886f2596c6dc19470a99b67" category="paragraph">Este recurso está disponível como pré-visualização pública. A configuração é compatível apenas por meio da CLI do ONTAP. A integração com o NetApp Console ainda não está disponível.</block>
+  <block id="840c0d6ab3aac46cebc73c413bcb3de2" category="inline-link">Configure a autenticação do Microsoft Entra ID para SMB</block>
+  <block id="4751d6cb0ce22c95620735a0f455e8e4" category="paragraph"><block ref="4751d6cb0ce22c95620735a0f455e8e4" category="inline-link-rx"></block></block>
+  <block id="79ef9f61ccfcabc1d70e24a061eef1a5" category="inline-link">Saiba mais sobre as preferências de faturamento</block>
+  <block id="70563190697b86d4b7fef9663334a2c7" category="paragraph"><block ref="70563190697b86d4b7fef9663334a2c7" category="inline-link-rx"></block></block>
+  <block id="f0f0c1d3ad1556de34b949ba497629d8" category="summary">Configure a autenticação do Microsoft Entra ID para SMB no Cloud Volumes ONTAP para oferecer suporte a identidades de usuário híbridas e reduzir a dependência do Active Directory local.</block>
+  <block id="576dddd89d6fcee802f4b33d25d7129c" category="doc">Configurar a autenticação do Microsoft Entra ID para SMB no Cloud Volumes ONTAP</block>
+  <block id="f0d496d92b622242ae63265df0a68c13" category="paragraph">Você pode configurar o Cloud Volumes ONTAP para autenticar usuários que acessam compartilhamentos SMB por meio do <block ref="c92d60eae0a0d9ece702070bd9116954" category="inline-link-rx"></block>Microsoft Entra ID, o que habilita o suporte de identidade para os usuários do Cloud Volumes ONTAP na nuvem híbrida. Anteriormente, a autenticação exigia o Active Directory (AD) local para o gerenciamento de identidade dos usuários do domínio. Com o Microsoft Entra ID, você pode usar autenticação baseada em nuvem e manter o acesso contínuo para usuários híbridos.</block>
+  <block id="b7f9e82cff90746217ea8ac2f5b56d95" category="admonition">Este recurso está disponível como uma prévia pública e só pode ser configurado usando a ONTAP CLI. A integração com o NetApp Console ainda não está disponível. Na CLI, as operações SMB usam o prefixo de comando <block ref="2a56eb5b4be2d5634983c3d2f33e44eb" prefix=" " category="inline-code"></block> porque SMB (Server Message Block) é o nome moderno do protocolo Common Internet File System (CIFS).</block>
+  <block id="9b46b58f2c72c603fbb8f335b5bc3834" category="paragraph">A partir do Cloud Volumes ONTAP 9.19.1, você pode usar o Microsoft Entra ID para autenticar usuários SMB que usam identidades híbridas. As identidades híbridas são contas de usuário sincronizadas do Active Directory (AD) local para o Microsoft Entra ID por meio de<block ref="98031aa8f0e636ad4eef034480e4f6c2" category="inline-link-rx"></block>.</block>
+  <block id="53e4478289177784709ff85047ef38e4" category="paragraph">O Cloud Volumes ONTAP aceita autenticação SMB tanto do Active Directory local quanto do Microsoft Entra ID. Isso permite adicionar suporte à identidade na nuvem, mantendo sua infraestrutura existente do Active Directory.</block>
+  <block id="d6a1c53cc457db37443c2db4d8ebefe5" category="paragraph">O Cloud Volumes ONTAP 9.19.1 e versões posteriores também suportam o<block ref="9d22115d36ebd253684637906d1914ec" prefix=" " category="inline-code"></block> comando para gerenciar permissões de arquivos e pastas para identidades Entra ID em compartilhamentos montados.</block>
+  <block id="5683ff064f61ea6b8cdd3e57bdc720de" category="list-text">Você precisa ter uma assinatura ativa do Azure.</block>
+  <block id="82d28824cbdaf3ea9ad693254de8cc08" category="inline-link">Administrador Global</block>
+  <block id="1bf5cbf0cd1b7d466f13185f516f295f" category="list-text">Você deve ter uma conta de usuário com<block ref="ededdd6549b2bf145194c6c07d024613" category="inline-link-rx"></block> privilégios no seu tenant do Microsoft Entra ID.</block>
+  <block id="5ff8d473cff96050f8025b44c3e19a64" category="list-text">O computador cliente que acessa o compartilhamento SMB deve estar associado de forma híbrida ao Microsoft Entra.</block>
+  <block id="0b573523c99181abb1bf1ed4c5454bc3" category="list-text">Você precisa ter um controlador de domínio local com conectividade ao Microsoft Entra ID.</block>
+  <block id="2a4ce4268f8a08a72a93eebcd33cecce" category="list-text">Você precisa ter uma VM de armazenamento com uma LIF de dados e um agregado disponível para o servidor SMB e o compartilhamento.</block>
+  <block id="cdada3d51770cf65ad106d4618e13e3f" category="list-text">A máquina virtual de armazenamento e as máquinas virtuais do cliente devem ser capazes de resolver os endpoints necessários do Microsoft Entra ID e se comunicar com eles pela rede.</block>
+  <block id="0d7474d4abe90268f7c956d32a931989" category="section-title">Etapa 1: registre um aplicativo no Microsoft Entra ID</block>
+  <block id="2d5ce426423eeeead4f35769cd8b1b27" category="inline-xref">Etapa 3</block>
+  <block id="9a01a967e7969f7331c54cbcaba258c3" category="paragraph">Você deve registrar um aplicativo no Microsoft Entra ID para que o Cloud Volumes ONTAP possa se autenticar no locatário durante a configuração do SMB. O Cloud Volumes ONTAP usa as credenciais desse registro para criar, modificar e excluir objetos de aplicativo em seu nome. Ao concluir esta etapa, você coleta as seguintes credenciais para uso em <block ref="205b622708dfeea2fd1c72784f53fd51" category="inline-xref-macro-rx"></block>:</block>
+  <block id="f4e7141ad7609b7cc5121486e206e130" category="list-text">*tenant-id*: o GUID exclusivo da instância do Microsoft Entra ID da sua organização.</block>
+  <block id="99127c4618b42413de9d19fde2817a62" category="list-text">*client-id*: o identificador único do aplicativo Entra ID.</block>
+  <block id="3052ba03fe360fbe74b547d70d2c2bd0" category="list-text">*client-certificate*: o certificado usado para autenticar o aplicativo.</block>
+  <block id="2857315b28fc395af13c38a25edacd0a" category="inline-link">Registre um aplicativo</block>
+  <block id="aa972d60213d1c132f25584d4609b7f0" category="list-text"><block ref="32fc07ae42913e995c7d1f1783bfa036" category="inline-link-rx"></block> no portal do Azure. Selecione *Somente contas neste diretório organizacional (locatário único)* como o tipo de conta com suporte.</block>
+  <block id="261e926f718a2d9b8cd73a83ba9acb7e" category="list-text">Na página *Overview* do aplicativo registrado, copie e salve o *Application (client) ID* e o *Directory (tenant) ID*.</block>
+  <block id="fad05c2bfdd693724a1578cf08eb6403" category="list-text">Atribua as seguintes permissões da API do Microsoft Graph ao registro do aplicativo:</block>
+  <block id="a8970bf8fa65ca74be14fdba5c70ceec" category="list-text">*Aplicativo.ReadWrite.OwnedBy*</block>
+  <block id="60b0ed19e7b229e21a36cc7563a3289f" category="list-text">*User.Read*</block>
+  <block id="8ea0c9033ac73fea068c56f5eb23610c" category="list-text">*User.Read.All*</block>
+  <block id="299efefe6a28bc1ca31bc0b7162448ce" category="paragraph">Para atribuir permissões, acesse *Permissões de API &gt; Adicionar uma permissão &gt; Microsoft Graph &gt; Permissões do aplicativo*, selecione cada permissão e, em seguida, selecione *Conceder consentimento de administrador para &lt;tenant-name&gt;* para ativá-las.</block>
+  <block id="66186dc3c77a2a37fd3f3b8de5f51c79" category="admonition">Entre em contato com o administrador do Microsoft Azure para confirmar as permissões mínimas exigidas pela política de segurança da sua organização.</block>
+  <block id="28dd60cdfcc8d8886a4f475da7c2040a" category="list-text">Faça upload de um certificado para autenticar o registro do aplicativo. Acesse *Certificados &amp; segredos &gt; Certificados &gt; Upload certificate* e carregue um arquivo nos formatos <block ref="986b1e74c5a22abce37ef2c2cbc37df9" prefix=" " category="inline-code"></block>, <block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> ou <block ref="af5cc73b319c31cbd55a816803ea580b" prefix=" " category="inline-code"></block>.</block>
+  <block id="02100d3a9fd1a998b1e212c23223d5d0" category="admonition">Use um certificado assinado por uma autoridade certificadora. Certificados autoassinados são suportados, mas não são recomendados para ambientes de produção.</block>
+  <block id="6e04d7f9da96301b3d4830fe9cddfd35" category="list-text">Selecione *Conceder consentimento de administrador* para ativar as permissões.</block>
+  <block id="5c6bc2a5eb35bb7569f380e89fec8fa0" category="section-title">Etapa 2: configurar o Active Directory local</block>
+  <block id="11ab63e9a6ac4c36d3ce5a4cc3039c73" category="inline-link">Documentação da Microsoft para Entra Connect</block>
+  <block id="b10babf7ead6c6f4ad3f5e6d93976fe9" category="paragraph">Configure seu controlador de domínio do AD no local, sincronize usuários e grupos com o Microsoft Entra ID e configure as definições de ingresso de dispositivos para que as identidades híbridas estejam disponíveis para autenticação SMB. Consulte<block ref="6650d3f4b9af73d499879b7bcfaf3eb2" category="inline-link-rx"></block>.</block>
+  <block id="27c0dffa775b77afef445509b11d8bee" category="list-text">Configure um servidor Windows como controlador de domínio para seu domínio AD local, por exemplo<block ref="88070db47637249c3d87a7159739ff89" prefix=" " category="inline-code"></block>.</block>
+  <block id="062608ac10e169cc753a4b9c9917c89c" category="list-text">Crie os usuários e grupos do AD que serão sincronizados com o Microsoft Entra ID.</block>
+  <block id="1c64dac74f1836bcfd6569e5cb3b2624" category="list-text">Configure a política de grupo _Lista de Atribuição de Site para Zona_ para permitir que clientes ingressados no domínio se comuniquem com os serviços de autenticação do Microsoft Entra ID.</block>
+  <block id="f94b806283415daa8e18520cfe679859" category="paragraph">Acesse: *gpedit.msc &gt; Modelos Administrativos &gt; Componentes do Windows &gt; Internet Explorer &gt; Painel de Controle da Internet &gt; Página de Segurança &gt; Lista de Atribuição de Sites a Zonas*</block>
+  <block id="91bfddac4049f3606e443cb976794327" category="list-text">Adicione cada um dos seguintes URLs com o valor de zona *1*:</block>
+  <block id="93470d6387894705482630409f6e8854" category="inline-link">Microsoft Entra Connect | Connect Sync</block>
+  <block id="dd5fb87e0fcf7a79f82c460cc1916f55" category="list-text">Instale<block ref="9eb156faaab6ccb1a83ffeb27101c81b" category="inline-link-rx"></block> e configure-o usando sua conta de Administrador Global:</block>
+  <block id="17cb98a3c4dc35377617eaa96bf1704f" category="inline-link">Planeje a implementação do seu processo de ingresso híbrido no Microsoft Entra</block>
+  <block id="876cbc85140828fa1edd2ddbead80331" category="inline-link">Implantação direcionada do ingresso híbrido do Microsoft Entra</block>
+  <block id="d28cc1a233ce492200c3194cbdeaf8ce" category="list-text"><block ref="0273ebc722223bb6fefeee4dc33e8d8a" category="inline-link-rx"></block>. Consulte<block ref="4c2d2e681aea0046918c9e14557994b4" category="inline-link-rx"></block>.</block>
+  <block id="5ed3d947535b44abdc224cdff697ec56" category="inline-link">Modelo Lógico do Active Directory</block>
+  <block id="72ba2df1998092aa2e4147c0a890c80d" category="list-text">Configure o Ponto de Conexão de Serviço (SCP) para cada<block ref="ed20acb973830bb6621b7ed65e0032c3" category="inline-link-rx"></block> e forneça as credenciais de administrador do Active Directory.</block>
+  <block id="868cfc82c69a1bdee2bf8f604db7d483" category="paragraph">O Azure Microsoft Entra Connect sincroniza usuários e grupos do AD local com o Microsoft Entra ID e permite o ingresso híbrido de dispositivos.</block>
+  <block id="da237f632f44d3676d72ce122c7a4e48" category="inline-link">Documentação da Microsoft: próximos passos e como gerenciar o Microsoft Entra Connect</block>
+  <block id="edc8a0869f7a2a70bb9bca49e4062f74" category="list-text">Verifique se os usuários e grupos estão sincronizados com o Microsoft Entra ID. Os usuários sincronizados aparecem com um sufixo UPN correspondente ao domínio do seu locatário, por exemplo<block ref="bd988f09cbfbf64506e0589f7b2ac9e7" prefix=" " category="inline-code"></block>. Para obter informações sobre outras tarefas que você pode executar após a configuração, consulte<block ref="0572584e104f568b7c9cc0d42a0f378e" category="inline-link-rx"></block>.</block>
+  <block id="0274ea537fb8630d4f8319c18f161d9a" category="section-title">Etapa 3: configure o servidor SMB no Cloud Volumes ONTAP</block>
+  <block id="6f4a225b29c0975663d0e4b9e1f4547f" category="inline-xref">Etapa 1</block>
+  <block id="8d5a7458985bfe355dd872e4cf0ebcfa" category="paragraph">Configure o servidor SMB na VM de armazenamento do Cloud Volumes ONTAP para autenticar o acesso a arquivos SMB por meio do Microsoft Entra ID usando as credenciais de registro do aplicativo que você criou em <block ref="72f3601f1fad0e3975fa5774874cabfd" category="inline-xref-macro-rx"></block>.</block>
+  <block id="73bdcc5dfa4b3b286ad1803e141e24d0" category="admonition">A máquina virtual de armazenamento deve ter uma LIF de dados configurada e acesso a um agregado antes de você criar o servidor SMB. Os clientes usam a LIF de dados para acessar o compartilhamento SMB.</block>
+  <block id="df298aa267f92fe21f4d097bb147c908" category="list-text">Configure o DNS na máquina virtual de armazenamento para que ela possa resolver os endpoints do Microsoft Entra ID:</block>
+  <block id="a4af0166d0734025f2f823d5fda75f7a" category="list-text">Crie o servidor SMB e forneça os parâmetros do Microsoft Entra ID:</block>
+  <block id="8226dc653148cdb98935a44ddfca35fa" category="list-text">Redefina a senha SMB Kerberos usando as credenciais do Entra ID:</block>
+  <block id="35c8cc78a8bb640b68ea0dc168cdf531" category="list-text">Opcionalmente, remova o servidor SMB:</block>
+  <block id="83d8a030300df97170e3656ac9f25048" category="section-title">Etapa 4: registre uma VM cliente no Microsoft Entra ID</block>
+  <block id="46ec9355f4990de65048682f477c45cc" category="paragraph">Você pode configurar uma VM registrada no Entra ID para acessar o cliente associado ao Entra ID quando uma conexão direta via Protocolo de Área de Trabalho Remota (RDP) não estiver disponível em seu ambiente. Essa VM funciona como um servidor intermediário (jump box) a partir do qual você faz login remotamente no cliente associado ao Entra ID usando credenciais de usuário híbridas.</block>
+  <block id="32b3cbfedde6a705d3a9f36c36f5ea76" category="list-text">Você precisa ter um computador com Windows 10 (versão 21H2 ou posterior) ou Windows 11.</block>
+  <block id="bacf3b3fd64b081f8583908b762661f8" category="list-text">Faça login no computador Windows usando as credenciais de administrador local.</block>
+  <block id="69011ab46539841f8ffc2c72961d1c77" category="list-text">Acesse *Configurações &gt; Contas &gt; Acessar trabalho ou escola* e selecione *Conectar*.</block>
+  <block id="b6475c9f3c48fa4f320ba98f4df6342c" category="list-text">Insira as credenciais da sua conta de Administrador Global e siga as instruções.</block>
+  <block id="9977d609d9197a7d8f1dea4b09d7cc72" category="paragraph">O dispositivo está registrado no Microsoft Entra ID.</block>
+  <block id="c8d170593528c2422b98b0e9e93b1647" category="list-text">Verifique se o dispositivo aparece como *Entra ID Registered* em *Entra ID &gt; Devices &gt; All Devices* no portal do Azure.</block>
+  <block id="0cc39f1a8592484c13d910c20392b8ff" category="section-title">Etapa 5: associar uma VM cliente ao Microsoft Entra ID</block>
+  <block id="b0b32523d1c155237c0292e31cdabcfd" category="inline-link">Configure a junção híbrida do Microsoft Entra</block>
+  <block id="81321c3ba570f7b6586edea775848335" category="inline-link">Solução de problemas em dispositivos ingressados de forma híbrida no Microsoft Entra</block>
+  <block id="72c63436f6867011c0038856bc0aa22c" category="paragraph">Você pode configurar uma VM cliente Windows como uma máquina ingressada no Entra ID para permitir que usuários híbridos obtenham tíquetes Kerberos emitidos pela nuvem e montem o compartilhamento SMB do ONTAP. Para obter mais informações, consulte<block ref="d6e1ec3b3b269d22e93052cbdaef36d6" category="inline-link-rx"></block> e<block ref="b1858f40897f7c6790e86fcfd6686b41" category="inline-link-rx"></block>.</block>
+  <block id="7882a4b556b6996eaf604413a9e602d9" category="inline-xref">Etapa 4</block>
+  <block id="3da51256e81083d9310f85ba4885c73d" category="admonition">Após ingressar, você poderá acessar esta máquina somente com credenciais de usuário híbrido a partir da máquina registrada no Entra ID configurada em <block ref="0eb2f82aafb012f32ae864d970ca1ba6" category="inline-xref-macro-rx"></block>.</block>
+  <block id="e31ad1284b7618a9c10777ed99b12e64" category="inline-xref">Etapa 2</block>
+  <block id="b9cf29e0a8c086eb445d0de7a1e35434" category="list-text">Você precisa ter uma conta de usuário híbrida sincronizada a partir do seu AD local. Essas contas são criadas em <block ref="13c4078c97f6ff637d7df24746433196" category="inline-xref-macro-rx"></block>.</block>
+  <block id="eb574d78bed262cc6db62882506345d2" category="list-text">Acesse *Configurações &gt; Contas &gt; Acessar trabalho ou escola* e selecione *Conectar &gt; Associar este dispositivo ao Azure Active Directory*.</block>
+  <block id="5b88fac619c56fa82cdd1800d20be35c" category="paragraph">Use uma conta de usuário híbrida para concluir a associação. Se a associação não for concluída com sucesso, consulte o<block ref="a44ce4f7e9db29439e2a1f227570b357" category="inline-link-rx"></block>.</block>
+  <block id="3e6e1d2f193ddc658daf8b54f5ed726f" category="list-text">Reinicie a máquina quando solicitado e verifique se ela aparece como *Entra ID Joined* em *Entra ID &gt; Dispositivos &gt; Todos os Dispositivos* no portal do Azure.</block>
+  <block id="d9d18c45d451ef08e9d20657ae5fc14a" category="section-title">Etapa 6: configurar a VM associada para acesso SMB</block>
+  <block id="f700f3989681d0a3185d6cde7a32b0b5" category="paragraph">Após a VM ser associada ao Microsoft Entra ID, você deve configurá-la para obter tickets Kerberos emitidos pela nuvem, resolver o nome do host do servidor SMB e permitir o acesso RDP da máquina registrada no Entra ID.</block>
+  <block id="10eb4ded04da5a031291d89a87b9f351" category="list-text">Adicione uma entrada DNS ao arquivo hosts na VM associada ao Entra ID para que ela possa resolver o nome do host do servidor SMB:</block>
+  <block id="de1a2cb45c8fbbdd1b73e05c23f25057" category="list-text">Abra<block ref="803976de87f6862821bd3c4d94e0ff2b" prefix=" " category="inline-code"></block> em um editor de texto.</block>
+  <block id="889eb16b8e221402539f4528f19e308f" category="list-text">Adicione a seguinte entrada, mapeando o endereço IP da LIF de dados do ONTAP para o FQDN do servidor SMB:</block>
+  <block id="be5c670022b66fffa7c34b9cc5ec30ed" category="list-text">Ative a política de autenticação PKU2U:</block>
+  <block id="f29572d5d66b3b251d31c220c2f92eb2" category="list-text">Vá para:</block>
+  <block id="1891d1343ccb7d013ce21d74305117d2" category="paragraph">*gpedit.msc &gt; Configuração do Computador &gt; Configurações do Windows &gt; Configurações de Segurança &gt; Políticas Locais &gt; Opções de Segurança*</block>
+  <block id="9b390fe5a8b761c2e693abb2cf3fd8ad" category="list-text">Ative *Segurança de rede: permitir que solicitações de autenticação PKU2U para este computador usem identidades online*.</block>
+  <block id="4cca9eae8b750f33b90a93d8029e0651" category="inline-link">Política de autenticação PKU2U</block>
+  <block id="d705c8a96f0f8c93ef2c1489c303501f" category="paragraph">Para obter mais informações, consulte<block ref="b0f5357159e919663795bae97e376c04" category="inline-link-rx"></block>.</block>
+  <block id="9da8a4a24e04fcd5850589a4ae0def8c" category="list-text">Habilitar a recuperação de tickets Kerberos na nuvem:</block>
+  <block id="ba50a880ba92e6cba7a5473746d1980e" category="paragraph">*gpedit.msc &gt; Configuração do Computador &gt; Modelos Administrativos &gt; Sistema &gt; Kerberos*</block>
+  <block id="8c71a7ffded41f865130af77ab64b1a0" category="list-text">Ative a opção *Permitir a recuperação do ticket Kerberos da nuvem durante o logon*.</block>
+  <block id="c85c5a8cad6e8efe6ba8a99061561d24" category="list-text">Configure o mapeamento de realm do Kerberos para o servidor SMB do ONTAP:</block>
+  <block id="ad4c59074a3f32bb2c9c7dfd512b6513" category="list-text">No mesmo local da política Kerberos, selecione *Definir mapeamentos de nome de host para realm do Kerberos*.</block>
+  <block id="f954ee5e996de9b3de62c9546b35d9fc" category="list-text">Adicione o seguinte mapeamento:</block>
+  <block id="fca8e98550f6d64c28fc39e79b76cbd7" category="list-text">Adicione o usuário híbrido ao grupo _Usuários da Área de Trabalho Remota_ para permitir o acesso da VM registrada no Entra ID:</block>
+  <block id="edcecc4b4b8e54a82931aa3d4b914517" category="section-title">Etapa 7: monte o compartilhamento SMB e verifique o acesso</block>
+  <block id="6c9440a7d804b701f03faa4a408419b4" category="paragraph">Você pode montar o compartilhamento SMB a partir do cliente associado ao Entra ID e verificar se a autenticação baseada em Kerberos com o Microsoft Entra ID é bem-sucedida de ponta a ponta.</block>
+  <block id="9e0faae1b4a891cd7636ab9fde62531f" category="list-text">A partir da VM registrada no Entra ID, use o Remote Desktop Connection para fazer login na VM ingressada no Entra ID com credenciais de usuário híbrido no formato:</block>
+  <block id="1eda35903c92981af4493cd042dda7ec" category="inline-link">Faça login em uma VM do Windows usando o Microsoft Entra ID</block>
+  <block id="4950b42cedc0385048f650a75acb8f44" category="paragraph">Se o login não for bem-sucedido, selecione *Mais opções* e insira as credenciais manualmente. Se o problema persistir, habilite *Usar uma conta da Web* na guia *Avançado* do cliente Remote Desktop Connection. Para obter mais informações, consulte <block ref="1b0170374319b47d471d295bb43cee9f" category="inline-link-rx"></block>.</block>
+  <block id="7be8b73965c0a7ca7b04c60522817bc9" category="list-text">Verifique se um ticket Kerberos na nuvem foi emitido no momento do login executando <block ref="202cb8d6626afc16729d7dd3c122f426" prefix=" " category="inline-code"></block> e confirmando que um ticket <block ref="2de5d7596cf7e4f01b7c56f2ccb5906c" prefix=" " category="inline-code"></block> para <block ref="b081ba220cea67c20b6afac1c3b54d0b" prefix=" " category="inline-code"></block> está presente:</block>
+  <block id="8637d6c1f3e0436f7f2ec935b829bd22" category="paragraph">Exemplo de saída:</block>
+  <block id="884290bc0ff7f26abecb05af5263fc52" category="paragraph">A presença desse ticket confirma que o dispositivo está ingressado corretamente e pode obter tickets Kerberos emitidos pela nuvem.</block>
+  <block id="ec89ae255c2afa2f266791959c9c77b6" category="list-text">Crie um volume e um compartilhamento SMB no sistema Cloud Volumes ONTAP ou use um volume e um compartilhamento existentes:</block>
+  <block id="961d28c766792487334adf50e75187ae" category="admonition">O volume deve usar o estilo de segurança NTFS para que você possa gerenciar as permissões de arquivos e pastas para identidades do Microsoft Entra ID com<block ref="9d22115d36ebd253684637906d1914ec" prefix=" " category="inline-code"></block>.</block>
+  <block id="9769838371fcc918f37249655778b2e0" category="list-text">Verifique se o cliente consegue obter um ticket de serviço Kerberos para o servidor SMB:</block>
+  <block id="beba504f77cb775bba8fe1b1a4be8a46" category="paragraph">Confirme se um ticket de serviço foi retornado e que<block ref="5f7264148f90ce948fe46963dca95b27" prefix=" " category="inline-code"></block> mostra<block ref="e19a6f936479fb9a08948d8892616017" prefix=" " category="inline-code"></block>. Isso confirma que a autenticação está sendo roteada pelo Microsoft Entra ID.</block>
+  <block id="a467671413dbd78e1d7e54dc27c37f81" category="list-text">Monte o compartilhamento SMB:</block>
+  <block id="84692ab6e69269bdcacff45d5446a450" category="list-text">No sistema Cloud Volumes ONTAP, verifique se uma sessão SMB está estabelecida:</block>
+  <block id="505226009558db588b2ed9efdca875a9" category="paragraph">A saída da sessão mostra a estação de trabalho conectada e o usuário híbrido no formato<block ref="e2ff43edba5b694847286915c94856ec" prefix=" " category="inline-code"></block>.</block>
+  <block id="69c584fe08eb9fc89db06ebc6e3b2409" category="section-title">Etapa 8: gerenciar permissões de arquivos com icacls</block>
+  <block id="d6974080341df9712ec0af707b961e7b" category="paragraph">O Cloud Volumes ONTAP 9.19.1 e versões posteriores oferecem suporte ao<block ref="9d22115d36ebd253684637906d1914ec" prefix=" " category="inline-code"></block> comando para gerenciar permissões de arquivos e pastas para identidades Microsoft Entra ID em compartilhamentos SMB montados.</block>
+  <block id="4b354f41d5419fd632f462950f477d6f" category="list-text">Execute o comando apropriado<block ref="9d22115d36ebd253684637906d1914ec" prefix=" " category="inline-code"></block> dependendo do acesso que você deseja configurar:</block>
+  <block id="d0d4a68386bd83860624b6a17750a57a" category="paragraph">Para conceder acesso:</block>
+  <block id="5798e009f5498705c64f92ce140cd070" category="paragraph">Para negar o acesso:</block>
+  <block id="90354e46cc101991e55370e682628f58" category="doc">Implante o Cloud Volumes ONTAP usando a listagem independente no AWS Marketplace</block>
+  <block id="12f4bfc0538b903177d595621c7ef42d" category="list-text">Uma rede do agente Console que atenda aos requisitos. <block ref="a3f5b6fd7f8b50cbffb3cbeb6fa40451" category="inline-link-macro-rx"></block></block>
+  <block id="b03eb9f92b70a1fafaeb31b1e5f8ccdc" category="list-text">A oferta combinada do NetApp Intelligent Service para serviços de dados da NetApp e assinaturas do Cloud Volumes ONTAP</block>
+  <block id="e3827b821f7d34121f8a07a802dad6dd" category="list-text">Escolha a oferta _independente_. Confira os detalhes do anúncio e os termos de preço.</block>
+  <block id="da387e40e73b9eeced07accc9de6e3e4" category="section-title">Assine a oferta do NetApp Intelligent Service para serviços de dados</block>
+  <block id="f0150d523b994c5ba03cc2d6e2bd875b" category="paragraph">Se você quiser usar outros serviços de dados, como o NetApp Backup and Recovery, precisará assinar a oferta NetApp Intelligent Service além da oferta independente.</block>
+  <block id="a7ad6897f7b9076545ea2b2470df2cfb" category="list-text">Localize e selecione a oferta Intelligent Service da NetApp.</block>
+  <block id="7db8d7489646d12d69a7696c02c128ef" category="list-text">Opcional: associe uma conta do site de suporte da NetApp (NSS).</block>
+  <block id="00042f51aa46d7bf5e0fd46db2c83ebd" category="paragraph">Após associar sua assinatura ao NetApp Console, implante um agente do Console para gerenciar recursos da AWS e sistemas Cloud Volumes ONTAP.</block>
+  <block id="4176621cbdd2e1f6616332f1f3cae6d1" category="list-text">Adicione o ID da conta AWS e, opcionalmente, o ID externo. O Console define um nome de função padrão.</block>
+  <block id="2c02911c2dbba2e926eecf6ba56992df" category="paragraph">O Console cria um nome para a função assumida, que você pode alterar se desejar.</block>
+  <block id="4bec940f8e5547f4d7ea2a53ec902c6a" category="paragraph">Quando o Console cria o agente do Console, ele cria uma função do IAM e um perfil para o agente ou usa uma função que você fornece. Essa função inclui permissões que permitem ao agente gerenciar recursos da AWS. Mantenha a função atualizada com quaisquer novas permissões que o agente precise. <block ref="7f447941d99d36030500c16d428fc2ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="4eedc010909cbd7fa3cbf5efdb1be4b6" category="paragraph">Se você ainda não está pronto para criar seu sistema Cloud Volumes ONTAP, pode retornar à página Systems a qualquer momento para criá-lo.</block>
+  <block id="3cc38715797be469f39edd81c803bf02" category="section-title">17 de novembro de 2026</block>
+  <block id="444d7501b3cc1feab5560e903adad61c" category="section-title">16 de novembro de 2026</block>
+  <block id="f2a895f791fcea8f719f85e864d53ea6" category="paragraph">Diretiva não resolvida em &lt;stdin&gt; - include::_whatsnew/2026-11-16.adoc[]</block>
+  <block id="4e1d849ec7cd4b242a9a758a2e86fe1c" category="sidebar">Implante o Cloud Volumes ONTAP usando um anúncio independente no AWS Marketplace</block>
+  <block id="d2091e7366ce9b63a9a82bdd7bb6c641" category="sidebar">Evite interrupções durante a manutenção do Azure para pares de HA</block>
 </blocks>
