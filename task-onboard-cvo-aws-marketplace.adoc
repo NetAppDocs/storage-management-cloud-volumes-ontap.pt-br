@@ -71,25 +71,25 @@ Localize a oferta independente do Cloud Volumes ONTAP no AWS Marketplace.
 . Acesse o AWS Marketplace usando sua conta da AWS com as permissões necessárias.
 . Localize a oferta independente do Cloud Volumes ONTAP da NetApp. O AWS Marketplace oferece duas opções para o Cloud Volumes ONTAP:
 +
-** A oferta independente para a assinatura anual do Cloud Volumes ONTAP
-** A oferta combinada do NetApp Intelligent Service para serviços de dados da NetApp e assinaturas do Cloud Volumes ONTAP
+** A oferta independente do Cloud Volumes ONTAP, disponível como assinatura anual ou pagamento conforme o uso (PAYGO).
+** A oferta do Intelligent Service (NIS) da NetApp para os serviços de dados da NetApp e o Cloud Volumes ONTAP, também disponível como assinatura anual ou pagamento conforme o uso.
 
 
-. Escolha a oferta _independente_. Confira os detalhes do anúncio e os termos de preço.
+. Escolha entre a assinatura anual ou a opção PAYGO para a oferta _autônoma_. Consulte os detalhes da listagem e os termos de preço.
 . Assine e conclua a finalização da compra.
 . Depois de assinar, selecione *Configurar produto* para ser redirecionado ao NetApp Console e concluir a implantação.
 
 
 
 
-[[subscribe-to-the-netapp-intelligent-service-offering-for-data-services]]
-== Assine a oferta do NetApp Intelligent Service para serviços de dados
+[[subscribe-to-netapp-intelligent-service-for-data-services]]
+== Assine o NetApp Intelligent Service para serviços de dados
 
-Se você quiser usar outros serviços de dados, como o NetApp Backup and Recovery, precisará assinar a oferta NetApp Intelligent Service além da oferta independente.
+Se você quiser usar outros serviços de dados, como NetApp Backup and Recovery, precisará assinar a oferta NIS além da oferta independente.
 
 .Passos
 . Acesse o AWS Marketplace usando sua conta da AWS com as permissões necessárias.
-. Localize e selecione a oferta Intelligent Service da NetApp.
+. Localize e selecione a opção anual ou de pagamento conforme o uso para a oferta do NetApp Intelligent Service (NIS).
 . Confira os detalhes do anúncio e os termos de preço.
 . Assine e conclua a finalização da compra.
 . Depois de assinar, selecione *Configurar produto* para ser redirecionado ao NetApp Console e concluir a implantação.
