@@ -20,6 +20,25 @@ As melhorias descritas nesta página são específicas para o gerenciamento do C
 
 
 
+[[24-november-2026]]
+== 24 de novembro de 2026
+
+
+
+[[support-for-denmark-east-and-india-south-central-regions-in-azure]]
+=== Suporte para as regiões Denmark East e India South Central no Azure
+
+Agora você pode implantar o Cloud Volumes ONTAP 9.12.1 GA e versões posteriores nas regiões Denmark East (denmarkeast) e India South Central (indiasouthcentral) no Azure. Os seguintes tipos de implantação são suportados:
+
+* Nó único
+* HA em uma única zona de disponibilidade usando armazenamento com redundância local (LRS)
+* HA em várias zonas de disponibilidade usando armazenamento com redundância de zona (ZRS), somente para India South Central
+
+
+Para obter uma lista de todas as regiões suportadas, consulte o  https://www.netapp.com/cloud-volumes-ontap/supported-regions/["Mapa de regiões globais no Azure"^].
+
+
+
 [[18-november-2026]]
 == 18 de novembro de 2026
 
@@ -84,13 +103,6 @@ Com autenticação híbrida de usuários, os usuários são criados no AD local 
 Este recurso está disponível como pré-visualização pública. A configuração é compatível apenas por meio da CLI do ONTAP. A integração com o NetApp Console ainda não está disponível.
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-azure-entra-id-smb-auth.html["Configure a autenticação do Microsoft Entra ID para SMB"^]
-
-
-
-[[16-november-2026]]
-== 16 de novembro de 2026
-
-Diretiva não resolvida em <stdin> - include::_whatsnew/2026-11-16.adoc[]
 
 
 

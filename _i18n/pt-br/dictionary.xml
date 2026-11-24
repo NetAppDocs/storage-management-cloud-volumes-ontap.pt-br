@@ -8317,8 +8317,6 @@
   <block id="4bec940f8e5547f4d7ea2a53ec902c6a" category="paragraph">Quando o Console cria o agente do Console, ele cria uma função do IAM e um perfil para o agente ou usa uma função que você fornece. Essa função inclui permissões que permitem ao agente gerenciar recursos da AWS. Mantenha a função atualizada com quaisquer novas permissões que o agente precise. <block ref="7f447941d99d36030500c16d428fc2ff" category="inline-link-macro-rx"></block>.</block>
   <block id="4eedc010909cbd7fa3cbf5efdb1be4b6" category="paragraph">Se você ainda não está pronto para criar seu sistema Cloud Volumes ONTAP, pode retornar à página Systems a qualquer momento para criá-lo.</block>
   <block id="3cc38715797be469f39edd81c803bf02" category="section-title">17 de novembro de 2026</block>
-  <block id="444d7501b3cc1feab5560e903adad61c" category="section-title">16 de novembro de 2026</block>
-  <block id="f2a895f791fcea8f719f85e864d53ea6" category="paragraph">Diretiva não resolvida em &lt;stdin&gt; - include::_whatsnew/2026-11-16.adoc[]</block>
   <block id="4e1d849ec7cd4b242a9a758a2e86fe1c" category="sidebar">Implante o Cloud Volumes ONTAP usando um anúncio independente no AWS Marketplace</block>
   <block id="d2091e7366ce9b63a9a82bdd7bb6c641" category="sidebar">Evite interrupções durante a manutenção do Azure para pares de HA</block>
   <block id="464804aa8527c7a5675dd4c8d2b5f2b5" category="paragraph"><block ref="70563190697b86d4b7fef9663334a2c7" category="inline-link-rx"></block> <block ref="2d3a44ea7e8ca99b971ec5f419723d79" category="inline-link-rx"></block></block>
@@ -8330,4 +8328,8 @@
   <block id="db78a7e96024e9eef010b9cf7fb53251" category="paragraph">Se você quiser usar outros serviços de dados, como NetApp Backup and Recovery, precisará assinar a oferta NIS além da oferta independente.</block>
   <block id="19345556c6e896fcd174b552b92e5c53" category="list-text">Localize e selecione a opção anual ou de pagamento conforme o uso para a oferta do NetApp Intelligent Service (NIS).</block>
   <block id="bc2dc85706f0ec1cefd21d3f849eb1e9" category="section-title">18 de novembro de 2026</block>
+  <block id="5a910ff91567ebb4e0ae85635837c5a8" category="doc">Suporte para as regiões Denmark East e India South Central no Azure</block>
+  <block id="b9433802e6e744b5cc84b87da127cf0e" category="paragraph">Agora você pode implantar o Cloud Volumes ONTAP 9.12.1 GA e versões posteriores nas regiões Denmark East (denmarkeast) e India South Central (indiasouthcentral) no Azure. Os seguintes tipos de implantação são suportados:</block>
+  <block id="893f7f9c4326ccc9db9efcafead22429" category="list-text">HA em várias zonas de disponibilidade usando armazenamento com redundância de zona (ZRS), somente para India South Central</block>
+  <block id="1d13d5e4cee76a1ac900dd9c56640ddb" category="section-title">24 de novembro de 2026</block>
 </blocks>
