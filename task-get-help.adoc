@@ -7,7 +7,7 @@ summary: 'A NetApp oferece suporte de diversas maneiras. Há diversas opções g
 = Obtenha ajuda com Cloud Volumes ONTAP
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: https://docs.netapp.com/us-en/console-family/media/
 
 
 [role="lead"]
@@ -87,7 +87,7 @@ Os anexos são limitados a 25 MB por arquivo. As seguintes extensões de arquivo
 
 
 +
-image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/screenshot-create-case.png["Uma captura de tela do formulário Criar um caso que permite criar um caso com o Suporte da NetApp ."]
+image:screenshot-create-case.png["Uma captura de tela do formulário Criar um caso que permite criar um caso com o Suporte da NetApp ."]
 
 
 
@@ -141,10 +141,10 @@ A página *Gerenciamento de casos* mostra casos abertos relacionados à conta NS
 ** Em *Casos da organização*, selecione *Exibir* para visualizar todos os casos associados à sua empresa.
 ** Modifique o intervalo de datas escolhendo um intervalo de datas exato ou escolhendo um período de tempo diferente.
 ** Filtrar o conteúdo das colunas.
-** Altere as colunas que aparecem na tabela selecionandoimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-table-columns.png["O ícone de mais que aparece na tabela"] e então escolher as colunas que você gostaria de exibir.
+** Altere as colunas que aparecem na tabela selecionando image:icon-table-columns.png["O ícone de mais que aparece na tabela"] e escolhendo as colunas que deseja exibir.
 
 
-. Gerencie um caso existente selecionandoimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-table-action.png["Um ícone com três pontos que aparece na última coluna da tabela"] e selecionando uma das opções disponíveis:
+. Gerencie um caso existente selecionando image:icon-table-action.png["Um ícone com três pontos que aparece na última coluna da tabela"] e selecionando uma das opções disponíveis:
 +
 ** *Ver caso*: Veja detalhes completos sobre um caso específico.
 ** *Atualizar notas do caso*: Forneça detalhes adicionais sobre seu problema ou selecione *Carregar arquivos* para anexar até no máximo cinco arquivos.
