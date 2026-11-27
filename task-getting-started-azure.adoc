@@ -4,7 +4,7 @@ permalink: task-getting-started-azure.html
 keywords: microsoft, azure, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, marketplace, virtual machine, vnet, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, cloud central, permissions, custom role, role, json, permissions, virtual machine, connectivity, internet, outbound, endpoint, connection, networks, vpn, replicating, policy, iam, setupasservice, sign up, cloud manager, BlueXP, cloud volumes ontap, cloud ontap, subscription, create 
 summary: Comece a usar o Cloud Volumes ONTAP para Azure em poucas etapas. 
 ---
-= Visão geral da implantação do Cloud Volumes ONTAP no Azure
+= Comece a usar o Cloud Volumes ONTAP no Azure
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

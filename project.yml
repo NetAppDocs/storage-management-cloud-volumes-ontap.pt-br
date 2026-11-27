@@ -287,6 +287,8 @@ sidebar:
         url: "/task-manage-node-licenses.html"
       - title: Converter licenças baseadas em nós
         url: "/task-convert-node-capacity.html"
+      - title: Converter assinaturas do NIS em assinaturas independentes na AWS
+        url: "/task-convert-nis-nsl.html"
     - title: Registre sistemas de pagamento conforme o uso
       url: "/task-registering.html"
     - title: Parar e iniciar um sistema

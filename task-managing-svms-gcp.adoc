@@ -4,7 +4,7 @@ permalink: task-managing-svms-gcp.html
 keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported, create svm, create storage vm, create vserver 
 summary: Uma VM de armazenamento é uma máquina virtual executada no ONTAP que fornece serviços de armazenamento e dados aos seus clientes.  Você pode conhecer isso como SVM ou vserver.  O Cloud Volumes ONTAP é configurado com uma VM de armazenamento por padrão, mas algumas configurações oferecem suporte a VMs de armazenamento adicionais. 
 ---
-= Gerenciar VMs de armazenamento de dados para o Cloud Volumes ONTAP no Google Cloud
+= Gerencie VMs de armazenamento para o Cloud Volumes ONTAP no Google Cloud
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
